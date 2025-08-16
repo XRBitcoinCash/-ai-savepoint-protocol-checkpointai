@@ -77,56 +77,57 @@ def cmd_show(args):
     pretty_print(sp)
 
 
-def main():
-    parser = argparse.ArgumentParser(prog="savepoint", description="AI Save Point Protocol CLI")
-    subparsers = parser.add_subparsers(dest="command", required=True)
-
-    # init
-    p_init = subparsers.add_parser("init", help="Create a new save point file")
-    p_init.add_argument("--app", required=True)
-    p_init.add_argument("--app-version", required=True)
-    p_init.add_argument("--engine", required=True)
-    p_init.add_argument("--engine-type", default="llm")
-    p_init.add_argument("--protocol-version", default="1.0.0")
-    p_init.add_argument("--schema-version", default="1.0.0")
-    p_init.add_argument("--out", required=True)
-    p_init.set_defaults(func=cmd_init)
-
-    # append
-    p_append = subparsers.add_parser("append", help="Append a message")
-    p_append.add_argument("file")
-    p_append.add_argument("--role", required=True)
-    p_append.add_argument("--content-type", default="text")
-    p_append.add_argument("--content", required=True)
-    p_append.set_defaults(func=cmd_append)
-
-    # attach
-    p_attach = subparsers.add_parser("attach", help="Attach a file/URI")
-    p_attach.add_argument("file")
-    p_attach.add_argument("--uri", required=True)
-    p_attach.add_argument("--mime")
-    p_attach.add_argument("--description")
-    p_attach.add_argument("--hash")
-    p_attach.set_defaults(func=cmd_attach)
-
-    # checksum
-    p_checksum = subparsers.add_parser("checksum", help="Compute and update checksum")
-    p_checksum.add_argument("file")
-    p_checksum.set_defaults(func=cmd_checksum)
-
-    # validate
-    p_validate = subparsers.add_parser("validate", help="Validate a save point file")
-    p_validate.add_argument("file")
-    p_validate.set_defaults(func=cmd_validate)
-
-    # show
-    p_show = subparsers.add_parser("show", help="Pretty-print the save point JSON")
-    p_show.add_argument("file")
-    p_show.set_defaults(func=cmd_show)
-
-    args = parser.parse_args()
-    args.func(args)
-
-
-if __name__ == "__main__":
-    main()
+--- a/src/savepoint/cli.py
++++ b/src/savepoint/cli.py
+@@
+ from .core import (
+     new_savepoint,
+     append_message,
+     add_attachment,
+     compute_checksum,
+     validate,
+     load,
+     save,
+     pretty_print
+ )
++
++# new import for session exports/branching
++from .session import export_to_file, branch_to_file
+@@
+ def main():
+     parser = argparse.ArgumentParser(prog="savepoint", description="AI Save Point Protocol CLI")
+     subparsers = parser.add_subparsers(dest="command", required=True)
+@@
+     # show
+     p_show = subparsers.add_parser("show", help="Pretty-print the save point JSON")
+     p_show.add_argument("file")
+     p_show.set_defaults(func=cmd_show)
++
++    # export
++    p_export = subparsers.add_parser("export", help="Export prompt or messages from a save point")
++    p_export.add_argument("file")
++    p_export.add_argument("--what", choices=["prompt", "messages"], default="prompt")
++    p_export.add_argument("--format", dest="fmt", default="md")
++    p_export.add_argument("--limit", type=int, default=20)
++    p_export.add_argument("--out", required=True)
++    p_export.set_defaults(func=lambda args: export_to_file(
++        savepoint_path=args.file,
++        out_path=args.out,
++        what=args.what,
++        fmt=args.fmt,
++        limit=args.limit
++    ))
++
++    # branch
++    p_branch = subparsers.add_parser("branch", help="Create a branched save point")
++    p_branch.add_argument("file")
++    p_branch.add_argument("--name", dest="branch_name")
++    p_branch.add_argument("--out", required=True)
++    def _do_branch(args):
++        branch_to_file(
++            savepoint_path=args.file,
++            out_path=args.out,
++            branch_name=args.branch_name
++        )
++        print(f"Branched -> {args.out}")
++    p_branch.set_defaults(func=_do_branch)
