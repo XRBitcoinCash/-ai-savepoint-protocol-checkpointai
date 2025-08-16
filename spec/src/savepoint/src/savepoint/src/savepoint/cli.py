@@ -1,133 +1,147 @@
-"""
-AI Save Point Protocol (UASPP) - Command Line Interface
-Provides terminal commands to create, validate, and manage Save Points.
-
-Usage examples:
-    python -m savepoint.cli init --app "MyApp" --app-version "0.1.0" --engine "gpt-4" --out savepoint.json
-    python -m savepoint.cli append savepoint.json --role user --content "Hello"
-    python -m savepoint.cli validate savepoint.json
-    python -m savepoint.cli checksum savepoint.json
-"""
-
+#!/usr/bin/env python3
 import argparse
+import json
+import os
 import sys
+import time
 from pathlib import Path
 
-# Import core functions
-from .core import (
-    new_savepoint,
-    append_message,
-    add_attachment,
-    compute_checksum,
-    validate,
-    load,
-    save,
-    pretty_print
-)
+ROOT = Path(__file__).resolve().parent
+SPEC = ROOT / "spec" / "schema.json"
+SAVEPOINT_DEFAULT = ROOT / "savepoint.json"
 
+def load_schema():
+    if not SPEC.exists():
+        sys.exit(f"[fatal] Missing schema file: {SPEC}")
+    try:
+        with SPEC.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        sys.exit(f"[fatal] Failed to read schema: {e}")
+
+def read_json(p: Path):
+    try:
+        with p.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        sys.exit(f"[fatal] Savepoint not found: {p}")
+    except Exception as e:
+        sys.exit(f"[fatal] Invalid JSON in {p}: {e}")
+
+def write_json(p: Path, data: dict):
+    try:
+        with p.open("w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        sys.exit(f"[fatal] Could not write {p}: {e}")
+
+def validate_payload(payload: dict, schema: dict):
+    # Minimal structural validation without external libs
+    required = schema.get("required", [])
+    props = schema.get("properties", {})
+    missing = [k for k in required if k not in payload]
+    if missing:
+        sys.exit(f"[fatal] Missing required fields: {', '.join(missing)}")
+    # Basic type checks
+    for key, spec in props.items():
+        if key in payload and "type" in spec:
+            t = spec["type"]
+            val = payload[key]
+            if t == "string" and not isinstance(val, str):
+                sys.exit(f"[fatal] Field '{key}' must be string")
+            if t == "object" and not isinstance(val, dict):
+                sys.exit(f"[fatal] Field '{key}' must be object")
+            if t == "array" and not isinstance(val, list):
+                sys.exit(f"[fatal] Field '{key}' must be array")
+    return True
 
 def cmd_init(args):
-    sp = new_savepoint(
-        app_name=args.app,
-        app_version=args.app_version,
-        engine_name=args.engine,
-        engine_type=args.engine_type,
-        protocol_version=args.protocol_version,
-        schema_version=args.schema_version
-    )
-    save(args.out, sp)
-    print(f"Initialized save point -> {args.out}")
-
-
-def cmd_append(args):
-    sp = load(args.file)
-    content_block = [{"type": args.content_type, "data": args.content}]
-    append_message(sp, args.role, content_block)
-    save(args.file, sp)
-    print(f"Appended message with role={args.role}")
-
-
-def cmd_attach(args):
-    sp = load(args.file)
-    add_attachment(sp, uri=args.uri, mime=args.mime, description=args.description, file_hash=args.hash)
-    save(args.file, sp)
-    print(f"Added attachment: {args.uri}")
-
-
-def cmd_checksum(args):
-    sp = load(args.file)
-    checksum = compute_checksum(sp)
-    save(args.file, sp)
-    print(f"Checksum ({sp['integrity']['algorithm']}): {checksum}")
-
+    schema = load_schema()
+    payload = {
+        "version": "0.1.0",
+        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "workspace": {
+            "root": str(ROOT),
+            "cwd": str(Path.cwd()),
+            "python": sys.version.split()[0],
+            "platform": sys.platform
+        },
+        "context": {
+            "description": "Initialized save point",
+            "notes": []
+        },
+        "artifacts": []
+    }
+    validate_payload(payload, schema)
+    out = Path(args.output) if args.output else SAVEPOINT_DEFAULT
+    write_json(out, payload)
+    print(f"[ok] Initialized savepoint at {out}")
 
 def cmd_validate(args):
-    sp = load(args.file)
-    errors = validate(sp)
-    if errors:
-        print("INVALID SAVE POINT")
-        for err in errors:
-            print(f"- {err}")
-        sys.exit(1)
-    print("VALID SAVE POINT")
+    schema = load_schema()
+    sp = Path(args.file) if args.file else SAVEPOINT_DEFAULT
+    payload = read_json(sp)
+    validate_payload(payload, schema)
+    print(f"[ok] Savepoint is valid: {sp}")
 
+def cmd_save(args):
+    schema = load_schema()
+    sp = Path(args.output) if args.output else SAVEPOINT_DEFAULT
+    payload = {
+        "version": "0.1.0",
+        "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "workspace": {
+            "root": str(ROOT),
+            "cwd": str(Path.cwd()),
+            "python": sys.version.split()[0],
+            "platform": sys.platform
+        },
+        "context": {
+            "description": args.description or "Manual save",
+            "notes": args.note or []
+        },
+        "artifacts": []
+    }
+    validate_payload(payload, schema)
+    write_json(sp, payload)
+    print(f"[ok] Saved savepoint at {sp}")
 
-def cmd_show(args):
-    sp = load(args.file)
-    pretty_print(sp)
+def cmd_restore(args):
+    sp = Path(args.file) if args.file else SAVEPOINT_DEFAULT
+    payload = read_json(sp)
+    # For safety, we print restoration steps instead of mutating the environment.
+    print("[plan] Restoration plan:")
+    print(f"  - cd \"{payload['workspace']['cwd']}\"")
+    print("  - Set env vars or tooling as per your onboarding doc")
+    print("  - Re-run any bootstrap commands (e.g., PYTHONPATH)")
 
+def main():
+    parser = argparse.ArgumentParser(
+        prog="savepoint",
+        description="Universal AI Save Point Protocol (minimal CLI)"
+    )
+    sub = parser.add_subparsers(dest="command", required=True)
 
---- a/src/savepoint/cli.py
-+++ b/src/savepoint/cli.py
-@@
- from .core import (
-     new_savepoint,
-     append_message,
-     add_attachment,
-     compute_checksum,
-     validate,
-     load,
-     save,
-     pretty_print
- )
-+
-+# new import for session exports/branching
-+from .session import export_to_file, branch_to_file
-@@
- def main():
-     parser = argparse.ArgumentParser(prog="savepoint", description="AI Save Point Protocol CLI")
-     subparsers = parser.add_subparsers(dest="command", required=True)
-@@
-     # show
-     p_show = subparsers.add_parser("show", help="Pretty-print the save point JSON")
-     p_show.add_argument("file")
-     p_show.set_defaults(func=cmd_show)
-+
-+    # export
-+    p_export = subparsers.add_parser("export", help="Export prompt or messages from a save point")
-+    p_export.add_argument("file")
-+    p_export.add_argument("--what", choices=["prompt", "messages"], default="prompt")
-+    p_export.add_argument("--format", dest="fmt", default="md")
-+    p_export.add_argument("--limit", type=int, default=20)
-+    p_export.add_argument("--out", required=True)
-+    p_export.set_defaults(func=lambda args: export_to_file(
-+        savepoint_path=args.file,
-+        out_path=args.out,
-+        what=args.what,
-+        fmt=args.fmt,
-+        limit=args.limit
-+    ))
-+
-+    # branch
-+    p_branch = subparsers.add_parser("branch", help="Create a branched save point")
-+    p_branch.add_argument("file")
-+    p_branch.add_argument("--name", dest="branch_name")
-+    p_branch.add_argument("--out", required=True)
-+    def _do_branch(args):
-+        branch_to_file(
-+            savepoint_path=args.file,
-+            out_path=args.out,
-+            branch_name=args.branch_name
-+        )
-+        print(f"Branched -> {args.out}")
-+    p_branch.set_defaults(func=_do_branch)
+    p_init = sub.add_parser("init", help="Initialize a new savepoint file")
+    p_init.add_argument("-o", "--output", help="Output path for savepoint.json")
+    p_init.set_defaults(func=cmd_init)
+
+    p_validate = sub.add_parser("validate", help="Validate a savepoint file")
+    p_validate.add_argument("-f", "--file", help="Path to savepoint.json")
+    p_validate.set_defaults(func=cmd_validate)
+
+    p_save = sub.add_parser("save", help="Save current state to a savepoint")
+    p_save.add_argument("-o", "--output", help="Output path for savepoint.json")
+    p_save.add_argument("-d", "--description", help="Short description")
+    p_save.add_argument("-n", "--note", action="append", help="Add a note (repeatable)")
+    p_save.set_defaults(func=cmd_save)
+
+    p_restore = sub.add_parser("restore", help="Print restoration steps")
+    p_restore.add_argument("-f", "--file", help="Path to savepoint.json")
+    p_restore.set_defaults(func=cmd_restore)
+
+    args = parser.parse_args()
+    args.func(args)
+
+if __name__ == "__main__":
+    main()
