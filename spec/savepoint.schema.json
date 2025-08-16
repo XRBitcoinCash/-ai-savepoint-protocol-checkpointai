@@ -1,47 +1,53 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/savepoint.schema.json",
-  "title": "AI Save Point",
+  "title": "Universal AI Save Point",
   "type": "object",
   "required": [
-    "schema_version",
-    "protocol_version",
-    "session_metadata",
-    "conversation_state",
-    "memory_state",
-    "attachments",
-    "integrity"
+    "version",
+    "created_at",
+    "workspace",
+    "context",
+    "artifacts"
   ],
   "properties": {
-    "schema_version": { "type": "string", "description": "Version of this schema" },
-    "protocol_version": { "type": "string", "description": "Version of the save point protocol" },
-    "session_metadata": {
+    "version": { "type": "string" },
+    "created_at": { "type": "string" },
+    "workspace": {
       "type": "object",
-      "required": ["id", "created_at", "app", "engine"],
+      "required": ["root", "cwd", "python", "platform"],
       "properties": {
-        "id": { "type": "string", "description": "UUID v4" },
-        "created_at": { "type": "string", "format": "date-time" },
-        "app": {
-          "type": "object",
-          "required": ["name", "version"],
-          "properties": {
-            "name": { "type": "string" },
-            "version": { "type": "string" }
-          }
-        },
-        "engine": {
-          "type": "object",
-          "required": ["name"],
-          "properties": {
-            "name": { "type": "string" },
-            "provider": { "type": "string" },
-            "type": { "type": "string", "enum": ["llm", "vision", "speech", "multi-modal", "custom"] }
-          }
-        },
-        "locale": { "type": "string" },
-        "user_id": { "type": "string", "description": "Hashed or pseudonymous ID" }
-      },
-      "additionalProperties": false
+        "root": { "type": "string" },
+        "cwd": { "type": "string" },
+        "python": { "type": "string" },
+        "platform": { "type": "string" }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["description", "notes"],
+      "properties": {
+        "description": { "type": "string" },
+        "notes": { "type": "array" }
+      }
+    },
+    "artifacts": { "type": "array" },
+
+    "engine": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string" },
+        "provider": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["llm", "vision", "speech", "multi-modal", "custom"]
+        }
+      }
+    },
+    "locale": { "type": "string" },
+    "user_id": {
+      "type": "string",
+      "description": "Hashed or pseudonymous ID"
     },
     "conversation_state": {
       "type": "array",
@@ -57,7 +63,17 @@
               "type": "object",
               "required": ["type", "data"],
               "properties": {
-                "type": { "type": "string", "enum": ["text", "image", "audio", "video", "binary", "structured"] },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "text",
+                    "image",
+                    "audio",
+                    "video",
+                    "binary",
+                    "structured"
+                  ]
+                },
                 "data": {},
                 "mime": { "type": "string" }
               }
@@ -73,7 +89,10 @@
       "type": "object",
       "properties": {
         "kv": { "type": "object", "additionalProperties": true },
-        "notes": { "type": "array", "items": { "type": "string" } }
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
       },
       "additionalProperties": true
     },
@@ -96,7 +115,10 @@
       "type": "object",
       "required": ["algorithm", "checksum"],
       "properties": {
-        "algorithm": { "type": "string", "enum": ["sha256", "sha512"] },
+        "algorithm": {
+          "type": "string",
+          "enum": ["sha256", "sha512"]
+        },
         "checksum": { "type": "string" }
       }
     },
@@ -109,8 +131,10 @@
       },
       "additionalProperties": false
     },
-    "protocol_metadata": { "type": "object", "additionalProperties": true }
+    "protocol_metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
   },
   "additionalProperties": false
 }
-
