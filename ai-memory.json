@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0.0",
+  "document_id": "xrbc/ai-memory/2.0.0",
+  "status": "active",
+  "updated": "2026-09-14",
+  "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
+  "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
+  "agent_entrypoint": {
+    "read_before_edit": true,
+    "sequence": [
+      "read this contract and the target repository instructions",
+      "inspect the exact target file, branch, and current commit",
+      "state target, non_goals, acceptance_checks, and rollback point",
+      "make one bounded change",
+      "run relevant checks",
+      "record a concise savepoint"
+    ],
+    "missing_evidence": "stop and report; never invent values"
+  },
+  "precedence": [
+    "current explicit user request",
+    "repository-local instructions and security policy",
+    "this contract",
+    "archived notes"
+  ],
+  "repositories": {
+    "site": "XRBitcoinCash/xrbitcoincash.github.io",
+    "core": "XRBitcoinCash/xrbitcoincash-core",
+    "xrbitcoin": "XRBitcoinCash/XRBitcoin",
+    "jcs": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai"
+  },
+  "project": {
+    "site": "https://xrbitcoincash.com/",
+    "network": "XRP Ledger Mainnet",
+    "xrbc_issuer": "rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw",
+    "xrbc_currency_hex": "5852626974636F696E6361736800000000000000",
+    "xrbitcoin_issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
+    "xrbitcoin_currency_hex": "5852626974636F696E0000000000000000000000",
+    "custody": "non-custodial; wallet-side authorization"
+  },
+  "model_routing": {
+    "luna": ["wording", "CSS", "documentation", "mechanical edits", "routine parsing"],
+    "terra": ["contained implementation", "tests", "ordinary debugging"],
+    "sol": ["multi-file XRPL/Xaman/Render integration", "security review", "difficult failures"],
+    "astra": ["architecture", "ambiguous threat models", "deep research", "final high-risk audit"]
+  },
+  "sandbox": {
+    "path": "ai/sandbox/",
+    "mode": "local synthetic reversible experiments",
+    "allowed": ["fake accounts", "fixture ledger responses", "test endpoints", "deterministic tests"],
+    "forbidden": ["seeds", "private keys", "API secrets", "personal data", "real signing payloads", "wallet transactions", "live backend mutation"],
+    "promotion": "human-reviewed patch plus relevant test suite"
+  },
+  "invariants": [
+    "never commit secrets",
+    "separate public reads from signing",
+    "no proxy/network/API contract change without explicit request",
+    "validate issuer, currency, account, amount, NFT ID, and ledger state",
+    "prefer textContent or escaped dynamic HTML",
+    "separate simulated checks from real-device checks",
+    "do not claim deployment until verified"
+  ],
+  "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
+}
