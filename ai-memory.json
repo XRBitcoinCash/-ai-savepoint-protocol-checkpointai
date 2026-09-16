@@ -34,8 +34,13 @@
   },
   "repository_roles": {
     "site": "Shared Render backend source, AI discovery, and legacy GitHub Pages configuration; not the active GitLab frontend source",
-    "xrbitcoin": "Legacy standalone repository; root index.html now contains a non-trading security notice",
+    "xrbitcoin": "Legacy standalone repository; root index.html is a fixed non-trading redirect to the GitLab security reference",
     "frontend_gitlab": "Active XRBC and XRBitcoin website frontend; default branch master; publish directory public"
+  },
+  "user_preferences": {
+    "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for this notice.",
+    "deployment_instructions": "Give the exact filename and direct public URL. Avoid confusing multiple index.html delivery copies.",
+    "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused."
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -48,10 +53,11 @@
   },
   "deployment_map": {
     "verified_date": "2026-09-16",
+    "verification_scope": "Repository contents and GitLab pipeline verified; live public content and redirect chain not independently retrieved in this pass",
     "gitlab_project_id": 75781181,
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_ref": "master",
-    "gitlab_inspected_commit": "3feca39da72a7043a3c2cddd86557480a061425a",
+    "gitlab_inspected_commit": "4e02faf4f28d6b7932f3deafbf98a3027c7ea68f",
     "xrbc_homepage": {
       "file": "public/index.html",
       "url": "https://xrbitcoincash.com/",
@@ -65,20 +71,38 @@
       "blob_sha": "b23c9538d588952b02a6fc5b0799acfbe7a0f2f2",
       "action": "preserve active XRBitcoin trading/liquidity workspace"
     },
+    "xrb_security_reference": {
+      "file": "public/xrbitcoin-security.html",
+      "url": "https://xrbitcoincash.com/xrbitcoin-security.html",
+      "title": "XRBitcoin | Security & Official Access",
+      "blob_sha": "472fe44669e333c1653b92e4415383631b0b5bf2",
+      "commit": "4e02faf4f28d6b7932f3deafbf98a3027c7ea68f",
+      "pipeline_id": 2853982624,
+      "pipeline_status": "success",
+      "state": "created directly in public/; live page content still requires a public delivery check",
+      "capabilities": "fixed manual links; no JavaScript, wallet SDK, API calls, forms or transactions"
+    },
     "legacy_github_security_notice": {
       "repository": "XRBitcoinCash/XRBitcoin",
       "ref": "main",
       "file": "index.html",
-      "title": "XRBitcoin | Security & Official Access",
-      "blob_sha": "b18f5bfe4a8c9ba968a3c57a61ca150bbca09594",
-      "state": "committed non-trading notice; do not infer final custom-domain delivery from build success"
+      "title": "XRBitcoin | Security page moved",
+      "commit": "81001b3a382d92a28434d10bbc73f21530c80dc9",
+      "blob_sha": "6e16d118ef2f8bfc7cf556b7377d95476a686a08",
+      "destination": "https://xrbitcoincash.com/xrbitcoin-security.html",
+      "state": "fixed meta-refresh redirect with a manual fallback link; no JavaScript or wallet integration; final custom-domain delivery is separate from build success"
+    },
+    "gitlab_legacy_redirects": {
+      "file": "public/_redirects",
+      "sources": ["/XRBitcoin", "/XRBitcoin/", "/XRBitcoin/index.html"],
+      "destination": "/xrbitcoin-security.html",
+      "status_code": 302,
+      "scope": "exact legacy paths only; do not redirect either active trading page"
     },
     "proposed_gitlab_legacy_route": {
       "file": "public/XRBitcoin/index.html",
-      "url": "https://xrbitcoincash.com/XRBitcoin/",
-      "state": "absent from inspected GitLab tree; user observed GitLab 404; creation remains pending a separate website action",
-      "purpose": "non-trading security notice only, not a second exchange",
-      "conflicts_with_public_index": false
+      "state": "superseded and not created; user explicitly requested a flat public filename instead",
+      "replacement": "public/xrbitcoin-security.html"
     },
     "shared_backend": {
       "repository": "XRBitcoinCash/xrbitcoincash.github.io",
@@ -90,14 +114,15 @@
     "secondary_memory_index": {
       "repository": "XRBitcoinCash/xrbitcoincash.github.io",
       "file": ".well-known/ai.js",
-      "state": "still points XRB home to legacy /XRBitcoin/; not changed by this memory-only update",
+      "state": "still points XRB home to legacy /XRBitcoin/; not changed during this bounded routing update",
       "precedence": "current canonical contract and this deployment map supersede that stale home entry"
     },
     "path_rules": [
-      "A file identity includes repository, branch and full path; identical basenames in different folders do not conflict",
-      "public/index.html, public/markets/index.html and proposed public/XRBitcoin/index.html are distinct paths",
-      "index-code.txt is a delivery copy; always state the exact intended deployment filename",
-      "Preserve exact XRBitcoin folder casing",
+      "Use public/xrbitcoin-security.html directly in public/ for this security reference",
+      "Keep public/index.html and public/xrbitcoin-links.html unchanged",
+      "Do not implement the superseded public/XRBitcoin/index.html proposal",
+      "A file identity includes repository, branch and full path",
+      "TXT downloads are delivery copies; always state the exact intended HTML filename",
       "A GitHub Pages commit does not copy files into GitLab; verify redirects and final public content separately"
     ]
   },
@@ -127,15 +152,17 @@
     "never overwrite a trading page merely because a supplied download is named index.html"
   ],
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-xrb-routing",
+    "id": "SAVEPOINT-2026-09-16-flat-xrb-security",
     "record": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
-    "scope": "user-authorized canonical memory update only",
-    "rollback_commit": "9cbe5564f3ebb158cbeb255ac24e32efd86fb64a",
-    "website_files_changed": false,
+    "scope": "user-authorized flat public security page, exact legacy redirects, GitHub entrypoint update and continuity record",
+    "rollback_commit": "8a6b00e24704b44f28f8e2fe602957f810c409c3",
+    "gitlab_rollback_commit": "3feca39da72a7043a3c2cddd86557480a061425a",
+    "github_xrb_rollback_commit": "e0f124e049f048b65a3aada9198d8140a8433252",
+    "website_files_changed": true,
+    "trading_files_changed": false,
     "pending": [
-      "separately authorize and resolve legacy /XRBitcoin/ hosting without changing active trading pages",
-      "verify final public content after any hosting deployment",
-      "refresh the secondary .well-known/ai.js stale XRB home through a bounded metadata change"
+      "verify direct public page content and legacy redirect after hosting propagation; automated HTTP retrieval was blocked in this environment",
+      "refresh the secondary .well-known/ai.js stale XRB home only through a separately bounded metadata change"
     ]
   },
   "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
