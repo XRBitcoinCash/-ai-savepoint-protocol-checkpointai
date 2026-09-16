@@ -9,7 +9,7 @@
     "read_before_edit": true,
     "sequence": [
       "read this contract and the target repository instructions",
-      "read the current deployment map; do not rely on older filenames or home URLs",
+      "read the current deployment map and latest_savepoint; do not rely on older filenames or home URLs",
       "inspect the exact target file, branch, and current commit",
       "state target, non_goals, acceptance_checks, and rollback point",
       "make one bounded change",
@@ -38,10 +38,11 @@
     "frontend_gitlab": "Active XRBC and XRBitcoin website frontend; default branch master; publish directory public"
   },
   "user_preferences": {
-    "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for this notice.",
-    "deployment_instructions": "Give the exact filename and direct public URL. Avoid confusing multiple index.html delivery copies.",
+    "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for the security notice. The liquidity directory is integrated into the existing public/index.html, not a standalone page.",
+    "deployment_instructions": "Give the exact filename and direct public URL. Avoid confusing multiple index.html delivery copies. For homepage code changes, provide complete HTML and identical TXT for manual replacement; do not automatically commit without explicit permission.",
     "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
-    "liquidity_index_work_style": "Research and preserve a practical first-version plan now; reserve heavier implementation and upgrades for a later work session. Do not require continuous AI inference for deterministic liquidity measurements."
+    "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
+    "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations."
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -50,20 +51,27 @@
     "xrbc_currency_hex": "5852626974636F696E6361736800000000000000",
     "xrbitcoin_issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
     "xrbitcoin_currency_hex": "5852626974636F696E0000000000000000000000",
+    "jcs_issuer": "rPU6sXCNzsjcTUEmgJQ5SxDUzY2y1RyYKd",
+    "jcs_currency": "JCS",
     "custody": "non-custodial; wallet-side authorization"
   },
   "deployment_map": {
     "verified_date": "2026-09-16",
-    "verification_scope": "Repository contents and GitLab pipeline verified; live public content and redirect chain not independently retrieved in this pass",
+    "verification_scope": "Current homepage fragment/source snippets and latest successful GitLab pipeline verified at 8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25. Other routing entries retain their earlier verification scope. Public HTTP retrieval returned an older homepage; cause unknown. Live index API responses and final browser delivery not independently verified.",
     "gitlab_project_id": 75781181,
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_ref": "master",
-    "gitlab_inspected_commit": "4e02faf4f28d6b7932f3deafbf98a3027c7ea68f",
+    "gitlab_inspected_commit": "8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25",
     "xrbc_homepage": {
       "file": "public/index.html",
       "url": "https://xrbitcoincash.com/",
-      "blob_sha": "67f4173c84e248e105be09631967c761d2b4cf31",
-      "action": "preserve current corrected XRBC homepage; never replace with the XRB security notice"
+      "historical_pre_index_blob_sha": "67f4173c84e248e105be09631967c761d2b4cf31",
+      "reviewed_commit": "8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25",
+      "pipeline_id": 2854819423,
+      "pipeline_status": "success",
+      "liquidity_url": "https://xrbitcoincash.com/#xrpl-liquidity",
+      "liquidity_navigation_label": "XRPL Token Liquidity",
+      "action": "Preserve current homepage with integrated public liquidity index, JCS coverage and progressive results; do not restore CoinGecko table or retired Quick Buy. Never replace it with XRB security notice."
     },
     "xrb_workspace": {
       "file": "public/xrbitcoin-links.html",
@@ -115,12 +123,13 @@
     "secondary_memory_index": {
       "repository": "XRBitcoinCash/xrbitcoincash.github.io",
       "file": ".well-known/ai.js",
-      "state": "still points XRB home to legacy /XRBitcoin/; not changed during this bounded routing update",
-      "precedence": "current canonical contract and this deployment map supersede that stale home entry"
+      "state": "previous inspection found legacy /XRBitcoin/ home; not changed in this memory-only step",
+      "precedence": "current canonical contract, this deployment map and latest savepoint supersede stale home/placement entries"
     },
     "path_rules": [
-      "Use public/xrbitcoin-security.html directly in public/ for this security reference",
-      "Keep public/index.html and public/xrbitcoin-links.html unchanged",
+      "Use public/xrbitcoin-security.html directly in public/ for the security reference",
+      "The public liquidity directory belongs in existing public/index.html at #xrpl-liquidity, not a new standalone page",
+      "Preserve active public/index.html and public/xrbitcoin-links.html; any edits must be explicitly scoped",
       "Do not implement the superseded public/XRBitcoin/index.html proposal",
       "A file identity includes repository, branch and full path",
       "TXT downloads are delivery copies; always state the exact intended HTML filename",
@@ -147,32 +156,52 @@
     "validate issuer, currency, account, amount, NFT ID, and ledger state",
     "prefer textContent or escaped dynamic HTML",
     "separate simulated checks from real-device checks",
-    "do not claim deployment until verified",
+    "do not claim deployment until verified; distinguish repository/pipeline verification from public HTTP and runtime checks",
     "preserve actual XRBC holding gates; no fiat passes or other bypass credentials",
     "do not treat a static security notice as a firewall or a guarantee against AMM arbitrage",
-    "never overwrite a trading page merely because a supplied download is named index.html"
+    "never overwrite a trading page merely because a supplied download is named index.html",
+    "public liquidity index needs no wallet and must not introduce trading/signing paths",
+    "no direct XRP pool, unavailable, not checked and stale are different states; pool presence is not certification",
+    "do not advertise planned historical anomaly detection as implemented"
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
-      "status": "research and design recorded; no implementation or deployment",
+      "status": "Homepage implementation, JCS coverage correction and fragment navigation are present in reviewed GitLab source; successful pipeline verified. Public runtime delivery remains separately unverified.",
       "specification": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
       "specification_commit": "bc450bd722df225118608a3f59e4202fd36f86e1",
-      "proposed_frontend": "public/xrpl-liquidity-index.html",
-      "title": "XRPL Liquidity Index — by XRBitcoinCash",
-      "first_scope": "Bounded disclosed catalog of classic issued tokens; default descending direct XRP-AMM XRP reserve; not a global top-100 claim",
-      "metadata": "Prefer documented XRPL Meta identity/name/icon APIs already referenced by the homepage; verify current permissions and live compatibility",
-      "ledger_source": "Existing Render read-only proxy subject to live deployment/capacity verification; policy source permits required reads",
+      "specification_status": "Historical research; standalone placement and research-only status superseded by current_record",
+      "current_record": "XRPL-LIQUIDITY-HOMEPAGE-LAUNCH-2026-09-16.md",
+      "current_record_commit": "18194562933b4ac461c17f36590f5c9a7d2ee337",
+      "frontend": "public/index.html",
+      "superseded_proposed_frontend": "public/xrpl-liquidity-index.html",
+      "url": "https://xrbitcoincash.com/#xrpl-liquidity",
+      "compatibility_anchors": ["#market-overview", "#xrbcv2-market"],
+      "navigation_label": "XRPL Token Liquidity",
+      "title": "XRPL Liquidity Index",
+      "first_scope": "Progressively loaded catalog of classic issued tokens; descending actual XRP-AMM XRP reserve among fresh completed checks, not a global top-liquidity ranking",
+      "discovery": "XRPL Meta holder-ordered pages; Load 50 more tokens; provider name search; direct exact issuer/currency lookup. No 50-token total cap. 10/25/50/100 options are display rows per page.",
+      "known_assets": ["XRBC", "XRBitcoin", "JCS"],
+      "metadata": "XRPL Meta names/identities; Bithomp documented issued-token image endpoint and approved cached-image fallback; logos are not certification",
+      "ledger_source": "Existing Render read-only proxy; source allows required methods; live capacity and responses remain to be independently verified",
       "proxy_policy_blob": "ecf8aa23785a779293fcc449b93789ccbdf8ce57",
-      "anomaly_policy": "Explainable measurements with rule versions, timestamps, sample coverage, transaction evidence and ordinary explanations; repetition alone is not fraud or fake volume",
-      "data_states": ["verified pool", "no direct XRP AMM at checked ledger", "unavailable", "stale", "unsupported", "not analyzed"],
+      "anomaly_policy": "Neutral snapshot observations with evidence. First implementation reports frozen condition, fee changes and reserve changes. Historical repetition, round trips, wash trading and fake volume are not analyzed.",
+      "data_states": ["pool found", "no direct XRP AMM at checked ledger", "unavailable", "not checked", "stale", "unsupported", "not analyzed"],
       "gating": "Public directory does not replace existing gated forensic tools; wallet-specific analysis remains in established tools; no new gate thresholds assigned",
-      "refresh": "Bounded initial/on-demand checks and conservative visible-tab refresh first; shared cached collector plus persistent history only after separate implementation/capacity review",
-      "provider_limits": "XRPL.to is optional; visible attribution required and re-serving data through our own API/dataset needs permission; no scraped blocklists",
+      "refresh": "60-pair batches, concurrency 2, 850ms request-start spacing, timeouts/backoff and opt-in two-minute visible-section refresh. Progressive completed results; partial rankings explicit; no continuous shared collector.",
+      "provider_limits": "XRPL.to remains optional; visible attribution required and re-serving its data through our own API/dataset needs permission; no scraped blocklists",
       "read_only": true,
       "no_wallet_signing": true,
       "no_quick_buy": true,
-      "live_endpoint_test": "Local DNS failures prevented live sample/Render checks; source-level feasibility only, not evidence of a website outage"
+      "delivered_file_sha256": "c561bb1d72c4f8677076eaff327e7a3ca2d0acf7aaddae5f7256683cda9b8eb3",
+      "live_endpoint_test": "Prior and current local DNS failures prevent live response verification. Current public-web retrieval returned older content; cause unknown, not established as a project outage."
     }
+  },
+  "communications": {
+    "liquidity_launch_post": "Draft only; user publishes. Article later. Explain liquidity versus market cap, wallet-free index, exact identities, refreshable evidence, known limitations, and existing wallet tools/XRBC gates.",
+    "early_framing": "XRPL launched in June 2012; early refers to the project's view of unfinished user-facing transparency and adoption work, not ledger age or guaranteed future returns.",
+    "requested_tags": ["@XamanWallet", "@xrplto", "@XPMarket", "@LiveCoinWatch", "@Ripple", "@RippleXDev", "@RippleDevRel", "@BIS_org"],
+    "bis_name": "Bank for International Settlements",
+    "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
     "id": "SAVEPOINT-2026-09-16-flat-xrb-security",
@@ -188,7 +217,7 @@
       "refresh the secondary .well-known/ai.js stale XRB home only through a separately bounded metadata change"
     ]
   },
-  "latest_savepoint": {
+  "previous_research_savepoint": {
     "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
     "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
     "scope": "User-authorized research and GitHub continuity update; later page build planned",
@@ -201,6 +230,24 @@
       "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
       "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
       "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-homepage-launch",
+    "record": "XRPL-LIQUIDITY-HOMEPAGE-LAUNCH-2026-09-16.md",
+    "record_commit": "18194562933b4ac461c17f36590f5c9a7d2ee337",
+    "scope": "User-authorized memory update and launch-post drafting after homepage implementation; no website or backend write",
+    "rollback_commit": "1c108602c2b83eb402f086f4b4415ccd85966400",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "post_published": false,
+    "pending": [
+      "confirm live public fragment and reconcile older content from external retrieval before claiming universal delivery",
+      "draft the requested long X post; article/image only on subsequent instruction",
+      "verify live catalog/pool responses, image delivery and Apple-device operation separately",
+      "implement broader collector/history analysis only as a separately authorized tested upgrade"
     ]
   },
   "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
