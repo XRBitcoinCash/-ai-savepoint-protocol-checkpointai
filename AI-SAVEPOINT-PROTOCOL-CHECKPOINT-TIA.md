@@ -2,11 +2,29 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-14  
+**Updated:** 2026-09-16  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
+
+## Current deployment map — verified 2026-09-16
+
+Read this map before using older repository descriptions or downloaded filenames. The active website frontend is in GitLab; the similarly named GitHub repositories have different roles.
+
+| Role | Repository and exact file | Website path / state |
+| --- | --- | --- |
+| XRBitcoinCash main trading homepage | GitLab `xrbitcoincash-group/xrbitcoincash-project`, `public/index.html`, branch `master` | `https://xrbitcoincash.com/` — preserve the current homepage |
+| Active XRBitcoin trading/liquidity workspace | Same GitLab project, `public/xrbitcoin-links.html` | `https://xrbitcoincash.com/xrbitcoin-links.html` — preserve; title is `XRBitcoin | Unified Trading & Liquidity Workspace` |
+| Retired standalone XRBitcoin frontend | GitHub `XRBitcoinCash/XRBitcoin`, `index.html`, branch `main` | Now contains `XRBitcoin | Security & Official Access`, a non-trading notice; this is NOT the active GitLab trading page |
+| Proposed legacy-route security notice | Same GitLab project, `public/XRBitcoin/index.html` | Would serve `/XRBitcoin/`; ABSENT from the inspected GitLab tree and NOT created by this memory update |
+| Shared backend | GitHub `XRBitcoinCash/xrbitcoincash.github.io`, `xrpl-proxy/`, documented Render origin `https://xrbitcoincash-github-io.onrender.com` | Separate from the legacy HTML page; preserve backend files and service settings |
+
+A filename is identified by its repository, branch, and complete folder path. `public/index.html` and `public/XRBitcoin/index.html` do not conflict: they are in different folders. The existing `public/markets/index.html` is another example. Do not tell the user to replace an existing `index.html` without naming its exact repository and path. A downloaded `index-code.txt` is a delivery copy, not a new deployment filename.
+
+The user observed a GitLab 404 at `/XRBitcoin/` after following the GitHub Pages link. The main GitHub site previously had `CNAME` set to `xrbitcoincash.com`; project-site domain inheritance was identified in the prior review as the routing explanation. A successful GitHub build does not establish that the final custom-domain URL serves its content. Recheck actual redirects and target hosting before giving a verification link or claiming deployment.
+
+The secondary GitHub `.well-known/ai.js` index still listed XRBitcoin's old `/XRBitcoin/` home when inspected. This newer map supersedes that stale home entry. Updating this canonical memory does not itself update that secondary file, DNS, Pages settings, or a public website.
 
 ## Agent entrypoint
 
@@ -33,9 +51,10 @@ Conversation history is context, not authority. Preserve a prior decision only w
 
 Supported project scope:
 
-- `XRBitcoinCash/xrbitcoincash.github.io` — public GitHub Pages site and AI discovery.
+- GitLab `xrbitcoincash-group/xrbitcoincash-project` — active website frontend, including XRBC and XRBitcoin pages.
+- `XRBitcoinCash/xrbitcoincash.github.io` — shared backend source, AI discovery, and legacy GitHub Pages configuration; not the source of the current GitLab frontend.
 - `XRBitcoinCash/xrbitcoincash-core` — internal/core documentation and scripts.
-- `XRBitcoinCash/XRBitcoin` — XRBitcoin application when explicitly named.
+- `XRBitcoinCash/XRBitcoin` — legacy XRBitcoin repository; its root page is now a non-trading security notice.
 - `XRBitcoinCash/JCS-token-on-the-XRPL` — JCS application when explicitly named.
 - `XRBitcoinCash/-ai-savepoint-protocol-checkpointai` — this memory and savepoint archive.
 
@@ -101,6 +120,8 @@ See [`ai/sandbox/README.md`](https://raw.githubusercontent.com/XRBitcoinCash/-ai
 - Prefer `textContent`; escape every dynamic value before `innerHTML`.
 - External links are independent services, not endorsements or guarantees.
 - A ledger record proves only what the validated record establishes; it does not automatically prove ownership, authenticity, legal title, intent, fraud, or safety.
+- Preserve the user's XRBC holding-based access gates. Do not substitute fiat passes, subscriptions, or alternative credentials that bypass required holdings.
+- A static security notice is not a firewall for another page and does not eliminate public AMM arbitrage. Do not revive removed unsafe quick-buy code or describe removal as a guarantee against all arbitrage.
 
 ## Definition of done
 
@@ -132,6 +153,34 @@ TODO:
 ```
 
 Older entries remain historical. A newer verified savepoint supersedes an older one; it does not erase the audit trail.
+
+### [SAVEPOINT-2026-09-16-xrb-routing] Separate trading pages, security notice, and memory
+
+Context: The user committed the corrected XRBC homepage and replaced the legacy GitHub XRBitcoin root page with a non-trading security notice. A GitHub verification link led to a GitLab 404 at `/XRBitcoin/`. The next request explicitly authorized reading/updating the GitHub memory and asked whether another `index.html` would conflict.
+
+Changes:
+- Added the current deployment map and corrected repository roles in this contract; the machine-readable twin is updated with the same distinctions.
+- No GitLab file, trading page, backend, domain, wallet setting, or secondary web index is changed by this memory-only update.
+
+Impact:
+- Keep GitLab `public/index.html` (XRBC) and `public/xrbitcoin-links.html` (active XRB) separate and intact.
+- Proposed GitLab `public/XRBitcoin/index.html` would be a non-trading notice in a new subfolder, not a second exchange and not an overwrite. Its creation remains pending a separate website action.
+- Never identify a deployment destination by the basename `index.html` alone. Explain the exact repository and full path first.
+- Treat attached older `XRBitcoin — Trading & Liquidity Sentinel` code as an older source, not proof of what the active Unified Workspace currently runs.
+- Preserve shared Render services and the XRBC token-gating model. The old HTML page is not the backend.
+
+Checks:
+- Read the canonical contract, `ai-memory.json`, and the secondary `.well-known/ai.js` entrypoint.
+- GitLab `master` and recursive `public/` tree inspected at `3feca39da72a7043a3c2cddd86557480a061425a`: main homepage blob `67f4173c84e248e105be09631967c761d2b4cf31`; active XRB blob `b23c9538d588952b02a6fc5b0799acfbe7a0f2f2`; proposed `public/XRBitcoin/index.html` absent.
+- GitLab active XRB title/canonical verified through repository blame; the public `/xrbitcoin-links.html` retrieval also identifies the Unified Trading & Liquidity Workspace.
+- GitHub `XRBitcoin/index.html` inspected: security-notice blob `b18f5bfe4a8c9ba968a3c57a61ca150bbca09594`.
+- Rollback point for this memory update: memory repository commit `9cbe5564f3ebb158cbeb255ac24e32efd86fb64a`.
+- No live signing, transaction, or wallet test performed. Private Render and Xaman settings were not inspected in this pass.
+
+TODO:
+- Resolve the legacy `/XRBitcoin/` hosting route only through a separately authorized, exact-path website change; do not overwrite either active trading page.
+- Recheck the final public URL after any routing deployment. Do not substitute a successful pipeline for a live-content check.
+- Refresh the secondary `.well-known/ai.js` stale XRBitcoin home in a separate bounded metadata change; this contract and its twin are the current routing authority.
 
 ## Current operating rule
 
