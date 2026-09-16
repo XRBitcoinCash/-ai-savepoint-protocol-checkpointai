@@ -40,7 +40,8 @@
   "user_preferences": {
     "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for this notice.",
     "deployment_instructions": "Give the exact filename and direct public URL. Avoid confusing multiple index.html delivery copies.",
-    "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused."
+    "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
+    "liquidity_index_work_style": "Research and preserve a practical first-version plan now; reserve heavier implementation and upgrades for a later work session. Do not require continuous AI inference for deterministic liquidity measurements."
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -151,7 +152,29 @@
     "do not treat a static security notice as a firewall or a guarantee against AMM arbitrage",
     "never overwrite a trading page merely because a supplied download is named index.html"
   ],
-  "latest_savepoint": {
+  "planned_work": {
+    "xrpl_liquidity_index": {
+      "status": "research and design recorded; no implementation or deployment",
+      "specification": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+      "specification_commit": "bc450bd722df225118608a3f59e4202fd36f86e1",
+      "proposed_frontend": "public/xrpl-liquidity-index.html",
+      "title": "XRPL Liquidity Index — by XRBitcoinCash",
+      "first_scope": "Bounded disclosed catalog of classic issued tokens; default descending direct XRP-AMM XRP reserve; not a global top-100 claim",
+      "metadata": "Prefer documented XRPL Meta identity/name/icon APIs already referenced by the homepage; verify current permissions and live compatibility",
+      "ledger_source": "Existing Render read-only proxy subject to live deployment/capacity verification; policy source permits required reads",
+      "proxy_policy_blob": "ecf8aa23785a779293fcc449b93789ccbdf8ce57",
+      "anomaly_policy": "Explainable measurements with rule versions, timestamps, sample coverage, transaction evidence and ordinary explanations; repetition alone is not fraud or fake volume",
+      "data_states": ["verified pool", "no direct XRP AMM at checked ledger", "unavailable", "stale", "unsupported", "not analyzed"],
+      "gating": "Public directory does not replace existing gated forensic tools; wallet-specific analysis remains in established tools; no new gate thresholds assigned",
+      "refresh": "Bounded initial/on-demand checks and conservative visible-tab refresh first; shared cached collector plus persistent history only after separate implementation/capacity review",
+      "provider_limits": "XRPL.to is optional; visible attribution required and re-serving data through our own API/dataset needs permission; no scraped blocklists",
+      "read_only": true,
+      "no_wallet_signing": true,
+      "no_quick_buy": true,
+      "live_endpoint_test": "Local DNS failures prevented live sample/Render checks; source-level feasibility only, not evidence of a website outage"
+    }
+  },
+  "previous_savepoint": {
     "id": "SAVEPOINT-2026-09-16-flat-xrb-security",
     "record": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
     "scope": "user-authorized flat public security page, exact legacy redirects, GitHub entrypoint update and continuity record",
@@ -163,6 +186,21 @@
     "pending": [
       "verify direct public page content and legacy redirect after hosting propagation; automated HTTP retrieval was blocked in this environment",
       "refresh the secondary .well-known/ai.js stale XRB home only through a separately bounded metadata change"
+    ]
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
     ]
   },
   "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
