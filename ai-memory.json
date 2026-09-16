@@ -2,13 +2,14 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-14",
+  "updated": "2026-09-16",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
     "read_before_edit": true,
     "sequence": [
       "read this contract and the target repository instructions",
+      "read the current deployment map; do not rely on older filenames or home URLs",
       "inspect the exact target file, branch, and current commit",
       "state target, non_goals, acceptance_checks, and rollback point",
       "make one bounded change",
@@ -28,7 +29,13 @@
     "core": "XRBitcoinCash/xrbitcoincash-core",
     "xrbitcoin": "XRBitcoinCash/XRBitcoin",
     "jcs": "XRBitcoinCash/JCS-token-on-the-XRPL",
-    "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai"
+    "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+    "frontend_gitlab": "xrbitcoincash-group/xrbitcoincash-project"
+  },
+  "repository_roles": {
+    "site": "Shared Render backend source, AI discovery, and legacy GitHub Pages configuration; not the active GitLab frontend source",
+    "xrbitcoin": "Legacy standalone repository; root index.html now contains a non-trading security notice",
+    "frontend_gitlab": "Active XRBC and XRBitcoin website frontend; default branch master; publish directory public"
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -38,6 +45,61 @@
     "xrbitcoin_issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
     "xrbitcoin_currency_hex": "5852626974636F696E0000000000000000000000",
     "custody": "non-custodial; wallet-side authorization"
+  },
+  "deployment_map": {
+    "verified_date": "2026-09-16",
+    "gitlab_project_id": 75781181,
+    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
+    "gitlab_ref": "master",
+    "gitlab_inspected_commit": "3feca39da72a7043a3c2cddd86557480a061425a",
+    "xrbc_homepage": {
+      "file": "public/index.html",
+      "url": "https://xrbitcoincash.com/",
+      "blob_sha": "67f4173c84e248e105be09631967c761d2b4cf31",
+      "action": "preserve current corrected XRBC homepage; never replace with the XRB security notice"
+    },
+    "xrb_workspace": {
+      "file": "public/xrbitcoin-links.html",
+      "url": "https://xrbitcoincash.com/xrbitcoin-links.html",
+      "title": "XRBitcoin | Unified Trading & Liquidity Workspace",
+      "blob_sha": "b23c9538d588952b02a6fc5b0799acfbe7a0f2f2",
+      "action": "preserve active XRBitcoin trading/liquidity workspace"
+    },
+    "legacy_github_security_notice": {
+      "repository": "XRBitcoinCash/XRBitcoin",
+      "ref": "main",
+      "file": "index.html",
+      "title": "XRBitcoin | Security & Official Access",
+      "blob_sha": "b18f5bfe4a8c9ba968a3c57a61ca150bbca09594",
+      "state": "committed non-trading notice; do not infer final custom-domain delivery from build success"
+    },
+    "proposed_gitlab_legacy_route": {
+      "file": "public/XRBitcoin/index.html",
+      "url": "https://xrbitcoincash.com/XRBitcoin/",
+      "state": "absent from inspected GitLab tree; user observed GitLab 404; creation remains pending a separate website action",
+      "purpose": "non-trading security notice only, not a second exchange",
+      "conflicts_with_public_index": false
+    },
+    "shared_backend": {
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "directory": "xrpl-proxy/",
+      "documented_origin": "https://xrbitcoincash-github-io.onrender.com",
+      "action": "preserve server, dependencies, environment and existing frontend contracts",
+      "private_render_settings_verified_in_this_pass": false
+    },
+    "secondary_memory_index": {
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "file": ".well-known/ai.js",
+      "state": "still points XRB home to legacy /XRBitcoin/; not changed by this memory-only update",
+      "precedence": "current canonical contract and this deployment map supersede that stale home entry"
+    },
+    "path_rules": [
+      "A file identity includes repository, branch and full path; identical basenames in different folders do not conflict",
+      "public/index.html, public/markets/index.html and proposed public/XRBitcoin/index.html are distinct paths",
+      "index-code.txt is a delivery copy; always state the exact intended deployment filename",
+      "Preserve exact XRBitcoin folder casing",
+      "A GitHub Pages commit does not copy files into GitLab; verify redirects and final public content separately"
+    ]
   },
   "model_routing": {
     "luna": ["wording", "CSS", "documentation", "mechanical edits", "routine parsing"],
@@ -59,7 +121,22 @@
     "validate issuer, currency, account, amount, NFT ID, and ledger state",
     "prefer textContent or escaped dynamic HTML",
     "separate simulated checks from real-device checks",
-    "do not claim deployment until verified"
+    "do not claim deployment until verified",
+    "preserve actual XRBC holding gates; no fiat passes or other bypass credentials",
+    "do not treat a static security notice as a firewall or a guarantee against AMM arbitrage",
+    "never overwrite a trading page merely because a supplied download is named index.html"
   ],
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-xrb-routing",
+    "record": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
+    "scope": "user-authorized canonical memory update only",
+    "rollback_commit": "9cbe5564f3ebb158cbeb255ac24e32efd86fb64a",
+    "website_files_changed": false,
+    "pending": [
+      "separately authorize and resolve legacy /XRBitcoin/ hosting without changing active trading pages",
+      "verify final public content after any hosting deployment",
+      "refresh the secondary .well-known/ai.js stale XRB home through a bounded metadata change"
+    ]
+  },
   "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
 }
