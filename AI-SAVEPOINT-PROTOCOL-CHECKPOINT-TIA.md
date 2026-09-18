@@ -245,6 +245,33 @@ TODO:
 - Visually inspect the Media Desk at desktop, tablet, and phone widths after browser/CDN propagation.
 - Add more independent/community publishers only after confirming exact canonical URLs and retaining explicit source-type labels.
 
+
+### [SAVEPOINT-2026-09-18-xrpl-media-connection-fix] Media Desk live-data repair
+
+Context: The deployed Media Desk layout rendered but showed no matching headlines. XRPL-first mode did not exclude generic stories, so the empty state established that the browser had zero usable articles; the failure was transport/data-path related.
+
+Changes:
+- Added a first-party read-only backend endpoint at `/api/v1/media/news` with fixed cryptocurrency.cv XRPL/XRP/Ripple/RLUSD/Xaman/latest searches, sanitation, deduplication, short shared cache and bounded last-known-good fallback.
+- The homepage now tries the XRBC media proxy first, fixed direct provider requests second, then clearly labeled direct publisher/source access.
+- Direct source cards render immediately while live feeds connect, so cold starts or transport failures do not recreate the blank media wall.
+- Bumped browser media cache to `xrbc.media.news.v3`; upstream redirects fail closed.
+
+Impact:
+- Do not treat a normal media transport outage as grounds to blank the Media Desk.
+- Do not fabricate fallback headlines. Direct-source fallback items must remain labeled Direct source / Market reference.
+- Keep media read-only and separate from wallet, Xaman signing, token gates, transaction submission and liquidity math.
+
+Checks:
+- Final frontend commit `61278c5b5c9a9bda08a467da84069b39c45a6eaa`, GitLab pipeline `2862729733`: validation, secret detection, Semgrep SAST and Pages deploy all passed.
+- Browser-facing GitHub mirror commit `5c6004cdbbf94c6cb1427f00e0426654f1fb765c` identifies the same build.
+- Exact mirrored media script parsed successfully and contains proxy, direct-provider, static-source and immediate-fallback paths; prior empty-feed copy is absent.
+- Backend commits: `d22d98590bb4cafce5ef679d4a08d1fcb9f0b78f`, `15767e51e9fe4826990ef34ceadb7777de909908`, `801824d83457544df859be56e583823f4e98671f`.
+- Current tool environment cannot directly open the Render hostname, so the exact live backend deployment timestamp is not independently asserted.
+
+TODO:
+- Reload the public homepage and observe the status line: proxy, direct provider, or direct-source fallback.
+- If the proxy path does not become active after Render redeploys, inspect Render deployment logs/configuration separately; the page must still remain useful through the other two paths.
+
 ## Current operating rule
 
 **Evidence before action. Preserve working paths. Change one bounded thing. Test it. Record what changed.**
