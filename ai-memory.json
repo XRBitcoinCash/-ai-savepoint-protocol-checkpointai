@@ -295,28 +295,43 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-homepage-tool-previews",
-    "record": "XRBC-HOMEPAGE-TOOL-PREVIEWS-CHECKPOINT-2026-09-18.md",
-    "record_commit": "0c917aa9ba2e88b2bb9fd3a8ab0e2c1341a89dba",
-    "scope": "Homepage specialized-workspace preview image library and card mapping; presentation-only changes with unrelated XRPL/Xaman/trading functions preserved.",
+    "id": "SAVEPOINT-2026-09-18-xrpl-media-freshness",
+    "record": "XRPL-MEDIA-FRESHNESS-CHECKPOINT-2026-09-18.md",
+    "record_commit": "00d3beb5d7fa82e116749d6968ca87f71b3b07a2",
+    "scope": "XRPL-first homepage Media Desk plus stale-copy, cache-busting, GitHub mirror, sitemap and machine-discovery freshness hardening.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
-    "gitlab_commit": "b84efe6c484fff33c850b026dc0c156e9edc1fcd",
+    "final_gitlab_build": "d0cafa50d71bb737b37b2664d6211003d9737905",
+    "final_gitlab_pipeline": 2862679871,
+    "final_github_mirror_commit": "ad24d237d140dc3d366904fdefaa30850a6382de",
     "primary_file": "public/index.html",
-    "asset_directory": "public/tool-previews/",
     "current_state": {
-      "liquidity_pool": "sentinel-liquidity-health.webp",
-      "advanced_auditor": "extended-token-auditor.webp",
-      "risk_lens": "risk-lens.jpg",
-      "value_path": "value-path.jpg",
-      "watchtower": "bridge-integrity-monitor.jpg",
-      "advanced_tokenization": "advanced-asset-tokenization-auditor.webp",
-      "institutional_readiness": "no image"
+      "media_layout": "XRPL source shelf + filters/search + trending rail + lead story + secondary stack + independent/community row",
+      "headline_default": "XRPL first",
+      "live_headline_source": "cryptocurrency.cv existing public feed",
+      "independent_video": "CryptoWendyO existing read-only proxy/player",
+      "asset_versioning": "GitLab deployment commit SHA",
+      "deployment_evidence": "/build-info.json",
+      "github_mirror": "scheduled every 30 minutes; built homepage verified against build-info; companion files pulled from exact immutable GitLab commit",
+      "universal_ai": "valid v3 object repaired and mirrored",
+      "sitemap_home_lastmod": "2026-09-18"
     },
+    "invariants": [
+      "GitLab public/index.html remains the frontend source of record.",
+      "Do not reintroduce fixed dated query strings for compact homepage assets; deploy-time commit SHA is the cache-busting version.",
+      "GitHub mirror must reject mismatched build-info/homepage pairs and fetch source-owned companion files from the exact GitLab commit.",
+      "Media publisher labels describe source type only and are not endorsements or truth/safety ratings.",
+      "Media modules remain read-only and must not alter wallet, signing, trading, XRPL RPC, holding gates, backend or liquidity math."
+    ],
+    "checks": [
+      "Final GitLab pipeline 2862679871 passed validation, secret detection, Semgrep SAST and Pages deployment.",
+      "GitHub build-info.json matches d0cafa50d71bb737b37b2664d6211003d9737905.",
+      "GitHub mirrored sitemap reports Updated 2026-09-18 and homepage lastmod 2026-09-18.",
+      "GitHub .well-known/ai.js now points XRBitcoin to /xrbitcoin-links.html and /xrbitcoin-security.html."
+    ],
     "pending": [
-      "confirm latest GitLab pipeline for b84efe6c484fff33c850b026dc0c156e9edc1fcd completes successfully",
-      "only if requested, choose a dedicated Liquidity Pool image instead of Sentinel Liquidity Health",
-      "only if requested, research/select an XRPL consensus-style visual for Institutional Readiness"
+      "Visually inspect the Media Desk on desktop, tablet and phone after browser/CDN propagation.",
+      "Add more independent/community publishers only after confirming exact canonical URLs and retaining clear source-type labels."
     ]
   },
   "savepoint_format": [
