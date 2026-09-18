@@ -2,13 +2,14 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-16",
+  "updated": "2026-09-18",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
     "read_before_edit": true,
     "sequence": [
       "read this contract and the target repository instructions",
+      "read HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md for large-file work and bounded manual-edit collaboration",
       "read the current deployment map and latest_savepoint; do not rely on older filenames or home URLs",
       "inspect the exact target file, branch, and current commit",
       "state target, non_goals, acceptance_checks, and rollback point",
@@ -103,7 +104,11 @@
     },
     "gitlab_legacy_redirects": {
       "file": "public/_redirects",
-      "sources": ["/XRBitcoin", "/XRBitcoin/", "/XRBitcoin/index.html"],
+      "sources": [
+        "/XRBitcoin",
+        "/XRBitcoin/",
+        "/XRBitcoin/index.html"
+      ],
       "destination": "/xrbitcoin-security.html",
       "status_code": 302,
       "scope": "exact legacy paths only; do not redirect either active trading page"
@@ -137,16 +142,48 @@
     ]
   },
   "model_routing": {
-    "luna": ["wording", "CSS", "documentation", "mechanical edits", "routine parsing"],
-    "terra": ["contained implementation", "tests", "ordinary debugging"],
-    "sol": ["multi-file XRPL/Xaman/Render integration", "security review", "difficult failures"],
-    "astra": ["architecture", "ambiguous threat models", "deep research", "final high-risk audit"]
+    "luna": [
+      "wording",
+      "CSS",
+      "documentation",
+      "mechanical edits",
+      "routine parsing"
+    ],
+    "terra": [
+      "contained implementation",
+      "tests",
+      "ordinary debugging"
+    ],
+    "sol": [
+      "multi-file XRPL/Xaman/Render integration",
+      "security review",
+      "difficult failures"
+    ],
+    "astra": [
+      "architecture",
+      "ambiguous threat models",
+      "deep research",
+      "final high-risk audit"
+    ]
   },
   "sandbox": {
     "path": "ai/sandbox/",
     "mode": "local synthetic reversible experiments",
-    "allowed": ["fake accounts", "fixture ledger responses", "test endpoints", "deterministic tests"],
-    "forbidden": ["seeds", "private keys", "API secrets", "personal data", "real signing payloads", "wallet transactions", "live backend mutation"],
+    "allowed": [
+      "fake accounts",
+      "fixture ledger responses",
+      "test endpoints",
+      "deterministic tests"
+    ],
+    "forbidden": [
+      "seeds",
+      "private keys",
+      "API secrets",
+      "personal data",
+      "real signing payloads",
+      "wallet transactions",
+      "live backend mutation"
+    ],
     "promotion": "human-reviewed patch plus relevant test suite"
   },
   "invariants": [
@@ -175,17 +212,32 @@
       "frontend": "public/index.html",
       "superseded_proposed_frontend": "public/xrpl-liquidity-index.html",
       "url": "https://xrbitcoincash.com/#xrpl-liquidity",
-      "compatibility_anchors": ["#market-overview", "#xrbcv2-market"],
+      "compatibility_anchors": [
+        "#market-overview",
+        "#xrbcv2-market"
+      ],
       "navigation_label": "XRPL Token Liquidity",
       "title": "XRPL Liquidity Index",
       "first_scope": "Progressively loaded catalog of classic issued tokens; descending actual XRP-AMM XRP reserve among fresh completed checks, not a global top-liquidity ranking",
       "discovery": "XRPL Meta holder-ordered pages; Load 50 more tokens; provider name search; direct exact issuer/currency lookup. No 50-token total cap. 10/25/50/100 options are display rows per page.",
-      "known_assets": ["XRBC", "XRBitcoin", "JCS"],
+      "known_assets": [
+        "XRBC",
+        "XRBitcoin",
+        "JCS"
+      ],
       "metadata": "XRPL Meta names/identities; Bithomp documented issued-token image endpoint and approved cached-image fallback; logos are not certification",
       "ledger_source": "Existing Render read-only proxy; source allows required methods; live capacity and responses remain to be independently verified",
       "proxy_policy_blob": "ecf8aa23785a779293fcc449b93789ccbdf8ce57",
       "anomaly_policy": "Neutral snapshot observations with evidence. First implementation reports frozen condition, fee changes and reserve changes. Historical repetition, round trips, wash trading and fake volume are not analyzed.",
-      "data_states": ["pool found", "no direct XRP AMM at checked ledger", "unavailable", "not checked", "stale", "unsupported", "not analyzed"],
+      "data_states": [
+        "pool found",
+        "no direct XRP AMM at checked ledger",
+        "unavailable",
+        "not checked",
+        "stale",
+        "unsupported",
+        "not analyzed"
+      ],
       "gating": "Public directory does not replace existing gated forensic tools; wallet-specific analysis remains in established tools; no new gate thresholds assigned",
       "refresh": "60-pair batches, concurrency 2, 850ms request-start spacing, timeouts/backoff and opt-in two-minute visible-section refresh. Progressive completed results; partial rankings explicit; no continuous shared collector.",
       "provider_limits": "XRPL.to remains optional; visible attribution required and re-serving its data through our own API/dataset needs permission; no scraped blocklists",
@@ -199,7 +251,16 @@
   "communications": {
     "liquidity_launch_post": "Draft only; user publishes. Article later. Explain liquidity versus market cap, wallet-free index, exact identities, refreshable evidence, known limitations, and existing wallet tools/XRBC gates.",
     "early_framing": "XRPL launched in June 2012; early refers to the project's view of unfinished user-facing transparency and adoption work, not ledger age or guaranteed future returns.",
-    "requested_tags": ["@XamanWallet", "@xrplto", "@XPMarket", "@LiveCoinWatch", "@Ripple", "@RippleXDev", "@RippleDevRel", "@BIS_org"],
+    "requested_tags": [
+      "@XamanWallet",
+      "@xrplto",
+      "@XPMarket",
+      "@LiveCoinWatch",
+      "@Ripple",
+      "@RippleXDev",
+      "@RippleDevRel",
+      "@BIS_org"
+    ],
     "bis_name": "Bank for International Settlements",
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
@@ -250,5 +311,28 @@
       "implement broader collector/history analysis only as a separately authorized tested upgrade"
     ]
   },
-  "savepoint_format": ["context", "changes", "impact", "checks", "todo"]
+  "savepoint_format": [
+    "context",
+    "changes",
+    "impact",
+    "checks",
+    "todo"
+  ],
+  "workflow_protocol": {
+    "id": "xrbc/human-ai-workflow/1.0.0",
+    "status": "active",
+    "file": "HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md",
+    "created": "2026-09-18",
+    "purpose": "Use human repository navigation/manual exact edits and AI inspection/reasoning/verification together to reduce unnecessary context, output, compute, bandwidth, and human search effort without reducing correctness.",
+    "default_bounded_edit_pattern": [
+      "inspect exact current repository file and branch",
+      "identify a confirmed Ctrl+F/search anchor and whole-function or bounded-block edit",
+      "provide complete existing and replacement blocks when practical",
+      "user may apply the exact edit manually",
+      "AI re-reads the result, checks for duplicates/remnants, runs syntax/static checks, and assesses unrelated-function impact",
+      "commit only under the user's chosen workflow"
+    ],
+    "large_file_rule": "Do not repeatedly reproduce or transfer a many-thousand-line file when a small verified range is sufficient; escalate to full-file generation only when broad interdependent edits make that safer.",
+    "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
+  }
 }
