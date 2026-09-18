@@ -295,43 +295,37 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-xrpl-media-freshness",
-    "record": "XRPL-MEDIA-FRESHNESS-CHECKPOINT-2026-09-18.md",
-    "record_commit": "00d3beb5d7fa82e116749d6968ca87f71b3b07a2",
-    "scope": "XRPL-first homepage Media Desk plus stale-copy, cache-busting, GitHub mirror, sitemap and machine-discovery freshness hardening.",
+    "id": "SAVEPOINT-2026-09-18-xrpl-media-connection-fix",
+    "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md",
+    "record_commit": "6908520c980c3b2966f9deef33870bc452280fba",
+    "scope": "Repair failed Media Desk live-data path with first-party media proxy, direct provider fallback and immediate verified source fallback.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
-    "final_gitlab_build": "d0cafa50d71bb737b37b2664d6211003d9737905",
-    "final_gitlab_pipeline": 2862679871,
-    "final_github_mirror_commit": "ad24d237d140dc3d366904fdefaa30850a6382de",
-    "primary_file": "public/index.html",
+    "final_frontend_commit": "61278c5b5c9a9bda08a467da84069b39c45a6eaa",
+    "final_frontend_pipeline": 2862729733,
+    "final_mirror_commit": "5c6004cdbbf94c6cb1427f00e0426654f1fb765c",
+    "backend_repository": "XRBitcoinCash/xrbitcoincash.github.io",
+    "backend_commits": [
+      "d22d98590bb4cafce5ef679d4a08d1fcb9f0b78f",
+      "15767e51e9fe4826990ef34ceadb7777de909908",
+      "801824d83457544df859be56e583823f4e98671f"
+    ],
     "current_state": {
-      "media_layout": "XRPL source shelf + filters/search + trending rail + lead story + secondary stack + independent/community row",
-      "headline_default": "XRPL first",
-      "live_headline_source": "cryptocurrency.cv existing public feed",
-      "independent_video": "CryptoWendyO existing read-only proxy/player",
-      "asset_versioning": "GitLab deployment commit SHA",
-      "deployment_evidence": "/build-info.json",
-      "github_mirror": "scheduled every 30 minutes; built homepage verified against build-info; companion files pulled from exact immutable GitLab commit",
-      "universal_ai": "valid v3 object repaired and mirrored",
-      "sitemap_home_lastmod": "2026-09-18"
+      "primary_media_path": "https://xrbitcoincash-github-io.onrender.com/api/v1/media/news",
+      "secondary_media_path": "fixed direct cryptocurrency.cv XRP/XRPL/Ripple/RLUSD/Xaman/latest requests",
+      "final_fallback": "verified direct publisher/source cards displayed immediately",
+      "cache_key": "xrbc.media.news.v3",
+      "blank_transport_failure": "eliminated"
     },
     "invariants": [
-      "GitLab public/index.html remains the frontend source of record.",
-      "Do not reintroduce fixed dated query strings for compact homepage assets; deploy-time commit SHA is the cache-busting version.",
-      "GitHub mirror must reject mismatched build-info/homepage pairs and fetch source-owned companion files from the exact GitLab commit.",
-      "Media publisher labels describe source type only and are not endorsements or truth/safety ratings.",
-      "Media modules remain read-only and must not alter wallet, signing, trading, XRPL RPC, holding gates, backend or liquidity math."
-    ],
-    "checks": [
-      "Final GitLab pipeline 2862679871 passed validation, secret detection, Semgrep SAST and Pages deployment.",
-      "GitHub build-info.json matches d0cafa50d71bb737b37b2664d6211003d9737905.",
-      "GitHub mirrored sitemap reports Updated 2026-09-18 and homepage lastmod 2026-09-18.",
-      "GitHub .well-known/ai.js now points XRBitcoin to /xrbitcoin-links.html and /xrbitcoin-security.html."
+      "Normal media transport failure must not produce an empty homepage media surface.",
+      "Fallback source cards must be labeled as direct sources/market references, never fabricated as current headlines.",
+      "Backend upstream URLs remain fixed and query expansion is rejected.",
+      "Media transport remains independent of wallet, Xaman signing, holding gates, XRPL transaction submission and liquidity math."
     ],
     "pending": [
-      "Visually inspect the Media Desk on desktop, tablet and phone after browser/CDN propagation.",
-      "Add more independent/community publishers only after confirming exact canonical URLs and retaining clear source-type labels."
+      "Visually reload the public homepage and note which status path is active: proxy, direct provider, or direct-source fallback.",
+      "Render live-route deployment timestamp is not independently observable from the current tool environment."
     ]
   },
   "savepoint_format": [
