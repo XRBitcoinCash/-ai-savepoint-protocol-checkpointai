@@ -57,18 +57,18 @@
     "custody": "non-custodial; wallet-side authorization"
   },
   "deployment_map": {
-    "verified_date": "2026-09-16",
-    "verification_scope": "Current homepage fragment/source snippets and latest successful GitLab pipeline verified at 8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25. Other routing entries retain their earlier verification scope. Public HTTP retrieval returned an older homepage; cause unknown. Live index API responses and final browser delivery not independently verified.",
+    "verified_date": "2026-09-18",
+    "verification_scope": "Homepage tool-image presentation and latest successful GitLab pipeline verified at 3fd024a678c10113a17b140913dba5e1cc093d91. Seven workspace cards now use local /tool-previews assets; functional wallet/trading/XRPL systems were not intentionally changed in this bounded presentation pass.",
     "gitlab_project_id": 75781181,
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_ref": "master",
-    "gitlab_inspected_commit": "8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25",
+    "gitlab_inspected_commit": "3fd024a678c10113a17b140913dba5e1cc093d91",
     "xrbc_homepage": {
       "file": "public/index.html",
       "url": "https://xrbitcoincash.com/",
       "historical_pre_index_blob_sha": "67f4173c84e248e105be09631967c761d2b4cf31",
-      "reviewed_commit": "8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25",
-      "pipeline_id": 2854819423,
+      "reviewed_commit": "3fd024a678c10113a17b140913dba5e1cc093d91",
+      "pipeline_id": 2860608051,
       "pipeline_status": "success",
       "liquidity_url": "https://xrbitcoincash.com/#xrpl-liquidity",
       "liquidity_navigation_label": "XRPL Token Liquidity",
@@ -295,20 +295,20 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-homepage-launch",
-    "record": "XRPL-LIQUIDITY-HOMEPAGE-LAUNCH-2026-09-16.md",
-    "record_commit": "18194562933b4ac461c17f36590f5c9a7d2ee337",
-    "scope": "User-authorized memory update and launch-post drafting after homepage implementation; no website or backend write",
-    "rollback_commit": "1c108602c2b83eb402f086f4b4415ccd85966400",
-    "website_files_changed": false,
+    "id": "SAVEPOINT-2026-09-18-homepage-tool-images",
+    "record": "XRBC-HOMEPAGE-TOOL-IMAGES-CHECKPOINT-2026-09-18.md",
+    "record_commit": "399bf74504aad51fa70010cc86879035a8bf1980",
+    "scope": "User-authorized homepage tool-image asset library and bounded seven-card presentation update; current GitLab source/pipeline verified.",
+    "gitlab_commit": "3fd024a678c10113a17b140913dba5e1cc093d91",
+    "gitlab_pipeline_id": 2860608051,
+    "gitlab_pipeline_status": "success",
+    "website_files_changed": true,
     "backend_files_changed": false,
-    "trading_files_changed": false,
-    "post_published": false,
+    "trading_logic_changed": false,
     "pending": [
-      "confirm live public fragment and reconcile older content from external retrieval before claiming universal delivery",
-      "draft the requested long X post; article/image only on subsequent instruction",
-      "verify live catalog/pool responses, image delivery and Apple-device operation separately",
-      "implement broader collector/history analysis only as a separately authorized tested upgrade"
+      "user visual confirmation of the latest Risk Lens and Watchtower JPEG replacements",
+      "change only a specific card image if the user requests a different visual mapping",
+      "do not reintroduce third-party screenshot scraping unless explicitly requested"
     ]
   },
   "savepoint_format": [
