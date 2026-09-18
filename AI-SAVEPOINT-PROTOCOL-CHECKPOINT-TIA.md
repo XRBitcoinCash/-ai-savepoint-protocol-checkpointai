@@ -2,7 +2,7 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-16  
+**Updated:** 2026-09-18  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
@@ -214,6 +214,36 @@ Checks:
 TODO:
 - Open the direct `/xrbitcoin-security.html` URL and the old `/XRBitcoin/` route after publishing to confirm rendered content and routing.
 - Refresh the stale secondary AI index only in a separately bounded metadata update; the current map above is authoritative for source locations.
+
+
+### [SAVEPOINT-2026-09-18-xrpl-media-freshness] XRPL Media Desk and deterministic freshness
+
+Context: The user authorized redesigning the homepage media area into an XRPL-first information desk and then explicitly requested implementation of the available stale-copy/cache corrections. Review found fixed dated asset versions, an unscheduled GitHub mirror, per-path Pages cache drift, stale discovery metadata, and malformed wrapper fragments around the current universal AI manifest.
+
+Changes:
+- GitLab `public/index.html` now contains the XRPL Media Desk: labeled source shelf, XRPL-first/default ordering, All Crypto / Markets / Security / Policy filters, current-headline search, trending rail, lead story, secondary story stack, responsive layouts, and an Independent/Community row retaining the existing CryptoWendyO player.
+- GitLab deployment now injects the exact commit SHA into compact-home asset URLs and the homepage `xrbc-build-id`, and publishes `/build-info.json` with the deployed commit/pipeline/ref.
+- Repaired the valid current v3 `public/universal-ai.json`; refreshed `public/.well-known/ai.json`, `public/xrbc-metadata.json`, and the homepage sitemap modification date.
+- GitHub homepage mirror now runs every 30 minutes plus manual/workflow triggers, retries through short Pages propagation, requires `build-info.json` and the built homepage to agree, and fetches source-owned companion/discovery files from the exact immutable GitLab commit instead of mutable Pages-CDN copies.
+- GitHub-only `.well-known/ai.js` now identifies the GitLab frontend source and the current XRBitcoin routes `/xrbitcoin-links.html` and `/xrbitcoin-security.html`.
+
+Impact:
+- GitLab `xrbitcoincash-group/xrbitcoincash-project` remains the active frontend source of record.
+- Do not reintroduce fixed dated query strings such as `?v=20260917` for compact-home assets; deployment commit SHA is the cache-busting identity.
+- Do not mirror source-owned companion files from arbitrary current Pages-CDN paths after learning the build; use the exact immutable GitLab commit.
+- Media publisher labels describe source type only; inclusion is not an endorsement, truth rating, safety rating, or authority ranking.
+- Preserve the read-only media boundary: no wallet/signing/trading/XRPL-RPC/gate/backend/liquidity-math coupling.
+
+Checks:
+- Final GitLab production build `d0cafa50d71bb737b37b2664d6211003d9737905`; pipeline `2862679871` passed repository validation, secret detection, Semgrep SAST, and Pages deployment.
+- GitHub `build-info.json` matches that exact GitLab build.
+- Final verified GitHub mirror sync commit: `ad24d237d140dc3d366904fdefaa30850a6382de`.
+- GitHub mirrored sitemap reports `Updated: 2026-09-18` and homepage `lastmod 2026-09-18`.
+- Detailed record: `XRPL-MEDIA-FRESHNESS-CHECKPOINT-2026-09-18.md`.
+
+TODO:
+- Visually inspect the Media Desk at desktop, tablet, and phone widths after browser/CDN propagation.
+- Add more independent/community publishers only after confirming exact canonical URLs and retaining explicit source-type labels.
 
 ## Current operating rule
 
