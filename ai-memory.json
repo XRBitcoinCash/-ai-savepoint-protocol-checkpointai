@@ -295,20 +295,28 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-homepage-tool-images",
-    "record": "XRBC-HOMEPAGE-TOOL-IMAGES-CHECKPOINT-2026-09-18.md",
-    "record_commit": "399bf74504aad51fa70010cc86879035a8bf1980",
-    "scope": "User-authorized homepage tool-image asset library and bounded seven-card presentation update; current GitLab source/pipeline verified.",
-    "gitlab_commit": "3fd024a678c10113a17b140913dba5e1cc093d91",
-    "gitlab_pipeline_id": 2860608051,
-    "gitlab_pipeline_status": "success",
-    "website_files_changed": true,
-    "backend_files_changed": false,
-    "trading_logic_changed": false,
+    "id": "SAVEPOINT-2026-09-18-homepage-tool-previews",
+    "record": "XRBC-HOMEPAGE-TOOL-PREVIEWS-CHECKPOINT-2026-09-18.md",
+    "record_commit": "0c917aa9ba2e88b2bb9fd3a8ab0e2c1341a89dba",
+    "scope": "Homepage specialized-workspace preview image library and card mapping; presentation-only changes with unrelated XRPL/Xaman/trading functions preserved.",
+    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
+    "gitlab_branch": "master",
+    "gitlab_commit": "b84efe6c484fff33c850b026dc0c156e9edc1fcd",
+    "primary_file": "public/index.html",
+    "asset_directory": "public/tool-previews/",
+    "current_state": {
+      "liquidity_pool": "sentinel-liquidity-health.webp",
+      "advanced_auditor": "extended-token-auditor.webp",
+      "risk_lens": "risk-lens.jpg",
+      "value_path": "value-path.jpg",
+      "watchtower": "bridge-integrity-monitor.jpg",
+      "advanced_tokenization": "advanced-asset-tokenization-auditor.webp",
+      "institutional_readiness": "no image"
+    },
     "pending": [
-      "user visual confirmation of the latest Risk Lens and Watchtower JPEG replacements",
-      "change only a specific card image if the user requests a different visual mapping",
-      "do not reintroduce third-party screenshot scraping unless explicitly requested"
+      "confirm latest GitLab pipeline for b84efe6c484fff33c850b026dc0c156e9edc1fcd completes successfully",
+      "only if requested, choose a dedicated Liquidity Pool image instead of Sentinel Liquidity Health",
+      "only if requested, research/select an XRPL consensus-style visual for Institutional Readiness"
     ]
   },
   "savepoint_format": [
