@@ -298,9 +298,8 @@ Impact:
 
 Checks:
 - Commit diff reviewed: only `public/index.html` changed in the footer compaction commit.
-- GitLab pipeline `2863060698` was running when this savepoint was written.
+- GitLab pipeline `2863060698` completed successfully.
 - No live-wallet or signing action was performed.
 
 TODO:
-- Confirm pipeline `2863060698` succeeds.
 - Visually inspect the deployed footer at desktop and mobile widths after propagation.
