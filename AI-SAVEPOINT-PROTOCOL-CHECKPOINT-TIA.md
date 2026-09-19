@@ -495,3 +495,30 @@ Operating rules:
 - Do not present a static page-link QR as Xaman authorization/signing.
 - One cleanup button may orchestrate the workflow, but XRPL still requires one independently approved OfferCancel per offer.
 - The website never takes custody of offer funds.
+
+
+### [SAVEPOINT-2026-09-19-order-manager-xaman-browser-repair] Xaman browser authorization repair
+
+Context: After the open-offer cleanup restoration, real browser testing still showed no usable Xaman connection. Research against Xaman's current browser SDK documentation and the historical Order Manager implementation exposed a mixed mobile-only/browser-capable state.
+
+Root cause:
+- `xamanRuntimeOk()` was called throughout the current page but never defined.
+- `mobileWalletOnly` still disabled desktop authorization.
+- The connect path stored `connectionMode='xaman'` while the cancellation path still required `'xaman-mobile'`.
+
+Changes:
+- GitLab `public/limit-extraction.html` commit `825028ecebfe582986392933632bf5df0fe1508e` defines one canonical top-level HTTPS Xaman browser posture and enables browser Web3 authorization.
+- `Connect Xaman` now uses the supported Xaman browser SDK flow: official authorization QR on desktop, deeplink-capable behavior on mobile.
+- Cancellation permission consistently requires the connected `xaman` mode.
+- Public-address inspection remains read-only.
+- Validated `account_offers`, per-offer `OfferCancel`, six-digit challenge, SHA-256 intent, bounded ledger window, `tesSUCCESS`, critical-field comparison and post-cleanup reserve reporting are preserved.
+- Static page-link QR remains prohibited.
+- Detailed record: `ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md`.
+
+Checks:
+- All executable inline scripts compiled.
+- GitLab pipeline `2863838957` succeeded: validation, secret detection, Semgrep SAST and Pages deployment.
+- Rollback parent: `1c55229a71a7e21dc4181ff239847af5b4975a05`.
+
+TODO:
+- User verifies the desktop authorization QR with Xaman and tests one real OfferCancel before relying on bulk sequential cleanup.
