@@ -314,31 +314,37 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-header-xaman-nav",
-    "record": "HEADER-XAMAN-NAV-CHECKPOINT-2026-09-18.md",
-    "scope": "Redesign the XRBitcoinCash homepage header to the approved compact XRPL terminal style, preserve Tools and theme controls, and add a first-party Xaman Swap CTA.",
+    "id": "SAVEPOINT-2026-09-18-header-acquisition-steps",
+    "record": "HEADER-ACQUISITION-STEPS-CHECKPOINT-2026-09-18.md",
+    "scope": "Replace the ambiguous single Xaman CTA with two explicit acquisition steps: Buy XRP in Xaman, then open the exact XRBC/XRP trading panel for Xaman-signed execution.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
     "frontend_file": "public/index.html",
-    "frontend_commit": "b0f97dbd274986be8b379850964ed65cc4933764",
-    "rollback_commit": "3110da635cc487f9111d59f30233724e2d343928",
-    "pipeline_id": 2863126314,
+    "frontend_commit": "1b06e6152b2471749a585690920477fe20b46e3f",
+    "rollback_commit": "b0f97dbd274986be8b379850964ed65cc4933764",
+    "pipeline_id": 2863135579,
     "pipeline_status": "success",
-    "xaman_swap_url": "https://xaman.app/detect/xapp:xaman.swapper",
-    "xaman_prefill_status": "No documented public token-prefill parameter verified; do not invent one.",
+    "acquisition_steps": [
+      {
+        "step": 1,
+        "label": "Buy XRP",
+        "target": "https://xumm.app/detect/app:xumm.buysellxrp"
+      },
+      {
+        "step": 2,
+        "label": "XRP → XRBC",
+        "target": "/#trade"
+      }
+    ],
+    "xaman_first_party_prefill_status": "No verified public first-party Xaman Swap parameter for preselecting XRBC; do not imply one.",
     "preserved": [
       "original XRBC emblem",
-      "Trade",
-      "XRPL Token Liquidity",
-      "Liquidity",
-      "Research",
       "Tools",
-      "Developers",
       "themeToggle",
-      "existing trading/signing runtime"
+      "existing XRBC/XRP trade/signing logic"
     ],
     "pending": [
-      "user visual review after deployment propagation"
+      "user visual and interaction review after propagation"
     ]
   },
   "savepoint_format": [
@@ -366,6 +372,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-18-header-xaman-nav",
+      "record": "HEADER-XAMAN-NAV-CHECKPOINT-2026-09-18.md",
+      "scope": "Redesign the XRBitcoinCash homepage header to the approved compact XRPL terminal style, preserve Tools and theme controls, and add a first-party Xaman Swap CTA."
+    },
     {
       "id": "SAVEPOINT-2026-09-18-footer-compaction",
       "record": "FOOTER-COMPACTION-CHECKPOINT-2026-09-18.md",
