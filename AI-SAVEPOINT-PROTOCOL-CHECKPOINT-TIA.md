@@ -2,7 +2,7 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-18  
+**Updated:** 2026-09-19  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
@@ -522,3 +522,30 @@ Checks:
 
 TODO:
 - User verifies the desktop authorization QR with Xaman and tests one real OfferCancel before relying on bulk sequential cleanup.
+
+
+### [SAVEPOINT-2026-09-19-xaman-standardization-audit-pause] Xaman wallet standardization audit paused for higher-capability review
+
+Context: The user requested a project-wide standard for Xaman wallet behavior: connection must be authorization-only using immediate authorize() with the existing Render/XRPL read service waking in parallel; ledger writes must use the Order Manager createAndSubscribe pattern with challenge, intent binding and validated post-ledger comparison. The audit was intentionally paused before final verification so a higher-capability model can finish the security-sensitive pass.
+
+Changes:
+- Added `XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md` as the detailed continuation record.
+- Updated `ai-memory.json` so this paused audit is the latest savepoint and the next model is told not to assume the observed standardization commit is complete.
+- No active GitLab frontend, backend, Render configuration, Xaman configuration, wallet or XRPL transaction code is changed by this memory checkpoint.
+
+Impact:
+- Resume from active GitLab frontend `xrbitcoincash-group/xrbitcoincash-project`, branch `master`, not from the legacy GitHub site frontend.
+- Recorded GitLab head at pause: `ffc50caed8694f2fada443cbd8748bec1890a34a` (`Standardize Xaman connection and signing validation`), parent `04decf32ca30bcb983b7699fcc8f1c0154108242`. This head is evidence to review, not proof of completion.
+- Preserve `public/xrbc-xaman-standard.js` as the shared connection/signing security layer unless the higher-capability audit finds a specific defect.
+- Preserve page-specific APIs and stricter transaction validators while removing verified legacy inconsistencies only.
+
+Checks:
+- Repository-wide discovery located shared authorization usage across the major active XRBC/XRBitcoin wallet pages.
+- Direct legacy authorization was not found in active page code outside the shared layer at the last audit search; re-run against the then-current head before making a final claim.
+- The observed head commit changes `CONTRIBUTING.md`, `THREAT_MODEL.md`, `public/index.html`, `public/xrbc-liquidity-pool.html`, `public/xrbc-xaman-standard.js`, and `public/xrbitcoin-links.html`.
+- No real desktop QR, mobile deeplink/app-switch, or live XRPL transaction test was completed by this audit.
+
+TODO:
+- Review the recorded standardization commit against its parent, then re-fetch current `master` before editing.
+- Build a page-by-page connection/read/write/validation matrix and repair only confirmed gaps.
+- Run repository tests/diff checks and separately verify desktop and mobile Xaman behavior before calling the wallet standard complete.
