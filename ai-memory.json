@@ -314,31 +314,29 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-19-developer-api-workbench",
-    "record": "DEVELOPER-API-WORKBENCH-CHECKPOINT-2026-09-19.md",
-    "scope": "Turn the developer page into a live XRBC API workbench with homepage-style header, human-readable live results, collapsed raw JSON/code/reference, and plain-language gated-report authentication.",
+    "id": "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency",
+    "record": "LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md",
+    "scope": "Align Liquidity Sentinel token images, exact XRBC/XRP direct-pair trading, 0-100 higher-risk scoring, warning vocabulary and downstream displays.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
     "frontend_files": [
-      "public/developers.html",
+      "public/liquidity-sentinel.html",
+      "public/index.html",
+      "public/xrbc-ecosystem.html",
       "public/xrbc-developer-api.js"
     ],
-    "frontend_commit": "1b119d28a19aeda94288602c5cd26171135fe39a",
-    "rollback_commit": "27bd9a8fe1475806dc2bdcc5d29effa0ab6a5f20",
-    "pipeline_id": 2863474475,
+    "rollback_commit": "878a8d23db5ebc304a995a02bf28cd8b1d54e87f",
+    "main_commit": "4b5d38b62c291e00ccc7497f4a7d73f93ed67e64",
+    "final_commit": "a6ada1150b1dac04676d55fc3f131a49948948f8",
+    "pipeline_id": 2863531864,
     "pipeline_status": "success",
-    "developer_page": {
-      "default_live_endpoint": "/market/xrbc",
-      "warmup": "single non-polling /status request on load",
-      "public_auth_requirement": "none",
-      "gated_report_auth": "short-lived signed wallet + actual XRBC holding threshold",
-      "xaman_purchase_cta": false,
-      "raw_json_preserved": true,
-      "openapi_preserved": true
-    },
+    "score_direction": "public liquidity risk is 0-100; higher = more observed risk; raw 0-7 health retained for reproducibility/API compatibility",
+    "transaction_rule": "Sentinel exact XRBC/XRP uses direct OfferCreate Fill-or-Kill; buy exact XRBC with max XRP boundary, sell exact XRBC with min XRP boundary + tfSell; no Payment Paths.",
+    "image_rule": "Exact issuer/currency image resolution; local exact image then Bithomp on standalone; initials if unavailable.",
     "pending": [
-      "user visual and live-response review after propagation",
-      "direct Render payload verification when network access is available"
+      "user visual check that Bithomp-backed token images resolve where available",
+      "real-device Xaman test of a small exact buy and exact sell after manual field review",
+      "confirm an intentionally unfillable Fill-or-Kill request leaves no resting Offer"
     ]
   },
   "savepoint_format": [
@@ -366,6 +364,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-19-developer-api-workbench",
+      "record": "DEVELOPER-API-WORKBENCH-CHECKPOINT-2026-09-19.md",
+      "scope": "Turn the developer page into a live XRBC API workbench with homepage-style header, human-readable live results, collapsed raw JSON/code/reference, and plain-language gated-report authentication."
+    },
     {
       "id": "SAVEPOINT-2026-09-18-xaman-single-cta-homepage-top",
       "record": "XAMAN-SINGLE-CTA-AND-HOMEPAGE-TOP-CHECKPOINT-2026-09-18.md",
@@ -398,5 +401,81 @@
       "final_frontend_commit": "61278c5b5c9a9bda08a467da84069b39c45a6eaa",
       "final_frontend_pipeline": 2862729733
     }
-  ]
+  ],
+  "metric_conventions": {
+    "liquidity_risk": {
+      "canonical_raw_model": "0-7 health points; higher = stronger observed direct-liquidity conditions",
+      "public_display": "0-100 risk; higher = more observed risk",
+      "formula": "round((7 - healthPoints) / 7 * 100)",
+      "classifications": {
+        "healthy": {
+          "raw_health": "6-7",
+          "risk_display": "0-14"
+        },
+        "caution": {
+          "raw_health": "3-5",
+          "risk_display": "29-57"
+        },
+        "risk": {
+          "raw_health": "0-2",
+          "risk_display": "71-100"
+        }
+      },
+      "unscored_states": [
+        "No XRP AMM found",
+        "Data unavailable"
+      ],
+      "frozen_display_risk": 100,
+      "missing_evidence_rule": "Never convert missing/unavailable evidence into a favorable or unfavorable numeric score.",
+      "backend_compatibility": "Developer API may retain raw 0-7 Sentinel health; frontends normalize for public 0-100 risk display and may show raw health as reproducibility detail."
+    }
+  },
+  "transaction_conventions": {
+    "sentinel_exact_xrbc_xrp": {
+      "scope": "Standalone Liquidity Sentinel optional exact trade only",
+      "route": "Direct XRBC/XRP OfferCreate; no circular Payment pathfinding, no Payment Paths",
+      "buy": "TakerPays exact XRBC; TakerGets max XRP; tfFillOrKill",
+      "sell": "TakerGets exact XRBC; TakerPays min XRP; tfFillOrKill + tfSell",
+      "quote": "Fresh validated-ledger direct AMM observation with trading fee and 2% boundary",
+      "ledger_window_sequences": 20,
+      "protected_fields": [
+        "TransactionType",
+        "Account",
+        "TakerGets",
+        "TakerPays",
+        "Flags",
+        "Memos",
+        "LastLedgerSequence"
+      ],
+      "review": "Xaman wallet-side review/signing; validated transaction fields rechecked afterward",
+      "claim_boundary": "This removes multi-asset payment-path routing from this control; never claim it eliminates arbitrage in public XRPL markets."
+    }
+  },
+  "asset_image_conventions": {
+    "liquidity_scanner": {
+      "identity_key": "exact issuer + currency",
+      "standalone_order": [
+        "project-controlled local image when explicitly bound",
+        "Bithomp issued-token image by exact issuer/currency",
+        "ticker initials"
+      ],
+      "homepage_order": [
+        "project-controlled local image when explicitly bound",
+        "Bithomp issued-token image by exact issuer/currency",
+        "allowlisted XRPL Meta cached image",
+        "ticker initials"
+      ],
+      "missing_image_meaning": "Metadata/presentation gap only; never a liquidity, legitimacy or safety score."
+    }
+  },
+  "warning_conventions": {
+    "liquidity": {
+      "Healthy": "Published liquidity heuristic indicates stronger observed conditions only.",
+      "Caution": "Published liquidity heuristic indicates mixed observed conditions.",
+      "Risk": "Published liquidity heuristic indicates elevated observed liquidity concerns.",
+      "Frozen": "Concrete reported ledger condition; not a generalized fraud or safety verdict.",
+      "No XRP AMM found": "No direct XRP AMM returned at the checked ledger; other venues or routes may exist.",
+      "Data unavailable": "Lookup or evidence incomplete; no numeric score."
+    }
+  }
 }
