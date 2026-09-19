@@ -467,3 +467,31 @@ Supersession:
 
 Operating rule:
 - Standalone Liquidity Sentinel = observation, scoring, warnings and evidence export. No transaction preparation unless explicitly requested again.
+
+
+### [SAVEPOINT-2026-09-19-order-manager-cleanup-restore] Restore XRPL open-offer cleanup
+
+Context: `public/limit-extraction.html` had drifted to a mobile-only design whose desktop QR was a static page URL. Historical v3.0/v3.1/v3.2 copies were inspected; v3.2 established the useful Xaman-owned QR/deeplink, bounded OfferCancel and validated-intent pattern.
+
+Changes:
+- GitLab commit `1c55229a71a7e21dc4181ff239847af5b4975a05` restores the page as an XRPL Open Order Cleanup & Manager.
+- Validated `account_offers` is the source for current open offers. The UI explicitly does not infer age from that response.
+- Removed the permanent page-link QR. Desktop Xaman authorization is again owned by the Xaman SDK; each desktop OfferCancel displays the official QR returned for that exact payload. Mobile uses a same-device deeplink.
+- Restored the bounded `Clear Open Offers` queue on desktop, up to 25 currently loaded offers. Every item still requires a distinct OfferCancel + Xaman approval and the queue stops on any non-authoritative result.
+- Preserved six-digit challenge, SHA-256 intent, short ledger expiry, validated `tesSUCCESS`, protected OfferSequence and critical-field comparison.
+- Preserved public-address read-only inspection and post-cleanup OwnerCount/XRP balance/reserve reporting.
+- Removed unrelated XRBC Quick Buy / TrustSet UI and transaction code.
+- Detailed record: `ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md`.
+
+Checks:
+- Static `desktopXamanQr` is absent; Xaman payload QR is present.
+- Required interface IDs are unique.
+- Validated account_offers, OfferCancel, cancelAll wiring, tesSUCCESS verification and OfferSequence matching are present.
+- Quick Buy UI / buyXRBC are absent.
+- GitLab pipeline `2863825712` succeeded: validation, secret detection, Semgrep SAST and Pages deployment.
+
+Operating rules:
+- Do not claim open-offer age unless independently established; current account_offers only proves the offer is still open.
+- Do not present a static page-link QR as Xaman authorization/signing.
+- One cleanup button may orchestrate the workflow, but XRPL still requires one independently approved OfferCancel per offer.
+- The website never takes custody of offer funds.
