@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -314,28 +314,31 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-xaman-single-cta-homepage-top",
-    "record": "XAMAN-SINGLE-CTA-AND-HOMEPAGE-TOP-CHECKPOINT-2026-09-18.md",
-    "scope": "Replace broken two-step acquisition header with one exact XRBC Xaman Swap CTA using xaman.swap and force ordinary homepage loads to begin at the header.",
+    "id": "SAVEPOINT-2026-09-19-developer-api-workbench",
+    "record": "DEVELOPER-API-WORKBENCH-CHECKPOINT-2026-09-19.md",
+    "scope": "Turn the developer page into a live XRBC API workbench with homepage-style header, human-readable live results, collapsed raw JSON/code/reference, and plain-language gated-report authentication.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
-    "frontend_file": "public/index.html",
-    "frontend_commit": "4ff0aa9431bca84ac84a13eac8b11ba81933349b",
-    "rollback_commit": "77d07adc69e7a6ddd99a846793bb41404a8a8402",
-    "pipeline_id": 2863147964,
-    "pipeline_status": "success",
-    "xaman_swap_identifier": "xaman.swap",
-    "xaman_swap_target": "https://xaman.app/detect/xapp:xaman.swap?issuer=rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw&asset=5852626974636F696E6361736800000000000000&action=SWAP",
-    "homepage_load_policy": "Root and legacy #trade loads reset to top; deliberate non-trade anchors remain supported.",
-    "preserved": [
-      "original XRBC emblem",
-      "Tools",
-      "themeToggle",
-      "existing trading and signing runtime"
+    "frontend_files": [
+      "public/developers.html",
+      "public/xrbc-developer-api.js"
     ],
+    "frontend_commit": "1b119d28a19aeda94288602c5cd26171135fe39a",
+    "rollback_commit": "27bd9a8fe1475806dc2bdcc5d29effa0ab6a5f20",
+    "pipeline_id": 2863474475,
+    "pipeline_status": "success",
+    "developer_page": {
+      "default_live_endpoint": "/market/xrbc",
+      "warmup": "single non-polling /status request on load",
+      "public_auth_requirement": "none",
+      "gated_report_auth": "short-lived signed wallet + actual XRBC holding threshold",
+      "xaman_purchase_cta": false,
+      "raw_json_preserved": true,
+      "openapi_preserved": true
+    },
     "pending": [
-      "user device test of Xaman Swap destination after propagation",
-      "user visual confirmation homepage opens at header"
+      "user visual and live-response review after propagation",
+      "direct Render payload verification when network access is available"
     ]
   },
   "savepoint_format": [
@@ -363,6 +366,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-18-xaman-single-cta-homepage-top",
+      "record": "XAMAN-SINGLE-CTA-AND-HOMEPAGE-TOP-CHECKPOINT-2026-09-18.md",
+      "scope": "Replace broken two-step acquisition header with one exact XRBC Xaman Swap CTA using xaman.swap and force ordinary homepage loads to begin at the header."
+    },
     {
       "id": "SAVEPOINT-2026-09-18-xaman-token-specific-xrbc-swap",
       "record": "XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md",
