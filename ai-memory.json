@@ -17,7 +17,26 @@
       "run relevant checks",
       "record a concise savepoint"
     ],
-    "missing_evidence": "stop and report; never invent values"
+    "missing_evidence": "stop and report; never invent values",
+    "conversation_bootstrap": {
+      "required_for_new_project_conversations": true,
+      "purpose": "Use the GitHub continuity repository as a secondary project-memory layer so a new conversation can regain verified XRBitcoinCash state before making edits.",
+      "sequence": [
+        "read ai-memory.json and the canonical contract",
+        "read latest_savepoint.record",
+        "check the active source-of-truth repository, branch, current commit and relevant pipeline",
+        "compare the new request with current source so already-applied work is not duplicated or overwritten",
+        "reuse established project facts and decisions instead of asking the user to repeat them",
+        "make the smallest bounded change and record the result as a new savepoint"
+      ],
+      "model_working_notes": [
+        "repository evidence outranks stale conversational assumptions",
+        "detect concurrent or already-applied edits before writing",
+        "preserve verified working paths and unrelated functions",
+        "keep status updates concise and evidence-based",
+        "record exact commit, pipeline, rollback point and remaining manual verification"
+      ]
+    }
   },
   "precedence": [
     "current explicit user request",
@@ -295,37 +314,41 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-xrpl-media-connection-fix",
-    "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md",
-    "record_commit": "6908520c980c3b2966f9deef33870bc452280fba",
-    "scope": "Repair failed Media Desk live-data path with first-party media proxy, direct provider fallback and immediate verified source fallback.",
+    "id": "SAVEPOINT-2026-09-18-footer-compaction",
+    "record": "FOOTER-COMPACTION-CHECKPOINT-2026-09-18.md",
+    "scope": "Compact the XRBitcoinCash homepage footer into fine print with a subtle XRPL terminal visual treatment and formalize the new-conversation repository-memory bootstrap.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
-    "final_frontend_commit": "61278c5b5c9a9bda08a467da84069b39c45a6eaa",
-    "final_frontend_pipeline": 2862729733,
-    "final_mirror_commit": "5c6004cdbbf94c6cb1427f00e0426654f1fb765c",
-    "backend_repository": "XRBitcoinCash/xrbitcoincash.github.io",
-    "backend_commits": [
-      "d22d98590bb4cafce5ef679d4a08d1fcb9f0b78f",
-      "15767e51e9fe4826990ef34ceadb7777de909908",
-      "801824d83457544df859be56e583823f4e98671f"
-    ],
-    "current_state": {
-      "primary_media_path": "https://xrbitcoincash-github-io.onrender.com/api/v1/media/news",
-      "secondary_media_path": "fixed direct cryptocurrency.cv XRP/XRPL/Ripple/RLUSD/Xaman/latest requests",
-      "final_fallback": "verified direct publisher/source cards displayed immediately",
-      "cache_key": "xrbc.media.news.v3",
-      "blank_transport_failure": "eliminated"
+    "frontend_file": "public/index.html",
+    "frontend_commit": "3110da635cc487f9111d59f30233724e2d343928",
+    "rollback_commit": "b3c01cb9df17ca95a2536e45ec956f90a64bf536",
+    "pipeline_id": 2863060698,
+    "pipeline_status_at_record": "running",
+    "footer_state": {
+      "presentation": "compact terminal-style fine print",
+      "retained_links": [
+        "Support",
+        "Policy & security",
+        "Terms",
+        "White paper",
+        "Project provenance"
+      ],
+      "retained_notices": [
+        "Security",
+        "Ledger data",
+        "AI-assisted review",
+        "Risk & legal"
+      ],
+      "unrelated_runtime_changes_intended": false
     },
-    "invariants": [
-      "Normal media transport failure must not produce an empty homepage media surface.",
-      "Fallback source cards must be labeled as direct sources/market references, never fabricated as current headlines.",
-      "Backend upstream URLs remain fixed and query expansion is rejected.",
-      "Media transport remains independent of wallet, Xaman signing, holding gates, XRPL transaction submission and liquidity math."
-    ],
+    "continuity_rule": "At the start of a new XRBitcoinCash project conversation, read canonical GitHub memory + latest savepoint and verify current repository state before editing.",
+    "previous_latest_savepoint": {
+      "id": "SAVEPOINT-2026-09-18-xrpl-media-connection-fix",
+      "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md"
+    },
     "pending": [
-      "Visually reload the public homepage and note which status path is active: proxy, direct provider, or direct-source fallback.",
-      "Render live-route deployment timestamp is not independently observable from the current tool environment."
+      "confirm GitLab pipeline 2863060698 completes successfully",
+      "visually verify the deployed compact footer at desktop and mobile widths after propagation"
     ]
   },
   "savepoint_format": [
@@ -351,5 +374,14 @@
     ],
     "large_file_rule": "Do not repeatedly reproduce or transfer a many-thousand-line file when a small verified range is sufficient; escalate to full-file generation only when broad interdependent edits make that safer.",
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
-  }
+  },
+  "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-18-xrpl-media-connection-fix",
+      "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md",
+      "scope": "Repair failed Media Desk live-data path with first-party media proxy, direct provider fallback and immediate verified source fallback.",
+      "final_frontend_commit": "61278c5b5c9a9bda08a467da84069b39c45a6eaa",
+      "final_frontend_pipeline": 2862729733
+    }
+  ]
 }
