@@ -359,3 +359,24 @@ Checks:
 
 TODO:
 - User retests Step 2 after propagation and confirms Xaman opens with XRBC selected as the token-specific swap asset.
+
+
+### [SAVEPOINT-2026-09-18-xaman-single-cta-homepage-top] One Xaman CTA and homepage starts at header
+
+Context: Real-device testing showed the two-button acquisition header was not producing the intended experience and the homepage could reopen mid-page. Xaman's current public app config was checked and the previous xApp identifier was found to be wrong.
+
+Changes:
+- GitLab `public/index.html` commit `4ff0aa9431bca84ac84a13eac8b11ba81933349b` removes Buy XRP and the two-step acquisition UI.
+- One `Get XRBC in Xaman` CTA now uses Xaman's current `xaman.swap` identifier plus exact XRBC issuer/currency and `action=SWAP`.
+- Trade navigation now targets root `/`, not `/#trade`.
+- Root/legacy `#trade` loads reset to the header using manual scroll-restoration handling; deliberate other fragment links remain supported.
+- Detailed record: `XAMAN-SINGLE-CTA-AND-HOMEPAGE-TOP-CHECKPOINT-2026-09-18.md`.
+
+Checks:
+- GitLab pipeline `2863147964` succeeded: validation, secret detection, Semgrep SAST and Pages deployment all passed.
+- Rollback parent: `77d07adc69e7a6ddd99a846793bb41404a8a8402`.
+- Existing trading/signing runtime was not intentionally changed.
+
+TODO:
+- Confirm the deployed button opens the desired token-specific Xaman Swap state on the user's phone.
+- Confirm a normal homepage visit opens at the header after propagation.
