@@ -303,3 +303,21 @@ Checks:
 
 TODO:
 - Visually inspect the deployed footer at desktop and mobile widths after propagation.
+
+
+### [SAVEPOINT-2026-09-18-header-xaman-nav] Homepage navigation and Xaman Swap CTA
+
+Context: The user approved the XRPL terminal-style header mockup and requested it on the actual homepage, explicitly retaining Tools and light/dark mode.
+
+Changes:
+- GitLab `public/index.html` commit `b0f97dbd274986be8b379850964ed65cc4933764` adds the CSS-only XRPL grid/orb navigation treatment, preserves the original XRBC emblem, groups Trade / XRPL Token Liquidity / Liquidity / Research / Tools / Developers, retains `themeToggle`, and adds the prominent Get XRBC in Xaman CTA.
+- The CTA uses Xaman's documented first-party Swap xApp URL. No undocumented XRBC-prefill query is used.
+- Detailed record: `HEADER-XAMAN-NAV-CHECKPOINT-2026-09-18.md`.
+
+Checks:
+- GitLab pipeline `2863126314` succeeded, including repository validation, secret detection, Semgrep SAST and Pages deployment.
+- Rollback parent: `3110da635cc487f9111d59f30233724e2d343928`.
+- No trading, signing, AMM, order-book, wallet-gate or backend behavior was intentionally changed.
+
+TODO:
+- User visual review after public propagation; keep any follow-up adjustment presentation-only unless explicitly requested otherwise.
