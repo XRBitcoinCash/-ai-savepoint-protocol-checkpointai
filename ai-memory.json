@@ -314,37 +314,20 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-18-header-acquisition-steps",
-    "record": "HEADER-ACQUISITION-STEPS-CHECKPOINT-2026-09-18.md",
-    "scope": "Replace the ambiguous single Xaman CTA with two explicit acquisition steps: Buy XRP in Xaman, then open the exact XRBC/XRP trading panel for Xaman-signed execution.",
+    "id": "SAVEPOINT-2026-09-18-xaman-token-specific-xrbc-swap",
+    "record": "XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md",
+    "scope": "Correct Step 2 so XRP → XRBC opens Xaman Swap with the exact XRBC issuer/currency instead of a local liquidity/trade page.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
     "frontend_file": "public/index.html",
-    "frontend_commit": "1b06e6152b2471749a585690920477fe20b46e3f",
-    "rollback_commit": "b0f97dbd274986be8b379850964ed65cc4933764",
-    "pipeline_id": 2863135579,
+    "frontend_commit": "77d07adc69e7a6ddd99a846793bb41404a8a8402",
+    "rollback_commit": "1b06e6152b2471749a585690920477fe20b46e3f",
+    "pipeline_id": 2863140420,
     "pipeline_status": "success",
-    "acquisition_steps": [
-      {
-        "step": 1,
-        "label": "Buy XRP",
-        "target": "https://xumm.app/detect/app:xumm.buysellxrp"
-      },
-      {
-        "step": 2,
-        "label": "XRP → XRBC",
-        "target": "/#trade"
-      }
-    ],
-    "xaman_first_party_prefill_status": "No verified public first-party Xaman Swap parameter for preselecting XRBC; do not imply one.",
-    "preserved": [
-      "original XRBC emblem",
-      "Tools",
-      "themeToggle",
-      "existing XRBC/XRP trade/signing logic"
-    ],
+    "xaman_swap_target": "https://xaman.app/detect/xapp:xaman.swapper?issuer=rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw&asset=5852626974636F696E6361736800000000000000&action=SWAP",
+    "evidence": "Xaman public app source preserves xApp query parameters; its token-specific Swap action passes issuer, asset and action=SWAP.",
     "pending": [
-      "user visual and interaction review after propagation"
+      "user device test in Xaman after deployment propagation"
     ]
   },
   "savepoint_format": [
@@ -372,6 +355,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-18-header-acquisition-steps",
+      "record": "HEADER-ACQUISITION-STEPS-CHECKPOINT-2026-09-18.md",
+      "scope": "Replace the ambiguous single Xaman CTA with two explicit acquisition steps: Buy XRP in Xaman, then open the exact XRBC/XRP trading panel for Xaman-signed execution."
+    },
     {
       "id": "SAVEPOINT-2026-09-18-header-xaman-nav",
       "record": "HEADER-XAMAN-NAV-CHECKPOINT-2026-09-18.md",
