@@ -380,3 +380,26 @@ Checks:
 TODO:
 - Confirm the deployed button opens the desired token-specific Xaman Swap state on the user's phone.
 - Confirm a normal homepage visit opens at the header after propagation.
+
+
+### [SAVEPOINT-2026-09-19-developer-api-workbench] Live developer API workbench
+
+Context: The developer page exposed the right API surface but prioritized route documentation/code over useful live output. The user requested a homepage-style header without the Xaman acquisition CTA, clearer purpose, and understandable output.
+
+Changes:
+- GitLab commit `1b119d28a19aeda94288602c5cd26171135fe39a` updates `public/developers.html` and `public/xrbc-developer-api.js`.
+- Header now uses Trade / XRBC Liquidity Pool / Research / Tools / Developers plus theme control.
+- Public API workbench defaults to `/market/xrbc`; successful responses render endpoint-specific human-readable metrics before raw JSON or copyable request code.
+- Full route reference remains available but collapsed behind a secondary disclosure.
+- One `/status` request on page load can wake/check the backend; no continuous polling was added.
+- Wallet authentication is explained as advanced gated-report access only. Public market/liquidity/ledger/supply/project reads require no wallet.
+- Authentication UI now treats `walletAuthenticationVerified === true` as verified readiness; configured credentials alone are not presented as verified.
+
+Checks:
+- V8 syntax check for `xrbc-developer-api.js` passed.
+- Required script DOM IDs are unique.
+- GitLab pipeline `2863474475` succeeded: repository validation, secret detection, Semgrep SAST and Pages deployment.
+- Direct Render endpoint verification was blocked by this environment’s DNS/network limitations.
+
+TODO:
+- User reviews the deployed desktop/mobile page and runs the default live market request after propagation.
