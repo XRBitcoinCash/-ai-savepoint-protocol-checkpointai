@@ -126,3 +126,19 @@ This is the preferred pattern for future bounded edits of the same kind.
 ## Current operating sentence
 
 **Model organizes, targets, reasons, and verifies. Human performs simple exact edits when that is cheaper and clearer. Use full automation only when it improves correctness or materially reduces human effort.**
+
+
+## New-conversation bootstrap
+
+For XRBitcoinCash and explicitly related XRPL project work, treat this GitHub memory repository as a secondary continuity layer whenever a new conversation starts.
+
+1. Read `ai-memory.json`, then the canonical contract.
+2. Read the current `latest_savepoint.record`.
+3. Verify the active source-of-truth repository, branch, current commit, and relevant pipeline before editing.
+4. Compare the user's request with current source first; do not duplicate or overwrite work that has already landed.
+5. Reuse established project facts and decisions instead of making the user repeat known context.
+6. Keep the change bounded, preserve unrelated working behavior, run the relevant checks, and write a concise savepoint.
+
+Project-memory notes may also record working practices that make future model collaboration more reliable: evidence before action, current-source verification, exact file identity, rollback points, concise status reporting, and explicit separation of repository state, CI state, and live deployment state.
+
+This is a project continuity mechanism, not a modification of model weights or model/system safeguards.
