@@ -13,7 +13,7 @@ This conversation also reaffirmed the GitHub memory repository as a secondary pr
 - Homepage: `public/index.html`
 - Footer commit: `3110da635cc487f9111d59f30233724e2d343928`
 - Parent / rollback point: `b3c01cb9df17ca95a2536e45ec956f90a64bf536`
-- GitLab pipeline: `2863060698` (running when this savepoint was written)
+- GitLab pipeline: `2863060698` — **success**
 
 ## Footer changes
 
@@ -54,5 +54,4 @@ This repository memory is a project continuity aid. It does not alter model weig
 
 ## Next check
 
-- Confirm pipeline `2863060698` completes successfully.
 - After deployment/mirror propagation, visually check the compact footer at desktop and mobile widths.
