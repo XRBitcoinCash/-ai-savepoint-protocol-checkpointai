@@ -341,3 +341,21 @@ Checks:
 
 TODO:
 - User visual/interaction review after propagation.
+
+
+### [SAVEPOINT-2026-09-18-xaman-token-specific-xrbc-swap] Exact XRBC target in Xaman Swap
+
+Context: The user supplied a phone screenshot showing the desired native Xaman Swap state: XRP as the selling asset and XRBitcoinCash as the receiving asset. The previous Step 2 local target was incorrect.
+
+Changes:
+- GitLab `public/index.html` commit `77d07adc69e7a6ddd99a846793bb41404a8a8402` changes Step 2 to Xaman's token-specific Swap launch form using the exact XRBC issuer, exact XRBC currency code and `action=SWAP`.
+- The old local `/#trade` target is removed from Step 2.
+- Detailed record: `XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md`.
+
+Checks:
+- GitLab pipeline `2863140420` succeeded.
+- Validation, secret detection, Semgrep SAST and Pages deploy all passed.
+- Final native-app behavior still requires real-device verification.
+
+TODO:
+- User retests Step 2 after propagation and confirms Xaman opens with XRBC selected as the token-specific swap asset.
