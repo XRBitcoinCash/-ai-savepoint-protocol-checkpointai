@@ -323,7 +323,7 @@
     "frontend_commit": "3110da635cc487f9111d59f30233724e2d343928",
     "rollback_commit": "b3c01cb9df17ca95a2536e45ec956f90a64bf536",
     "pipeline_id": 2863060698,
-    "pipeline_status_at_record": "running",
+    "pipeline_status_at_record": "success",
     "footer_state": {
       "presentation": "compact terminal-style fine print",
       "retained_links": [
@@ -347,9 +347,9 @@
       "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md"
     },
     "pending": [
-      "confirm GitLab pipeline 2863060698 completes successfully",
       "visually verify the deployed compact footer at desktop and mobile widths after propagation"
-    ]
+    ],
+    "pipeline_finished_at": "2026-09-19T00:39:15Z"
   },
   "savepoint_format": [
     "context",
