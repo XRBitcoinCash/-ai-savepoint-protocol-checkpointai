@@ -62,7 +62,8 @@
     "deployment_instructions": "Give the exact repository, branch, filename and direct public URL when relevant. For contained homepage/code changes, prefer confirmed Ctrl+F anchors plus complete whole-function or bounded-block replacements followed by AI verification of the edited result. Generate complete HTML/TXT replacement files only when a broad multi-region change makes full-file delivery safer or materially easier. Do not automatically commit unless explicitly requested.",
     "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
     "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
-    "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations."
+    "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations.",
+    "liquidity_sentinel_scope": "Standalone Liquidity Sentinel is a read-only wallet liquidity scanner. Xaman selects the public account only. The Quick Buy / exact buy-sell transaction pilot was removed on 2026-09-19; do not reintroduce transaction preparation there without an explicit request."
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -218,7 +219,9 @@
     "never overwrite a trading page merely because a supplied download is named index.html",
     "public liquidity index needs no wallet and must not introduce trading/signing paths",
     "no direct XRP pool, unavailable, not checked and stale are different states; pool presence is not certification",
-    "do not advertise planned historical anomaly detection as implemented"
+    "do not advertise planned historical anomaly detection as implemented",
+    "standalone Liquidity Sentinel is read-only: Xaman public-account selection, liquidity scanning, scoring, warnings and evidence export only; no transaction preparation",
+    "liquidity-risk display uses 0-100 higher-is-more-risk while raw 0-7 health may remain in compatibility/evidence; no-pool and unavailable are unscored"
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
@@ -314,29 +317,43 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency",
-    "record": "LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md",
-    "scope": "Align Liquidity Sentinel token images, exact XRBC/XRP direct-pair trading, 0-100 higher-risk scoring, warning vocabulary and downstream displays.",
+    "id": "SAVEPOINT-2026-09-19-sentinel-readonly-pilot-removal",
+    "record": "SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md",
+    "scope": "Remove the standalone Liquidity Sentinel Quick Buy / exact trade pilot and transaction controller while preserving wallet scanning, exact-identity images, 0-100 liquidity-risk display, warnings and evidence export.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
     "frontend_files": [
-      "public/liquidity-sentinel.html",
-      "public/index.html",
-      "public/xrbc-ecosystem.html",
-      "public/xrbc-developer-api.js"
+      "public/liquidity-sentinel.html"
     ],
-    "rollback_commit": "878a8d23db5ebc304a995a02bf28cd8b1d54e87f",
-    "main_commit": "4b5d38b62c291e00ccc7497f4a7d73f93ed67e64",
-    "final_commit": "a6ada1150b1dac04676d55fc3f131a49948948f8",
-    "pipeline_id": 2863531864,
+    "frontend_commit": "da9cfbf98feaa82690a5fead35be1354a7f4503d",
+    "rollback_commit": "a6ada1150b1dac04676d55fc3f131a49948948f8",
+    "pipeline_id": 2863543612,
     "pipeline_status": "success",
-    "score_direction": "public liquidity risk is 0-100; higher = more observed risk; raw 0-7 health retained for reproducibility/API compatibility",
-    "transaction_rule": "Sentinel exact XRBC/XRP uses direct OfferCreate Fill-or-Kill; buy exact XRBC with max XRP boundary, sell exact XRBC with min XRP boundary + tfSell; no Payment Paths.",
-    "image_rule": "Exact issuer/currency image resolution; local exact image then Bithomp on standalone; initials if unavailable.",
+    "standalone_sentinel": {
+      "transaction_preparation": false,
+      "xaman_role": "public account selection only",
+      "scanner": true,
+      "image_resolution": "local exact asset then Bithomp exact issuer+currency fallback",
+      "published_risk_scale": "0-100 higher means more observed risk",
+      "raw_health_scale": "0-7 retained where compatibility/evidence requires it",
+      "normalization": "round((7-healthPoints)/7*100)",
+      "no_pool_state": "unscored",
+      "data_unavailable_state": "unscored"
+    },
+    "preserved": [
+      "homepage trading",
+      "XRBC liquidity pool interface",
+      "homepage Sentinel",
+      "Ecosystem scanner",
+      "Developer API workbench",
+      "wallet liquidity scan",
+      "risk warnings and evidence export"
+    ],
+    "supersedes_for_standalone_sentinel": [
+      "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency exact-trade pilot portion"
+    ],
     "pending": [
-      "user visual check that Bithomp-backed token images resolve where available",
-      "real-device Xaman test of a small exact buy and exact sell after manual field review",
-      "confirm an intentionally unfillable Fill-or-Kill request leaves no resting Offer"
+      "user visual confirmation after propagation"
     ]
   },
   "savepoint_format": [
@@ -364,6 +381,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency",
+      "record": "LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md",
+      "scope": "Align Liquidity Sentinel token images, exact XRBC/XRP direct-pair trading, 0-100 higher-risk scoring, warning vocabulary and downstream displays."
+    },
     {
       "id": "SAVEPOINT-2026-09-19-developer-api-workbench",
       "record": "DEVELOPER-API-WORKBENCH-CHECKPOINT-2026-09-19.md",
