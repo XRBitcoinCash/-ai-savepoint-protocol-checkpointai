@@ -321,33 +321,33 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-19-order-manager-cleanup-restore",
-    "record": "ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md",
-    "scope": "Restore limit-extraction as a focused XRPL open-offer cleanup tool: validated account_offers, official Xaman QR/deeplink, bounded sequential OfferCancel, validated intent checking and reserve/balance reporting; remove unrelated Quick Buy.",
+    "id": "SAVEPOINT-2026-09-19-order-manager-xaman-browser-repair",
+    "record": "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md",
+    "scope": "Repair limit-extraction Xaman browser authorization and make validated OfferCancel cleanup reachable on desktop and mobile without conflating public-address inspection with wallet connection.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
     "frontend_file": "public/limit-extraction.html",
-    "frontend_commit": "1c55229a71a7e21dc4181ff239847af5b4975a05",
-    "rollback_commit": "da9cfbf98feaa82690a5fead35be1354a7f4503d",
-    "pipeline_id": 2863825712,
+    "frontend_commit": "825028ecebfe582986392933632bf5df0fe1508e",
+    "rollback_commit": "1c55229a71a7e21dc4181ff239847af5b4975a05",
+    "pipeline_id": 2863838957,
     "pipeline_status": "success",
     "order_manager": {
-      "purpose": "inspect and clear currently open XRPL offers",
-      "public_read": "validated account_offers by classic address",
-      "age_policy": "offer age is not inferred from account_offers; user identifies stale/forgotten/unwanted offers",
-      "desktop_xaman": "official Xaman authorization QR and official per-OfferCancel transaction QR",
-      "mobile_xaman": "same-device deeplink with return/validation flow",
-      "cleanup_cap": 25,
-      "transaction": "one OfferCancel per offer",
-      "completion": "validated tesSUCCESS plus saved-intent critical-field match",
-      "protected_field": "OfferSequence",
-      "reserve_reporting": "post-cleanup OwnerCount and XRP balance comparison with owner-reserve estimate",
-      "quick_buy": false
+      "purpose": "Inspect and clear currently open XRPL offers; no Quick Buy.",
+      "xaman_browser_flow": "Official Xaman browser authorize(); desktop QR, mobile deeplink.",
+      "connected_mode": "xaman",
+      "read_source": "validated account_offers",
+      "write_transaction": "one OfferCancel per offer",
+      "validation": "tesSUCCESS + protected critical-field comparison",
+      "public_address_mode": "read-only",
+      "static_page_qr_allowed": false
     },
+    "root_cause": [
+      "xamanRuntimeOk was referenced but undefined",
+      "mobileWalletOnly remained true",
+      "submitAndValidate required obsolete xaman-mobile while connect stored xaman"
+    ],
     "pending": [
-      "user desktop test of official Xaman authorization QR",
-      "user test of one OfferCancel and refreshed open-offer removal",
-      "user mobile individual-cancel handoff test"
+      "user real-device/browser test of desktop Xaman authorization QR and one small OfferCancel"
     ]
   },
   "savepoint_format": [
@@ -375,6 +375,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-19-order-manager-cleanup-restore",
+      "record": "ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md",
+      "scope": "Restore limit-extraction as a focused XRPL open-offer cleanup tool: validated account_offers, official Xaman QR/deeplink, bounded sequential OfferCancel, validated intent checking and reserve/balance reporting; remove unrelated Quick Buy."
+    },
     {
       "id": "SAVEPOINT-2026-09-19-sentinel-readonly-pilot-removal",
       "record": "SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md",
