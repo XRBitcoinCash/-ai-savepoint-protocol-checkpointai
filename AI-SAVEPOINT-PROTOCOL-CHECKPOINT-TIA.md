@@ -277,3 +277,30 @@ TODO:
 **Evidence before action. Preserve working paths. Change one bounded thing. Test it. Record what changed.**
 
 This contract improves continuity and reduces repeated reasoning; it does not override model safeguards, repository permissions, user approval requirements, or independent wallet review.
+
+
+### [SAVEPOINT-2026-09-18-footer-compaction] Compact homepage footer and conversation bootstrap
+
+Context: The user requested that the oversized XRBitcoinCash homepage footer be reduced to compact fine print, retain only the core disclosure links, remove the empty/disordered layout, and use a subtle technical/XRPL background. The same request formalized the GitHub memory repository as a secondary continuity step at the beginning of new project conversations.
+
+Changes:
+- GitLab `public/index.html` footer is represented by commit `3110da635cc487f9111d59f30233724e2d343928` (rollback parent `b3c01cb9df17ca95a2536e45ec956f90a64bf536`).
+- Footer now uses a compact terminal-style panel, tight XRBC identity grid, four fine-print disclosures, and only Support / Policy & security / Terms / White paper / Project provenance links.
+- Removed redundant related-project navigation and repeated long-form footer copy.
+- Added the required new-conversation bootstrap to the machine-readable memory and human workflow: read canonical memory + latest savepoint, verify current source/commit/pipeline, detect already-applied work, reuse established facts, then make a bounded change.
+- Detailed record: `FOOTER-COMPACTION-CHECKPOINT-2026-09-18.md`.
+
+Impact:
+- GitLab remains the active frontend source of record.
+- Do not widen footer/presentation work into wallet, Xaman, AMM, order, holding-gate, proxy, or transaction logic.
+- Future conversations should regain project continuity from repository evidence before asking the user to restate known project state.
+- Repository memory can record collaboration heuristics that reduce errors, but it does not alter model weights or system safeguards.
+
+Checks:
+- Commit diff reviewed: only `public/index.html` changed in the footer compaction commit.
+- GitLab pipeline `2863060698` was running when this savepoint was written.
+- No live-wallet or signing action was performed.
+
+TODO:
+- Confirm pipeline `2863060698` succeeds.
+- Visually inspect the deployed footer at desktop and mobile widths after propagation.
