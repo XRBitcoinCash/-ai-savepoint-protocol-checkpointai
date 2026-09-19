@@ -63,7 +63,8 @@
     "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
     "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
     "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations.",
-    "liquidity_sentinel_scope": "Standalone Liquidity Sentinel is a read-only wallet liquidity scanner. Xaman selects the public account only. The Quick Buy / exact buy-sell transaction pilot was removed on 2026-09-19; do not reintroduce transaction preparation there without an explicit request."
+    "liquidity_sentinel_scope": "Standalone Liquidity Sentinel is a read-only wallet liquidity scanner. Xaman selects the public account only. The Quick Buy / exact buy-sell transaction pilot was removed on 2026-09-19; do not reintroduce transaction preparation there without an explicit request.",
+    "order_manager_scope": "Order Manager / limit-extraction is for inspecting and clearing currently open XRPL offers. Do not add Quick Buy there. Public address inspection stays read-only; Xaman is the signer. Desktop uses Xaman-owned authorization/transaction QR, mobile uses Xaman deeplinks. Never present a static page-link QR as a wallet or transaction QR."
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -221,7 +222,10 @@
     "no direct XRP pool, unavailable, not checked and stale are different states; pool presence is not certification",
     "do not advertise planned historical anomaly detection as implemented",
     "standalone Liquidity Sentinel is read-only: Xaman public-account selection, liquidity scanning, scoring, warnings and evidence export only; no transaction preparation",
-    "liquidity-risk display uses 0-100 higher-is-more-risk while raw 0-7 health may remain in compatibility/evidence; no-pool and unavailable are unscored"
+    "liquidity-risk display uses 0-100 higher-is-more-risk while raw 0-7 health may remain in compatibility/evidence; no-pool and unavailable are unscored",
+    "Order Manager open-offer cleanup must use validated account_offers; account_offers does not prove offer age, so stale/old is a user judgment rather than an inferred field",
+    "Order Manager cancellation uses one validated OfferCancel per offer with OfferSequence protected by challenge/intent binding; submitted is not complete",
+    "A static QR containing only a page URL is not a Xaman authorization or transaction QR; desktop Xaman QR must be produced by Xaman for the actual authorization or payload"
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
@@ -317,43 +321,33 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-19-sentinel-readonly-pilot-removal",
-    "record": "SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md",
-    "scope": "Remove the standalone Liquidity Sentinel Quick Buy / exact trade pilot and transaction controller while preserving wallet scanning, exact-identity images, 0-100 liquidity-risk display, warnings and evidence export.",
+    "id": "SAVEPOINT-2026-09-19-order-manager-cleanup-restore",
+    "record": "ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md",
+    "scope": "Restore limit-extraction as a focused XRPL open-offer cleanup tool: validated account_offers, official Xaman QR/deeplink, bounded sequential OfferCancel, validated intent checking and reserve/balance reporting; remove unrelated Quick Buy.",
     "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
     "gitlab_branch": "master",
-    "frontend_files": [
-      "public/liquidity-sentinel.html"
-    ],
-    "frontend_commit": "da9cfbf98feaa82690a5fead35be1354a7f4503d",
-    "rollback_commit": "a6ada1150b1dac04676d55fc3f131a49948948f8",
-    "pipeline_id": 2863543612,
+    "frontend_file": "public/limit-extraction.html",
+    "frontend_commit": "1c55229a71a7e21dc4181ff239847af5b4975a05",
+    "rollback_commit": "da9cfbf98feaa82690a5fead35be1354a7f4503d",
+    "pipeline_id": 2863825712,
     "pipeline_status": "success",
-    "standalone_sentinel": {
-      "transaction_preparation": false,
-      "xaman_role": "public account selection only",
-      "scanner": true,
-      "image_resolution": "local exact asset then Bithomp exact issuer+currency fallback",
-      "published_risk_scale": "0-100 higher means more observed risk",
-      "raw_health_scale": "0-7 retained where compatibility/evidence requires it",
-      "normalization": "round((7-healthPoints)/7*100)",
-      "no_pool_state": "unscored",
-      "data_unavailable_state": "unscored"
+    "order_manager": {
+      "purpose": "inspect and clear currently open XRPL offers",
+      "public_read": "validated account_offers by classic address",
+      "age_policy": "offer age is not inferred from account_offers; user identifies stale/forgotten/unwanted offers",
+      "desktop_xaman": "official Xaman authorization QR and official per-OfferCancel transaction QR",
+      "mobile_xaman": "same-device deeplink with return/validation flow",
+      "cleanup_cap": 25,
+      "transaction": "one OfferCancel per offer",
+      "completion": "validated tesSUCCESS plus saved-intent critical-field match",
+      "protected_field": "OfferSequence",
+      "reserve_reporting": "post-cleanup OwnerCount and XRP balance comparison with owner-reserve estimate",
+      "quick_buy": false
     },
-    "preserved": [
-      "homepage trading",
-      "XRBC liquidity pool interface",
-      "homepage Sentinel",
-      "Ecosystem scanner",
-      "Developer API workbench",
-      "wallet liquidity scan",
-      "risk warnings and evidence export"
-    ],
-    "supersedes_for_standalone_sentinel": [
-      "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency exact-trade pilot portion"
-    ],
     "pending": [
-      "user visual confirmation after propagation"
+      "user desktop test of official Xaman authorization QR",
+      "user test of one OfferCancel and refreshed open-offer removal",
+      "user mobile individual-cancel handoff test"
     ]
   },
   "savepoint_format": [
@@ -381,6 +375,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-19-sentinel-readonly-pilot-removal",
+      "record": "SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md",
+      "scope": "Remove the standalone Liquidity Sentinel Quick Buy / exact trade pilot and transaction controller while preserving wallet scanning, exact-identity images, 0-100 liquidity-risk display, warnings and evidence export."
+    },
     {
       "id": "SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency",
       "record": "LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md",
@@ -415,13 +414,6 @@
       "id": "SAVEPOINT-2026-09-18-footer-compaction",
       "record": "FOOTER-COMPACTION-CHECKPOINT-2026-09-18.md",
       "scope": "Compact the XRBitcoinCash homepage footer into fine print with a subtle XRPL terminal visual treatment and formalize the new-conversation repository-memory bootstrap."
-    },
-    {
-      "id": "SAVEPOINT-2026-09-18-xrpl-media-connection-fix",
-      "record": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md",
-      "scope": "Repair failed Media Desk live-data path with first-party media proxy, direct provider fallback and immediate verified source fallback.",
-      "final_frontend_commit": "61278c5b5c9a9bda08a467da84069b39c45a6eaa",
-      "final_frontend_pipeline": 2862729733
     }
   ],
   "metric_conventions": {
