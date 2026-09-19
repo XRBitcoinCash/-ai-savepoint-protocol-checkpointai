@@ -403,3 +403,35 @@ Checks:
 
 TODO:
 - User reviews the deployed desktop/mobile page and runs the default live market request after propagation.
+
+
+### [SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency] Liquidity metrics, warnings, images and exact XRBC trades
+
+Context: The observed-liquidity table lacked resolved token images, the standalone optional XRBC transaction path used a circular/pathfinding Payment, and liquidity score direction differed from other XRBC risk tools.
+
+Changes:
+- GitLab final tree at `a6ada1150b1dac04676d55fc3f131a49948948f8` (main implementation `4b5d38b62c291e00ccc7497f4a7d73f93ed67e64`; rollback `878a8d23db5ebc304a995a02bf28cd8b1d54e87f`).
+- `public/liquidity-sentinel.html` now resolves token art using exact issuer/currency via local exact images then Bithomp, with initials fallback.
+- Standalone Sentinel exact XRBC/XRP transaction control now uses direct `OfferCreate`: buy exact XRBC uses `TakerPays=XRBC`, max-XRP `TakerGets`, `tfFillOrKill`; sell exact XRBC uses `TakerGets=XRBC`, min-XRP `TakerPays`, `tfFillOrKill|tfSell`.
+- The exact-trade control uses a fresh ledger-pinned direct AMM quote, no Payment Paths, a 2% boundary, a +20-ledger LastLedgerSequence window, Xaman review, and validated field comparison.
+- Liquidity frontends now display normalized 0–100 risk where higher = more observed risk. Raw 0–7 health remains the reproducible model/API compatibility value.
+- `No XRP AMM found` and `Data unavailable` are unscored; missing evidence is not converted into a numeric verdict.
+- Homepage Sentinel, Ecosystem scanner and Developer API workbench display direction were aligned.
+
+Impact:
+- Preserve the exact score normalization `round((7-healthPoints)/7*100)` for liquidity-risk display unless a separately reviewed methodology version intentionally replaces it.
+- Preserve raw health evidence in exports/contracts where compatibility matters.
+- Never return to ticker-only image identity. Token art lookup keys are exact issuer + currency.
+- Do not replace the Sentinel exact trade with a circular Payment/pathfinding flow without an explicit, reviewed reason.
+- “No path routing in this control” is not a claim that public XRPL markets cannot be arbitraged.
+
+Checks:
+- Pipeline `2863531864` passed validation, secret detection, Semgrep SAST and Pages deployment.
+- Changed JavaScript parsed successfully in V8 for standalone Sentinel, homepage Sentinel, Ecosystem scanner and Developer workbench.
+- Exact-trade protected fields include TakerGets/TakerPays; Fill-or-Kill/Sell constants and shortened ledger window verified in source.
+- Detailed record: `LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md`.
+
+TODO:
+- User visually checks resolved token art and mobile exact-trade layout.
+- Real-device Xaman test: small exact buy and sell; verify fields before signing.
+- Test deliberately unfillable Fill-or-Kill behavior and confirm no resting Offer remains.
