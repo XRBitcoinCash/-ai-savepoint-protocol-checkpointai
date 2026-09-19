@@ -272,6 +272,14 @@
       "no_quick_buy": true,
       "delivered_file_sha256": "c561bb1d72c4f8677076eaff327e7a3ca2d0acf7aaddae5f7256683cda9b8eb3",
       "live_endpoint_test": "Prior and current local DNS failures prevent live response verification. Current public-web retrieval returned older content; cause unknown, not established as a project outage."
+    },
+    "xaman_wallet_standardization": {
+      "status": "Paused for higher-capability review; repository discovery and partial consistency audit completed, final verification not complete.",
+      "checkpoint": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
+      "active_frontend": "GitLab xrbitcoincash-group/xrbitcoincash-project master",
+      "recorded_head": "ffc50caed8694f2fada443cbd8748bec1890a34a",
+      "do_not_assume_complete": true,
+      "continuation": "Review the recorded head, re-run repository-wide connection/signing searches, verify every write path against the shared standard, test desktop/mobile Xaman flows, then record the final verified commit and rollback point."
     }
   },
   "communications": {
@@ -291,36 +299,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-flat-xrb-security",
-    "record": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
-    "scope": "user-authorized flat public security page, exact legacy redirects, GitHub entrypoint update and continuity record",
-    "rollback_commit": "8a6b00e24704b44f28f8e2fe602957f810c409c3",
-    "gitlab_rollback_commit": "3feca39da72a7043a3c2cddd86557480a061425a",
-    "github_xrb_rollback_commit": "e0f124e049f048b65a3aada9198d8140a8433252",
-    "website_files_changed": true,
-    "trading_files_changed": false,
-    "pending": [
-      "verify direct public page content and legacy redirect after hosting propagation; automated HTTP retrieval was blocked in this environment",
-      "refresh the secondary .well-known/ai.js stale XRB home only through a separately bounded metadata change"
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-19-order-manager-xaman-browser-repair",
     "record": "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md",
     "scope": "Repair limit-extraction Xaman browser authorization and make validated OfferCancel cleanup reachable on desktop and mobile without conflating public-address inspection with wallet connection.",
@@ -350,6 +328,46 @@
       "user real-device/browser test of desktop Xaman authorization QR and one small OfferCancel"
     ]
   },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-19-xaman-standardization-audit-pause",
+    "record": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
+    "scope": "Pause and preserve the project-wide Xaman wallet standardization audit before final verification; resume with a higher-capability model from repository evidence rather than repeating discovery.",
+    "status": "paused-before-final-verification",
+    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
+    "gitlab_project_id": 75781181,
+    "gitlab_branch": "master",
+    "observed_head": "ffc50caed8694f2fada443cbd8748bec1890a34a",
+    "observed_head_title": "Standardize Xaman connection and signing validation",
+    "observed_parent": "04decf32ca30bcb983b7699fcc8f1c0154108242",
+    "shared_standard": "public/xrbc-xaman-standard.js",
+    "connection_standard": "Immediate Xaman authorize() from the user click with Render/XRPL read-service wake in parallel; no transaction merely to connect; stale-attempt reset/restart protection.",
+    "signing_standard": "Order Manager pattern: createAndSubscribe for the exact prepared transaction, XRPL Mainnet, fresh secure six-digit challenge, explicit purpose, SHA-256 intent binding, bounded expiration/deadline, official Xaman QR/deeplink, returned tx hash, validated tesSUCCESS, account equality and critical-field comparison.",
+    "important_observation": "The observed GitLab head contains standardization changes, but this audit did not complete a full line-by-line, page-by-page, real-device, or live-ledger verification. Do not treat the commit title as proof of completion.",
+    "no_code_change_by_checkpoint": true,
+    "pending": [
+      "Re-fetch current GitLab master before editing and compare with the recorded head.",
+      "Review ffc50caed8694f2fada443cbd8748bec1890a34a against parent 04decf32ca30bcb983b7699fcc8f1c0154108242.",
+      "Build and verify a page-by-page matrix for every live Xaman connection and ledger-write path.",
+      "Repair only verified gaps while preserving each page's existing APIs and transaction-specific validators.",
+      "Run repository tests/diff checks and separately verify desktop QR plus mobile deeplink/recovery before final sign-off."
+    ]
+  },
   "savepoint_format": [
     "context",
     "changes",
@@ -375,6 +393,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-19-xaman-standardization-audit-pause",
+      "record": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
+      "scope": "Pause and preserve the project-wide Xaman wallet standardization audit before final verification; resume with a higher-capability model from repository evidence rather than repeating discovery."
+    },
     {
       "id": "SAVEPOINT-2026-09-19-order-manager-cleanup-restore",
       "record": "ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md",
