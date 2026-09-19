@@ -321,3 +321,23 @@ Checks:
 
 TODO:
 - User visual review after public propagation; keep any follow-up adjustment presentation-only unless explicitly requested otherwise.
+
+
+### [SAVEPOINT-2026-09-18-header-acquisition-steps] Two-step XRP → XRBC acquisition path
+
+Context: The prior single Xaman CTA was observed by the user as an XRP-purchase flow rather than an exact XRBC trade route. No documented first-party Xaman token-prefill parameter was verified.
+
+Changes:
+- GitLab `public/index.html` commit `1b06e6152b2471749a585690920477fe20b46e3f` replaces the single CTA with two numbered actions.
+- Step 1 opens Xaman's documented Buy/Sell XRP xApp.
+- Step 2 opens the existing exact `/#trade` XRBC/XRP panel; review/signing remains in Xaman.
+- No new DEX provider or purchase engine was introduced.
+- Detailed record: `HEADER-ACQUISITION-STEPS-CHECKPOINT-2026-09-18.md`.
+
+Checks:
+- GitLab pipeline `2863135579` succeeded.
+- Rollback parent: `b0f97dbd274986be8b379850964ed65cc4933764`.
+- Tools, theme toggle, original emblem and trading runtime were preserved.
+
+TODO:
+- User visual/interaction review after propagation.
