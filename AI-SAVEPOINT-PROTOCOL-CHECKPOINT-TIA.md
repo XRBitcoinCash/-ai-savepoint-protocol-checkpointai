@@ -435,3 +435,35 @@ TODO:
 - User visually checks resolved token art and mobile exact-trade layout.
 - Real-device Xaman test: small exact buy and sell; verify fields before signing.
 - Test deliberately unfillable Fill-or-Kill behavior and confirm no resting Offer remains.
+
+
+### [SAVEPOINT-2026-09-19-sentinel-readonly-pilot-removal] Standalone Sentinel returns to read-only scope
+
+Context: The standalone Liquidity Sentinel Quick Buy / exact-buy / exact-sell area was a pilot and was judged redundant with the project's dedicated trading interfaces. The user explicitly requested complete removal from this page without breaking the scanner.
+
+Changes:
+- Final GitLab commit `da9cfbf98feaa82690a5fead35be1354a7f4503d` removes the visible transaction section from `public/liquidity-sentinel.html`.
+- Removed the standalone Sentinel trust-line transaction button, exact buy/sell controls, Xaman signing panel, persistent transaction controller, transaction-field reconciliation, exact-trade implementation and background trade-estimate refresh.
+- Xaman remains only for selecting the public account used by the wallet liquidity scan.
+- Page copy, metadata, methodology and footer now describe the standalone Sentinel as read-only.
+- Detailed record: `SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md`.
+
+Preserved:
+- Wallet liquidity scan, direct XRP AMM checks, watchlist, deltas, JSON evidence and scanner controls.
+- Exact-identity token art: local exact asset first, Bithomp issued-token endpoint keyed by exact issuer + currency, ticker initials fallback.
+- Published liquidity risk remains 0–100 with higher = more observed risk; raw 0–7 health remains the reproducible compatibility/evidence layer where needed.
+- `No XRP AMM found` and `Data unavailable` remain unscored.
+- Homepage trading, XRBC liquidity pool interface and other dedicated transaction workspaces were not removed by this change.
+
+Checks:
+- All executable inline Sentinel scripts compiled successfully after cleanup.
+- JSON / JSON-LD blocks parsed successfully.
+- Pipeline `2863543612` passed repository validation, secret detection, Semgrep SAST and Pages deployment.
+- Rollback point before removal: `a6ada1150b1dac04676d55fc3f131a49948948f8`.
+
+Supersession:
+- The exact-trade portion of `SAVEPOINT-2026-09-19-liquidity-metrics-exact-trade-consistency` is historical for the standalone Sentinel and must not be restored by default.
+- The image-resolution, scoring-direction, warning-state and downstream consistency portions of that earlier savepoint remain current.
+
+Operating rule:
+- Standalone Liquidity Sentinel = observation, scoring, warnings and evidence export. No transaction preparation unless explicitly requested again.
