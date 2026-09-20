@@ -49,7 +49,7 @@ Current threshold ladder:
 - Watchtower: 1,000 XRBC
 - Advanced Tokenization: 2,500 XRBC
 
-## First implementation order
+## Scaffold already landed\n\nGitLab scaffold foundation: `8cfc0659a5d884f2a2a01411825205a6c4a89581` plus gate assertion correction `2d192c95c6afad338365b265537984e896b4d473`. Pipeline `2865294807` passed runtime-contracts, repository validation, secret detection, Semgrep SAST, and deploy-pages.\n\nGitHub backend access policy: `fe00bbb5...` policy file, `e07f3711...` API integration, `ba82d16d...` tests. Existing public API tool shape and thresholds were preserved.\n\n## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
 2. Shared scaffold modules: transaction state machine, error taxonomy, retry/readiness policy, gate registry.
