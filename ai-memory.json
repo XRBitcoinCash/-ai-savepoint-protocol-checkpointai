@@ -287,7 +287,7 @@
       "continuation": "Review the recorded head, re-run repository-wide connection/signing searches, verify every write path against the shared standard, test desktop/mobile Xaman flows, then record the final verified commit and rollback point."
     },
     "production_scaffolding_2026_09_22": {
-      "status": "Active. Deep-research audit completed 2026-09-20; scaffold implementation started before the 2026-09-22 higher-capability pass.",
+      "status": "Scaffold foundation implemented 2026-09-20. Runtime contracts, gate registry, retry policy, shared state/error modules and tests are on GitLab master; backend API tool policy is centralized in GitHub. Higher-risk page-by-page migration and deeper tier feature expansion remain incremental work for 2026-09-22.",
       "checkpoint": "XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md",
       "checkpoint_commit": "55477f08b7311541c7b1f3459137259546da62d1",
       "source_of_truth": {
@@ -354,6 +354,61 @@
         "no seed/private-key handling",
         "no one-shot rewrite of all public pages",
         "no claim that XRBC can globally suppress unrelated third-party Xaman prompts"
+      ],
+      "implementation": {
+        "frontend": {
+          "scaffold_commit": "8cfc0659a5d884f2a2a01411825205a6c4a89581",
+          "gate_assertion_fix_commit": "2d192c95c6afad338365b265537984e896b4d473",
+          "pipeline_id": 2865294807,
+          "pipeline_status": "success",
+          "pipeline_jobs": [
+            "runtime-contracts success",
+            "validate-repository success",
+            "secret_detection success",
+            "semgrep-sast success",
+            "deploy-pages success"
+          ],
+          "added": [
+            "config/gates.json",
+            "config/retry-policy.json",
+            "src/transaction/state-machine.mjs",
+            "src/transaction/error-taxonomy.mjs",
+            "src/backend/retry-policy.mjs",
+            "src/gates/registry.mjs",
+            "scripts/verify-runtime.mjs",
+            "scripts/verify-gates.mjs",
+            "tests/unit/state-machine.test.mjs",
+            "tests/unit/retry-policy.test.mjs",
+            "tests/unit/gates.test.mjs",
+            "docs/AI_MEMORY.md",
+            "docs/XRBC-PRODUCTION-SCAFFOLD-2026-09-22.md",
+            "docs/GATE_REGISTRY.md",
+            "docs/TRANSACTION_STATE_MACHINE.md",
+            "docs/RELEASE_CHECKLIST.md",
+            "docs/RUNBOOK.md"
+          ],
+          "ci_rule": "runtime-contracts is release-blocking and verifies nine critical pages for single document roots, JavaScript parsing, required controls, current CSP hashes where hash-based CSP is used, gate/source assertions, and shared unit tests."
+        },
+        "backend": {
+          "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+          "policy_create_commit": "fe00bbb5c2841150d8e53eec889662f1ef1bd1b4",
+          "api_integration_commit": "e07f371129555a31d78f1c43ea8aed6056227494",
+          "policy_test_commit": "ba82d16dcf786b35848593de8e11056cc1ef31a1",
+          "files": [
+            "xrpl-proxy/tool-policy.cjs",
+            "xrpl-proxy/api-v1.cjs",
+            "tests/tool-policy.test.cjs"
+          ],
+          "behavior": "Refactor only: public TOOLS shape and existing thresholds are preserved while tier/capability policy is centralized and tested.",
+          "verification": "Modified backend/test files were syntax-compiled through the connected tooling. No GitHub Actions run was available for these direct commits."
+        }
+      },
+      "remaining_for_2026_09_22": [
+        "incrementally migrate production transaction pages to shared contracts without one-shot rewrites",
+        "add browser-level two-tab, mobile app-switch/resume, cold-backend, reject/expire, ambiguous-create and validated-finality tests",
+        "add measured runtime telemetry/dashboards using existing request/intent correlation without logging secrets",
+        "review authoritative XRBC/XRP price and liquidity before changing any gate threshold",
+        "expand higher-tier tools only where the added metrics/evidence depth clearly justify the higher gate"
       ]
     }
   },
