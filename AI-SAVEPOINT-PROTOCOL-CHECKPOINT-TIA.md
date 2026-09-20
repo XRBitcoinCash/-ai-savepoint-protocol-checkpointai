@@ -2,7 +2,7 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-19  
+**Updated:** 2026-09-20  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
@@ -549,3 +549,31 @@ TODO:
 - Review the recorded standardization commit against its parent, then re-fetch current `master` before editing.
 - Build a page-by-page connection/read/write/validation matrix and repair only confirmed gaps.
 - Run repository tests/diff checks and separately verify desktop and mobile Xaman behavior before calling the wallet standard complete.
+
+
+### [SAVEPOINT-2026-09-20-ecosystem-production-scaffold] Gate hierarchy, production hardening, and September 22 handoff
+
+Context: Deep research audited the XRBitcoinCash ecosystem gates, UX, anti-abuse model, Xaman lifecycle, Liquidity Pool regressions, and production readiness. The active frontend head used as the audited baseline was GitLab `master` commit `4d7343c8c624e805298a4cd30c0a8f609f35b548`, pipeline `2865125823` success.
+
+Changes:
+- Added the durable implementation checkpoint `XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md`.
+- Updated `ai-memory.json` with the current gate ladder, tier-value rule, transaction invariants, regression fixtures, implementation order, observability minimums, and non-goals.
+- Current holding thresholds remain unchanged pending authoritative XRBC/XRP market and liquidity evidence plus explicit policy approval: Bridge 10; Extended Audit 50; Sentinel Forensics 150; Risk Lens 150; Value Path 400; Watchtower 1,000; Advanced Tokenization 2,500 XRBC.
+
+Impact:
+- Higher gates must earn their thresholds through deeper metrics, computation, evidence, history/monitoring, exports, forensic depth, or protected transaction capability. Cosmetic duplication is not sufficient.
+- Page load must never wait for Render. Backend-dependent actions may wait only after click, with bounded/cancellable status, and no Xaman transaction payload during warm-up.
+- Exactly one Xaman payload may be created per deliberate final intent. Provider ambiguity is reconciled; it never authorizes an automatic replacement request.
+- Frontend holding gates are not privileged backend authorization. Privileged services require server-side revalidation plus rate/concurrency/replay/idempotency controls as applicable.
+- The Liquidity Pool regression at `4d7343c8...` is now a permanent release lesson: generic CI success is not enough; critical JavaScript must parse and primary controls must bind.
+
+Checks:
+- Deep-research inventory and threat analysis completed.
+- GitLab audited head `4d7343c8c624e805298a4cd30c0a8f609f35b548` had successful pipeline `2865125823`.
+- Checkpoint commit: `55477f08b7311541c7b1f3459137259546da62d1`.
+- Machine-readable memory update commit: `fb2cfd978698f98405513de5bb8dd011f858c63d`.
+
+TODO:
+- Verify the current GitLab head again before the September 22 implementation pass.
+- Land runtime parse/DOM/CSP/control-binding CI and shared state/gate/retry scaffolding before broad feature expansion.
+- Review current XRBC/XRP economics before changing any holding threshold.
