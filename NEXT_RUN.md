@@ -1,51 +1,74 @@
 # XRBitcoinCash — next-run checkpoint
 
-Updated: 2026-09-17. Read this before resuming the homepage work after a chat/server interruption. This is a continuation checkpoint; retain the earlier project and liquidity-index records in this repository.
+Updated: 2026-09-20.
 
-## User task recovered and implemented
+## Primary task for the next implementation pass
 
-The user asked to resume from the last endpoint after an internal server error and complete the existing task. Recovered homepage requirements: a compact exchange-style interface inspired by Coinbase, fixed desktop sidebar, plain-language feature labels, expandable sections instead of a long vertical stack, and an initial dashboard around one or two screens. Preserve existing working wallet, trustline, chart, market, issuer, history/export, and XRBC token-gated functionality.
+Continue the XRBitcoinCash ecosystem production scaffold defined in:
 
-Authoritative code repository: GitLab `xrbitcoincash-group/xrbitcoincash-project` (project ID `75781181`), branch `master`. Do not substitute the GitHub mirror as the production source.
+- `XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md`
+- `ai-memory.json`
+- `AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md`
 
-## Saved implementation
+The intended higher-capability implementation pass is 2026-09-22.
 
-Implementation commit: `4aa1061f3d7610a0e18015c1fde44ffb0f85b274`.
-Commit URL: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/4aa1061f3d7610a0e18015c1fde44ffb0f85b274
+## Source of truth
 
-Added `public/xrbc-home-compact.js`, `public/xrbc-home-compact.css`, and executable `scripts/prepare-compact-home.sh`. The CI file has two preparation-script hooks: validation and deployment. Original `public/index.html` source was not rewritten; the build inserts one stylesheet and one deferred script and verifies that removing them restores the original HTML byte for byte.
+Active frontend:
+- GitLab project: `xrbitcoincash-group/xrbitcoincash-project`
+- Project ID: `75781181`
+- Branch: `master`
+- Audited baseline: `4d7343c8c624e805298a4cd30c0a8f609f35b548`
+- Baseline pipeline: `2865125823` — success
 
-The layout uses existing DOM nodes and IDs. Six views: Dashboard, History & exports, Token details, Order book, Safety & issuer, and Learn & links. Fixed desktop sidebar; mobile drawer; existing original menu retained under More links. Desktop wallet card and expandable mobile wallet section. Secondary statistics, chart controls, QR/help, and detailed content are expandable. Wallet/trustline actions and QR-state changes open QR/help.
+Always fetch the current head before editing. Do not assume the audited baseline is still current.
 
-The patch does not rewrite transaction payloads, signing functions, backend endpoints, asset identifiers, financial calculations, or token gates. The design is intended to preserve working behavior, but moving nodes is not proof that every delegated handler or third-party integration still works.
+Shared backend/API:
+- GitHub: `XRBitcoinCash/xrbitcoincash.github.io`
+- Backend directory: `xrpl-proxy/`
+- Render origin is documented in project code; do not change service settings or secrets from this checkpoint.
 
-## Verified deployment
+## What was decided
 
-Pipeline `2857774142` for implementation commit `4aa1061f` returned `success`.
-Pipeline URL: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2857774142
+- Preserve current XRBC holding gates until current XRBC/XRP price/liquidity evidence is checked and an explicit policy decision is made.
+- Gates are reusable holdings, not payments or burns.
+- Higher gates must unlock materially deeper capability than lower tiers.
+- Token gates are not sufficient anti-bot controls by themselves.
+- Backend warm-up must never block initial page interaction.
+- No Xaman transaction payload may exist during backend warm-up.
+- Exactly one Xaman payload per deliberate final intent.
+- Ambiguous payload creation must be reconciled, never automatically retried with a replacement payload.
+- Final success requires validated XRPL evidence and critical-field verification.
 
-Jobs and statuses confirmed through the GitLab connector:
-- validate-repository `16560996933`: job success; underlying validator exit 1 / advisory.
-- semgrep-sast `16560996934`: job success; findings report not reviewed.
-- secret_detection `16560996935`: job success; findings report not reviewed.
-- deploy-pages `16560996936`: success; finished 2026-09-17T10:57:54.467Z.
+Current threshold ladder:
+- Bridge Integrity advanced: 10 XRBC
+- Extended Audit: 50 XRBC
+- Sentinel Forensics: 150 XRBC
+- Risk Lens: 150 XRBC
+- Value Path: 400 XRBC
+- Watchtower: 1,000 XRBC
+- Advanced Tokenization: 2,500 XRBC
 
-Validation and deploy job traces both confirmed successful external-asset injection and original HTML byte preservation. The deployment trace recorded publication to `https://xrbitcoincash-project-15389d.gitlab.io` and successful artifact upload. This confirms GitLab Pages deployment, not an independent custom-domain browser check.
+## First implementation order
 
-Published-tree digest in the validation report: `9f08f3e003d64ad6028e141f453883b384734d157e96742858e84a8376b542bc`; 57 files; 12,902,761 bytes.
+1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
+2. Shared scaffold modules: transaction state machine, error taxonomy, retry/readiness policy, gate registry.
+3. Unit tests for transition safety, retry safety, and gate-registry consistency.
+4. Backend access-policy registry and tests.
+5. Two-tab/mobile/cold-backend/rejection/expiry/ambiguous-create/finality test planning and implementation.
+6. Only then expand individual higher-gate tool metrics.
 
-## Validation warnings and evidence correction
+## Critical regression fixtures
 
-Do not call this a clean site-validation or security-audit pass. Existing advisory settings let the pipeline continue when the validator reports findings. Its trace reports invalid `public/universal-ai.json`, two TOML/license metadata mismatches, a missing `/markets/` sitemap destination, and missing local references including llms.txt, creature NFT discovery JSON, readiness JSON, and the bridge-monitor Xaman vendor file. The compact-home patch did not modify these referenced files. They were not fixed or suppressed during this layout task.
+- `2b53901c0b418a121a34f4cc4f78536479e83cb5`: do not let security hardening globally block page interaction.
+- `0ef0bacc91d4079fc530582fb64d97d0a9dcbcce`: readiness wait belongs to the clicked action.
+- `4d7343c8c624e805298a4cd30c0a8f609f35b548`: duplicate `sleep` declaration prevented Liquidity Pool application parsing and made all buttons inert. CI must catch this class of failure.
 
-The first draft of the implementation documentation included offline-fixture results and viewport numbers. Reproducible fixture files, runner, screenshots, and execution logs were not available at this recovery endpoint. These are NOT retained as verified results. The documentation and result record were corrected in docs-only commit `45d0ff0217e4188a4bcd3fce18292c58c207a20c` (`[skip ci]`; no public source or deployment logic changes). No companion download package is asserted to exist.
+## Non-goals
 
-Current evidence and acceptance status are in GitLab `docs/COMPACT-HOMEPAGE-2026-09-17.md` and `tests/compact-home-results.json`. Do not state that live wallet behavior, custom-domain loading, responsive dimensions, or production integration tests passed. No real-wallet transaction was signed or submitted.
-
-## Exact next technical checkpoint
-
-The implementation is committed and its Pages deployment job completed. Next is direct browser acceptance of the deployed homepage: asset/CSP loading; default height and horizontal overflow with real values; existing handlers and element identities; views, deep links, browser back, mobile drawer focus; wallet QR/deep-link/cancel/disconnect/reset; quote changes; chart intervals and PDF/CSV exports; and token-gated access. Use real source, not a fabricated fixture presented as production. Do not sign transactions to test layout.
-
-Read current GitLab master and diff before further edits. The last known master was documentation commit `45d0ff02`; deployed implementation remains `4aa1061f`. Recheck both rather than assuming they have not changed. Preserve all working functions and keep unrelated fixes separate. Do not restart the redesign or ask the user to repeat already recovered instructions.
-
-Baseline before this task: `8a3d76aa33d032a25b2358278fdeaf6b0f1a3b25`. Recovery option: remove only the two CI preparation calls in a clean build to disable the presentation layer while retaining original source. Do not revert unrelated later work.
+- no fiat/subscription bypass
+- no automatic USD-pegged gate changes
+- no attempt to block public XRPL arbitrage through the website
+- no seed/private-key handling
+- no one-shot rewrite of all pages
+- no claim that XRBC can globally prevent unrelated Xaman prompts from another application
