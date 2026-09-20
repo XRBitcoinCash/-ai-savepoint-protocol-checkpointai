@@ -1,0 +1,14 @@
+SAVEPOINT 2026-09-20
+title=XRBC ecosystem production scaffold
+status=active
+memory_checkpoint=XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md
+memory_checkpoint_commit=55477f08b7311541c7b1f3459137259546da62d1
+memory_json_commit=fb2cfd978698f98405513de5bb8dd011f858c63d
+canonical_contract_commit=05ac0b16360a93d21e91721ff744f728d5518876
+next_run_commit=81d9be5f916bd29fad40682ab4a06ac780de1f0c
+active_frontend_repository=xrbitcoincash-group/xrbitcoincash-project
+active_frontend_branch=master
+audited_frontend_head=4d7343c8c624e805298a4cd30c0a8f609f35b548
+audited_pipeline=2865125823
+audited_pipeline_status=success
+next_action=Verify current GitLab head, then continue runtime CI + shared state/gate/retry scaffold. Do not change XRBC thresholds until current market/liquidity evidence is reviewed and the user explicitly approves a gate-policy change.
