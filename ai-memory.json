@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -225,7 +225,12 @@
     "liquidity-risk display uses 0-100 higher-is-more-risk while raw 0-7 health may remain in compatibility/evidence; no-pool and unavailable are unscored",
     "Order Manager open-offer cleanup must use validated account_offers; account_offers does not prove offer age, so stale/old is a user judgment rather than an inferred field",
     "Order Manager cancellation uses one validated OfferCancel per offer with OfferSequence protected by challenge/intent binding; submitted is not complete",
-    "A static QR containing only a page URL is not a Xaman authorization or transaction QR; desktop Xaman QR must be produced by Xaman for the actual authorization or payload"
+    "A static QR containing only a page URL is not a Xaman authorization or transaction QR; desktop Xaman QR must be produced by Xaman for the actual authorization or payload",
+    "production transaction pages must pass executable-JavaScript parse checks and primary DOM-binding smoke checks before release",
+    "a higher XRBC gate must expose materially deeper capability than lower tiers; threshold alone is not product value",
+    "holding gates are one abuse-control layer only; privileged services also need server-side authorization, rate limits, idempotency where applicable, timeouts, concurrency ceilings and replay resistance",
+    "backend warm-up must never block initial page interaction; transaction-payload creation is prohibited until readiness and fresh state checks complete",
+    "provider ambiguity during Xaman payload creation never authorizes an automatic replacement request"
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
@@ -280,6 +285,76 @@
       "recorded_head": "ffc50caed8694f2fada443cbd8748bec1890a34a",
       "do_not_assume_complete": true,
       "continuation": "Review the recorded head, re-run repository-wide connection/signing searches, verify every write path against the shared standard, test desktop/mobile Xaman flows, then record the final verified commit and rollback point."
+    },
+    "production_scaffolding_2026_09_22": {
+      "status": "Active. Deep-research audit completed 2026-09-20; scaffold implementation started before the 2026-09-22 higher-capability pass.",
+      "checkpoint": "XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md",
+      "checkpoint_commit": "55477f08b7311541c7b1f3459137259546da62d1",
+      "source_of_truth": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "master",
+        "audited_head": "4d7343c8c624e805298a4cd30c0a8f609f35b548",
+        "audited_pipeline_id": 2865125823,
+        "audited_pipeline_status": "success"
+      },
+      "gate_policy": {
+        "semantics": "Reusable XRBC holding thresholds, not payment/burn/escrow/subscription.",
+        "automatic_usd_oracle_adjustment": false,
+        "review_rule": "Do not change a threshold until current XRBC/XRP market and liquidity evidence is checked and the user explicitly approves the policy change.",
+        "thresholds": {
+          "xrpl-bridge-integrity-monitor": 10,
+          "extended-audit": 50,
+          "sentinel-forensics": 150,
+          "risk-lens": 150,
+          "value-path": 400,
+          "watchtower": 1000,
+          "asset-tokenization-auditor-advanced": 2500
+        }
+      },
+      "tier_rule": "Higher XRBC gates must unlock materially deeper metrics, evidence coverage, compute cost, history/monitoring, exports, forensic depth, or protected transaction capabilities. Cosmetic duplication does not justify a higher gate.",
+      "transaction_invariant": [
+        "page load never waits for Render/backend readiness",
+        "backend-dependent actions may show a cancellable bounded wait after the user clicks",
+        "no Xaman transaction payload exists during backend warm-up",
+        "backend readiness completes before the signing-critical lock is acquired",
+        "exactly one Xaman payload per deliberate final intent",
+        "ambiguous payload creation is reconciled; it never authorizes an automatic replacement payload",
+        "preserve UUID, challenge, intent hash, account, Mainnet binding, reviewed transaction and pending state",
+        "signed/submitted/dispatched are not success; require validated XRPL result, tesSUCCESS, signer equality and critical-field comparison"
+      ],
+      "regression_fixtures": {
+        "2b53901c0b418a121a34f4cc4f78536479e83cb5": "Security hardening must not globally block page interaction during backend warm-up.",
+        "0ef0bacc91d4079fc530582fb64d97d0a9dcbcce": "Readiness waiting belongs to the individual user action and must be cancellable.",
+        "4d7343c8c624e805298a4cd30c0a8f609f35b548": "CI must compile critical page JavaScript and prove primary control bindings exist; a duplicate declaration made all Liquidity Pool buttons inert while generic CI still passed."
+      },
+      "implementation_order": [
+        "runtime parse/DOM/CSP/control-binding CI",
+        "shared transaction state machine, error taxonomy, retry policy and gate registry with unit tests",
+        "backend access-policy registry and gate/rate-limit tests",
+        "incremental page migration, starting from reference transaction flows",
+        "two-tab/mobile/cold-backend/rejection/expiry/ambiguous-create/validated-finality tests",
+        "tier-by-tier feature expansion so higher gates earn their thresholds",
+        "gate-economics review from current XRBC/XRP evidence before any threshold change"
+      ],
+      "observability_minimum": [
+        "release SHA and request/intent correlation",
+        "backend readiness latency and timeout/cancel rate",
+        "upstream status/error class",
+        "rate-limit and capacity events",
+        "payload count per intent and ambiguous-create outcomes",
+        "Xaman signed/rejected/expired states kept separate",
+        "validated XRPL outcome and finality latency",
+        "intent/account/network/critical-field mismatch as zero-tolerance security events",
+        "client JavaScript exceptions and control-binding failures"
+      ],
+      "explicit_non_goals": [
+        "no fiat/subscription bypass of XRBC gates",
+        "no automatic USD-pegged gate thresholds",
+        "no attempt to block legitimate public XRPL arbitrage through the website",
+        "no seed/private-key handling",
+        "no one-shot rewrite of all public pages",
+        "no claim that XRBC can globally suppress unrelated third-party Xaman prompts"
+      ]
     }
   },
   "communications": {
