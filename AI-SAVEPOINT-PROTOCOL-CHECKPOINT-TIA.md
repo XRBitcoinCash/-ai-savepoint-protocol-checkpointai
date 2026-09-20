@@ -577,3 +577,34 @@ TODO:
 - Verify the current GitLab head again before the September 22 implementation pass.
 - Land runtime parse/DOM/CSP/control-binding CI and shared state/gate/retry scaffolding before broad feature expansion.
 - Review current XRBC/XRP economics before changing any holding threshold.
+
+
+### [SAVEPOINT-2026-09-20-production-scaffold-implemented] Runtime contracts and gate policy landed
+
+Context: The 2026-09-20 ecosystem audit scaffold was implemented rather than left as planning only.
+
+Changes:
+- GitLab active frontend scaffold: `8cfc0659a5d884f2a2a01411825205a6c4a89581`.
+- Gate assertion correction: `2d192c95c6afad338365b265537984e896b4d473`.
+- Pipeline `2865294807` passed `runtime-contracts`, repository validation, secret detection, Semgrep SAST, and deploy-pages.
+- Added machine-readable gate and retry policy, shared transaction state machine, error taxonomy, retry-policy reader, gate validator, critical-page runtime verifier, gate/source verifier, unit tests, local implementation memory, production scaffold, release checklist, transaction-state documentation and failure runbook.
+- GitHub backend policy was centralized without changing public threshold semantics: policy creation `fe00bbb5c2841150d8e53eec889662f1ef1bd1b4`; API integration `e07f371129555a31d78f1c43ea8aed6056227494`; policy tests `ba82d16dcf786b35848593de8e11056cc1ef31a1`.
+
+Impact:
+- Critical frontend pages now have a release-blocking check for single document roots, executable inline JavaScript parsing, required controls, CSP hash freshness where applicable, gate/source assertions and shared unit tests.
+- The current XRBC threshold ladder is now represented as policy and tested for accidental drift.
+- The shared state machine makes `payload_unknown` a one-way recovery/reconciliation state; it cannot automatically transition back to creating another Xaman payload.
+- Production-page migration remains incremental. Do not rewrite every transaction page at once merely because the scaffold exists.
+
+Checks:
+- GitLab pipeline `2865294807` fully successful.
+- Runtime-contract job verified nine critical pages.
+- Ten scaffold unit tests passed in CI.
+- Modified backend policy/API/test files were syntax-compiled through connected tooling. No GitHub Actions run was available for those direct backend commits.
+
+TODO:
+- On 2026-09-22, verify repository heads again.
+- Add browser-level two-tab, mobile Xaman app-switch/resume, cold-backend, cancellation, rejection/expiry, ambiguous-create and validated-finality tests.
+- Add measured production telemetry/dashboards.
+- Review authoritative XRBC/XRP economics before changing any gate.
+- Expand higher-tier tools only where added metrics/evidence depth materially justify the higher threshold.
