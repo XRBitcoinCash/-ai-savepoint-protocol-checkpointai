@@ -7,6 +7,20 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "standard:local-token-asset-provenance",
+      "type": "standard",
+      "status": "active",
+      "statement": "Reviewed third-party token icons should be stored locally with source/license provenance; imagery is presentation only and never defines XRPL identity."
+    },
+    {
+      "id": "savepoint:local-xrp-token-logo-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+      "frontend_commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
+      "pipeline_id": 2868676134
+    },
+    {
       "id": "task:liquidity-empty-state-browser-check",
       "type": "task",
       "status": "manual-pending",
@@ -220,6 +234,16 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:local-xrp-token-logo-2026-09-21",
+      "rel": "defines",
+      "to": "standard:local-token-asset-provenance"
+    },
+    {
+      "from": "savepoint:local-xrp-token-logo-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "task:liquidity-empty-state-browser-check",
       "rel": "verifies",
@@ -441,7 +465,11 @@
       "standard:intentional-empty-state",
       "standard:optional-progressive-disclosure",
       "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
+    ],
+    "token_assets": [
+      "savepoint:local-xrp-token-logo-2026-09-21",
+      "standard:local-token-asset-provenance"
     ]
   },
-  "active_savepoint": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
+  "active_savepoint": "savepoint:local-xrp-token-logo-2026-09-21"
 }
