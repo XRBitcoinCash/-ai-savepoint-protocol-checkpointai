@@ -479,23 +479,28 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
-    "human_record": "LOCAL-XRP-TOKEN-LOGO-2026-09-21.md",
-    "scope": "Add a locally stored CC0 XRP logo with provenance and wire it into the Liquidity Pool dynamic token identity renderer.",
+    "id": "SAVEPOINT-2026-09-21-xrp-logo-rendering-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
+    "human_record": "XRP-LOGO-RENDERING-REPAIR-2026-09-21.md",
+    "scope": "Repair production XRP logo rendering in the Liquidity Pool by eliminating the separate runtime SVG fetch while preserving the reviewed local CC0 asset and provenance.",
     "status": "implemented",
-    "implementation_commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
-    "implementation_pipeline_id": 2868676134,
+    "implementation_commit": "81833af341390038818bc3cdba4485647e1a67d7",
+    "implementation_pipeline_id": 2868712767,
     "implementation_pipeline_status": "success",
-    "local_checkpoint_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef",
-    "machine_savepoint_create_commit": "43298a6f8564ceee5e35c34c81aa54941604f102",
-    "human_checkpoint_create_commit": "20cbb1ca5eadae6c82b54fd5e87ec897b9a20022",
+    "local_checkpoint_file_commit": "11dc4c83c55d84534c3e0af4382312f60f345e61",
+    "local_checkpoint_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
+    "machine_savepoint_create_commit": "43d07246393dd0ecdc379a99f7f1080c22c6e81a",
+    "human_checkpoint_create_commit": "335b6d6ad04c7ad64f127732b52ce3d069c1de59",
+    "page": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.6",
     "asset": "public/assets/tokens/xrp.svg",
     "license": "CC0-1.0",
+    "browser_custom_domain_verified": false,
     "key_rules": [
-      "Use local reviewed token assets at runtime instead of third-party image hotlinks.",
-      "Record source/license provenance beside third-party token assets.",
-      "Token imagery is presentation only and never defines XRPL asset identity."
+      "Use the exact reviewed XRP artwork without depending on a separate runtime image fetch in the affected Liquidity Pool UI.",
+      "Keep the local reviewed asset and source/license provenance as the canonical project record.",
+      "Token imagery is presentation only and never defines XRPL asset identity.",
+      "Do not alter wallet, AMM, quote, signing, transaction, receipt or finality logic as part of icon rendering repair."
     ]
   },
   "savepoint_format": [
@@ -523,6 +528,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-xrp-logo-rendering-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
+      "scope": "Repair production XRP logo rendering in the Liquidity Pool by eliminating the separate runtime SVG fetch while preserving the reviewed local CC0 asset and provenance."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
@@ -858,6 +868,23 @@
       "provenance": "public/assets/tokens/README.md",
       "license": "CC0-1.0",
       "release": "0.2.5"
+    },
+    "xrp_logo_rendering_repair": {
+      "status": "implemented",
+      "machine_savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
+      "human_checkpoint": "XRP-LOGO-RENDERING-REPAIR-2026-09-21.md",
+      "frontend_commit": "81833af341390038818bc3cdba4485647e1a67d7",
+      "pipeline_id": 2868712767,
+      "pipeline_status": "success",
+      "local_checkpoint_file_commit": "11dc4c83c55d84534c3e0af4382312f60f345e61",
+      "local_memory_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
+      "asset": "public/assets/tokens/xrp.svg",
+      "provenance": "public/assets/tokens/README.md",
+      "license": "CC0-1.0",
+      "release": "0.2.6",
+      "repair": "Embed the exact reviewed XRP SVG as a CSP-allowed data URI in the static XRP deposit unit and dynamic tokenLogo() renderer so a separate asset-request failure cannot collapse the UI to ticker-only text.",
+      "csp_hash": "sha256-1OiuEkgSFV4gl79M7pFIFGuShMFnhwDneaBkon0Z6Ek=",
+      "browser_verification_pending": true
     }
   },
   "machine_memory": {
