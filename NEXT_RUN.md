@@ -152,6 +152,19 @@ Security boundary: the browser may specify only supported interval/page count. U
 
 Next action: after Render has deployed backend main, hard-refresh the Liquidity Pool and verify `1D · MAX` plus the earliest returned direct-trade date. If still unavailable, inspect the backend endpoint response before changing chart logic.
 
+
+## September 21 compact analytics + receipt empty states
+
+Implemented on Liquidity Pool release `0.2.4`:
+- frontend commit `350a5f343136195e7a05c674c5941e1a48e5d00c`
+- pipeline `2868575025` success
+- local checkpoint `ba24ffde455979ec62ecbc74791425ea246a23ae`
+- local checkpoint pipeline `2868579101` success
+
+The Advanced Market Chart is collapsed by default and no longer creates an outer nested-scroll window. Receipt cards hide unavailable amount rows and instead show subtle XRBC/XRP motion, explicit empty-state copy and a dominant `Connect / inspect wallet ↑` action to `#walletHeading`.
+
+Reusable UI rule: secondary/uncertain analytics should use progressive disclosure. Account-dependent empty cards should present an intentional state and clear next action rather than dashes, fake values or zeros. Motion must never imply ledger execution.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
