@@ -479,29 +479,29 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
-    "human_record": "HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
-    "scope": "Refine the homepage XRBC trade ticket into a compact exchange layout and make the permanent inline Xaman preview the primary offer/swap QR + challenge presentation.",
+    "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
+    "human_record": "HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
+    "scope": "Restore the established Xaman popup for homepage trade review, remove the redundant inline review card, place the six-digit challenge directly under the popup QR, and harden native XRP artwork against generic ticker fallbacks.",
     "status": "implemented",
-    "implementation_commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
-    "implementation_pipeline_id": 2868812919,
+    "implementation_commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
+    "implementation_pipeline_id": 2868893239,
     "implementation_pipeline_status": "success",
-    "rollback_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
-    "local_checkpoint_commit": "613da9395e8aa2b776487f4a9f5d247a0245c343",
-    "local_memory_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
-    "machine_savepoint_create_commit": "af5eb57511d22c052d94d1087f78e9803be400a9",
-    "human_checkpoint_create_commit": "0bc0e5ad06340e20aa3c53d6c222b752b3a6c879",
+    "rollback_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
+    "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
+    "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+    "machine_savepoint_create_commit": "db3eb02cd87e256061fddb19e89cb289590a12a0",
+    "human_checkpoint_create_commit": "7f25a78296a2e8acae2a23cfa927be4f8b590fa0",
     "page": "public/index.html",
-    "release": "1.5.1",
+    "release": "1.5.2",
     "browser_custom_domain_verified": false,
     "key_rules": [
-      "Trade offer/swap Xaman presentation uses the permanent inline preview instead of forcing the modal over the trading workspace.",
-      "The inline preview mirrors the existing protected request controller; it never creates a second payload.",
-      "The official returned QR and official request link are mirrored inline, with the six-digit challenge directly below the QR.",
-      "Native XRP uses /assets/tokens/xrp.svg and XRBC uses /xrbitcoin-logo-128.png for presentation.",
-      "Token imagery never defines XRPL identity; issuer/currency/native identity remains authoritative.",
-      "Existing connection lifecycle, one-payload-per-intent, ambiguous-request protection, and validated-finality rules remain unchanged."
+      "The v1.5.1 inline Xaman review card is superseded; homepage offer/swap review uses the established secure popup/dialog.",
+      "The existing six-digit securityCode is shown directly under the official QR in the popup; no second code or payload is created.",
+      "The compact v1.5.1 trade-ticket layout is retained.",
+      "Native XRP uses the exact reviewed SVG as first-paint/runtime/fallback artwork so failed delivery cannot produce a generic XRP ticker badge.",
+      "The canonical XRP asset/provenance remains public/assets/tokens/xrp.svg plus public/assets/tokens/README.md.",
+      "Connection lifecycle, one-payload-per-intent, ambiguous-request protection, challenge/intent binding and validated finality remain unchanged."
     ]
   },
   "savepoint_format": [
@@ -529,6 +529,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
+      "scope": "Restore the established Xaman popup for homepage trade review, remove the redundant inline review card, place the six-digit challenge directly under the popup QR, and harden native XRP artwork against generic ticker fallbacks."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
@@ -927,6 +932,21 @@
       "presentation": "Compact exchange-style order ticket plus inline offer/swap Xaman QR, official link, and large six-digit challenge below the QR.",
       "security_boundary": "Inline review is a read-only mirror of the existing protected Xaman request controller; it must not create payloads or weaken pending/finality checks.",
       "browser_verification_pending": true
+    },
+    "homepage_xaman_popup_restore_xrp_logo": {
+      "status": "implemented",
+      "machine_savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
+      "human_checkpoint": "HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
+      "frontend_commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
+      "pipeline_id": 2868893239,
+      "pipeline_status": "success",
+      "release": "1.5.2",
+      "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
+      "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+      "presentation": "Established secure Xaman popup restored; redundant inline review card removed; large six-digit challenge placed directly below the popup QR.",
+      "xrp_logo": "Exact reviewed XRP SVG embedded for first paint and native-XRP runtime fallback; canonical local file/provenance retained.",
+      "supersedes": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman inline-review presentation only; compact trade-ticket layout remains.",
+      "browser_verification_pending": true
     }
   },
   "machine_memory": {
@@ -996,5 +1016,14 @@
     "remembered_account": "A remembered/displayed public XRPL account is read/display state only and does not prove active Xaman signing authorization.",
     "pending_request": "Disconnect/reset must preserve any already-created or ambiguous signing-request guard.",
     "signing": "Ledger writes remain separate from connection: exactly one Xaman payload per deliberate final intent, challenge/intent binding, bounded expiry, validated tesSUCCESS, signer/account equality and critical-field comparison."
+  },
+  "xaman_trade_review_standard": {
+    "status": "active",
+    "updated": "2026-09-21",
+    "homepage_trade_presentation": "Use the established secure Xaman popup/dialog for offer/swap trade review.",
+    "challenge_placement": "Show the existing six-digit protected challenge directly under the official QR in large text.",
+    "duplicate_inline_preview": false,
+    "backdrop": "May dim but should not blur the trading page.",
+    "security_boundary": "Presentation must never create a second payload or weaken pending/ambiguous request guards or validated finality."
   }
 }
