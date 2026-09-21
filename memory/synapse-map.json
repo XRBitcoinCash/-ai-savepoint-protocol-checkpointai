@@ -7,6 +7,21 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
+      "human_file": "XAMAN-POPUP-LAYOUT-REPAIR-2026-09-21.md",
+      "frontend_commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+      "pipeline_id": 2868922004
+    },
+    {
+      "id": "task:xaman-popup-layout-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Hard-refresh production, create a small Xaman review, verify the QR is unobstructed, the instruction is normal horizontal text below the QR, and the six-digit code is below Cancel Xaman request and matches Xaman."
+    },
+    {
       "id": "savepoint:homepage-xaman-popup-restore-xrp-logo-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -313,6 +328,26 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "rel": "refines",
+      "to": "standard:xaman-popup-trade-review"
+    },
+    {
+      "from": "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:xaman-popup-layout-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:xaman-popup-layout-repair-2026-09-21"
+    },
     {
       "from": "savepoint:homepage-xaman-popup-restore-xrp-logo-2026-09-21",
       "rel": "defines",
@@ -667,11 +702,16 @@
       "task:production-browser-tests"
     ],
     "trade_ui": [
-      "savepoint:homepage-xaman-popup-restore-xrp-logo-2026-09-21",
+      "savepoint:xaman-popup-layout-repair-2026-09-21",
       "standard:xaman-popup-trade-review",
       "standard:shared-exchange-ui",
-      "task:xaman-popup-xrp-logo-browser-check"
+      "task:xaman-popup-layout-browser-check"
+    ],
+    "xaman_popup": [
+      "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "standard:xaman-popup-trade-review",
+      "task:xaman-popup-layout-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:homepage-xaman-popup-restore-xrp-logo-2026-09-21"
+  "active_savepoint": "savepoint:xaman-popup-layout-repair-2026-09-21"
 }
