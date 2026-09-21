@@ -35,12 +35,13 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Xaman popup layout repair",
-      "commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
-      "pipeline_id": 2868922004,
+      "scope": "Homepage migrated to shared Liquidity-Pool-style exchange shell",
+      "commit": "b06b3ca16f047b01a059bd5833d7e1d81050f24d",
+      "shared_css_commit": "cd8b2bd41082c9a87b1540381344e6c5ee4928e1",
+      "pipeline_id": 2868954757,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "631080fae94b43c175911b8a9ff61e4d6f4bd65f",
-      "local_memory_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
+      "local_checkpoint_commit": "38d76d107614ce1f1c68c8922ed17d63242da4ab",
+      "local_memory_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -50,24 +51,26 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
-      "savepoint_commit": "5c3e33c53512e3d8d34e68128aece979d14b53cf"
+      "id": "SAVEPOINT-2026-09-21-homepage-exchange-shell-migration",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "savepoint_commit": "25d4f7e3ab21124c99ad4e6fc27f56a1c0699799"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-homepage-exchange-shell-migration",
     "previous_verified_frontend_change": {
-      "scope": "Homepage Xaman popup restored; inline review removed; XRP logo hardened",
-      "commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
-      "pipeline_id": 2868893239,
+      "scope": "Xaman popup layout repair",
+      "commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+      "pipeline_id": 2868922004,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
-      "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+      "local_checkpoint_commit": "631080fae94b43c175911b8a9ff61e4d6f4bd65f",
+      "local_memory_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
+      "version": "1.2.0",
       "body_activation": "xrbc-exchange-shell",
-      "reference_page": "public/xrbc-liquidity-pool.html",
+      "liquidity_reference": "public/xrbc-liquidity-pool.html",
+      "homepage_scope": "xrbc-home-exchange-shell",
       "rollout": "one-page-at-a-time"
     }
   },
@@ -118,6 +121,8 @@
       "memory/synapse-map.json"
     ],
     "ui_design": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "HOMEPAGE-EXCHANGE-SHELL-MIGRATION-2026-09-21.md",
       "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
       "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
       "memory/synapse-map.json"
@@ -145,10 +150,9 @@
       "memory/synapse-map.json"
     ],
     "trade_ui": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
-      "HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
-      "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
-      "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
       "memory/synapse-map.json"
     ]
   },
