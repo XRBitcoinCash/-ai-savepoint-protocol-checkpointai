@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui",
+    "trade",
+    "xaman",
+    "token-assets",
+    "homepage"
+  ],
+  "context": "The homepage XRBC trading area was functional but visually dense, the permanent Xaman preview used generic placeholder art, and trade payload presentation still opened a modal that blurred/covered the page even though an inline preview already existed. The user requested the compact Liquidity Pool/Coinbase-style direction, local XRP/XRBC artwork, and the six-digit Xaman challenge directly under the returned QR.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
+    "implementation_pipeline_id": 2868812919,
+    "implementation_pipeline_status": "success",
+    "rollback_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
+    "page": "public/index.html",
+    "release": "1.5.1",
+    "local_checkpoint": "docs/checkpoints/HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
+    "local_checkpoint_commit": "613da9395e8aa2b776487f4a9f5d247a0245c343",
+    "local_memory_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da"
+  },
+  "trade_ticket": [
+    "Compact exchange-style order rail aligned with the Liquidity Pool/Coinbase direction.",
+    "Tighter Buy/Sell and Market/Limit controls.",
+    "Denser wallet/balance summary.",
+    "Larger focused XRBC amount input with compact percentage shortcuts.",
+    "Stacked pay/receive asset rows for the narrow order ticket.",
+    "Compact verification, quote refresh, readiness, primary review and advanced limit-order controls."
+  ],
+  "token_assets": {
+    "xrbc": "/xrbitcoin-logo-128.png",
+    "xrp": "/assets/tokens/xrp.svg",
+    "xrp_provenance": "public/assets/tokens/README.md",
+    "identity_rule": "Logos are presentation only; exact XRPL identity remains issuer/currency/native identity.",
+    "market_identity": "Market identity cards now use real token art and synchronize quote icon/name/currency/issuer with the selected quote asset."
+  },
+  "inline_xaman_review": [
+    "Trade purposes offer and swap keep the protected Xaman request dialog closed and use the permanent inline Xaman review preview as the primary presentation.",
+    "Progress/preparing state remains visible inline while the protected request controller works.",
+    "The official Xaman QR URL is mirrored into the inline preview after payload creation.",
+    "The official Xaman request link remains available in the inline preview.",
+    "The six-digit Xaman challenge is displayed in large monospace text directly below the QR.",
+    "Idle QR placeholder art uses the reviewed XRBC and XRP images instead of a generic glyph.",
+    "Non-trade Xaman purposes may still use the secure dialog; remaining dialog backdrops dim without blur."
+  ],
+  "security_invariants": [
+    "The inline preview is read-only presentation and does not create a second payload.",
+    "Wallet connection remains authorization-only.",
+    "Exactly one Xaman payload per deliberate final transaction intent.",
+    "Pending/ambiguous request guards remain authoritative.",
+    "Signing remains inside Xaman.",
+    "Validated XRPL success, signer/account equality, and critical-field comparison remain authoritative finality checks."
+  ],
+  "verification": {
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_custom_domain_verified": false,
+    "manual_checks": [
+      "Confirm local XRP/XRBC images throughout trade UI.",
+      "Confirm stacked pay/receive layout on desktop/mobile.",
+      "Confirm no blurred modal opens for offer/swap trade review.",
+      "Confirm official QR appears inline and challenge below it matches the Xaman memo/review.",
+      "Confirm inline official request link opens the same protected payload."
+    ]
+  }
+}
