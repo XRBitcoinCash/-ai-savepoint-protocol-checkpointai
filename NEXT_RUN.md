@@ -165,6 +165,19 @@ The Advanced Market Chart is collapsed by default and no longer creates an outer
 
 Reusable UI rule: secondary/uncertain analytics should use progressive disclosure. Account-dependent empty cards should present an intentional state and clear next action rather than dashes, fake values or zeros. Motion must never imply ledger execution.
 
+
+## September 21 local XRP token asset
+
+Implemented:
+- local asset `public/assets/tokens/xrp.svg`
+- provenance `public/assets/tokens/README.md`
+- CC0-1.0 upstream source: `spothq/cryptocurrency-icons`
+- frontend commit `2a37dc754853ff0cd045b2a5ddcf476b8045769d`
+- pipeline `2868676134` success
+- Liquidity Pool release `0.2.5`
+
+The XRP quote unit and XRBC/XRP pair picker now use the local XRP asset. Reuse local reviewed token images and record their source/license; do not use token imagery as ledger identity evidence.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
