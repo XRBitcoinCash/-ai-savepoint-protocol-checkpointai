@@ -8,26 +8,28 @@
   "agent_entrypoint": {
     "read_before_edit": true,
     "sequence": [
-      "read this contract and the target repository instructions",
-      "read HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md for large-file work and bounded manual-edit collaboration",
-      "read the current deployment map and latest_savepoint; do not rely on older filenames or home URLs",
+      "read ai-bootstrap.json and latest_savepoint.record",
+      "read ai-memory.json, then route by topic through memory/synapse-map.json",
+      "read HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md for large-file work and bounded manual-edit collaboration when relevant",
+      "read the canonical contract and repository-local security/instructions for security-sensitive, policy-sensitive, conflicting, or incomplete-evidence work",
       "inspect the exact target file, branch, and current commit",
       "state target, non_goals, acceptance_checks, and rollback point",
       "make one bounded change",
       "run relevant checks",
-      "record a concise savepoint"
+      "record a concise machine-readable savepoint and synchronize the latest pointers"
     ],
     "missing_evidence": "stop and report; never invent values",
     "conversation_bootstrap": {
       "required_for_new_project_conversations": true,
       "purpose": "Use the GitHub continuity repository as a secondary project-memory layer so a new conversation can regain verified XRBitcoinCash state before making edits.",
       "sequence": [
-        "read ai-memory.json and the canonical contract",
-        "read latest_savepoint.record",
-        "check the active source-of-truth repository, branch, current commit and relevant pipeline",
+        "read ai-bootstrap.json and latest_savepoint.record",
+        "read ai-memory.json and use memory/synapse-map.json to select only task-relevant checkpoints",
+        "check the active source-of-truth repository, branch, current commit and relevant pipeline before editing",
         "compare the new request with current source so already-applied work is not duplicated or overwritten",
         "reuse established project facts and decisions instead of asking the user to repeat them",
-        "make the smallest bounded change and record the result as a new savepoint"
+        "read the canonical contract when security/policy sensitivity or conflicting evidence requires it",
+        "make the smallest bounded change and record the result as a machine-readable savepoint with synchronized pointers"
       ],
       "model_working_notes": [
         "repository evidence outranks stale conversational assumptions",
@@ -431,52 +433,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-19-order-manager-xaman-browser-repair",
-    "record": "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md",
-    "scope": "Repair limit-extraction Xaman browser authorization and make validated OfferCancel cleanup reachable on desktop and mobile without conflating public-address inspection with wallet connection.",
-    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
-    "gitlab_branch": "master",
-    "frontend_file": "public/limit-extraction.html",
-    "frontend_commit": "825028ecebfe582986392933632bf5df0fe1508e",
-    "rollback_commit": "1c55229a71a7e21dc4181ff239847af5b4975a05",
-    "pipeline_id": 2863838957,
-    "pipeline_status": "success",
-    "order_manager": {
-      "purpose": "Inspect and clear currently open XRPL offers; no Quick Buy.",
-      "xaman_browser_flow": "Official Xaman browser authorize(); desktop QR, mobile deeplink.",
-      "connected_mode": "xaman",
-      "read_source": "validated account_offers",
-      "write_transaction": "one OfferCancel per offer",
-      "validation": "tesSUCCESS + protected critical-field comparison",
-      "public_address_mode": "read-only",
-      "static_page_qr_allowed": false
-    },
-    "root_cause": [
-      "xamanRuntimeOk was referenced but undefined",
-      "mobileWalletOnly remained true",
-      "submitAndValidate required obsolete xaman-mobile while connect stored xaman"
-    ],
-    "pending": [
-      "user real-device/browser test of desktop Xaman authorization QR and one small OfferCancel"
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-19-xaman-standardization-audit-pause",
     "record": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
     "scope": "Pause and preserve the project-wide Xaman wallet standardization audit before final verification; resume with a higher-capability model from repository evidence rather than repeating discovery.",
@@ -498,6 +454,43 @@
       "Build and verify a page-by-page matrix for every live Xaman connection and ledger-write path.",
       "Repair only verified gaps while preserving each page's existing APIs and transaction-specific validators.",
       "Run repository tests/diff checks and separately verify desktop QR plus mobile deeplink/recovery before final sign-off."
+    ]
+  },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-21-memory-synaptic-layer",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+    "scope": "Add a compact machine-first bootstrap and directed context graph so future XRBitcoinCash sessions can recover current source-of-truth, invariants, evidence and pending tasks with fewer reads and less context drift.",
+    "status": "implemented",
+    "memory_repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+    "bootstrap": "ai-bootstrap.json",
+    "synapse_map": "memory/synapse-map.json",
+    "savepoint_commit": "852eae70553f1796f9438566be14528f2f535607",
+    "bootstrap_create_commit": "be70b9b1236868b9a777055fb89097ddd9fd80b0",
+    "synapse_map_create_commit": "a76c7ff49b3e77fb92136afbb2e764e6345534f2",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "transition_phase": "hybrid-machine-primary-routing",
+    "pending": [
+      "Add a consistency validator for latest_savepoint.record, ai-memory.json, ai-bootstrap.json and memory/synapse-map.json.",
+      "Use topic routing so new sessions load only the checkpoint evidence needed for the task.",
+      "Keep human-readable historical checkpoints until repeated machine-first bootstraps remain contradiction-free."
     ]
   },
   "savepoint_format": [
@@ -525,6 +518,26 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-memory-synaptic-layer",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+      "scope": "Add a compact machine-first bootstrap and directed context graph so future XRBitcoinCash sessions can recover current source-of-truth, invariants, evidence and pending tasks with fewer reads and less context drift."
+    },
+    {
+      "id": "SAVEPOINT-2026-09-21-xaman-reconnect-countdown",
+      "record": "UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md",
+      "scope": "Expose the existing bounded Xaman authorization wait with an amber notice and red countdown without adding reconnect/sign/retry behavior."
+    },
+    {
+      "id": "SAVEPOINT-2026-09-21-discovery-brand-favicon",
+      "record": "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md",
+      "scope": "Add conventional brand/favicon aliases and machine discovery metadata while preserving legacy asset paths."
+    },
+    {
+      "id": "SAVEPOINT-2026-09-19-order-manager-xaman-browser-repair",
+      "record": "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md",
+      "scope": "Repair limit-extraction Xaman browser authorization and make validated OfferCancel cleanup reachable on desktop and mobile without conflating public-address inspection with wallet connection."
+    },
     {
       "id": "SAVEPOINT-2026-09-19-xaman-standardization-audit-pause",
       "record": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
@@ -704,6 +717,34 @@
         "GitLab runtime-contracts passed.",
         "GitLab validate-repository, secret detection, Semgrep SAST and deploy-pages passed."
       ]
+    },
+    "machine_memory_synaptic_layer": {
+      "status": "implemented",
+      "savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+      "savepoint_commit": "852eae70553f1796f9438566be14528f2f535607",
+      "bootstrap": "ai-bootstrap.json",
+      "bootstrap_create_commit": "be70b9b1236868b9a777055fb89097ddd9fd80b0",
+      "synapse_map": "memory/synapse-map.json",
+      "synapse_map_create_commit": "a76c7ff49b3e77fb92136afbb2e764e6345534f2",
+      "purpose": "Reduce context-loading overhead and stale-pointer drift by giving future sessions a compact machine-first entrypoint and topic graph.",
+      "transition_rule": "Hybrid only for now; preserve human-readable history until repeated machine-first bootstraps are consistent."
     }
+  },
+  "machine_memory": {
+    "schema_version": "1.0.0",
+    "status": "active",
+    "phase": "hybrid-machine-primary-routing",
+    "bootstrap": "ai-bootstrap.json",
+    "synapse_map": "memory/synapse-map.json",
+    "machine_savepoint_directory": "memory/savepoints/",
+    "target": "machine-primary continuity artifacts with human-readable history retained as fallback/evidence",
+    "scope_boundary": "External continuity/context routing only; this does not alter model weights or create persistent internal model state.",
+    "consistency_contract": [
+      "ai-memory.json latest_savepoint, latest_savepoint.record and ai-bootstrap.json active memory savepoint must agree",
+      "repository evidence outranks stale conversation or code-search indexing",
+      "before code edits verify current source repository, branch, file and head",
+      "security-sensitive or conflicting tasks escalate to the canonical contract and repository-local instructions"
+    ],
+    "deletion_policy": "Do not delete historical human-readable checkpoints during the transition."
   }
 }
