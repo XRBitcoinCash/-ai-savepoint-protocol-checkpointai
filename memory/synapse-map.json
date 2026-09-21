@@ -7,6 +7,26 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "task:liquidity-history-browser-verification",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Verify 1D · MAX XRBC/XRP candles, earliest returned date, and direct OnTheDEX browser access/CORS on the deployed custom domain."
+    },
+    {
+      "id": "invariant:history-live-liquidity-separation",
+      "type": "invariant",
+      "statement": "Historical OHLC candles are contextual processed XRPL DEX history; live bid/ask/AMM state is a separately validated XRPL snapshot and transaction logic does not depend on history."
+    },
+    {
+      "id": "savepoint:liquidity-market-history-repair-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+      "human_file": "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
+      "frontend_commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
+      "pipeline_id": 2868432524
+    },
+    {
       "id": "task:liquidity-exchange-shell-browser-review",
       "type": "task",
       "status": "manual-pending",
@@ -152,6 +172,21 @@
     }
   ],
   "edges": [
+    {
+      "from": "task:liquidity-history-browser-verification",
+      "rel": "verifies",
+      "to": "savepoint:liquidity-market-history-repair-2026-09-21"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-repair-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:history-live-liquidity-separation"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-repair-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "task:liquidity-exchange-shell-browser-review",
       "rel": "verifies",
@@ -302,7 +337,12 @@
       "savepoint:shared-exchange-ui-design-system-2026-09-21",
       "invariant:visual-migration-preserve-js",
       "task:liquidity-exchange-shell-browser-review"
+    ],
+    "liquidity_market_history": [
+      "savepoint:liquidity-market-history-repair-2026-09-21",
+      "invariant:history-live-liquidity-separation",
+      "task:liquidity-history-browser-verification"
     ]
   },
-  "active_savepoint": "savepoint:shared-exchange-ui-design-system-2026-09-21"
+  "active_savepoint": "savepoint:liquidity-market-history-repair-2026-09-21"
 }
