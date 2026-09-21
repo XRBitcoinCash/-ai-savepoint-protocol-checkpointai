@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-memory-synaptic-layer",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "context": "The continuity repository already worked as a secondary project-memory layer, but its main JSON and latest pointer could disagree and a new session still had to read large human-oriented files before routing to the relevant evidence.",
+  "changes": [
+    "Added ai-bootstrap.json as the minimal machine-first entrypoint.",
+    "Added memory/synapse-map.json as a directed context graph linking repositories, savepoints, invariants, and pending tasks.",
+    "Promoted a machine-readable JSON savepoint format for this memory-system change.",
+    "Updated ai-memory.json so machine-first bootstrap/routing is explicit and latest_savepoint is synchronized to this savepoint.",
+    "Updated latest_savepoint.record and NEXT_RUN.md to use the new bootstrap path."
+  ],
+  "impact": [
+    "Future sessions can recover current XRBC state with fewer reads and less historical context.",
+    "Security-sensitive work still escalates to the canonical contract and repository evidence.",
+    "Human-readable checkpoints remain intact during the transition; no historical records are deleted.",
+    "The external memory layer improves continuity and context routing but does not change model weights or create persistent internal model state."
+  ],
+  "checks": [
+    "All new machine-memory artifacts are valid JSON.",
+    "The bootstrap points to existing canonical memory, contract, latest pointer, and next-run files.",
+    "The synapse map references the current September 21 discovery and Xaman reconnect commits/pipelines.",
+    "The machine transition is marked hybrid and deletion of human-readable history remains disabled."
+  ],
+  "todo": [
+    "On future savepoints, update the bootstrap current_state and synapse-map nodes/edges in the same change as ai-memory.json and latest_savepoint.record.",
+    "Add a lightweight consistency validator that fails when latest_savepoint.record, ai-memory.json, and the bootstrap disagree.",
+    "Only move additional categories to machine-primary representation after repeated session bootstraps remain contradiction-free."
+  ]
+}
