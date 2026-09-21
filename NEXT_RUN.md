@@ -112,6 +112,21 @@ Design language: dense neutral exchange/workbench surfaces, blue normal actions,
 
 Do not one-shot restyle every page. Browser-review the Liquidity Pool desktop/mobile deployment first, then migrate the next page deliberately.
 
+
+## September 21 Liquidity Market Chart repair
+
+Implemented:
+- page `public/xrbc-liquidity-pool.html` release `0.2.1`
+- frontend commit `e893d3cf86780de2cb8dbe2b948a0bea80b5ec91`
+- pipeline `2868432524` success
+- checkpoint `LIQUIDITY-MARKET-HISTORY-2026-09-21.md`
+
+The prior Sologenic history source had documented issuer-coverage limitations that did not include the exact XRBC issuer. Historical OHLC now uses exact-pair OnTheDEX XRPL trade data with backward pagination. The default `1D · MAX` view is the broadest daily-history view, and returned date coverage is surfaced explicitly.
+
+Preserve the evidence boundary: historical candles are chart context only. Current live book/AMM remains the separately validated XRPL snapshot, and no transaction construction/signing/finality logic depends on the history provider.
+
+Manual follow-up: browser-verify direct provider access/CORS and the earliest returned XRBC/XRP trade date. If direct browser access fails, route the same exact-pair request through a reviewed read-only backend endpoint; do not substitute another token or fabricate candles.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
