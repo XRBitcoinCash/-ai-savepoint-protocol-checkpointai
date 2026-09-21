@@ -127,6 +127,31 @@ Preserve the evidence boundary: historical candles are chart context only. Curre
 
 Manual follow-up: browser-verify direct provider access/CORS and the earliest returned XRBC/XRP trade date. If direct browser access fails, route the same exact-pair request through a reviewed read-only backend endpoint; do not substitute another token or fabricate candles.
 
+
+## September 21 backend-routed Liquidity Market History
+
+Current architecture:
+`browser -> XRBC read-only backend -> fixed OnTheDEX XRPL history upstream`
+
+Frontend:
+- `264f5be880ed4fc8e47448a6a300c6b688a55ff7` routes history through the backend
+- `7fd39d9ce2641f6b28318ba44e718a034f8d7116` gives same-backend history the 45-second backend allowance
+- pipeline `2868480096` success
+- Liquidity Pool release `0.2.3`
+
+Backend:
+- route `/api/v1/market/xrbc/history`
+- implementation `8018486c7fcc0da7e867398702df2ab58e385d28`
+- tests `ebf918c2e3010f33ab5a2bdd4f9f1cfd6ed48c3b`
+- OpenAPI `f6658b41f508585a41bb9813b4e3fbc5b545147e`
+- permanent API test workflow `b9ef92baadb03c6a32159c2ba71473feefdc718e`
+- route inventory fix `131e204ebe131c5ae2f886d75506b230af91db21`
+- GitHub Actions API test run `35626734128` success
+
+Security boundary: the browser may specify only supported interval/page count. Upstream URL, host, XRBC/XRP identity and pagination markers are server-controlled. Historical candles remain chart context and never participate in transaction construction/signing/finality.
+
+Next action: after Render has deployed backend main, hard-refresh the Liquidity Pool and verify `1D · MAX` plus the earliest returned direct-trade date. If still unavailable, inspect the backend endpoint response before changing chart logic.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
