@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui",
+    "xaman",
+    "trade",
+    "homepage"
+  ],
+  "context": "Production evidence showed the Xaman popup instruction collapsing into an unreadable vertical strip beside the security code. The user requested the six-digit code under Cancel Xaman request and the explanatory text under the QR.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+    "implementation_pipeline_id": 2868922004,
+    "implementation_pipeline_status": "success",
+    "rollback_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+    "page": "public/index.html",
+    "release": "1.5.3",
+    "local_checkpoint": "docs/checkpoints/XAMAN-POPUP-LAYOUT-REPAIR-2026-09-21.md",
+    "local_checkpoint_commit": "631080fae94b43c175911b8a9ff61e4d6f4bd65f",
+    "local_memory_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae"
+  },
+  "layout": [
+    "Left column: title, status, payload UUID, Open in Xaman, Check Request Status, Cancel Xaman request, then the large six-digit Xaman security code.",
+    "Right column: official QR, then one readable instruction card underneath.",
+    "Instruction width/wrapping is fixed so it cannot collapse into vertical one-character text.",
+    "Mobile remains single-column."
+  ],
+  "security": "Presentation only. The code remains the existing protected securityCode from the request controller. Payload creation, pending/ambiguous guards, signing and validated finality are unchanged.",
+  "verification": {
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_custom_domain_verified": false
+  }
+}
