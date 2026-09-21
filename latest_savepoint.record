@@ -14,6 +14,7 @@ implementation_pipeline=2868432524
 implementation_pipeline_status=success
 local_checkpoint_commit=3c8372cb18158baf742aec27ccf1288b7b414010
 local_checkpoint_pipeline=2868439142
+local_checkpoint_pipeline_status=success
 page=public/xrbc-liquidity-pool.html
 page_release=0.2.1
 historical_provider=OnTheDEX
