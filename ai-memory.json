@@ -511,7 +511,8 @@
       "Browser-verify direct provider access/CORS on the deployed custom domain.",
       "Confirm 1D · MAX loads XRBC/XRP candles and inspect the earliest returned direct-trade date.",
       "If browser provider access is blocked, proxy the same exact-pair history request through a reviewed read-only backend endpoint."
-    ]
+    ],
+    "local_checkpoint_pipeline_status": "success"
   },
   "savepoint_format": [
     "context",
@@ -811,7 +812,8 @@
       "root_cause": "The original Sologenic OHLC provider's documented issuer coverage did not include the exact XRBC issuer, so the chart could have current validated liquidity but no historical XRBC candles.",
       "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D · MAX is the broadest default history view.",
       "evidence_boundary": "Historical candles are context only. Current live book/AMM remains validated separately and transaction logic does not depend on chart history.",
-      "browser_verification_pending": true
+      "browser_verification_pending": true,
+      "local_checkpoint_pipeline_status": "success"
     }
   },
   "machine_memory": {
