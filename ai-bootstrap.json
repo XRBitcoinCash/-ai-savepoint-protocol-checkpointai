@@ -40,7 +40,9 @@
       "pipeline_id": 2868371281,
       "pipeline_status": "success",
       "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
-      "browser_custom_domain_verified": false
+      "browser_custom_domain_verified": false,
+      "local_standard_pipeline_id": 2868377370,
+      "local_standard_pipeline_status": "success"
     },
     "same_day_discovery_change": {
       "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
