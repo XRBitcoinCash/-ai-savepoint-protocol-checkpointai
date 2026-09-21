@@ -82,6 +82,19 @@ Xaman reconnect status pass:
 
 Before the September 22 higher-capability implementation work, fetch current GitLab and GitHub heads again.
 
+
+## September 21 liquidity top-wallet pass
+
+Already implemented in the active GitLab frontend:
+- UI commit `6df386f2b031f5b085232a0701ac0e1ea953aa87`
+- pipeline `2868276237` success
+- local memory commit `0ff62e898fee7cf90f087659139c469cf1adfeac`
+- machine savepoint `memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json`
+
+The Liquidity Pool now uses a compact top side-by-side workspace: liquidity actions plus Xaman authorization. On smaller screens the wallet card moves first. The connection card exposes a three-minute Xaman authorization countdown while transaction/backend action waits remain 90 seconds. Do not merge those timers or turn the countdown into an automatic authorization/transaction retry.
+
+Manual follow-up: visually verify the custom-domain desktop/mobile layout and one close/restart Xaman authorization attempt.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
