@@ -7,6 +7,28 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "human_file": "HOMEPAGE-EXCHANGE-SHELL-MIGRATION-2026-09-21.md",
+      "frontend_commit": "b06b3ca16f047b01a059bd5833d7e1d81050f24d",
+      "shared_css_commit": "cd8b2bd41082c9a87b1540381344e6c5ee4928e1",
+      "pipeline_id": 2868954757
+    },
+    {
+      "id": "standard:homepage-liquidity-shell-alignment",
+      "type": "standard",
+      "status": "active",
+      "statement": "The main XRBitcoinCash trading page uses the same shared exchange/workbench visual system as the XRBC Liquidity Pool: fixed desktop left rail, compact workbench heading, dense neutral market surfaces, primary chart/market workspace and sticky right-side order rail; responsive top nav at <=900px. Homepage-specific CSS stays scoped and executable JS remains untouched for visual-only changes."
+    },
+    {
+      "id": "task:homepage-exchange-shell-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Hard-refresh the production homepage on desktop and mobile; verify the Liquidity-Pool-style left rail/top-nav transition, compact terminal, sticky order rail, sidebar CTA/theme controls, and one Xaman connect/review flow."
+    },
+    {
       "id": "savepoint:xaman-popup-layout-repair-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -328,6 +350,36 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "rel": "implements",
+      "to": "standard:homepage-liquidity-shell-alignment"
+    },
+    {
+      "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "rel": "extends",
+      "to": "standard:shared-exchange-ui"
+    },
+    {
+      "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "rel": "preserves",
+      "to": "standard:xaman-connect-lifecycle"
+    },
+    {
+      "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "rel": "preserves",
+      "to": "standard:xaman-popup-trade-review"
+    },
+    {
+      "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:homepage-exchange-shell-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:homepage-exchange-shell-migration-2026-09-21"
+    },
     {
       "from": "savepoint:xaman-popup-layout-repair-2026-09-21",
       "rel": "refines",
@@ -670,10 +722,10 @@
       "task:liquidity-top-wallet-browser-check"
     ],
     "ui_design": [
+      "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "standard:homepage-liquidity-shell-alignment",
       "standard:shared-exchange-ui",
-      "savepoint:shared-exchange-ui-design-system-2026-09-21",
-      "invariant:visual-migration-preserve-js",
-      "task:liquidity-exchange-shell-browser-review"
+      "task:homepage-exchange-shell-browser-check"
     ],
     "liquidity_market_history": [
       "savepoint:liquidity-market-history-backend-route-2026-09-21",
@@ -702,10 +754,10 @@
       "task:production-browser-tests"
     ],
     "trade_ui": [
-      "savepoint:xaman-popup-layout-repair-2026-09-21",
+      "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "standard:homepage-liquidity-shell-alignment",
       "standard:xaman-popup-trade-review",
-      "standard:shared-exchange-ui",
-      "task:xaman-popup-layout-browser-check"
+      "task:homepage-exchange-shell-browser-check"
     ],
     "xaman_popup": [
       "savepoint:xaman-popup-layout-repair-2026-09-21",
@@ -713,5 +765,5 @@
       "task:xaman-popup-layout-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:xaman-popup-layout-repair-2026-09-21"
+  "active_savepoint": "savepoint:homepage-exchange-shell-migration-2026-09-21"
 }
