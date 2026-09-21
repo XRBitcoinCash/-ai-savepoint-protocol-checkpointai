@@ -7,6 +7,15 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
+      "human_file": "LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
+      "frontend_commit": "6df386f2b031f5b085232a0701ac0e1ea953aa87",
+      "pipeline_id": 2868276237
+    },
+    {
       "id": "savepoint:memory-synaptic-layer-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -101,9 +110,45 @@
       "type": "task",
       "status": "pending",
       "statement": "Expand higher-tier tools only where added metrics/evidence depth materially justify the holding threshold."
+    },
+    {
+      "id": "invariant:connection-action-timers-separate",
+      "type": "invariant",
+      "statement": "Xaman browser authorization may use the 180-second connection window while preview/sign backend action readiness remains separately bounded at 90 seconds."
+    },
+    {
+      "id": "task:liquidity-top-wallet-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Verify desktop/mobile top-wallet layout, Wallet details jump, and one close/restart Xaman authorization attempt on the custom domain."
     }
   ],
   "edges": [
+    {
+      "from": "task:liquidity-top-wallet-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21"
+    },
+    {
+      "from": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "rel": "requires",
+      "to": "invariant:connection-action-timers-separate"
+    },
+    {
+      "from": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:connect-authorize-only"
+    },
+    {
+      "from": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "savepoint:memory-synaptic-layer-2026-09-21",
       "rel": "changes",
@@ -197,7 +242,13 @@
     "next_implementation": [
       "task:production-browser-tests",
       "task:tier-refinement"
+    ],
+    "liquidity_wallet_ui": [
+      "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "invariant:connect-authorize-only",
+      "invariant:connection-action-timers-separate",
+      "task:liquidity-top-wallet-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:memory-synaptic-layer-2026-09-21"
+  "active_savepoint": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21"
 }
