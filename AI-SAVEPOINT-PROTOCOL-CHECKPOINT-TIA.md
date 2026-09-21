@@ -2,7 +2,7 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-20  
+**Updated:** 2026-09-21  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
@@ -608,3 +608,45 @@ TODO:
 - Add measured production telemetry/dashboards.
 - Review authoritative XRBC/XRP economics before changing any gate.
 - Expand higher-tier tools only where added metrics/evidence depth materially justify the higher threshold.
+
+
+### [SAVEPOINT-2026-09-21-discovery-brand-favicon] Conventional favicon and machine brand discovery
+
+Context: Bing search results showed the site indexed but without the XRBC favicon. The existing homepage referenced only `/xrbitcoin-logo-128.png`, and the repository had no conventional root `/favicon.ico`.
+
+Changes:
+- Frontend commit `68586a9af00f88253b60f7ee6137cec2b6dfa145`.
+- Added conventional root favicon/icon aliases and organized brand-discovery files while preserving legacy image URLs.
+- Strengthened homepage title/description, Schema.org organization/logo identity, manifest, sitemap freshness, robots discovery comments, XRBC metadata, universal AI metadata and well-known AI catalog.
+- Detailed checkpoint: `DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md`.
+
+Impact:
+- New canonical brand aliases are additive. Do not delete the older logo URLs merely because the new conventional paths exist.
+- Search ranking is not guaranteed by metadata. This work reduces discovery ambiguity; it is not a ranking guarantee.
+- Do not introduce automatic IndexNow or outbound crawler-notification behavior without a separately reviewed network/deployment change.
+
+Checks:
+- Pipeline `2867921308` passed runtime-contracts, validate-repository job, secret detection, Semgrep SAST and deploy-pages.
+- Existing site-validator advisory findings elsewhere remain separate.
+
+### [SAVEPOINT-2026-09-21-xaman-reconnect-countdown] Explain bounded Xaman reconnect wait
+
+Context: A remembered wallet can remain visible while Xaman signing authorization is no longer active. Reconnect already had a protected in-flight window, but when the Xaman authorization UI was closed the order panel did not explain why reconnect could remain temporarily unavailable.
+
+Changes:
+- Frontend commit `bc77e91dbaac701a08d5364dd635e62715e26850`.
+- Added a yellow/amber security notice under the main Connect/Reconnect controls and a red countdown tied to the existing 180-second Xaman authorization timeout.
+- The notice is visible when a remembered wallet needs signing reconnection and during an active authorization attempt.
+- Reconnect copy states that no trade request is created during this wait.
+- Added local GitLab memory checkpoint `docs/checkpoints/XAMAN-RECONNECT-SECURITY-COUNTDOWN-2026-09-21.md`.
+- Detailed continuity checkpoint: `UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md`.
+
+Impact:
+- Countdown is explanatory UI only. It must never become an automatic reconnect loop, automatic signing request, transaction retry or duplicate Xaman payload mechanism.
+- `xumm.authorize()`, parallel backend readiness, `XAMAN_CONNECT_IN_FLIGHT`, current transaction safety and existing Reset/restart path remain authoritative.
+- No quote, AMM, trustline, gate, order construction or transaction submission behavior was intentionally changed.
+
+Checks:
+- 13 executable homepage scripts parsed before commit.
+- New DOM ids were unique.
+- Pipeline `2868175288` passed runtime-contracts, validate-repository, secret detection, Semgrep SAST and deploy-pages.
