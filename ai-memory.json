@@ -433,47 +433,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
-    "human_record": "LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
-    "scope": "Move Xaman authorization to a compact top side-by-side Liquidity Pool workspace and mirror the homepage three-minute reconnect security countdown while preserving transaction behavior.",
-    "status": "implemented",
-    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
-    "gitlab_branch": "master",
-    "implementation_commit": "6df386f2b031f5b085232a0701ac0e1ea953aa87",
-    "implementation_pipeline_id": 2868276237,
-    "implementation_pipeline_status": "success",
-    "local_memory_commit": "0ff62e898fee7cf90f087659139c469cf1adfeac",
-    "machine_savepoint_create_commit": "8ce138d14892d34536ed73fe5e82bcd66ee24198",
-    "human_checkpoint_create_commit": "9d78ef373de9e39c974ac79ade76e1535b98fbf3",
-    "key_invariants": [
-      "Xaman connection is authorization-only and creates no XRPL transaction request.",
-      "XAMAN_AUTHORIZE_TIMEOUT_MS is 180000 only for browser wallet authorization.",
-      "ACTION_WAIT_MS remains 90000 for preview/sign backend action readiness.",
-      "Do not convert the reconnect countdown into automatic authorization or transaction retries."
-    ],
-    "pending": [
-      "Visually verify custom-domain desktop/mobile layout.",
-      "Close one Xaman authorization window and verify countdown/reset behavior without duplicate authorization."
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
     "record": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
     "human_record": "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
@@ -507,6 +466,53 @@
     ],
     "local_standard_pipeline_status": "success"
   },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+    "human_record": "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
+    "scope": "Repair the XRBC/XRP Advanced Market Chart by replacing the issuer-limited historical feed with exact-pair paged XRPL OHLC history while preserving the separately validated live book/AMM and all transaction logic.",
+    "status": "implemented",
+    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
+    "gitlab_branch": "master",
+    "implementation_commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
+    "implementation_pipeline_id": 2868432524,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
+    "local_checkpoint_pipeline_id": 2868439142,
+    "machine_savepoint_create_commit": "7f3ba84d9e008b5a54c086cea544ae54b0aea067",
+    "human_checkpoint_create_commit": "246ee921bafc05c29219306691c402a1dd25fcac",
+    "page": "public/xrbc-liquidity-pool.html",
+    "page_release": "0.2.1",
+    "historical_provider": "OnTheDEX",
+    "historical_endpoint": "https://api.onthedex.live/public/v1/ohlc",
+    "key_invariants": [
+      "Historical trade candles remain separate from the validated current book/AMM snapshot.",
+      "No history provider data is used to construct, authorize, sign or validate an XRPL transaction.",
+      "Use exact currency/issuer identity; never substitute a ticker-similar token or fabricate a candle.",
+      "1D · MAX is the default broad-history view; returned date range is shown explicitly."
+    ],
+    "pending": [
+      "Browser-verify direct provider access/CORS on the deployed custom domain.",
+      "Confirm 1D · MAX loads XRBC/XRP candles and inspect the earliest returned direct-trade date.",
+      "If browser provider access is blocked, proxy the same exact-pair history request through a reviewed read-only backend endpoint."
+    ]
+  },
   "savepoint_format": [
     "context",
     "changes",
@@ -532,6 +538,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+      "scope": "Repair the XRBC/XRP Advanced Market Chart by replacing the issuer-limited historical feed with exact-pair paged XRPL OHLC history while preserving the separately validated live book/AMM and all transaction logic."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
@@ -787,6 +798,20 @@
       "migration_rule": "Opt pages into the shared exchange shell with reusable classes; do not rewrite JavaScript for a visual-only migration.",
       "local_standard_pipeline_id": 2868377370,
       "local_standard_pipeline_status": "success"
+    },
+    "liquidity_market_history_repair": {
+      "status": "implemented",
+      "machine_savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+      "human_checkpoint": "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
+      "frontend_commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
+      "pipeline_id": 2868432524,
+      "pipeline_status": "success",
+      "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
+      "page_release": "0.2.1",
+      "root_cause": "The original Sologenic OHLC provider's documented issuer coverage did not include the exact XRBC issuer, so the chart could have current validated liquidity but no historical XRBC candles.",
+      "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D · MAX is the broadest default history view.",
+      "evidence_boundary": "Historical candles are context only. Current live book/AMM remains validated separately and transaction logic does not depend on chart history.",
+      "browser_verification_pending": true
     }
   },
   "machine_memory": {
