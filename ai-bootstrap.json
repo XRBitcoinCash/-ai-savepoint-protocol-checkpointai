@@ -35,11 +35,11 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Liquidity Pool top wallet authorization card and three-minute Xaman security countdown",
-      "commit": "6df386f2b031f5b085232a0701ac0e1ea953aa87",
-      "pipeline_id": 2868276237,
+      "scope": "Shared opt-in exchange UI design system with Liquidity Pool pilot",
+      "commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+      "pipeline_id": 2868371281,
       "pipeline_status": "success",
-      "local_memory_commit": "0ff62e898fee7cf90f087659139c469cf1adfeac",
+      "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -49,17 +49,24 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
-      "savepoint_commit": "8ce138d14892d34536ed73fe5e82bcd66ee24198"
+      "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "savepoint_commit": "52f5d08f08549079756c9685974784f96d9beb6b"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
     "previous_verified_frontend_change": {
-      "scope": "Xaman reconnect security countdown on homepage",
-      "commit": "bc77e91dbaac701a08d5364dd635e62715e26850",
-      "pipeline_id": 2868175288,
+      "scope": "Liquidity Pool top wallet authorization card and three-minute Xaman security countdown",
+      "commit": "6df386f2b031f5b085232a0701ac0e1ea953aa87",
+      "pipeline_id": 2868276237,
       "pipeline_status": "success",
+      "local_memory_commit": "0ff62e898fee7cf90f087659139c469cf1adfeac",
       "browser_custom_domain_verified": false
+    },
+    "visual_standard": {
+      "css": "public/xrbc-dynamic-ui.css",
+      "body_activation": "xrbc-exchange-shell",
+      "reference_page": "public/xrbc-liquidity-pool.html",
+      "rollout": "one-page-at-a-time"
     }
   },
   "safety_invariants": [
@@ -96,9 +103,14 @@
       "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md"
     ],
     "liquidity_pool": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
-      "LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
       "XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md",
+      "memory/synapse-map.json"
+    ],
+    "ui_design": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
       "memory/synapse-map.json"
     ]
   },
