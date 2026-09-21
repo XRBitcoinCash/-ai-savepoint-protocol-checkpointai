@@ -7,6 +7,13 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:memory-synaptic-layer-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+      "commit": "852eae70553f1796f9438566be14528f2f535607"
+    },
+    {
       "id": "repo:memory",
       "type": "repository",
       "provider": "GitHub",
@@ -98,6 +105,21 @@
   ],
   "edges": [
     {
+      "from": "savepoint:memory-synaptic-layer-2026-09-21",
+      "rel": "changes",
+      "to": "repo:memory"
+    },
+    {
+      "from": "savepoint:memory-synaptic-layer-2026-09-21",
+      "rel": "routes-to",
+      "to": "savepoint:xaman-reconnect-2026-09-21"
+    },
+    {
+      "from": "savepoint:memory-synaptic-layer-2026-09-21",
+      "rel": "routes-to",
+      "to": "savepoint:production-scaffold-2026-09-20"
+    },
+    {
       "from": "savepoint:xaman-reconnect-2026-09-21",
       "rel": "changes",
       "to": "repo:frontend"
@@ -176,5 +198,6 @@
       "task:production-browser-tests",
       "task:tier-refinement"
     ]
-  }
+  },
+  "active_savepoint": "savepoint:memory-synaptic-layer-2026-09-21"
 }
