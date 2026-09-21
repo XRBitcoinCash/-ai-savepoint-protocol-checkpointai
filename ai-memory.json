@@ -504,7 +504,8 @@
       "Browser-review the deployed Liquidity Pool on desktop and mobile.",
       "Adjust only presentation issues from the review unless a separate functional change is explicitly requested.",
       "After visual acceptance, migrate the next page using the same shared CSS method."
-    ]
+    ],
+    "local_standard_pipeline_status": "success"
   },
   "savepoint_format": [
     "context",
@@ -783,7 +784,9 @@
         "byte_identical": true,
         "duplicate_ids": 0
       },
-      "migration_rule": "Opt pages into the shared exchange shell with reusable classes; do not rewrite JavaScript for a visual-only migration."
+      "migration_rule": "Opt pages into the shared exchange shell with reusable classes; do not rewrite JavaScript for a visual-only migration.",
+      "local_standard_pipeline_id": 2868377370,
+      "local_standard_pipeline_status": "success"
     }
   },
   "machine_memory": {
