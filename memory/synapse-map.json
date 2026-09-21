@@ -7,6 +7,28 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
+      "human_file": "HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
+      "frontend_commit": "1e74ad6ccd0a0ba8e8deb08ffb054042426c5c97",
+      "primary_frontend_commit": "877d0e74ac7c86e71bc57fa8bf0214472db0624e",
+      "pipeline_id": 2868760527
+    },
+    {
+      "id": "standard:xaman-connect-lifecycle",
+      "type": "standard",
+      "status": "active",
+      "statement": "All migrated XRBitcoinCash wallet pages use the same Xaman connection lifecycle: browser authorizeAndWarm from the deliberate click with read-only readiness in parallel; connection never creates a transaction; one attempt/generation at a time; visible Cancel / restart while connecting; 180-second hard timeout cleanup; no automatic replacement authorization; xApp uses its supplied account; remembered public account is not signing readiness; pending transaction guards survive reset."
+    },
+    {
+      "id": "task:homepage-xaman-cancel-restart-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "On the production homepage close a Xaman authorization window, use visible Cancel / restart, start a second attempt and verify a late first-attempt result is ignored; also verify the 180-second timeout returns to Connect without creating a transaction."
+    },
+    {
       "id": "savepoint:xrp-logo-rendering-repair-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -250,6 +272,31 @@
   ],
   "edges": [
     {
+      "from": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "rel": "defines",
+      "to": "standard:xaman-connect-lifecycle"
+    },
+    {
+      "from": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:connect-authorize-only"
+    },
+    {
+      "from": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:homepage-xaman-cancel-restart-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21"
+    },
+    {
       "from": "savepoint:xrp-logo-rendering-repair-2026-09-21",
       "rel": "preserves",
       "to": "standard:local-token-asset-provenance"
@@ -457,9 +504,13 @@
   ],
   "query_hints": {
     "wallet_connection": [
+      "standard:xaman-connect-lifecycle",
+      "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
       "invariant:connect-authorize-only",
-      "savepoint:xaman-reconnect-2026-09-21",
-      "savepoint:xaman-standardization-pause-2026-09-19"
+      "invariant:reconnect-countdown-ui-only",
+      "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
+      "savepoint:xaman-standardization-pause-2026-09-19",
+      "task:homepage-xaman-cancel-restart-browser-check"
     ],
     "transaction_signing": [
       "invariant:one-payload-per-intent",
@@ -501,7 +552,15 @@
       "savepoint:local-xrp-token-logo-2026-09-21",
       "standard:local-token-asset-provenance",
       "task:xrp-logo-custom-domain-browser-check"
+    ],
+    "xaman_standardization": [
+      "standard:xaman-connect-lifecycle",
+      "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
+      "invariant:connect-authorize-only",
+      "invariant:one-payload-per-intent",
+      "invariant:validated-finality",
+      "task:production-browser-tests"
     ]
   },
-  "active_savepoint": "savepoint:xrp-logo-rendering-repair-2026-09-21"
+  "active_savepoint": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21"
 }
