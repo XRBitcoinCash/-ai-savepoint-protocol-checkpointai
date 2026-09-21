@@ -35,14 +35,18 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Liquidity Pool exact XRBC/XRP paged historical chart repair",
-      "commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
-      "pipeline_id": 2868432524,
+      "scope": "Liquidity Pool history routed through fixed read-only XRBC backend",
+      "commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
+      "companion_commit": "264f5be880ed4fc8e47448a6a300c6b688a55ff7",
+      "pipeline_id": 2868480096,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
-      "browser_custom_domain_verified": false,
-      "local_checkpoint_pipeline_id": 2868439142,
-      "local_checkpoint_pipeline_status": "success"
+      "local_checkpoint_commit": "1edc7a9003fe71b75a556186694b2ccbe6b75882",
+      "local_checkpoint_pipeline_id": 2868491925,
+      "local_checkpoint_pipeline_status": "success",
+      "backend_endpoint": "/api/v1/market/xrbc/history",
+      "backend_api_test_run_id": 35626734128,
+      "backend_api_test_status": "success",
+      "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
       "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
@@ -51,20 +55,20 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
-      "savepoint_commit": "7f3ba84d9e008b5a54c086cea544ae54b0aea067"
+      "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
+      "savepoint_commit": "648a40d5ba3916ce33efac30fa9c18cb766279e0"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
     "previous_verified_frontend_change": {
-      "scope": "Shared opt-in exchange UI design system with Liquidity Pool pilot",
-      "commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
-      "pipeline_id": 2868371281,
+      "scope": "Liquidity Pool exact XRBC/XRP paged historical chart repair",
+      "commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
+      "pipeline_id": 2868432524,
       "pipeline_status": "success",
-      "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
+      "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
       "browser_custom_domain_verified": false,
-      "local_standard_pipeline_id": 2868377370,
-      "local_standard_pipeline_status": "success"
+      "local_checkpoint_pipeline_id": 2868439142,
+      "local_checkpoint_pipeline_status": "success"
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
@@ -118,8 +122,12 @@
       "memory/synapse-map.json"
     ],
     "liquidity_market_history": [
-      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
-      "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
+      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
+      "LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE-2026-09-21.md",
+      "memory/synapse-map.json"
+    ],
+    "backend_api": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
       "memory/synapse-map.json"
     ]
   },
