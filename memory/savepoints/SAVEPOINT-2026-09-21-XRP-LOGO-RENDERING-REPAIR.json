@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-xrp-logo-rendering-repair",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui",
+    "token-assets",
+    "license-provenance",
+    "liquidity-pool",
+    "rendering-repair"
+  ],
+  "context": "Production/browser evidence showed the Liquidity Pool XRP quote unit rendering only the XRP ticker although the reviewed local SVG and renderer wiring existed. The dynamic token helper hid failed images, so a runtime delivery/path/cache failure for /assets/tokens/xrp.svg produced the observed text-only state.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "81833af341390038818bc3cdba4485647e1a67d7",
+    "implementation_pipeline_id": 2868712767,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_file": "docs/checkpoints/XRP-LOGO-RENDERING-REPAIR-2026-09-21.md",
+    "local_checkpoint_file_commit": "11dc4c83c55d84534c3e0af4382312f60f345e61",
+    "local_memory_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
+    "page": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.6",
+    "rollback_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef"
+  },
+  "asset": {
+    "canonical_local_file": "public/assets/tokens/xrp.svg",
+    "provenance": "public/assets/tokens/README.md",
+    "upstream_repository": "spothq/cryptocurrency-icons",
+    "upstream_path": "svg/color/xrp.svg",
+    "license": "CC0-1.0",
+    "runtime_repair": "The exact reviewed SVG is embedded as a CSP-allowed data URI in the initial XRP deposit unit and the existing dynamic tokenLogo() renderer, removing dependency on a separate runtime image fetch while retaining the local file as canonical reviewed provenance."
+  },
+  "csp": {
+    "old_liquidity_app_hash": "sha256-8woQbNnLXODclW86zxf4eaez2kznwubfVuMSAfi1RtA=",
+    "new_liquidity_app_hash": "sha256-1OiuEkgSFV4gl79M7pFIFGuShMFnhwDneaBkon0Z6Ek="
+  },
+  "verification": {
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "custom_domain_browser_verified": false,
+    "manual_check": "Hard-refresh the affected browser/device and confirm the XRP logo beside Maximum XRP to deposit and in the XRBC/XRP pair picker after pairUI() rebuilds the UI."
+  },
+  "invariants": [
+    "Token imagery is presentation only and never defines XRPL asset identity.",
+    "The canonical reviewed XRP asset and license provenance remain stored in the project.",
+    "No wallet, balance, AMM, quote, signing, transaction, receipt or finality logic changed."
+  ]
+}
