@@ -7,6 +7,34 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "task:liquidity-exchange-shell-browser-review",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Browser-review the deployed Liquidity Pool exchange shell on desktop and mobile before migrating the next page."
+    },
+    {
+      "id": "invariant:visual-migration-preserve-js",
+      "type": "invariant",
+      "statement": "For a CSS-only page migration, existing executable script blocks must remain byte-identical unless a separate functional change is explicitly requested."
+    },
+    {
+      "id": "standard:shared-exchange-ui",
+      "type": "standard",
+      "status": "active",
+      "file": "public/xrbc-dynamic-ui.css",
+      "activation": "body.xrbc-exchange-shell",
+      "statement": "Use the shared opt-in exchange/workbench shell for reviewed page migrations; preserve JavaScript during visual-only changes."
+    },
+    {
+      "id": "savepoint:shared-exchange-ui-design-system-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "human_file": "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
+      "frontend_commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+      "pipeline_id": 2868371281
+    },
+    {
       "id": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -124,6 +152,26 @@
     }
   ],
   "edges": [
+    {
+      "from": "task:liquidity-exchange-shell-browser-review",
+      "rel": "verifies",
+      "to": "savepoint:shared-exchange-ui-design-system-2026-09-21"
+    },
+    {
+      "from": "standard:shared-exchange-ui",
+      "rel": "requires",
+      "to": "invariant:visual-migration-preserve-js"
+    },
+    {
+      "from": "savepoint:shared-exchange-ui-design-system-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "savepoint:shared-exchange-ui-design-system-2026-09-21",
+      "rel": "defines",
+      "to": "standard:shared-exchange-ui"
+    },
     {
       "from": "task:liquidity-top-wallet-browser-check",
       "rel": "verifies",
@@ -248,7 +296,13 @@
       "invariant:connect-authorize-only",
       "invariant:connection-action-timers-separate",
       "task:liquidity-top-wallet-browser-check"
+    ],
+    "ui_design": [
+      "standard:shared-exchange-ui",
+      "savepoint:shared-exchange-ui-design-system-2026-09-21",
+      "invariant:visual-migration-preserve-js",
+      "task:liquidity-exchange-shell-browser-review"
     ]
   },
-  "active_savepoint": "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21"
+  "active_savepoint": "savepoint:shared-exchange-ui-design-system-2026-09-21"
 }
