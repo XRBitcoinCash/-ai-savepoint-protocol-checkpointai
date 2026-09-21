@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "document_id": "xrbc/synaptic-memory/1.0.0",
+  "status": "active",
+  "updated": "2026-09-21",
+  "graph_model": "directed context graph",
+  "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
+  "nodes": [
+    {
+      "id": "repo:memory",
+      "type": "repository",
+      "provider": "GitHub",
+      "repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+      "role": "continuity"
+    },
+    {
+      "id": "repo:frontend",
+      "type": "repository",
+      "provider": "GitLab",
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "branch": "master",
+      "role": "active-frontend-source-of-truth"
+    },
+    {
+      "id": "repo:backend",
+      "type": "repository",
+      "provider": "GitHub",
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "path": "xrpl-proxy/",
+      "role": "shared-backend"
+    },
+    {
+      "id": "savepoint:discovery-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md",
+      "frontend_commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
+      "pipeline_id": 2867921308
+    },
+    {
+      "id": "savepoint:xaman-reconnect-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md",
+      "frontend_commit": "bc77e91dbaac701a08d5364dd635e62715e26850",
+      "pipeline_id": 2868175288
+    },
+    {
+      "id": "savepoint:xaman-standardization-pause-2026-09-19",
+      "type": "savepoint",
+      "status": "paused-before-final-verification",
+      "file": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md"
+    },
+    {
+      "id": "savepoint:production-scaffold-2026-09-20",
+      "type": "savepoint",
+      "status": "implemented-foundation",
+      "file": "XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md"
+    },
+    {
+      "id": "invariant:connect-authorize-only",
+      "type": "invariant",
+      "statement": "Connect Xaman establishes authorization/public account only; no transaction is signed merely to connect."
+    },
+    {
+      "id": "invariant:one-payload-per-intent",
+      "type": "invariant",
+      "statement": "Exactly one Xaman payload per deliberate final transaction intent; ambiguous creation must be reconciled, not auto-retried."
+    },
+    {
+      "id": "invariant:reconnect-countdown-ui-only",
+      "type": "invariant",
+      "statement": "The 180-second reconnect countdown exposes existing authorization settling time only; it must not trigger automatic reconnect/sign/retry behavior."
+    },
+    {
+      "id": "invariant:validated-finality",
+      "type": "invariant",
+      "statement": "Transaction success requires validated XRPL evidence, tesSUCCESS, signer/account equality, and critical-field comparison."
+    },
+    {
+      "id": "task:production-browser-tests",
+      "type": "task",
+      "status": "pending",
+      "statement": "Add browser-level two-tab, mobile app-switch/resume, cold-backend, rejection/expiry, ambiguous-create, and validated-finality tests."
+    },
+    {
+      "id": "task:custom-domain-countdown-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Reload the production homepage and verify reconnect-countdown presentation on the custom domain/device."
+    },
+    {
+      "id": "task:tier-refinement",
+      "type": "task",
+      "status": "pending",
+      "statement": "Expand higher-tier tools only where added metrics/evidence depth materially justify the holding threshold."
+    }
+  ],
+  "edges": [
+    {
+      "from": "savepoint:xaman-reconnect-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "savepoint:xaman-reconnect-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:connect-authorize-only"
+    },
+    {
+      "from": "savepoint:xaman-reconnect-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:reconnect-countdown-ui-only"
+    },
+    {
+      "from": "savepoint:xaman-reconnect-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "savepoint:xaman-standardization-pause-2026-09-19",
+      "rel": "requires-follow-up",
+      "to": "task:production-browser-tests"
+    },
+    {
+      "from": "savepoint:production-scaffold-2026-09-20",
+      "rel": "requires-follow-up",
+      "to": "task:production-browser-tests"
+    },
+    {
+      "from": "task:production-browser-tests",
+      "rel": "targets",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:production-browser-tests",
+      "rel": "must-prove",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "task:production-browser-tests",
+      "rel": "must-prove",
+      "to": "invariant:validated-finality"
+    },
+    {
+      "from": "task:custom-domain-countdown-check",
+      "rel": "verifies",
+      "to": "savepoint:xaman-reconnect-2026-09-21"
+    },
+    {
+      "from": "savepoint:discovery-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:tier-refinement",
+      "rel": "follows",
+      "to": "savepoint:production-scaffold-2026-09-20"
+    }
+  ],
+  "query_hints": {
+    "wallet_connection": [
+      "invariant:connect-authorize-only",
+      "savepoint:xaman-reconnect-2026-09-21",
+      "savepoint:xaman-standardization-pause-2026-09-19"
+    ],
+    "transaction_signing": [
+      "invariant:one-payload-per-intent",
+      "invariant:validated-finality",
+      "task:production-browser-tests"
+    ],
+    "homepage_discovery": [
+      "savepoint:discovery-2026-09-21"
+    ],
+    "next_implementation": [
+      "task:production-browser-tests",
+      "task:tier-refinement"
+    ]
+  }
+}
