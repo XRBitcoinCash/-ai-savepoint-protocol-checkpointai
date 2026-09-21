@@ -95,6 +95,23 @@ The Liquidity Pool now uses a compact top side-by-side workspace: liquidity acti
 
 Manual follow-up: visually verify the custom-domain desktop/mobile layout and one close/restart Xaman authorization attempt.
 
+
+## Shared exchange UI standard — active
+
+Visual reference implementation:
+- shared CSS: `public/xrbc-dynamic-ui.css` v1.1.0
+- opt-in activation: `body.xrbc-exchange-shell`
+- Liquidity Pool pilot: `public/xrbc-liquidity-pool.html` release `0.2.0`
+- implementation commit: `fde15e74b4012a3981b89cad5fdae089331f860e`
+- pipeline: `2868371281` success
+- standard checkpoint: `SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md`
+
+For visual-only migrations, preserve all functional IDs/data attributes/controls/event targets and executable JavaScript. Prefer shared CSS plus opt-in layout hooks. The Liquidity Pool redesign kept all 14 executable script blocks byte-identical.
+
+Design language: dense neutral exchange/workbench surfaces, blue normal actions, semantic green/red only, amber security/attention, compact segmented controls/cards/tables, progressive disclosure, functional motion only, and responsive navigation/action rails.
+
+Do not one-shot restyle every page. Browser-review the Liquidity Pool desktop/mobile deployment first, then migrate the next page deliberately.
+
 ## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
