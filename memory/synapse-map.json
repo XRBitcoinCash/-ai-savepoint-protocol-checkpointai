@@ -7,6 +7,33 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "task:liquidity-empty-state-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Verify collapsed/open chart behavior and receipt empty/real-data state transitions on the deployed Liquidity Pool."
+    },
+    {
+      "id": "standard:optional-progressive-disclosure",
+      "type": "standard",
+      "status": "active",
+      "statement": "Low-priority or uncertain secondary analytics default to progressive disclosure instead of permanent screen real estate."
+    },
+    {
+      "id": "standard:intentional-empty-state",
+      "type": "standard",
+      "status": "active",
+      "statement": "Account-dependent empty cards show a designed state and clear next action rather than dashes, zeroes or fake sample values; motion cannot imply transaction activity."
+    },
+    {
+      "id": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "human_file": "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
+      "frontend_commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+      "pipeline_id": 2868575025
+    },
+    {
       "id": "task:backend-history-live-verification",
       "type": "task",
       "status": "manual-pending",
@@ -193,6 +220,26 @@
     }
   ],
   "edges": [
+    {
+      "from": "task:liquidity-empty-state-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
+    },
+    {
+      "from": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21",
+      "rel": "defines",
+      "to": "standard:optional-progressive-disclosure"
+    },
+    {
+      "from": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21",
+      "rel": "defines",
+      "to": "standard:intentional-empty-state"
+    },
+    {
+      "from": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "task:backend-history-live-verification",
       "rel": "verifies",
@@ -389,7 +436,12 @@
       "invariant:history-fixed-backend-relay",
       "invariant:history-live-liquidity-separation",
       "task:backend-history-live-verification"
+    ],
+    "empty_states": [
+      "standard:intentional-empty-state",
+      "standard:optional-progressive-disclosure",
+      "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
     ]
   },
-  "active_savepoint": "savepoint:liquidity-market-history-backend-route-2026-09-21"
+  "active_savepoint": "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
 }
