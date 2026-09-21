@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "shared-css",
+    "liquidity-pool",
+    "migration-method"
+  ],
+  "context": "The user supplied several centralized-exchange interface references and requested that XRBitcoinCash pages adopt a denser professional exchange/workbench layout, starting with the Liquidity Pool, while preserving existing JavaScript and using the existing shared project CSS efficiently.",
+  "source_of_truth": {
+    "frontend_provider": "GitLab",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "baseline_commit": "0ff62e898fee7cf90f087659139c469cf1adfeac",
+    "implementation_commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+    "implementation_pipeline_id": 2868371281,
+    "implementation_pipeline_status": "success",
+    "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
+    "local_standard_pipeline_id": 2868377370
+  },
+  "canonical_visual_layer": {
+    "file": "public/xrbc-dynamic-ui.css",
+    "version": "1.1.0",
+    "activation": "opt-in",
+    "body_class": "xrbc-exchange-shell",
+    "rule": "Do not globally apply the exchange shell to unreviewed pages."
+  },
+  "design_direction": {
+    "reference": "Modern centralized-exchange/workbench information architecture without copying third-party branding or content.",
+    "palette": "Neutral black/charcoal surfaces, thin neutral borders, blue primary actions, green/red only for meaningful positive/negative state, amber for attention/security.",
+    "density": "Compact cards, rows, tables, segmented controls and progressive disclosure rather than long stacked decorative sections.",
+    "navigation": "Desktop fixed navigation rail where useful; responsive compact top navigation on smaller screens.",
+    "action_layout": "Primary work surface with a secondary account/wallet/action rail where the page purpose benefits from it.",
+    "motion": "Motion must communicate functional state. Avoid decorative scan lines, ambient green/red lines, or unnecessary grid animation in normal exchange workspaces.",
+    "imagery": "Prefer existing project/token images and CSS-native icons. Decorative imagery must not displace functional data.",
+    "beginner_ux": "Keep the primary action path plain-language and visually prominent; technical/raw evidence remains available but secondary."
+  },
+  "reusable_hooks": [
+    "xrbc-exchange-shell",
+    "xrbc-exchange-sidebar",
+    "xrbc-exchange-sidebar-inner",
+    "xrbc-exchange-brand",
+    "xrbc-exchange-nav",
+    "xrbc-exchange-theme",
+    "xrbc-exchange-main",
+    "xrbc-exchange-terminal",
+    "xrbc-exchange-primary",
+    "xrbc-exchange-rail",
+    "xrbc-exchange-market-grid",
+    "xrbc-exchange-lower-grid"
+  ],
+  "migration_method": [
+    "Fetch the current source-of-truth head and inspect the target page before editing.",
+    "Use public/xrbc-dynamic-ui.css as the shared visual system when the page already loads it.",
+    "Opt the page in with body/layout classes rather than duplicating a large page-local redesign stylesheet.",
+    "Preserve existing IDs, data attributes, names, form controls, event targets, script order and script contents for a visual-only task.",
+    "Prefer CSS and native HTML details/summary/tab/button-group disclosure before adding JavaScript.",
+    "Version the shared CSS URL on the migrated page for cache invalidation.",
+    "For CSS-only migrations, compare every executable script block before and after and require byte-identical scripts.",
+    "Check duplicate HTML IDs and run runtime-contract CI.",
+    "Browser-review desktop and mobile rendering before treating the page as the reference for the next migration.",
+    "Migrate one page at a time; do not perform a one-shot repository-wide markup rewrite."
+  ],
+  "liquidity_pilot": {
+    "page": "public/xrbc-liquidity-pool.html",
+    "page_release": "0.2.0",
+    "css_url_version": "20260921-2",
+    "classes_added": [
+      "xrbc-exchange-shell",
+      "xrbc-liquidity-shell",
+      "xrbc-exchange-sidebar",
+      "xrbc-exchange-sidebar-inner",
+      "xrbc-exchange-brand",
+      "xrbc-exchange-nav",
+      "xrbc-exchange-theme",
+      "xrbc-exchange-main",
+      "xrbc-exchange-terminal",
+      "xrbc-exchange-primary",
+      "xrbc-exchange-rail",
+      "xrbc-exchange-market-grid",
+      "xrbc-exchange-lower-grid"
+    ],
+    "presentation_changes": [
+      "Desktop navigation becomes a fixed left rail; smaller screens collapse to compact top navigation.",
+      "Liquidity Manager remains the primary work area and Xaman remains the secondary account/action rail.",
+      "Action modes use a compact segmented control with a high-contrast selected state.",
+      "Normal primary actions are blue rather than decorative green/red.",
+      "Pool metrics become dense neutral market cards.",
+      "Decorative green chart scan/grid effects are disabled under the exchange shell.",
+      "Wallet/LP details and technical sections stay available as secondary information."
+    ],
+    "javascript_changed": false,
+    "executable_script_blocks_compared": 14,
+    "executable_script_blocks_byte_identical": true,
+    "duplicate_html_ids": 0
+  },
+  "intentionally_unchanged": [
+    "Xaman authorization and reconnect logic",
+    "AMM deposit/withdraw math",
+    "market/trade quote construction",
+    "trustline rules",
+    "transaction challenge/intent binding",
+    "XRPL signing, submission and validated-finality checks",
+    "receipt/NFT semantics",
+    "XRBC gate policy"
+  ],
+  "verification": {
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_visual_verification": false
+  },
+  "pending": [
+    "Visually verify the deployed Liquidity Pool on desktop and mobile.",
+    "Adjust only presentation/density issues discovered during browser review; keep JavaScript unchanged unless a separate functional request requires it.",
+    "After the Liquidity Pool design is accepted, migrate the next page using the same opt-in shared CSS method."
+  ]
+}
