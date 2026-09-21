@@ -7,6 +7,21 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:xrp-logo-rendering-repair-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
+      "human_file": "XRP-LOGO-RENDERING-REPAIR-2026-09-21.md",
+      "frontend_commit": "81833af341390038818bc3cdba4485647e1a67d7",
+      "pipeline_id": 2868712767
+    },
+    {
+      "id": "task:xrp-logo-custom-domain-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Hard-refresh the affected production browser/device and verify the XRP logo beside Maximum XRP to deposit and in the XRBC/XRP pair picker after pairUI() rebuilds the UI."
+    },
+    {
       "id": "standard:local-token-asset-provenance",
       "type": "standard",
       "status": "active",
@@ -234,6 +249,21 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:xrp-logo-rendering-repair-2026-09-21",
+      "rel": "preserves",
+      "to": "standard:local-token-asset-provenance"
+    },
+    {
+      "from": "savepoint:xrp-logo-rendering-repair-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:xrp-logo-custom-domain-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:xrp-logo-rendering-repair-2026-09-21"
+    },
     {
       "from": "savepoint:local-xrp-token-logo-2026-09-21",
       "rel": "defines",
@@ -467,9 +497,11 @@
       "savepoint:liquidity-compact-chart-receipt-empty-states-2026-09-21"
     ],
     "token_assets": [
+      "savepoint:xrp-logo-rendering-repair-2026-09-21",
       "savepoint:local-xrp-token-logo-2026-09-21",
-      "standard:local-token-asset-provenance"
+      "standard:local-token-asset-provenance",
+      "task:xrp-logo-custom-domain-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:local-xrp-token-logo-2026-09-21"
+  "active_savepoint": "savepoint:xrp-logo-rendering-repair-2026-09-21"
 }
