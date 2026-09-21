@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "liquidity-pool",
+    "market-chart",
+    "backend",
+    "historical-data",
+    "security-boundary"
+  ],
+  "context": "After the first exact-pair historical provider change deployed, the browser still showed history unavailable while the live validated ledger snapshot continued updating. The remaining failure was isolated to direct browser access to the historical provider, so history was moved behind the existing read-only XRBC backend.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "history_backend_commit": "264f5be880ed4fc8e47448a6a300c6b688a55ff7",
+    "timeout_commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
+    "pipeline_id": 2868480096,
+    "pipeline_status": "success",
+    "local_checkpoint_commit": "1edc7a9003fe71b75a556186694b2ccbe6b75882",
+    "page": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.3"
+  },
+  "backend": {
+    "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+    "branch": "main",
+    "endpoint": "/api/v1/market/xrbc/history",
+    "api_version": "1.1.3",
+    "implementation_commit": "8018486c7fcc0da7e867398702df2ab58e385d28",
+    "tests_commit": "ebf918c2e3010f33ab5a2bdd4f9f1cfd6ed48c3b",
+    "openapi_commit": "f6658b41f508585a41bb9813b4e3fbc5b545147e",
+    "ci_workflow_commit": "b9ef92baadb03c6a32159c2ba71473feefdc718e",
+    "route_inventory_fix_commit": "131e204ebe131c5ae2f886d75506b230af91db21",
+    "api_test_workflow_run_id": 35626734128,
+    "api_test_workflow_status": "success"
+  },
+  "data_path": {
+    "browser": "Existing XRBC backend only.",
+    "backend": "Fixed OnTheDEX OHLC upstream only.",
+    "upstream": "https://api.onthedex.live/public/v1/ohlc",
+    "client_controls": [
+      "interval",
+      "bounded page count"
+    ],
+    "client_cannot_control": [
+      "upstream host",
+      "upstream URL",
+      "asset pair",
+      "provider pagination marker"
+    ]
+  },
+  "exact_identity": {
+    "base_currency": "5852626974636F696E6361736800000000000000",
+    "decoded_provider_currency": "XRbitcoincash",
+    "base_issuer": "rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw",
+    "quote": "XRP"
+  },
+  "backend_validation": [
+    "Supported interval whitelist: 15, 60, 240, D, W.",
+    "Pages bounded to integer 1 through 3.",
+    "At most 5000 upstream bars per page and 15000 normalized bars total.",
+    "Only provider-issued markers are followed; marker type/size is validated before reuse.",
+    "Returned base/quote identity and interval are validated.",
+    "Every OHLC row is validated, timestamps deduplicated and bars sorted chronologically.",
+    "Fixed history requests are cached for 30 seconds.",
+    "No arbitrary URL relay or ticker-only asset substitution exists."
+  ],
+  "frontend_changes": [
+    "History source is now PROXY + /api/v1/market/xrbc/history.",
+    "Direct OnTheDEX origin removed from browser connect-src CSP.",
+    "Browser-side provider marker traversal removed.",
+    "History backend response is rechecked against the selected exact XRBC/XRP identity before chart use.",
+    "Backend URLs now receive the same 45-second timeout allowance as other Render requests.",
+    "1D · MAX remains the broadest default history view."
+  ],
+  "evidence_boundary": {
+    "history": "Processed XRPL DEX historical trades for chart/indicator/export context.",
+    "live_market": "Separately validated XRPL book_offers + amm_info snapshot.",
+    "transactions": "History endpoint never participates in transaction construction, wallet authorization, signing, submission or validated finality."
+  },
+  "testing": {
+    "github_api_tests_workflow": ".github/workflows/api-tests.yml",
+    "first_run_found": "Existing OpenAPI route inventory expected 24 paths after the new route made 25.",
+    "correction": "Updated expected route count to 25.",
+    "successful_run": 35626734128,
+    "frontend_pipeline": 2868480096,
+    "frontend_pipeline_status": "success"
+  },
+  "pending": [
+    "Allow Render to deploy the current backend main branch.",
+    "Hard-refresh the Liquidity Pool and verify 1D · MAX candles.",
+    "Inspect earliest returned XRBC/XRP direct-trade date.",
+    "If history remains unavailable after the backend route is live, inspect the backend endpoint response before changing chart logic again."
+  ]
+}
