@@ -433,43 +433,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-memory-synaptic-layer",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
-    "scope": "Add a compact machine-first bootstrap and directed context graph so future XRBitcoinCash sessions can recover current source-of-truth, invariants, evidence and pending tasks with fewer reads and less context drift.",
-    "status": "implemented",
-    "memory_repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
-    "bootstrap": "ai-bootstrap.json",
-    "synapse_map": "memory/synapse-map.json",
-    "savepoint_commit": "852eae70553f1796f9438566be14528f2f535607",
-    "bootstrap_create_commit": "be70b9b1236868b9a777055fb89097ddd9fd80b0",
-    "synapse_map_create_commit": "a76c7ff49b3e77fb92136afbb2e764e6345534f2",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "transition_phase": "hybrid-machine-primary-routing",
-    "pending": [
-      "Add a consistency validator for latest_savepoint.record, ai-memory.json, ai-bootstrap.json and memory/synapse-map.json.",
-      "Use topic routing so new sessions load only the checkpoint evidence needed for the task.",
-      "Keep human-readable historical checkpoints until repeated machine-first bootstraps remain contradiction-free."
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
     "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
     "human_record": "LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
@@ -492,6 +455,55 @@
     "pending": [
       "Visually verify custom-domain desktop/mobile layout.",
       "Close one Xaman authorization window and verify countdown/reset behavior without duplicate authorization."
+    ]
+  },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+    "human_record": "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
+    "scope": "Establish the shared opt-in XRBitcoinCash exchange/workbench CSS system and use the Liquidity Pool as the first CSS-first migration while preserving executable JavaScript.",
+    "status": "implemented",
+    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
+    "gitlab_branch": "master",
+    "implementation_commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+    "implementation_pipeline_id": 2868371281,
+    "implementation_pipeline_status": "success",
+    "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
+    "local_standard_pipeline_id": 2868377370,
+    "machine_savepoint_create_commit": "52f5d08f08549079756c9685974784f96d9beb6b",
+    "human_checkpoint_create_commit": "da652eed1c82bff8add476e32f9dd49a1d06bae1",
+    "canonical_visual_layer": "public/xrbc-dynamic-ui.css",
+    "shared_css_version": "1.1.0",
+    "page_pilot": "public/xrbc-liquidity-pool.html",
+    "page_release": "0.2.0",
+    "key_rules": [
+      "Use the shared opt-in exchange shell rather than duplicating large page-local redesign CSS.",
+      "Preserve IDs, data attributes, controls, event targets, script order and executable script content for visual-only migrations.",
+      "Blue is the normal primary action; green/red are reserved for semantic state/direction; amber is attention/security.",
+      "Avoid decorative scan/grid/green-line effects on normal exchange workspaces.",
+      "Prefer compact cards, tables, segmented controls and native progressive disclosure.",
+      "Migrate one page at a time and browser-review before applying the pattern to the next page."
+    ],
+    "pending": [
+      "Browser-review the deployed Liquidity Pool on desktop and mobile.",
+      "Adjust only presentation issues from the review unless a separate functional change is explicitly requested.",
+      "After visual acceptance, migrate the next page using the same shared CSS method."
     ]
   },
   "savepoint_format": [
@@ -519,6 +531,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-shared-exchange-ui-design-system",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "scope": "Establish the shared opt-in XRBitcoinCash exchange/workbench CSS system and use the Liquidity Pool as the first CSS-first migration while preserving executable JavaScript."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
@@ -748,6 +765,25 @@
       "backend_action_wait_ms": 90000,
       "release": "0.1.21",
       "manual_follow_up": "Custom-domain visual layout and real Xaman close/restart behavior remain to be checked in a browser."
+    },
+    "shared_exchange_ui_design_system": {
+      "status": "implemented",
+      "machine_savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "human_checkpoint": "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
+      "frontend_commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+      "pipeline_id": 2868371281,
+      "pipeline_status": "success",
+      "local_standard_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
+      "shared_css": "public/xrbc-dynamic-ui.css",
+      "shared_css_version": "1.1.0",
+      "pilot_page": "public/xrbc-liquidity-pool.html",
+      "pilot_release": "0.2.0",
+      "css_only_evidence": {
+        "executable_script_blocks": 14,
+        "byte_identical": true,
+        "duplicate_ids": 0
+      },
+      "migration_rule": "Opt pages into the shared exchange shell with reusable classes; do not rewrite JavaScript for a visual-only migration."
     }
   },
   "machine_memory": {
@@ -766,5 +802,25 @@
       "security-sensitive or conflicting tasks escalate to the canonical contract and repository-local instructions"
     ],
     "deletion_policy": "Do not delete historical human-readable checkpoints during the transition."
+  },
+  "ui_design_standard": {
+    "id": "xrbc/shared-exchange-ui/1.0.0",
+    "status": "active",
+    "canonical_css": "public/xrbc-dynamic-ui.css",
+    "activation": "body.xrbc-exchange-shell",
+    "reference_page": "public/xrbc-liquidity-pool.html",
+    "reference_commit": "fde15e74b4012a3981b89cad5fdae089331f860e",
+    "principles": [
+      "neutral dense exchange/workbench surfaces",
+      "blue default actions",
+      "semantic green/red only",
+      "amber security/attention",
+      "progressive disclosure over long vertical sprawl",
+      "desktop navigation/account rails with responsive collapse",
+      "functional motion only",
+      "reuse existing project/token imagery",
+      "CSS-first migration with JavaScript preserved"
+    ],
+    "rollout": "one page at a time after browser review"
   }
 }
