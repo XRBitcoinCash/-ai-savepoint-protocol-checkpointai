@@ -479,29 +479,27 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
-    "human_record": "HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
-    "scope": "Restore the established Xaman popup for homepage trade review, remove the redundant inline review card, place the six-digit challenge directly under the popup QR, and harden native XRP artwork against generic ticker fallbacks.",
+    "id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
+    "human_record": "XAMAN-POPUP-LAYOUT-REPAIR-2026-09-21.md",
+    "scope": "Repair the Xaman secure-review popup so the security code sits below Cancel Xaman request and the explanatory instruction sits below the QR with normal wrapping.",
     "status": "implemented",
-    "implementation_commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
-    "implementation_pipeline_id": 2868893239,
+    "implementation_commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+    "implementation_pipeline_id": 2868922004,
     "implementation_pipeline_status": "success",
-    "rollback_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
-    "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
-    "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
-    "machine_savepoint_create_commit": "db3eb02cd87e256061fddb19e89cb289590a12a0",
-    "human_checkpoint_create_commit": "7f25a78296a2e8acae2a23cfa927be4f8b590fa0",
+    "rollback_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+    "local_checkpoint_commit": "631080fae94b43c175911b8a9ff61e4d6f4bd65f",
+    "local_memory_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
+    "machine_savepoint_create_commit": "5c3e33c53512e3d8d34e68128aece979d14b53cf",
+    "human_checkpoint_create_commit": "3e5ea8639d1c6cf7d363c954d53acbea572b745f",
     "page": "public/index.html",
-    "release": "1.5.2",
+    "release": "1.5.3",
     "browser_custom_domain_verified": false,
     "key_rules": [
-      "The v1.5.1 inline Xaman review card is superseded; homepage offer/swap review uses the established secure popup/dialog.",
-      "The existing six-digit securityCode is shown directly under the official QR in the popup; no second code or payload is created.",
-      "The compact v1.5.1 trade-ticket layout is retained.",
-      "Native XRP uses the exact reviewed SVG as first-paint/runtime/fallback artwork so failed delivery cannot produce a generic XRP ticker badge.",
-      "The canonical XRP asset/provenance remains public/assets/tokens/xrp.svg plus public/assets/tokens/README.md.",
-      "Connection lifecycle, one-payload-per-intent, ambiguous-request protection, challenge/intent binding and validated finality remain unchanged."
+      "Left popup column ends with the large six-digit Xaman security code directly below Cancel Xaman request.",
+      "Right popup column contains the official QR with one compact instruction card directly underneath.",
+      "Instruction text must use normal horizontal wrapping and must not collapse into a vertical strip.",
+      "This is presentation only; the protected request controller and finality rules remain unchanged."
     ]
   },
   "savepoint_format": [
@@ -529,6 +527,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
+      "scope": "Repair the Xaman secure-review popup so the security code sits below Cancel Xaman request and the explanatory instruction sits below the QR with normal wrapping."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
@@ -946,6 +949,15 @@
       "presentation": "Established secure Xaman popup restored; redundant inline review card removed; large six-digit challenge placed directly below the popup QR.",
       "xrp_logo": "Exact reviewed XRP SVG embedded for first paint and native-XRP runtime fallback; canonical local file/provenance retained.",
       "supersedes": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman inline-review presentation only; compact trade-ticket layout remains.",
+      "browser_verification_pending": true
+    },
+    "xaman_popup_layout_repair": {
+      "status": "implemented",
+      "frontend_commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+      "pipeline_id": 2868922004,
+      "pipeline_status": "success",
+      "release": "1.5.3",
+      "layout": "Security code below Cancel Xaman request on the left; QR instruction below QR on the right.",
       "browser_verification_pending": true
     }
   },
