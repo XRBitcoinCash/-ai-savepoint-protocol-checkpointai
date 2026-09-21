@@ -7,6 +7,27 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "task:backend-history-live-verification",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "After Render deploy, hard-refresh Liquidity Pool and verify 1D MAX history and earliest returned XRBC/XRP direct-trade date."
+    },
+    {
+      "id": "invariant:history-fixed-backend-relay",
+      "type": "invariant",
+      "statement": "Browser historical-chart requests go only to the XRBC read-only backend; the backend fixes exact XRBC/XRP identity and upstream host and follows only provider-issued markers."
+    },
+    {
+      "id": "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
+      "human_file": "LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE-2026-09-21.md",
+      "frontend_commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
+      "frontend_pipeline_id": 2868480096,
+      "backend_api_test_run_id": 35626734128
+    },
+    {
       "id": "task:liquidity-history-browser-verification",
       "type": "task",
       "status": "manual-pending",
@@ -172,6 +193,31 @@
     }
   ],
   "edges": [
+    {
+      "from": "task:backend-history-live-verification",
+      "rel": "verifies",
+      "to": "savepoint:liquidity-market-history-backend-route-2026-09-21"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:history-live-liquidity-separation"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "rel": "requires",
+      "to": "invariant:history-fixed-backend-relay"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "rel": "changes",
+      "to": "repo:backend"
+    },
+    {
+      "from": "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "task:liquidity-history-browser-verification",
       "rel": "verifies",
@@ -339,10 +385,11 @@
       "task:liquidity-exchange-shell-browser-review"
     ],
     "liquidity_market_history": [
-      "savepoint:liquidity-market-history-repair-2026-09-21",
+      "savepoint:liquidity-market-history-backend-route-2026-09-21",
+      "invariant:history-fixed-backend-relay",
       "invariant:history-live-liquidity-separation",
-      "task:liquidity-history-browser-verification"
+      "task:backend-history-live-verification"
     ]
   },
-  "active_savepoint": "savepoint:liquidity-market-history-repair-2026-09-21"
+  "active_savepoint": "savepoint:liquidity-market-history-backend-route-2026-09-21"
 }
