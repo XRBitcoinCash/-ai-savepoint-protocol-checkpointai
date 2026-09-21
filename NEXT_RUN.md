@@ -49,7 +49,24 @@ Current threshold ladder:
 - Watchtower: 1,000 XRBC
 - Advanced Tokenization: 2,500 XRBC
 
-## Scaffold already landed\n\nGitLab scaffold foundation: `8cfc0659a5d884f2a2a01411825205a6c4a89581` plus gate assertion correction `2d192c95c6afad338365b265537984e896b4d473`. Pipeline `2865294807` passed runtime-contracts, repository validation, secret detection, Semgrep SAST, and deploy-pages.\n\nGitHub backend access policy: `fe00bbb5...` policy file, `e07f3711...` API integration, `ba82d16d...` tests. Existing public API tool shape and thresholds were preserved.\n\n## Remaining implementation order
+## Scaffold already landed\n\nGitLab scaffold foundation: `8cfc0659a5d884f2a2a01411825205a6c4a89581` plus gate assertion correction `2d192c95c6afad338365b265537984e896b4d473`. Pipeline `2865294807` passed runtime-contracts, repository validation, secret detection, Semgrep SAST, and deploy-pages.\n\nGitHub backend access policy: `fe00bbb5...` policy file, `e07f3711...` API integration, `ba82d16d...` tests. Existing public API tool shape and thresholds were preserved.\n\n## September 21 bounded UI/discovery work already landed
+
+Discovery/brand pass:
+- frontend commit `68586a9af00f88253b60f7ee6137cec2b6dfa145`
+- pipeline `2867921308` success
+- checkpoint `DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md`
+- conventional root favicon/icon aliases and machine brand records were added without removing legacy asset URLs
+
+Xaman reconnect status pass:
+- frontend commit `bc77e91dbaac701a08d5364dd635e62715e26850`
+- pipeline `2868175288` success
+- checkpoint `UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md`
+- main order panel now exposes the existing 180-second authorization window through a yellow security notice and red countdown
+- this countdown is status UI only; do not turn it into automatic reconnect, replacement authorization or transaction retry behavior
+
+Before the September 22 higher-capability implementation work, fetch current GitLab and GitHub heads again.
+
+## Remaining implementation order
 
 1. Runtime CI: parse critical inline JavaScript, verify standalone document structure, verify direct DOM binding targets, and guard primary transaction buttons.
 2. Shared scaffold modules: transaction state machine, error taxonomy, retry/readiness policy, gate registry.
