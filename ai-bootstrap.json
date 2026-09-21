@@ -35,6 +35,28 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
+      "scope": "Liquidity optional chart collapse and animated receipt empty states",
+      "commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+      "pipeline_id": 2868575025,
+      "pipeline_status": "success",
+      "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
+      "local_checkpoint_pipeline_id": 2868579101,
+      "local_checkpoint_pipeline_status": "success",
+      "browser_custom_domain_verified": false
+    },
+    "same_day_discovery_change": {
+      "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
+      "pipeline_id": 2867921308,
+      "pipeline_status": "success"
+    },
+    "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
+    "active_memory_savepoint": {
+      "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "savepoint_commit": "d5894ced621c4c8b40ef4e4eed9701b43f0fd66b"
+    },
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+    "previous_verified_frontend_change": {
       "scope": "Liquidity Pool history routed through fixed read-only XRBC backend",
       "commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
       "companion_commit": "264f5be880ed4fc8e47448a6a300c6b688a55ff7",
@@ -47,28 +69,6 @@
       "backend_api_test_run_id": 35626734128,
       "backend_api_test_status": "success",
       "browser_custom_domain_verified": false
-    },
-    "same_day_discovery_change": {
-      "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
-      "pipeline_id": 2867921308,
-      "pipeline_status": "success"
-    },
-    "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
-    "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
-      "savepoint_commit": "648a40d5ba3916ce33efac30fa9c18cb766279e0"
-    },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
-    "previous_verified_frontend_change": {
-      "scope": "Liquidity Pool exact XRBC/XRP paged historical chart repair",
-      "commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
-      "pipeline_id": 2868432524,
-      "pipeline_status": "success",
-      "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
-      "browser_custom_domain_verified": false,
-      "local_checkpoint_pipeline_id": 2868439142,
-      "local_checkpoint_pipeline_status": "success"
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
@@ -111,9 +111,9 @@
       "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md"
     ],
     "liquidity_pool": [
-      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
-      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
       "memory/synapse-map.json"
     ],
     "ui_design": [
@@ -128,6 +128,12 @@
     ],
     "backend_api": [
       "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
+      "memory/synapse-map.json"
+    ],
+    "ui_empty_states": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
+      "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
       "memory/synapse-map.json"
     ]
   },
