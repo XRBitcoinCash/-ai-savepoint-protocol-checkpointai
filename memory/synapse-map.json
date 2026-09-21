@@ -7,6 +7,27 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
+      "human_file": "HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
+      "frontend_commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
+      "pipeline_id": 2868812919
+    },
+    {
+      "id": "standard:inline-xaman-trade-review",
+      "type": "standard",
+      "status": "active",
+      "statement": "For homepage trade purposes offer/swap, the permanent Xaman review preview is the primary presentation. It mirrors the protected controller's official QR, official link and six-digit challenge; it never creates a second payload. Non-trade purposes may still use the secure dialog."
+    },
+    {
+      "id": "task:inline-xaman-trade-review-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Hard-refresh production, create a small offer/swap review, verify no blurred modal covers the page, official QR appears inline, the large six-digit challenge below it matches Xaman, and the request link opens the same protected payload."
+    },
+    {
       "id": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -272,6 +293,31 @@
   ],
   "edges": [
     {
+      "from": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "rel": "defines",
+      "to": "standard:inline-xaman-trade-review"
+    },
+    {
+      "from": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "rel": "preserves",
+      "to": "standard:xaman-connect-lifecycle"
+    },
+    {
+      "from": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "rel": "preserves",
+      "to": "invariant:one-payload-per-intent"
+    },
+    {
+      "from": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:inline-xaman-trade-review-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21"
+    },
+    {
       "from": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
       "rel": "defines",
       "to": "standard:xaman-connect-lifecycle"
@@ -515,6 +561,8 @@
     "transaction_signing": [
       "invariant:one-payload-per-intent",
       "invariant:validated-finality",
+      "standard:inline-xaman-trade-review",
+      "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
       "task:production-browser-tests"
     ],
     "homepage_discovery": [
@@ -560,7 +608,13 @@
       "invariant:one-payload-per-intent",
       "invariant:validated-finality",
       "task:production-browser-tests"
+    ],
+    "trade_ui": [
+      "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21",
+      "standard:inline-xaman-trade-review",
+      "standard:shared-exchange-ui",
+      "task:inline-xaman-trade-review-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21"
+  "active_savepoint": "savepoint:homepage-trade-ticket-inline-xaman-2026-09-21"
 }
