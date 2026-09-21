@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -230,7 +230,9 @@
     "a higher XRBC gate must expose materially deeper capability than lower tiers; threshold alone is not product value",
     "holding gates are one abuse-control layer only; privileged services also need server-side authorization, rate limits, idempotency where applicable, timeouts, concurrency ceilings and replay resistance",
     "backend warm-up must never block initial page interaction; transaction-payload creation is prohibited until readiness and fresh state checks complete",
-    "provider ambiguity during Xaman payload creation never authorizes an automatic replacement request"
+    "provider ambiguity during Xaman payload creation never authorizes an automatic replacement request",
+    "homepage Xaman reconnect countdown is explanatory UI for the existing bounded authorization attempt; it must never become an automatic reconnect/signing loop",
+    "canonical favicon/brand aliases are additive; preserve legacy discovery asset URLs for crawler, wallet and integration compatibility"
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
@@ -648,6 +650,60 @@
       "Frozen": "Concrete reported ledger condition; not a generalized fraud or safety verdict.",
       "No XRP AMM found": "No direct XRP AMM returned at the checked ledger; other venues or routes may exist.",
       "Data unavailable": "Lookup or evidence incomplete; no numeric score."
+    }
+  },
+  "recent_work_2026_09_21": {
+    "discovery_brand_favicon": {
+      "status": "implemented",
+      "checkpoint": "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md",
+      "checkpoint_commit": "d31240096feb30da9b101c00995dbbea68fa820c",
+      "frontend_commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
+      "pipeline_id": 2867921308,
+      "pipeline_status": "success",
+      "scope": "Static favicon, brand, metadata, sitemap, robots, manifest and machine-discovery hardening only; legacy image paths preserved.",
+      "added_paths": [
+        "/favicon.ico",
+        "/favicon.png",
+        "/icon-192.png",
+        "/apple-touch-icon.png",
+        "/brand.json",
+        "/.well-known/xrbc-brand.json",
+        "/assets/brand/xrbc-logo-128.png",
+        "/assets/brand/xrbc-logo-192.png",
+        "/assets/brand/brand.json"
+      ],
+      "compatibility_rule": "Do not remove /xrbitcoin-logo-128.png or /xrbitcoin-favicon.ico.ico.png merely because canonical aliases now exist.",
+      "follow_up": "Search-console reindexing is operational follow-up; do not add automatic IndexNow/outbound crawler notification without review."
+    },
+    "xaman_reconnect_security_countdown": {
+      "status": "implemented",
+      "checkpoint": "UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md",
+      "checkpoint_commit": "0a1a7d0ed0ebb39de2731a74458e628106727cb4",
+      "frontend_commit": "bc77e91dbaac701a08d5364dd635e62715e26850",
+      "pipeline_id": 2868175288,
+      "pipeline_status": "success",
+      "page": "public/index.html",
+      "local_checkpoint": "docs/checkpoints/XAMAN-RECONNECT-SECURITY-COUNTDOWN-2026-09-21.md",
+      "behavior": [
+        "Amber/yellow security notice appears when a remembered wallet needs Xaman signing reconnection or authorization is in flight.",
+        "Active authorization displays a red countdown from the existing 180-second Xaman authorization timeout.",
+        "Countdown is deadline-based, so background-tab throttling does not extend the displayed window.",
+        "At 0:00 the UI explains that final account/session checks may still be settling.",
+        "Reconnect is explicitly described as authorization only; no trade request is created by the wait."
+      ],
+      "invariants": [
+        "xumm.authorize() remains the authorization-only path from the user click.",
+        "Render/XRPL readiness still wakes in parallel.",
+        "XAMAN_CONNECT_IN_FLIGHT remains the duplicate-attempt guard.",
+        "No automatic replacement authorization, Xaman transaction payload or transaction retry was added.",
+        "No quote, AMM, order, trustline or XRBC gate behavior changed."
+      ],
+      "verification": [
+        "13 executable inline homepage scripts parsed before commit.",
+        "New DOM ids were verified unique.",
+        "GitLab runtime-contracts passed.",
+        "GitLab validate-repository, secret detection, Semgrep SAST and deploy-pages passed."
+      ]
     }
   }
 }
