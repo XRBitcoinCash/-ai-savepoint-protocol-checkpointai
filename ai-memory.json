@@ -479,35 +479,29 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-homepage-xaman-connect-lifecycle-alignment",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
-    "human_record": "HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
-    "scope": "Align the homepage Xaman browser connection lifecycle with the Liquidity Pool and promote the shared connection behavior as the project-wide migration standard.",
+    "id": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
+    "human_record": "HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
+    "scope": "Refine the homepage XRBC trade ticket into a compact exchange layout and make the permanent inline Xaman preview the primary offer/swap QR + challenge presentation.",
     "status": "implemented",
-    "implementation_commits": [
-      "877d0e74ac7c86e71bc57fa8bf0214472db0624e",
-      "1e74ad6ccd0a0ba8e8deb08ffb054042426c5c97"
-    ],
-    "implementation_pipeline_id": 2868760527,
+    "implementation_commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
+    "implementation_pipeline_id": 2868812919,
     "implementation_pipeline_status": "success",
-    "rollback_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
-    "local_checkpoint_commit": "c7cceef81fb3f251c9201c0da1d0086d09b7949f",
-    "local_memory_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
-    "machine_savepoint_create_commit": "96b95a89208e2ead8e30d3fef3d7b8d4cdac1312",
-    "human_checkpoint_create_commit": "48865597a2451a02ab9d148606d10448d1b4b039",
+    "rollback_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
+    "local_checkpoint_commit": "613da9395e8aa2b776487f4a9f5d247a0245c343",
+    "local_memory_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
+    "machine_savepoint_create_commit": "af5eb57511d22c052d94d1087f78e9803be400a9",
+    "human_checkpoint_create_commit": "0bc0e5ad06340e20aa3c53d6c222b752b3a6c879",
     "page": "public/index.html",
+    "release": "1.5.1",
     "browser_custom_domain_verified": false,
     "key_rules": [
-      "Browser Connect is authorization only and must invoke XRBCXamanStandard.authorizeAndWarm() directly from the deliberate user gesture.",
-      "Read-only backend/XRPL readiness starts in parallel and must not delay Xaman authorization.",
-      "Expose Cancel / restart Xaman in the same visible wallet surface while browser authorization is active.",
-      "Use an explicit per-attempt identity/generation guard so late responses from cancelled attempts are obsolete.",
-      "Current authorization maximum is 180 seconds; timeout invalidates the attempt, clears local authorization and performs bounded SDK logout.",
-      "Timers must never create automatic replacement authorization or transaction requests.",
-      "Inside a Xaman xApp, use the account supplied by the xApp runtime instead of starting browser OAuth/authorization.",
-      "Remembered public account state is not current signing readiness.",
-      "Disconnect/reset preserves already-created or ambiguous transaction-request guards.",
-      "Actual writes remain exactly one Xaman payload per deliberate final intent with validated finality and critical-field comparison."
+      "Trade offer/swap Xaman presentation uses the permanent inline preview instead of forcing the modal over the trading workspace.",
+      "The inline preview mirrors the existing protected request controller; it never creates a second payload.",
+      "The official returned QR and official request link are mirrored inline, with the six-digit challenge directly below the QR.",
+      "Native XRP uses /assets/tokens/xrp.svg and XRBC uses /xrbitcoin-logo-128.png for presentation.",
+      "Token imagery never defines XRPL identity; issuer/currency/native identity remains authoritative.",
+      "Existing connection lifecycle, one-payload-per-intent, ambiguous-request protection, and validated-finality rules remain unchanged."
     ]
   },
   "savepoint_format": [
@@ -535,6 +529,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
+      "scope": "Refine the homepage XRBC trade ticket into a compact exchange layout and make the permanent inline Xaman preview the primary offer/swap QR + challenge presentation."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-homepage-xaman-connect-lifecycle-alignment",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
@@ -909,6 +908,24 @@
       "local_checkpoint_commit": "c7cceef81fb3f251c9201c0da1d0086d09b7949f",
       "local_memory_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
       "standard": "Homepage and Liquidity Pool now define the browser Xaman connection lifecycle for future page migrations: authorize-only user-click handoff, parallel read readiness, 180-second bound, visible cancel/restart, attempt-generation stale protection, hard timeout cleanup, no auto retry, pending-request preservation.",
+      "browser_verification_pending": true
+    },
+    "homepage_trade_ticket_inline_xaman": {
+      "status": "implemented",
+      "machine_savepoint": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
+      "human_checkpoint": "HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
+      "frontend_commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
+      "pipeline_id": 2868812919,
+      "pipeline_status": "success",
+      "release": "1.5.1",
+      "local_checkpoint_commit": "613da9395e8aa2b776487f4a9f5d247a0245c343",
+      "local_memory_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
+      "local_assets": {
+        "xrbc": "/xrbitcoin-logo-128.png",
+        "xrp": "/assets/tokens/xrp.svg"
+      },
+      "presentation": "Compact exchange-style order ticket plus inline offer/swap Xaman QR, official link, and large six-digit challenge below the QR.",
+      "security_boundary": "Inline review is a read-only mirror of the existing protected Xaman request controller; it must not create payloads or weaken pending/finality checks.",
       "browser_verification_pending": true
     }
   },
