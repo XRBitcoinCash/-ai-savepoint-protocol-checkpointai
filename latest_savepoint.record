@@ -14,6 +14,7 @@ implementation_pipeline=2868371281
 implementation_pipeline_status=success
 local_standard_commit=3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c
 local_standard_pipeline=2868377370
+local_standard_pipeline_status=success
 canonical_shared_css=public/xrbc-dynamic-ui.css
 shared_css_version=1.1.0
 pilot_page=public/xrbc-liquidity-pool.html
