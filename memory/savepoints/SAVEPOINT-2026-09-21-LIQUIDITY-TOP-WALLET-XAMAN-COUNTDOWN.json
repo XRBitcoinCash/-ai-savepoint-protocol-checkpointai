@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-liquidity-top-wallet-xaman-countdown",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "liquidity-pool",
+    "wallet-authorization",
+    "ui-layout",
+    "xaman"
+  ],
+  "context": "The user requested the homepage-style Xaman reconnect explanation on the XRBC Liquidity Pool and asked that wallet connection move to the top in a compact side-by-side exchange layout similar to Coinbase.",
+  "source_of_truth": {
+    "frontend_provider": "GitLab",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "baseline_commit": "bc77e91dbaac701a08d5364dd635e62715e26850",
+    "implementation_commit": "6df386f2b031f5b085232a0701ac0e1ea953aa87",
+    "implementation_pipeline_id": 2868276237,
+    "implementation_pipeline_status": "success",
+    "repository_memory_commit": "0ff62e898fee7cf90f087659139c469cf1adfeac",
+    "repository_memory_pipeline_id": 2868282659
+  },
+  "files": {
+    "frontend": "public/xrbc-liquidity-pool.html",
+    "local_checkpoint": "docs/checkpoints/LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
+    "local_memory": "docs/AI_MEMORY.md"
+  },
+  "changes": [
+    "Created lp-top-console: primary liquidity manager left, Xaman authorization card right on desktop.",
+    "On smaller screens the Xaman authorization card is ordered above the liquidity manager.",
+    "Split balances/LP-position data into a lower Wallet details panel and added a direct Wallet details link from the top card.",
+    "Added compact amber/yellow Xaman security notice with red countdown and 3:00 max static state.",
+    "Added XAMAN_AUTHORIZE_TIMEOUT_MS=180000 for browser wallet authorization only.",
+    "Kept ACTION_WAIT_MS=90000 for preview/sign backend readiness; the two timers are intentionally separate.",
+    "Updated the changed inline liquidity controller CSP SHA-256 hash.",
+    "Bumped the liquidity page release marker from 0.1.20 to 0.1.21."
+  ],
+  "security_invariants": [
+    "Wallet connection remains authorization-only.",
+    "XRBCXamanStandard.authorizeAndWarm remains the browser connection path.",
+    "Xaman authorization starts directly from the user's deliberate click and backend readiness starts in parallel.",
+    "No trade, AMM, trustline, or other XRPL transaction payload is created during the connection countdown.",
+    "A slow or closed Xaman window does not authorize automatic duplicate authorization attempts.",
+    "Cancel/restart and bounded timeout cleanup remain available.",
+    "The 180-second Xaman authorization window does not extend the 90-second transaction/backend action wait."
+  ],
+  "intentionally_unchanged": [
+    "AMM deposit/withdraw math",
+    "market quote construction",
+    "trustline rules",
+    "transaction intent/challenge binding",
+    "XRPL signing/submission/finality verification",
+    "receipt/NFT semantics",
+    "XRBC gate policy"
+  ],
+  "verification": {
+    "inline_controller_parsed": true,
+    "duplicate_html_ids": 0,
+    "connect_button_count": 1,
+    "security_notice_count": 1,
+    "top_console_count": 1,
+    "old_csp_hash": "HiwJxoPeAS8GetBqkEYikHtboo51ZMLgaWHKXKJLh3Q=",
+    "new_csp_hash": "wqBTSDgyKV0ASiB4Gl5oXfXR7Na+8xjvCr2yJv8k7eQ=",
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ]
+  },
+  "manual_follow_up": [
+    "Visually verify custom-domain desktop proportions of the top two-column workspace.",
+    "Verify mobile stacking puts Xaman authorization above liquidity actions and that Wallet details navigation lands correctly.",
+    "Exercise Connect/Reconnect, close the Xaman authorization UI once, confirm countdown/reset presentation and no duplicate authorization request."
+  ]
+}
