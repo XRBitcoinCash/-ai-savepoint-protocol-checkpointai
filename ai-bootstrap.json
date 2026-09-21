@@ -35,12 +35,13 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "XRP logo rendering repair in Liquidity Pool token UI",
-      "commit": "81833af341390038818bc3cdba4485647e1a67d7",
-      "pipeline_id": 2868712767,
+      "scope": "Homepage Xaman connect lifecycle aligned with Liquidity Pool",
+      "commit": "1e74ad6ccd0a0ba8e8deb08ffb054042426c5c97",
+      "primary_commit": "877d0e74ac7c86e71bc57fa8bf0214472db0624e",
+      "pipeline_id": 2868760527,
       "pipeline_status": "success",
-      "local_checkpoint_file_commit": "11dc4c83c55d84534c3e0af4382312f60f345e61",
-      "local_checkpoint_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
+      "local_checkpoint_commit": "c7cceef81fb3f251c9201c0da1d0086d09b7949f",
+      "local_memory_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -50,17 +51,18 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-xrp-logo-rendering-repair",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
-      "savepoint_commit": "43d07246393dd0ecdc379a99f7f1080c22c6e81a"
+      "id": "SAVEPOINT-2026-09-21-homepage-xaman-connect-lifecycle-alignment",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
+      "savepoint_commit": "96b95a89208e2ead8e30d3fef3d7b8d4cdac1312"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-xrp-logo-rendering-repair",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-homepage-xaman-connect-lifecycle-alignment",
     "previous_verified_frontend_change": {
-      "scope": "Local CC0 XRP token logo integrated into Liquidity Pool token UI",
-      "commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
-      "pipeline_id": 2868676134,
+      "scope": "XRP logo rendering repair in Liquidity Pool token UI",
+      "commit": "81833af341390038818bc3cdba4485647e1a67d7",
+      "pipeline_id": 2868712767,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef",
+      "local_checkpoint_file_commit": "11dc4c83c55d84534c3e0af4382312f60f345e61",
+      "local_checkpoint_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
@@ -72,11 +74,18 @@
   },
   "safety_invariants": [
     "Wallet connection is authorization only; do not create a transaction merely to connect.",
+    "Browser Connect invokes XRBCXamanStandard.authorizeAndWarm() immediately from the deliberate user gesture while read-only backend/XRPL readiness starts in parallel.",
+    "Browser authorization uses one explicit attempt identity/generation guard; late responses from cancelled attempts are obsolete.",
+    "Expose Cancel / restart Xaman in the same visible wallet surface while browser authorization is active.",
+    "The current browser authorization maximum is 180 seconds; timeout invalidates the attempt, clears local signing authorization, performs bounded SDK logout and returns to an explicit Connect state.",
+    "No automatic reconnect/retry or replacement authorization is created by timers/countdowns.",
+    "Inside a Xaman xApp, use the account supplied by the xApp runtime; do not invoke unsupported browser OAuth/authorization there.",
+    "A remembered public XRPL address is not proof of current Xaman signing readiness.",
+    "Disconnect/reset preserves already-created or ambiguous signing-request guards.",
     "No Xaman transaction payload during backend warm-up.",
     "Exactly one Xaman payload per deliberate final transaction intent.",
     "Ambiguous payload creation is reconciled; do not auto-create a replacement payload.",
-    "Final transaction success requires validated XRPL evidence, tesSUCCESS, signer/account equality, and critical-field comparison.",
-    "The 180-second reconnect countdown is explanatory UI only and must not become an automatic reconnect or retry loop."
+    "Final transaction success requires validated XRPL evidence, tesSUCCESS, signer/account equality, and critical-field comparison."
   ],
   "consistency_rules": [
     "latest_savepoint.record and ai-memory.json latest_savepoint must refer to the same active savepoint.",
@@ -87,6 +96,8 @@
   ],
   "routing": {
     "xaman": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
+      "HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
       "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
       "UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md",
       "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
