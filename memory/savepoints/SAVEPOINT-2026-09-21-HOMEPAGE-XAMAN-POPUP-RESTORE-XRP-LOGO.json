@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui",
+    "trade",
+    "xaman",
+    "token-assets",
+    "homepage",
+    "supersession"
+  ],
+  "supersedes": {
+    "savepoint": "SAVEPOINT-2026-09-21-homepage-trade-ticket-inline-xaman",
+    "scope": "Supersedes only the inline Xaman review-card presentation. The compact v1.5.1 trade-ticket layout is retained."
+  },
+  "context": "The inline Xaman review card was redundant with the established protected Xaman popup and proved less reliable in the current workflow. The user requested restoration of the popup, the same six-digit challenge inside that popup, removal of the duplicate inline box, and real XRP artwork instead of generic XRP letter placeholders across the trade page.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
+    "implementation_pipeline_id": 2868893239,
+    "implementation_pipeline_status": "success",
+    "rollback_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
+    "page": "public/index.html",
+    "release": "1.5.2",
+    "local_checkpoint": "docs/checkpoints/HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
+    "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
+    "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d"
+  },
+  "xaman_review": {
+    "presentation": "Secure Xaman popup/dialog restored as primary presentation for offer/swap and other protected requests.",
+    "removed": [
+      "xrtXamanPreview card",
+      "inline preview mirror JavaScript",
+      "inline-preview dedicated CSS"
+    ],
+    "challenge": "Existing six-digit securityCode is displayed in large text directly under the official QR inside the popup.",
+    "blur": "Backdrop may dim the page but blur is disabled.",
+    "lifecycle": "Preparing, payload creation, pending/reconciliation, signed-unverified, validation, cancellation and final result continue through the existing protected request controller."
+  },
+  "token_assets": {
+    "xrbc": "/xrbitcoin-logo-128.png",
+    "xrp_canonical": "public/assets/tokens/xrp.svg",
+    "xrp_provenance": "public/assets/tokens/README.md",
+    "xrp_license": "CC0-1.0",
+    "runtime_hardening": "The exact reviewed XRP SVG is embedded as a CSP-allowed data URI for first paint, TRADE_QUOTE_ASSETS.XRP.icon, and native-XRP fallback so failed image delivery cannot become a generated XRP ticker badge.",
+    "static_positions_hardened": 6,
+    "provenance_link_attribute": "data-local-token-asset=/assets/tokens/xrp.svg",
+    "identity_rule": "Imagery remains presentation only; native/issuer/currency identity remains authoritative."
+  },
+  "retained_trade_ticket": [
+    "Compact Buy/Sell and Market/Limit controls",
+    "Dense wallet/balance summary",
+    "Focused XRBC amount entry",
+    "Percentage shortcuts",
+    "Stacked pay/receive rows",
+    "Compact verification/readiness/review controls"
+  ],
+  "security_invariants": [
+    "Wallet connection remains authorization-only.",
+    "No transaction is created merely to connect.",
+    "Exactly one Xaman payload per deliberate final transaction intent.",
+    "Ambiguous payload creation remains locked/reconciled and is never auto-replaced.",
+    "Restored popup presentation does not alter payload creation.",
+    "The six-digit challenge remains the existing protected request code bound into the intent/memo flow.",
+    "Final success still requires validated XRPL evidence, tesSUCCESS, signer/account equality, and critical-field comparison."
+  ],
+  "verification": {
+    "implementation_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "source_checks": [
+      "No xrtXamanPreview remains in public/index.html.",
+      "Exactly one xamanSecurityCode remains.",
+      "showXamanRequestProgress and presentXamanRequestDialog use the popup path.",
+      "Native XRP fallback returns the exact reviewed logo rather than generated ticker text."
+    ],
+    "browser_custom_domain_verified": false,
+    "manual_checks": [
+      "Confirm real XRP logo in pair header, quote asset, balance summary, pay/receive rows, verification bar and market identity.",
+      "Create a small review and confirm the Xaman popup opens.",
+      "Confirm official QR appears in the popup.",
+      "Confirm the large six-digit challenge directly below the QR matches Xaman.",
+      "Confirm no redundant inline Xaman review card remains."
+    ]
+  }
+}
