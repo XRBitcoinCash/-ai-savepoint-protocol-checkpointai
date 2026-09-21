@@ -35,13 +35,11 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Liquidity optional chart collapse and animated receipt empty states",
-      "commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
-      "pipeline_id": 2868575025,
+      "scope": "Local CC0 XRP token logo integrated into Liquidity Pool token UI",
+      "commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
+      "pipeline_id": 2868676134,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
-      "local_checkpoint_pipeline_id": 2868579101,
-      "local_checkpoint_pipeline_status": "success",
+      "local_checkpoint_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -51,23 +49,19 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
-      "savepoint_commit": "d5894ced621c4c8b40ef4e4eed9701b43f0fd66b"
+      "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+      "savepoint_commit": "43298a6f8564ceee5e35c34c81aa54941604f102"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
     "previous_verified_frontend_change": {
-      "scope": "Liquidity Pool history routed through fixed read-only XRBC backend",
-      "commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
-      "companion_commit": "264f5be880ed4fc8e47448a6a300c6b688a55ff7",
-      "pipeline_id": 2868480096,
+      "scope": "Liquidity optional chart collapse and animated receipt empty states",
+      "commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+      "pipeline_id": 2868575025,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "1edc7a9003fe71b75a556186694b2ccbe6b75882",
-      "local_checkpoint_pipeline_id": 2868491925,
+      "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
+      "local_checkpoint_pipeline_id": 2868579101,
       "local_checkpoint_pipeline_status": "success",
-      "backend_endpoint": "/api/v1/market/xrbc/history",
-      "backend_api_test_run_id": 35626734128,
-      "backend_api_test_status": "success",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
@@ -134,6 +128,11 @@
       "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
       "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
       "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
+      "memory/synapse-map.json"
+    ],
+    "token_assets": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+      "LOCAL-XRP-TOKEN-LOGO-2026-09-21.md",
       "memory/synapse-map.json"
     ]
   },
