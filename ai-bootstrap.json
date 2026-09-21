@@ -35,12 +35,12 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Homepage Xaman popup restored; inline review removed; XRP logo hardened",
-      "commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
-      "pipeline_id": 2868893239,
+      "scope": "Xaman popup layout repair",
+      "commit": "60633cbc8682cd07677e744f553db3dc6bdd149b",
+      "pipeline_id": 2868922004,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
-      "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
+      "local_checkpoint_commit": "631080fae94b43c175911b8a9ff61e4d6f4bd65f",
+      "local_memory_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -50,18 +50,18 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
-      "savepoint_commit": "db3eb02cd87e256061fddb19e89cb289590a12a0"
+      "id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
+      "savepoint_commit": "5c3e33c53512e3d8d34e68128aece979d14b53cf"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-homepage-xaman-popup-restore-xrp-logo",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-xaman-popup-layout-repair",
     "previous_verified_frontend_change": {
-      "scope": "Homepage compact trade ticket and inline Xaman offer/swap review",
-      "commit": "2334d35e6b291d164cb16bb795d54c3050f7d973",
-      "pipeline_id": 2868812919,
+      "scope": "Homepage Xaman popup restored; inline review removed; XRP logo hardened",
+      "commit": "fe2796a5976d0f3045f0d06f29318be86291c157",
+      "pipeline_id": 2868893239,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "613da9395e8aa2b776487f4a9f5d247a0245c343",
-      "local_memory_commit": "f14729e019454a94d29a25af2b253d8b5f5e37da",
+      "local_checkpoint_commit": "fb80552c9b7e3f17efd59aafda49e022302a0db5",
+      "local_memory_commit": "e1a0cc8ef5b894ef0b6f05b1887f1d33684af16d",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
@@ -95,10 +95,9 @@
   ],
   "routing": {
     "xaman": [
+      "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
-      "HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
-      "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
       "memory/synapse-map.json"
     ],
     "discovery": [
