@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui",
+    "token-assets",
+    "license-provenance",
+    "liquidity-pool"
+  ],
+  "context": "The Liquidity Pool showed a real XRBC image but plain XRP text. A local CC0-1.0 XRP SVG was added and wired into the existing dynamic token renderer so XRP identity remains visible after pairUI rebuilds the quote unit.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
+    "implementation_pipeline_id": 2868676134,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef",
+    "page": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.5",
+    "shared_ui_version": "1.1.1"
+  },
+  "assets": {
+    "xrp_svg": "public/assets/tokens/xrp.svg",
+    "provenance": "public/assets/tokens/README.md",
+    "upstream_repository": "spothq/cryptocurrency-icons",
+    "upstream_path": "svg/color/xrp.svg",
+    "license": "CC0-1.0",
+    "runtime_policy": "Use the local project asset; do not hotlink the upstream icon host."
+  },
+  "integration": [
+    "Initial XRP deposit quote unit includes the local XRP logo.",
+    "pairUI dynamic quote-unit rendering preserves the XRP logo.",
+    "XRBC/XRP pair picker can display paired XRBC and XRP logos.",
+    "Shared CSS exposes .xrbc-token-logo and .xrbc-token-pair-logos for future pages."
+  ],
+  "safety_invariants": [
+    "Token logo presentation does not define ledger asset identity.",
+    "No wallet, balance, AMM, signing, transaction or finality logic changed.",
+    "Use documented local asset provenance for reviewed third-party token icon resources."
+  ],
+  "verification": {
+    "executable_inline_scripts": 12,
+    "all_executable_inline_scripts_parse": true,
+    "duplicate_html_ids": 0,
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ]
+  }
+}
