@@ -433,54 +433,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
-    "human_record": "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
-    "scope": "Repair the XRBC/XRP Advanced Market Chart by replacing the issuer-limited historical feed with exact-pair paged XRPL OHLC history while preserving the separately validated live book/AMM and all transaction logic.",
-    "status": "implemented",
-    "gitlab_project": "xrbitcoincash-group/xrbitcoincash-project",
-    "gitlab_branch": "master",
-    "implementation_commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
-    "implementation_pipeline_id": 2868432524,
-    "implementation_pipeline_status": "success",
-    "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
-    "local_checkpoint_pipeline_id": 2868439142,
-    "machine_savepoint_create_commit": "7f3ba84d9e008b5a54c086cea544ae54b0aea067",
-    "human_checkpoint_create_commit": "246ee921bafc05c29219306691c402a1dd25fcac",
-    "page": "public/xrbc-liquidity-pool.html",
-    "page_release": "0.2.1",
-    "historical_provider": "OnTheDEX",
-    "historical_endpoint": "https://api.onthedex.live/public/v1/ohlc",
-    "key_invariants": [
-      "Historical trade candles remain separate from the validated current book/AMM snapshot.",
-      "No history provider data is used to construct, authorize, sign or validate an XRPL transaction.",
-      "Use exact currency/issuer identity; never substitute a ticker-similar token or fabricate a candle.",
-      "1D · MAX is the default broad-history view; returned date range is shown explicitly."
-    ],
-    "pending": [
-      "Browser-verify direct provider access/CORS on the deployed custom domain.",
-      "Confirm 1D · MAX loads XRBC/XRP candles and inspect the earliest returned direct-trade date.",
-      "If browser provider access is blocked, proxy the same exact-pair history request through a reviewed read-only backend endpoint."
-    ],
-    "local_checkpoint_pipeline_status": "success"
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
     "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
     "human_record": "LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE-2026-09-21.md",
@@ -520,6 +472,52 @@
       "If history is still unavailable after backend deploy, inspect the backend endpoint response before changing chart logic."
     ]
   },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+    "human_record": "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
+    "scope": "Collapse optional market analytics by default and replace empty liquidity-receipt dash placeholders with intentional animated wallet-action states.",
+    "status": "implemented",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "frontend_branch": "master",
+    "implementation_commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+    "implementation_pipeline_id": 2868575025,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
+    "local_checkpoint_pipeline_id": 2868579101,
+    "local_checkpoint_pipeline_status": "success",
+    "machine_savepoint_create_commit": "d5894ced621c4c8b40ef4e4eed9701b43f0fd66b",
+    "human_checkpoint_create_commit": "55c1860f994a19f5614d1250c32f3b64b54b4e54",
+    "page": "public/xrbc-liquidity-pool.html",
+    "page_release": "0.2.4",
+    "key_rules": [
+      "Optional/low-priority analytics use progressive disclosure instead of permanent screen real estate.",
+      "Account-dependent empty cards show an intentional state and the clearest next action rather than dashes, zeros or fake values.",
+      "Empty-state motion may aid discoverability but must not imply a ledger transaction.",
+      "Receipt amount/export controls remain hidden until a verified receipt exists."
+    ],
+    "pending": [
+      "Browser-check chart collapsed/open presentation and absence of nested scrolling.",
+      "Verify disconnected and connected-without-receipt empty states.",
+      "Verify a real receipt replaces the empty state correctly."
+    ]
+  },
   "savepoint_format": [
     "context",
     "changes",
@@ -545,6 +543,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "scope": "Collapse optional market analytics by default and replace empty liquidity-receipt dash placeholders with intentional animated wallet-action states."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
@@ -847,6 +850,19 @@
       "page_release": "0.2.3",
       "architecture": "browser -> XRBC read-only backend -> fixed OnTheDEX upstream",
       "browser_verification_pending": true
+    },
+    "liquidity_compact_chart_receipt_empty_states": {
+      "status": "implemented",
+      "frontend_commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+      "pipeline_id": 2868575025,
+      "pipeline_status": "success",
+      "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
+      "local_checkpoint_pipeline_id": 2868579101,
+      "local_checkpoint_pipeline_status": "success",
+      "release": "0.2.4",
+      "chart": "Advanced Market Chart collapsed by default with no outer nested scroll trap.",
+      "receipts": "Animated wallet-action empty states replace bare dash placeholders until verified receipt data exists.",
+      "wallet_jump": "#walletHeading"
     }
   },
   "machine_memory": {
@@ -884,6 +900,11 @@
       "reuse existing project/token imagery",
       "CSS-first migration with JavaScript preserved"
     ],
-    "rollout": "one page at a time after browser review"
+    "rollout": "one page at a time after browser review",
+    "empty_state_policy": {
+      "optional_analytics": "Prefer progressive disclosure when secondary analytics do not justify permanent vertical space.",
+      "account_dependent_cards": "Use explicit designed empty state + clear next action; do not use bare punctuation/fake numeric values.",
+      "motion": "Allowed only as non-transactional discoverability cue and must respect reduced motion."
+    }
   }
 }
