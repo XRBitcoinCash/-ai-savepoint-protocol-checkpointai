@@ -20,7 +20,9 @@
     "pipeline_status": "success",
     "local_checkpoint_commit": "1edc7a9003fe71b75a556186694b2ccbe6b75882",
     "page": "public/xrbc-liquidity-pool.html",
-    "release": "0.2.3"
+    "release": "0.2.3",
+    "local_checkpoint_pipeline_id": 2868491925,
+    "local_checkpoint_pipeline_status": "success"
   },
   "backend": {
     "repository": "XRBitcoinCash/xrbitcoincash.github.io",
