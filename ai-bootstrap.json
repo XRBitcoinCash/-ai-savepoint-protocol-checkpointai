@@ -46,7 +46,13 @@
       "pipeline_id": 2867921308,
       "pipeline_status": "success"
     },
-    "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion."
+    "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
+    "active_memory_savepoint": {
+      "id": "SAVEPOINT-2026-09-21-memory-synaptic-layer",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+      "savepoint_commit": "852eae70553f1796f9438566be14528f2f535607"
+    },
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-21-memory-synaptic-layer"
   },
   "safety_invariants": [
     "Wallet connection is authorization only; do not create a transaction merely to connect.",
