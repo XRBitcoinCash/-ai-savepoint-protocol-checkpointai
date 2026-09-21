@@ -433,62 +433,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-liquidity-market-history-backend-route",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
-    "human_record": "LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE-2026-09-21.md",
-    "scope": "Finalize XRBC/XRP chart history as browser -> fixed XRBC read-only backend -> fixed OnTheDEX upstream, removing browser/CORS/provider-policy dependence while preserving exact identity and transaction separation.",
-    "status": "implemented",
-    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
-    "frontend_branch": "master",
-    "frontend_history_commit": "264f5be880ed4fc8e47448a6a300c6b688a55ff7",
-    "frontend_timeout_commit": "7fd39d9ce2641f6b28318ba44e718a034f8d7116",
-    "frontend_pipeline_id": 2868480096,
-    "frontend_pipeline_status": "success",
-    "local_checkpoint_commit": "1edc7a9003fe71b75a556186694b2ccbe6b75882",
-    "local_checkpoint_pipeline_id": 2868491925,
-    "local_checkpoint_pipeline_status": "success",
-    "backend_repository": "XRBitcoinCash/xrbitcoincash.github.io",
-    "backend_api_commit": "8018486c7fcc0da7e867398702df2ab58e385d28",
-    "backend_tests_commit": "ebf918c2e3010f33ab5a2bdd4f9f1cfd6ed48c3b",
-    "backend_openapi_commit": "f6658b41f508585a41bb9813b4e3fbc5b545147e",
-    "backend_ci_workflow_commit": "b9ef92baadb03c6a32159c2ba71473feefdc718e",
-    "backend_route_inventory_commit": "131e204ebe131c5ae2f886d75506b230af91db21",
-    "backend_api_test_run_id": 35626734128,
-    "backend_api_test_status": "success",
-    "machine_savepoint_create_commit": "648a40d5ba3916ce33efac30fa9c18cb766279e0",
-    "human_checkpoint_create_commit": "6965858189a640b4808be22e1f5c68d028f8c6e7",
-    "page": "public/xrbc-liquidity-pool.html",
-    "page_release": "0.2.3",
-    "endpoint": "/api/v1/market/xrbc/history",
-    "key_invariants": [
-      "Browser controls only interval and bounded page count; upstream host, URL, exact XRBC/XRP identity and pagination markers are server-controlled.",
-      "Historical bars are chart context only; live current market remains a separately validated XRPL book/AMM snapshot.",
-      "Historical data never enters wallet authorization, transaction construction, signing, submission or finality validation.",
-      "No ticker-only substitution, synthetic candle, arbitrary URL relay or client-supplied provider marker."
-    ],
-    "pending": [
-      "Wait for/confirm Render deploy of backend main branch.",
-      "Hard-refresh Liquidity Pool and verify 1D · MAX candles plus earliest returned direct-trade date.",
-      "If history is still unavailable after backend deploy, inspect the backend endpoint response before changing chart logic."
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
     "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
     "human_record": "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
@@ -518,6 +462,42 @@
       "Verify a real receipt replaces the empty state correctly."
     ]
   },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+    "human_record": "LOCAL-XRP-TOKEN-LOGO-2026-09-21.md",
+    "scope": "Add a locally stored CC0 XRP logo with provenance and wire it into the Liquidity Pool dynamic token identity renderer.",
+    "status": "implemented",
+    "implementation_commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
+    "implementation_pipeline_id": 2868676134,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "130643a4b7cd65338204a6db17d15f45f901c7ef",
+    "machine_savepoint_create_commit": "43298a6f8564ceee5e35c34c81aa54941604f102",
+    "human_checkpoint_create_commit": "20cbb1ca5eadae6c82b54fd5e87ec897b9a20022",
+    "asset": "public/assets/tokens/xrp.svg",
+    "license": "CC0-1.0",
+    "key_rules": [
+      "Use local reviewed token assets at runtime instead of third-party image hotlinks.",
+      "Record source/license provenance beside third-party token assets.",
+      "Token imagery is presentation only and never defines XRPL asset identity."
+    ]
+  },
   "savepoint_format": [
     "context",
     "changes",
@@ -543,6 +523,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-21-local-xrp-token-logo",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+      "scope": "Add a locally stored CC0 XRP logo with provenance and wire it into the Liquidity Pool dynamic token identity renderer."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
@@ -863,6 +848,16 @@
       "chart": "Advanced Market Chart collapsed by default with no outer nested scroll trap.",
       "receipts": "Animated wallet-action empty states replace bare dash placeholders until verified receipt data exists.",
       "wallet_jump": "#walletHeading"
+    },
+    "local_xrp_token_logo": {
+      "status": "implemented",
+      "frontend_commit": "2a37dc754853ff0cd045b2a5ddcf476b8045769d",
+      "pipeline_id": 2868676134,
+      "pipeline_status": "success",
+      "asset": "public/assets/tokens/xrp.svg",
+      "provenance": "public/assets/tokens/README.md",
+      "license": "CC0-1.0",
+      "release": "0.2.5"
     }
   },
   "machine_memory": {
