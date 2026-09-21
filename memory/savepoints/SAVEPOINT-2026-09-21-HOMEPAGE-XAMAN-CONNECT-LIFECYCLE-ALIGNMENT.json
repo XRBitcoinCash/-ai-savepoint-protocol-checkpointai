@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-homepage-xaman-connect-lifecycle-alignment",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "xaman",
+    "wallet-connection",
+    "ui",
+    "security",
+    "homepage",
+    "standardization"
+  ],
+  "context": "The homepage order panel could remain visibly stuck on Connecting after the Xaman authorization window was closed. A reset control existed only inside collapsed Wallet details, while the Liquidity Pool already exposed a visible Cancel / restart path and explicit attempt invalidation. The homepage was aligned to the Liquidity Pool lifecycle and the connection behavior was promoted to the project-wide migration standard.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "primary_commit": "877d0e74ac7c86e71bc57fa8bf0214472db0624e",
+    "final_cleanup_commit": "1e74ad6ccd0a0ba8e8deb08ffb054042426c5c97",
+    "implementation_pipeline_id": 2868760527,
+    "implementation_pipeline_status": "success",
+    "rollback_commit": "1c1dd89587c49328f38baec0b0a35619915108ff",
+    "page": "public/index.html",
+    "local_checkpoint": "docs/checkpoints/HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
+    "local_checkpoint_commit": "c7cceef81fb3f251c9201c0da1d0086d09b7949f",
+    "local_memory_commit": "95ddb1a84d000cab5470b56eb8cf83f675ba7f9c"
+  },
+  "behavior": [
+    "Connect remains authorization-only and uses XRBCXamanStandard.authorizeAndWarm() from the deliberate browser user gesture.",
+    "Read-only backend/XRPL readiness starts in parallel with Xaman authorization.",
+    "Browser authorization remains bounded to 180 seconds.",
+    "Cancel / restart Xaman is visible in the same top order-panel wallet surface while authorization is active.",
+    "The collapsed Wallet details Disconnect control uses the same reset path while authorization is active.",
+    "Each connect attempt has explicit identity plus XAMAN_AUTH_GENERATION stale-response protection.",
+    "A late response from a cancelled/older attempt cannot adopt or overwrite a newer wallet attempt.",
+    "At the three-minute deadline the attempt is invalidated, local authorization state is cleared, bounded SDK logout is attempted, and the UI returns to a deliberate Connect action.",
+    "No automatic replacement authorization, automatic reconnect loop, or transaction payload is created.",
+    "Existing pending/ambiguous transaction request records remain protected across wallet cancellation/reset."
+  ],
+  "project_connection_standard": {
+    "status": "active-for-future-migrations",
+    "reference_pages": [
+      "public/xrbc-liquidity-pool.html",
+      "public/index.html"
+    ],
+    "shared_layer": "public/xrbc-xaman-standard.js",
+    "browser_connect": "Invoke XRBCXamanStandard.authorizeAndWarm() immediately from the deliberate Connect user gesture; start read-only backend/XRPL readiness in parallel.",
+    "xapp_connect": "When sdk.runtime.xapp is true, use the account supplied by the Xaman xApp runtime; do not invoke unsupported browser OAuth/authorization from inside the xApp.",
+    "connection_vs_signing": "Connection establishes public account/signing authorization only. It must not create a ledger-changing transaction.",
+    "one_active_attempt": "Keep a per-attempt identity/generation guard so obsolete responses cannot become current.",
+    "visible_cancel_restart": "Expose Cancel / restart in the same visible connection surface while browser authorization is active.",
+    "timeout_ms": 180000,
+    "timeout_cleanup": "Invalidate the attempt, clear local signing authorization, perform bounded SDK logout, and return to an explicit Connect action.",
+    "no_auto_retry": "Timers/countdowns may explain or terminate a current attempt; they must never create a replacement authorization or transaction payload.",
+    "remembered_account_rule": "A remembered public XRPL address is display/read state only and is not proof of current Xaman signing readiness.",
+    "pending_request_rule": "Disconnect/reset must not silently delete or release an already-created or ambiguous signing-request guard.",
+    "transaction_rule": "Ledger writes stay separate: exactly one Xaman payload per deliberate final intent, challenge/intent binding, bounded expiry, validated tesSUCCESS, signer/account equality, and critical-field comparison."
+  },
+  "verification": {
+    "implementation_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "custom_domain_browser_verified": false,
+    "manual_checks": [
+      "Close a browser authorization window and verify Cancel / restart remains immediately usable.",
+      "Cancel/reset then start a second authorization; a late result from the first must not replace the second.",
+      "Allow one attempt to reach 180 seconds and verify safe reset with no transaction request."
+    ]
+  },
+  "invariants": [
+    "Wallet connection is authorization only; no transaction is created merely to connect.",
+    "No Xaman transaction payload during backend warm-up.",
+    "Exactly one Xaman payload per deliberate final transaction intent.",
+    "Ambiguous payload creation is reconciled and never auto-replaced.",
+    "Final transaction success requires validated XRPL evidence, tesSUCCESS, signer/account equality, and critical-field comparison."
+  ]
+}
