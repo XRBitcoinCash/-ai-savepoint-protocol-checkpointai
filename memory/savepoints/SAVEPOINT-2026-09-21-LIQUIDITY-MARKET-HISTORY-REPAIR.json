@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-liquidity-market-history-repair",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "liquidity-pool",
+    "market-chart",
+    "historical-data",
+    "xrpl"
+  ],
+  "context": "The Liquidity Pool Advanced Market Chart rendered but returned no XRBC/XRP historical candles. Investigation showed the original Sologenic OHLC path had documented issuer-coverage limitations that did not include the exact XRBC issuer, and the chart requested only a short recent window.",
+  "source_of_truth": {
+    "frontend_provider": "GitLab",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "baseline_commit": "3907ce26bdd2f52db57e3bc10e7f9fc6aa38b74c",
+    "implementation_commit": "e893d3cf86780de2cb8dbe2b948a0bea80b5ec91",
+    "implementation_pipeline_id": 2868432524,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
+    "local_checkpoint_pipeline_id": 2868439142
+  },
+  "page": {
+    "path": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.1",
+    "chart_module": "xrbc-chart-module"
+  },
+  "root_cause": {
+    "original_provider": "Sologenic Trading Data OHLC",
+    "issue": "Published Mainnet issuer-coverage limitations do not include the exact XRBC issuer, so a syntactically valid XRBC/XRP request could return no historical candles.",
+    "old_window": "Approximately 360 intervals at the selected timeframe.",
+    "xrbc_issuer": "rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw",
+    "xrbc_currency": "5852626974636F696E6361736800000000000000"
+  },
+  "replacement": {
+    "provider": "OnTheDEX XRPL token data API",
+    "endpoint": "https://api.onthedex.live/public/v1/ohlc",
+    "identity": "Exact currency + issuer for issued assets; XRP for native XRP.",
+    "pagination": "Uses provider marker to request older history backward.",
+    "max_bars_per_request": 5000,
+    "accepted_history_rows": 20000,
+    "intervals": {
+      "15m": {
+        "provider_interval": "15",
+        "paging": "bounded 1 page"
+      },
+      "1h": {
+        "provider_interval": "60",
+        "paging": "bounded 1 page"
+      },
+      "4h": {
+        "provider_interval": "240",
+        "paging": "up to 3 pages backward"
+      },
+      "1d": {
+        "provider_interval": "D",
+        "ui_label": "1D · MAX",
+        "paging": "up to 2 pages backward; broadest default market-history view"
+      },
+      "1w": {
+        "provider_interval": "W",
+        "paging": "up to 2 pages backward"
+      }
+    }
+  },
+  "evidence_boundary": {
+    "historical_candles": "Processed XRPL DEX trade history for charting/indicators/export only.",
+    "current_market_snapshot": "Existing XRBitcoinCash read-only Render/XRPL path using validated ledger + exact book_offers + amm_info.",
+    "transactions": "Transaction preview, construction, signing and validated finality do not use the historical provider."
+  },
+  "safety_invariants": [
+    "No ticker-only or similarly named token substitution.",
+    "Provider response pair identity is checked before accepting history.",
+    "Exact 40-character currency hex may be matched to the decoded representation of that same hex identity, with issuer equality still required.",
+    "Missing intervals are not fabricated.",
+    "Historical candles and current book/AMM liquidity remain separate evidence sources.",
+    "No wallet, AMM transaction, trustline, signing, gate, receipt or finality logic was intentionally changed."
+  ],
+  "csp": {
+    "removed_origin": "https://api.sologenic.org",
+    "added_origin": "https://api.onthedex.live",
+    "old_chart_script_sha256": "65nKSPNkThjW1ta2GSGsOWgpv0BA4Q5dwtSZVK91KMc=",
+    "new_chart_script_sha256": "IfbObTo5hFmnlg9sJ4DE0OzjDC6waKLxhW4ZSdSMdY0="
+  },
+  "verification": {
+    "chart_module_parse": true,
+    "executable_inline_scripts_parse": true,
+    "executable_inline_script_count": 12,
+    "duplicate_html_ids": 0,
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "provider_live_response_verified_from_connected_tooling": false
+  },
+  "manual_follow_up": [
+    "Reload the deployed Liquidity Pool in a normal browser.",
+    "Leave 1D · MAX selected and confirm exact XRBC/XRP historical candles appear.",
+    "Read the returned-history range to confirm the earliest provider trade date.",
+    "Test 4h and 1h views.",
+    "If direct provider access is blocked by browser/CORS/network policy, preserve exact-pair history semantics and route the same request through a reviewed read-only backend endpoint rather than reverting to token substitution."
+  ]
+}
