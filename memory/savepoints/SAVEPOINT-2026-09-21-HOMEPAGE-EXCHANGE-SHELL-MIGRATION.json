@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-homepage-exchange-shell-migration",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "homepage",
+    "shared-css",
+    "exchange-shell",
+    "visual-migration"
+  ],
+  "context": "The user requested that the XRBitcoinCash main trading page visually match the accepted XRBC Liquidity Pool exchange/workbench layout. The shared opt-in exchange shell was already the canonical design system, so the homepage was migrated into that shell rather than building another independent CSS system.",
+  "source_of_truth": {
+    "frontend_provider": "GitLab",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "rollback_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
+    "shared_css_commit": "cd8b2bd41082c9a87b1540381344e6c5ee4928e1",
+    "homepage_commit": "b06b3ca16f047b01a059bd5833d7e1d81050f24d",
+    "implementation_pipeline_id": 2868954757,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "38d76d107614ce1f1c68c8922ed17d63242da4ab",
+    "local_memory_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e"
+  },
+  "shared_design_system": {
+    "file": "public/xrbc-dynamic-ui.css",
+    "visual_layer_version": "1.2.0",
+    "homepage_scope": "body.xrbc-home-exchange-shell",
+    "existing_liquidity_reference": "public/xrbc-liquidity-pool.html",
+    "rule": "Homepage-specific styles are scoped so the Liquidity Pool and other unreviewed pages are not globally restyled."
+  },
+  "homepage": {
+    "page": "public/index.html",
+    "release": "1.5.3",
+    "css_url": "/xrbc-dynamic-ui.css?v=20260921-4",
+    "body_classes": [
+      "xrbc-institutional",
+      "xrbc-exchange-shell",
+      "xrbc-home-exchange-shell"
+    ],
+    "reusable_hooks": [
+      "xrbc-exchange-sidebar",
+      "xrbc-exchange-sidebar-inner",
+      "xrbc-exchange-brand",
+      "xrbc-exchange-nav",
+      "xrbc-exchange-theme",
+      "xrbc-exchange-main",
+      "xrbc-exchange-primary",
+      "xrbc-exchange-rail"
+    ]
+  },
+  "desktop_layout": [
+    "Fixed left navigation rail matching the Liquidity Pool visual language.",
+    "Existing brand and navigation preserved.",
+    "Existing Get XRBC in Xaman CTA retained as a compact sidebar action.",
+    "Theme control retained in the sidebar.",
+    "Former large hero becomes a compact workbench heading.",
+    "Trading terminal uses neutral black/charcoal surfaces, thin borders and compact spacing.",
+    "Chart/market workspace is the primary surface.",
+    "Order panel is a sticky right-side action rail.",
+    "Market stats, pair selection, chart navigation, market identity and open orders use dense neutral card language."
+  ],
+  "responsive_layout": [
+    "At <=900px the fixed rail becomes compact top navigation.",
+    "Brand copy collapses.",
+    "Get XRBC and theme controls become compact utilities.",
+    "Order rail and chart stack into one column.",
+    "Order rail moves before the chart for the primary action path.",
+    "Desktop left margin is removed."
+  ],
+  "behavior_preservation": {
+    "executable_inline_scripts": 12,
+    "byte_identical": true,
+    "fingerprint_method": "FNV-1a comparison of all executable inline script blocks before/after",
+    "unchanged": [
+      "wallet connection lifecycle",
+      "Xaman popup/request lifecycle",
+      "six-digit challenge and memo binding",
+      "market and quote construction",
+      "order construction",
+      "open-order behavior",
+      "trustline behavior",
+      "pending/ambiguous request protection",
+      "XRPL validated-finality checks"
+    ]
+  },
+  "verification": {
+    "implementation_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_visual_verification": false,
+    "manual_checks": [
+      "Desktop fixed left rail matches Liquidity Pool.",
+      "Sidebar Get XRBC and theme controls remain usable.",
+      "Compact heading/terminal replace the oversized top-header/hero feel.",
+      "Chart/market workspace is left and sticky order rail is right.",
+      "Connect/Reconnect and a small Xaman review still work.",
+      "v1.5.3 Xaman popup remains unchanged.",
+      "Mobile/tablet top navigation and stacked order/chart layout render cleanly."
+    ]
+  }
+}
