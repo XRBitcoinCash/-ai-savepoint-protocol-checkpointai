@@ -1,6 +1,22 @@
 # XRBitcoinCash — next-run checkpoint
 
-Updated: 2026-09-20.
+Updated: 2026-09-21.
+
+
+## Machine-first continuity bootstrap
+
+For new XRBitcoinCash/XRPL project sessions, use this compact load path before reading long historical notes:
+
+1. `ai-bootstrap.json`
+2. `latest_savepoint.record`
+3. `ai-memory.json`
+4. `memory/synapse-map.json`
+5. Only the checkpoint files routed for the current task
+6. The canonical contract when the task is security-sensitive, policy-sensitive, contradictory, or missing evidence
+
+Current machine-memory savepoint: `SAVEPOINT-2026-09-21-memory-synaptic-layer` in `memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json`.
+
+This is an external continuity layer, not a change to model weights or persistent internal model state. Human-readable historical checkpoints remain retained during the hybrid transition.
 
 ## Primary task for the next implementation pass
 
