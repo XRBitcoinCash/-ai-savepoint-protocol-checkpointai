@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
+  "date": "2026-09-21",
+  "status": "implemented",
+  "category": [
+    "liquidity-pool",
+    "ui",
+    "progressive-disclosure",
+    "receipt-empty-state"
+  ],
+  "context": "The Advanced Market Chart consumed excessive space while historical data remained secondary, and the latest deposit/withdrawal receipt cards displayed bare dash placeholders when no wallet/receipt data was available. The user requested a collapsed chart and intentional animated empty receipt states with a prominent route back to wallet connection.",
+  "source_of_truth": {
+    "frontend_provider": "GitLab",
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "implementation_commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
+    "implementation_pipeline_id": 2868575025,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
+    "local_checkpoint_pipeline_id": 2868579101,
+    "local_checkpoint_pipeline_status": "success"
+  },
+  "page": {
+    "path": "public/xrbc-liquidity-pool.html",
+    "release": "0.2.4"
+  },
+  "advanced_market_chart": {
+    "disclosure_id": "advancedMarketDisclosure",
+    "default_state": "collapsed",
+    "behavior": [
+      "Advanced market context is opt-in instead of permanently consuming screen height.",
+      "Native details/summary progressive disclosure is used.",
+      "The outer chart workspace no longer uses max-height plus overflow:auto; when opened, the card grows naturally and the page scrolls.",
+      "Liquidity manager return link remains available.",
+      "Historical/live-data architecture is unchanged."
+    ]
+  },
+  "receipt_cards": {
+    "rule": "Never expose bare dash placeholders as the primary empty state.",
+    "states": [
+      "ready",
+      "wallet-empty",
+      "wallet-required"
+    ],
+    "behavior": [
+      "When no verified receipt exists, amount rows and receipt tools are hidden.",
+      "A larger intentional empty state becomes the dominant card content.",
+      "Subtle XRBC/XRP flow motion is shown but does not imply ledger execution.",
+      "Status copy distinguishes wallet-required from wallet-inspected/no-saved-receipt.",
+      "A large Connect / inspect wallet action jumps to #walletHeading.",
+      "When a verified receipt exists, the empty state disappears and actual receipt amounts/tools are shown."
+    ],
+    "wording": {
+      "deposit": [
+        "XRBC deposited",
+        "XRP deposited"
+      ],
+      "withdrawal": [
+        "XRBC received",
+        "XRP received"
+      ]
+    }
+  },
+  "visual_motion_policy": [
+    "Use subtle motion only to make an otherwise empty state feel intentional and discoverable.",
+    "Motion must not imply that a transaction, payment, or ledger change is occurring.",
+    "Respect prefers-reduced-motion.",
+    "Use real data when available; never insert fake sample values or zeros to fill an empty card."
+  ],
+  "project_wide_ux_rule": [
+    "Low-priority or uncertain secondary analytics should default to progressive disclosure rather than permanent screen real estate.",
+    "Wallet/account-dependent empty cards should present a designed state plus a clear next action instead of dashes, fake values or ambiguous blank metrics.",
+    "The most relevant recovery/navigation action should be visually dominant in the empty state."
+  ],
+  "safety_invariants": [
+    "No intended changes to Xaman authorization, reconnect behavior or wallet identity.",
+    "No intended changes to AMM deposit/withdraw, trade, trustline, signing, submission or validated-finality logic.",
+    "No intended changes to the backend-routed historical market-data architecture.",
+    "Receipt data is shown only when a verified receipt exists."
+  ],
+  "csp": {
+    "changed_script": "liquidity-app",
+    "old_sha256": "wqBTSDgyKV0ASiB4Gl5oXfXR7Na+8xjvCr2yJv8k7eQ=",
+    "new_sha256": "HwFacvsANg7Lu+QfSlcEQDK0TA1hfBhA0ZQV8BLYx0Y="
+  },
+  "verification": {
+    "executable_inline_script_count": 12,
+    "all_executable_inline_scripts_parse": true,
+    "duplicate_html_ids": 0,
+    "implementation_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "local_checkpoint_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_visual_verification": false
+  },
+  "manual_follow_up": [
+    "Hard-refresh the Liquidity Pool and verify the Advanced Market Chart is compact when closed and has no nested scroll trap when open.",
+    "Verify disconnected receipt cards show movement + large wallet CTA and no visible dash amounts.",
+    "Connect a wallet with no saved receipt and confirm the empty-state copy changes appropriately.",
+    "Load a verified receipt and confirm real receipt content replaces the empty state."
+  ]
+}
