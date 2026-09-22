@@ -485,14 +485,14 @@
     "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
     "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
     "status": "deployed-device-render-retest-required",
-    "scope": "XRBitcoinCash homepage responsive header overlay; public/index.html and homepage-scoped shared CSS only. Screenshot identifies XRBC homepage, distinct from prior XRBitcoin wallet repair.",
-    "source_frontend_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+    "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
+    "source_frontend_commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
     "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
-    "source_pipeline_id": 2871382210,
+    "source_pipeline_id": 2871483161,
     "source_pipeline_status": "success-with-advisory-findings",
     "next_issue": "XRB-001",
-    "implementation_commit": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/10",
+    "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
     "browser_live_retest_after_final_deploy": true
   },
   "savepoint_format": [
@@ -1068,7 +1068,21 @@
         "xrbc-exchange-shell",
         "xrbc-home-exchange-shell"
       ],
-      "method": "Scoped shared-CSS migration with executable JavaScript byte-identical."
+      "method": "Scoped shared-CSS migration with executable JavaScript byte-identical.",
+      "current_correction": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11"
+    },
+    "layout_contract": {
+      "reference_page": "public/xrbc-liquidity-pool.html",
+      "shared_css": "public/xrbc-dynamic-ui.css",
+      "desktop_sidebar_min_width_px": 901,
+      "compact_header_max_width_px": 900,
+      "sidebar_width_px": {
+        "901_to_1180": 188,
+        "above_1180": 220
+      },
+      "scrolling": "Fixed full-height desktop navigation with overflow-y:auto; main content scrolls beside it. Preserve existing scrollable market/action panels.",
+      "scope": "Trade and Liquidity use this rule now. Keep other pages in the same visual family during future requested work; no broad restyling in this correction.",
+      "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem."
     }
   },
   "xaman_connection_standard": {

@@ -689,3 +689,5 @@ Current checkpoint: `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-REC
 ### [SAVEPOINT-2026-09-22-xrbc-home-responsive-header] XRBC homepage responsive header
 
 Current checkpoint `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json`. Implementation `a20800962133141d7e2d5c99e03ddda6ccd93d57` merged as `3e15aaec8d8ae875d3598ea259f947a6bb6ae881` via MR !10. Partial breakpoint transition repaired; source-CSS checks pass. Narrow-screen device confirmation remains. See `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. Next implementation remains XRB-001.
+
+Layout correction to current checkpoint: [MR !11](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11), merge `0dcf99de7f4e5f6847689e298c1a7684d1b81369`, restores the Liquidity-reference fixed left rail above 900px. The earlier MR !10 1180px compact header was not the intended desktop layout. Use `ai-memory.json` ui_design_standard.layout_contract for future visual work.

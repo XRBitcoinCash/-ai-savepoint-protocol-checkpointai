@@ -5,19 +5,19 @@
   "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
   "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
   "status": "deployed-device-render-retest-required",
-  "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
-  "source_frontend_commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
+  "scope": "XRBitcoinCash homepage responsive header overlay; public/index.html and homepage-scoped shared CSS only. Screenshot identifies XRBC homepage, distinct from prior XRBitcoin wallet repair.",
+  "source_frontend_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
   "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
   "backend_snapshot_note": "Prior audit baseline; backend not changed or re-audited.",
-  "source_pipeline_id": 2871483161,
+  "source_pipeline_id": 2871382210,
   "source_pipeline_status": "success-with-advisory-findings",
-  "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
-  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
-  "rollback_frontend_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+  "implementation_commit": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/10",
+  "rollback_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
   "next_issue": "XRB-001",
   "browser_live_retest_after_final_deploy": true,
   "created": "2026-09-22",
-  "memory_parent_commit": "bf77c757642706b896f3303e7b56fb9c47e9d2ab",
+  "memory_parent_commit": "cff6a9374332711ca4a8a17064653af4e052d117",
   "previous_savepoint": {
     "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
     "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
@@ -41,7 +41,9 @@
     "public/xrbc-dynamic-ui.css",
     "public/index.html"
   ],
-  "frontend_support_files_changed": [],
+  "frontend_support_files_changed": [
+    "docs/checkpoints/XRBC-HOMEPAGE-RESPONSIVE-HEADER-2026-09-22.md"
+  ],
   "tests": {
     "unit_tests": 24,
     "runtime_pages": 10,
@@ -58,41 +60,27 @@
       1181,
       1363
     ],
-    "css_check_scope": "Source CSS cascade parity against current Liquidity Pool for navigation/sidebar scrolling/width and main/footer offsets at seven widths. Not narrow-device geometry.",
-    "merge_request_pipeline": 2871480481,
+    "css_check_scope": "source CSS selector/media/specificity resolution, not rendered geometry",
+    "merge_request_pipeline": 2871378469,
     "mr_pipeline_status": "success",
     "validator_exit_code": 1,
     "advisory_findings": 19
   },
   "remaining": [
-    "User device comparison to the Liquidity Pool reference screenshot",
+    "Narrow-screen user/device rendering check",
     "XRB-001 first-click OAuth hydration remains open",
     "XRB-007/008 real-device retest remains pending",
     "Existing metadata/reference/CI findings"
   ],
   "publication": "Containing Git commit identifies this checkpoint.",
   "deployment": {
-    "pipeline": 2871483161,
-    "job": 16654973464,
+    "pipeline": 2871382210,
+    "job": 16654205029,
     "status": "success",
     "served_css_verified": true,
-    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-4",
+    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
     "served_build_verified": false,
-    "verification_scope": "Live CSSOM confirms homepage compact transition only at <=900px. At 1363px sidebar is fixed/scrollable/220px and both main/footer start x=220. Source cascade matches Liquidity at seven widths; narrow-device geometry not verified."
+    "verification_scope": "Live homepage stylesheet URL and all corrected compact CSSOM rules verified after reload. Desktop header is 220px and workspace starts x=220 at 1363×936. Entire build commit marker and narrow browser geometry not verified."
   },
-  "browser_retest_scope": "Read-only desktop rendering and served responsive CSS only; no narrow geometry or live wallet.",
-  "layout_alignment": {
-    "reference_page": "public/xrbc-liquidity-pool.html",
-    "shared_css": "public/xrbc-dynamic-ui.css",
-    "desktop_sidebar_min_width_px": 901,
-    "compact_header_max_width_px": 900,
-    "sidebar_width_px": {
-      "901_to_1180": 188,
-      "above_1180": 220
-    },
-    "scrolling": "Fixed full-height desktop navigation with overflow-y:auto; main content scrolls beside it. Preserve existing scrollable market/action panels.",
-    "scope": "Trade and Liquidity use this rule now. Keep other pages in the same visual family during future requested work; no broad restyling in this correction.",
-    "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem."
-  },
-  "prior_revision": "memory/archive/2026-09-22-home-before-sidebar-alignment-checkpoint.json"
+  "browser_retest_scope": "Read-only desktop rendering and served responsive CSS only; no narrow geometry or live wallet."
 }

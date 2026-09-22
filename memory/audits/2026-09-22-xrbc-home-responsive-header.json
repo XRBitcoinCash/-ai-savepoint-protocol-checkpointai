@@ -2,19 +2,21 @@
   "schema_version": "1.0.0",
   "source_snapshots": {
     "frontend": {
-      "commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
-      "implementation": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
-      "baseline": "eb437dd40f3a22951cca9709353c5696d5df519f"
+      "commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
+      "implementation": "3701c892041df7a0cd948e3dff6faa6f888fae92",
+      "baseline": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881"
     },
     "backend": {
       "commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
       "verification": "prior-audit-only"
     }
   },
-  "root_cause": "Homepage breakpoint moved to 1180px while full compact positioning/grid/navigation resets remained at generic 900px. In 901–1180px header becomes full-width but remains fixed top/bottom 0 with vertical links.",
+  "root_cause": "MR !10 fixed the overlay but retained a homepage-only 1180px top-navigation switch, contrary to the saved 900px shared-shell design and user reference.",
   "changes": [
-    "Complete homepage compact header positioning/grid/nav/brand/footer rules",
-    "Homepage stylesheet cache version 20260922-3"
+    "Restore homepage 900px compact transition",
+    "Inherit shared 188px/220px sidebar widths",
+    "Align homepage footer with desktop rail",
+    "Bump stylesheet URL to 20260922-4"
   ],
   "verification": {
     "unit_tests": 24,
@@ -32,157 +34,73 @@
       1181,
       1363
     ],
-    "css_check_scope": "source CSS selector/media/specificity resolution, not rendered geometry",
-    "merge_request_pipeline": 2871378469,
+    "css_check_scope": "Source CSS cascade parity against current Liquidity Pool for navigation/sidebar scrolling/width and main/footer offsets at seven widths. Not narrow-device geometry.",
+    "merge_request_pipeline": 2871480481,
     "mr_pipeline_status": "success",
     "validator_exit_code": 1,
     "advisory_findings": 19
   },
   "css_cascade_results": [
     {
-      "variant": "before",
       "width": 390,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "100%",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
+      "header": "sticky",
+      "shared_rail_width": "188px",
+      "navigation": "row",
+      "sidebar_scroll": "visible",
+      "main_left_margin": "0"
     },
     {
-      "variant": "before",
       "width": 900,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "100%",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
+      "header": "sticky",
+      "shared_rail_width": "188px",
+      "navigation": "row",
+      "sidebar_scroll": "visible",
+      "main_left_margin": "0"
     },
     {
-      "variant": "before",
       "width": 901,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
+      "header": "fixed",
+      "shared_rail_width": "188px",
+      "navigation": "column",
+      "sidebar_scroll": "auto",
+      "main_left_margin": "var(--xrbc-ex-sidebar-width)"
     },
     {
-      "variant": "before",
       "width": 1158,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
+      "header": "fixed",
+      "shared_rail_width": "188px",
+      "navigation": "column",
+      "sidebar_scroll": "auto",
+      "main_left_margin": "var(--xrbc-ex-sidebar-width)"
     },
     {
-      "variant": "before",
       "width": 1180,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
+      "header": "fixed",
+      "shared_rail_width": "188px",
+      "navigation": "column",
+      "sidebar_scroll": "auto",
+      "main_left_margin": "var(--xrbc-ex-sidebar-width)"
     },
     {
-      "variant": "before",
       "width": 1181,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
+      "header": "fixed",
+      "shared_rail_width": "220px",
+      "navigation": "column",
+      "sidebar_scroll": "auto",
+      "main_left_margin": "var(--xrbc-ex-sidebar-width)"
     },
     {
-      "variant": "before",
       "width": 1363,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 390,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "0",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 900,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "0",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 901,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "0",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 1158,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "0",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 1180,
-      "header_position": "sticky",
-      "header_bottom": "auto",
-      "inner_display": "grid",
-      "inner_min_height": "0",
-      "nav_direction": "row",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 1181,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
-    },
-    {
-      "variant": "after",
-      "width": 1363,
-      "header_position": "fixed",
-      "header_bottom": "0",
-      "inner_display": "flex",
-      "inner_min_height": "100%",
-      "nav_direction": "column",
-      "footer_left_margin": "0"
+      "header": "fixed",
+      "shared_rail_width": "220px",
+      "navigation": "column",
+      "sidebar_scroll": "auto",
+      "main_left_margin": "var(--xrbc-ex-sidebar-width)"
     }
   ],
   "source_sha256": {
-    "public/index.html": "bb0daf4b350f504ca3774399132ad5090473f1e87900acacb76bb4ee65a63d76",
-    "public/xrbc-dynamic-ui.css": "d61cccb46626cb09ed2f56bb178b4cac5187e52edc73ea6e2a1d2df515555d63"
+    "public/index.html": "d71903cda939fda478c1b16f6fcd9df099753af4d68f77b444395a4fc4345c3f",
+    "public/xrbc-dynamic-ui.css": "627358d3c0a1436bc4e4a1f7511707fb5caebc8a8ededfc7e9f6d414cab86271"
   },
   "browser": {
     "pre_deploy_desktop": "Inspected live at 1363×936; desktop rail and trading workspace present.",
@@ -190,34 +108,38 @@
     "local_preview": "Browser policy blocked file URL; no bypass or workaround used.",
     "live_wallet_verified": false,
     "post_deploy": {
-      "viewport": {
-        "width": 1363,
-        "height": 936
-      },
-      "header": {
-        "x": 0,
-        "y": 0,
-        "width": 220,
-        "height": 936
-      },
-      "main": {
-        "x": 220,
-        "y": 0,
-        "width": 1133
-      },
-      "connect_control_visible": true,
-      "stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
-      "corrected_cssom_rules_verified": true
+      "viewport_width": 1363,
+      "sidebar_width": 220,
+      "sidebar_position": "fixed",
+      "sidebar_overflow_y": "auto",
+      "main_left": 220,
+      "footer_left": 220,
+      "compact_media": "(max-width: 900px)",
+      "stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-4"
     }
   },
   "deployment": {
-    "pipeline": 2871382210,
-    "job": 16654205029,
+    "pipeline": 2871483161,
+    "job": 16654973464,
     "status": "success",
     "served_css_verified": true,
-    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
+    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-4",
     "served_build_verified": false,
-    "verification_scope": "Live homepage stylesheet URL and all corrected compact CSSOM rules verified after reload. Desktop header is 220px and workspace starts x=220 at 1363×936. Entire build commit marker and narrow browser geometry not verified."
+    "verification_scope": "Live CSSOM confirms homepage compact transition only at <=900px. At 1363px sidebar is fixed/scrollable/220px and both main/footer start x=220. Source cascade matches Liquidity at seven widths; narrow-device geometry not verified."
   },
-  "next_issue": "XRB-001"
+  "next_issue": "XRB-001",
+  "prior_revision": "memory/archive/2026-09-22-home-before-sidebar-alignment-evidence.json",
+  "layout_alignment": {
+    "reference_page": "public/xrbc-liquidity-pool.html",
+    "shared_css": "public/xrbc-dynamic-ui.css",
+    "desktop_sidebar_min_width_px": 901,
+    "compact_header_max_width_px": 900,
+    "sidebar_width_px": {
+      "901_to_1180": 188,
+      "above_1180": 220
+    },
+    "scrolling": "Fixed full-height desktop navigation with overflow-y:auto; main content scrolls beside it. Preserve existing scrollable market/action panels.",
+    "scope": "Trade and Liquidity use this rule now. Keep other pages in the same visual family during future requested work; no broad restyling in this correction.",
+    "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem."
+  }
 }

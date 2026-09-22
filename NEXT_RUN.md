@@ -1,11 +1,11 @@
-# Next run — homepage responsive header repaired
+# Next run — shared sidebar alignment
 
-Active savepoint: `SAVEPOINT-2026-09-22-xrbc-home-responsive-header`. Read `ai-bootstrap.json`, `latest_savepoint.record`, `memory/operating-protocol.json`, `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json` and relevant known errors.
+Active savepoint: `SAVEPOINT-2026-09-22-xrbc-home-responsive-header`. Read `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json`, the operating protocol and relevant known errors.
 
-Frontend master `3e15aaec8d8ae875d3598ea259f947a6bb6ae881`; implementation `a20800962133141d7e2d5c99e03ddda6ccd93d57` through MR !10. Production pipeline 2871382210 and deploy job 16654205029 succeeded; live homepage serves corrected CSS. Desktop rendering verified at 1363×936; narrow-device geometry still requires confirmation. Homepage CSS version `20260922-3`.
+Frontend master `0dcf99de7f4e5f6847689e298c1a7684d1b81369`; correction `3701c892041df7a0cd948e3dff6faa6f888fae92` via MR !11. This supersedes the MR !10 top-header choice at 901–1180px. Trade must match the Liquidity screenshot: fixed scrollable left sidebar above 900px, 188px through 1180px and 220px above, compact header only <=900px. Footer/main content clear the rail. Shared CSS, no copied page-local design.
 
-UI-001: source-cascade/CI-verified compact-header repair; confirm rendered page at the user's 1158px width, at 900/901 and 1180/1181 boundaries, and on phone. A partial breakpoint migration retained fixed full-screen positioning. Keep complete responsive transitions together. Current layout fix does not change wallet behavior.
+Seven-width source CSS comparisons against Liquidity pass; all 24 tests and runtime/gate CI pass. Homepage executable scripts are unchanged. User-device visual comparison remains pending; no live wallet test. Existing 19 advisory site-validation findings remain.
 
-Previous XRBitcoin wallet recovery remains in `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json`. XRB-007/008 still need real-device cancel/restart and timeout checks. **Next implementation: XRB-001 first-click hydration** after the current homepage check. Preserve pending/ambiguous signing guards. Continue BRIDGE-001 and existing metadata/reference/CI queue subsequently.
+Next implementation is still XRB-001; XRB-007/008 retain device-retest status. Preserve financial request guards. Do not broaden this layout correction into unrelated functions or project-wide rewrites.
 
-24 tests, 10-page runtime/CSP, 12-tool/7-tier gates and 12 homepage script syntax checks pass. Seven-width CSS checks are source-level, not browser geometry. Same 19 advisory site-validation findings remain. No live wallet or transaction test. Backend `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563` is a prior audit baseline and was not changed.
+MR !11 deployment verified: pipeline 2871483161 and deploy job 16654973464 succeeded. Live stylesheet v=20260922-4 has only the <=900px compact-header transition. Desktop rail/main/footer geometry verified at 1363px; narrow-device geometry remains unverified.

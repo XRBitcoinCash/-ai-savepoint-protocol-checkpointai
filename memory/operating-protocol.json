@@ -88,6 +88,7 @@
     "XRB-008"
   ],
   "responsive_layout_checks": [
+    "Preserve the saved reference layout while repairing visibility. Trade/Liquidity use a fixed left rail above 900px; never move one to a top header at desktop widths without user direction.",
     "Identify exact page from screenshot and source; distinguish XRBC homepage from XRBitcoin.",
     "Move complete position/inset/height/display/navigation/content-offset resets together when changing a breakpoint.",
     "Check screenshot width and widths immediately below/above old and new breakpoints.",

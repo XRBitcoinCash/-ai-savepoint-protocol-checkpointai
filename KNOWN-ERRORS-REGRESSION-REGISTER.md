@@ -267,3 +267,5 @@ XRB-007 and XRB-008 have source fixes `87b00f81c86e85686b874c93ab65b02630984027`
 ## 2026-09-22 homepage responsive-header follow-up
 
 UI-001: XRBC homepage header expanded across the screen at 901–1180px but retained fixed top/bottom positioning. Fixed through MR !10 (`a20800962133141d7e2d5c99e03ddda6ccd93d57` / merge `3e15aaec8d8ae875d3598ea259f947a6bb6ae881`). Seven-width CSS cascade and CI checks pass; device rendering check pending. All homepage executable scripts unchanged. Prevention and evidence: `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. XRB-001 and existing wallet retest requirements remain open.
+
+UI-001 correction: MR !11 restores the documented Liquidity-reference desktop sidebar above 900px. The prior 1180px compact-header choice was wrong for the intended desktop layout. Source parity/CI pass; user-device comparison remains pending.
