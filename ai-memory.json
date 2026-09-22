@@ -1280,5 +1280,20 @@
     "deployment_run": 35744758719,
     "live_wallet_verified": false,
     "verification": "Live public page: all three tabs switch; receipt cards follow every panel; five XRP images loaded. No real wallet/transaction check."
+  },
+  "current_jcs_receipt": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "implementation_commit": "364f87d72df5505e4d72e603de6c21f6778ac479",
+    "backend_commit": "f489a0c2b3dc60b3fc1f5d70cf29ae5f2e909d70",
+    "checkpoint": "JCS-RECEIPT-POLICY-2026-09-22.md",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-JCS-RECEIPT-POLICY.json",
+    "scope": "JCS receipt artwork, NFT metadata and mint memo; finish the frontend/backend policy synchronization.",
+    "status": "deployed-public-source-verified-wallet-retest-required",
+    "deployment_run": 35749304173,
+    "live_wallet_verified": false,
+    "verification": "Matching receipt contracts and updated signed memo pass focused deposit/withdrawal checks; existing digests unchanged; both logos render; live backend release 1.1.0 ready.",
+    "public_source_verified": true,
+    "deployment_status": "success"
   }
 }

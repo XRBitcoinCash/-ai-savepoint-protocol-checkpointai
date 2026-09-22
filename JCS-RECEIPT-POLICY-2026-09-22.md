@@ -1,0 +1,15 @@
+# JCS receipt policy and pair artwork — 2026-09-22
+
+Topic savepoint: `SAVEPOINT-2026-09-22-jcs-receipt-policy`. JCS frontend `XRBitcoinCash/JCS-token-on-the-XRPL`, main, commit `364f87d72df5505e4d72e603de6c21f6778ac479` (previous `ba43da147fa6bf7ec743ecb24d755dfd19da8b32`). Shared backend `XRBitcoinCash/xrbitcoincash.github.io`, main, commit `f489a0c2b3dc60b3fc1f5d70cf29ae5f2e909d70` was already committed when this continuation began.
+
+The user requested the XRBC historical-receipt treatment for JCS: transaction proof only, not liquidity or LP tokens, not for resale; both JCS and XRP logos; the notice inside the NFT metadata and mint memo.
+
+The backend already contained the policy and artwork update. The frontend still expected the earlier metadata, so its exact metadata comparison would block preparation against the new backend. Synchronized the embedded receipt contract in `index.html` with the backend. Updated receipt explanations and review rows in `js/jcs-nft.js` and its identical embedded copy. Actual NFT metadata now includes the description, purpose/ownership attributes and `not_lp_tokens`, `not_liquidity`, `not_for_resale` properties. The signed mint memo includes the source hash, facts digest, explicit policy flags and “Transaction proof only. Not liquidity or LP tokens. Not for resale.” Artwork has both existing token logos and labels LP amounts as movements in the source transaction.
+
+Preserved ledger normalization, existing receipt facts/digests/URIs, JCS issuer and application identity, wallet/signing guards, trading/liquidity behavior and receipts below the active workspace. The historical `NOTICE` remains in the hashed record for compatibility; the new `RECEIPT_NOTICE` controls presentation and metadata. Keep browser/backend metadata and mint validation synchronized. No new transfer flag, royalty, delegated issuer or sell offer. Issuer-related XRPL transfer exceptions still apply; do not call these permanently non-transferable.
+
+Essential checks passed: frontend/backend core equality, standalone/embedded NFT code equality, JavaScript syntax, deposit/withdrawal fixtures, unchanged historical facts/digests, explicit metadata/memo policy, tampered-memo rejection, 201-byte URI and 355-byte receipt memo. Deterministic PNGs rendered with both logos at about 125 KB each. Backend API workflow `35747431038` passed; live receipt status reports release `1.1.0`, ready. Frontend committed bytes read back and match the reviewed files.
+
+Frontend deployment: GitHub Pages run `35749304173` succeeded. The cache-refreshed public homepage exactly matches the committed source, including the new metadata, memo and review text. The first public read during deployment still served the prior page; use a hard refresh for the next test.
+
+Next: hard-refresh the JCS page, connect the source wallet, check an existing successful transaction hash and review the optional mint in Xaman. No additional deposit is needed. Real wallet mint/signing remains unverified. Existing minted on-ledger memos cannot be rewritten. Keep this topic checkpoint separate from the XRBitcoin global repair queue.

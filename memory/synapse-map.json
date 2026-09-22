@@ -524,6 +524,13 @@
       "registry_id": "XRB-009",
       "status": "open",
       "file": "memory/known-errors.json"
+    },
+    {
+      "id": "savepoint:jcs-receipt-policy-2026-09-22",
+      "type": "savepoint",
+      "status": "deployed-public-source-verified-wallet-retest-required",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-JCS-RECEIPT-POLICY.json",
+      "human_file": "JCS-RECEIPT-POLICY-2026-09-22.md"
     }
   ],
   "edges": [
@@ -1036,6 +1043,16 @@
       "from": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
       "rel": "records-separate-failure",
       "to": "issue:XRB-009"
+    },
+    {
+      "from": "repo:memory",
+      "rel": "records-topic",
+      "to": "savepoint:jcs-receipt-policy-2026-09-22"
+    },
+    {
+      "from": "savepoint:jcs-receipt-policy-2026-09-22",
+      "rel": "uses",
+      "to": "repo:backend"
     }
   ],
   "query_hints": {
@@ -1150,6 +1167,9 @@
     "xrbitcoin_market_history": [
       "issue:XRB-009",
       "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"
+    ],
+    "jcs_receipts": [
+      "savepoint:jcs-receipt-policy-2026-09-22"
     ]
   },
   "active_savepoint": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"

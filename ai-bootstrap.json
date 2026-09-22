@@ -262,6 +262,13 @@
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
       "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
       "memory/audits/2026-09-22-xrbc-home-responsive-header.json"
+    ],
+    "jcs_receipts": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-JCS-RECEIPT-POLICY.json",
+      "JCS-RECEIPT-POLICY-2026-09-22.md",
+      "JCS-WORKSPACE-LAYOUT-2026-09-22.md",
+      "JCS-WALLET-RECOVERY-2026-09-22.md",
+      "memory/known-errors.json"
     ]
   },
   "transition": {

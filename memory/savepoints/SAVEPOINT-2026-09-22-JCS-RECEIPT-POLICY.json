@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-jcs-receipt-policy",
+  "date": "2026-09-22",
+  "scope": "JCS receipt artwork, NFT metadata and mint memo; finish the frontend/backend policy synchronization.",
+  "status": "deployed-public-source-verified-wallet-retest-required",
+  "human_record": "JCS-RECEIPT-POLICY-2026-09-22.md",
+  "source_frontend": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "baseline": "ba43da147fa6bf7ec743ecb24d755dfd19da8b32",
+    "commit": "364f87d72df5505e4d72e603de6c21f6778ac479",
+    "files": [
+      "index.html",
+      "js/jcs-nft.js"
+    ]
+  },
+  "source_backend": {
+    "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+    "branch": "main",
+    "commit": "f489a0c2b3dc60b3fc1f5d70cf29ae5f2e909d70",
+    "file": "xrpl-proxy/server.js",
+    "already_present_at_continuation": true
+  },
+  "policy": "Transaction proof only. Not liquidity or LP tokens. Not for resale.",
+  "verification": {
+    "core_and_embedded_source_parity": true,
+    "syntax": true,
+    "deposit_and_withdrawal_fixtures": true,
+    "existing_facts_and_digests_preserved": true,
+    "memo_bytes": 355,
+    "uri_bytes": 201,
+    "paired_logo_pngs_rendered": true,
+    "png_bytes": [
+      124858,
+      126966
+    ],
+    "backend_ci_run": 35747431038,
+    "backend_ci_status": "success",
+    "live_backend_release": "1.1.0",
+    "live_backend_ready": true,
+    "frontend_read_back_matches": true,
+    "pages_run": 35749304173,
+    "pages_status": "success",
+    "public_page_verified": true,
+    "live_wallet_verified": false,
+    "public_page_exact_source_match": true,
+    "public_page_url": "https://jesuschristsavestoken.com/?v=364f87d72df5505e4d72e603de6c21f6778ac479"
+  },
+  "next_check": "Hard-refresh JCS; connect the source wallet, reuse an existing validated transaction hash, review the artwork and mint memo, then separately sign if desired. No additional deposit required.",
+  "preserve": [
+    "Historical hashed record NOTICE and receipt URLs.",
+    "JCS issuer and Xaman app identity.",
+    "Pending request, duplicate and wallet-change guards.",
+    "Existing trading/liquidity behavior and tool-first receipt placement.",
+    "Existing minted on-ledger memos remain immutable."
+  ],
+  "global_queue_unchanged": "XRBitcoin XRB-001 and existing follow-up issues remain separately routed."
+}
