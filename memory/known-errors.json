@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "xrbc-ecosystem-known-errors",
+  "updated": "2026-09-22",
+  "purpose": "Persistent error/regression ledger. Read before edits; update status instead of deleting resolved failures.",
+  "status_values": [
+    "open",
+    "retest-required",
+    "resolved",
+    "historical-reverify",
+    "no-change-this-pass"
+  ],
+  "active_source": {
+    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "observed_head": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+  },
+  "highest_priority": {
+    "id": "XRB-001",
+    "status": "open",
+    "page": "public/xrbitcoin-links.html",
+    "symptom": "After completing Xaman authorization, the user must press Connect wallet a second time before the page registers the wallet.",
+    "current_hypothesis": "The prior cross-project session isolation intentionally disabled normal-browser success/retrieved hydration. The active deliberate connect attempt needs a bounded event-completion bridge like the working XRBC homepage, without restoring unrestricted passive browser account adoption.",
+    "no_fix_committed": true,
+    "next_checks": [
+      "Compare current XRB wireSdk/connect with XRBC public/index.html success/retrieved/ready handling.",
+      "Bind browser success/retrieved only to the active XRB S.authAttempt, current SDK, and auth version.",
+      "Reuse adoptAccount/application verification.",
+      "Prove no second authorize call and no transaction payload.",
+      "Extend synthetic test so first authorization completes S.connected without a second click.",
+      "Perform real browser connect/disconnect/preview retest."
+    ]
+  },
+  "xrbitcoin": [
+    {
+      "id": "XRB-001",
+      "status": "open",
+      "summary": "Second Connect click required to register wallet.",
+      "fix_commit": null
+    },
+    {
+      "id": "XRB-002",
+      "status": "resolved",
+      "summary": "liquidity-app blocked by stale CSP hash.",
+      "fix_commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+      "pipeline": 2870872464
+    },
+    {
+      "id": "XRB-003",
+      "status": "resolved",
+      "summary": "Wallet shortcut was scroll-only and Preview appeared frozen while disconnected.",
+      "fix_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
+      "pipeline": 2870912971
+    },
+    {
+      "id": "XRB-004",
+      "status": "resolved",
+      "summary": "XRBCXamanStandard undefined because script-src omitted self.",
+      "fix_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+      "pipeline": 2870937665
+    },
+    {
+      "id": "XRB-005",
+      "status": "retest-required",
+      "summary": "Ambiguous Signing blocked/reset-loop from same-origin cross-app PKCE state.",
+      "fix_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+      "test_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "pipeline": 2870991044,
+      "side_effect_link": "XRB-001"
+    },
+    {
+      "id": "XRB-006",
+      "status": "resolved",
+      "summary": "XRBC-only navigation leaked into XRBitcoin sidebar.",
+      "fix_commit": "be62d4ce19f44bd4c94a6044e78d47b4c81067ea"
+    }
+  ],
+  "xrbc": {
+    "current_session_updates": [
+      "Coinbase-style homepage exchange shell.",
+      "Project-wide fixed desktop tool sidebar + responsive top navigation.",
+      "Separate exchange/workbench family for Trade/Liquidity/Developers.",
+      "Developer dedicated exchange sidebar.",
+      "Narrow-desktop shell fixes and CTA readability updates."
+    ],
+    "wallet_reference": "Use public/index.html deliberate Connect plus success/retrieved/ready session completion as behavioral reference for XRB-001, but do not copy the entire XRBC state machine.",
+    "historical_reverify": [
+      "Opening-wallet/stuck authorization states.",
+      "QR/deeplink handoff failures.",
+      "service-busy/Render wake states.",
+      "reconnect after closing Xaman."
+    ]
+  },
+  "jcs": {
+    "current_session_status": "no-change-this-pass",
+    "historical_reverify": [
+      "Wallet connection friction.",
+      "LP/NFT mint popup flashes/disappears.",
+      "Return URL mismatch in liquidity/NFT flow.",
+      "Prayer NFT verification/setup incomplete states.",
+      "Media synchronization/rendering/mobile wrapping issues."
+    ]
+  },
+  "invariants": [
+    "Never substitute Xaman application IDs between projects.",
+    "Connection is authorization-only; no transaction payload during connect.",
+    "Remembered public account, active signing authorization and app identity are separate facts.",
+    "One deliberate write intent creates at most one Xaman payload.",
+    "CSP changes are runtime/security changes and require verification.",
+    "Do not call a green CI pipeline a live-wallet verification.",
+    "Keep resolved failures as regression fixtures with commit/pipeline evidence."
+  ],
+  "human_registry": "KNOWN-ERRORS-REGRESSION-REGISTER.md"
+}
