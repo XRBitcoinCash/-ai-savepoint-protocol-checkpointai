@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "xrbitcoin",
+    "runtime-repair",
+    "xaman",
+    "liquidity",
+    "csp",
+    "token-assets",
+    "release-validation"
+  ],
+  "context": "XRBitcoin displayed Limit Orders while its wallet, existing pool and pool-activity surfaces stayed inert. Source inspection showed the main liquidity-app controller was blocked by a stale CSP script hash; the underlying validated pool reader matched the original XRBitcoin 3.0.0 implementation.",
+  "frontend": {
+    "provider": "GitLab",
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "page": "public/xrbitcoin-links.html",
+    "stylesheet": "public/xrbitcoin-dynamic-ui.css",
+    "runtime_contract": "scripts/verify-runtime.mjs",
+    "rollback_parent": "be62d4ce19f44bd4c94a6044e78d47b4c81067ea",
+    "implementation_commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+    "implementation_pipeline_id": 2870872464,
+    "implementation_pipeline_status": "success",
+    "page_blob_sha": "bb123ba2c89f0d312eee30967a2e840d14ea13f8",
+    "page_sha256": "4b1f20cbfb977646457ec8eb4f460931f64a30f91d0b5ae2ad2fa2638c4a4cf2",
+    "release": "3.0.1"
+  },
+  "root_cause": {
+    "kind": "content-security-policy-inline-script-hash-drift",
+    "blocked_script": "liquidity-app",
+    "stale_hash": "uIXK9AVJewO9Key/R+b5vN4i+6873ryHq4UuopJyITA=",
+    "repaired_hash": "8TOaagbO5wAAmFEfAngq8PeNZX+bEG27XccrtxXGtJA=",
+    "symptom": "Later independently authorized read-only scripts could run, but the wallet/pool/liquidity controller never initialized, leaving pool and activity UI in static waiting states.",
+    "regression_guard": "xrbitcoin-links.html added to scripts/verify-runtime.mjs so script parse/control/CSP drift blocks release."
+  },
+  "xaman": {
+    "public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+    "do_not_substitute_xrbc_key": true,
+    "authorization_only": true,
+    "shared_controller": "XRBCXamanStandard.authorizeAndWarm()",
+    "authorize_timeout_ms": 180000,
+    "backend_readiness_parallel": true,
+    "no_transaction_payload_during_connect": true,
+    "visible_countdown": true,
+    "explicit_reset_restart": true,
+    "automatic_replacement_authorization": false
+  },
+  "pool": {
+    "base": {
+      "symbol": "XRB",
+      "issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
+      "currency_hex": "5852626974636F696E0000000000000000000000"
+    },
+    "quote": {
+      "symbol": "XRP",
+      "native": true
+    },
+    "validated_reader": [
+      "server_info",
+      "amm_info"
+    ],
+    "logic_regression_found": false,
+    "controller_reachability_repaired": true,
+    "activity_source": "validated snapshots from the same live pool reader"
+  },
+  "ui": {
+    "wallet_connection_position": "Directly above the liquidity manager.",
+    "wallet_details_position": "Separate lower balances/LP-position panel.",
+    "token_assets": {
+      "xrb": "/xrbitcoin-logo-128.png",
+      "xrp_canonical": "/assets/tokens/xrp.svg",
+      "xrp_rendering": "Reviewed embedded SVG fallback with data-local-token-asset provenance pointer."
+    },
+    "token_identity_rule": "Images are presentation only. Ledger identity remains exact issuer+currency/native identity."
+  },
+  "project_boundary": {
+    "xrbitcoin_sidebar": [
+      "Exchange",
+      "Limit orders",
+      "XRB Watchtower",
+      "Security",
+      "Support"
+    ],
+    "related_projects": [
+      "XRBitcoinCash",
+      "JCS",
+      "Creature NFT"
+    ],
+    "xrbc_tool_navigation_inside_xrbitcoin": false
+  },
+  "verification": {
+    "duplicate_html_ids": 0,
+    "executable_inline_scripts": 15,
+    "all_inline_script_csp_hashes_current": true,
+    "xrb_xaman_key_verified": true,
+    "xrbc_xaman_key_absent_from_xrb_config": true,
+    "runtime_contracts": "success",
+    "validate_repository": "success",
+    "secret_detection": "success",
+    "semgrep_sast": "success",
+    "deploy_pages": "success",
+    "browser_custom_domain_verified": false
+  },
+  "human_checkpoint": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md"
+}
