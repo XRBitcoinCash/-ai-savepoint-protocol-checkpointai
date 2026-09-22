@@ -101,13 +101,14 @@
       "file": "public/xrbitcoin-links.html",
       "url": "https://xrbitcoincash.com/xrbitcoin-links.html",
       "title": "XRBitcoin | Unified Trading & Liquidity Workspace",
-      "blob_sha": "169d22385708d27ea7007a81bf174fc4dd0e55a0",
+      "blob_sha": "a2a0093960296dc4a446725691da449f5dde41a7",
       "action": "Preserve the repaired active XRBitcoin trading/liquidity workspace; wallet, pool and activity controller must remain CSP-authorized and runtime-contract covered.",
-      "content_sha256": "3915c74b82ae8c8a9314f4984ef00f04755896c648aa61cc018ba37b82a37620",
-      "commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
-      "pipeline_id": 2870937665,
+      "content_sha256": "06f0b27bcdffebe44f2c042095d2e4cbade52d7786db9a175da8ea4cde50ca4e",
+      "commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+      "pipeline_id": 2870991044,
       "pipeline_status": "success",
-      "release": "3.0.1"
+      "release": "3.0.1",
+      "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898"
     },
     "xrb_security_reference": {
       "file": "public/xrbitcoin-security.html",
@@ -438,16 +439,16 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
-    "human_record": "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
+    "human_record": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
     "status": "implemented",
-    "scope": "Repair XRBitcoin Wallet/Connect and Preview controls so disconnected actions enter Xaman authorization instead of appearing frozen.",
-    "implementation_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
-    "implementation_pipeline_id": 2870912971,
+    "scope": "Repair XRBitcoin wallet connection by allowing the same-origin shared Xaman helper through CSP and fix CI's CSP parser.",
+    "implementation_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+    "implementation_pipeline_id": 2870937665,
     "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "c62663bf7c4dd8a72bec2b4f43f812f274aabe5a",
-    "human_checkpoint_create_commit": "f3b6c2bb1f3cc75ac0a457ba98387bc5e9681560",
+    "machine_savepoint_create_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d",
+    "human_checkpoint_create_commit": "4cf7772b9526b685bf0c893e7c98b03b16c734d9",
     "page": "public/xrbitcoin-links.html",
     "browser_custom_domain_verified": false
   },
@@ -468,18 +469,19 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
-    "human_record": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+    "human_record": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
     "status": "implemented",
-    "scope": "Repair XRBitcoin wallet connection by allowing the same-origin shared Xaman helper through CSP and fix CI's CSP parser.",
-    "implementation_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
-    "implementation_pipeline_id": 2870937665,
+    "scope": "Repair XRBitcoin's ambiguous same-origin Xaman browser session lifecycle and validate the new behavior with synthetic wallet tests.",
+    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "implementation_pipeline_id": 2870991044,
     "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d",
-    "human_checkpoint_create_commit": "4cf7772b9526b685bf0c893e7c98b03b16c734d9",
+    "machine_savepoint_create_commit": "718f91159c6888e86702a1241c63869132d725af",
+    "human_checkpoint_create_commit": "ef98363385dc7cb17cf5e28473949cc38d51d939",
     "page": "public/xrbitcoin-links.html",
-    "browser_custom_domain_verified": false
+    "browser_live_retest_after_final_deploy": false
   },
   "savepoint_format": [
     "context",
@@ -1131,6 +1133,21 @@
       "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
       "liquidity_app_csp_hash": "mWW0cZ2Ec6kN8vEwV6o2L+sStmr8F7rtRlBpxBlZ19I=",
       "runtime_verifier": "CSP extraction corrected so inner apostrophes no longer truncate the policy string"
+    },
+    "xrbitcoin_xaman_session_lifecycle_simulation": {
+      "status": "implemented",
+      "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+      "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "pipeline_id": 2870991044,
+      "pipeline_status": "success",
+      "root_cause": "Origin-scoped XummPkceJwt state could be passively restored across separate XRBC/XRB Xaman app IDs, causing application mismatch and sessionFault.",
+      "browser_restore": "disabled for normal browser; xApp-only automatic restore",
+      "explicit_connect": "clears PKCE cache and installs fresh XRB SDK before authorizeAndWarm",
+      "deterministic_disconnect": true,
+      "modal_free_reset": true,
+      "synthetic_scenarios": 7,
+      "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+      "browser_live_retest_after_final_deploy": false
     }
   }
 }
