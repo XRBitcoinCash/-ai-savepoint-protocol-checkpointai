@@ -16,7 +16,7 @@ This secondary memory improves continuity only when loaded. It is not internal p
 
 The user prefers task-relevant use of connected GitHub, GitLab, Google and other sources. Discover tools and perform appropriate harmless access checks each session. Record provider, resource, permitted operation and verification date; never store credentials. A past successful connection does not prove present access. Ask when authentication, approval, protected workflows or genuinely new authority is needed.
 
-Current session: user authorized XRBitcoin repairs; bounded wallet control/recovery patch merged through MR !9. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
+Current session: user authorized XRBitcoin wallet recovery (MR !9) and restoration of the XRBC homepage responsive header (MR !10). Both bounded repairs deployed through normal workflows. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
 
 Keep public memory free of secrets and private personal records. Summarize redacted, task-relevant evidence rather than publishing raw tool output or authenticated logs.
 
@@ -57,3 +57,7 @@ For Xaman/XRPL, read the project invariants: authorization-only Connect, exact p
 Each checkpoint records task scope, starting source hashes, files changed, tests run/results, CI run URLs, live checks or their absence, outstanding issues, next issue and rollback point. Synchronize bootstrap, latest record, ai-memory, graph and NEXT_RUN in one memory commit where supported. Keep human-readable history and a compact machine entrypoint; validate all local pointers/issue IDs before publishing, then read back the committed bytes.
 
 Model tiers and reasoning settings may help allocate effort, but never relax this protocol or replace evidence.
+
+## Responsive layout prevention
+
+For breakpoint changes, move the full position/inset/height/inner display/navigation/content-offset transition together. Check the reported width and both sides of old/new breakpoints, winning specificity and cache version. Identify the exact page first. Record source-CSS checks separately from rendered browser/device geometry and live wallet verification.

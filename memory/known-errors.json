@@ -13,7 +13,7 @@
   "active_source": {
     "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
     "branch": "master",
-    "observed_head": "eb437dd40f3a22951cca9709353c5696d5df519f"
+    "observed_head": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881"
   },
   "highest_priority": {
     "id": "XRB-001",
@@ -152,7 +152,8 @@
       "Project-wide fixed desktop tool sidebar + responsive top navigation.",
       "Separate exchange/workbench family for Trade/Liquidity/Developers.",
       "Developer dedicated exchange sidebar.",
-      "Narrow-desktop shell fixes and CTA readability updates."
+      "Narrow-desktop shell fixes and CTA readability updates.",
+      "Homepage partial 900→1180px responsive-header migration repaired via MR !10; source checks pass, device rendering check pending."
     ],
     "wallet_reference": "Use public/index.html deliberate Connect plus success/retrieved/ready session completion as behavioral reference for XRB-001, but do not copy the entire XRBC state machine.",
     "historical_reverify": [
@@ -355,6 +356,28 @@
         "Connect, cancel/restart, QR/deep link, app resume, two-tab and backend cold-start/error cases.",
         "Never sign or submit a live financial transaction merely to audit."
       ]
+    },
+    {
+      "id": "UI-001",
+      "status": "retest-required",
+      "priority": "P1",
+      "summary": "XRBC homepage navigation covers trading workspace between 901–1180px after incomplete compact-header breakpoint migration.",
+      "evidence_level": "user-reported screenshot; source-cascade reproduced and repaired; CI-verified",
+      "source_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "paths": [
+        "public/xrbc-dynamic-ui.css",
+        "public/index.html"
+      ],
+      "fix_commit": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
+      "merge_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/10",
+      "repair_evidence": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
+      "acceptance_checks": [
+        "At reported 1158px width, compact navigation occupies header only and main content is reachable.",
+        "Check 900/901 and 1180/1181 boundary widths plus phone width.",
+        "Preserve desktop layout and wallet/transaction scripts."
+      ],
+      "verification": "CSS cascade and CI pass; narrow-device rendered geometry remains to check."
     }
   ],
   "backend_ci": [

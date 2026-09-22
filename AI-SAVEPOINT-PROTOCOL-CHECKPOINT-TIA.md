@@ -685,3 +685,7 @@ TODO:
 ### [SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery] XRBitcoin wallet recovery
 
 Current checkpoint: `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json`. Implementation `87b00f81c86e85686b874c93ab65b02630984027` merged as `eb437dd40f3a22951cca9709353c5696d5df519f` via MR !9. XRB-007/008 CI-verified, device retest pending; XRB-001 remains next. One canonical wallet-control area; sidebar shortcut never starts authorization. See `XRBITCOIN-WALLET-RECOVERY-2026-09-22.md`.
+
+### [SAVEPOINT-2026-09-22-xrbc-home-responsive-header] XRBC homepage responsive header
+
+Current checkpoint `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json`. Implementation `a20800962133141d7e2d5c99e03ddda6ccd93d57` merged as `3e15aaec8d8ae875d3598ea259f947a6bb6ae881` via MR !10. Partial breakpoint transition repaired; source-CSS checks pass. Narrow-screen device confirmation remains. See `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. Next implementation remains XRB-001.

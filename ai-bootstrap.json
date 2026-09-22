@@ -39,6 +39,32 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
+      "scope": "XRBitcoinCash homepage responsive header overlay; public/index.html and homepage-scoped shared CSS only. Screenshot identifies XRBC homepage, distinct from prior XRBitcoin wallet repair.",
+      "implementation_commit": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
+      "merge_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+      "pipeline_id": 2871382210,
+      "pipeline_status": "success",
+      "page": "public/index.html",
+      "browser_live_retest_after_final_deploy": true,
+      "verification_scope": "Seven source-CSS widths and 24 unit tests pass; live desktop rendering and served compact CSS verified. Narrow device geometry remains pending.",
+      "served_build_verified": false,
+      "served_css_verified": true,
+      "deploy_job": 16654205029
+    },
+    "same_day_discovery_change": {
+      "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
+      "pipeline_id": 2867921308,
+      "pipeline_status": "success"
+    },
+    "next_major_pass": "Confirm repaired homepage at reported width; then continue XRB-001 and pending wallet device checks.",
+    "active_memory_savepoint": {
+      "id": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
+      "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
+      "status": "deployed-device-render-retest-required"
+    },
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header",
+    "previous_verified_frontend_change": {
       "scope": "XRBitcoin wallet controls, cancellation and startup recovery only. User confirmed this page after XRBC/XRB ambiguity was explained.",
       "implementation_commit": "87b00f81c86e85686b874c93ab65b02630984027",
       "merge_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
@@ -49,30 +75,6 @@
       "verification_scope": "24 unit tests plus runtime/CSP and gates; real Xaman not verified.",
       "deploy_job": 16653266144,
       "served_build_verified": false
-    },
-    "same_day_discovery_change": {
-      "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
-      "pipeline_id": 2867921308,
-      "pipeline_status": "success"
-    },
-    "next_major_pass": "Verify deployed recovery on device; repair XRB-001 first-click hydration separately.",
-    "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
-      "human_record": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
-      "status": "merged-device-retest-required"
-    },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
-    "previous_verified_frontend_change": {
-      "scope": "XRBitcoin Xaman session lifecycle repair with synthetic simulation",
-      "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
-      "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
-      "pipeline_id": 2870991044,
-      "pipeline_status": "success",
-      "page": "public/xrbitcoin-links.html",
-      "root_cause": "Prior checkpoint attributes ambiguous wallet state to passive/cross-app cache restore; live provider behavior is not reverified by this audit.",
-      "browser_live_retest_after_final_deploy": false,
-      "verification_scope": "Historical implementation and CI/synthetic checks only. Current user report XRB-001 and synthetic XRB-007/008 remain open."
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
@@ -100,23 +102,24 @@
       "machine_file": "memory/known-errors.json",
       "highest_priority": "XRB-001",
       "highest_priority_status": "open",
-      "frontend_head_when_recorded": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "frontend_head_when_recorded": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
       "audit_checkpoint": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
-      "repair_checkpoint": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery"
+      "repair_checkpoint": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header"
     },
     "observed_source_heads": {
-      "frontend": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "frontend": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
       "backend": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
       "observed": "2026-09-22",
       "refresh_before_write": true
     },
     "current_validation": {
-      "pipeline": 2871255138,
+      "pipeline": 2871382210,
       "status": "success",
       "validator_exit_code": 1,
       "advisory_finding_lines": 19,
       "unit_tests_pass": 24,
-      "live_wallet_verified": false
+      "live_wallet_verified": false,
+      "served_css_verified": true
     }
   },
   "safety_invariants": [
@@ -169,6 +172,7 @@
       "memory/synapse-map.json"
     ],
     "ui_design": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
       "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
       "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
@@ -198,6 +202,7 @@
       "memory/synapse-map.json"
     ],
     "trade_ui": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
@@ -237,6 +242,11 @@
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
       "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
       "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json"
+    ],
+    "responsive_layout": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
+      "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
+      "memory/audits/2026-09-22-xrbc-home-responsive-header.json"
     ]
   },
   "transition": {

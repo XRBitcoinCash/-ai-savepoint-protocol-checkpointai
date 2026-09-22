@@ -7,7 +7,7 @@
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
   "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
   "authorization": {
-    "current_task": "User authorized XRBitcoin corrections and confirmed continuing; wallet control/recovery patch merged via standard MR.",
+    "current_task": "User requested restoring XRBC homepage shown in screenshot; bounded CSS repair merged via standard MR !10.",
     "rules": [
       "Capability availability is not authorization.",
       "Verify access each session; stop for missing permissions/approval.",
@@ -28,7 +28,7 @@
     "gitlab": {
       "resource": "xrbitcoincash-group/xrbitcoincash-project",
       "read": "verified",
-      "write": "Verified branch commit and standard MR !9 merge; no protection bypass."
+      "write": "Verified standard MR !9 and !10 merges; no protection bypass."
     },
     "google": {
       "status": "user permits relevant use; not probed"
@@ -86,5 +86,12 @@
   "linked_blockers": [
     "XRB-007",
     "XRB-008"
+  ],
+  "responsive_layout_checks": [
+    "Identify exact page from screenshot and source; distinguish XRBC homepage from XRBitcoin.",
+    "Move complete position/inset/height/display/navigation/content-offset resets together when changing a breakpoint.",
+    "Check screenshot width and widths immediately below/above old and new breakpoints.",
+    "Account for selector specificity and refresh CSS cache key.",
+    "Label source cascade, rendered geometry, served build and live wallet checks separately."
   ]
 }

@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0.0",
+  "source_snapshots": {
+    "frontend": {
+      "commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+      "implementation": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
+      "baseline": "eb437dd40f3a22951cca9709353c5696d5df519f"
+    },
+    "backend": {
+      "commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "verification": "prior-audit-only"
+    }
+  },
+  "root_cause": "Homepage breakpoint moved to 1180px while full compact positioning/grid/navigation resets remained at generic 900px. In 901–1180px header becomes full-width but remains fixed top/bottom 0 with vertical links.",
+  "changes": [
+    "Complete homepage compact header positioning/grid/nav/brand/footer rules",
+    "Homepage stylesheet cache version 20260922-3"
+  ],
+  "verification": {
+    "unit_tests": 24,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "homepage_inline_scripts_parsed": 12,
+    "homepage_scripts_byte_identical": true,
+    "css_cascade_widths": [
+      390,
+      900,
+      901,
+      1158,
+      1180,
+      1181,
+      1363
+    ],
+    "css_check_scope": "source CSS selector/media/specificity resolution, not rendered geometry",
+    "merge_request_pipeline": 2871378469,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19
+  },
+  "css_cascade_results": [
+    {
+      "variant": "before",
+      "width": 390,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "100%",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 900,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "100%",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 901,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 1158,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 1180,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 1181,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "before",
+      "width": 1363,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "0",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 900,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "0",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 901,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "0",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 1158,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "0",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 1180,
+      "header_position": "sticky",
+      "header_bottom": "auto",
+      "inner_display": "grid",
+      "inner_min_height": "0",
+      "nav_direction": "row",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 1181,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    },
+    {
+      "variant": "after",
+      "width": 1363,
+      "header_position": "fixed",
+      "header_bottom": "0",
+      "inner_display": "flex",
+      "inner_min_height": "100%",
+      "nav_direction": "column",
+      "footer_left_margin": "0"
+    }
+  ],
+  "source_sha256": {
+    "public/index.html": "bb0daf4b350f504ca3774399132ad5090473f1e87900acacb76bb4ee65a63d76",
+    "public/xrbc-dynamic-ui.css": "d61cccb46626cb09ed2f56bb178b4cac5187e52edc73ea6e2a1d2df515555d63"
+  },
+  "browser": {
+    "pre_deploy_desktop": "Inspected live at 1363×936; desktop rail and trading workspace present.",
+    "narrow_screen": "Source-cascade checks only; viewport resize not available through supported controls.",
+    "local_preview": "Browser policy blocked file URL; no bypass or workaround used.",
+    "live_wallet_verified": false,
+    "post_deploy": {
+      "viewport": {
+        "width": 1363,
+        "height": 936
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 220,
+        "height": 936
+      },
+      "main": {
+        "x": 220,
+        "y": 0,
+        "width": 1133
+      },
+      "connect_control_visible": true,
+      "stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
+      "corrected_cssom_rules_verified": true
+    }
+  },
+  "deployment": {
+    "pipeline": 2871382210,
+    "job": 16654205029,
+    "status": "success",
+    "served_css_verified": true,
+    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
+    "served_build_verified": false,
+    "verification_scope": "Live homepage stylesheet URL and all corrected compact CSSOM rules verified after reload. Desktop header is 220px and workspace starts x=220 at 1363×936. Entire build commit marker and narrow browser geometry not verified."
+  },
+  "next_issue": "XRB-001"
+}

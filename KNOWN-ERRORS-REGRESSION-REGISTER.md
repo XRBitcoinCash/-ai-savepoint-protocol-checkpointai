@@ -263,3 +263,7 @@ Do not assume these remain broken. Before changing JCS:
 ## 2026-09-22 recovery follow-up
 
 XRB-007 and XRB-008 have source fixes `87b00f81c86e85686b874c93ab65b02630984027`, merged `eb437dd40f3a22951cca9709353c5696d5df519f` via MR !9, with 24 passing tests. Status: **retest-required**, not live-verified. Sidebar now links to one wallet-control area. XRB-001 remains open. Details: `XRBITCOIN-WALLET-RECOVERY-2026-09-22.md`.
+
+## 2026-09-22 homepage responsive-header follow-up
+
+UI-001: XRBC homepage header expanded across the screen at 901–1180px but retained fixed top/bottom positioning. Fixed through MR !10 (`a20800962133141d7e2d5c99e03ddda6ccd93d57` / merge `3e15aaec8d8ae875d3598ea259f947a6bb6ae881`). Seven-width CSS cascade and CI checks pass; device rendering check pending. All homepage executable scripts unchanged. Prevention and evidence: `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. XRB-001 and existing wallet retest requirements remain open.

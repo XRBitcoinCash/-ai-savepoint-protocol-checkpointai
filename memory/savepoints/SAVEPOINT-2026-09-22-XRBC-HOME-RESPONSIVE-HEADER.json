@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "application-repair",
+  "id": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
+  "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
+  "status": "deployed-device-render-retest-required",
+  "scope": "XRBitcoinCash homepage responsive header overlay; public/index.html and homepage-scoped shared CSS only. Screenshot identifies XRBC homepage, distinct from prior XRBitcoin wallet repair.",
+  "source_frontend_commit": "3e15aaec8d8ae875d3598ea259f947a6bb6ae881",
+  "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+  "backend_snapshot_note": "Prior audit baseline; backend not changed or re-audited.",
+  "source_pipeline_id": 2871382210,
+  "source_pipeline_status": "success-with-advisory-findings",
+  "implementation_commit": "a20800962133141d7e2d5c99e03ddda6ccd93d57",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/10",
+  "rollback_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+  "next_issue": "XRB-001",
+  "browser_live_retest_after_final_deploy": true,
+  "created": "2026-09-22",
+  "memory_parent_commit": "cff6a9374332711ca4a8a17064653af4e052d117",
+  "previous_savepoint": {
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+    "human_record": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
+    "status": "merged-device-retest-required",
+    "scope": "XRBitcoin wallet controls, cancellation and startup recovery only. User confirmed this page after XRBC/XRB ambiguity was explained.",
+    "source_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2871255138,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "implementation_commit": "87b00f81c86e85686b874c93ab65b02630984027",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
+    "browser_live_retest_after_final_deploy": false
+  },
+  "permissions_scope": "User explicitly requested restoring the screenshot page. Bounded repair merged through standard MR workflow.",
+  "evidence": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [
+    "public/xrbc-dynamic-ui.css",
+    "public/index.html"
+  ],
+  "frontend_support_files_changed": [
+    "docs/checkpoints/XRBC-HOMEPAGE-RESPONSIVE-HEADER-2026-09-22.md"
+  ],
+  "tests": {
+    "unit_tests": 24,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "homepage_inline_scripts_parsed": 12,
+    "homepage_scripts_byte_identical": true,
+    "css_cascade_widths": [
+      390,
+      900,
+      901,
+      1158,
+      1180,
+      1181,
+      1363
+    ],
+    "css_check_scope": "source CSS selector/media/specificity resolution, not rendered geometry",
+    "merge_request_pipeline": 2871378469,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19
+  },
+  "remaining": [
+    "Narrow-screen user/device rendering check",
+    "XRB-001 first-click OAuth hydration remains open",
+    "XRB-007/008 real-device retest remains pending",
+    "Existing metadata/reference/CI findings"
+  ],
+  "publication": "Containing Git commit identifies this checkpoint.",
+  "deployment": {
+    "pipeline": 2871382210,
+    "job": 16654205029,
+    "status": "success",
+    "served_css_verified": true,
+    "served_stylesheet": "https://xrbitcoincash.com/xrbc-dynamic-ui.css?v=20260922-3",
+    "served_build_verified": false,
+    "verification_scope": "Live homepage stylesheet URL and all corrected compact CSSOM rules verified after reload. Desktop header is 220px and workspace starts x=220 at 1363×936. Entire build commit marker and narrow browser geometry not verified."
+  },
+  "browser_retest_scope": "Read-only desktop rendering and served responsive CSS only; no narrow geometry or live wallet."
+}
