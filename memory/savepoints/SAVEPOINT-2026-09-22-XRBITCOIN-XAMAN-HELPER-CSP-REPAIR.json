@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "xrbitcoin",
+    "xaman",
+    "csp",
+    "runtime-validation",
+    "wallet"
+  ],
+  "refines": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
+  "context": "Production browser showed 'XRBCXamanStandard is not defined' when connecting XRBitcoin. The same-origin shared helper existed and exported the expected global, but XRBitcoin script-src omitted self, so the browser blocked /xrbc-xaman-standard.js.",
+  "frontend": {
+    "provider": "GitLab",
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "page": "public/xrbitcoin-links.html",
+    "shared_helper": "public/xrbc-xaman-standard.js",
+    "runtime_contract": "scripts/verify-runtime.mjs",
+    "rollback_parent": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
+    "implementation_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+    "implementation_pipeline_id": 2870937665,
+    "implementation_pipeline_status": "success",
+    "page_blob_sha": "169d22385708d27ea7007a81bf174fc4dd0e55a0",
+    "page_sha256": "3915c74b82ae8c8a9314f4984ef00f04755896c648aa61cc018ba37b82a37620"
+  },
+  "root_cause": {
+    "observed_error": "XRBCXamanStandard is not defined",
+    "cause": "XRBitcoin CSP script-src omitted 'self', blocking the same-origin /xrbc-xaman-standard.js helper.",
+    "helper_exists": true,
+    "helper_export": "window.XRBCXamanStandard",
+    "verifier_gap": "Runtime CSP parser stopped at inner apostrophes inside the double-quoted CSP attribute and therefore missed the missing script-src self allowance."
+  },
+  "repair": [
+    "Added script-src 'self' to XRBitcoin CSP.",
+    "Cache-busted /xrbc-xaman-standard.js?v=20260922-1.",
+    "Guarded globalThis.XRBCXamanStandard?.authorizeAndWarm before wallet authorization.",
+    "Updated liquidity-app CSP hash to mWW0cZ2Ec6kN8vEwV6o2L+sStmr8F7rtRlBpxBlZ19I=.",
+    "Fixed runtime verifier CSP attribute parsing so same-origin script policy is actually checked."
+  ],
+  "xaman": {
+    "public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+    "correct_project": "XRBitcoin",
+    "shared_helper": "XRBCXamanStandard.authorizeAndWarm",
+    "authorization_only": true,
+    "no_transaction_payload_during_connect": true
+  },
+  "verification": {
+    "script_src_self": true,
+    "shared_helper_present": true,
+    "guarded_helper_call": true,
+    "all_inline_csp_hashes_current": true,
+    "runtime_contracts": "success",
+    "validate_repository": "success",
+    "secret_detection": "success",
+    "semgrep_sast": "success",
+    "deploy_pages": "success",
+    "browser_custom_domain_verified": false
+  },
+  "human_checkpoint": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md"
+}
