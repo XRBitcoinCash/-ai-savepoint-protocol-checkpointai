@@ -479,19 +479,17 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
-    "scope": "Remove legacy hero-header conflicts and collapse the homepage exchange shell earlier on narrow desktops/tablets.",
+    "id": "SAVEPOINT-2026-09-22-homepage-get-xrbc-cta-readability",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-GET-XRBC-CTA-READABILITY.json",
+    "scope": "Increase homepage sidebar Get XRBC in Xaman readability: no underline, larger text, yellow route line and yellow arrow.",
     "status": "implemented",
-    "responsive_css_commit": "a51cd1868a5409998468dd24604107c93b1bc56a",
-    "implementation_commit": "db77859774d1b9bdd27bb79d610cc6fd3f49b02e",
-    "pipeline_id": 2870387384,
+    "implementation_commit": "3367814dc8e7222b52569454b7d211d202153ec5",
+    "pipeline_id": 2870432686,
     "pipeline_status": "success",
-    "rollback_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
-    "local_checkpoint_commit": "6d4ee680c73fd1650d96905ced2dceaadabe9ca0",
-    "machine_savepoint_create_commit": "ce2752f2ce4d9e2612d4945ba5abd3e4354ac3e4",
-    "page": "public/index.html",
-    "css_cache_version": "20260922-1",
+    "local_memory_commit": "de757fe33c4be2fd943e441181bd326e86ddba49",
+    "machine_savepoint_create_commit": "bddca42d537df64326c277e5d87d91b2246178a4",
+    "shared_css_version": "1.2.1",
+    "css_cache_version": "20260922-2",
     "browser_custom_domain_verified": false
   },
   "savepoint_format": [
@@ -519,6 +517,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-homepage-get-xrbc-cta-readability",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-GET-XRBC-CTA-READABILITY.json",
+      "scope": "Increase homepage sidebar Get XRBC in Xaman readability: no underline, larger text, yellow route line and yellow arrow."
+    },
     {
       "id": "SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair",
       "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
