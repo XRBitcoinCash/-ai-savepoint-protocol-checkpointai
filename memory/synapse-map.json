@@ -7,6 +7,28 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+      "human_file": "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
+      "frontend_commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
+      "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
+      "pipeline_id": 2870557261
+    },
+    {
+      "id": "standard:developer-exchange-family",
+      "type": "standard",
+      "status": "active",
+      "statement": "Trade, XRBC Liquidity Pool and Developers use the compact exchange/workbench navigation family. Tool/security/analysis pages remain on the separate xrbc-tool-exchange-shell family. Developer must use xrbc-developer-exchange-shell and must not reactivate the legacy xrbc-dev-app-header."
+    },
+    {
+      "id": "task:developer-sidebar-browser-check",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Hard-refresh /developers.html on desktop and mobile; confirm desktop left rail, Developers active, theme control works, API workbench remains intact, responsive top navigation works, and tool pages retain their separate tool shell."
+    },
+    {
       "id": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
       "type": "savepoint",
       "status": "implemented",
@@ -380,6 +402,31 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "rel": "refines",
+      "to": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22"
+    },
+    {
+      "from": "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "rel": "defines",
+      "to": "standard:developer-exchange-family"
+    },
+    {
+      "from": "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "rel": "extends",
+      "to": "standard:shared-exchange-ui"
+    },
+    {
+      "from": "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "task:developer-sidebar-browser-check",
+      "rel": "verifies",
+      "to": "savepoint:developer-page-exchange-sidebar-2026-09-22"
+    },
     {
       "from": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
       "rel": "defines",
@@ -797,9 +844,11 @@
       "task:liquidity-top-wallet-browser-check"
     ],
     "ui_design": [
+      "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "standard:developer-exchange-family",
       "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
-      "standard:project-wide-xrbc-sidebar-shell",
-      "standard:shared-exchange-ui"
+      "standard:shared-exchange-ui",
+      "task:developer-sidebar-browser-check"
     ],
     "liquidity_market_history": [
       "savepoint:liquidity-market-history-backend-route-2026-09-21",
@@ -841,7 +890,12 @@
     "project_wide_shell": [
       "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
       "standard:project-wide-xrbc-sidebar-shell"
+    ],
+    "developers": [
+      "savepoint:developer-page-exchange-sidebar-2026-09-22",
+      "standard:developer-exchange-family",
+      "task:developer-sidebar-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22"
+  "active_savepoint": "savepoint:developer-page-exchange-sidebar-2026-09-22"
 }
