@@ -7,6 +7,14 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-GET-XRBC-CTA-READABILITY.json",
+      "frontend_commit": "3367814dc8e7222b52569454b7d211d202153ec5",
+      "pipeline_id": 2870432686
+    },
+    {
       "id": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
       "type": "savepoint",
       "status": "implemented",
@@ -358,6 +366,16 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
+      "rel": "refines",
+      "to": "standard:homepage-liquidity-shell-alignment"
+    },
+    {
+      "from": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
       "rel": "refines",
@@ -745,6 +763,7 @@
       "task:liquidity-top-wallet-browser-check"
     ],
     "ui_design": [
+      "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
       "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
       "standard:homepage-liquidity-shell-alignment",
       "standard:shared-exchange-ui"
@@ -787,5 +806,5 @@
       "task:xaman-popup-layout-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22"
+  "active_savepoint": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22"
 }
