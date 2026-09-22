@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "homepage",
+    "responsive",
+    "exchange-shell",
+    "repair"
+  ],
+  "context": "After the homepage exchange-shell migration, production evidence showed the narrow-desktop layout still using legacy hero-header grid/decorative rules inside the new fixed sidebar, leaving the rail oversized/empty and squeezing the trading workspace. Mobile was already acceptable.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "responsive_css_commit": "a51cd1868a5409998468dd24604107c93b1bc56a",
+    "implementation_commit": "db77859774d1b9bdd27bb79d610cc6fd3f49b02e",
+    "pipeline_id": 2870387384,
+    "pipeline_status": "success",
+    "rollback_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
+    "local_checkpoint": "docs/checkpoints/HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR-2026-09-22.md",
+    "local_checkpoint_commit": "6d4ee680c73fd1650d96905ced2dceaadabe9ca0",
+    "page": "public/index.html",
+    "shared_css": "public/xrbc-dynamic-ui.css",
+    "css_cache_version": "20260922-1"
+  },
+  "root_cause": [
+    "Legacy xrbc-hero-nav class kept high-specificity !important grid and decorative header rules active.",
+    "Homepage sidebar-to-top-nav collapse waited until 900px, which was too late for narrow desktop/tablet widths."
+  ],
+  "repair": [
+    "Removed xrbc-hero-nav from the homepage header so legacy hero-header grid/decorative rules no longer compete with the exchange shell.",
+    "Moved the homepage-specific fixed-sidebar collapse breakpoint from 900px to 1180px.",
+    "At <=1180px the page uses compact top navigation and stacked order/chart layout.",
+    "Wide desktop retains the Liquidity-Pool-style fixed left rail.",
+    "Advanced shared CSS cache URL to /xrbc-dynamic-ui.css?v=20260922-1."
+  ],
+  "behavior_preservation": {
+    "executable_inline_scripts": 12,
+    "byte_identical": true,
+    "unchanged": [
+      "wallet connection",
+      "Xaman popup/request",
+      "six-digit challenge",
+      "trading/quotes/orders",
+      "trustlines",
+      "pending-request protection",
+      "validated XRPL finality"
+    ]
+  },
+  "verification": {
+    "pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_custom_domain_verified": false,
+    "manual_checks": [
+      "Narrow desktop/tablet no longer shows oversized empty left rail.",
+      "Compact top navigation appears at <=1180px.",
+      "Order panel stacks cleanly before chart.",
+      "Wide desktop fixed rail remains."
+    ]
+  }
+}
