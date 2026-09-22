@@ -85,6 +85,13 @@
       "exact_xrb_issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
       "exact_xrb_currency_hex": "5852626974636F696E0000000000000000000000",
       "runtime_contract_covered": true
+    },
+    "known_errors_registry": {
+      "human_file": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
+      "machine_file": "memory/known-errors.json",
+      "highest_priority": "XRB-001",
+      "highest_priority_status": "open",
+      "frontend_head_when_recorded": "97cfb36f244e8f11d806232aedf488fc34fb9898"
     }
   },
   "safety_invariants": [
@@ -180,6 +187,10 @@
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
       "XRBITCOIN-SIDEBAR-PROJECT-BOUNDARY-2026-09-22.md",
       "memory/synapse-map.json"
+    ],
+    "known_errors": [
+      "memory/known-errors.json",
+      "KNOWN-ERRORS-REGRESSION-REGISTER.md"
     ]
   },
   "transition": {
