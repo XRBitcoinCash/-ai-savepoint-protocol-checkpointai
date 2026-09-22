@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-homepage-get-xrbc-cta-readability",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "homepage",
+    "sidebar",
+    "cta",
+    "readability"
+  ],
+  "context": "The homepage exchange-shell Get XRBC in Xaman sidebar action was difficult to read: the route line was too small and underlining visually cut through the lower text. The user requested larger lettering, no underline, and yellow treatment for the line under Get XRBC in Xaman plus the arrow.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "shared_css_version": "1.2.1",
+    "cache_refresh_commit": "3367814dc8e7222b52569454b7d211d202153ec5",
+    "local_memory_commit": "de757fe33c4be2fd943e441181bd326e86ddba49",
+    "pipeline_id": 2870432686,
+    "pipeline_status": "success",
+    "page": "public/index.html",
+    "shared_css": "public/xrbc-dynamic-ui.css",
+    "cache_url": "/xrbc-dynamic-ui.css?v=20260922-2"
+  },
+  "changes": [
+    "CTA and child text explicitly remove text decoration.",
+    "Main Get XRBC in Xaman label increased to .82rem.",
+    "Route line increased to .67rem with stronger weight and normal line height.",
+    "Route line uses the exchange-shell yellow attention color.",
+    "Right arrow uses yellow, 18px size and stronger weight.",
+    "CTA minimum height increased from 52px to 58px to keep the two lines readable."
+  ],
+  "behavior_preservation": {
+    "executable_inline_scripts": 12,
+    "byte_identical": true,
+    "unchanged": [
+      "wallet connection",
+      "Xaman signing",
+      "trading",
+      "challenge/memo",
+      "trustlines",
+      "XRPL finality"
+    ]
+  }
+}
