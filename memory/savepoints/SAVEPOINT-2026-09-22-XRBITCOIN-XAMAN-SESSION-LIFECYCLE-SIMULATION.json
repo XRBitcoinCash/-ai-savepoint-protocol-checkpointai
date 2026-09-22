@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "xrbitcoin",
+    "xaman",
+    "wallet",
+    "session-lifecycle",
+    "simulation",
+    "runtime-validation"
+  ],
+  "refines": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+  "context": "Real-browser evidence showed XRBitcoin could enter an ambiguous Signing blocked state and route Connect Xaman into a reset confirmation. XRBitcoin and XRBitcoinCash use separate Xaman app IDs on the same origin while browser PKCE state uses the origin-scoped XummPkceJwt key. Passive browser restore could therefore adopt a cached session from the other app, fail application verification, and leave sessionFault set.",
+  "frontend": {
+    "provider": "GitLab",
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "page": "public/xrbitcoin-links.html",
+    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "final_pipeline_id": 2870991044,
+    "final_pipeline_status": "success",
+    "failed_intermediate_pipeline_id": 2870987101,
+    "page_blob_sha": "a2a0093960296dc4a446725691da449f5dde41a7",
+    "page_sha256": "06f0b27bcdffebe44f2c042095d2e4cbade52d7786db9a175da8ea4cde50ca4e"
+  },
+  "root_cause": {
+    "shared_origin": true,
+    "separate_xaman_apps": true,
+    "browser_pkce_key": "XummPkceJwt",
+    "failure_chain": [
+      "Browser setup passively restored cached account state.",
+      "Cached session could belong to the other Xaman application on the same origin.",
+      "Application verification rejected the session.",
+      "sessionFault remained set and the candidate account/UI looked partially connected.",
+      "Connect routed into reset confirmation instead of starting a clean XRBitcoin authorization."
+    ],
+    "classification": "wallet session lifecycle defect; not pool/AMM read failure"
+  },
+  "xaman": {
+    "xrbitcoin_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+    "passive_browser_restore": false,
+    "xapp_restore_only": true,
+    "deliberate_connect_clears_origin_pkce_cache": true,
+    "deliberate_connect_installs_fresh_sdk": true,
+    "authorization_helper": "XRBCXamanStandard.authorizeAndWarm",
+    "backend_readiness_parallel": true,
+    "transaction_payload_during_connect": false,
+    "automatic_replacement_payload": false
+  },
+  "repaired_states": {
+    "failed_verification": "candidate account cleared; reconnect required",
+    "disconnect": "deterministic disconnected local state even if provider logout fails",
+    "reset": "modal-free, reload-free deterministic reset",
+    "wallet_details": "explicit disconnected / connecting / reconnect required / connected status text"
+  },
+  "simulation": {
+    "test_file": "tests/unit/xrbitcoin-wallet-lifecycle.test.mjs",
+    "scenarios": [
+      "No passive browser wallet restoration.",
+      "Stale cross-project XummPkceJwt cache cleared before XRB authorization.",
+      "authorizeAndWarm starts authorization immediately and creates no transaction payload.",
+      "Connect uses the exact XRB Xaman application ID and no transaction construction path.",
+      "Provider logout failure still leaves the page locally disconnected.",
+      "Disconnect and reset are modal-free and preserve pending request storage.",
+      "Failed application verification cannot leave an accepted wallet account."
+    ],
+    "initial_test_pipeline": 2870987101,
+    "initial_test_result": "failed because one assertion inspected setupSdk instead of the new wireSdk helper; production repair itself was not the failing assertion",
+    "corrected_test_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "final_pipeline": 2870991044,
+    "final_result": "success"
+  },
+  "verification": {
+    "runtime_contracts": "success",
+    "repository_validation": "success",
+    "secret_detection": "success",
+    "semgrep_sast": "success",
+    "pages_deploy": "success",
+    "synthetic_wallet_tests": "success",
+    "browser_live_retest_after_final_deploy": false
+  },
+  "preserve": [
+    "XRBitcoin and XRBitcoinCash use separate Xaman application IDs.",
+    "Connection is authorization-only.",
+    "Pending and ambiguous signing-request records survive disconnect/reset.",
+    "Validated XRPL finality, signer equality, intent/challenge binding and critical-field comparison remain required.",
+    "Exact XRB issuer/currency identity remains authoritative."
+  ],
+  "human_checkpoint": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md"
+}
