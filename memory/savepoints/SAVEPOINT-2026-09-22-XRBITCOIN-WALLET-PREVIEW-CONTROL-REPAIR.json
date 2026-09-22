@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "xrbitcoin",
+    "xaman",
+    "wallet",
+    "liquidity",
+    "ui-control",
+    "runtime-validation"
+  ],
+  "refines": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
+  "context": "After restoring the blocked liquidity controller, live pool data worked but wallet-dependent entry controls still appeared frozen. The sidebar Wallet control was only a navigation anchor, Preview was disabled solely because the wallet was disconnected, and XRBitcoin used generic busy state instead of the dedicated connecting state used by the XRBC reference flow.",
+  "frontend": {
+    "provider": "GitLab",
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "page": "public/xrbitcoin-links.html",
+    "runtime_contract": "scripts/verify-runtime.mjs",
+    "rollback_parent": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+    "implementation_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
+    "implementation_pipeline_id": 2870912971,
+    "implementation_pipeline_status": "success",
+    "page_blob_sha": "bb9332e25a7ae57bf7c458bee80d4cb6895bfa52",
+    "page_sha256": "b29641ac3f691cd7cd4fadb5f99eb253b1ca10372410e6374283df73ef284fbf"
+  },
+  "repair": [
+    "Added #walletShortcut as a real Xaman authorization entry point instead of a scroll-only Wallet link.",
+    "Added dedicated S.connecting state matching the established XRBC connection lifecycle.",
+    "Connect button and shortcut expose Connecting / connected state and block duplicate authorization attempts.",
+    "Preview remains actionable while disconnected when other prerequisites are satisfied; its click opens authorization only and does not create a transaction payload.",
+    "After connection, Preview requires a separate deliberate click to build the unsigned transaction preview.",
+    "Runtime-contract verification now requires walletShortcut and executable binding on xrbitcoin-links.html."
+  ],
+  "xaman": {
+    "public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+    "correct_project": "XRBitcoin",
+    "authorization_only": true,
+    "shared_controller": "XRBCXamanStandard.authorizeAndWarm()",
+    "authorize_timeout_ms": 180000,
+    "no_transaction_payload_during_connect": true,
+    "automatic_replacement_authorization": false
+  },
+  "controls": {
+    "walletShortcut": {
+      "disconnected": "Connect wallet -> invokes authorization",
+      "connecting": "Connecting…",
+      "connected": "Wallet connected -> scrolls to wallet panel"
+    },
+    "preview": {
+      "disconnected": "Connect Xaman to preview <current action>",
+      "click_while_disconnected": "Starts authorization only",
+      "click_after_connected": "Builds unsigned preview",
+      "transaction_payload_during_connect": false
+    }
+  },
+  "csp": {
+    "modified_script": "liquidity-app",
+    "sha256": "VprOSm7qog4+YxqN6Tczr0mXYMh5FiRJ6a6jDnRqgsk="
+  },
+  "runtime_contract_required_ids": [
+    "themeToggle",
+    "walletShortcut",
+    "connectBtn",
+    "previewBtn",
+    "signBtn",
+    "refreshPool"
+  ],
+  "verification": {
+    "duplicate_html_ids": 0,
+    "all_inline_script_csp_hashes_current": true,
+    "runtime_contracts": "success",
+    "validate_repository": "success",
+    "secret_detection": "success",
+    "semgrep_sast": "success",
+    "deploy_pages": "success",
+    "browser_custom_domain_verified": false
+  },
+  "preserve": [
+    "Exact XRB/XRP pool identity and validated ledger reads.",
+    "Pending and ambiguous Xaman request protections.",
+    "No automatic duplicate authorization.",
+    "Validated XRPL finality and critical-field comparison."
+  ],
+  "human_checkpoint": "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md"
+}
