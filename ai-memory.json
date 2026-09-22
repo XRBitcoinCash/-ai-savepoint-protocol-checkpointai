@@ -1148,6 +1148,21 @@
       "synthetic_scenarios": 7,
       "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
       "browser_live_retest_after_final_deploy": false
+    },
+    "known_errors_registry": {
+      "status": "implemented",
+      "human_commit": "cc182e9f62344646b9280eaa38acb3d09f90347d",
+      "machine_commit": "2ae03c515a827775ed6456e32ef148b5e84e1f37",
+      "open_highest_priority": "XRB-001",
+      "note": "No live frontend code changed by this registry update."
     }
+  },
+  "known_errors_registry": {
+    "status": "active",
+    "human_file": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
+    "machine_file": "memory/known-errors.json",
+    "purpose": "Persistent cross-project error/regression ledger. Read before editing affected XRBC, XRBitcoin or JCS pages. Update status and fix evidence instead of deleting resolved failures.",
+    "highest_priority": "XRB-001 — first Xaman authorization currently requires a second Connect click before the XRBitcoin page registers the wallet; no fix committed yet.",
+    "operating_rule": "When a repair creates or exposes a new regression, add it immediately and link it to the parent fix/commit. Treat browser/device verification separately from CI success."
   }
 }
