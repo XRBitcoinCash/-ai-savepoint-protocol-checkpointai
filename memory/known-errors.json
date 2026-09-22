@@ -13,35 +13,34 @@
   "active_source": {
     "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
     "branch": "master",
-    "observed_head": "0dcf99de7f4e5f6847689e298c1a7684d1b81369"
+    "observed_head": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c"
   },
   "highest_priority": {
     "id": "XRB-001",
-    "status": "open",
+    "status": "retest-required",
     "page": "public/xrbitcoin-links.html",
     "symptom": "After completing Xaman authorization, the user must press Connect wallet a second time before the page registers the wallet.",
-    "current_hypothesis": "Current browser success/retrieved handlers reject non-xApp runtime even during an active deliberate attempt; source-extracted probe confirms no adoption through those events. Real OAuth sequencing and module-scoped SDK reuse remain unverified; missing event bridge is a supported hypothesis, not an established sole root cause.",
-    "no_fix_committed": true,
+    "current_hypothesis": "Missing active-attempt browser event bridge reproduced and repaired; 37 tests pass. Real Xaman OAuth sequencing still requires user-device verification.",
+    "no_fix_committed": false,
     "next_checks": [
-      "Compare current XRB wireSdk/connect with XRBC public/index.html success/retrieved/ready handling.",
-      "Bind browser success/retrieved only to the active XRB S.authAttempt, current SDK, and auth version.",
-      "Reuse adoptAccount/application verification.",
-      "Prove no second authorize call and no transaction payload.",
-      "Extend synthetic test so first authorization completes S.connected without a second click.",
-      "Perform real browser connect/disconnect/preview retest."
+      "On the deployed XRBitcoin page, one deliberate Connect completes after Xaman authorization.",
+      "Cancel while waiting, retry, reject old events and check no automatic financial payload.",
+      "Confirm wallet is verified for the XRB app before a separately reviewed action."
     ],
     "related_blockers": [
       "XRB-007",
       "XRB-008"
-    ]
+    ],
+    "fix_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+    "merge_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c"
   },
   "xrbitcoin": [
     {
       "id": "XRB-001",
-      "status": "open",
+      "status": "retest-required",
       "summary": "Second Connect click required to register wallet.",
-      "fix_commit": null,
-      "evidence_level": "user-reported + source-confirmed missing event bridge",
+      "fix_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+      "evidence_level": "source-confirmed + synthetic-reproduced + CI-verified; live wallet unverified",
       "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
       "source_functions": [
         "wireSdk",
@@ -53,7 +52,11 @@
         "One deliberate Connect/authorize completes verified page account hydration without a second click.",
         "No passive cross-app browser adoption, stale callback adoption or new signing payload.",
         "Cancel/reconnect and backend-readiness remain bounded; xApp behavior preserved."
-      ]
+      ],
+      "merge_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12",
+      "repair_evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json",
+      "verification": "37 tests pass; browser served bridge present; user-device OAuth retest required."
     },
     {
       "id": "XRB-002",
@@ -67,7 +70,8 @@
       "status": "resolved",
       "summary": "Wallet shortcut was scroll-only and Preview appeared frozen while disconnected.",
       "fix_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
-      "pipeline": 2870912971
+      "pipeline": 2870912971,
+      "superseded_ui_note": "MR !12 removes the redundant header shortcut completely. Canonical Connect Xaman remains above action forms."
     },
     {
       "id": "XRB-004",
@@ -144,6 +148,24 @@
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
       "repair_evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
       "verification": "24 tests pass in MR CI; real device retest pending."
+    },
+    {
+      "id": "XRB-009",
+      "status": "open",
+      "priority": "P2",
+      "summary": "Historical XRB/XRP candles unavailable from the direct Sologenic feed.",
+      "evidence_level": "user-reported + live-read-only-verified",
+      "source_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+      "path": "public/xrbitcoin-links.html",
+      "source_functions": [
+        "xrb-chart-module"
+      ],
+      "acceptance_checks": [
+        "Verify exact XRB currency and issuer on the returned historical pair.",
+        "Diagnose provider failure; do not substitute XRBC history or fabricate candles.",
+        "Keep historical prices separate from executable quotes, liquidity and wallet authorization."
+      ],
+      "note": "Observed empty/error UI; HTTP status/provider cause not established. No history backend repair in MR !12."
     }
   ],
   "xrbc": {
@@ -423,6 +445,7 @@
     "XRB-001",
     "XRB-007",
     "XRB-008",
+    "XRB-009",
     "BRIDGE-001",
     "CI-001",
     "META-001",

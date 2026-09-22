@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "application-repair",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+  "human_record": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md",
+  "status": "deployed-device-wallet-retest-required",
+  "scope": "XRBitcoin browser authorization event completion, one canonical Connect control, and sidebar parity with XRBC above 900px.",
+  "source_frontend_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+  "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+  "backend_snapshot_note": "Prior audit baseline; backend not changed or re-audited.",
+  "source_pipeline_id": 2871692616,
+  "source_pipeline_status": "success-with-advisory-findings",
+  "implementation_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12",
+  "rollback_frontend_commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
+  "next_issue": "XRB-001",
+  "browser_live_retest_after_final_deploy": true,
+  "browser_retest_scope": "Read-only desktop, served DOM/CSS and inline event bridge. No real wallet sign-in, signing or financial operation.",
+  "created": "2026-09-22",
+  "memory_parent_commit": "301816a61c43f666e69de47b52df959550452df5",
+  "previous_savepoint": {
+    "id": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
+    "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
+    "status": "deployed-device-render-retest-required",
+    "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
+    "source_frontend_commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2871483161,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
+    "browser_live_retest_after_final_deploy": true
+  },
+  "permissions_scope": "User requested correction of screenshot XRBitcoin page and checkpoint update. Standard MR workflow, no protection bypass.",
+  "evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [
+    "public/xrbitcoin-links.html",
+    "public/xrbitcoin-dynamic-ui.css"
+  ],
+  "frontend_support_files_changed": [
+    "tests/unit/xrbitcoin-wallet-events.test.mjs",
+    "tests/unit/xrbitcoin-wallet-recovery.test.mjs",
+    "scripts/verify-runtime.mjs"
+  ],
+  "tests": {
+    "unit_tests": 37,
+    "new_event_tests": 13,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "merge_request_pipeline": 2871681314,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19,
+    "css_cascade_widths": [
+      390,
+      900,
+      901,
+      1158,
+      1180,
+      1181,
+      1363
+    ],
+    "css_check_scope": "Source CSS cascade comparison with Liquidity; narrow-device rendered geometry not verified.",
+    "wallet_scope": "Actual page lifecycle source in VM with simulated SDK/backend events; real provider and user wallet not tested."
+  },
+  "layout_alignment": {
+    "reference_page": "public/xrbc-liquidity-pool.html",
+    "shared_css": "public/xrbc-dynamic-ui.css",
+    "desktop_sidebar_min_width_px": 901,
+    "compact_header_max_width_px": 900,
+    "sidebar_width_px": {
+      "901_to_1180": 188,
+      "above_1180": 220
+    },
+    "scrolling": "Fixed full-height desktop navigation with overflow-y:auto; main content scrolls beside it. Preserve existing scrollable market/action panels.",
+    "scope": "XRBC Trade, Liquidity and XRBitcoin use the same navigation geometry. XRBitcoin retains its own CSS, token identity and Xaman application.",
+    "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem.",
+    "xrbitcoin_css": "public/xrbitcoin-dynamic-ui.css"
+  },
+  "deployment": {
+    "commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+    "pipeline": 2871692616,
+    "job": 16656616394,
+    "status": "success",
+    "served_css_verified": true,
+    "served_build_verified": false,
+    "served_stylesheet": "https://xrbitcoincash.com/xrbitcoin-dynamic-ui.css?v=20260922-3",
+    "browser": {
+      "custom_domain": "Verified new stylesheet, removed header shortcut, and new authorization bridge on the public page after propagation.",
+      "hosting_origin": "At 1363px: fixed scrollable 220px sidebar, 220px body offset, one Connect control; compact header media at <=900px.",
+      "live_wallet_verified": false,
+      "narrow_device_geometry_verified": false
+    },
+    "verification_scope": "Served DOM/CSS verified. No real wallet operation. Full build-info readback unavailable."
+  },
+  "remaining": [
+    "Real-device Xaman first-click sign-in, cancel and retry (XRB-001/007/008).",
+    "User-device screenshot-width visual check.",
+    "XRB-009 separate historical Sologenic feed failure; no exact provider HTTP cause established.",
+    "Existing metadata/reference/CI advisory findings."
+  ],
+  "publication": "Containing Git commit identifies this checkpoint."
+}

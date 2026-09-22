@@ -481,18 +481,18 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbc-home-responsive-header",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
-    "human_record": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
-    "status": "deployed-device-render-retest-required",
-    "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
-    "source_frontend_commit": "0dcf99de7f4e5f6847689e298c1a7684d1b81369",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+    "human_record": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md",
+    "status": "deployed-device-wallet-retest-required",
+    "scope": "XRBitcoin browser authorization event completion, one canonical Connect control, and sidebar parity with XRBC above 900px.",
+    "source_frontend_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
     "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
-    "source_pipeline_id": 2871483161,
+    "source_pipeline_id": 2871692616,
     "source_pipeline_status": "success-with-advisory-findings",
     "next_issue": "XRB-001",
-    "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
+    "implementation_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12",
     "browser_live_retest_after_final_deploy": true
   },
   "savepoint_format": [
@@ -1081,8 +1081,9 @@
         "above_1180": 220
       },
       "scrolling": "Fixed full-height desktop navigation with overflow-y:auto; main content scrolls beside it. Preserve existing scrollable market/action panels.",
-      "scope": "Trade and Liquidity use this rule now. Keep other pages in the same visual family during future requested work; no broad restyling in this correction.",
-      "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem."
+      "scope": "XRBC Trade, Liquidity and XRBitcoin use the same navigation geometry. XRBitcoin retains its own CSS, token identity and Xaman application.",
+      "user_direction": "Use Liquidity screenshot as reference. Do not fix visibility by switching Trade to top navigation at desktop widths. Keep compatible look across the ecosystem.",
+      "xrbitcoin_css": "public/xrbitcoin-dynamic-ui.css"
     }
   },
   "xaman_connection_standard": {
@@ -1206,10 +1207,10 @@
     "human_file": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
     "machine_file": "memory/known-errors.json",
     "purpose": "Persistent cross-project error/regression ledger. Read before editing affected XRBC, XRBitcoin or JCS pages. Update status and fix evidence instead of deleting resolved failures.",
-    "highest_priority": "XRB-001: first-click hydration; linked open recovery defects XRB-007 cancellation and XRB-008 SDK startup latch.",
+    "highest_priority": "XRB-001 device retest after event-bridge repair; XRB-007/008 device checks; XRB-009 historical feed remains open.",
     "operating_rule": "When a repair creates or exposes a new regression, add it immediately and link it to the parent fix/commit. Treat browser/device verification separately from CI success.",
     "latest_audit": "RELIABILITY-AUDIT-2026-09-22.md",
-    "verified_frontend_head": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+    "verified_frontend_head": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c"
   },
   "secondary_memory_protocol": {
     "machine": "memory/operating-protocol.json",
@@ -1243,12 +1244,18 @@
     "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
   },
   "current_repair": {
-    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
-    "evidence": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
+    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+    "evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json",
     "issues": [
-      "UI-001"
+      "XRB-001"
     ],
-    "status": "deployed-device-render-retest-required",
+    "status": "deployed-device-wallet-retest-required",
     "next_issue": "XRB-001"
+  },
+  "execution_efficiency_preference": {
+    "updated": "2026-09-22",
+    "source": "Explicit user instruction after this deployment",
+    "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
+    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration."
   }
 }

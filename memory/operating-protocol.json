@@ -7,7 +7,7 @@
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
   "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
   "authorization": {
-    "current_task": "User requested restoring XRBC homepage shown in screenshot; bounded CSS repair merged via standard MR !10.",
+    "current_task": "User requested XRBitcoin wallet/sidebar correction and checkpoint update; implemented through standard MR !12.",
     "rules": [
       "Capability availability is not authorization.",
       "Verify access each session; stop for missing permissions/approval.",
@@ -28,7 +28,7 @@
     "gitlab": {
       "resource": "xrbitcoincash-group/xrbitcoincash-project",
       "read": "verified",
-      "write": "Verified standard MR !9 and !10 merges; no protection bypass."
+      "write": "Standard MR !12 merged and deployed; no protection bypass."
     },
     "google": {
       "status": "user permits relevant use; not probed"
@@ -88,11 +88,23 @@
     "XRB-008"
   ],
   "responsive_layout_checks": [
-    "Preserve the saved reference layout while repairing visibility. Trade/Liquidity use a fixed left rail above 900px; never move one to a top header at desktop widths without user direction.",
+    "Preserve the Liquidity reference fixed left rail above 900px across XRBC Trade, Liquidity and XRBitcoin; keep app/token identities separate.",
     "Identify exact page from screenshot and source; distinguish XRBC homepage from XRBitcoin.",
     "Move complete position/inset/height/display/navigation/content-offset resets together when changing a breakpoint.",
     "Check screenshot width and widths immediately below/above old and new breakpoints.",
     "Account for selector specificity and refresh CSS cache key.",
     "Label source cascade, rendered geometry, served build and live wallet checks separately."
-  ]
+  ],
+  "wallet_event_checks": [
+    "ready does not establish a signed-in account by itself.",
+    "Bridge browser events only during an explicit active attempt using current SDK, version and cancellation state.",
+    "Read the current account getter on each event; retain backend readiness and verified app/account identity before connected state.",
+    "Distinguish synthetic verification from real-device authorization."
+  ],
+  "execution_efficiency_preference": {
+    "updated": "2026-09-22",
+    "source": "Explicit user instruction after this deployment",
+    "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
+    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration."
+  }
 }

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "source_snapshots": {
+    "frontend": {
+      "commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+      "implementation": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+      "baseline": "0dcf99de7f4e5f6847689e298c1a7684d1b81369"
+    },
+    "backend": {
+      "commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "verification": "prior-audit-only"
+    }
+  },
+  "root_causes": [
+    "Browser success/retrieved events were ignored outside xApp even during deliberate browser authorization; reproduced missing first-click account adoption in an actual-source simulation. Not proof of every real-device failure cause.",
+    "XRBitcoin switched to top navigation at 1180px, contrary to the shared 900px layout contract.",
+    "Header wallet shortcut duplicated the prominent wallet action."
+  ],
+  "changes": [
+    "Bridge success/retrieved/ready and authorize() return into the current explicit browser attempt; keep app/account verification and ledger readiness.",
+    "Invalidate the bridge on cancel, timeout or logout; ignore stale SDKs and duplicate events.",
+    "Remove header walletShortcut; retain canonical Connect Xaman above forms.",
+    "Sidebar above 900px, 188px through 1180px and 220px above; compact top navigation <=900px.",
+    "Update two exact inline CSP hashes and CSS version 20260922-3.",
+    "Clarify historical feed failure is independent of wallet; no fabricated candles or alternate-asset substitution."
+  ],
+  "verification": {
+    "unit_tests": 37,
+    "new_event_tests": 13,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "merge_request_pipeline": 2871681314,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19,
+    "css_cascade_widths": [
+      390,
+      900,
+      901,
+      1158,
+      1180,
+      1181,
+      1363
+    ],
+    "css_check_scope": "Source CSS cascade comparison with Liquidity; narrow-device rendered geometry not verified.",
+    "wallet_scope": "Actual page lifecycle source in VM with simulated SDK/backend events; real provider and user wallet not tested."
+  },
+  "css_cascade_results": [
+    {
+      "width": 390,
+      "position": "sticky",
+      "rail_width": "188px",
+      "navigation": "row"
+    },
+    {
+      "width": 900,
+      "position": "sticky",
+      "rail_width": "188px",
+      "navigation": "row"
+    },
+    {
+      "width": 901,
+      "position": "fixed",
+      "rail_width": "188px",
+      "navigation": "column"
+    },
+    {
+      "width": 1158,
+      "position": "fixed",
+      "rail_width": "188px",
+      "navigation": "column"
+    },
+    {
+      "width": 1180,
+      "position": "fixed",
+      "rail_width": "188px",
+      "navigation": "column"
+    },
+    {
+      "width": 1181,
+      "position": "fixed",
+      "rail_width": "220px",
+      "navigation": "column"
+    },
+    {
+      "width": 1363,
+      "position": "fixed",
+      "rail_width": "220px",
+      "navigation": "column"
+    }
+  ],
+  "source_sha256": {
+    "public/xrbitcoin-links.html": "cabec1b13c791523aee61c47dfefa06645de72bcceb7c9e14c0c87681ca5c8c2",
+    "public/xrbitcoin-dynamic-ui.css": "b7a86a033faa3731b035ba7de6f463f4469d723169fd7083c654f76757d77662",
+    "tests/unit/xrbitcoin-wallet-events.test.mjs": "87fb95e83ee459a3aa5779cd4c3fba5e76277c11256a9180a59765b0bacb9086",
+    "tests/unit/xrbitcoin-wallet-recovery.test.mjs": "258bbd47983ac2c95109c679bf54398b150855cd478c9b39eaacf3e9b037774c",
+    "scripts/verify-runtime.mjs": "4e069a171143ca441f7904f6938914db4a4ff851fca2d0c77cf5086d4d8e052e"
+  },
+  "browser": {
+    "custom_domain": "Verified new stylesheet, removed header shortcut, and new authorization bridge on the public page after propagation.",
+    "hosting_origin": "At 1363px: fixed scrollable 220px sidebar, 220px body offset, one Connect control; compact header media at <=900px.",
+    "live_wallet_verified": false,
+    "narrow_device_geometry_verified": false
+  },
+  "deployment": {
+    "commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+    "pipeline": 2871692616,
+    "job": 16656616394,
+    "status": "success",
+    "served_css_verified": true,
+    "served_build_verified": false,
+    "served_stylesheet": "https://xrbitcoincash.com/xrbitcoin-dynamic-ui.css?v=20260922-3",
+    "browser": {
+      "custom_domain": "Verified new stylesheet, removed header shortcut, and new authorization bridge on the public page after propagation.",
+      "hosting_origin": "At 1363px: fixed scrollable 220px sidebar, 220px body offset, one Connect control; compact header media at <=900px.",
+      "live_wallet_verified": false,
+      "narrow_device_geometry_verified": false
+    },
+    "verification_scope": "Served DOM/CSS verified. No real wallet operation. Full build-info readback unavailable."
+  },
+  "next_issue": "XRB-001",
+  "sdk_reference": [
+    "https://docs.xaman.dev/js-ts-sdk/sdk-syntax/xumm.on-event-fn",
+    "https://docs.xaman.dev/js-ts-sdk/sdk-syntax/xumm.authorize"
+  ],
+  "history_note": "Direct Sologenic XRB OHLC feed unavailable in live UI. XRBC backend history route pins a different asset and must not be reused for XRB. No backend changes."
+}

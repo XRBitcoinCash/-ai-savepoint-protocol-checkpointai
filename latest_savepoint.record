@@ -1,16 +1,16 @@
 SAVEPOINT 2026-09-22
-id=SAVEPOINT-2026-09-22-xrbc-home-responsive-header
-title=XRBC homepage responsive header restoration
-status=deployed-device-render-retest-required
-machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json
-human_checkpoint=XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md
-observed_frontend_commit=0dcf99de7f4e5f6847689e298c1a7684d1b81369
+id=SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar
+title=XRBitcoin wallet events and shared sidebar
+status=deployed-device-wallet-retest-required
+machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json
+human_checkpoint=XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md
+observed_frontend_commit=a46172c91d1f9d0cdcd0f151c83c406090e8a25c
 observed_backend_commit=48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563
-implementation_commit=3701c892041df7a0cd948e3dff6faa6f888fae92
-merge_request=https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11
+implementation_commit=f08dcae3ecef604e0b86b261dcdfc01788fcba91
+merge_request=https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12
 next_issue=XRB-001
 operating_protocol=memory/operating-protocol.json
 known_errors=memory/known-errors.json
-audit_evidence=memory/audits/2026-09-22-xrbc-home-responsive-header.json
+audit_evidence=memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json
 live_wallet_verified=false
 served_css_verified=true

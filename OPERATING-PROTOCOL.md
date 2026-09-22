@@ -16,7 +16,7 @@ This secondary memory improves continuity only when loaded. It is not internal p
 
 The user prefers task-relevant use of connected GitHub, GitLab, Google and other sources. Discover tools and perform appropriate harmless access checks each session. Record provider, resource, permitted operation and verification date; never store credentials. A past successful connection does not prove present access. Ask when authentication, approval, protected workflows or genuinely new authority is needed.
 
-Current session: user authorized XRBitcoin wallet recovery (MR !9) and restoration of the XRBC homepage responsive header (MR !10). Both bounded repairs deployed through normal workflows. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
+Current session: user authorized XRBitcoin wallet recovery (MR !9), XRBC sidebar restoration (MR !10/!11), and XRBitcoin event-completion/sidebar correction (MR !12), with checkpoint updates. Bounded repairs use normal merge/deployment workflows. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
 
 Keep public memory free of secrets and private personal records. Summarize redacted, task-relevant evidence rather than publishing raw tool output or authenticated logs.
 
@@ -61,3 +61,5 @@ Model tiers and reasoning settings may help allocate effort, but never relax thi
 ## Responsive layout prevention
 
 For breakpoint changes, move the full position/inset/height/inner display/navigation/content-offset transition together. Check the reported width and both sides of old/new breakpoints, winning specificity and cache version. Identify the exact page first. Record source-CSS checks separately from rendered browser/device geometry and live wallet verification.
+
+User execution preference (2026-09-22): Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment. Keep final reports brief. This supersedes broader optional workflow steps.

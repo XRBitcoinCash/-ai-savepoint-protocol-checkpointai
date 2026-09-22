@@ -1,11 +1,11 @@
-# Next run — shared sidebar alignment
+# Next run — XRBitcoin wallet and sidebar
 
-Active savepoint: `SAVEPOINT-2026-09-22-xrbc-home-responsive-header`. Read `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json`, the operating protocol and relevant known errors.
+Active: `SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar`. Read `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json`, the operating protocol and known errors.
 
-Frontend master `0dcf99de7f4e5f6847689e298c1a7684d1b81369`; correction `3701c892041df7a0cd948e3dff6faa6f888fae92` via MR !11. This supersedes the MR !10 top-header choice at 901–1180px. Trade must match the Liquidity screenshot: fixed scrollable left sidebar above 900px, 188px through 1180px and 220px above, compact header only <=900px. Footer/main content clear the rail. Shared CSS, no copied page-local design.
+MR !12 merged as `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; implementation `f08dcae3ecef604e0b86b261dcdfc01788fcba91`. Frontend `public/xrbitcoin-links.html` now has one canonical Connect Xaman action and the shared left-sidebar geometry above 900px. XRBC homepage/Liquidity unchanged by this repair. Keep XRB token and Xaman app identities distinct.
 
-Seven-width source CSS comparisons against Liquidity pass; all 24 tests and runtime/gate CI pass. Homepage executable scripts are unchanged. User-device visual comparison remains pending; no live wallet test. Existing 19 advisory site-validation findings remain.
+37 tests pass, including 13 new browser-event cases. Runtime/CSP and gate checks pass. Seven-width source CSS parity passes; live desktop/served CSS and bridge verified. Real Xaman authorization and narrow-device geometry are unverified. Existing 19 advisory site-validator findings remain.
 
-Next implementation is still XRB-001; XRB-007/008 retain device-retest status. Preserve financial request guards. Do not broaden this layout correction into unrelated functions or project-wide rewrites.
+Next: XRB-001 device retest (first click, cancel, retry), alongside XRB-007/008. XRB-009 is the separate historical Sologenic feed failure; do not reuse the XRBC-only history relay. Keep pending-request guards and one reviewed payload per intent.
 
-MR !11 deployment verified: pipeline 2871483161 and deploy job 16654973464 succeeded. Live stylesheet v=20260922-4 has only the <=900px compact-header transition. Desktop rail/main/footer geometry verified at 1363px; narrow-device geometry remains unverified.
+User execution preference (2026-09-22): Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment. Keep final reports brief. This supersedes broader optional workflow steps.

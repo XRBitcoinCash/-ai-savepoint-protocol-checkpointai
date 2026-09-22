@@ -14,7 +14,13 @@
 
 ---
 
-## Current audit overlay — 2026-09-22
+## Current repair checkpoint — MR !12
+
+Active `SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar`. XRB-001 is **RETEST REQUIRED** after deployed event-bridge repair; XRB-007/008 retain device-retest status after MR !9. One canonical Connect control and shared sidebar are served. XRB-009 is **OPEN** for unavailable historical XRB candles. 37 tests pass; no live wallet sign-in verified. Existing 19 advisory findings remain. Current source `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`, pipeline `2871692616`. Machine registry and `XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md` are authoritative for current status; sections below preserve prior evidence.
+
+Current order: XRB-001 → XRB-007 → XRB-008 → XRB-009 → BRIDGE-001 → CI-001 → META-001 → META-002 → REF-001 → DEPLOY-001 → UX-001.
+
+## Historical audit overlay — before MR !9/!12
 
 This overlay supersedes older certainty/priority wording below without erasing incident history. Read [RELIABILITY-AUDIT-2026-09-22.md](RELIABILITY-AUDIT-2026-09-22.md) and [memory/known-errors.json](memory/known-errors.json) for current evidence and acceptance tests.
 
@@ -45,7 +51,7 @@ Current deployed/tested source sequence ends at GitLab test commit `97cfb36f244e
 Last successful pipeline: `2870991044`.
 
 ## XRB-001 — wallet requires a second Connect click to register on page
-**Status: OPEN — highest priority**
+**Status: RETEST REQUIRED — MR !12; historical investigation below**
 
 ### Observed behavior
 After the user completes Xaman authorization, XRBitcoin does not immediately register the connected wallet in the page UI. The user has to press **Connect wallet** a second time before the page recognizes the session.
@@ -69,7 +75,7 @@ Do **not** return to unrestricted passive browser restore. Instead:
 7. Add/extend the synthetic lifecycle test so one simulated authorization event results in `S.connected === true` without a second Connect action.
 8. Compare behavior against the working XRBC homepage before committing.
 
-### Important interruption note
+### Historical interruption note — superseded by MR !12
 A possible patch was being prepared when the user intentionally stopped the change. **No commit was made for this second-click issue.** Do not assume it is repaired.
 
 ---
@@ -269,3 +275,7 @@ XRB-007 and XRB-008 have source fixes `87b00f81c86e85686b874c93ab65b02630984027`
 UI-001: XRBC homepage header expanded across the screen at 901–1180px but retained fixed top/bottom positioning. Fixed through MR !10 (`a20800962133141d7e2d5c99e03ddda6ccd93d57` / merge `3e15aaec8d8ae875d3598ea259f947a6bb6ae881`). Seven-width CSS cascade and CI checks pass; device rendering check pending. All homepage executable scripts unchanged. Prevention and evidence: `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. XRB-001 and existing wallet retest requirements remain open.
 
 UI-001 correction: MR !11 restores the documented Liquidity-reference desktop sidebar above 900px. The prior 1180px compact-header choice was wrong for the intended desktop layout. Source parity/CI pass; user-device comparison remains pending.
+
+## XRBitcoin correction — MR !12
+
+XRB-001 event completion repaired in `f08dcae3ecef604e0b86b261dcdfc01788fcba91`, deployed as `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; now **retest-required**, not resolved without a real device. 37 tests pass. Header shortcut removed; canonical Connect retained. Sidebar matches Liquidity above 900px. XRB-009 records independent historical-feed failure; it is still open. See `XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md` and machine registry for current state.

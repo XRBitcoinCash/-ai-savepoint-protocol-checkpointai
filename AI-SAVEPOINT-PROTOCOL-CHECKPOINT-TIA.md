@@ -10,13 +10,11 @@ This is a compact, repo-native continuity layer for AI agents working on XRBitco
 
 ## Current memory checkpoint — 2026-09-22
 
-Active: `SAVEPOINT-2026-09-22-reliability-audit-memory-hardening`. Read `NEXT_RUN.md`, `memory/operating-protocol.json` and `memory/known-errors.json` before resuming. This audit changes memory only; application repairs remain pending.
+Active: `SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json`, the operating protocol and known errors.
 
-Frontend observed: `97cfb36f244e8f11d806232aedf488fc34fb9898`; backend observed: `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563`. Pipeline 2870991044 is green but its site validator reports 19 advisory findings. XRB-001 first-click hydration remains open; XRB-007/008 recovery defects were synthetically reproduced.
+XRBitcoin wallet event completion, one canonical Connect action and shared sidebar geometry are deployed via [MR !12](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12), merge `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`. 37 tests and runtime/gates pass; live desktop DOM/CSS verified. Real wallet sign-in and narrow-device rendering remain unverified. XRB-001 is retest-required; XRB-009 records separate unavailable historical candles. Existing 19 advisory findings remain.
 
-The active pointers and graph are synchronized in the containing commit. Older statements below are historical where superseded by current source or this audit. Repository-local history contains stale licensing labels: the current frontend LICENSE declares `LicenseRef-XRBC-Watchdog-1.0`; this observation is not a license amendment or legal interpretation.
-
-Use the general evidence-first protocol for other requested projects/research, without exporting XRBC-specific identities/settings or treating connected tools as blanket permission. Tool availability and model capabilities must be checked when relevant; historical model labels are not evidence of entitlement or correctness.
+The backend `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563` is a prior audit baseline and was not re-audited. Older checkpoint sections below are historical where superseded. Pointers and graph are synchronized in this containing commit. Connected tools are task-scoped access, not blanket permission or guaranteed internal recall.
 
 ## Current source and deployment map — checked 2026-09-16
 
@@ -691,3 +689,5 @@ Current checkpoint: `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-REC
 Current checkpoint `memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json`. Implementation `a20800962133141d7e2d5c99e03ddda6ccd93d57` merged as `3e15aaec8d8ae875d3598ea259f947a6bb6ae881` via MR !10. Partial breakpoint transition repaired; source-CSS checks pass. Narrow-screen device confirmation remains. See `XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md`. Next implementation remains XRB-001.
 
 Layout correction to current checkpoint: [MR !11](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11), merge `0dcf99de7f4e5f6847689e298c1a7684d1b81369`, restores the Liquidity-reference fixed left rail above 900px. The earlier MR !10 1180px compact header was not the intended desktop layout. Use `ai-memory.json` ui_design_standard.layout_contract for future visual work.
+
+User execution preference (2026-09-22): Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment. Keep final reports brief. This supersedes broader optional workflow steps.

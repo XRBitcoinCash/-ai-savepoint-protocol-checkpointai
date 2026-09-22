@@ -426,7 +426,7 @@
       "type": "issue",
       "registry_id": "XRB-001",
       "file": "memory/known-errors.json",
-      "status": "open"
+      "status": "retest-required"
     },
     {
       "id": "issue:XRB-007",
@@ -509,6 +509,20 @@
       "id": "issue:UI-001",
       "type": "issue",
       "status": "retest-required",
+      "file": "memory/known-errors.json"
+    },
+    {
+      "id": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
+      "type": "savepoint",
+      "status": "deployed-device-wallet-retest-required",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+      "human_file": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md"
+    },
+    {
+      "id": "issue:XRB-009",
+      "type": "issue",
+      "registry_id": "XRB-009",
+      "status": "open",
       "file": "memory/known-errors.json"
     }
   ],
@@ -1007,11 +1021,27 @@
       "from": "savepoint:xrbc-home-responsive-header-2026-09-22",
       "rel": "repairs-awaiting-retest",
       "to": "issue:UI-001"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
+      "rel": "follows",
+      "to": "savepoint:xrbc-home-responsive-header-2026-09-22"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
+      "rel": "repairs-awaiting-retest",
+      "to": "issue:XRB-001"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
+      "rel": "records-separate-failure",
+      "to": "issue:XRB-009"
     }
   ],
   "query_hints": {
     "wallet_connection": [
       "issue:XRB-001",
+      "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
       "issue:XRB-007",
       "issue:XRB-008",
       "standard:xaman-connect-lifecycle",
@@ -1036,6 +1066,7 @@
       "issue:XRB-001",
       "issue:XRB-007",
       "issue:XRB-008",
+      "issue:XRB-009",
       "issue:BRIDGE-001"
     ],
     "liquidity_wallet_ui": [
@@ -1112,9 +1143,14 @@
       "issue:REF-001"
     ],
     "responsive_layout": [
+      "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
       "savepoint:xrbc-home-responsive-header-2026-09-22",
       "issue:UI-001"
+    ],
+    "xrbitcoin_market_history": [
+      "issue:XRB-009",
+      "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"
     ]
   },
-  "active_savepoint": "savepoint:xrbc-home-responsive-header-2026-09-22"
+  "active_savepoint": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"
 }
