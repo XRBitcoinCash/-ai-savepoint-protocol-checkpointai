@@ -7,6 +7,20 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
+      "frontend_commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
+      "pipeline_id": 2870524422
+    },
+    {
+      "id": "standard:project-wide-xrbc-sidebar-shell",
+      "type": "standard",
+      "status": "active",
+      "statement": "XRBC application/tool pages use the shared exchange/workbench shell: fixed desktop left rail, compact responsive top navigation, centralized shared CSS, and preserved executable behavior. Separate JCS/XRBitcoin/redirect/security micro-pages may retain distinct branding/layout."
+    },
+    {
       "id": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
       "type": "savepoint",
       "status": "implemented",
@@ -366,6 +380,26 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "rel": "defines",
+      "to": "standard:project-wide-xrbc-sidebar-shell"
+    },
+    {
+      "from": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "rel": "extends",
+      "to": "standard:shared-exchange-ui"
+    },
+    {
+      "from": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "rel": "preserves",
+      "to": "standard:xaman-connect-lifecycle"
+    },
+    {
+      "from": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
       "rel": "refines",
@@ -763,9 +797,8 @@
       "task:liquidity-top-wallet-browser-check"
     ],
     "ui_design": [
-      "savepoint:homepage-get-xrbc-cta-readability-2026-09-22",
-      "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
-      "standard:homepage-liquidity-shell-alignment",
+      "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "standard:project-wide-xrbc-sidebar-shell",
       "standard:shared-exchange-ui"
     ],
     "liquidity_market_history": [
@@ -804,7 +837,11 @@
       "savepoint:xaman-popup-layout-repair-2026-09-21",
       "standard:xaman-popup-trade-review",
       "task:xaman-popup-layout-browser-check"
+    ],
+    "project_wide_shell": [
+      "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22",
+      "standard:project-wide-xrbc-sidebar-shell"
     ]
   },
-  "active_savepoint": "savepoint:homepage-get-xrbc-cta-readability-2026-09-22"
+  "active_savepoint": "savepoint:project-wide-xrbc-sidebar-shell-2026-09-22"
 }
