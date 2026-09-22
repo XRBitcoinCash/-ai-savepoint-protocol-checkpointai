@@ -479,35 +479,20 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-homepage-exchange-shell-migration",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
-    "human_record": "HOMEPAGE-EXCHANGE-SHELL-MIGRATION-2026-09-21.md",
-    "scope": "Migrate the main XRBitcoinCash trading page into the same shared exchange/workbench shell used by the XRBC Liquidity Pool while preserving all executable behavior.",
+    "id": "SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
+    "scope": "Remove legacy hero-header conflicts and collapse the homepage exchange shell earlier on narrow desktops/tablets.",
     "status": "implemented",
-    "shared_css_commit": "cd8b2bd41082c9a87b1540381344e6c5ee4928e1",
-    "implementation_commit": "b06b3ca16f047b01a059bd5833d7e1d81050f24d",
-    "implementation_pipeline_id": 2868954757,
-    "implementation_pipeline_status": "success",
-    "rollback_commit": "8ec6e577e52fb4f9c751c3109f8fb07f137263ae",
-    "local_checkpoint_commit": "38d76d107614ce1f1c68c8922ed17d63242da4ab",
-    "local_memory_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
-    "machine_savepoint_create_commit": "25d4f7e3ab21124c99ad4e6fc27f56a1c0699799",
-    "human_checkpoint_create_commit": "415f479e13d9b9b6595c50d4882facb559beafff",
+    "responsive_css_commit": "a51cd1868a5409998468dd24604107c93b1bc56a",
+    "implementation_commit": "db77859774d1b9bdd27bb79d610cc6fd3f49b02e",
+    "pipeline_id": 2870387384,
+    "pipeline_status": "success",
+    "rollback_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
+    "local_checkpoint_commit": "6d4ee680c73fd1650d96905ced2dceaadabe9ca0",
+    "machine_savepoint_create_commit": "ce2752f2ce4d9e2612d4945ba5abd3e4354ac3e4",
     "page": "public/index.html",
-    "release": "1.5.3",
-    "shared_css": "public/xrbc-dynamic-ui.css",
-    "shared_css_version": "1.2.0",
-    "browser_custom_domain_verified": false,
-    "key_rules": [
-      "The XRBC Liquidity Pool remains the accepted visual reference for the main trading page.",
-      "Use the shared opt-in exchange shell rather than creating a separate homepage design system.",
-      "Homepage-specific visual rules stay scoped to body.xrbc-home-exchange-shell.",
-      "Desktop uses a fixed left rail, compact workbench heading, primary chart/market workspace and sticky right-side order rail.",
-      "At <=900px the rail becomes compact top navigation and the order panel stacks before the chart.",
-      "The existing Get XRBC in Xaman CTA and theme control remain available.",
-      "All executable homepage scripts remain byte-identical for this visual migration.",
-      "Wallet, Xaman request, challenge/memo, market/order, trustline and validated-finality behavior remain unchanged."
-    ]
+    "css_cache_version": "20260922-1",
+    "browser_custom_domain_verified": false
   },
   "savepoint_format": [
     "context",
@@ -534,6 +519,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
+      "scope": "Remove legacy hero-header conflicts and collapse the homepage exchange shell earlier on narrow desktops/tablets."
+    },
     {
       "id": "SAVEPOINT-2026-09-21-homepage-exchange-shell-migration",
       "record": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
