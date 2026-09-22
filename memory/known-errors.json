@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "registry_id": "xrbc-ecosystem-known-errors",
   "updated": "2026-09-22",
   "purpose": "Persistent error/regression ledger. Read before edits; update status instead of deleting resolved failures.",
@@ -20,7 +20,7 @@
     "status": "open",
     "page": "public/xrbitcoin-links.html",
     "symptom": "After completing Xaman authorization, the user must press Connect wallet a second time before the page registers the wallet.",
-    "current_hypothesis": "The prior cross-project session isolation intentionally disabled normal-browser success/retrieved hydration. The active deliberate connect attempt needs a bounded event-completion bridge like the working XRBC homepage, without restoring unrestricted passive browser account adoption.",
+    "current_hypothesis": "Current browser success/retrieved handlers reject non-xApp runtime even during an active deliberate attempt; source-extracted probe confirms no adoption through those events. Real OAuth sequencing and module-scoped SDK reuse remain unverified; missing event bridge is a supported hypothesis, not an established sole root cause.",
     "no_fix_committed": true,
     "next_checks": [
       "Compare current XRB wireSdk/connect with XRBC public/index.html success/retrieved/ready handling.",
@@ -29,6 +29,10 @@
       "Prove no second authorize call and no transaction payload.",
       "Extend synthetic test so first authorization completes S.connected without a second click.",
       "Perform real browser connect/disconnect/preview retest."
+    ],
+    "related_blockers": [
+      "XRB-007",
+      "XRB-008"
     ]
   },
   "xrbitcoin": [
@@ -36,7 +40,20 @@
       "id": "XRB-001",
       "status": "open",
       "summary": "Second Connect click required to register wallet.",
-      "fix_commit": null
+      "fix_commit": null,
+      "evidence_level": "user-reported + source-confirmed missing event bridge",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "source_functions": [
+        "wireSdk",
+        "connect",
+        "adoptAccount"
+      ],
+      "last_verified": "2026-09-22",
+      "acceptance_checks": [
+        "One deliberate Connect/authorize completes verified page account hydration without a second click.",
+        "No passive cross-app browser adoption, stale callback adoption or new signing payload.",
+        "Cancel/reconnect and backend-readiness remain bounded; xApp behavior preserved."
+      ]
     },
     {
       "id": "XRB-002",
@@ -73,6 +90,52 @@
       "status": "resolved",
       "summary": "XRBC-only navigation leaked into XRBitcoin sidebar.",
       "fix_commit": "be62d4ce19f44bd4c94a6044e78d47b4c81067ea"
+    },
+    {
+      "id": "XRB-007",
+      "status": "open",
+      "priority": "P1",
+      "summary": "Cancel / restart Xaman button is wired to disconnect(), which immediately returns while S.connecting is true.",
+      "evidence_level": "synthetic-reproduced",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "path": "public/xrbitcoin-links.html",
+      "source_functions": [
+        "updateControls",
+        "disconnect",
+        "resetXamanSession"
+      ],
+      "reproduction": "Actual disconnect() source executed with connecting=true: clearBrowserAuthorization calls=0, connecting remains true. Reset has the same early guard.",
+      "regression_probe": "memory/diagnostics/wallet-audit.mjs",
+      "minimal_repair_direction": "Provide a bounded authorization-only cancel path that invalidates the attempt, ignores late completions and preserves existing/ambiguous transaction records. Do not remove transaction-busy guards indiscriminately.",
+      "acceptance_checks": [
+        "Cancel while OAuth unresolved works immediately.",
+        "Late old SDK success and logout cannot mutate a new attempt.",
+        "No automatic authorize or payload recreation; pending records preserved."
+      ],
+      "fix_commit": null
+    },
+    {
+      "id": "XRB-008",
+      "status": "open",
+      "priority": "P1",
+      "summary": "SDK construction exception leaves S.connecting=true before timeout/try/finally cleanup exists.",
+      "evidence_level": "synthetic-reproduced",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "path": "public/xrbitcoin-links.html",
+      "source_functions": [
+        "connect",
+        "freshBrowserSdk",
+        "installSdk"
+      ],
+      "reproduction": "Injected freshBrowserSdk exception into actual connect() source: rejected promise and connecting=true; no timeout was installed.",
+      "regression_probe": "memory/diagnostics/wallet-audit.mjs",
+      "minimal_repair_direction": "Put initialization inside guarded cleanup and restore usable controls on throw; retain immediate authorize invocation from the click.",
+      "acceptance_checks": [
+        "Missing/throwing SDK leaves connecting=false with visible actionable error.",
+        "Retry after SDK recovery works with one authorization.",
+        "No transaction payload on initialization failure."
+      ],
+      "fix_commit": null
     }
   ],
   "xrbc": {
@@ -108,7 +171,232 @@
     "One deliberate write intent creates at most one Xaman payload.",
     "CSP changes are runtime/security changes and require verification.",
     "Do not call a green CI pipeline a live-wallet verification.",
-    "Keep resolved failures as regression fixtures with commit/pipeline evidence."
+    "Keep resolved failures as regression fixtures with commit/pipeline evidence.",
+    "Model name/Ultra setting is not test evidence or guaranteed access.",
+    "A visible Cancel label must be exercised against a pending attempt, not just checked for string presence.",
+    "SDK construction and all awaited cleanup must obey bounded state reset and stale-attempt protection.",
+    "Use actual current LICENSE and metadata schema; stale validator constants are not authoritative.",
+    "A setup blocker intentionally failing closed must be completed with reviewed dependencies, never bypassed.",
+    "Report audited scope; do not claim all defects found."
   ],
-  "human_registry": "KNOWN-ERRORS-REGRESSION-REGISTER.md"
+  "human_registry": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
+  "audit": {
+    "date": "2026-09-22",
+    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "evidence_file": "memory/audits/2026-09-22-reliability-audit.json",
+    "scope": "Current-source static checks, selected recent diffs and CI logs, synthetic wallet probes. Not an exhaustive security audit or a live wallet/browser certification.",
+    "model_attribution": "No commit is attributed to a particular model tier without provenance. User requested review of recent AI-assisted work; defects are classified by evidence, not model name."
+  },
+  "status_semantics": {
+    "open": "Unfixed, with evidence_level distinguishing user report, source, and synthetic reproduction.",
+    "retest-required": "Code exists, exact real-device behavior not verified.",
+    "resolved": "Scoped correction verified by specified evidence; never implies whole application correctness.",
+    "historical-reverify": "Retained report, current reproduction not established.",
+    "no-change-this-pass": "Explicitly outside application repair in this audit."
+  },
+  "cross_project": [
+    {
+      "id": "MEM-001",
+      "status": "resolved",
+      "priority": "P1",
+      "summary": "Active memory pointers disagreed: NEXT_RUN and synapse-map lagged behind bootstrap/ai-memory/latest pointer.",
+      "evidence_level": "source-confirmed; corrected by this memory-only change",
+      "source_commit": "a04378435f83f852308ccd9f8dc81ce458322917",
+      "paths": [
+        "NEXT_RUN.md",
+        "memory/synapse-map.json",
+        "ai-bootstrap.json",
+        "ai-memory.json",
+        "latest_savepoint.record"
+      ],
+      "acceptance_checks": [
+        "All active IDs and routes resolve in one atomic commit.",
+        "Prior NEXT_RUN and human checkpoints remain preserved."
+      ],
+      "fix_commit": "containing memory checkpoint commit"
+    },
+    {
+      "id": "CI-001",
+      "status": "open",
+      "priority": "P1",
+      "summary": "Green CI masks advisory validator failures and does not test the full browser lifecycle.",
+      "evidence_level": "CI-log + current-source",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "evidence_url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226888",
+      "observed": {
+        "validator_exit_code": 1,
+        "mode": "advisory",
+        "finding_lines": 19,
+        "unit_tests": 17,
+        "runtime_contract_pages": 10,
+        "security_jobs_allow_failure": true
+      },
+      "minimal_repair_direction": "Triage findings, add missing behavior tests and separate job success from validator findings. Do not blindly force strict mode or disable checks.",
+      "acceptance_checks": [
+        "Every finding classified and individually resolved or explicitly justified.",
+        "Runtime cancellation/initialization/event scenarios covered.",
+        "Homepage/external modules and real browser evidence tracked separately."
+      ]
+    },
+    {
+      "id": "BRIDGE-001",
+      "status": "open",
+      "priority": "P1",
+      "summary": "Bridge advanced wallet access is deliberately fail-closed but unconfigured: SDK integrity is empty and pinned SDK file absent.",
+      "evidence_level": "source-confirmed configuration blocker",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "path": "public/xrpl-bridge-integrity-monitor.html",
+      "evidence": {
+        "sdk_path": "public/vendor/xaman-xumm-sdk.pinned.min.js",
+        "sdk_present": false,
+        "integrity": "",
+        "button_label": "Xaman SDK Setup Needed"
+      },
+      "minimal_repair_direction": "Review and pin the correct official SDK with matching SRI under an explicitly authorized repair. Do not bypass SRI, gate or fail-closed behavior.",
+      "acceptance_checks": [
+        "Reviewed local SDK exists, SRI matches and CSP permits it.",
+        "Advanced wallet Connect works after a deliberate click; free monitoring remains independent."
+      ]
+    },
+    {
+      "id": "META-001",
+      "status": "open",
+      "priority": "P2",
+      "summary": "Validator reads obsolete assetIdentity schema; current manifest uses xrbc:officialIdentity with matching XRBC identifiers.",
+      "evidence_level": "source-confirmed validator/schema drift",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "paths": [
+        "scripts/validate_site.py",
+        "public/universal-ai.json"
+      ],
+      "minimal_repair_direction": "Validate the declared current schema or an explicit compatibility contract. Preserve exact issuer/currency and reject actual mismatches.",
+      "acceptance_checks": [
+        "Current valid v3 manifest passes.",
+        "Wrong issuer/currency fixtures fail.",
+        "Missing identity cannot silently pass."
+      ]
+    },
+    {
+      "id": "META-002",
+      "status": "open",
+      "priority": "P2",
+      "summary": "License references disagree across validator/README/older continuity prose; current LICENSE and TOML both declare LicenseRef-XRBC-Watchdog-1.0.",
+      "evidence_level": "source-confirmed documentation/test mismatch; not a legal opinion",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "paths": [
+        "LICENSE",
+        "README.md",
+        "CONTRIBUTING.md",
+        "scripts/validate_site.py",
+        "public/.well-known/xrp-ledger.toml"
+      ],
+      "minimal_repair_direction": "Align factual labels/validation with authoritative current LICENSE in a separately approved edit. Do not change licensing terms or retroactively relabel older releases.",
+      "acceptance_checks": [
+        "Current source labels agree.",
+        "Tests detect a deliberately wrong license identifier.",
+        "No license grant/terms changed."
+      ]
+    },
+    {
+      "id": "REF-001",
+      "status": "open",
+      "priority": "P2",
+      "summary": "Current validator identifies missing local discovery/evidence references and a missing /markets/ sitemap target.",
+      "evidence_level": "CI-log + repository-tree absence",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "paths": [
+        "public/llms.txt",
+        "public/creature-nft-ai.json",
+        "public/data/xrbc-readiness-evidence.json",
+        "public/data/xrbc-readiness-sources.json",
+        "public/markets/index.html"
+      ],
+      "minimal_repair_direction": "Identify each owning page/schema and correct stale references or restore reviewed assets one at a time; never fabricate readiness evidence.",
+      "acceptance_checks": [
+        "Every retained local URL resolves to intended reviewed content.",
+        "Sitemap uses the actual canonical market page or a deliberate compatibility redirect.",
+        "Unavailable evidence remains explicitly unavailable."
+      ]
+    },
+    {
+      "id": "DEPLOY-001",
+      "status": "retest-required",
+      "priority": "P2",
+      "summary": "Repository/deploy-job success must be reconciled with actual custom-domain and mirror build identities.",
+      "evidence_level": "repository snapshot; current live delivery not tested",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "mirror_build_commit": "baf07ddb5c5a0d9ede518b3003272d32ea43954e",
+      "mirror_last_observed_run": 35696392642,
+      "limitation": "That successful sync ran at 06:47 UTC before the 11:09 UTC GitLab deployment; it does not establish a failed sync or current public outage.",
+      "acceptance_checks": [
+        "Read build-info and relevant served assets at each actual origin.",
+        "Confirm no mixed/stale assets before altering working source or DNS."
+      ]
+    },
+    {
+      "id": "UX-001",
+      "status": "retest-required",
+      "priority": "P2",
+      "summary": "Shared-shell/layout and Xaman desktop/mobile flows still need rendered, interactive validation.",
+      "evidence_level": "source/CI verified only",
+      "source_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "acceptance_checks": [
+        "Desktop, narrow desktop, mobile, theme toggle and keyboard navigation.",
+        "Connect, cancel/restart, QR/deep link, app resume, two-tab and backend cold-start/error cases.",
+        "Never sign or submit a live financial transaction merely to audit."
+      ]
+    }
+  ],
+  "backend_ci": [
+    {
+      "id": "API-001",
+      "status": "resolved",
+      "summary": "b9ef92b API workflow failed because OpenAPI path-count test expected 24 rather than 25.",
+      "evidence_level": "failed job log + exact one-line fix + successor success + blob comparison",
+      "failed_run": 35626618909,
+      "failed_job": 106422436219,
+      "failed_commit": "b9ef92baadb03c6a32159c2ba71473feefdc718e",
+      "fix_commit": "131e204ebe131c5ae2f886d75506b230af91db21",
+      "passed_run": 35626734128,
+      "evidence_url": "https://github.com/XRBitcoinCash/xrbitcoincash.github.io/actions/runs/35626734128",
+      "current_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "protected_source_blobs_unchanged_since_passing_run": 15,
+      "next_action": "No duplicate workflow fix. Preserve route inventory assertions; add semantic inventory checks only under separate repair scope."
+    },
+    {
+      "id": "TEST-001",
+      "status": "resolved",
+      "summary": "ac46b49 lifecycle test searched for xApp condition in setupSdk although condition resides in wireSdk.",
+      "evidence_level": "failed log + test-only successor diff + successful current local tests",
+      "failed_pipeline": 2870987101,
+      "fix_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "passed_pipeline": 2870991044,
+      "limitation": "Corrected test did not establish first-click hydration or cancellation; see XRB-001/007/008."
+    },
+    {
+      "id": "TEST-002",
+      "status": "resolved",
+      "summary": "Initial gate-registry source assertion expected GATE_MIN=2500 and failed; successor gate assertion correction passes.",
+      "evidence_level": "failed log + successor pipeline + current local gate verification",
+      "failed_pipeline": 2865294326,
+      "fix_commit": "2d192c95c6afad338365b265537984e896b4d473",
+      "passed_pipeline": 2865294807,
+      "next_action": "Keep 2,500-XRBC policy unchanged; no duplicate gate repair."
+    }
+  ],
+  "repair_order": [
+    "XRB-001",
+    "XRB-007",
+    "XRB-008",
+    "BRIDGE-001",
+    "CI-001",
+    "META-001",
+    "META-002",
+    "REF-001",
+    "DEPLOY-001",
+    "UX-001"
+  ],
+  "repair_order_note": "One issue at a time. XRB-001 completion requires XRB-007/008 recovery acceptance before declaring the wallet lifecycle done. Discovery of a higher-risk blocker may reorder the queue with explanation."
 }

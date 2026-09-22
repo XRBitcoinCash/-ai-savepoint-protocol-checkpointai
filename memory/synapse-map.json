@@ -2,10 +2,31 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
+    {
+      "id": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "type": "savepoint",
+      "status": "audit-complete-repairs-pending",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+      "human_file": "RELIABILITY-AUDIT-2026-09-22.md"
+    },
+    {
+      "id": "protocol:evidence-first",
+      "type": "protocol",
+      "status": "active",
+      "file": "memory/operating-protocol.json",
+      "human_file": "OPERATING-PROTOCOL.md"
+    },
+    {
+      "id": "registry:known-errors",
+      "type": "registry",
+      "status": "active",
+      "file": "memory/known-errors.json",
+      "human_file": "KNOWN-ERRORS-REGRESSION-REGISTER.md"
+    },
     {
       "id": "savepoint:developer-page-exchange-sidebar-2026-09-22",
       "type": "savepoint",
@@ -399,6 +420,76 @@
       "type": "task",
       "status": "manual-pending",
       "statement": "Verify desktop/mobile top-wallet layout, Wallet details jump, and one close/restart Xaman authorization attempt on the custom domain."
+    },
+    {
+      "id": "issue:XRB-001",
+      "type": "issue",
+      "registry_id": "XRB-001",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:XRB-007",
+      "type": "issue",
+      "registry_id": "XRB-007",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:XRB-008",
+      "type": "issue",
+      "registry_id": "XRB-008",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:BRIDGE-001",
+      "type": "issue",
+      "registry_id": "BRIDGE-001",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:CI-001",
+      "type": "issue",
+      "registry_id": "CI-001",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:META-001",
+      "type": "issue",
+      "registry_id": "META-001",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:META-002",
+      "type": "issue",
+      "registry_id": "META-002",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:REF-001",
+      "type": "issue",
+      "registry_id": "REF-001",
+      "file": "memory/known-errors.json",
+      "status": "open"
+    },
+    {
+      "id": "issue:DEPLOY-001",
+      "type": "issue",
+      "registry_id": "DEPLOY-001",
+      "file": "memory/known-errors.json",
+      "status": "retest-required"
+    },
+    {
+      "id": "issue:UX-001",
+      "type": "issue",
+      "registry_id": "UX-001",
+      "file": "memory/known-errors.json",
+      "status": "retest-required"
     }
   ],
   "edges": [
@@ -811,10 +902,73 @@
       "from": "task:tier-refinement",
       "rel": "follows",
       "to": "savepoint:production-scaffold-2026-09-20"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:XRB-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:XRB-007"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:XRB-008"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:BRIDGE-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:CI-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:META-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:META-002"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:REF-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:DEPLOY-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "queues",
+      "to": "issue:UX-001"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "defines",
+      "to": "protocol:evidence-first"
+    },
+    {
+      "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "rel": "updates",
+      "to": "registry:known-errors"
     }
   ],
   "query_hints": {
     "wallet_connection": [
+      "issue:XRB-001",
+      "issue:XRB-007",
+      "issue:XRB-008",
       "standard:xaman-connect-lifecycle",
       "savepoint:homepage-xaman-connect-lifecycle-alignment-2026-09-21",
       "invariant:connect-authorize-only",
@@ -834,8 +988,10 @@
       "savepoint:discovery-2026-09-21"
     ],
     "next_implementation": [
-      "task:production-browser-tests",
-      "task:tier-refinement"
+      "issue:XRB-001",
+      "issue:XRB-007",
+      "issue:XRB-008",
+      "issue:BRIDGE-001"
     ],
     "liquidity_wallet_ui": [
       "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
@@ -895,7 +1051,21 @@
       "savepoint:developer-page-exchange-sidebar-2026-09-22",
       "standard:developer-exchange-family",
       "task:developer-sidebar-browser-check"
+    ],
+    "memory_audit": [
+      "savepoint:reliability-audit-memory-hardening-2026-09-22",
+      "protocol:evidence-first",
+      "registry:known-errors"
+    ],
+    "research": [
+      "protocol:evidence-first"
+    ],
+    "ci_validation": [
+      "issue:CI-001",
+      "issue:META-001",
+      "issue:META-002",
+      "issue:REF-001"
     ]
   },
-  "active_savepoint": "savepoint:developer-page-exchange-sidebar-2026-09-22"
+  "active_savepoint": "savepoint:reliability-audit-memory-hardening-2026-09-22"
 }

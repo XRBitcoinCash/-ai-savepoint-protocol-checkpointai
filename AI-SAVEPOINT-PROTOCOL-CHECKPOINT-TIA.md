@@ -2,11 +2,21 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-21  
+**Updated:** 2026-09-22  
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
+
+## Current memory checkpoint — 2026-09-22
+
+Active: `SAVEPOINT-2026-09-22-reliability-audit-memory-hardening`. Read `NEXT_RUN.md`, `memory/operating-protocol.json` and `memory/known-errors.json` before resuming. This audit changes memory only; application repairs remain pending.
+
+Frontend observed: `97cfb36f244e8f11d806232aedf488fc34fb9898`; backend observed: `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563`. Pipeline 2870991044 is green but its site validator reports 19 advisory findings. XRB-001 first-click hydration remains open; XRB-007/008 recovery defects were synthetically reproduced.
+
+The active pointers and graph are synchronized in the containing commit. Older statements below are historical where superseded by current source or this audit. Repository-local history contains stale licensing labels: the current frontend LICENSE declares `LicenseRef-XRBC-Watchdog-1.0`; this observation is not a license amendment or legal interpretation.
+
+Use the general evidence-first protocol for other requested projects/research, without exporting XRBC-specific identities/settings or treating connected tools as blanket permission. Tool availability and model capabilities must be checked when relevant; historical model labels are not evidence of entitlement or correctness.
 
 ## Current source and deployment map — checked 2026-09-16
 
@@ -88,7 +98,7 @@ Use one bounded pass at a time:
 6. **Review:** escalate only the failed assertion or uncertain section, not the entire project.
 7. **Record:** add a short savepoint with facts, impact, checks, and remaining risks.
 
-Suggested model routing (when these models are available):
+Historical model-routing suggestions (not verified current product availability or a quality guarantee; the evidence-first protocol applies at every tier):
 
 - **GPT-5.6 Luna:** wording, CSS, documentation, mechanical edits, and routine parsing.
 - **GPT-5.6 Terra:** contained implementation, tests, and ordinary debugging.
@@ -117,7 +127,7 @@ See [`ai/sandbox/README.md`](https://raw.githubusercontent.com/XRBitcoinCash/-ai
 - Never commit wallet seeds, private keys, passcodes, recovery phrases, credentials, or environment values.
 - Keep public read-only ledger access separate from transaction preparation and signing.
 - Do not change a proxy, Render service, network allowlist, CSP, wallet flow, or API contract without an explicit request and a regression check.
-- Desktop signing remains QR-only; mobile signing remains an explicit Xaman handoff where the target project supports it.
+- Desktop uses the official Xaman QR and may expose the official open link for that same request; mobile uses the official explicit handoff where supported. Never replace an authorization/payload QR with a static page-link QR or create a second payload for another presentation.
 - Validate addresses, amounts, balances, reserve buffers, currencies, issuers, NFT IDs, and ledger validation state.
 - Disable duplicate async submissions; handle cancellation, timeout, rejection, stale responses, and missing data visibly.
 - Prefer `textContent`; escape every dynamic value before `innerHTML`.
@@ -650,3 +660,24 @@ Checks:
 - 13 executable homepage scripts parsed before commit.
 - New DOM ids were unique.
 - Pipeline `2868175288` passed runtime-contracts, validate-repository, secret detection, Semgrep SAST and deploy-pages.
+
+
+### [SAVEPOINT-2026-09-22-reliability-audit-memory-hardening] Evidence-first secondary memory and repair queue
+
+Context: User requested an audit of recent AI-assisted changes and stronger reusable memory before continuing repairs.
+
+Changes:
+- Synchronized bootstrap, machine memory, latest record, graph and next-run.
+- Added general development/research operating protocol, discoverable AGENTS entrypoint, evidence ledger, memory validator and synthetic wallet probes.
+- Preserved prior next-run as an archive and all historical checkpoints.
+
+Checks:
+- 27 public HTML pages / 118 executable inline classic scripts scanned; existing runtime/gate checks and all 17 frontend tests pass locally.
+- Current pipeline inspected beyond its badge: validator exit 1 with 19 advisory findings.
+- XRB cancel-during-connect and initialization-exception stuck state reproduced in synthetic source probes.
+- Historical API route-count and test assertion failures already corrected; no duplicate fixes applied.
+
+TODO:
+- First repair XRB-001, then XRB-007/008 recovery; preserve exact application identity, bounded attempts and pending transaction guards.
+- No application repair, live wallet test, transaction, service setting or deployment change was made by this checkpoint.
+- Detailed evidence and limits: RELIABILITY-AUDIT-2026-09-22.md.

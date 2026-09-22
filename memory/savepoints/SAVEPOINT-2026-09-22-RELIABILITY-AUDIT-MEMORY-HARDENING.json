@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+  "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+  "status": "audit-complete-repairs-pending",
+  "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+  "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+  "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+  "source_pipeline_id": 2870991044,
+  "source_pipeline_status": "success-with-advisory-findings",
+  "next_issue": "XRB-001",
+  "linked_recovery_issues": [
+    "XRB-007",
+    "XRB-008"
+  ],
+  "browser_live_retest_after_final_deploy": false,
+  "created": "2026-09-22",
+  "memory_parent_commit": "a04378435f83f852308ccd9f8dc81ce458322917",
+  "previous_savepoint": {
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+    "human_record": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
+    "status": "implemented",
+    "scope": "Repair XRBitcoin's ambiguous same-origin Xaman browser session lifecycle and validate the new behavior with synthetic wallet tests.",
+    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "implementation_pipeline_id": 2870991044,
+    "implementation_pipeline_status": "success",
+    "machine_savepoint_create_commit": "718f91159c6888e86702a1241c63869132d725af",
+    "human_checkpoint_create_commit": "ef98363385dc7cb17cf5e28473949cc38d51d939",
+    "page": "public/xrbitcoin-links.html",
+    "browser_live_retest_after_final_deploy": false
+  },
+  "permissions_scope": "Memory update authorized; application repairs deferred.",
+  "evidence": "memory/audits/2026-09-22-reliability-audit.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [],
+  "tests": {
+    "runtime_contracts": "10 critical pages pass",
+    "gate_registry": "12 tools / 7 tiers pass",
+    "unit_tests": "17 pass",
+    "public_inline_scan": "27 pages / 118 scripts; no findings within static criteria",
+    "additional_probes": "XRB-001 missing event bridge; XRB-007/008 reproduced",
+    "ci_validator": "19 advisory findings, exit 1",
+    "backend": "15 relevant blobs unchanged since successful API run"
+  },
+  "publication": "The containing Git commit identifies this memory savepoint; no self-referential commit hash is invented.",
+  "remaining": [
+    "Application repairs in queue",
+    "Real browser/mobile/two-tab tests",
+    "Live served-build and Render verification",
+    "Historical JCS re-verification as separately scoped"
+  ]
+}

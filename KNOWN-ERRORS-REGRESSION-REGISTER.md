@@ -14,6 +14,29 @@
 
 ---
 
+## Current audit overlay — 2026-09-22
+
+This overlay supersedes older certainty/priority wording below without erasing incident history. Read [RELIABILITY-AUDIT-2026-09-22.md](RELIABILITY-AUDIT-2026-09-22.md) and [memory/known-errors.json](memory/known-errors.json) for current evidence and acceptance tests.
+
+Active savepoint: `SAVEPOINT-2026-09-22-reliability-audit-memory-hardening`. Application repairs have **not** been performed in this audit.
+
+- XRB-001 remains OPEN. Missing browser event adoption is source-confirmed; exact real OAuth causality is not fully reproduced.
+- XRB-007 is OPEN / synthetic-reproduced: Cancel / restart is bound to a handler that returns while connecting.
+- XRB-008 is OPEN / synthetic-reproduced: SDK construction throws before cleanup is established, leaving connecting latched.
+- XRB-005 remains RETEST REQUIRED; earlier “root cause established” language is a historical attribution, not new live verification.
+- BRIDGE-001 is an OPEN configuration blocker: absent pinned SDK and empty SRI disable advanced Connect intentionally. Preserve fail-closed behavior.
+- CI-001: current green pipeline includes **19 advisory findings**. All 17 existing tests pass but miss the reproduced recovery defects.
+- META-001 is validator/schema drift, not evidence of a wrong current issuer; META-002 is stale license labels/constants, not a change to licensing terms.
+- REF-001 covers missing discovery/evidence URLs; DEPLOY-001 and UX-001 require served-build/browser checks.
+- API-001, TEST-001 and TEST-002 are already corrected historical test failures; do not repair them again.
+- MEM-001 pointer inconsistency is corrected by this memory-only checkpoint.
+
+Current repair order: **XRB-001 → XRB-007 → XRB-008 → BRIDGE-001 → CI-001 → META-001 → META-002 → REF-001 → DEPLOY-001 → UX-001**. Work one issue at a time. Existing RESOLVED labels mean the stated scoped source/test correction, not real-wallet certification.
+
+The detailed original incident history follows unchanged.
+
+---
+
 # 1. XRBitcoin / XRB
 
 Active frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project`, branch `master`  

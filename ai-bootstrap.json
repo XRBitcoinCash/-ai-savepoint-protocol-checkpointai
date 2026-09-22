@@ -10,15 +10,19 @@
     "latest_pointer": "latest_savepoint.record",
     "canonical_contract": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
     "synapse_map": "memory/synapse-map.json",
-    "next_run": "NEXT_RUN.md"
+    "next_run": "NEXT_RUN.md",
+    "operating_protocol": "memory/operating-protocol.json",
+    "known_errors": "memory/known-errors.json",
+    "audit_evidence": "memory/audits/2026-09-22-reliability-audit.json"
   },
   "load_order": [
     "ai-bootstrap.json",
     "latest_savepoint.record",
-    "ai-memory.json",
-    "memory/synapse-map.json",
+    "memory/operating-protocol.json",
+    "NEXT_RUN.md and relevant memory/known-errors.json entries",
+    "ai-memory.json and memory/synapse-map.json for task-specific facts/routes",
     "topic-routed checkpoint(s) only",
-    "canonical contract when security-sensitive, policy-sensitive, conflicting, or incomplete evidence requires it"
+    "canonical contract for security-sensitive, policy-sensitive, conflicting or incomplete evidence"
   ],
   "repositories": {
     "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -41,21 +45,23 @@
       "pipeline_id": 2870991044,
       "pipeline_status": "success",
       "page": "public/xrbitcoin-links.html",
-      "root_cause": "Passive browser restore plus same-origin cross-application XummPkceJwt state could create sessionFault and ambiguous wallet state.",
-      "browser_live_retest_after_final_deploy": false
+      "root_cause": "Prior checkpoint attributes ambiguous wallet state to passive/cross-app cache restore; live provider behavior is not reverified by this audit.",
+      "browser_live_retest_after_final_deploy": false,
+      "verification_scope": "Historical implementation and CI/synthetic checks only. Current user report XRB-001 and synthetic XRB-007/008 remain open."
     },
     "same_day_discovery_change": {
       "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
       "pipeline_id": 2867921308,
       "pipeline_status": "success"
     },
-    "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
+    "next_major_pass": "After user directs continuation, repair XRB-001, then XRB-007/008, with bounded patches and behavioral tests before broad expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
-      "savepoint_commit": "718f91159c6888e86702a1241c63869132d725af"
+      "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+      "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+      "status": "audit-complete-repairs-pending"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
     "previous_verified_frontend_change": {
       "scope": "Project-wide XRBC sidebar shell migration",
       "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
@@ -91,7 +97,22 @@
       "machine_file": "memory/known-errors.json",
       "highest_priority": "XRB-001",
       "highest_priority_status": "open",
-      "frontend_head_when_recorded": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+      "frontend_head_when_recorded": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "audit_checkpoint": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening"
+    },
+    "observed_source_heads": {
+      "frontend": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "backend": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "observed": "2026-09-22",
+      "refresh_before_write": true
+    },
+    "current_validation": {
+      "pipeline": 2870991044,
+      "status": "success",
+      "validator_exit_code": 1,
+      "advisory_finding_lines": 19,
+      "unit_tests_pass": 17,
+      "live_wallet_verified": false
     }
   },
   "safety_invariants": [
@@ -114,7 +135,10 @@
     "Repository evidence outranks cached conversation or indexed-search assumptions.",
     "Before any code write, verify the exact source repository, branch, file, and current head.",
     "Topic routes are context pointers, not authority.",
-    "Do not delete historical human-readable checkpoints during the machine-first transition."
+    "Do not delete historical human-readable checkpoints during the machine-first transition.",
+    "Active graph node, NEXT_RUN, bootstrap, ai-memory and latest record must agree; validate with node scripts/validate-memory.mjs.",
+    "Publish all current pointers in one atomic non-force memory update; retain historical checkpoints.",
+    "Do not infer live success from a green badge or a historical model capability label."
   ],
   "routing": {
     "xaman": [
@@ -152,6 +176,7 @@
       "memory/synapse-map.json"
     ],
     "backend_api": [
+      "memory/audits/2026-09-22-reliability-audit.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
       "memory/synapse-map.json"
     ],
@@ -180,6 +205,7 @@
       "memory/synapse-map.json"
     ],
     "xrbitcoin": [
+      "memory/known-errors.json",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
       "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
@@ -191,6 +217,16 @@
     "known_errors": [
       "memory/known-errors.json",
       "KNOWN-ERRORS-REGRESSION-REGISTER.md"
+    ],
+    "reliability_audit": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+      "RELIABILITY-AUDIT-2026-09-22.md",
+      "memory/audits/2026-09-22-reliability-audit.json",
+      "memory/known-errors.json"
+    ],
+    "cross_project_research": [
+      "memory/operating-protocol.json",
+      "OPERATING-PROTOCOL.md"
     ]
   },
   "transition": {

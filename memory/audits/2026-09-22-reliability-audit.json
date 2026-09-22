@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "xrbc-reliability-2026-09-22",
+  "observed_at": "2026-09-22T11:45:00Z",
+  "scope": "Audit and secondary-memory update only; no application repairs, service settings, wallet connections or transactions.",
+  "source_snapshots": {
+    "memory": {
+      "repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+      "branch": "main",
+      "commit": "a04378435f83f852308ccd9f8dc81ce458322917"
+    },
+    "frontend": {
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "project_id": 75781181,
+      "branch": "master",
+      "commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "pipeline": 2870991044,
+      "pipeline_status": "success"
+    },
+    "backend": {
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "branch": "main",
+      "commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "latest_api_pass_commit": "131e204ebe131c5ae2f886d75506b230af91db21",
+      "latest_api_pass_run": 35626734128,
+      "unchanged_backend_test_workflow_blobs": 15
+    }
+  },
+  "checks": [
+    {
+      "command": "node scripts/verify-runtime.mjs",
+      "scope": "frontend snapshot",
+      "result": "pass: 10 critical pages",
+      "runtime": "Node v24.19.0 local; CI uses Node 22"
+    },
+    {
+      "command": "node scripts/verify-gates.mjs",
+      "result": "pass: 12 tools, 7 tiers"
+    },
+    {
+      "command": "node --test tests/unit/*.test.mjs",
+      "result": "17 pass, 0 fail; includes 7 XRB synthetic/source tests"
+    },
+    {
+      "command": "read-only static scan of all root public HTML",
+      "result": "27 pages, 118 executable inline classic scripts parsed; no duplicate markup IDs/document-root findings or missing declared inline CSP hashes under scan criteria",
+      "limitations": "Not a browser engine, runtime integration test, computed-CSS test, dependency/SRI completeness check or general proof of security."
+    },
+    {
+      "command": "node memory/diagnostics/wallet-audit.mjs <frontend-checkout>",
+      "result": "XRB-001 missing browser event bridge confirmed; XRB-007 cancel no-op reproduced; XRB-008 startup latch reproduced",
+      "network_calls": 0,
+      "transaction_payloads": 0
+    },
+    {
+      "command": "GitLab current validation job log",
+      "job_id": 16651226888,
+      "result": "job success but validator exit 1, advisory, 19 finding lines",
+      "finding_lines": [
+        "universal-ai.json assetIdentity.issuer does not match the canonical XRBC issuer",
+        "universal-ai.json assetIdentity.currencyHex does not match the canonical XRBC currency",
+        "xrp-ledger.toml POLICIES.license does not match LICENSE",
+        "xrp-ledger.toml AI_DISCOVERY.source_code_license does not match LICENSE",
+        "Sitemap target missing: https://xrbitcoincash.com/markets/",
+        "Missing local reference: public/ai-provenance.html -> /llms.txt",
+        "Missing local reference: public/ai-provenance.html -> /llms.txt",
+        "Missing local reference: public/ai-provenance.html -> /llms.txt",
+        "Missing local reference: public/ai-provenance.html -> /llms.txt",
+        "Missing local reference: public/ai-provenance.html -> /llms.txt",
+        "Missing local reference: public/creature-nft-links.html -> /creature-nft-ai.json",
+        "Missing local reference: public/creature-nft-links.html -> /llms.txt",
+        "Missing local reference: public/creature-nft-links.html -> ./creature-nft-ai.json",
+        "Missing local reference: public/creature-nft-links.html -> ./llms.txt",
+        "Missing local reference: public/policy.html -> /llms.txt",
+        "Missing local reference: public/whitepaper.html -> /llms.txt",
+        "Missing local reference: public/xrbc-readiness.html -> /data/xrbc-readiness-evidence.json",
+        "Missing local reference: public/xrbc-readiness.html -> /data/xrbc-readiness-sources.json",
+        "Missing local reference: public/xrpl-bridge-integrity-monitor.html -> /vendor/xaman-xumm-sdk.pinned.min.js"
+      ]
+    },
+    {
+      "command": "selected historical CI logs + successor diffs",
+      "result": "API-001, TEST-001, TEST-002 already fixed; no duplicate implementation"
+    },
+    {
+      "command": "memory pointer comparison",
+      "result": "bootstrap/ai-memory/latest pointer at XRB lifecycle; graph at Developer sidebar; NEXT_RUN at Sept 21 memory layer; corrected in containing memory commit"
+    },
+    {
+      "command": "node scripts/validate-memory.mjs",
+      "result": "pass: 28 JSON files, 70 graph nodes, 19 structured issues, consistent active pointers and next issue"
+    },
+    {
+      "command": "in-memory negative fixtures against memory validator",
+      "result": "4 pass: rejects latest-pointer drift, active-graph drift, missing queued issue and source-snapshot mismatch"
+    }
+  ],
+  "memory_validation": {
+    "result": "pass",
+    "negative_fixtures_rejected": [
+      "pointer drift",
+      "graph drift",
+      "missing queued issue",
+      "source mismatch"
+    ]
+  },
+  "coverage": {
+    "frontend_commit_listing": {
+      "count": 100,
+      "filter_since": "2026-09-19T00:00:00Z",
+      "pagination": "first 100; not full history"
+    },
+    "pipeline_listing": "first 100 since September 19; selected failures and latest jobs inspected",
+    "github_runs": "first 100 since September 19",
+    "full_browser_coverage": false,
+    "live_xaman_coverage": false,
+    "production_render_endpoint_checked": false,
+    "external_jcs_repository_audited": false,
+    "source_tier_provenance": false
+  },
+  "ci_jobs": [
+    {
+      "id": 16651226891,
+      "name": "deploy-pages",
+      "status": "success",
+      "allow_failure": false,
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226891"
+    },
+    {
+      "id": 16651226890,
+      "name": "secret_detection",
+      "status": "success",
+      "allow_failure": true,
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226890"
+    },
+    {
+      "id": 16651226889,
+      "name": "semgrep-sast",
+      "status": "success",
+      "allow_failure": true,
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226889"
+    },
+    {
+      "id": 16651226888,
+      "name": "validate-repository",
+      "status": "success",
+      "allow_failure": false,
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226888"
+    },
+    {
+      "id": 16651226887,
+      "name": "runtime-contracts",
+      "status": "success",
+      "allow_failure": false,
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651226887"
+    }
+  ],
+  "historical_evidence": {
+    "api_failure": {
+      "url": "https://github.com/XRBitcoinCash/xrbitcoincash.github.io/actions/runs/35626618909",
+      "failure": "OpenAPI routes and portal catalog agree with release inventory: 25 !== 24",
+      "fix": "131e204ebe131c5ae2f886d75506b230af91db21"
+    },
+    "wallet_test_failure": {
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16651196373",
+      "failure": "Expected xApp===true regex inside setupSdk; source condition in wireSdk"
+    },
+    "gate_failure": {
+      "url": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/16611582329",
+      "failure": "Advanced tokenization source assertion GATE_MIN\\\\s*=\\\\s*2500"
+    }
+  },
+  "out_of_scope": [
+    "Live wallet or signing tests",
+    "Render/Xaman private configuration",
+    "DNS or hosting edits",
+    "Application repairs",
+    "Exhaustive vulnerability review",
+    "Private personal records or unrelated connected accounts"
+  ]
+}

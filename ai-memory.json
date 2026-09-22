@@ -8,6 +8,7 @@
   "agent_entrypoint": {
     "read_before_edit": true,
     "sequence": [
+      "read memory/operating-protocol.json and current known-errors; honor evidence labels and current authorization",
       "read ai-bootstrap.json and latest_savepoint.record",
       "read ai-memory.json, then route by topic through memory/synapse-map.json",
       "read HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md for large-file work and bounded manual-edit collaboration when relevant",
@@ -23,6 +24,7 @@
       "required_for_new_project_conversations": true,
       "purpose": "Use the GitHub continuity repository as a secondary project-memory layer so a new conversation can regain verified XRBitcoinCash state before making edits.",
       "sequence": [
+        "load current cross-project operating protocol and first pending issue",
         "read ai-bootstrap.json and latest_savepoint.record",
         "read ai-memory.json and use memory/synapse-map.json to select only task-relevant checkpoints",
         "check the active source-of-truth repository, branch, current commit and relevant pipeline before editing",
@@ -171,29 +173,33 @@
     ]
   },
   "model_routing": {
-    "luna": [
-      "wording",
-      "CSS",
-      "documentation",
-      "mechanical edits",
-      "routine parsing"
-    ],
-    "terra": [
-      "contained implementation",
-      "tests",
-      "ordinary debugging"
-    ],
-    "sol": [
-      "multi-file XRPL/Xaman/Render integration",
-      "security review",
-      "difficult failures"
-    ],
-    "astra": [
-      "architecture",
-      "ambiguous threat models",
-      "deep research",
-      "final high-risk audit"
-    ]
+    "status": "historical-labels-not-capability-evidence",
+    "previous_suggestions": {
+      "luna": [
+        "wording",
+        "CSS",
+        "documentation",
+        "mechanical edits",
+        "routine parsing"
+      ],
+      "terra": [
+        "contained implementation",
+        "tests",
+        "ordinary debugging"
+      ],
+      "sol": [
+        "multi-file XRPL/Xaman/Render integration",
+        "security review",
+        "difficult failures"
+      ],
+      "astra": [
+        "architecture",
+        "ambiguous threat models",
+        "deep research",
+        "final high-risk audit"
+      ]
+    },
+    "rule": "Choose from actually available capabilities per session and task risk. No entitlement, Ultra identity or quality guarantee follows from this historical mapping. Apply the same evidence/verification standard at every tier."
   },
   "sandbox": {
     "path": "ai/sandbox/",
@@ -240,7 +246,12 @@
     "backend warm-up must never block initial page interaction; transaction-payload creation is prohibited until readiness and fresh state checks complete",
     "provider ambiguity during Xaman payload creation never authorizes an automatic replacement request",
     "homepage Xaman reconnect countdown is explanatory UI for the existing bounded authorization attempt; it must never become an automatic reconnect/signing loop",
-    "canonical favicon/brand aliases are additive; preserve legacy discovery asset URLs for crawler, wallet and integration compatibility"
+    "canonical favicon/brand aliases are additive; preserve legacy discovery asset URLs for crawler, wallet and integration compatibility",
+    "Visible recovery controls require behavior tests while the operation is pending; labels/string checks are insufficient.",
+    "SDK initialization failure must restore a retryable state; stale SDK callbacks/cleanup must not alter new attempts.",
+    "Distinguish actual source, desired behavior, user reports, simulations, CI, served bytes and live-device evidence.",
+    "Do not infer active license or schema from stale validator constants; inspect authoritative files.",
+    "Use connected sources only within the current task; never publish credentials or private personal context to public checkpoints."
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
@@ -439,18 +450,19 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
-    "human_record": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+    "human_record": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
     "status": "implemented",
-    "scope": "Repair XRBitcoin wallet connection by allowing the same-origin shared Xaman helper through CSP and fix CI's CSP parser.",
-    "implementation_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
-    "implementation_pipeline_id": 2870937665,
+    "scope": "Repair XRBitcoin's ambiguous same-origin Xaman browser session lifecycle and validate the new behavior with synthetic wallet tests.",
+    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "implementation_pipeline_id": 2870991044,
     "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d",
-    "human_checkpoint_create_commit": "4cf7772b9526b685bf0c893e7c98b03b16c734d9",
+    "machine_savepoint_create_commit": "718f91159c6888e86702a1241c63869132d725af",
+    "human_checkpoint_create_commit": "ef98363385dc7cb17cf5e28473949cc38d51d939",
     "page": "public/xrbitcoin-links.html",
-    "browser_custom_domain_verified": false
+    "browser_live_retest_after_final_deploy": false
   },
   "previous_research_savepoint": {
     "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
@@ -469,18 +481,20 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
-    "human_record": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
-    "status": "implemented",
-    "scope": "Repair XRBitcoin's ambiguous same-origin Xaman browser session lifecycle and validate the new behavior with synthetic wallet tests.",
-    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
-    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
-    "implementation_pipeline_id": 2870991044,
-    "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "718f91159c6888e86702a1241c63869132d725af",
-    "human_checkpoint_create_commit": "ef98363385dc7cb17cf5e28473949cc38d51d939",
-    "page": "public/xrbitcoin-links.html",
+    "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+    "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+    "status": "audit-complete-repairs-pending",
+    "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2870991044,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "linked_recovery_issues": [
+      "XRB-007",
+      "XRB-008"
+    ],
     "browser_live_retest_after_final_deploy": false
   },
   "savepoint_format": [
@@ -508,6 +522,23 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+      "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+      "status": "audit-complete-repairs-pending",
+      "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+      "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "source_pipeline_id": 2870991044,
+      "source_pipeline_status": "success-with-advisory-findings",
+      "next_issue": "XRB-001",
+      "linked_recovery_issues": [
+        "XRB-007",
+        "XRB-008"
+      ],
+      "browser_live_retest_after_final_deploy": false
+    },
     {
       "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
       "record": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
@@ -1000,7 +1031,8 @@
       "ai-memory.json latest_savepoint, latest_savepoint.record and ai-bootstrap.json active memory savepoint must agree",
       "repository evidence outranks stale conversation or code-search indexing",
       "before code edits verify current source repository, branch, file and head",
-      "security-sensitive or conflicting tasks escalate to the canonical contract and repository-local instructions"
+      "security-sensitive or conflicting tasks escalate to the canonical contract and repository-local instructions",
+      "graph active_savepoint, NEXT_RUN, bootstrap, ai-memory and latest record are synchronized atomically and checked by scripts/validate-memory.mjs"
     ],
     "deletion_policy": "Do not delete historical human-readable checkpoints during the transition."
   },
@@ -1162,7 +1194,40 @@
     "human_file": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
     "machine_file": "memory/known-errors.json",
     "purpose": "Persistent cross-project error/regression ledger. Read before editing affected XRBC, XRBitcoin or JCS pages. Update status and fix evidence instead of deleting resolved failures.",
-    "highest_priority": "XRB-001 — first Xaman authorization currently requires a second Connect click before the XRBitcoin page registers the wallet; no fix committed yet.",
-    "operating_rule": "When a repair creates or exposes a new regression, add it immediately and link it to the parent fix/commit. Treat browser/device verification separately from CI success."
+    "highest_priority": "XRB-001: first-click hydration; linked open recovery defects XRB-007 cancellation and XRB-008 SDK startup latch.",
+    "operating_rule": "When a repair creates or exposes a new regression, add it immediately and link it to the parent fix/commit. Treat browser/device verification separately from CI success.",
+    "latest_audit": "RELIABILITY-AUDIT-2026-09-22.md",
+    "verified_frontend_head": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+  },
+  "secondary_memory_protocol": {
+    "machine": "memory/operating-protocol.json",
+    "human": "OPERATING-PROTOCOL.md",
+    "entrypoint": "AGENTS.md",
+    "validator": "scripts/validate-memory.mjs",
+    "scope": "Reusable development/research method; XRBC-specific facts stay scoped.",
+    "access": "Connected providers are checked when needed; this checkpoint is not a credential grant.",
+    "automatic_loading_guaranteed": false
+  },
+  "current_audit": {
+    "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+    "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+    "status": "audit-complete-repairs-pending",
+    "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2870991044,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "linked_recovery_issues": [
+      "XRB-007",
+      "XRB-008"
+    ],
+    "browser_live_retest_after_final_deploy": false,
+    "evidence_file": "memory/audits/2026-09-22-reliability-audit.json",
+    "repairs_performed": false,
+    "exhaustive_audit": false,
+    "ci_summary": "17 local tests and runtime/gate checks pass; CI validator still has 19 advisory findings.",
+    "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
   }
 }

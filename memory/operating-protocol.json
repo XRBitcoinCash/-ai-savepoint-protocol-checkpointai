@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "cross-project-evidence-first-v1",
+  "updated": "2026-09-22",
+  "human_file": "OPERATING-PROTOCOL.md",
+  "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
+  "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
+  "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
+  "authorization": {
+    "current_task": "Audit recent changes and update existing memory; defer application repairs.",
+    "rules": [
+      "Capability availability is not authorization.",
+      "Verify access each session; stop for missing permissions/approval.",
+      "No unrelated accounts, credential extraction, live financial actions or deployment/configuration changes merely to audit.",
+      "Public repository memory must not contain secrets/private personal records."
+    ]
+  },
+  "access_snapshot": {
+    "observed_at": "2026-09-22",
+    "github": {
+      "resources": [
+        "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+        "XRBitcoinCash/xrbitcoincash.github.io"
+      ],
+      "read": "verified",
+      "memory_write": "verify containing commit read-back; authorization granted for this task"
+    },
+    "gitlab": {
+      "resource": "xrbitcoincash-group/xrbitcoincash-project",
+      "read": "verified",
+      "write": "not exercised this audit"
+    },
+    "google": {
+      "status": "user permits relevant use; not probed"
+    },
+    "other_services": {
+      "status": "discover and verify only as needed"
+    }
+  },
+  "evidence_labels": [
+    "user-reported",
+    "historical-unverified",
+    "source-confirmed",
+    "synthetic-reproduced",
+    "CI-verified",
+    "live-read-only-verified",
+    "user-device-confirmed"
+  ],
+  "repair_workflow": [
+    "read bootstrap/current issue and exact source",
+    "verify head and instructions",
+    "define scope/non-goals/rollback",
+    "reproduce failure safely",
+    "apply smallest authorized correction",
+    "test failure/success/cancel/stale paths",
+    "inspect diff",
+    "review CI findings not badge only",
+    "verify deployment/browser separately",
+    "checkpoint before next issue"
+  ],
+  "research_workflow": [
+    "define question",
+    "retrieve current authoritative sources when required",
+    "record retrieval/publication dates and provenance",
+    "separate facts from inference",
+    "resolve conflicts explicitly",
+    "record limitations and next verification"
+  ],
+  "required_issue_fields": [
+    "id",
+    "status",
+    "summary",
+    "evidence_level",
+    "source_commit",
+    "acceptance_checks"
+  ],
+  "publication_rules": [
+    "Refresh head; preserve concurrent work.",
+    "Publish related memory pointers atomically when possible.",
+    "Never force-push or bypass protected workflow.",
+    "Validate JSON, pointers, graph references and issue routing.",
+    "Read back committed bytes before claiming completion."
+  ],
+  "model_independence": "Do not infer entitlement/capability or defect authorship from historical model labels. Evidence standards apply at every tier.",
+  "next_issue": "XRB-001",
+  "linked_blockers": [
+    "XRB-007",
+    "XRB-008"
+  ]
+}
