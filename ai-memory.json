@@ -479,29 +479,28 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
-    "human_record": "PROJECT-WIDE-XRBC-SIDEBAR-SHELL-2026-09-22.md",
-    "scope": "Standardize XRBC application/tool pages on the shared Trade/Liquidity-Pool-style exchange sidebar shell and clean visible escaped-newline artifacts.",
+    "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+    "human_record": "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
+    "scope": "Refine the project-wide sidebar shell so Developers belongs to the Trade/Liquidity exchange family while tool pages retain a separate tool-navigation family.",
     "status": "implemented",
-    "shared_css_commit": "cae5a7947650df975e63aeba31dc6ca63ab5e309",
-    "core_migration_commits": [
-      "8abc8f784d9a1e40ea3557c4b27989350a3167f6",
-      "a26d2f41b39e9ce42a91e0021a7a84de92e9a486",
-      "dff9badd9053366001787412c8fe6e4c44d08479"
-    ],
-    "additional_migrations": [
-      "8109604e58f085cdfcc52a73cef6b54c6db88334",
-      "c963c6286c584cf712e48901480b51e33b7855f9",
-      "343bdc3673a3141ce4b84b4ef71e4586cece929d"
-    ],
-    "final_pipeline_id": 2870524422,
-    "final_pipeline_status": "success",
-    "local_memory_commit": "7c9a129194900a65863ce0174d1fb55e75a75575",
-    "machine_savepoint_create_commit": "4462748d5b8e319d545dda181ab437c9a9ab8a74",
-    "human_checkpoint_create_commit": "ee26c7f2dc2c08f4acc555a2767e9088aac5ab8c",
-    "shared_css_version": "1.3.0",
-    "browser_custom_domain_verified": false
+    "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
+    "implementation_commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
+    "implementation_pipeline_id": 2870557261,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint_commit": "0d4e9111b5ea68b2c8d4bf37bdc558764dff2f4b",
+    "local_memory_commit": "8950f51dbd2c423c7f9a7cdac5ab0f3a5ae27608",
+    "machine_savepoint_create_commit": "c5905f3338a892a180c14660860579bacba158bb",
+    "human_checkpoint_create_commit": "dc2ff5c29df1cb35994077479a4a462e0cff60b2",
+    "page": "public/developers.html",
+    "shared_css_version": "1.3.1",
+    "browser_custom_domain_verified": false,
+    "key_rules": [
+      "Trade, XRBC Liquidity Pool and Developers form the compact exchange/workbench navigation family.",
+      "XRBC security/analysis/tool pages remain on the separate xrbc-tool-exchange-shell family.",
+      "Developer uses xrbc-developer-exchange-shell and must not reactivate xrbc-dev-app-header.",
+      "Developer visual changes preserve executable JavaScript byte-for-byte."
+    ]
   },
   "savepoint_format": [
     "context",
@@ -528,6 +527,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+      "scope": "Refine the project-wide sidebar shell so Developers belongs to the Trade/Liquidity exchange family while tool pages retain a separate tool-navigation family."
+    },
     {
       "id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
       "record": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
@@ -1094,6 +1098,17 @@
       "final_pipeline_id": 2870524422,
       "layout": "Fixed desktop left rail + compact responsive top navigation across XRBC application/tool pages.",
       "next_phase": "Simplify individual tools for non-developers using plain language and progressive disclosure."
+    },
+    "developer_exchange_sidebar": {
+      "status": "implemented",
+      "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
+      "frontend_commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
+      "pipeline_id": 2870557261,
+      "pipeline_status": "success",
+      "shared_css_version": "1.3.1",
+      "script_blocks": 2,
+      "javascript_byte_identical": true,
+      "compartmentalization": "Trade/Liquidity/Developers share the exchange-workbench family; tool pages retain xrbc-tool-exchange-shell."
     }
   }
 }
