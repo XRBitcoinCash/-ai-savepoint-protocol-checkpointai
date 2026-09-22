@@ -101,11 +101,11 @@
       "file": "public/xrbitcoin-links.html",
       "url": "https://xrbitcoincash.com/xrbitcoin-links.html",
       "title": "XRBitcoin | Unified Trading & Liquidity Workspace",
-      "blob_sha": "bb9332e25a7ae57bf7c458bee80d4cb6895bfa52",
+      "blob_sha": "169d22385708d27ea7007a81bf174fc4dd0e55a0",
       "action": "Preserve the repaired active XRBitcoin trading/liquidity workspace; wallet, pool and activity controller must remain CSP-authorized and runtime-contract covered.",
-      "content_sha256": "b29641ac3f691cd7cd4fadb5f99eb253b1ca10372410e6374283df73ef284fbf",
-      "commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
-      "pipeline_id": 2870912971,
+      "content_sha256": "3915c74b82ae8c8a9314f4984ef00f04755896c648aa61cc018ba37b82a37620",
+      "commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+      "pipeline_id": 2870937665,
       "pipeline_status": "success",
       "release": "3.0.1"
     },
@@ -438,27 +438,18 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
-    "human_record": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
-    "scope": "Restore XRBitcoin wallet/pool runtime by repairing CSP drift, move Xaman connection above liquidity management, align bounded authorization UX, and restore XRB/XRP token imagery.",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
+    "human_record": "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md",
     "status": "implemented",
-    "implementation_commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
-    "implementation_pipeline_id": 2870872464,
+    "scope": "Repair XRBitcoin Wallet/Connect and Preview controls so disconnected actions enter Xaman authorization instead of appearing frozen.",
+    "implementation_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
+    "implementation_pipeline_id": 2870912971,
     "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "c4e1704ddecc0da8c4fd75fd961169de605fb5f2",
-    "human_checkpoint_create_commit": "4302be76279718a455eb9af9c5a39e60ea016689",
+    "machine_savepoint_create_commit": "c62663bf7c4dd8a72bec2b4f43f812f274aabe5a",
+    "human_checkpoint_create_commit": "f3b6c2bb1f3cc75ac0a457ba98387bc5e9681560",
     "page": "public/xrbitcoin-links.html",
-    "release": "3.0.1",
-    "browser_custom_domain_verified": false,
-    "key_rules": [
-      "XRBitcoin uses Xaman public application key 9f853ecf-d95f-4e03-8591-e41f91b9f3c5; do not substitute the XRBitcoinCash key.",
-      "Wallet connection is authorization-only and uses XRBCXamanStandard.authorizeAndWarm with a 180-second bounded browser authorization window.",
-      "The live XRB/XRP pool uses exact XRB issuer/currency plus native XRP and validated XRPL reads.",
-      "Token logos are presentation only; exact issuer/currency/native identity remains authoritative.",
-      "xrbitcoin-links.html is covered by runtime-contract CSP/script/control validation.",
-      "XRBitcoin sidebar remains project-specific: Exchange, Limit orders, XRB Watchtower, Security, Support."
-    ]
+    "browser_custom_domain_verified": false
   },
   "previous_research_savepoint": {
     "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
@@ -477,16 +468,16 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
-    "human_record": "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
+    "human_record": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
     "status": "implemented",
-    "scope": "Repair XRBitcoin Wallet/Connect and Preview controls so disconnected actions enter Xaman authorization instead of appearing frozen.",
-    "implementation_commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
-    "implementation_pipeline_id": 2870912971,
+    "scope": "Repair XRBitcoin wallet connection by allowing the same-origin shared Xaman helper through CSP and fix CI's CSP parser.",
+    "implementation_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+    "implementation_pipeline_id": 2870937665,
     "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "c62663bf7c4dd8a72bec2b4f43f812f274aabe5a",
-    "human_checkpoint_create_commit": "f3b6c2bb1f3cc75ac0a457ba98387bc5e9681560",
+    "machine_savepoint_create_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d",
+    "human_checkpoint_create_commit": "4cf7772b9526b685bf0c893e7c98b03b16c734d9",
     "page": "public/xrbitcoin-links.html",
     "browser_custom_domain_verified": false
   },
@@ -1128,6 +1119,18 @@
       "connecting_state": "dedicated S.connecting",
       "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
       "liquidity_app_csp_hash": "VprOSm7qog4+YxqN6Tczr0mXYMh5FiRJ6a6jDnRqgsk="
+    },
+    "xrbitcoin_xaman_helper_csp_repair": {
+      "status": "implemented",
+      "frontend_commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+      "pipeline_id": 2870937665,
+      "pipeline_status": "success",
+      "observed_error": "XRBCXamanStandard is not defined",
+      "root_cause": "script-src omitted self; same-origin shared helper was blocked",
+      "shared_helper": "/xrbc-xaman-standard.js?v=20260922-1",
+      "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+      "liquidity_app_csp_hash": "mWW0cZ2Ec6kN8vEwV6o2L+sStmr8F7rtRlBpxBlZ19I=",
+      "runtime_verifier": "CSP extraction corrected so inner apostrophes no longer truncate the policy string"
     }
   }
 }
