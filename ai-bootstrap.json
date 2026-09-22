@@ -35,11 +35,12 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "XRBitcoin wallet and preview control repair",
-      "commit": "ab7f5dbd401e93e7bcffc7bd87669625ef14d097",
-      "pipeline_id": 2870912971,
+      "scope": "XRBitcoin Xaman shared-helper CSP repair",
+      "commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
+      "pipeline_id": 2870937665,
       "pipeline_status": "success",
       "page": "public/xrbitcoin-links.html",
+      "root_cause": "script-src omitted self and blocked /xrbc-xaman-standard.js",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -49,11 +50,11 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
-      "savepoint_commit": "c62663bf7c4dd8a72bec2b4f43f812f274aabe5a"
+      "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
+      "savepoint_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-preview-control-repair",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
     "previous_verified_frontend_change": {
       "scope": "Project-wide XRBC sidebar shell migration",
       "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
@@ -171,10 +172,10 @@
       "memory/synapse-map.json"
     ],
     "xrbitcoin": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
+      "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
-      "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
-      "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
       "XRBITCOIN-SIDEBAR-PROJECT-BOUNDARY-2026-09-22.md",
       "memory/synapse-map.json"
     ]
