@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "developers",
+    "sidebar",
+    "compartmentalization",
+    "visual-migration"
+  ],
+  "refines": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
+  "context": "The Developer/API Workbench page had shared exchange-sidebar classes but still rendered as a top header because its legacy xrbc-dev-app-header page-local rules were more specific. The user wants Developers grouped visually with Trade and Liquidity, while tool pages remain a separate tool-navigation family.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
+    "developer_page_commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
+    "implementation_pipeline_id": 2870557261,
+    "implementation_pipeline_status": "success",
+    "local_checkpoint": "docs/checkpoints/DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
+    "local_checkpoint_commit": "0d4e9111b5ea68b2c8d4bf37bdc558764dff2f4b",
+    "local_memory_commit": "8950f51dbd2c423c7f9a7cdac5ab0f3a5ae27608",
+    "page": "public/developers.html",
+    "shared_css": "public/xrbc-dynamic-ui.css",
+    "shared_css_version": "1.3.1",
+    "css_cache_url": "/xrbc-dynamic-ui.css?v=20260922-4"
+  },
+  "compartmentalization": {
+    "exchange_family": [
+      "public/index.html",
+      "public/xrbc-liquidity-pool.html",
+      "public/developers.html"
+    ],
+    "tool_family": "XRBC application/security/analysis pages using xrbc-tool-exchange-shell remain intentionally separate.",
+    "developer_body_class": "xrbc-developer-exchange-shell"
+  },
+  "repair": [
+    "Removed xrbc-dev-app-header from the active Developer header so old top-header grid/decorative rules no longer apply.",
+    "Added a dedicated xrbc-developer-exchange-shell shared-CSS block.",
+    "Desktop Developers now uses fixed 220px left rail with Developers active.",
+    "Theme control is pinned to the bottom of the developer rail.",
+    "At <=900px Developer rail collapses to compact horizontally scrollable top navigation.",
+    "API workbench content and developer-specific technical presentation remain intact."
+  ],
+  "behavior_preservation": {
+    "executable_inline_scripts": 2,
+    "byte_identical": true,
+    "fingerprints": [
+      {
+        "block": 0,
+        "length": 310,
+        "fnv1a": "41f4185c"
+      },
+      {
+        "block": 1,
+        "length": 2142,
+        "fnv1a": "afc2e163"
+      }
+    ],
+    "unchanged": [
+      "API request logic",
+      "matrix controls",
+      "endpoint behavior",
+      "gated-report behavior",
+      "theme JavaScript",
+      "XRPL logic"
+    ]
+  },
+  "verification": {
+    "implementation_pipeline_jobs": [
+      "runtime-contracts success",
+      "validate-repository success",
+      "secret_detection success",
+      "semgrep-sast success",
+      "deploy-pages success"
+    ],
+    "browser_custom_domain_verified": false,
+    "manual_checks": [
+      "Desktop Developer top header is replaced by the left rail.",
+      "Developers is active in the rail.",
+      "Theme control works.",
+      "Responsive layout collapses to compact top nav.",
+      "Tool pages retain their separate tool shell."
+    ]
+  }
+}
