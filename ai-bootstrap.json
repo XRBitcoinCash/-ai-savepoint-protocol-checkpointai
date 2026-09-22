@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/ai-bootstrap/1.0.0",
   "status": "active",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "purpose": "Minimal machine-first entrypoint for rehydrating XRBitcoinCash project context without loading the full history first.",
   "scope_boundary": "This repository is an external continuity/context layer. It improves project-state recovery and routing; it does not alter model weights or create persistent internal model state.",
   "authority": {
@@ -35,13 +35,13 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Developer page dedicated exchange sidebar",
-      "commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
-      "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
-      "pipeline_id": 2870557261,
+      "scope": "XRBitcoin wallet/pool runtime and token-identity repair",
+      "commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+      "pipeline_id": 2870872464,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "0d4e9111b5ea68b2c8d4bf37bdc558764dff2f4b",
-      "local_memory_commit": "8950f51dbd2c423c7f9a7cdac5ab0f3a5ae27608",
+      "page": "public/xrbitcoin-links.html",
+      "release": "3.0.1",
+      "root_cause": "Stale CSP hash blocked liquidity-app, leaving wallet/pool/activity controller inert while later allowed read-only scripts still ran.",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -51,11 +51,11 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
-      "savepoint_commit": "c5905f3338a892a180c14660860579bacba158bb"
+      "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
+      "savepoint_commit": "c4e1704ddecc0da8c4fd75fd961169de605fb5f2"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
     "previous_verified_frontend_change": {
       "scope": "Project-wide XRBC sidebar shell migration",
       "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
@@ -76,6 +76,15 @@
       "tool_family_class": "xrbc-tool-exchange-shell",
       "developer_scope": "xrbc-developer-exchange-shell",
       "rollout": "compartmentalized shared shells"
+    },
+    "xrbitcoin_runtime": {
+      "page": "public/xrbitcoin-links.html",
+      "stylesheet": "public/xrbitcoin-dynamic-ui.css",
+      "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+      "xaman_authorization_max_ms": 180000,
+      "exact_xrb_issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
+      "exact_xrb_currency_hex": "5852626974636F696E0000000000000000000000",
+      "runtime_contract_covered": true
     }
   },
   "safety_invariants": [
@@ -161,6 +170,12 @@
     "developers": [
       "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
       "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
+      "memory/synapse-map.json"
+    ],
+    "xrbitcoin": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
+      "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
+      "XRBITCOIN-SIDEBAR-PROJECT-BOUNDARY-2026-09-22.md",
       "memory/synapse-map.json"
     ]
   },
