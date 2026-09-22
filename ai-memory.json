@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -101,8 +101,13 @@
       "file": "public/xrbitcoin-links.html",
       "url": "https://xrbitcoincash.com/xrbitcoin-links.html",
       "title": "XRBitcoin | Unified Trading & Liquidity Workspace",
-      "blob_sha": "b23c9538d588952b02a6fc5b0799acfbe7a0f2f2",
-      "action": "preserve active XRBitcoin trading/liquidity workspace"
+      "blob_sha": "bb123ba2c89f0d312eee30967a2e840d14ea13f8",
+      "action": "Preserve the repaired active XRBitcoin trading/liquidity workspace; wallet, pool and activity controller must remain CSP-authorized and runtime-contract covered.",
+      "content_sha256": "4b1f20cbfb977646457ec8eb4f460931f64a30f91d0b5ae2ad2fa2638c4a4cf2",
+      "commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+      "pipeline_id": 2870872464,
+      "pipeline_status": "success",
+      "release": "3.0.1"
     },
     "xrb_security_reference": {
       "file": "public/xrbitcoin-security.html",
@@ -433,52 +438,6 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-21-liquidity-compact-chart-receipt-empty-states",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
-    "human_record": "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
-    "scope": "Collapse optional market analytics by default and replace empty liquidity-receipt dash placeholders with intentional animated wallet-action states.",
-    "status": "implemented",
-    "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
-    "frontend_branch": "master",
-    "implementation_commit": "350a5f343136195e7a05c674c5941e1a48e5d00c",
-    "implementation_pipeline_id": 2868575025,
-    "implementation_pipeline_status": "success",
-    "local_checkpoint_commit": "ba24ffde455979ec62ecbc74791425ea246a23ae",
-    "local_checkpoint_pipeline_id": 2868579101,
-    "local_checkpoint_pipeline_status": "success",
-    "machine_savepoint_create_commit": "d5894ced621c4c8b40ef4e4eed9701b43f0fd66b",
-    "human_checkpoint_create_commit": "55c1860f994a19f5614d1250c32f3b64b54b4e54",
-    "page": "public/xrbc-liquidity-pool.html",
-    "page_release": "0.2.4",
-    "key_rules": [
-      "Optional/low-priority analytics use progressive disclosure instead of permanent screen real estate.",
-      "Account-dependent empty cards show an intentional state and the clearest next action rather than dashes, zeros or fake values.",
-      "Empty-state motion may aid discoverability but must not imply a ledger transaction.",
-      "Receipt amount/export controls remain hidden until a verified receipt exists."
-    ],
-    "pending": [
-      "Browser-check chart collapsed/open presentation and absence of nested scrolling.",
-      "Verify disconnected and connected-without-receipt empty states.",
-      "Verify a real receipt replaces the empty state correctly."
-    ]
-  },
-  "previous_research_savepoint": {
-    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
-    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
-    "scope": "User-authorized research and GitHub continuity update; later page build planned",
-    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
-    "website_files_changed": false,
-    "backend_files_changed": false,
-    "trading_files_changed": false,
-    "pending": [
-      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
-      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
-      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
-      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
-    ],
-    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
-  },
-  "latest_savepoint": {
     "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
     "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
     "human_record": "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
@@ -500,6 +459,45 @@
       "XRBC security/analysis/tool pages remain on the separate xrbc-tool-exchange-shell family.",
       "Developer uses xrbc-developer-exchange-shell and must not reactivate xrbc-dev-app-header.",
       "Developer visual changes preserve executable JavaScript byte-for-byte."
+    ]
+  },
+  "previous_research_savepoint": {
+    "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
+    "record": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+    "scope": "User-authorized research and GitHub continuity update; later page build planned",
+    "rollback_commit": "f2fe592aed8b3264f274b6eb3a0e3b3a0f6e9d32",
+    "website_files_changed": false,
+    "backend_files_changed": false,
+    "trading_files_changed": false,
+    "pending": [
+      "verify live read-only Render and metadata compatibility with a bounded sample before implementation",
+      "implement the distinct flat public page with exact identities, scoped ranking, freshness and error states",
+      "calibrate behavioral observations only after tested executed-trade parsing and adequate historical coverage",
+      "review collector resources/provider permissions before any continuous broad monitoring or cached redistribution"
+    ],
+    "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
+  },
+  "latest_savepoint": {
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
+    "human_record": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
+    "scope": "Restore XRBitcoin wallet/pool runtime by repairing CSP drift, move Xaman connection above liquidity management, align bounded authorization UX, and restore XRB/XRP token imagery.",
+    "status": "implemented",
+    "implementation_commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+    "implementation_pipeline_id": 2870872464,
+    "implementation_pipeline_status": "success",
+    "machine_savepoint_create_commit": "c4e1704ddecc0da8c4fd75fd961169de605fb5f2",
+    "human_checkpoint_create_commit": "4302be76279718a455eb9af9c5a39e60ea016689",
+    "page": "public/xrbitcoin-links.html",
+    "release": "3.0.1",
+    "browser_custom_domain_verified": false,
+    "key_rules": [
+      "XRBitcoin uses Xaman public application key 9f853ecf-d95f-4e03-8591-e41f91b9f3c5; do not substitute the XRBitcoinCash key.",
+      "Wallet connection is authorization-only and uses XRBCXamanStandard.authorizeAndWarm with a 180-second bounded browser authorization window.",
+      "The live XRB/XRP pool uses exact XRB issuer/currency plus native XRP and validated XRPL reads.",
+      "Token logos are presentation only; exact issuer/currency/native identity remains authoritative.",
+      "xrbitcoin-links.html is covered by runtime-contract CSP/script/control validation.",
+      "XRBitcoin sidebar remains project-specific: Exchange, Limit orders, XRB Watchtower, Security, Support."
     ]
   },
   "savepoint_format": [
@@ -527,6 +525,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-pool-runtime-repair",
+      "record": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
+      "scope": "Repair XRBitcoin wallet/pool runtime, Xaman connection placement/lifecycle, XRB/XRP token imagery, and add CSP regression coverage."
+    },
     {
       "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
       "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
@@ -1109,6 +1112,21 @@
       "script_blocks": 2,
       "javascript_byte_identical": true,
       "compartmentalization": "Trade/Liquidity/Developers share the exchange-workbench family; tool pages retain xrbc-tool-exchange-shell."
+    },
+    "xrbitcoin_wallet_pool_runtime_repair": {
+      "status": "implemented",
+      "frontend_commit": "f728e7ae89ba35a90c7506085d151a7eb19417f6",
+      "pipeline_id": 2870872464,
+      "pipeline_status": "success",
+      "release": "3.0.1",
+      "root_cause": "liquidity-app CSP hash drift blocked the primary wallet/pool controller",
+      "repaired_liquidity_app_hash": "8TOaagbO5wAAmFEfAngq8PeNZX+bEG27XccrtxXGtJA=",
+      "xaman_public_application_key": "9f853ecf-d95f-4e03-8591-e41f91b9f3c5",
+      "authorization_timeout_ms": 180000,
+      "wallet_position": "connection card above liquidity manager; balances/LP details below",
+      "pool_reader": "validated server_info + amm_info for exact XRB/XRP identity",
+      "token_art": "XRB local project logo; XRP reviewed local/provenance-backed SVG fallback",
+      "runtime_contract": "xrbitcoin-links.html added to release-blocking verification"
     }
   }
 }
