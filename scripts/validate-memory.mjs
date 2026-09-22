@@ -55,5 +55,13 @@ exists('memory/diagnostics/wallet-audit.mjs');
 const audit=json(point.evidence);
 assert.equal(audit.source_snapshots.frontend.commit,point.source_frontend_commit);
 assert.equal(audit.source_snapshots.backend.commit,point.source_backend_commit);
-assert.equal(point.application_files_changed.length,0,'memory-only checkpoint cannot claim code changes');
+if(point.checkpoint_kind==='application-repair'){
+  assert.match(point.implementation_commit,/^[a-f0-9]{40}$/,'repair needs implementation commit');
+  assert.ok(point.application_files_changed.length>0,'repair needs bounded application file list');
+  for(const p of point.application_files_changed)assert.ok(typeof p==='string'&&!path.isAbsolute(p)&&!p.split('/').includes('..'),'unsafe application path');
+  assert.equal(memory.current_repair.checkpoint,record.machine_savepoint,'repair pointer mismatch');
+  assert.equal(memory.current_repair.evidence,point.evidence,'repair evidence mismatch');
+}else{
+  assert.equal(point.application_files_changed.length,0,'memory-only checkpoint cannot claim code changes');
+}
 console.log(JSON.stringify({status:'pass',json_files:jsonCount,active_savepoint:id,graph_nodes:nodes.size,issues:issues.size,next_issue:record.next_issue},null,2));

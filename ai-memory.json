@@ -450,18 +450,20 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
-    "human_record": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
-    "status": "implemented",
-    "scope": "Repair XRBitcoin's ambiguous same-origin Xaman browser session lifecycle and validate the new behavior with synthetic wallet tests.",
-    "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
-    "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
-    "implementation_pipeline_id": 2870991044,
-    "implementation_pipeline_status": "success",
-    "machine_savepoint_create_commit": "718f91159c6888e86702a1241c63869132d725af",
-    "human_checkpoint_create_commit": "ef98363385dc7cb17cf5e28473949cc38d51d939",
-    "page": "public/xrbitcoin-links.html",
+    "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+    "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+    "status": "audit-complete-repairs-pending",
+    "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2870991044,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "linked_recovery_issues": [
+      "XRB-007",
+      "XRB-008"
+    ],
     "browser_live_retest_after_final_deploy": false
   },
   "previous_research_savepoint": {
@@ -481,20 +483,18 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
-    "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
-    "status": "audit-complete-repairs-pending",
-    "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
-    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+    "human_record": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
+    "status": "merged-device-retest-required",
+    "scope": "XRBitcoin wallet controls, cancellation and startup recovery only. User confirmed this page after XRBC/XRB ambiguity was explained.",
+    "source_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
     "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
-    "source_pipeline_id": 2870991044,
+    "source_pipeline_id": 2871255138,
     "source_pipeline_status": "success-with-advisory-findings",
     "next_issue": "XRB-001",
-    "linked_recovery_issues": [
-      "XRB-007",
-      "XRB-008"
-    ],
+    "implementation_commit": "87b00f81c86e85686b874c93ab65b02630984027",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
     "browser_live_retest_after_final_deploy": false
   },
   "savepoint_format": [
@@ -1229,5 +1229,15 @@
     "exhaustive_audit": false,
     "ci_summary": "17 local tests and runtime/gate checks pass; CI validator still has 19 advisory findings.",
     "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
+  },
+  "current_repair": {
+    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+    "evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
+    "issues": [
+      "XRB-007",
+      "XRB-008"
+    ],
+    "status": "merged-device-retest-required",
+    "next_issue": "XRB-001"
   }
 }

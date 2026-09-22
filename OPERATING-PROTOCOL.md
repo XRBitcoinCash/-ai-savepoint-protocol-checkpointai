@@ -16,7 +16,7 @@ This secondary memory improves continuity only when loaded. It is not internal p
 
 The user prefers task-relevant use of connected GitHub, GitLab, Google and other sources. Discover tools and perform appropriate harmless access checks each session. Record provider, resource, permitted operation and verification date; never store credentials. A past successful connection does not prove present access. Ask when authentication, approval, protected workflows or genuinely new authority is needed.
 
-Current session: audit and memory update authorized; application repairs deferred. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
+Current session: user authorized XRBitcoin repairs; bounded wallet control/recovery patch merged through MR !9. Broad access does not authorize unrelated data extraction, live financial transactions, messages, deletion, deployments or changes to private service settings.
 
 Keep public memory free of secrets and private personal records. Summarize redacted, task-relevant evidence rather than publishing raw tool output or authenticated logs.
 

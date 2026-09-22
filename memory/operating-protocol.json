@@ -7,7 +7,7 @@
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
   "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
   "authorization": {
-    "current_task": "Audit recent changes and update existing memory; defer application repairs.",
+    "current_task": "User authorized XRBitcoin corrections and confirmed continuing; wallet control/recovery patch merged via standard MR.",
     "rules": [
       "Capability availability is not authorization.",
       "Verify access each session; stop for missing permissions/approval.",
@@ -28,7 +28,7 @@
     "gitlab": {
       "resource": "xrbitcoincash-group/xrbitcoincash-project",
       "read": "verified",
-      "write": "not exercised this audit"
+      "write": "Verified branch commit and standard MR !9 merge; no protection bypass."
     },
     "google": {
       "status": "user permits relevant use; not probed"

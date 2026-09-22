@@ -681,3 +681,7 @@ TODO:
 - First repair XRB-001, then XRB-007/008 recovery; preserve exact application identity, bounded attempts and pending transaction guards.
 - No application repair, live wallet test, transaction, service setting or deployment change was made by this checkpoint.
 - Detailed evidence and limits: RELIABILITY-AUDIT-2026-09-22.md.
+
+### [SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery] XRBitcoin wallet recovery
+
+Current checkpoint: `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json`. Implementation `87b00f81c86e85686b874c93ab65b02630984027` merged as `eb437dd40f3a22951cca9709353c5696d5df519f` via MR !9. XRB-007/008 CI-verified, device retest pending; XRB-001 remains next. One canonical wallet-control area; sidebar shortcut never starts authorization. See `XRBITCOIN-WALLET-RECOVERY-2026-09-22.md`.

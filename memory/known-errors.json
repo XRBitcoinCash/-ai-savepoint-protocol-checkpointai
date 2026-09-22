@@ -13,7 +13,7 @@
   "active_source": {
     "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
     "branch": "master",
-    "observed_head": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+    "observed_head": "eb437dd40f3a22951cca9709353c5696d5df519f"
   },
   "highest_priority": {
     "id": "XRB-001",
@@ -93,7 +93,7 @@
     },
     {
       "id": "XRB-007",
-      "status": "open",
+      "status": "retest-required",
       "priority": "P1",
       "summary": "Cancel / restart Xaman button is wired to disconnect(), which immediately returns while S.connecting is true.",
       "evidence_level": "synthetic-reproduced",
@@ -112,11 +112,15 @@
         "Late old SDK success and logout cannot mutate a new attempt.",
         "No automatic authorize or payload recreation; pending records preserved."
       ],
-      "fix_commit": null
+      "fix_commit": "87b00f81c86e85686b874c93ab65b02630984027",
+      "merge_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
+      "repair_evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
+      "verification": "24 tests pass in MR CI; real device retest pending."
     },
     {
       "id": "XRB-008",
-      "status": "open",
+      "status": "retest-required",
       "priority": "P1",
       "summary": "SDK construction exception leaves S.connecting=true before timeout/try/finally cleanup exists.",
       "evidence_level": "synthetic-reproduced",
@@ -135,7 +139,11 @@
         "Retry after SDK recovery works with one authorization.",
         "No transaction payload on initialization failure."
       ],
-      "fix_commit": null
+      "fix_commit": "87b00f81c86e85686b874c93ab65b02630984027",
+      "merge_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
+      "repair_evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
+      "verification": "24 tests pass in MR CI; real device retest pending."
     }
   ],
   "xrbc": {
@@ -398,5 +406,5 @@
     "DEPLOY-001",
     "UX-001"
   ],
-  "repair_order_note": "One issue at a time. XRB-001 completion requires XRB-007/008 recovery acceptance before declaring the wallet lifecycle done. Discovery of a higher-risk blocker may reorder the queue with explanation."
+  "repair_order_note": "User prioritized visible recovery/control defects. XRB-007/008 now CI-verified and await device retest; XRB-001 remains the next implementation issue."
 }

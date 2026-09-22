@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "source_snapshots": {
+    "frontend": {
+      "commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+      "implementation": "87b00f81c86e85686b874c93ab65b02630984027",
+      "baseline": "97cfb36f244e8f11d806232aedf488fc34fb9898"
+    },
+    "backend": {
+      "commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "verification": "prior-audit-only"
+    }
+  },
+  "changes": [
+    "Sidebar Wallet controls scrolls and focuses canonical wallet area; no authorization",
+    "Removed duplicate Switch wallet action",
+    "Cancel/reset now allowed during pending browser authorization while transaction busy guard remains",
+    "SDK constructor failure clears Connecting",
+    "Attempt timers clear immediately on cancel/logout",
+    "Timeout retains busy lock through bounded logout and detaches old SDK",
+    "Exact inline controller CSP hash updated"
+  ],
+  "reproduced_before": [
+    "startup exception leaves connecting latched",
+    "disconnect returns while connecting",
+    "reset returns while connecting",
+    "timeout unlocks before logout resolves"
+  ],
+  "verification": {
+    "unit_tests": 24,
+    "new_behavioral_tests": 7,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "merge_request_pipeline": 2871252507,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19
+  },
+  "browser": "Not run: local Chromium executable unavailable. No live wallet/signature/transaction.",
+  "request_guards": "Existing pending/ambiguous financial requests retained; no signing or finality changes.",
+  "deployment": {
+    "pipeline": 2871255138,
+    "status": "success",
+    "served_build_verified": false,
+    "job": 16653266144,
+    "live_read_note": "build-info inaccessible via web reader; no successful live verification"
+  },
+  "next_issue": "XRB-001"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "application-repair",
+  "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+  "human_record": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
+  "status": "merged-device-retest-required",
+  "scope": "XRBitcoin wallet controls, cancellation and startup recovery only. User confirmed this page after XRBC/XRB ambiguity was explained.",
+  "source_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
+  "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+  "backend_snapshot_note": "Prior audit baseline; backend not changed or re-audited in this repair.",
+  "source_pipeline_id": 2871255138,
+  "source_pipeline_status": "success-with-advisory-findings",
+  "implementation_commit": "87b00f81c86e85686b874c93ab65b02630984027",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
+  "rollback_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+  "next_issue": "XRB-001",
+  "browser_live_retest_after_final_deploy": false,
+  "created": "2026-09-22",
+  "memory_parent_commit": "baf9e0b77a91ffe9fce7bfe3b3f1b0519d248f25",
+  "previous_savepoint": {
+    "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+    "human_record": "RELIABILITY-AUDIT-2026-09-22.md",
+    "status": "audit-complete-repairs-pending",
+    "scope": "Secondary-memory hardening and evidence-backed repair queue; no application changes.",
+    "source_frontend_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+    "source_pipeline_id": 2870991044,
+    "source_pipeline_status": "success-with-advisory-findings",
+    "next_issue": "XRB-001",
+    "linked_recovery_issues": [
+      "XRB-007",
+      "XRB-008"
+    ],
+    "browser_live_retest_after_final_deploy": false
+  },
+  "permissions_scope": "User authorized corrections and confirmed continuing on XRBitcoin. Standard merge request passed and merged without bypass.",
+  "evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [
+    "public/xrbitcoin-links.html"
+  ],
+  "frontend_support_files_changed": [
+    "tests/unit/xrbitcoin-wallet-recovery.test.mjs",
+    "docs/checkpoints/XRBITCOIN-WALLET-RECOVERY-2026-09-22.md"
+  ],
+  "tests": {
+    "unit_tests": 24,
+    "new_behavioral_tests": 7,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "merge_request_pipeline": 2871252507,
+    "mr_pipeline_status": "success",
+    "validator_exit_code": 1,
+    "advisory_findings": 19
+  },
+  "remaining": [
+    "XRB-001 first-click OAuth hydration still open",
+    "Real desktop/mobile cancel/restart and timeout checks",
+    "Other queued audit findings"
+  ],
+  "publication": "Containing Git commit identifies this memory checkpoint.",
+  "deployment": {
+    "pipeline": 2871255138,
+    "job": 16653266144,
+    "status": "success",
+    "served_build_verified": false,
+    "verification_limit": "Public build-info request was inaccessible via the read tool; no device test."
+  }
+}

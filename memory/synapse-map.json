@@ -433,14 +433,14 @@
       "type": "issue",
       "registry_id": "XRB-007",
       "file": "memory/known-errors.json",
-      "status": "open"
+      "status": "retest-required"
     },
     {
       "id": "issue:XRB-008",
       "type": "issue",
       "registry_id": "XRB-008",
       "file": "memory/known-errors.json",
-      "status": "open"
+      "status": "retest-required"
     },
     {
       "id": "issue:BRIDGE-001",
@@ -490,6 +490,13 @@
       "registry_id": "UX-001",
       "file": "memory/known-errors.json",
       "status": "retest-required"
+    },
+    {
+      "id": "savepoint:xrbitcoin-wallet-recovery-2026-09-22",
+      "type": "savepoint",
+      "status": "merged-device-retest-required",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+      "human_file": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md"
     }
   ],
   "edges": [
@@ -962,6 +969,21 @@
       "from": "savepoint:reliability-audit-memory-hardening-2026-09-22",
       "rel": "updates",
       "to": "registry:known-errors"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-recovery-2026-09-22",
+      "rel": "follows",
+      "to": "savepoint:reliability-audit-memory-hardening-2026-09-22"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-recovery-2026-09-22",
+      "rel": "repairs-awaiting-retest",
+      "to": "issue:XRB-007"
+    },
+    {
+      "from": "savepoint:xrbitcoin-wallet-recovery-2026-09-22",
+      "rel": "repairs-awaiting-retest",
+      "to": "issue:XRB-008"
     }
   ],
   "query_hints": {
@@ -1067,5 +1089,5 @@
       "issue:REF-001"
     ]
   },
-  "active_savepoint": "savepoint:reliability-audit-memory-hardening-2026-09-22"
+  "active_savepoint": "savepoint:xrbitcoin-wallet-recovery-2026-09-22"
 }

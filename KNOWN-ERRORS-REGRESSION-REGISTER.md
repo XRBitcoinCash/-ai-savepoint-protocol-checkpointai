@@ -259,3 +259,7 @@ Do not assume these remain broken. Before changing JCS:
 5. Only after wallet lifecycle is stable, resume page simplification/UX work.
 6. Revisit historical XRBC/JCS items only from current source/runtime evidence, one issue at a time.
 
+
+## 2026-09-22 recovery follow-up
+
+XRB-007 and XRB-008 have source fixes `87b00f81c86e85686b874c93ab65b02630984027`, merged `eb437dd40f3a22951cca9709353c5696d5df519f` via MR !9, with 24 passing tests. Status: **retest-required**, not live-verified. Sidebar now links to one wallet-control area. XRB-001 remains open. Details: `XRBITCOIN-WALLET-RECOVERY-2026-09-22.md`.

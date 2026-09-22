@@ -1,55 +1,13 @@
-# Next run — verified 2026-09-22
+# Next run — XRBitcoin recovery merged
 
-Active savepoint: `SAVEPOINT-2026-09-22-reliability-audit-memory-hardening`.
-Mode: audit/checkpoint complete; application repairs not started in this pass.
+Active savepoint: `SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery`. Read `ai-bootstrap.json`, `latest_savepoint.record`, `memory/operating-protocol.json`, then `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json` and the known-errors register.
 
-## Start here
+Current frontend master: `eb437dd40f3a22951cca9709353c5696d5df519f`; implementation `87b00f81c86e85686b874c93ab65b02630984027` via MR !9. Production pipeline 2871255138 / deploy-pages 16653266144 succeeded. Verify served build before device testing. Memory update is separate from deployment.
 
-Read `ai-bootstrap.json`, `latest_savepoint.record`, `memory/operating-protocol.json`, and the relevant `memory/known-errors.json` entries. Use `ai-memory.json` and `memory/synapse-map.json` for routed details.
+XRB-007/008 are CI-verified fixes awaiting real-device retest. Check Connect → close Xaman → Cancel / restart → Connect again, then timeout and a slow old response. Existing signing requests must remain recoverable. Sidebar Wallet controls only opens the canonical wallet area; it does not authorize.
 
-Refresh source heads before changes:
-- Active frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project`, `master`; observed `97cfb36f244e8f11d806232aedf488fc34fb9898`.
-- Shared backend: GitHub `XRBitcoinCash/xrbitcoincash.github.io`, `main`; observed `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563`.
-- Memory: this repository; rollback baseline `a04378435f83f852308ccd9f8dc81ce458322917`.
+**Next implementation: XRB-001 first-click hydration.** Reproduce the second-click report on the deployed build; do not claim this recovery patch fixes it. Keep app/account verification and deliberate-attempt guards. Then continue BRIDGE-001 and the existing metadata/reference/CI queue. No broad CSS or other-project rewrite.
 
-## First repair after user directs continuation
+24 unit tests pass; 10-page runtime/CSP and 12-tool/7-tier gates pass. Site validation still reports 19 advisory findings / exit 1. Browser/mobile/two-tab and live wallet tests were not run (local Chromium unavailable).
 
-**XRB-001: remove the second Connect click on public/xrbitcoin-links.html.**
-
-Compare current XRB `wireSdk/connect/adoptAccount` with the XRBC homepage's completion behavior. Bind completion only to the active user-initiated SDK/attempt/generation; verify application/account and read-only readiness; preserve xApp behavior. The missing browser event bridge is confirmed in source, but the exact real OAuth cause still needs reproduction. Do not simply copy passive homepage restore.
-
-Then address separately:
-1. XRB-007 — Cancel / restart handler currently returns while connecting.
-2. XRB-008 — SDK construction exception leaves connecting latched.
-3. BRIDGE-001 — advanced Bridge Xaman SDK/SRI setup incomplete.
-4. CI-001, META-001, META-002, REF-001 — coverage/advisory, schema, license-label and missing-reference issues.
-5. DEPLOY-001, UX-001 — served-build and real browser/device verification.
-
-Each repair is bounded, tested and checkpointed before the next. Do not declare the wallet lifecycle complete while cancel/startup recovery remains broken.
-
-## Verified checks and caveats
-
-- Frontend runtime contracts: 10 pages pass.
-- Gate registry: 12 tools / 7 tiers pass; no gate change authorized.
-- Existing unit tests: 17 pass, including 7 XRB tests.
-- Static scan: 27 public HTML pages / 118 executable inline classic scripts pass stated parse/root/ID/hash checks.
-- Additional synthetic probes reproduce XRB-007/008 despite green existing tests.
-- Latest GitLab pipeline 2870991044 succeeds, but validator job 16651226888 has **19 advisory findings / exit 1**. Security jobs are allow_failure. Green is not clean.
-- API failure at b9ef92b is already fixed by 131e204e; passing run 35626734128. Relevant backend/test/workflow blobs unchanged at observed head. Do not duplicate that fix.
-- Live wallet, custom-domain rendering, Render endpoint, mobile/two-tab and transaction finality were not tested here.
-
-## Preserve
-
-Authorization-only Connect; exact XRBC/XRB/JCS app and asset boundaries; immediate deliberate authorize with read-only warm-up in parallel; bounded cancellation; stale completion guards; one payload per final intent; pending/ambiguous transaction records; validated tesSUCCESS and exact critical-field verification.
-
-No wallet seeds, transactions, deployment/settings changes, licensing-term edits, broad UI rewrites, Quick Buy restoration or gate changes from this checkpoint.
-
-## Evidence and history
-
-- `RELIABILITY-AUDIT-2026-09-22.md`
-- `memory/audits/2026-09-22-reliability-audit.json`
-- `KNOWN-ERRORS-REGRESSION-REGISTER.md`
-- `memory/diagnostics/wallet-audit.mjs` — synthetic, no network
-- Prior next-run retained: `memory/archive/NEXT_RUN-before-2026-09-22-audit.md`
-
-GitHub/GitLab reads were verified. Other connected services must be checked when relevant. External memory works when loaded; it is not guaranteed automatic recall in every chat.
+Historical audit: `RELIABILITY-AUDIT-2026-09-22.md`. Backend audit baseline `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563` was not re-audited or modified here.
