@@ -187,14 +187,24 @@
     ]
   },
   "jcs": {
-    "current_session_status": "no-change-this-pass",
+    "current_session_status": "deployed-device-retest-required",
     "historical_reverify": [
       "Wallet connection friction.",
       "LP/NFT mint popup flashes/disappears.",
       "Return URL mismatch in liquidity/NFT flow.",
       "Prayer NFT verification/setup incomplete states.",
       "Media synchronization/rendering/mobile wrapping issues."
-    ]
+    ],
+    "current_repair": {
+      "id": "JCS-001",
+      "status": "retest-required",
+      "summary": "Wallet remains Connecting after popup close/reset; authorization had no timeout, cancel control disabled and disconnect did not clear authorizing.",
+      "fix_commit": "660fd2d78c07f282a2d3f39b09b7145b70af11b1",
+      "checkpoint": "JCS-WALLET-RECOVERY-2026-09-22.md",
+      "next_check": "User tests Connect, cancel/reset, reconnect and then separately reviews trade/liquidity actions.",
+      "evidence": "source-confirmed; focused synthetic check passed; real wallet unverified",
+      "deployment_run": 35743143452
+    }
   },
   "invariants": [
     "Never substitute Xaman application IDs between projects.",

@@ -1257,5 +1257,17 @@
     "source": "Explicit user instruction after this deployment",
     "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
     "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration."
+  },
+  "current_jcs_repair": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "implementation_commit": "660fd2d78c07f282a2d3f39b09b7145b70af11b1",
+    "previous_commit": "6d2e0ef13e7ec8e62ca2767fe2c0a20dc87f9989",
+    "checkpoint": "JCS-WALLET-RECOVERY-2026-09-22.md",
+    "status": "deployed-device-retest-required",
+    "scope": "JCS main page wallet Connecting/cancel/retry flow only.",
+    "verification": "JavaScript syntax plus one focused simulation: cancel, reject stale callback, fresh retry completed by success event, synchronous popup error cleanup. No broad suite or live financial operation.",
+    "live_wallet_verified": false,
+    "deployment": "GitHub Pages build and deployment succeeded, run 35743143452. Public browser and real wallet checks deferred to user."
   }
 }
