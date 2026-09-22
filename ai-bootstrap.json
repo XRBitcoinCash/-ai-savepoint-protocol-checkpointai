@@ -35,12 +35,13 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Project-wide XRBC sidebar shell migration",
-      "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
-      "shared_css_commit": "cae5a7947650df975e63aeba31dc6ca63ab5e309",
-      "pipeline_id": 2870524422,
+      "scope": "Developer page dedicated exchange sidebar",
+      "commit": "0493ff6e52418c1675efe7a3e4d4419c5ab106cb",
+      "shared_css_commit": "638e01f22c909b170eec9ed6c6eb77cd7b6e8343",
+      "pipeline_id": 2870557261,
       "pipeline_status": "success",
-      "local_memory_commit": "7c9a129194900a65863ce0174d1fb55e75a75575",
+      "local_checkpoint_commit": "0d4e9111b5ea68b2c8d4bf37bdc558764dff2f4b",
+      "local_memory_commit": "8950f51dbd2c423c7f9a7cdac5ab0f3a5ae27608",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -50,29 +51,31 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
-      "savepoint_commit": "4462748d5b8e319d545dda181ab437c9a9ab8a74"
+      "id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+      "savepoint_commit": "c5905f3338a892a180c14660860579bacba158bb"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-developer-page-exchange-sidebar",
     "previous_verified_frontend_change": {
-      "scope": "Homepage Get XRBC sidebar CTA readability",
-      "commit": "3367814dc8e7222b52569454b7d211d202153ec5",
-      "pipeline_id": 2870432686,
+      "scope": "Project-wide XRBC sidebar shell migration",
+      "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
+      "shared_css_commit": "cae5a7947650df975e63aeba31dc6ca63ab5e309",
+      "pipeline_id": 2870524422,
       "pipeline_status": "success",
-      "local_memory_commit": "de757fe33c4be2fd943e441181bd326e86ddba49",
+      "local_memory_commit": "7c9a129194900a65863ce0174d1fb55e75a75575",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
-      "version": "1.3.0",
-      "body_activation": "xrbc-exchange-shell",
-      "tool_activation": "xrbc-tool-exchange-shell",
-      "reference_pages": [
+      "version": "1.3.1",
+      "exchange_family": [
         "public/index.html",
-        "public/xrbc-liquidity-pool.html"
+        "public/xrbc-liquidity-pool.html",
+        "public/developers.html"
       ],
-      "rollout": "XRBC application/tool pages migrated; separate project/redirect/security micro-pages remain distinct."
+      "tool_family_class": "xrbc-tool-exchange-shell",
+      "developer_scope": "xrbc-developer-exchange-shell",
+      "rollout": "compartmentalized shared shells"
     }
   },
   "safety_invariants": [
@@ -122,8 +125,8 @@
       "memory/synapse-map.json"
     ],
     "ui_design": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
       "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
-      "PROJECT-WIDE-XRBC-SIDEBAR-SHELL-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
       "memory/synapse-map.json"
     ],
@@ -153,6 +156,11 @@
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
       "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
+      "memory/synapse-map.json"
+    ],
+    "developers": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+      "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
       "memory/synapse-map.json"
     ]
   },
