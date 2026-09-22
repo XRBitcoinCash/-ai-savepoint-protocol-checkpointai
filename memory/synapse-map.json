@@ -7,6 +7,14 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
+      "type": "savepoint",
+      "status": "implemented",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
+      "frontend_commit": "db77859774d1b9bdd27bb79d610cc6fd3f49b02e",
+      "pipeline_id": 2870387384
+    },
+    {
       "id": "savepoint:homepage-exchange-shell-migration-2026-09-21",
       "type": "savepoint",
       "status": "implemented",
@@ -350,6 +358,21 @@
     }
   ],
   "edges": [
+    {
+      "from": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
+      "rel": "refines",
+      "to": "standard:homepage-liquidity-shell-alignment"
+    },
+    {
+      "from": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
+      "rel": "preserves",
+      "to": "standard:xaman-connect-lifecycle"
+    },
+    {
+      "from": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
+      "rel": "changes",
+      "to": "repo:frontend"
+    },
     {
       "from": "savepoint:homepage-exchange-shell-migration-2026-09-21",
       "rel": "implements",
@@ -722,10 +745,9 @@
       "task:liquidity-top-wallet-browser-check"
     ],
     "ui_design": [
-      "savepoint:homepage-exchange-shell-migration-2026-09-21",
+      "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22",
       "standard:homepage-liquidity-shell-alignment",
-      "standard:shared-exchange-ui",
-      "task:homepage-exchange-shell-browser-check"
+      "standard:shared-exchange-ui"
     ],
     "liquidity_market_history": [
       "savepoint:liquidity-market-history-backend-route-2026-09-21",
@@ -765,5 +787,5 @@
       "task:xaman-popup-layout-browser-check"
     ]
   },
-  "active_savepoint": "savepoint:homepage-exchange-shell-migration-2026-09-21"
+  "active_savepoint": "savepoint:homepage-narrow-desktop-shell-repair-2026-09-22"
 }
