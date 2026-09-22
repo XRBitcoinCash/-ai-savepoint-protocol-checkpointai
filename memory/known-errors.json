@@ -204,6 +204,15 @@
       "next_check": "User tests Connect, cancel/reset, reconnect and then separately reviews trade/liquidity actions.",
       "evidence": "source-confirmed; focused synthetic check passed; real wallet unverified",
       "deployment_run": 35743143452
+    },
+    "workspace_layout": {
+      "id": "JCS-002",
+      "status": "resolved",
+      "summary": "Working tab panels obscured by roughly 923px of receipt cards inserted before all panels.",
+      "fix_commit": "ba43da147fa6bf7ec743ecb24d755dfd19da8b32",
+      "checkpoint": "JCS-WORKSPACE-LAYOUT-2026-09-22.md",
+      "evidence": "Live pre-fix click check confirmed all three tabs work; receipt cards moved below panels. XRP icon added from existing XRBC asset.",
+      "verification": "Live desktop: each selected panel displays directly after the tabs, receipt starts 24px below its bottom; all five XRP images loaded. GitHub Pages run 35744758719 succeeded."
     }
   },
   "invariants": [

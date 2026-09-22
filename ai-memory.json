@@ -1269,5 +1269,16 @@
     "verification": "JavaScript syntax plus one focused simulation: cancel, reject stale callback, fresh retry completed by success event, synchronous popup error cleanup. No broad suite or live financial operation.",
     "live_wallet_verified": false,
     "deployment": "GitHub Pages build and deployment succeeded, run 35743143452. Public browser and real wallet checks deferred to user."
+  },
+  "current_jcs_layout": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "implementation_commit": "ba43da147fa6bf7ec743ecb24d755dfd19da8b32",
+    "checkpoint": "JCS-WORKSPACE-LAYOUT-2026-09-22.md",
+    "scope": "Selected tab panel first, optional receipt cards underneath; shared XRP/JCS pair imagery.",
+    "status": "deployed-live-layout-verified",
+    "deployment_run": 35744758719,
+    "live_wallet_verified": false,
+    "verification": "Live public page: all three tabs switch; receipt cards follow every panel; five XRP images loaded. No real wallet/transaction check."
   }
 }
