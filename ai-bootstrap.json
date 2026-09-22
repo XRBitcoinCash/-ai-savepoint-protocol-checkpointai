@@ -35,13 +35,14 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "XRBitcoin Xaman shared-helper CSP repair",
-      "commit": "1e21ec4a89b711279ca87c91bd2216d3222a14fa",
-      "pipeline_id": 2870937665,
+      "scope": "XRBitcoin Xaman session lifecycle repair with synthetic simulation",
+      "implementation_commit": "ac46b49ef17ef07ab85f61728c319844b17aa3bb",
+      "simulation_commit": "97cfb36f244e8f11d806232aedf488fc34fb9898",
+      "pipeline_id": 2870991044,
       "pipeline_status": "success",
       "page": "public/xrbitcoin-links.html",
-      "root_cause": "script-src omitted self and blocked /xrbc-xaman-standard.js",
-      "browser_custom_domain_verified": false
+      "root_cause": "Passive browser restore plus same-origin cross-application XummPkceJwt state could create sessionFault and ambiguous wallet state.",
+      "browser_live_retest_after_final_deploy": false
     },
     "same_day_discovery_change": {
       "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
@@ -50,11 +51,11 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
-      "savepoint_commit": "5d4b85223b293e3f45528894d5c8c75ef9d0e22d"
+      "id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+      "savepoint_commit": "718f91159c6888e86702a1241c63869132d725af"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-helper-csp-repair",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-xrbitcoin-xaman-session-lifecycle-simulation",
     "previous_verified_frontend_change": {
       "scope": "Project-wide XRBC sidebar shell migration",
       "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
@@ -172,8 +173,9 @@
       "memory/synapse-map.json"
     ],
     "xrbitcoin": [
+      "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+      "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
-      "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
       "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
       "XRBITCOIN-SIDEBAR-PROJECT-BOUNDARY-2026-09-22.md",
