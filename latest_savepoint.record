@@ -1,26 +1,21 @@
-SAVEPOINT 2026-09-21
-id=SAVEPOINT-2026-09-21-homepage-exchange-shell-migration
-title=Homepage exchange-shell migration
+SAVEPOINT 2026-09-22
+id=SAVEPOINT-2026-09-22-homepage-narrow-desktop-shell-repair
+title=Homepage narrow-desktop exchange-shell repair
 status=active
 memory_repository=XRBitcoinCash/-ai-savepoint-protocol-checkpointai
-machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json
-machine_savepoint_create_commit=25d4f7e3ab21124c99ad4e6fc27f56a1c0699799
-human_checkpoint=HOMEPAGE-EXCHANGE-SHELL-MIGRATION-2026-09-21.md
-human_checkpoint_create_commit=415f479e13d9b9b6595c50d4882facb559beafff
+machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json
+machine_savepoint_create_commit=ce2752f2ce4d9e2612d4945ba5abd3e4354ac3e4
 active_frontend_repository=xrbitcoincash-group/xrbitcoincash-project
 active_frontend_branch=master
-shared_css_commit=cd8b2bd41082c9a87b1540381344e6c5ee4928e1
-implementation_commit=b06b3ca16f047b01a059bd5833d7e1d81050f24d
-implementation_pipeline=2868954757
+responsive_css_commit=a51cd1868a5409998468dd24604107c93b1bc56a
+implementation_commit=db77859774d1b9bdd27bb79d610cc6fd3f49b02e
+implementation_pipeline=2870387384
 implementation_pipeline_status=success
-rollback_commit=8ec6e577e52fb4f9c751c3109f8fb07f137263ae
-local_checkpoint_commit=38d76d107614ce1f1c68c8922ed17d63242da4ab
-local_memory_commit=baf07ddb5c5a0d9ede518b3003272d32ea43954e
+rollback_commit=baf07ddb5c5a0d9ede518b3003272d32ea43954e
+local_checkpoint_commit=6d4ee680c73fd1650d96905ced2dceaadabe9ca0
 page=public/index.html
-page_release=1.5.3
-shared_css=public/xrbc-dynamic-ui.css
-shared_css_version=1.2.0
-layout=Liquidity-Pool-style fixed desktop left rail, compact workbench heading, primary chart/market workspace and sticky right-side order rail; responsive compact top navigation and stacked order/chart at <=900px.
-behavior_preservation=12 executable inline homepage scripts are byte-identical before/after; wallet, Xaman, challenge/memo, quote/order, trustline and XRPL finality logic unchanged.
+css_cache_version=20260922-1
+repair=Removed legacy xrbc-hero-nav conflict and moved homepage fixed-sidebar collapse breakpoint from 900px to 1180px.
+behavior_preservation=12 executable inline scripts remain byte-identical; wallet, Xaman, challenge, trading, trustline and XRPL finality logic unchanged.
 browser_custom_domain_verified=false
-next_action=Hard-refresh production on desktop and mobile; verify sidebar/top-nav transition, compact terminal, sticky order rail, sidebar Get XRBC/theme controls, and one Xaman connect/review flow.
+next_action=Hard-refresh narrow desktop/tablet and confirm compact top navigation replaces the oversized empty sidebar while wide desktop retains the fixed rail.
