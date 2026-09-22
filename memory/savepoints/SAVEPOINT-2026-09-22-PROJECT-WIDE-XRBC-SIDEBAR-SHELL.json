@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
+  "date": "2026-09-22",
+  "status": "implemented",
+  "category": [
+    "ui-design-system",
+    "project-wide",
+    "shared-css",
+    "sidebar",
+    "responsive"
+  ],
+  "context": "XRBC tool/application pages were standardized on the same exchange/workbench navigation pattern as the main Trade page and XRBC Liquidity Pool. The old wide two-tier header became a fixed desktop sidebar through shared CSS, with compact top navigation retained on smaller screens. Visible literal escaped-newline artifacts were also cleaned up where found.",
+  "frontend": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "branch": "master",
+    "shared_css_commit": "cae5a7947650df975e63aeba31dc6ca63ab5e309",
+    "core_migration_commits": [
+      "8abc8f784d9a1e40ea3557c4b27989350a3167f6",
+      "a26d2f41b39e9ce42a91e0021a7a84de92e9a486",
+      "dff9badd9053366001787412c8fe6e4c44d08479"
+    ],
+    "additional_migrations": {
+      "developers": "8109604e58f085cdfcc52a73cef6b54c6db88334",
+      "markets": "c963c6286c584cf712e48901480b51e33b7855f9",
+      "liquidity_receipt": "343bdc3673a3141ce4b84b4ef71e4586cece929d"
+    },
+    "final_local_memory_commit": "7c9a129194900a65863ce0174d1fb55e75a75575",
+    "final_pipeline_id": 2870524422,
+    "final_pipeline_status": "success",
+    "implementation_pipeline_id": 2870518110,
+    "implementation_pipeline_status": "success"
+  },
+  "shared_visual_layer": {
+    "file": "public/xrbc-dynamic-ui.css",
+    "version": "1.3.0",
+    "tool_body_class": "xrbc-tool-exchange-shell",
+    "desktop": "Fixed 220px left rail with XRBC brand, vertically stacked primary navigation, compact ecosystem/page controls and selected-page state.",
+    "responsive": "Compact top navigation on smaller screens.",
+    "references": [
+      "public/index.html",
+      "public/xrbc-liquidity-pool.html"
+    ]
+  },
+  "migrated_pages": [
+    "public/ai-provenance.html",
+    "public/asset-tokenization-auditor-advanced.html",
+    "public/asset-tokenization-auditor.html",
+    "public/creature-nft-links.html",
+    "public/extended-audit.html",
+    "public/limit-extraction.html",
+    "public/liquidity-sentinel.html",
+    "public/policy.html",
+    "public/risk-lens.html",
+    "public/sentinel-forensics.html",
+    "public/support.html",
+    "public/terms.html",
+    "public/value-path.html",
+    "public/watchtower.html",
+    "public/whitepaper.html",
+    "public/xrbc-ecosystem.html",
+    "public/xrbc-readiness.html",
+    "public/xrbc-settlement.html",
+    "public/xrpl-bridge-integrity-monitor.html",
+    "public/developers.html",
+    "public/markets/index.html",
+    "public/xrbc-lp-receipt.html"
+  ],
+  "markup_cleanup": [
+    "Normalized visible literal escaped-newline separators where found.",
+    "Homepage escaped-newline cleanup commit 894bde59a267e4297360462de5a1eb2a03685052.",
+    "Liquidity receipt cleanup finalized before migration commit 343bdc3673a3141ce4b84b4ef71e4586cece929d."
+  ],
+  "behavior_preservation": [
+    "Wallet/Xaman behavior unchanged.",
+    "One-payload-per-intent signing protection unchanged.",
+    "Six-digit challenge/memo binding unchanged.",
+    "XRBC gates unchanged.",
+    "Market/quote/order/trustline/AMM logic unchanged.",
+    "Validated XRPL finality unchanged.",
+    "Developers executable scripts byte-identical (2 blocks).",
+    "Markets has no executable inline scripts.",
+    "Liquidity receipt executable scripts byte-identical (4 blocks)."
+  ],
+  "intentional_exceptions": [
+    "JCS redirect-only page retains separate project identity.",
+    "XRBitcoin-branded workspace/security pages retain separate project identity.",
+    "Scriptless DEX holding/access page remains intentionally minimal."
+  ],
+  "next_phase": "After browser visual review, simplify each tool for non-developers using plain-language primary paths and progressive disclosure for technical evidence."
+}
