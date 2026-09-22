@@ -28,7 +28,7 @@ Safety / regression notes:
 - `public/xrbitcoin-links.html` executable inline scripts remained byte-identical.
 - `public/xrbitcoin-security.html` remains scriptless.
 - The change is navigation/presentation only; Xaman, wallet, signing, ledger, market, liquidity, receipt, and validation behavior were not changed.
-- At the checkpoint, runtime-contracts, repository validation, secret detection, and Semgrep had passed; Pages deployment was still running.
+- Pipeline `2870778794` completed successfully: runtime-contracts, repository validation, secret detection, Semgrep SAST, and Pages deployment all passed.
 
 Operating rule:
 Do not re-add XRBitcoinCash analysis/tool links to the XRBitcoin project sidebar. XRBitcoinCash, JCS, and Creature NFT belong only in the explicit related-project links unless the user separately requests deeper cross-project navigation.
