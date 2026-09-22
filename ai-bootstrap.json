@@ -35,11 +35,12 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Homepage Get XRBC sidebar CTA readability",
-      "commit": "3367814dc8e7222b52569454b7d211d202153ec5",
-      "pipeline_id": 2870432686,
+      "scope": "Project-wide XRBC sidebar shell migration",
+      "commit": "343bdc3673a3141ce4b84b4ef71e4586cece929d",
+      "shared_css_commit": "cae5a7947650df975e63aeba31dc6ca63ab5e309",
+      "pipeline_id": 2870524422,
       "pipeline_status": "success",
-      "local_memory_commit": "de757fe33c4be2fd943e441181bd326e86ddba49",
+      "local_memory_commit": "7c9a129194900a65863ce0174d1fb55e75a75575",
       "browser_custom_domain_verified": false
     },
     "same_day_discovery_change": {
@@ -49,27 +50,29 @@
     },
     "next_major_pass": "Continue production scaffold with browser/mobile/two-tab/cold-backend/ambiguous-create/validated-finality tests before broad feature expansion.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-22-homepage-get-xrbc-cta-readability",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-GET-XRBC-CTA-READABILITY.json",
-      "savepoint_commit": "bddca42d537df64326c277e5d87d91b2246178a4"
+      "id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
+      "savepoint_commit": "4462748d5b8e319d545dda181ab437c9a9ab8a74"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-homepage-get-xrbc-cta-readability",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-22-project-wide-xrbc-sidebar-shell",
     "previous_verified_frontend_change": {
-      "scope": "Homepage narrow-desktop exchange-shell repair",
-      "commit": "db77859774d1b9bdd27bb79d610cc6fd3f49b02e",
-      "responsive_css_commit": "a51cd1868a5409998468dd24604107c93b1bc56a",
-      "pipeline_id": 2870387384,
+      "scope": "Homepage Get XRBC sidebar CTA readability",
+      "commit": "3367814dc8e7222b52569454b7d211d202153ec5",
+      "pipeline_id": 2870432686,
       "pipeline_status": "success",
-      "local_checkpoint_commit": "6d4ee680c73fd1650d96905ced2dceaadabe9ca0",
+      "local_memory_commit": "de757fe33c4be2fd943e441181bd326e86ddba49",
       "browser_custom_domain_verified": false
     },
     "visual_standard": {
       "css": "public/xrbc-dynamic-ui.css",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "body_activation": "xrbc-exchange-shell",
-      "liquidity_reference": "public/xrbc-liquidity-pool.html",
-      "homepage_scope": "xrbc-home-exchange-shell",
-      "rollout": "one-page-at-a-time"
+      "tool_activation": "xrbc-tool-exchange-shell",
+      "reference_pages": [
+        "public/index.html",
+        "public/xrbc-liquidity-pool.html"
+      ],
+      "rollout": "XRBC application/tool pages migrated; separate project/redirect/security micro-pages remain distinct."
     }
   },
   "safety_invariants": [
@@ -119,8 +122,8 @@
       "memory/synapse-map.json"
     ],
     "ui_design": [
-      "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
-      "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
+      "PROJECT-WIDE-XRBC-SIDEBAR-SHELL-2026-09-22.md",
       "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
       "memory/synapse-map.json"
     ],
