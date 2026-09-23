@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
   "id": "cross-project-evidence-first-v1",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "human_file": "OPERATING-PROTOCOL.md",
   "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
   "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
   "authorization": {
-    "current_task": "User requested XRBitcoin wallet/sidebar correction and checkpoint update; implemented through standard MR !12.",
+    "current_task": "User requested public XRPL liquidity discovery repair, clearer caution/retry states and memory standards/update; MR !13 merged and production deployed through the standard workflow.",
     "rules": [
       "Capability availability is not authorization.",
       "Verify access each session; stop for missing permissions/approval.",
@@ -16,7 +16,7 @@
     ]
   },
   "access_snapshot": {
-    "observed_at": "2026-09-22",
+    "observed_at": "2026-09-23",
     "github": {
       "resources": [
         "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -28,7 +28,7 @@
     "gitlab": {
       "resource": "xrbitcoincash-group/xrbitcoincash-project",
       "read": "verified",
-      "write": "Standard MR !12 merged and deployed; no protection bypass."
+      "write": "Standard MR !13 merged and production deployment succeeded; no protection bypass."
     },
     "google": {
       "status": "user permits relevant use; not probed"
@@ -102,9 +102,17 @@
     "Distinguish synthetic verification from real-device authorization."
   ],
   "execution_efficiency_preference": {
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "source": "Explicit user instruction after this deployment",
     "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
-    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration."
+    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration.",
+    "discovery_extension": "Apply memory/discovery-efficiency-standard.json: broad supported discovery, exact asset identity, honest coverage, plain-language liquidity cautions and bounded focused verification."
+  },
+  "discovery_efficiency_standard": {
+    "machine": "memory/discovery-efficiency-standard.json",
+    "human": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+    "source": "Explicit user instruction for public XRPL liquidity discovery repair and memory upgrade, 2026-09-23",
+    "rule": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
+    "implementation_status": "See task-specific checkpoint; this standard alone is not proof of application changes."
   }
 }

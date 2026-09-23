@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
@@ -531,6 +531,31 @@
       "status": "deployed-public-source-verified-wallet-retest-required",
       "file": "memory/savepoints/SAVEPOINT-2026-09-22-JCS-RECEIPT-POLICY.json",
       "human_file": "JCS-RECEIPT-POLICY-2026-09-22.md"
+    },
+    {
+      "id": "standard:discovery-usefulness-efficiency",
+      "type": "standard",
+      "status": "active",
+      "file": "memory/discovery-efficiency-standard.json",
+      "human_file": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+      "statement": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget."
+    },
+    {
+      "id": "savepoint:public-liquidity-discovery-2026-09-23",
+      "type": "savepoint",
+      "status": "deployed-source-verified-device-retest-pending",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+      "human_file": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
+      "frontend_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+      "implementation_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
+      "pipeline_id": 2875017821
+    },
+    {
+      "id": "issue:LIQ-001",
+      "type": "issue",
+      "status": "retest-required",
+      "file": "memory/known-errors.json",
+      "statement": "Exact identity/public liquidity discovery repair deployed via MR !13; rendered production browser runtime unverified."
     }
   ],
   "edges": [
@@ -1053,6 +1078,31 @@
       "from": "savepoint:jcs-receipt-policy-2026-09-22",
       "rel": "uses",
       "to": "repo:backend"
+    },
+    {
+      "from": "protocol:evidence-first",
+      "rel": "uses",
+      "to": "standard:discovery-usefulness-efficiency"
+    },
+    {
+      "from": "savepoint:public-liquidity-discovery-2026-09-23",
+      "rel": "follows",
+      "to": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"
+    },
+    {
+      "from": "savepoint:public-liquidity-discovery-2026-09-23",
+      "rel": "uses",
+      "to": "standard:discovery-usefulness-efficiency"
+    },
+    {
+      "from": "savepoint:public-liquidity-discovery-2026-09-23",
+      "rel": "repairs-awaiting-retest",
+      "to": "issue:LIQ-001"
+    },
+    {
+      "from": "savepoint:public-liquidity-discovery-2026-09-23",
+      "rel": "uses",
+      "to": "repo:frontend"
     }
   ],
   "query_hints": {
@@ -1170,7 +1220,17 @@
     ],
     "jcs_receipts": [
       "savepoint:jcs-receipt-policy-2026-09-22"
+    ],
+    "discovery_efficiency": [
+      "standard:discovery-usefulness-efficiency",
+      "protocol:evidence-first"
+    ],
+    "xrpl_liquidity_index": [
+      "savepoint:public-liquidity-discovery-2026-09-23",
+      "issue:LIQ-001",
+      "standard:discovery-usefulness-efficiency",
+      "repo:frontend"
     ]
   },
-  "active_savepoint": "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22"
+  "active_savepoint": "savepoint:public-liquidity-discovery-2026-09-23"
 }

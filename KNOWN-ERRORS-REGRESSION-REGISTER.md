@@ -279,3 +279,7 @@ UI-001 correction: MR !11 restores the documented Liquidity-reference desktop si
 ## XRBitcoin correction — MR !12
 
 XRB-001 event completion repaired in `f08dcae3ecef604e0b86b261dcdfc01788fcba91`, deployed as `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; now **retest-required**, not resolved without a real device. 37 tests pass. Header shortcut removed; canonical Connect retained. Sidebar matches Liquidity above 900px. XRB-009 records independent historical-feed failure; it is still open. See `XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md` and machine registry for current state.
+
+## Public liquidity index — 2026-09-23
+
+`LIQ-001` — repair implemented, production runtime retest outstanding. MR !13 (`16fcf45800ad7bbf53796c2c03318fab363ae6ae`) fixes raw currency discovery, liquidity-prioritized candidates, descriptive states and bounded continuation/retry. Nine focused tests pass; deployment and canonical served-source verification succeeded; rendered browser runtime unverified, Chromium unavailable locally. See `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md` and `memory/audits/2026-09-23-public-liquidity-discovery.json`. The existing queue beginning with XRB-001 is unchanged.

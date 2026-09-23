@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -68,7 +68,13 @@
     "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
     "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations.",
     "liquidity_sentinel_scope": "Standalone Liquidity Sentinel is a read-only wallet liquidity scanner. Xaman selects the public account only. The Quick Buy / exact buy-sell transaction pilot was removed on 2026-09-19; do not reintroduce transaction preparation there without an explicit request.",
-    "order_manager_scope": "Order Manager / limit-extraction is for inspecting and clearing currently open XRPL offers. Do not add Quick Buy there. Public address inspection stays read-only; Xaman is the signer. Desktop uses Xaman-owned authorization/transaction QR, mobile uses Xaman deeplinks. Never present a static page-link QR as a wallet or transaction QR."
+    "order_manager_scope": "Order Manager / limit-extraction is for inspecting and clearing currently open XRPL offers. Do not add Quick Buy there. Public address inspection stays read-only; Xaman is the signer. Desktop uses Xaman-owned authorization/transaction QR, mobile uses Xaman deeplinks. Never present a static page-link QR as a wallet or transaction QR.",
+    "maximum_efficiency_discovery_use_case": {
+      "standard": "memory/discovery-efficiency-standard.json",
+      "human_file": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+      "rule": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
+      "source_date": "2026-09-23"
+    }
   },
   "project": {
     "site": "https://xrbitcoincash.com/",
@@ -255,12 +261,12 @@
   ],
   "planned_work": {
     "xrpl_liquidity_index": {
-      "status": "Homepage implementation, JCS coverage correction and fragment navigation are present in reviewed GitLab source; successful pipeline verified. Public runtime delivery remains separately unverified.",
+      "status": "deployed-source-verified-device-retest-pending",
       "specification": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
       "specification_commit": "bc450bd722df225118608a3f59e4202fd36f86e1",
       "specification_status": "Historical research; standalone placement and research-only status superseded by current_record",
-      "current_record": "XRPL-LIQUIDITY-HOMEPAGE-LAUNCH-2026-09-16.md",
-      "current_record_commit": "18194562933b4ac461c17f36590f5c9a7d2ee337",
+      "current_record": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
+      "current_record_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
       "frontend": "public/index.html",
       "superseded_proposed_frontend": "public/xrpl-liquidity-index.html",
       "url": "https://xrbitcoincash.com/#xrpl-liquidity",
@@ -270,15 +276,16 @@
       ],
       "navigation_label": "XRPL Token Liquidity",
       "title": "XRPL Liquidity Index",
-      "first_scope": "Progressively loaded catalog of classic issued tokens; descending actual XRP-AMM XRP reserve among fresh completed checks, not a global top-liquidity ranking",
-      "discovery": "XRPL Meta holder-ordered pages; Load 50 more tokens; provider name search; direct exact issuer/currency lookup. No 50-token total cap. 10/25/50/100 options are display rows per page.",
+      "first_scope": "Classic issued tokens discovered from provider catalogs or exact issuer/currency lookup; not all XRPL object/asset types. Descending fresh checked XRP reserves among loaded tokens; not a global all-ledger liquidity ranking.",
+      "discovery": "XRPL.to TVL-prioritized candidates; broad all-trust-level XRPL Meta fallback/selection; raw currency preserved. Initial 50 includes XRBC/XRB/JCS/SOLO. Bounded continuation and exact issuer/currency lookup retained.",
       "known_assets": [
         "XRBC",
         "XRBitcoin",
-        "JCS"
+        "JCS",
+        "SOLO"
       ],
       "metadata": "XRPL Meta names/identities; Bithomp documented issued-token image endpoint and approved cached-image fallback; logos are not certification",
-      "ledger_source": "Existing Render read-only proxy; source allows required methods; live capacity and responses remain to be independently verified",
+      "ledger_source": "Existing read-only Render proxy. Coordinating agent reported successful CX1/JCS/XRBC probes and GCB actNotFound; no backend changes.",
       "proxy_policy_blob": "ecf8aa23785a779293fcc449b93789ccbdf8ce57",
       "anomaly_policy": "Neutral snapshot observations with evidence. First implementation reports frozen condition, fee changes and reserve changes. Historical repetition, round trips, wash trading and fake volume are not analyzed.",
       "data_states": [
@@ -291,13 +298,18 @@
         "not analyzed"
       ],
       "gating": "Public directory does not replace existing gated forensic tools; wallet-specific analysis remains in established tools; no new gate thresholds assigned",
-      "refresh": "60-pair batches, concurrency 2, 850ms request-start spacing, timeouts/backoff and opt-in two-minute visible-section refresh. Progressive completed results; partial rankings explicit; no continuous shared collector.",
+      "refresh": "50 pool checks per action; two workers, 850ms request-start spacing; 25s request/180s cycle limits, one paced transient retry, rate-limit cooldown; opt-in visible-section refresh.",
       "provider_limits": "XRPL.to remains optional; visible attribution required and re-serving its data through our own API/dataset needs permission; no scraped blocklists",
       "read_only": true,
       "no_wallet_signing": true,
       "no_quick_buy": true,
-      "delivered_file_sha256": "c561bb1d72c4f8677076eaff327e7a3ca2d0acf7aaddae5f7256683cda9b8eb3",
-      "live_endpoint_test": "Prior and current local DNS failures prevent live response verification. Current public-web retrieval returned older content; cause unknown, not established as a project outage."
+      "delivered_file_sha256": "5dc0b75a7fd37173ee266e89df885f59b1785a7f1fc01574449942ff6a8b02da",
+      "live_endpoint_test": "XRPL.to public API normal browser CORS 200 reported by coordinating agent. Read-only probes of CX1, JCS and XRBC succeeded; GCB returned actNotFound. Canonical served source/build verified; rendered browser/device runtime unverified.",
+      "requested_upgrade_2026_09_23": {
+        "standard": "memory/discovery-efficiency-standard.json",
+        "status": "Merged via MR !13, deployed and canonical served source verified; rendered device behavior remains unverified.",
+        "summary": "Broaden public liquidity discovery, preserve exact identities, explain lookup/no-pool states, rank measured liquidity and use 50 initial/100 maximum rendered rows with continuation."
+      }
     },
     "xaman_wallet_standardization": {
       "status": "Paused for higher-capability review; repository discovery and partial consistency audit completed, final verification not complete.",
@@ -481,19 +493,20 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
-    "human_record": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md",
-    "status": "deployed-device-wallet-retest-required",
-    "scope": "XRBitcoin browser authorization event completion, one canonical Connect control, and sidebar parity with XRBC above 900px.",
-    "source_frontend_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
-    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
-    "source_pipeline_id": 2871692616,
-    "source_pipeline_status": "success-with-advisory-findings",
+    "id": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+    "human_record": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
+    "status": "deployed-source-verified-device-retest-pending",
+    "scope": "Repair public homepage token discovery and exact currency identities; add liquidity-first candidates, bounded pagination, descriptive cautions and reason-specific lookup recovery.",
+    "source_frontend_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+    "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+    "source_pipeline_id": 2875017821,
+    "source_pipeline_status": "success-with-existing-advisory-findings",
     "next_issue": "XRB-001",
-    "implementation_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12",
-    "browser_live_retest_after_final_deploy": true
+    "implementation_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
+    "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/13",
+    "browser_live_retest_after_final_deploy": false
   },
   "savepoint_format": [
     "context",
@@ -520,6 +533,21 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+      "human_record": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md",
+      "status": "deployed-device-wallet-retest-required",
+      "scope": "XRBitcoin browser authorization event completion, one canonical Connect control, and sidebar parity with XRBC above 900px.",
+      "source_frontend_commit": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+      "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
+      "source_pipeline_id": 2871692616,
+      "source_pipeline_status": "success-with-advisory-findings",
+      "next_issue": "XRB-001",
+      "implementation_commit": "f08dcae3ecef604e0b86b261dcdfc01788fcba91",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12",
+      "browser_live_retest_after_final_deploy": true
+    },
     {
       "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
       "record": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
@@ -1210,7 +1238,7 @@
     "highest_priority": "XRB-001 device retest after event-bridge repair; XRB-007/008 device checks; XRB-009 historical feed remains open.",
     "operating_rule": "When a repair creates or exposes a new regression, add it immediately and link it to the parent fix/commit. Treat browser/device verification separately from CI success.",
     "latest_audit": "RELIABILITY-AUDIT-2026-09-22.md",
-    "verified_frontend_head": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c"
+    "verified_frontend_head": "8c13eaf222ea7a70b74837a474a496de3d22a531"
   },
   "secondary_memory_protocol": {
     "machine": "memory/operating-protocol.json",
@@ -1219,7 +1247,8 @@
     "validator": "scripts/validate-memory.mjs",
     "scope": "Reusable development/research method; XRBC-specific facts stay scoped.",
     "access": "Connected providers are checked when needed; this checkpoint is not a credential grant.",
-    "automatic_loading_guaranteed": false
+    "automatic_loading_guaranteed": false,
+    "discovery_efficiency_standard": "memory/discovery-efficiency-standard.json"
   },
   "current_audit": {
     "id": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
@@ -1244,19 +1273,20 @@
     "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
   },
   "current_repair": {
-    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
-    "evidence": "memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json",
+    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+    "evidence": "memory/audits/2026-09-23-public-liquidity-discovery.json",
     "issues": [
-      "XRB-001"
+      "LIQ-001"
     ],
-    "status": "deployed-device-wallet-retest-required",
+    "status": "deployed-source-verified-device-retest-pending",
     "next_issue": "XRB-001"
   },
   "execution_efficiency_preference": {
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "source": "Explicit user instruction after this deployment",
     "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
-    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration."
+    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration.",
+    "discovery_extension": "Apply memory/discovery-efficiency-standard.json: broad supported discovery, exact asset identity, honest coverage, plain-language liquidity cautions and bounded focused verification."
   },
   "current_jcs_repair": {
     "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",

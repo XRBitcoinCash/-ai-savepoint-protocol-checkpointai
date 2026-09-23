@@ -1,11 +1,9 @@
-# Next run — XRBitcoin wallet and sidebar
+# Next run — public liquidity repair and preserved queue
 
-Active: `SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar`. Read `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json`, the operating protocol and known errors.
+Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, `memory/discovery-efficiency-standard.json` and relevant known errors.
 
-MR !12 merged as `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; implementation `f08dcae3ecef604e0b86b261dcdfc01788fcba91`. Frontend `public/xrbitcoin-links.html` now has one canonical Connect Xaman action and the shared left-sidebar geometry above 900px. XRBC homepage/Liquidity unchanged by this repair. Keep XRB token and Xaman app identities distinct.
+MR !13 implementation `16fcf45800ad7bbf53796c2c03318fab363ae6ae` was prepared from `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; deployment and canonical served-source verification succeeded; rendered browser runtime unverified. Production pipeline `2875017821` and deploy job `16680915408` succeeded at merge `8c13eaf222ea7a70b74837a474a496de3d22a531`; rendered runtime remains unverified. 46 CI tests (37 existing plus nine focused), syntax/diff and unrelated-block preservation pass. Canonical served source/build match the final merge; rendered browser/device runtime remains unverified; Chromium was unavailable. Endpoint probes are separate evidence. Keep the public index ungated, preserve exact raw currency, and distinguish direct XRP-AMM subset ranking from all-ledger coverage.
 
-37 tests pass, including 13 new browser-event cases. Runtime/CSP and gate checks pass. Seven-width source CSS parity passes; live desktop/served CSS and bridge verified. Real Xaman authorization and narrow-device geometry are unverified. Existing 19 advisory site-validator findings remain.
+Existing next issue remains `XRB-001`: real-device first-click Xaman sign-in, cancel and retry, alongside `XRB-007/008`. `XRB-009` remains the separate history-feed failure. Other queue items and their evidence remain unchanged. Do not expand this liquidity repair into wallet, history, gate or backend changes.
 
-Next: XRB-001 device retest (first click, cancel, retry), alongside XRB-007/008. XRB-009 is the separate historical Sologenic feed failure; do not reuse the XRBC-only history relay. Keep pending-request guards and one reviewed payload per intent.
-
-User execution preference (2026-09-22): Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment. Keep final reports brief. This supersedes broader optional workflow steps.
+Apply the bounded discovery/usefulness/efficiency standard: reuse current evidence, use focused checks only, preserve all history and report actual completion limits briefly.

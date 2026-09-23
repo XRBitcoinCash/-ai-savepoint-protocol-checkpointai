@@ -2,19 +2,19 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-22  
+**Updated:** 2026-09-23
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
 
-## Current memory checkpoint — 2026-09-22
+## Current memory checkpoint — 2026-09-23
 
-Active: `SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json`, the operating protocol and known errors.
+Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, the operating protocol and known errors.
 
-XRBitcoin wallet event completion, one canonical Connect action and shared sidebar geometry are deployed via [MR !12](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/12), merge `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`. 37 tests and runtime/gates pass; live desktop DOM/CSS verified. Real wallet sign-in and narrow-device rendering remain unverified. XRB-001 is retest-required; XRB-009 records separate unavailable historical candles. Existing 19 advisory findings remain.
+MR [!13](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/13) implements public homepage liquidity discovery and exact currency repairs at `16fcf45800ad7bbf53796c2c03318fab363ae6ae`. Production deployment and canonical served-source verification succeeded; rendered browser runtime unverified. 46 CI tests (37 existing plus nine focused) and syntax/diff checks pass; permitted-block preservation confirmed. Chromium was unavailable, so local browser runtime is unverified. Provider/ledger read-only probes are separate evidence. Backend `1c1fa1d41287af846c3be9d7233c319eb2b8a470` was observed but unchanged.
 
-The backend `48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563` is a prior audit baseline and was not re-audited. Older checkpoint sections below are historical where superseded. Pointers and graph are synchronized in this containing commit. Connected tools are task-scoped access, not blanket permission or guaranteed internal recall.
+The new standard is `memory/discovery-efficiency-standard.json`. Preserve raw ledger identities, honest coverage and fresh direct-XRP reserve rankings; keep public inspection ungated, explain cautions and failures, and use bounded 50/100 paging and focused verification. Existing XRB-001/007/008 device retests and XRB-009 history issue remain unchanged. Historical checkpoint sections below are superseded only where this record explicitly changes current state.
 
 ## Current source and deployment map — checked 2026-09-16
 

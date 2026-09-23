@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "created": "2026-09-23",
+  "scope": "Repair public homepage token discovery and exact currency identities; add liquidity-first candidates, bounded pagination, descriptive cautions and reason-specific lookup recovery.",
+  "source_snapshots": {
+    "frontend": {
+      "commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+      "implementation": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
+      "baseline": "a46172c91d1f9d0cdcd0f151c83c406090e8a25c",
+      "branch": "master"
+    },
+    "backend": {
+      "commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+      "verification": "Observed head; unchanged by this repair, not a backend re-audit."
+    }
+  },
+  "root_causes": [
+    "XRPL Meta treats the presence of decode_currency as true even when the query value is false, returning display labels in place of raw ledger currency. Passing original_icons=false likewise enables that presence-based option. Omitting both flags preserves raw currency and expected icon behavior.",
+    "Provider catalog order and partial bounded checks did not establish complete or liquidity-ranked discovery; decoded identities caused liquid assets such as SOLO/RLUSD to be rejected or queried incorrectly.",
+    "The generic lookup-unavailable label concealed operational distinctions among transient transport errors, rate limits, invalid identities and valid ledger no-pool responses. No evidence of deliberate concealment was established."
+  ],
+  "changes": [
+    "Omit presence-based Meta flags and preserve exact raw currency independently from display labels; known SOLO bootstrap uses its real 40-character currency encoding.",
+    "Use documented XRPL.to TVL-ordered token discovery as the preferred candidate source with attribution; retain broad all-trust-level Meta fallback/select and exact issuer/currency lookup.",
+    "Start with 50 candidates including four known seeds (XRBC, XRB, JCS, SOLO); load more in bounded batches and render at most 100 rows per page.",
+    "Rank fresh validated direct XRP-AMM reserve observations among loaded tokens. Provider TVL helps discovery only; it is not substituted for measured XRP reserve.",
+    "Explain thin liquidity, absent direct XRP pool and unavailable evidence; show 100 XRP as a share of observed reserve, with published 1000/10000 XRP bands and no intrinsic-value claim.",
+    "Add reason-specific failures and per-row retry, one paced retry for transient lookup errors, rate-limit cooldown and stale/cancelled-result guards.",
+    "Keep index wallet-free and read-only. Change only index markup/CSS/module and the CSP connection allowance for api.xrpl.to; trading/wallet code remains outside changed blocks.",
+    "Add nine focused regression tests and the measurable discovery/usefulness/efficiency memory standard.",
+    "Export discovery attribution and source documentation with JSON evidence; final small source commit after initial implementation."
+  ],
+  "verification": {
+    "focused_unit_tests": 9,
+    "focused_unit_tests_status": "pass",
+    "test_file": "tests/unit/public-liquidity-index.test.mjs",
+    "syntax": "pass",
+    "diff_whitespace": "pass",
+    "unrelated_html": "Byte-equivalent outside allowed liquidity markup/CSS/module and CSP blocks.",
+    "browser_runtime_verified": false,
+    "browser_limitation": "Chromium unavailable locally; no local rendered/browser runtime claim.",
+    "live_wallet_verified": false,
+    "source_of_results": "Implementation and focused-check results reported by coordinating agent; exact local CONFIG and test names inspected for this record.",
+    "ci_unit_tests": 46,
+    "ci_unit_test_failures": 0,
+    "existing_tests": 37,
+    "new_focused_tests": 9,
+    "runtime_pages": 10,
+    "gate_tools": 12,
+    "gate_tiers": 7,
+    "mr_pipeline": 2875015185,
+    "mr_pipeline_status": "success",
+    "production_runtime_job": 16680915404,
+    "production_validator_job": 16680915405,
+    "validator_exit_code": 1,
+    "validator_mode": "advisory",
+    "existing_advisory_findings": 19,
+    "security_jobs": "Semgrep and secret detection passed.",
+    "served_source_verified": true
+  },
+  "coverage": {
+    "supported_assets": "Classic issued tokens discovered from provider catalogs or exact issuer/currency lookup; not all XRPL object/asset types.",
+    "discovery_order": "XRPL.to reported TVL order when available; broad Meta discovery as fallback/selection.",
+    "measured_pairs": "Direct token/XRP AMMs at a validated ledger; not all token-token pools or order-book liquidity.",
+    "ranking": "Descending fresh checked XRP reserves among loaded tokens; not a global all-ledger liquidity ranking.",
+    "exhaustive": false
+  },
+  "request_and_page_limits": {
+    "discovery_batch": 50,
+    "pool_checks_per_action": 50,
+    "initial_rows": 50,
+    "max_rendered_rows": 100,
+    "metadata_pages_per_action": 4,
+    "concurrency": 2,
+    "request_start_spacing_ms": 850,
+    "request_timeout_ms": 25000,
+    "cycle_timeout_ms": 180000,
+    "freshness_ms": 180000,
+    "comparison_window_ms": 600000,
+    "opt_in_refresh_ms": 120000,
+    "max_consecutive_failures": 5,
+    "transient_lookup_retry_count": 1,
+    "cache_note": "Retains in-session catalog and observations. No enforced 30-minute cache lifetime claimed; catalogMs constant alone is not evidence of use."
+  },
+  "read_only_endpoint_probes": {
+    "provider_probe": "XRPL.to public API normal browser CORS 200 reported by coordinating agent.",
+    "ledger_probes": "Read-only probes of CX1, JCS and XRBC succeeded; GCB returned actNotFound.",
+    "limits": "Endpoint probe success is not an end-to-end production-page or all-token verification.",
+    "deliberate_concealment_evidence": false
+  },
+  "source_sha256": {
+    "public/index.html": "5dc0b75a7fd37173ee266e89df885f59b1785a7f1fc01574449942ff6a8b02da",
+    "tests/unit/public-liquidity-index.test.mjs": "f55c979aeb9e1ed22451d92de5caee82ba903c122bfed2da65b7004f72e453fc"
+  },
+  "deployment": {
+    "status": "success",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/13",
+    "commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+    "pipeline": 2875017821,
+    "job": 16680915408,
+    "served_build_verified": true,
+    "browser_runtime_verified": false,
+    "verification_scope": "Canonical https://xrbitcoincash.com/ HTTP GET: build-info and HTML xrbc-build-id match merge commit; public liquidity script and directory markup match final local source. This verifies served source, not rendered browser/visual/device/wallet execution.",
+    "served_source_verified": true,
+    "deployed_at": "2026-09-23T12:28:55Z"
+  },
+  "next_issue": "XRB-001",
+  "known_asset_regression": {
+    "name": "Sologenic",
+    "symbol": "SOLO",
+    "issuer": "rsoLo2S1kiGeCcn6hCUXVrCpGMWLrRrLZz",
+    "currency": "534F4C4F00000000000000000000000000000000"
+  },
+  "source_references": [
+    {
+      "url": "https://github.com/xrplmeta/node/blob/e38bef6882d78c4d04aeb8eb56ef055a833c80e7/src/srv/http.js",
+      "supports": "Presence-based decode_currency and original_icons flags in provider implementation.",
+      "observed": "2026-09-23",
+      "corroboration": "Omitted-parameter live probe returned raw encodings, reported by coordinating agent."
+    }
+  ],
+  "served_source_verification": {
+    "result": {
+      "build": {
+        "schema_version": "1.0.0",
+        "commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+        "pipeline_id": "2875017821",
+        "ref": "master",
+        "deployed_at": "2026-09-23T12:28:55Z",
+        "source": "gitlab-pages"
+      },
+      "served_public_index_matches": true,
+      "served_build_meta": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+      "directory_markup_matches": true
+    },
+    "scope": "Canonical https://xrbitcoincash.com/ HTTP GET: build-info and HTML xrbc-build-id match merge commit; public liquidity script and directory markup match final local source. This verifies served source, not rendered browser/visual/device/wallet execution.",
+    "browser_execution_verified": false
+  }
+}

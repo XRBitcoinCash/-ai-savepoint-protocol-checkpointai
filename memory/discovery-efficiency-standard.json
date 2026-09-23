@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "id": "discovery-usefulness-efficiency-2026-09-23",
+  "updated": "2026-09-23",
+  "status": "active-operating-standard",
+  "source": "Explicit user instruction for public XRPL liquidity discovery repair and memory upgrade, 2026-09-23",
+  "human_file": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+  "completion_boundary": "Acceptance requirements only; application completion and coverage require current source and task-specific evidence.",
+  "objective": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
+  "continuity": [
+    "Load compact bootstrap, current protocol and relevant issue routes before long history.",
+    "Verify exact source repository, branch, current head and instructions; source evidence outranks remembered implementation claims.",
+    "Preserve historical records and queued issues; publish synchronized checkpoint pointers only with actual implementation status."
+  ],
+  "discovery": {
+    "identity": "Preserve exact issuer and original ledger currency encoding separately from display label; do not canonicalize distinct encodings by decoded text.",
+    "scope": "Do not restrict candidates to XR-prefixed names or project assets. Report supported asset classes; classic issued tokens do not establish MPT/NFT coverage.",
+    "coverage": "Provider catalogs supply candidates, not proof of exhaustive XRPL discovery. Show loaded/checked counts, freshness, provider and continuation availability.",
+    "liquidity_scope": "Distinguish direct XRP AMMs, other-pair AMMs and order books. Publish only the coverage actually measured.",
+    "ranking": "Prefer documented liquidity-ranked discovery; sort comparable completed measurements descending. Label loaded/checked subset rankings honestly.",
+    "fallback": "Keep exact issuer/currency lookup when provider catalog/name search omits an asset.",
+    "known_liquid_asset_regression": "SOLO or equivalent verified liquid asset, using authoritative exact currency encoding and issuer."
+  },
+  "public_access": {
+    "wallet_required": false,
+    "holding_required": false,
+    "signature_required": false,
+    "payment_required": false,
+    "scope": "Public read-only liquidity index only; do not change unrelated forensic or wallet gates."
+  },
+  "interpretation": {
+    "no_direct_xrp_pool": "A checked ledger response found no direct token/XRP AMM; exit by this route may be unavailable. Other pairs, order books and non-trading utility remain possible.",
+    "thin_liquidity": "Explain observed price-impact/exit constraints using published thresholds and comparable units.",
+    "unavailable": "Unknown evidence, never zero liquidity; give reason and suitable retry or correction action.",
+    "states": [
+      "pool found",
+      "no direct XRP pool at checked ledger",
+      "rate limited",
+      "timeout",
+      "provider unavailable",
+      "invalid identity",
+      "not checked",
+      "stale",
+      "unsupported"
+    ],
+    "metric_rule": "Publish formula, input evidence, units, freshness and limitations; never invent a score for unavailable/no-pool data.",
+    "prohibited_inferences": [
+      "Missing pool proves intrinsic worthlessness.",
+      "Missing pool proves a scam or undeveloped project.",
+      "Logo or provider listing certifies legitimacy.",
+      "Lookup failure proves deliberate concealment."
+    ]
+  },
+  "efficiency": {
+    "initial_visible_tokens": 50,
+    "max_rendered_tokens_per_page": 100,
+    "discovery_cap": "No fixed total cap implied by display limits; continue explicitly in bounded pages.",
+    "continuation": "Label controls with the action and scope: load/open further tokens or pool results.",
+    "request_policy": [
+      "Explicit concurrency and per-action budget.",
+      "Bounded deadlines/retries with backoff and provider Retry-After.",
+      "Reuse fresh cache and duplicate in-flight work.",
+      "Cancel or ignore superseded work.",
+      "No unbounded browser scan or implicit perpetual polling."
+    ],
+    "diagnostic_order": [
+      "exact asset encoding",
+      "catalog/search coverage",
+      "API/schema and valid request",
+      "rate limit/timeout/provider transport",
+      "confirmed ledger pool presence"
+    ],
+    "access_boundary": "Use documented public APIs or permitted ledger endpoints. Do not bypass authentication, access controls, anti-abuse protections or provider terms.",
+    "verification": "Run focused checks for concrete changed risks and required gates only; reuse evidence, avoid duplicate broad scans and stop after sufficient verification.",
+    "reporting": "Brief outcome, actual verification and material limitation."
+  },
+  "acceptance_checks": [
+    "Exact ledger currency preserved despite display decoding.",
+    "Known liquid asset can be discovered or looked up by exact identity.",
+    "Confirmed no-pool and failed lookup remain distinct.",
+    "Comparable fresh liquidity sorted descending with honest scope.",
+    "50 initially, at most 100 rendered per page, clear continuation.",
+    "Public index requires no wallet/holding/signature.",
+    "Bounded retry, cancellation and rate-limit recovery."
+  ],
+  "handoff_fields": [
+    "source_heads",
+    "changed_files",
+    "failure_cause_and_evidence",
+    "supported_asset_and_pair_scope",
+    "request_and_page_limits",
+    "essential_checks_and_results",
+    "deployment_status",
+    "remaining_limitations",
+    "rollback_reference"
+  ]
+}
