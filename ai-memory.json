@@ -1331,5 +1331,38 @@
     "verification": "Matching receipt contracts and updated signed memo pass focused deposit/withdrawal checks; existing digests unchanged; both logos render; live backend release 1.1.0 ready.",
     "public_source_verified": true,
     "deployment_status": "success"
+  },
+  "current_stablecoin_repair": {
+    "implementation_commit": "f9bc9e1258c70902c924bd84adb003c7d6fb0314",
+    "merge_commit": "d403232bcd123e18ebff1a4b55067e5e798ca961",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/15",
+    "pipeline_id": 2875136689,
+    "pipeline_status": "success",
+    "deploy_job": 16681819016,
+    "served_source_verified": true,
+    "served_build_verified": true,
+    "verification_scope": "Canonical homepage application script equals local tested script; HTML build meta and build-info.json equal the merged commit. Browser/device/wallet transaction not tested.",
+    "date": "2026-09-23",
+    "scope": "Homepage confirmed-stablecoin identity matching and local trustline-policy messages.",
+    "cause": "Known issuer-controlled stablecoins were treated as dynamic discoveries, whose local NoFreeze/domain policy blocked them before Xaman payload creation.",
+    "new_focused_tests": 5,
+    "ci_tests": 55,
+    "browser_runtime_verified": false,
+    "wallet_transaction_verified": false,
+    "checkpoint": "STABLECOIN-TRUSTLINE-POLICY-2026-09-23.md",
+    "rollback_frontend_commit": "a8d36ff73961a8eb06915968564770ccffeeb162",
+    "confirmed_additions": [
+      "Bitstamp USD",
+      "GateHub EUR",
+      "Axelar sUSDf"
+    ],
+    "remaining_identity_review": [
+      "GBP at r4GN9eEoz9K4BhMQXe4H1eYNtvtkwGdt8g",
+      "EURS at rs5hzzF7RzdV2Ub7Fv14Z1ShjuCrnL7FEX",
+      "PSC at rwekfW4MiS5yZjXASRBDzzPPWYKuHvKP7E"
+    ],
+    "security_boundary": "Existing exact-transaction simulation, Xaman wallet authorization, NoRipple, active freeze, issuer authorization and fee checks remain. New-trustline prohibition now applies to pinned issuers too. Unverified issuers retain dynamic policy; stablecoin labels alone grant no exception.",
+    "evidence_ledger": 107181681,
+    "unchanged": "All homepage content outside the application script; liquidity pagination, backend, wallet signing implementation and existing issue queue."
   }
 }

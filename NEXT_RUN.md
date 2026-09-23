@@ -1,5 +1,7 @@
 # Next run — public liquidity repair and preserved queue
 
+Latest correction: MR !15 fixed confirmed stablecoin issuer matching/local trustline false blocks. Merge `d403232bcd123e18ebff1a4b55067e5e798ca961`, pipeline `2875136689` deployed and served source verified. Read `STABLECOIN-TRUSTLINE-POLICY-2026-09-23.md` and `ai-memory.json.current_stablecoin_repair`. Five focused / 55 CI tests pass; real wallet/device verification remains pending. GBP/EURS/PSC publisher confirmation remains unresolved; no blanket stablecoin exception. Earlier liquidity/pagination records below remain historical evidence.
+
 Latest follow-up: MR !14 fixed 100-row selection and discovery through Next/Previous; merged/deployed `a8d36ff73961a8eb06915968564770ccffeeb162`, pipeline `2875080550`. 13 focused / 50 CI tests pass; served script/build verified; rendered device behavior unverified. Read `pagination_follow_up` in the active machine record or the appended section in `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`. The MR !13 facts below are the earlier baseline.
 
 Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, `memory/discovery-efficiency-standard.json` and relevant known errors.
