@@ -1,5 +1,7 @@
 # Next run — public liquidity repair and preserved queue
 
+Research handoff for Astra: `TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md` documents provider catalogs, exact XRPL identities, rights/issuer distinctions, a broad asset chooser, and phased UI work for both Tokenization Auditor pages. Research only; no catalog implementation or deployment is claimed. Re-check MR !23 and current site before coding.
+
 Latest prepared release: Tokenization workspace in MR !23; 95 CI tests pass. Read `TOKENIZATION-WORKSPACE-2026-09-23.md` and `memory/tokenization-workspace-2026-09-23.json`. Saved before deployment; preserve existing issue queue and stop immediately when deployment completes.
 
 Prepared Creature NFT signing correction: validate/normalize returned path metadata and shorten new Xaman request IDs to 37 characters. Correct app ID retained; mocked desktop/mobile Buy and liquidity deposit reach the QR/link. Read `CREATURE-XAMAN-HANDOFF-2026-09-23.md`. Earlier quote/UI repair is confirmed committed at `4a2faf38ee8e1b736085a0b935de8692f0eae900`. Saved before the final application commit; deployment and live wallet behavior are not asserted.

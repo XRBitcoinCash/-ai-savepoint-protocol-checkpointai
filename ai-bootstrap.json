@@ -329,6 +329,13 @@
       "status": "implemented-ci-verified-predeployment",
       "source_commit": "5c3c7b498e463f798abcb0bcb5644784c5cbd48c",
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/23"
+    },
+    "current_tokenization_catalog_research": {
+      "date": "2026-09-23",
+      "record": "TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md",
+      "status": "research-only-implementation-later",
+      "frontend_baseline": "TOKENIZATION-WORKSPACE-2026-09-23.md",
+      "next_action": "With Astra, verify MR !23 and current frontend/deployment, then implement a sourced, paginated discovery catalog and guided issuer workflow; do not infer that other-network stocks are XRPL issuances."
     }
   },
   "safety_invariants": [
