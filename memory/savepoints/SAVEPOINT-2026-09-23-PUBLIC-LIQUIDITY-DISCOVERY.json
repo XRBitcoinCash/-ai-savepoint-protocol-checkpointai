@@ -115,5 +115,28 @@
     "Existing XRB-001/007/008 device retests, XRB-009 history feed and all other prior queued issues remain unchanged."
   ],
   "publication": "Containing Git commit identifies this checkpoint; local preparation is not publication.",
-  "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531"
+  "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+  "pagination_follow_up": {
+    "implementation_commit": "9e8463eab7a2153ee5a1409af8b18a1bb519cb8c",
+    "merge_commit": "a8d36ff73961a8eb06915968564770ccffeeb162",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/14",
+    "pipeline_id": 2875080550,
+    "pipeline_status": "success",
+    "deploy_job": 16681397485,
+    "served_source_verified": true,
+    "served_build_verified": true,
+    "verification_scope": "Canonical homepage script equals local tested script; HTML build meta and build-info.json equal the merged commit. Browser/device execution not tested.",
+    "date": "2026-09-23",
+    "scope": "Fix 100-row selection and Next/Previous discovery navigation only.",
+    "cause": "Controls only sliced the 50 initially loaded identities; they never requested more.",
+    "focused_tests": 13,
+    "new_pagination_tests": 4,
+    "ci_tests": 50,
+    "browser_runtime_verified": false,
+    "limits": "Initial/automatic/refresh checks stay at 50; explicit page navigation discovers/checks at most 100 tokens. Existing pacing, watchdog, stop, error cutoff and HTTP 429 backoff retained. Successful batches no longer impose the ordinary 30-second hold.",
+    "behavior": "100-row selection fills missing capacity. Next discovers another page. Previous reuses loaded rows; a navigation revision rejects a late page jump. Filters remain scoped to loaded rows. Catalog-end/cooldown labels are explicit.",
+    "rollback_frontend_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+    "unchanged": "All homepage bytes outside the liquidity script; backend, wallet, styling and existing issue queue."
+  },
+  "baseline_note": "Top-level source/deployment facts record MR !13. pagination_follow_up records the later MR !14 correction."
 }

@@ -39,17 +39,29 @@
   },
   "current_state": {
     "latest_verified_frontend_change": {
-      "scope": "Repair public homepage token discovery and exact currency identities; add liquidity-first candidates, bounded pagination, descriptive cautions and reason-specific lookup recovery.",
-      "implementation_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
-      "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
-      "pipeline_id": 2875017821,
-      "pipeline_status": "success-with-existing-advisory-findings",
-      "page": "public/index.html",
-      "browser_live_retest_after_final_deploy": false,
-      "verification_scope": "Canonical https://xrbitcoincash.com/ HTTP GET: build-info and HTML xrbc-build-id match merge commit; public liquidity script and directory markup match final local source. This verifies served source, not rendered browser/visual/device/wallet execution.",
+      "implementation_commit": "9e8463eab7a2153ee5a1409af8b18a1bb519cb8c",
+      "merge_commit": "a8d36ff73961a8eb06915968564770ccffeeb162",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/14",
+      "pipeline_id": 2875080550,
+      "pipeline_status": "success",
+      "deploy_job": 16681397485,
+      "served_source_verified": true,
       "served_build_verified": true,
-      "deploy_job": 16680915408,
-      "served_source_verified": true
+      "verification_scope": "Canonical homepage script equals local tested script; HTML build meta and build-info.json equal the merged commit. Browser/device execution not tested.",
+      "date": "2026-09-23",
+      "scope": "Fix 100-row selection and Next/Previous discovery navigation only.",
+      "cause": "Controls only sliced the 50 initially loaded identities; they never requested more.",
+      "focused_tests": 13,
+      "new_pagination_tests": 4,
+      "ci_tests": 50,
+      "browser_runtime_verified": false,
+      "limits": "Initial/automatic/refresh checks stay at 50; explicit page navigation discovers/checks at most 100 tokens. Existing pacing, watchdog, stop, error cutoff and HTTP 429 backoff retained. Successful batches no longer impose the ordinary 30-second hold.",
+      "behavior": "100-row selection fills missing capacity. Next discovers another page. Previous reuses loaded rows; a navigation revision rejects a late page jump. Filters remain scoped to loaded rows. Catalog-end/cooldown labels are explicit.",
+      "rollback_frontend_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+      "unchanged": "All homepage bytes outside the liquidity script; backend, wallet, styling and existing issue queue.",
+      "page": "public/index.html",
+      "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json#pagination_follow_up",
+      "browser_live_retest_after_final_deploy": false
     },
     "same_day_discovery_change": {
       "commit": "68586a9af00f88253b60f7ee6137cec2b6dfa145",
@@ -163,6 +175,19 @@
       "served_build_verified": false,
       "served_css_verified": true,
       "deploy_job": 16656616394
+    },
+    "public_liquidity_discovery_baseline": {
+      "scope": "Repair public homepage token discovery and exact currency identities; add liquidity-first candidates, bounded pagination, descriptive cautions and reason-specific lookup recovery.",
+      "implementation_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
+      "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+      "pipeline_id": 2875017821,
+      "pipeline_status": "success-with-existing-advisory-findings",
+      "page": "public/index.html",
+      "browser_live_retest_after_final_deploy": false,
+      "verification_scope": "Canonical https://xrbitcoincash.com/ HTTP GET: build-info and HTML xrbc-build-id match merge commit; public liquidity script and directory markup match final local source. This verifies served source, not rendered browser/visual/device/wallet execution.",
+      "served_build_verified": true,
+      "deploy_job": 16680915408,
+      "served_source_verified": true
     }
   },
   "safety_invariants": [

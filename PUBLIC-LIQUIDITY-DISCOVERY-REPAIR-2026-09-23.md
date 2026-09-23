@@ -34,3 +34,11 @@ Final implementation `16fcf45800ad7bbf53796c2c03318fab363ae6ae` includes discove
 Provider source evidence: [XRPL Meta HTTP implementation](https://github.com/xrplmeta/node/blob/e38bef6882d78c4d04aeb8eb56ef055a833c80e7/src/srv/http.js); the coordinating agent corroborated raw currency output with a live omitted-parameter probe.
 
 Canonical delivery verified: `build-info.json` and HTML build ID match merge `8c13eaf222ea7a70b74837a474a496de3d22a531`; public index script and directory markup match the final local source. Deployment timestamp: `2026-09-23T12:28:55Z`. HTTP source verification does not establish rendered browser, visual, device or wallet execution.
+
+## Pagination follow-up — MR !14
+
+User reported that selecting 100 still showed 50 and both page controls were disabled. The controls only paginated already loaded rows. The correction now loads missing rows when selecting 100 and lets Next discover another page; Previous reuses loaded rows. A navigation revision prevents a delayed Next response from undoing a newer Previous click. Filtered views remain limited to loaded results, with explicit footer guidance.
+
+Implementation `9e8463eab7a2153ee5a1409af8b18a1bb519cb8c`, merge `a8d36ff73961a8eb06915968564770ccffeeb162`; [MR !14](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/14). Production pipeline `2875080550` and deploy job `16681397485` succeeded. Four added pagination tests pass (13 focused / 50 CI tests total); canonical served script and build were verified. Rendered browser/device execution remains unverified. CI's existing site-validator advisory findings remain outside scope.
+
+Explicit page loading checks at most 100 newly discovered tokens; initial, refresh and automatic batches remain 50. Pacing, timeout, Stop, failure limits and HTTP 429 backoff remain. Successful checks no longer impose the ordinary 30-second navigation hold. All homepage content outside this script and the existing issue queue are unchanged. Earlier sections describe the MR !13 baseline.

@@ -703,7 +703,7 @@
     {
       "id": "SAVEPOINT-2026-09-18-xaman-token-specific-xrbc-swap",
       "record": "XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md",
-      "scope": "Correct Step 2 so XRP → XRBC opens Xaman Swap with the exact XRBC issuer/currency instead of a local liquidity/trade page."
+      "scope": "Correct Step 2 so XRP \u2192 XRBC opens Xaman Swap with the exact XRBC issuer/currency instead of a local liquidity/trade page."
     },
     {
       "id": "SAVEPOINT-2026-09-18-header-acquisition-steps",
@@ -906,7 +906,7 @@
       "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
       "page_release": "0.2.1",
       "root_cause": "The original Sologenic OHLC provider's documented issuer coverage did not include the exact XRBC issuer, so the chart could have current validated liquidity but no historical XRBC candles.",
-      "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D · MAX is the broadest default history view.",
+      "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D \u00b7 MAX is the broadest default history view.",
       "evidence_boundary": "Historical candles are context only. Current live book/AMM remains validated separately and transaction logic does not depend on chart history.",
       "browser_verification_pending": true,
       "local_checkpoint_pipeline_status": "success"
@@ -1279,7 +1279,13 @@
       "LIQ-001"
     ],
     "status": "deployed-source-verified-device-retest-pending",
-    "next_issue": "XRB-001"
+    "next_issue": "XRB-001",
+    "pagination_follow_up": {
+      "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+      "section": "pagination_follow_up",
+      "merge_commit": "a8d36ff73961a8eb06915968564770ccffeeb162",
+      "status": "deployed-source-verified-device-retest-pending"
+    }
   },
   "execution_efficiency_preference": {
     "updated": "2026-09-23",
