@@ -1,5 +1,7 @@
 # Next run — public liquidity repair and preserved queue
 
+Latest prepared fix: MR !18 connects the selected-market header to its existing validated order-book feed. Read `SELECTED-MARKET-HEADER-2026-09-23.md`. This checkpoint is saved before deployment; deployment outcome is not claimed here. **Stop all work immediately once deployment completes.**
+
 Latest navigation correction: MRs !16–17 route all explicit token selections to the order ticket and updates its pair label. A late page-load reset now yields to an explicit pair choice. User clarified the panel is intentionally scrollable; keep its layout. See `TRADE-PAIR-NAVIGATION-2026-09-23.md` and `ai-memory.json.current_trade_navigation`. Previous liquidity/policy checks below remain historical evidence.
 
 Latest correction: MR !15 fixed confirmed stablecoin issuer matching/local trustline false blocks. Merge `d403232bcd123e18ebff1a4b55067e5e798ca961`, pipeline `2875136689` deployed and served source verified. Read `STABLECOIN-TRUSTLINE-POLICY-2026-09-23.md` and `ai-memory.json.current_stablecoin_repair`. Five focused / 55 CI tests pass; real wallet/device verification remains pending. GBP/EURS/PSC publisher confirmation remains unresolved; no blanket stablecoin exception. Earlier liquidity/pagination records below remain historical evidence.
