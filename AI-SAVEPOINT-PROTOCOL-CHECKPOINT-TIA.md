@@ -8,6 +8,12 @@
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
 
+## Latest prepared Creature NFT update — 2026-09-23
+
+Prepared Creature NFT correction: public quotes, automatic liquidity amounts, Xaman connection recovery, price-shift rejection, animated market/pool/order explanations and JCS logos/navigation. Read `CREATURE-MARKET-CORRECTIONS-2026-09-23.md`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
+
+The earlier active savepoint below remains the historical deployed baseline. The prepared Creature record does not claim a new deployment.
+
 ## Current memory checkpoint — 2026-09-23
 
 Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, the operating protocol and known errors.

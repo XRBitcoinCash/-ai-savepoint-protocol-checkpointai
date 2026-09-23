@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "id": "CREATURE-MARKET-CORRECTIONS-2026-09-23",
+  "status": "prepared-tested-before-application-commit",
+  "repository": "xrbitcoincash-group/xrbitcoincash-project",
+  "branch": "master",
+  "observed_source_commit": "efe729fa5a81f0108932989bf83426377e8b7962",
+  "human_record": "CREATURE-MARKET-CORRECTIONS-2026-09-23.md",
+  "publication_note": "Memory is saved before the application commit so the task can stop immediately after committing. The manifest identifies the tested candidate bytes. No later deployment check is claimed.",
+  "xaman_application_id": "a80af797-db3f-4305-b1c5-14a0a6d447b2",
+  "asset": {
+    "symbol": "CreatureNFT",
+    "issuer": "rGWUGk9BUnknFeyPHSxmkv6UPnt4Zs4c92",
+    "currency": "43726561747572654E4654000000000000000000"
+  },
+  "previous_work": {
+    "page_rebuild_commit": "d73e71d6d7313bfaceaa2cc22c0f5779d1306477",
+    "application_id_correction_commit": "efe729fa5a81f0108932989bf83426377e8b7962",
+    "summary": [
+      "Creature page rebuilt around exact CreatureNFT token trading and existing pool management, using the established reviewed Xaman transaction controller.",
+      "Buy/sell, token receiving permissions, pool deposits/withdrawals, limit orders and cancellation of the connected wallet\u2019s exact-market offers.",
+      "Native and legacy NFT artwork records are separate from the fungible CreatureNFT market token and LP shares. Public reader includes metadata, filters, balances, issuer settings, optional remembered public address and evidence export.",
+      "Linked records: Red Mountain, Estranged and Constructed Grey; Constructed Grey is an associated XRBitcoin record, not proof of Creature collection membership.",
+      "NFT metadata reads start on entry and refresh every five minutes while visible. Latest user deferred revisiting the NFT archive; this correction preserves its existing code.",
+      "Removed Liquidity Sentinel, Tools for a closer look, XRPL.to discovery and Media Desk from Creature; retained wider ecosystem spotlight and shared exchange sidebar.",
+      "No deployed Creature NFT receipt service; optional receipt minting remains blocked/hidden. Confirmed deposit/withdrawal evidence exports remain."
+    ],
+    "earlier_checks": "Prior session reported 71 unit tests, runtime/gate checks and mocked desktop/mobile reader checks passed; no live Xaman signature test. Public ledger probes succeeded; Sologenic/IPFS fetches encountered 403 responses in the environment."
+  },
+  "user_report": [
+    "Buy stuck on Connecting Xaman; missing visible XRP costs.",
+    "Liquidity should automatically match XRP to entered token amount and offer refresh.",
+    "Reject major price changes before a signing request, refresh amounts and require renewed review.",
+    "Animate market and pool views; make limit orders understandable; show JCS branding and sidebar link."
+  ],
+  "causes": [
+    "Source-confirmed: repeated Xumm construction reused singleton PKCE internals while event bindings belonged to an earlier instance.",
+    "Source-confirmed and synthetic-reproduced: the pinned universal SDK returns some authorization errors as resolved Error values. The old bridge waited for an account instead of rejecting.",
+    "Synthetic-reproduced: buy route source_amount rounds XRP to drops before tolerance, while independent pool bound used finer precision. This could reject a matching route by one drop.",
+    "Public estimates were absent; deposit counterpart required an explicit match action."
+  ],
+  "changes": [
+    "Keep one public Xumm instance, clear origin PKCE cache before initial installation, reject returned errors and SDK error events promptly, and expose cancellation in the action ticket. Exact app/account verification remains required.",
+    "Show read-only estimated buy cost / sell proceeds, tolerance bounds, fee/price impact and ledger/time without wallet authorization.",
+    "Automatically match deposit quote amount to token input using validated reserves; quote amount is read-only; Refresh pool amounts performs a fresh read. XRP rounds upward to whole drops.",
+    "Displayed quote age/identity/size/tolerance and expected-cost changes checked before preview. Major reserve-price changes rejected again before signing; clear unsigned preview, refresh values, require explicit re-review.",
+    "Align path and independent AMM boundary rounding, retaining rejection of routes beyond the boundary.",
+    "Animated freshness metrics, actual chart quote-update pulse, reserve nexus, observation markers and limit-order flow. Pause/reduced-motion controls; no fabricated trades or candles.",
+    "Limit-order totals match ledger rounding, selected pool-reference button, plain-language buy/sell price condition, lifetime, partial fills, fees and reserves.",
+    "Existing local JCS image added to ecosystem card and JCS sidebar link."
+  ],
+  "file_manifest": {
+    "public/creature-nft-links.html": {
+      "sha256": "ac4c995ac659ed7eb74285383d4de1aabbc18081316ccd8b987b662b8e96e069",
+      "bytes": 1006672
+    },
+    "public/creature-nft.css": {
+      "sha256": "4cbc73d3fc9fb9e36a3f45b182e007a817f533ac41cfb21dc605e9a010797f9a",
+      "bytes": 11262
+    },
+    "public/creature-nft-tools.js": {
+      "sha256": "38c44b3d7d1904e815939718ab015200dbc7b7eaf96379a2d901c67a7821c2eb",
+      "bytes": 22353
+    },
+    "public/creature-market-pricing.js": {
+      "sha256": "b08242d0093ddeddddf017e8ce1924f49c8d0529d9276cd1f217fa1bbf968c16",
+      "bytes": 1892
+    },
+    "public/creature-market-ui.js": {
+      "sha256": "24a92721917b3410237708b3fdb595a78d267f6cf87f9361401667be1cf3e790",
+      "bytes": 5297
+    },
+    "tests/unit/creature-quotes.test.mjs": {
+      "sha256": "c22637465989a30293ed9c3b0c1daa841a8afa01c4b7d8ca1a768d1a6f5da3d2",
+      "bytes": 6196
+    }
+  },
+  "checks": {
+    "unit_tests": {
+      "passed": 78,
+      "focused_creature": 10
+    },
+    "runtime_contracts": "11 critical pages pass",
+    "gate_registry": "12 tools / 7 tiers pass",
+    "syntax_and_targeted_diff": "pass",
+    "mocked_browser": {
+      "passed": true,
+      "widths": [
+        390,
+        900,
+        901,
+        1180,
+        1440
+      ],
+      "checks": [
+        "public estimate before wallet",
+        "authorization returned error",
+        "cancel/retry",
+        "one SDK construction",
+        "successful buy/deposit previews",
+        "price-shift rejection before signing",
+        "autofill and refreshed second review",
+        "limit totals",
+        "JCS assets/nav",
+        "pause/reduced motion",
+        "unavailable clears estimates",
+        "CSP"
+      ],
+      "synthetic_simulations": 2,
+      "real_financial_requests": 0
+    }
+  },
+  "limitations": [
+    "Mocked provider/browser evidence is not live Xaman/device confirmation.",
+    "No on-ledger transaction submitted and no liquidity added.",
+    "An already-open wallet signing request cannot be cancelled by a page price timer; encoded transaction bounds remain enforced.",
+    "Historical provider availability and NFT archive expansion are outside this correction.",
+    "Production deployment and CI after the final commit intentionally unobserved; user tests after commit."
+  ],
+  "unchanged": [
+    "Backend workflow/API",
+    "Other project pages and shared scripts",
+    "Existing exact asset identities and Xaman app ID",
+    "Pending-request persistence and duplicate locks",
+    "NFT archive content"
+  ],
+  "next_issue": "XRB-001",
+  "next_issue_note": "Existing global queue is preserved. Creature live-wallet behavior needs user-device retest."
+}

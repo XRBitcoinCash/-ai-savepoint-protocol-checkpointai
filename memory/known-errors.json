@@ -175,8 +175,8 @@
       "Separate exchange/workbench family for Trade/Liquidity/Developers.",
       "Developer dedicated exchange sidebar.",
       "Narrow-desktop shell fixes and CTA readability updates.",
-      "Homepage partial 900→1180px responsive-header migration repaired via MR !10; source checks pass, device rendering check pending.",
-      "User correction: MR !11 restores the documented <=900px compact breakpoint and shared sidebar widths. It supersedes the MR !10 layout choice at 901–1180px."
+      "Homepage partial 900\u21921180px responsive-header migration repaired via MR !10; source checks pass, device rendering check pending.",
+      "User correction: MR !11 restores the documented <=900px compact breakpoint and shared sidebar widths. It supersedes the MR !10 layout choice at 901\u20131180px."
     ],
     "wallet_reference": "Use public/index.html deliberate Connect plus success/retrieved/ready session completion as behavioral reference for XRB-001, but do not copy the entire XRBC state machine.",
     "historical_reverify": [
@@ -426,7 +426,7 @@
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
       "repair_evidence": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
       "acceptance_checks": [
-        "At 901–1180px Trade and Liquidity both have fixed, scrollable 188px left rails.",
+        "At 901\u20131180px Trade and Liquidity both have fixed, scrollable 188px left rails.",
         "Above 1180px both use 220px rails; <=900px compact top headers.",
         "Main and footer clear the rail; JavaScript stays unchanged.",
         "User-device visual comparison to the Liquidity screenshot."
@@ -453,6 +453,21 @@
       "verification": "46 CI tests pass, including nine focused cases; deployment and canonical served source/build verified, unchanged 19 advisory findings. Rendered browser/device runtime unverified.",
       "next_check": "User page feedback may guide a focused runtime follow-up; do not repeat broad scans.",
       "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531"
+    },
+    {
+      "id": "CREATURE-001",
+      "status": "retest-required",
+      "page": "public/creature-nft-links.html",
+      "summary": "Stuck authorization, hidden buy costs and manual liquidity matching; focused correction prepared with stale-price guards and clearer displays.",
+      "source_commit": "efe729fa5a81f0108932989bf83426377e8b7962",
+      "evidence_level": "source-confirmed + synthetic-reproduced; live wallet unverified",
+      "record": "memory/creature-market-corrections-2026-09-23.json",
+      "acceptance_checks": [
+        "User-device Xaman authorization succeeds or releases clearly after error/cancel.",
+        "Read-only XRP cost and matched liquidity amount appear immediately with fresh reserves.",
+        "Material pre-sign quote changes block payload creation and refresh amounts for another review.",
+        "New market/pool/order motion and JCS image/navigation render on device."
+      ]
     }
   ],
   "backend_ci": [

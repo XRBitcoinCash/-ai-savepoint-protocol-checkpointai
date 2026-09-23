@@ -1,5 +1,7 @@
 # Continuity entrypoint
 
+Prepared Creature NFT correction: public quotes, automatic liquidity amounts, Xaman connection recovery, price-shift rejection, animated market/pool/order explanations and JCS logos/navigation. Read `CREATURE-MARKET-CORRECTIONS-2026-09-23.md`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
+
 This repository is secondary project context, not permission to act or internal model memory.
 
 ## Mandatory stop after deployment — user instruction, 2026-09-23
