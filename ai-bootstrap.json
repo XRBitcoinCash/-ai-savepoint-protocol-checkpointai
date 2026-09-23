@@ -322,6 +322,13 @@
       },
       "rebuild_commit": "d73e71d6d7313bfaceaa2cc22c0f5779d1306477",
       "application_id_commit": "efe729fa5a81f0108932989bf83426377e8b7962"
+    },
+    "current_tokenization_workspace": {
+      "record": "memory/tokenization-workspace-2026-09-23.json",
+      "human_record": "TOKENIZATION-WORKSPACE-2026-09-23.md",
+      "status": "implemented-ci-verified-predeployment",
+      "source_commit": "5c3c7b498e463f798abcb0bcb5644784c5cbd48c",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/23"
     }
   },
   "safety_invariants": [
@@ -472,6 +479,10 @@
       "memory/creature-xaman-handoff-2026-09-23.json",
       "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
       "memory/creature-market-corrections-2026-09-23.json"
+    ],
+    "tokenization": [
+      "memory/tokenization-workspace-2026-09-23.json",
+      "TOKENIZATION-WORKSPACE-2026-09-23.md"
     ]
   },
   "transition": {

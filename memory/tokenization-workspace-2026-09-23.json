@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "id": "TOKENIZATION-WORKSPACE-2026-09-23",
+  "status": "implemented-ci-verified-predeployment",
+  "repository": "xrbitcoincash-group/xrbitcoincash-project",
+  "target_branch": "master",
+  "source_commit": "5c3c7b498e463f798abcb0bcb5644784c5cbd48c",
+  "base_commit": "6cc92020bab942e57c14eb8ffa573e6972cd222a",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/23",
+  "pipeline_id": 2876804663,
+  "pages": [
+    "public/asset-tokenization-auditor.html",
+    "public/asset-tokenization-auditor-advanced.html"
+  ],
+  "modules": [
+    "public/xrbc-tokenization-core.js",
+    "public/xrbc-tokenization-studio.js",
+    "public/xrbc-tokenization-ledger.js",
+    "public/xrbc-tokenization-studio.css"
+  ],
+  "capabilities": [
+    "Local salted evidence commitments and version chains",
+    "Encrypted record export/import and document hash verification",
+    "NFT record mint via existing Xaman review",
+    "MPT creation, holder opt-in, issuer authorization and distribution",
+    "Classic trustline and direct issuer distribution",
+    "Fresh validated-ledger transaction receipt verification"
+  ],
+  "preserved": [
+    "Existing Xaman app identities",
+    "2500 XRBC signing gate",
+    "Legacy wizard and advanced token intelligence",
+    "Repository visibility and LICENSE"
+  ],
+  "security": [
+    "Private record and nonce remain in memory or encrypted export; signing storage contains public plan only",
+    "Mainnet and active amendment checks before signing",
+    "Exact decimal/BigInt amounts and exact issuance/currency identities",
+    "Separate review and Create Xaman Request",
+    "Persistent ambiguous-intent guard and Web Lock for new studio request creation",
+    "Absolute LastLedgerSequence and minute-based payload expiry for new actions",
+    "API v1 tx reads preserve Payment.Amount; complete MPT capability comparison",
+    "No claim of legal title, clinical truth or certified securities issuance"
+  ],
+  "licensing": "public/tokenization-license.txt adds official hosted end-user permission and record ownership/IP limits under existing proprietary license; no claimed patent or exclusivity over standards/ideas",
+  "checks": {
+    "new_focused_tests": 9,
+    "ci_total_tests": 95,
+    "ci_failures": 0,
+    "runtime_contracts": "11 pages pass",
+    "gate_registry": "12 tools / 7 tiers pass",
+    "jsdom_smoke": "pass; build/preview/review/edit locking/stale state/clinical requirements",
+    "read_only_mainnet": "network_id 0; NFT and MPT amendments enabled at validated ledger 107190704",
+    "repository_validator": "advisory existing identity/license/reference findings; no new tokenization-path finding",
+    "live_wallet_or_transaction": false,
+    "rendered_device_browser": false
+  },
+  "limitations": [
+    "No live Xaman request or transaction tested",
+    "NFT URN may show generic art in wallets; metadata hosting is separate",
+    "Clinical/title/transfer-agent/KYC systems are not integrated",
+    "Classic declaration is not an on-ledger supply cap",
+    "Revisions and revocations are statements, not deletion or automated legal effects",
+    "MPT DEX/AMM, issuer-admin revocation/clawback and automated coupons are not exposed"
+  ],
+  "documentation": "docs/tokenization/RESEARCH-AND-IMPLEMENTATION-2026-09-23.md in frontend repository",
+  "publication_note": "Checkpoint saved before deployment. Stop tools immediately once the requested deployment completes. Deployment completion is intentionally not asserted here.",
+  "next_step": "User device review of new workspace and deliberate wallet test; style refinements later. Keep existing issue queue intact."
+}
