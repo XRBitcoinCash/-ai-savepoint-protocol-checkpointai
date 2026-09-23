@@ -1,5 +1,7 @@
 # Next run — public liquidity repair and preserved queue
 
+Latest prepared release: MR !19 repairs read-only homepage market displays and adds compact liquidity explanations, responsive motion and six media channels. Read `HOMEPAGE-DISPLAY-CLARITY-2026-09-23.md` or `memory/homepage-display-clarity-2026-09-23.json`. Saved before deployment; final deployment status is intentionally not asserted. Stop immediately at deployment completion.
+
 Latest prepared fix: MR !18 connects the selected-market header to its existing validated order-book feed. Read `SELECTED-MARKET-HEADER-2026-09-23.md`. This checkpoint is saved before deployment; deployment outcome is not claimed here. **Stop all work immediately once deployment completes.**
 
 Latest navigation correction: MRs !16–17 route all explicit token selections to the order ticket and updates its pair label. A late page-load reset now yields to an explicit pair choice. User clarified the panel is intentionally scrollable; keep its layout. See `TRADE-PAIR-NAVIGATION-2026-09-23.md` and `ai-memory.json.current_trade_navigation`. Previous liquidity/policy checks below remain historical evidence.
