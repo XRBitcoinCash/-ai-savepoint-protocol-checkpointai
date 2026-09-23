@@ -564,6 +564,14 @@
       "file": "memory/creature-market-corrections-2026-09-23.json",
       "human_file": "CREATURE-MARKET-CORRECTIONS-2026-09-23.md",
       "source_commit": "efe729fa5a81f0108932989bf83426377e8b7962"
+    },
+    {
+      "id": "prepared:creature-xaman-handoff-2026-09-23",
+      "type": "prepared-release",
+      "status": "prepared-tested-before-application-commit",
+      "file": "memory/creature-xaman-handoff-2026-09-23.json",
+      "human_file": "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
+      "source_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900"
     }
   ],
   "edges": [
@@ -1116,6 +1124,16 @@
       "from": "prepared:creature-market-corrections-2026-09-23",
       "rel": "uses",
       "to": "repo:frontend"
+    },
+    {
+      "from": "prepared:creature-xaman-handoff-2026-09-23",
+      "rel": "uses",
+      "to": "repo:frontend"
+    },
+    {
+      "from": "prepared:creature-xaman-handoff-2026-09-23",
+      "rel": "follows",
+      "to": "prepared:creature-market-corrections-2026-09-23"
     }
   ],
   "query_hints": {
@@ -1245,6 +1263,7 @@
       "repo:frontend"
     ],
     "creature_nft": [
+      "prepared:creature-xaman-handoff-2026-09-23",
       "prepared:creature-market-corrections-2026-09-23"
     ]
   },

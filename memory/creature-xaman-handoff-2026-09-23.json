@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "id": "CREATURE-XAMAN-HANDOFF-2026-09-23",
+  "status": "prepared-tested-before-application-commit",
+  "repository": "xrbitcoincash-group/xrbitcoincash-project",
+  "branch": "master",
+  "observed_source_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900",
+  "human_record": "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
+  "previous_record": "memory/creature-market-corrections-2026-09-23.json",
+  "previous_application_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900",
+  "user_report": "No purchase QR/mobile link; screenshot identifies Creature NFT page and error Transaction changed: Paths, despite spoken XR Bitcoin Cash wording.",
+  "xaman_application_id": "a80af797-db3f-4305-b1c5-14a0a6d447b2",
+  "causes": [
+    "Source-confirmed and unit-reproduced: path construction removes deprecated type/type_hex metadata but returned Payment comparison did not; equivalent simulation routes were rejected with Transaction changed: Paths.",
+    "Full mocked signing flow exposed a second source-confirmed blocker: CreatureNFT- plus a compact 32-character intent UUID is 44 characters, exceeding the existing 40-character metadata check before any Xaman POST. It affects liquidity as well as purchases.",
+    "Prior browser fixture used paths_computed:[] and stopped before successful request creation; it did not cover these two blockers."
+  ],
+  "changes": [
+    "Normalize returned Payment paths through the existing exact-asset validator. Check type bit flags before stripping only type/type_hex; keep route fields, order and transaction fields strictly compared. Preserve DeliverMax normalization.",
+    "Use CNFT- plus the entire compact UUID: 37 characters. Preserve both previous saved identifier formats for GET recovery and legacy request validation. Existing oversized identifiers remain prohibited for new POSTs.",
+    "Refresh inline CSP hashes and add eight focused path/identifier/payload tests. Correct application ID and official QR/deep-link rendering retained."
+  ],
+  "file_manifest": {
+    "public/creature-nft-links.html": {
+      "sha256": "ed4c78dff4b9d9286d64350309622e50b9f178ebcada709ab79e2b8bb4d99fca",
+      "bytes": 1007390
+    },
+    "tests/unit/creature-paths.test.mjs": {
+      "sha256": "d9ddf4e92936a1c053ffd0d925668a619742805493f89c255643a6c2b754c04f",
+      "bytes": 4493
+    },
+    "tests/unit/creature-xaman-request.test.mjs": {
+      "sha256": "1d4277941b70fa7670c218414d3e5011388338c1980adb37f635e18eba4795f6",
+      "bytes": 3097
+    }
+  },
+  "checks": {
+    "unit_tests": {
+      "passed": 86,
+      "new_focused": 8
+    },
+    "runtime_contracts": "11 critical pages pass",
+    "gate_registry": "12 tools / 7 tiers pass",
+    "targeted_diff": "One application page; path normalization, request identifiers/recovery and two inline CSP hashes; two new unit-test files.",
+    "mocked_browser": {
+      "passed": true,
+      "cases": [
+        {
+          "case": "desktop buy",
+          "simulations": 2,
+          "independent_ledger_reads": 7,
+          "mocked_payloads": 1
+        },
+        {
+          "case": "mobile buy",
+          "simulations": 2,
+          "independent_ledger_reads": 7,
+          "mocked_payloads": 1
+        },
+        {
+          "case": "desktop deposit",
+          "simulations": 2,
+          "independent_ledger_reads": 7,
+          "mocked_payloads": 1
+        },
+        {
+          "case": "altered returned route",
+          "simulations": 1,
+          "independent_ledger_reads": 0,
+          "mocked_payloads": 0
+        }
+      ],
+      "assertions": [
+        "Correct public application ID",
+        "Preview and final simulation succeed with returned type/type_hex and DeliverMax alias",
+        "Separate websocket ledger corroboration still required",
+        "Official QR source and link shown for same UUID",
+        "Mobile link has no new-window target; desktop uses new window",
+        "Payload status revalidates decorated Paths",
+        "Hide/show retains one request",
+        "Changed route blocked before payload creation",
+        "No JavaScript/CSP errors"
+      ],
+      "real_financial_requests": 0
+    }
+  },
+  "documentation": [
+    "https://xrpl.org/docs/concepts/tokens/fungible-tokens/paths",
+    "https://docs.xaman.dev/js-ts-sdk/sdk-syntax/xumm.payload/create",
+    "https://docs.xaman.dev/js-ts-sdk/examples-user-stories/sign-requests-payloads/browser"
+  ],
+  "publication_note": "Saved before the final application commit to honor the user stop-after-commit instruction. Tested file hashes identify the candidate; no guessed future commit or production deployment status.",
+  "limitations": [
+    "Mocked Chromium checks are not a real Xaman service or device signing test.",
+    "No live financial payload, signature or ledger transaction was created.",
+    "Final pipeline/deployment and live mobile app opening are left to user testing; no post-commit tools."
+  ],
+  "unchanged": [
+    "Exact CreatureNFT and Xaman app identities",
+    "Transaction amount/cap, fee, destination, sequence, expiry, simulation, independent ledger and pending-request guards",
+    "Backend/API/workflows",
+    "Other site pages, shared code and layout",
+    "NFT archive and receipt-mint enablement"
+  ],
+  "next_issue": "XRB-001",
+  "user_device_retest_required": true
+}

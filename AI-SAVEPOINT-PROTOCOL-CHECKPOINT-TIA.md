@@ -10,7 +10,7 @@ This is a compact, repo-native continuity layer for AI agents working on XRBitco
 
 ## Latest prepared Creature NFT update — 2026-09-23
 
-Prepared Creature NFT correction: public quotes, automatic liquidity amounts, Xaman connection recovery, price-shift rejection, animated market/pool/order explanations and JCS logos/navigation. Read `CREATURE-MARKET-CORRECTIONS-2026-09-23.md`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
+Prepared Creature NFT signing correction: validate/normalize returned path metadata and shorten new Xaman request IDs to 37 characters. Correct app ID retained; mocked desktop/mobile Buy and liquidity deposit reach the QR/link. Read `CREATURE-XAMAN-HANDOFF-2026-09-23.md`. Earlier quote/UI repair is confirmed committed at `4a2faf38ee8e1b736085a0b935de8692f0eae900`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
 
 The earlier active savepoint below remains the historical deployed baseline. The prepared Creature record does not claim a new deployment.
 

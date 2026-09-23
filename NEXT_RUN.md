@@ -1,6 +1,6 @@
 # Next run — public liquidity repair and preserved queue
 
-Prepared Creature NFT correction: public quotes, automatic liquidity amounts, Xaman connection recovery, price-shift rejection, animated market/pool/order explanations and JCS logos/navigation. Read `CREATURE-MARKET-CORRECTIONS-2026-09-23.md`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
+Prepared Creature NFT signing correction: validate/normalize returned path metadata and shorten new Xaman request IDs to 37 characters. Correct app ID retained; mocked desktop/mobile Buy and liquidity deposit reach the QR/link. Read `CREATURE-XAMAN-HANDOFF-2026-09-23.md`. Earlier quote/UI repair is confirmed committed at `4a2faf38ee8e1b736085a0b935de8692f0eae900`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
 
 Latest prepared update: MR !21 restores coordinated in-page video playback with fullscreen/return controls and continuous opposing Battle Nexus streams. Read `PLAYBACK-BATTLE-NEXUS-2026-09-23.md`. Saved before deployment; stop all work immediately when deployment completes.
 

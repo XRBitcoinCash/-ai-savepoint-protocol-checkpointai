@@ -257,54 +257,71 @@
       "browser_live_retest_after_final_deploy": false
     },
     "current_creature_nft_repair": {
-      "record": "memory/creature-market-corrections-2026-09-23.json",
-      "human_record": "CREATURE-MARKET-CORRECTIONS-2026-09-23.md",
       "status": "prepared-tested-before-application-commit",
-      "observed_source_commit": "efe729fa5a81f0108932989bf83426377e8b7962",
+      "observed_source_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900",
       "xaman_application_id": "a80af797-db3f-4305-b1c5-14a0a6d447b2",
+      "previous_record": "memory/creature-market-corrections-2026-09-23.json",
+      "previous_application_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900",
+      "checks": {
+        "unit_tests": {
+          "passed": 86,
+          "new_focused": 8
+        },
+        "runtime_contracts": "11 critical pages pass",
+        "gate_registry": "12 tools / 7 tiers pass",
+        "targeted_diff": "One application page; path normalization, request identifiers/recovery and two inline CSP hashes; two new unit-test files.",
+        "mocked_browser": {
+          "passed": true,
+          "cases": [
+            {
+              "case": "desktop buy",
+              "simulations": 2,
+              "independent_ledger_reads": 7,
+              "mocked_payloads": 1
+            },
+            {
+              "case": "mobile buy",
+              "simulations": 2,
+              "independent_ledger_reads": 7,
+              "mocked_payloads": 1
+            },
+            {
+              "case": "desktop deposit",
+              "simulations": 2,
+              "independent_ledger_reads": 7,
+              "mocked_payloads": 1
+            },
+            {
+              "case": "altered returned route",
+              "simulations": 1,
+              "independent_ledger_reads": 0,
+              "mocked_payloads": 0
+            }
+          ],
+          "assertions": [
+            "Correct public application ID",
+            "Preview and final simulation succeed with returned type/type_hex and DeliverMax alias",
+            "Separate websocket ledger corroboration still required",
+            "Official QR source and link shown for same UUID",
+            "Mobile link has no new-window target; desktop uses new window",
+            "Payload status revalidates decorated Paths",
+            "Hide/show retains one request",
+            "Changed route blocked before payload creation",
+            "No JavaScript/CSP errors"
+          ],
+          "real_financial_requests": 0
+        }
+      },
+      "publication_note": "Saved before the final application commit to honor the user stop-after-commit instruction. Tested file hashes identify the candidate; no guessed future commit or production deployment status.",
+      "record": "memory/creature-xaman-handoff-2026-09-23.json",
+      "human_record": "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
       "asset": {
         "symbol": "CreatureNFT",
         "issuer": "rGWUGk9BUnknFeyPHSxmkv6UPnt4Zs4c92",
         "currency": "43726561747572654E4654000000000000000000"
       },
       "rebuild_commit": "d73e71d6d7313bfaceaa2cc22c0f5779d1306477",
-      "application_id_commit": "efe729fa5a81f0108932989bf83426377e8b7962",
-      "checks": {
-        "unit_tests": {
-          "passed": 78,
-          "focused_creature": 10
-        },
-        "runtime_contracts": "11 critical pages pass",
-        "gate_registry": "12 tools / 7 tiers pass",
-        "syntax_and_targeted_diff": "pass",
-        "mocked_browser": {
-          "passed": true,
-          "widths": [
-            390,
-            900,
-            901,
-            1180,
-            1440
-          ],
-          "checks": [
-            "public estimate before wallet",
-            "authorization returned error",
-            "cancel/retry",
-            "one SDK construction",
-            "successful buy/deposit previews",
-            "price-shift rejection before signing",
-            "autofill and refreshed second review",
-            "limit totals",
-            "JCS assets/nav",
-            "pause/reduced motion",
-            "unavailable clears estimates",
-            "CSP"
-          ],
-          "synthetic_simulations": 2,
-          "real_financial_requests": 0
-        }
-      },
-      "publication_note": "Memory is saved before the application commit so the task can stop immediately after committing. The manifest identifies the tested candidate bytes. No later deployment check is claimed."
+      "application_id_commit": "efe729fa5a81f0108932989bf83426377e8b7962"
     }
   },
   "safety_invariants": [
@@ -452,8 +469,9 @@
       "memory/synapse-map.json"
     ],
     "creature_nft": [
-      "memory/creature-market-corrections-2026-09-23.json",
-      "CREATURE-MARKET-CORRECTIONS-2026-09-23.md"
+      "memory/creature-xaman-handoff-2026-09-23.json",
+      "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
+      "memory/creature-market-corrections-2026-09-23.json"
     ]
   },
   "transition": {
