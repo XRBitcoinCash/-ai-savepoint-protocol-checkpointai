@@ -1364,5 +1364,31 @@
     "security_boundary": "Existing exact-transaction simulation, Xaman wallet authorization, NoRipple, active freeze, issuer authorization and fee checks remain. New-trustline prohibition now applies to pinned issuers too. Unverified issuers retain dynamic policy; stablecoin labels alone grant no exception.",
     "evidence_ledger": 107181681,
     "unchanged": "All homepage content outside the application script; liquidity pagination, backend, wallet signing implementation and existing issue queue."
+  },
+  "current_trade_navigation": {
+    "date": "2026-09-23",
+    "scope": "Reveal the selected pair in the buying/order section after any explicit token selection.",
+    "implementation_commit": "38a70537fa9bebcaf0c35752793855d3bb5d759f",
+    "merge_commit": "1f37c3491e8fff962f78505bf0253dd08ab533b5",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/17",
+    "pipeline_id": 2875220539,
+    "pipeline_status": "success",
+    "checkpoint": "TRADE-PAIR-NAVIGATION-2026-09-23.md",
+    "page": "public/index.html",
+    "rollback_frontend_commit": "d403232bcd123e18ebff1a4b55067e5e798ca961",
+    "user_correction": "The order panel is intentionally scrollable; the reported covering was a misunderstanding. Preserve its existing layout.",
+    "behavior": "All four user selection handlers opt into shared navigation after pair guards accept. Pair label updates; discovery collapses; order panel resets internal scroll, receives focus, and comes into view before asynchronous ledger checks. Top navigation clearance is measured when it overlaps horizontally. Background updates do not navigate. Initial load/pageshow reset yields to explicit selection.",
+    "verification_scope": "Desktop live primary pair, dropdown after internal scrollTop=570, discovered Bitstamp USD and native XRP each reveal updated pair at top=17.71875px with internal scrollTop=0. Final deployed build 1f37c3491e8fff962f78505bf0253dd08ab533b5 verified in DOM; RLUSD selection repeats the expected position/focus and sets the navigation guard. Late-load guard verified by focused VM execution. No narrow-device or financial transaction check.",
+    "unchanged": "CSS/layout, pending financial request guards, ledger/trustline policy, backend, public liquidity pagination and existing issue queue.",
+    "selection_implementation_commit": "d69ec324bff92d6044c354b6dc1a3174fbcd3c4e",
+    "selection_merge_commit": "f27f26d2ac08570a25398afc3653c827b57fc5bf",
+    "ci_tests": 55,
+    "new_focused_check": "Late load/pageshow must preserve explicit pair navigation; initial home reset retained.",
+    "browser_runtime_verified": true,
+    "narrow_device_verified": false,
+    "wallet_transaction_verified": false,
+    "deploy_job": 16682475808,
+    "served_build_verified": true,
+    "browser_live_retest_after_final_deploy": true
   }
 }
