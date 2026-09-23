@@ -1,6 +1,6 @@
 # Next run — public liquidity repair and preserved queue
 
-Research handoff for Astra: `TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md` documents provider catalogs, exact XRPL identities, rights/issuer distinctions, a broad asset chooser, and phased UI work for both Tokenization Auditor pages. Research only; no catalog implementation or deployment is claimed. Re-check MR !23 and current site before coding.
+Prepared tokenization catalog release: MR !25 implements the shared sourced directory and expanded local asset planner; 101 unit tests and MR pipeline 2876917971 pass. Read `TOKENIZATION-CATALOG-IMPLEMENTATION-2026-09-23.md` and `memory/tokenization-catalog-2026-09-23.json`; prior research is `TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md`. This checkpoint precedes merge/deployment. Stop immediately after requested deployment completes.
 
 Latest prepared release: Tokenization workspace in MR !23; 95 CI tests pass. Read `TOKENIZATION-WORKSPACE-2026-09-23.md` and `memory/tokenization-workspace-2026-09-23.json`. Saved before deployment; preserve existing issue queue and stop immediately when deployment completes.
 
