@@ -7,6 +7,19 @@
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
     {
+      "id": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
+      "type": "savepoint",
+      "status": "active-observation-and-crawl-pending",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+      "human_file": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md"
+    },
+    {
+      "id": "task:bing-site-scan-and-domain-discovery",
+      "type": "task",
+      "status": "manual-pending",
+      "statement": "Check Bing queued sitemap Site Scan, reconcile exact affected URLs with Recommendations, then verify current MR !35, canonical redirect, sitemap/robots, favicon and AI discovery assets in Bing and Google."
+    },
+    {
       "id": "savepoint:reliability-audit-memory-hardening-2026-09-22",
       "type": "savepoint",
       "status": "audit-complete-repairs-pending",
@@ -1168,6 +1181,11 @@
       "from": "savepoint:bing-search-metadata-2026-09-25",
       "rel": "follows",
       "to": "savepoint:public-liquidity-discovery-2026-09-23"
+    },
+    {
+      "from": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
+      "rel": "guides",
+      "to": "task:bing-site-scan-and-domain-discovery"
     }
   ],
   "query_hints": {
@@ -1303,9 +1321,17 @@
       "prepared:creature-market-corrections-2026-09-23"
     ],
     "bing_search_performance": [
+      "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
+      "task:bing-site-scan-and-domain-discovery",
       "savepoint:bing-search-metadata-2026-09-25",
-      "repo:frontend"
+      "memory/audits/2026-09-25-bing-search-metadata.json"
+    ],
+    "brand_discoverability": [
+      "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
+      "task:bing-site-scan-and-domain-discovery",
+      "savepoint:bing-search-metadata-2026-09-25",
+      "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md"
     ]
   },
-  "active_savepoint": "savepoint:bing-search-metadata-2026-09-25"
+  "active_savepoint": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25"
 }

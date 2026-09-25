@@ -493,19 +493,14 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
-    "human_record": "BING-SEARCH-METADATA-2026-09-25.md",
-    "status": "prepared-ci-passed-pending-merge",
-    "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
-    "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
-    "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
-    "source_pipeline_id": 2880964318,
-    "source_pipeline_status": "success",
-    "next_issue": "XRB-001",
-    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
-    "browser_live_retest_after_final_deploy": false
+    "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+    "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+    "status": "active-observation-and-crawl-pending",
+    "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
+    "created": "2026-09-25",
+    "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
+    "no_site_or_dns_changes": true
   },
   "savepoint_format": [
     "context",
@@ -532,6 +527,16 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+      "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+      "status": "active-observation-and-crawl-pending",
+      "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
+      "created": "2026-09-25",
+      "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
+      "no_site_or_dns_changes": true
+    },
     {
       "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
       "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
@@ -1494,5 +1499,15 @@
     "pipeline_id": 2880964318,
     "pipeline_status": "success",
     "bing_reindex_verified": false
+  },
+  "current_discovery_handoff": {
+    "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+    "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+    "status": "active-observation-and-crawl-pending",
+    "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
+    "created": "2026-09-25",
+    "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
+    "no_site_or_dns_changes": true
   }
 }

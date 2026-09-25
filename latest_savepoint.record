@@ -1,10 +1,8 @@
 SAVEPOINT 2026-09-25
-id=SAVEPOINT-2026-09-25-bing-search-metadata
-title=Bing search metadata for XRBC and Xaman intent
-status=prepared-ci-passed-pending-merge
-machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json
-human_checkpoint=BING-SEARCH-METADATA-2026-09-25.md
-observed_frontend_commit=863ad69d31c867b414ace328d8d9a634316c4083
-observed_backend_commit=1c1fa1d41287af846c3be9d7233c319eb2b8a470
-implementation_commit=304856b949295783a8268da16005d9ac227679c6
-next_issue=XRB-001
+id=SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery
+title=XRBitcoinLabs domain and search-discovery handoff
+status=active-observation-and-crawl-pending
+machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json
+human_checkpoint=XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md
+previous_code_checkpoint=SAVEPOINT-2026-09-25-bing-search-metadata
+next_task=Check queued Bing sitemap scan and reconcile stale Recommendations; verify MR !35 and canonical discovery signals

@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "domain-and-search-discovery-handoff",
+  "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+  "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+  "date": "2026-09-25",
+  "status": "active-observation-and-crawl-pending",
+  "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
+  "goal": {
+    "user_intent": "Make XRBitcoinCash and XRBitcoin easy to discover from ordinary XRBC/XR Bitcoin searches, with accurate public project information crawlable by search engines and AI systems.",
+    "constraint": "Crawlability and indexing can be improved, but rankings, result logos, citations, or AI recommendations cannot be guaranteed or forced."
+  },
+  "domain": {
+    "alias": "https://xrbitcoinlabs.com/",
+    "canonical": "https://xrbitcoincash.com/xrbitcoin-links.html",
+    "redirect": "Permanent 301 forwarding was configured from xrbitcoinlabs.com to the XRBitcoin workspace. User reports the page now works in their browser; this checkpoint did not independently test DNS, HTTPS, or redirect headers.",
+    "search_console": "Bing and Google properties were added/verified in prior work. Bing live inspection was reported to follow the redirect; Google live test reported indexable and an indexing request was submitted.",
+    "canonical_page_state": "Bing URL inspection for the canonical XRBitcoin workspace was reported indexed successfully, with a recrawl request accepted."
+  },
+  "bing": {
+    "property": "https://xrbitcoincash.com/",
+    "sitemap_url": "https://xrbitcoincash.com/sitemap.xml",
+    "sitemap_report": "Previously processed successfully; 24 URLs discovered in the latest screenshot.",
+    "previous_site_scan": "Completed scan covered 1 page and showed 0 errors / 0 warnings. Not a full-site audit.",
+    "sitemap_scan": "Separate sitemap-scope scan for sitemap.xml with 100-page cap was created and showed Queued. Completion/results not verified.",
+    "recommendations": "Older Recommendations report still showed 10 findings across 9 pages (2 High, 8 Moderate): multiple H1s, missing title tags, important pages with meta robots needing review, and missing inbound links from high-quality domains. The one-page scan does not clear this report.",
+    "indexnow": "Dashboard showed 0 URLs submitted in last 23 hours; visible historic Wix submissions dated Aug 2025 mostly used www.xrbitcoincash.com. Check Wix/IndexNow integration and canonical host consistency before changing submission behavior."
+  },
+  "google": {
+    "property": "xrbitcoinlabs.com domain property verified in prior work.",
+    "live_test": "User screenshot showed root available to Google, crawl allowed, successful fetch and indexing allowed; request was submitted.",
+    "canonical_page": "Prior memory indicates canonical indexing request submitted. Check current URL Inspection before repeating."
+  },
+  "brand": {
+    "prior_asset_work": "Prior brand-discovery checkpoint records root favicon.ico/favicon.png, 192px icon, brand JSON, Organization structured data, sitemap, robots and AI JSON updates; pipeline 2867921308 passed. Verify currently served bytes before assuming Bing has refreshed its icon.",
+    "favicon_urls": [
+      "https://xrbitcoincash.com/favicon.ico",
+      "https://xrbitcoincash.com/favicon.png",
+      "https://xrbitcoincash.com/icon-192.png",
+      "https://xrbitcoincash.com/assets/brand/brand.json",
+      "https://xrbitcoincash.com/.well-known/ai.json"
+    ],
+    "bing_logo_note": "The small icon beside an ordinary Bing result is the favicon. Since the alias redirects, expect the listing associated with the canonical XRBitcoinCash host. A larger knowledge-panel logo is separate and not guaranteed."
+  },
+  "search_performance_baseline": {
+    "source": "User-provided Bing Search Performance view and query rows; selected range appeared to be 18 months.",
+    "totals": "178 clicks, about 1.4K impressions, 12.81% average CTR.",
+    "leading_queries": [
+      {
+        "query": "xrbitcoincash",
+        "impressions": 445,
+        "clicks": 137,
+        "ctr": "30.79%",
+        "average_position": 4.08
+      },
+      {
+        "query": "xrbc",
+        "impressions": 135,
+        "clicks": 10,
+        "ctr": "7.41%",
+        "average_position": 5.13
+      },
+      {
+        "query": "xaman wallet",
+        "impressions": 25,
+        "clicks": 0,
+        "ctr": "0%",
+        "average_position": 10.48
+      },
+      {
+        "query": "xrbitcoincash .com",
+        "impressions": 20,
+        "clicks": 8,
+        "ctr": "40%",
+        "average_position": 3.5
+      },
+      {
+        "query": "xrbitcoin",
+        "impressions": 16,
+        "clicks": 2,
+        "ctr": "12.50%",
+        "average_position": 1.69
+      }
+    ],
+    "ai_performance": "Bing AI Performance showed 0 citations / 0 cited pages for selected 3-month period. Baseline only, not proof of an error or guaranteed citation outcome."
+  },
+  "prepared_site_change": {
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "pipeline": 2880964318,
+    "status": "Previously documented as pipeline-passed and pending merge/deployment; recheck current MR state.",
+    "scope": "Static homepage and XRBC/XRP liquidity-page metadata for clearer XRBC/Xaman search intent; no wallet, transaction, or backend change."
+  },
+  "next_session_links": {
+    "canonical_site": "https://xrbitcoincash.com/",
+    "xrbitcoin_workspace": "https://xrbitcoincash.com/xrbitcoin-links.html",
+    "new_domain": "https://xrbitcoinlabs.com/",
+    "sitemap": "https://xrbitcoincash.com/sitemap.xml",
+    "robots": "https://xrbitcoincash.com/robots.txt",
+    "bing_home": "https://www.bing.com/webmasters/home?siteUrl=https://xrbitcoincash.com/",
+    "bing_search_performance": "https://www.bing.com/webmasters/searchperf?siteUrl=https://xrbitcoincash.com/",
+    "bing_url_inspection": "https://www.bing.com/webmasters/urlinspection?siteUrl=https://xrbitcoincash.com/",
+    "bing_sitemaps": "https://www.bing.com/webmasters/sitemaps?siteUrl=https://xrbitcoincash.com/",
+    "bing_indexnow": "https://www.bing.com/webmasters/indexnow?siteUrl=https://xrbitcoincash.com/",
+    "bing_recommendations": "https://www.bing.com/webmasters/seoreports?siteUrl=https://xrbitcoincash.com/",
+    "bing_site_scan": "https://www.bing.com/webmasters/sitescan?siteUrl=https://xrbitcoincash.com/",
+    "google_search_console": "https://search.google.com/search-console",
+    "godaddy_domain_dashboard": "https://dcc.godaddy.com/",
+    "gitlab_metadata_mr": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35"
+  },
+  "next_steps": [
+    "Check whether the queued sitemap-scope Bing Site Scan completed; record page count and exact findings.",
+    "Refresh Bing Recommendations after that scan; review exact affected URLs and whether each noindex page is intentional or important/public.",
+    "Check MR !35 current status; only then verify live metadata and request recrawl if appropriate.",
+    "Verify live favicon and AI/brand manifest URLs, canonical tags, sitemap/robots consistency, and Bing URL Inspection.",
+    "In Google Search Console, review indexing for alias and canonical workspace; retain the 301 alias to the chosen canonical page.",
+    "Review IndexNow Wix history and www/non-www host consistency before new notifications.",
+    "Use clean query baseline to improve visible, factual XRBC/Xaman/XRBitcoin content; avoid keyword stuffing."
+  ],
+  "preserved_queue": "The existing application issue queue remains unchanged: XRB-001/007/008 device retests; XRB-009 is separate history-feed work.",
+  "render_beta_note": "User accepts Render cold starts delaying some initial buttons during beta. Keep discoverability work focused; revisit only if the user reports a concrete functional failure. Preserve nonblocking backend warm-up.",
+  "evidence_boundary": "This checkpoint records screenshots, prior memory, and user confirmation. No browser checks, scan, source edit, DNS change, or search-engine submission was performed while saving it.",
+  "created_from_user_authorization": true
+}

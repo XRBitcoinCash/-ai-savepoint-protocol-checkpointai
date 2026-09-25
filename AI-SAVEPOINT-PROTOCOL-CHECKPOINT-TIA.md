@@ -16,9 +16,11 @@ The earlier active savepoint below remains the historical deployed baseline. The
 
 ## Current memory checkpoint — 2026-09-25
 
-Active: `SAVEPOINT-2026-09-25-bing-search-metadata`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json`, `BING-SEARCH-METADATA-2026-09-25.md`, the operating protocol and known errors.
+Active: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json`, `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, then operating protocol and known errors before resuming.
 
-MR [!35](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35) updates static homepage and liquidity-page metadata for XRBC/Xaman search intent. Its pipeline `2880964318` passed; merge/deployment is pending. No runtime change, production verification, Bing recrawl, ranking or search-result change is asserted. After deployment, refresh the Bing Site Scan to evaluate the older SEO/GEO recommendations. Existing issue queue remains unchanged; `XRB-001` is next.
+The user reports xrbitcoinlabs.com now works and forwards to https://xrbitcoincash.com/xrbitcoin-links.html. Bing/Google verification and inspection actions are recorded in the handoff; search-result, favicon refresh and broader indexing remain pending. One Bing scan completed for one page with zero errors/warnings; the sitemap scan (100-page limit) was queued, and the older Recommendations report still listed 10 findings across 9 pages. Check current console state before claiming repairs.
+
+MR [!35](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35) last recorded pipeline `2880964318` passed, merge/deployment pending; verify current status. Existing application queue remains XRB-001/007/008 device retests and separate XRB-009 history investigation. User accepts Render cold starts during beta.
 ## Current source and deployment map — checked 2026-09-16
 
 Read this map before using older repository descriptions or downloaded filenames. The active website frontend is in GitLab; the similarly named GitHub repositories have different roles. Repository content and the GitLab pipeline were checked; final public HTTP delivery remains a separate verification step.

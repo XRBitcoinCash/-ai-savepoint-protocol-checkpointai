@@ -1,7 +1,18 @@
-# Next run — Bing metadata change and preserved queue
+# Next run — XRBitcoinLabs search-discovery handoff (2026-09-25)
 
-Current prepared change: MR !35 updates homepage and XRBC/XRP liquidity-page metadata for clearer brand/Xaman search snippets. Pipeline 2880964318 passed. Checkpoint: `SAVEPOINT-2026-09-25-bing-search-metadata`; read `memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json` and `BING-SEARCH-METADATA-2026-09-25.md`. Merge is the pending action; after deployment, stop immediately. Bing recrawl and ranking impact remain unverified.
+Active checkpoint: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json` and `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, plus the Bing metadata and brand/favicon checkpoints they reference.
 
+The immediate first step is to check whether the sitemap-scope Bing Site Scan completed. The earlier completed scan covered 1 page only; Bing Recommendations still showed 10 findings across 9 pages. Do not treat the Recommendations as cleared until affected URLs are reviewed.
+
+Recheck current status of MR !35 before assuming its metadata change is live. Then verify alias/canonical behavior, sitemap and robots, favicon, brand JSON and AI manifest in Bing and Google. Direct links are in the human checkpoint.
+
+User reports xrbitcoinlabs.com now works and redirects to https://xrbitcoincash.com/xrbitcoin-links.html. Search indexing, favicon refresh, rank and AI citations are still unverified. User accepts Render cold-start delays during beta; keep this task focused on discovery.
+
+Existing application queue remains XRB-001/007/008 device retests and separate XRB-009 history-feed work.
+
+Historical metadata work: MR !35 updates homepage and XRBC/XRP liquidity-page metadata for XRBC/Xaman intent; pipeline 2880964318 passed, but merge/deployment was pending at last verification. Recheck current state.
+
+---
 
 Prepared tokenization catalog release: MR !25 implements the shared sourced directory and expanded local asset planner; 101 unit tests and MR pipeline 2876917971 pass. Read `TOKENIZATION-CATALOG-IMPLEMENTATION-2026-09-23.md` and `memory/tokenization-catalog-2026-09-23.json`; prior research is `TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md`. This checkpoint precedes merge/deployment. Stop immediately after requested deployment completes.
 
