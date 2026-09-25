@@ -261,7 +261,7 @@
       "id": "task:liquidity-history-browser-verification",
       "type": "task",
       "status": "manual-pending",
-      "statement": "Verify 1D \u00b7 MAX XRBC/XRP candles, earliest returned date, and direct OnTheDEX browser access/CORS on the deployed custom domain."
+      "statement": "Verify 1D · MAX XRBC/XRP candles, earliest returned date, and direct OnTheDEX browser access/CORS on the deployed custom domain."
     },
     {
       "id": "invariant:history-live-liquidity-separation",
@@ -572,6 +572,14 @@
       "file": "memory/creature-xaman-handoff-2026-09-23.json",
       "human_file": "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
       "source_commit": "4a2faf38ee8e1b736085a0b935de8692f0eae900"
+    },
+    {
+      "id": "prepared:liquidity-wallet-startup-2026-09-24",
+      "type": "prepared-release",
+      "status": "CI-verified-awaiting-production-deployment",
+      "file": "memory/liquidity-wallet-startup-2026-09-24.json",
+      "source_commit": "60ed5c328f1d108942768e238d7ab3236f2459aa",
+      "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf"
     }
   ],
   "edges": [
@@ -1134,10 +1142,16 @@
       "from": "prepared:creature-xaman-handoff-2026-09-23",
       "rel": "follows",
       "to": "prepared:creature-market-corrections-2026-09-23"
+    },
+    {
+      "from": "prepared:liquidity-wallet-startup-2026-09-24",
+      "rel": "uses",
+      "to": "repo:frontend"
     }
   ],
   "query_hints": {
     "wallet_connection": [
+      "prepared:liquidity-wallet-startup-2026-09-24",
       "issue:XRB-001",
       "savepoint:xrbitcoin-wallet-events-sidebar-2026-09-22",
       "issue:XRB-007",
@@ -1168,6 +1182,7 @@
       "issue:BRIDGE-001"
     ],
     "liquidity_wallet_ui": [
+      "prepared:liquidity-wallet-startup-2026-09-24",
       "savepoint:liquidity-top-wallet-xaman-countdown-2026-09-21",
       "invariant:connect-authorize-only",
       "invariant:connection-action-timers-separate",

@@ -347,6 +347,22 @@
       "pipeline_id": 2876917971,
       "curated_examples": 28,
       "independently_verified_xrpl_identities": 0
+    },
+    "current_liquidity_wallet_repair": {
+      "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
+      "record": "memory/liquidity-wallet-startup-2026-09-24.json",
+      "status": "CI-verified-awaiting-production-deployment",
+      "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
+      "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
+    },
+    "latest_prepared_frontend_change": {
+      "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
+      "record": "memory/liquidity-wallet-startup-2026-09-24.json",
+      "status": "CI-verified-awaiting-production-deployment",
+      "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
+      "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
     }
   },
   "safety_invariants": [

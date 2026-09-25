@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
+  "status": "CI-verified-awaiting-production-deployment",
+  "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html",
+  "repository": "xrbitcoincash-group/xrbitcoincash-project",
+  "branch": "master",
+  "source_commit": "60ed5c328f1d108942768e238d7ab3236f2459aa",
+  "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
+  "findings": [
+    {
+      "evidence_level": "live-read-only-verified",
+      "summary": "Production bind() dereferences removed .brand-mark img and throws before setupSdk and wallet handlers."
+    },
+    {
+      "evidence_level": "synthetic-reproduced",
+      "summary": "Pinned SDK helpers.ping can retain prior session; top-level ping verifies the current SDK client."
+    }
+  ],
+  "changes": [
+    "Remove obsolete logo event binding.",
+    "Use sdk.ping for authenticated session verification; retain app/account and stale-response checks.",
+    "Refresh liquidity-app CSP hash.",
+    "Add tests/unit/liquidity-wallet-startup.test.mjs."
+  ],
+  "checks": {
+    "focused_tests_pass": 2,
+    "negative_controls": "Both regression cases fail with original defects restored in memory.",
+    "inline_script_parse_and_csp": 12,
+    "merge_request_pipeline_id": 2880884253,
+    "ci_tests_pass": 115,
+    "ci_tests_fail": 0,
+    "runtime_contracts": "passed",
+    "sidebar_sync": "passed",
+    "site_validator": "Advisory exit 1, 16 findings in unchanged metadata/reference paths; no liquidity-page findings."
+  },
+  "protected": [
+    "Connect remains authorization-only with immediate authorize and parallel backend readiness.",
+    "No financial payload during connection.",
+    "Layout, exact asset identities, Mainnet, transaction construction, request recovery and ledger-finality validation unchanged."
+  ],
+  "rollback": "Revert MR !34; pre-fix master 60ed5c328f1d108942768e238d7ab3236f2459aa.",
+  "limits": {
+    "real_wallet_authorization_verified": false,
+    "post_deployment_browser_verified": false,
+    "real_financial_requests": 0
+  },
+  "completion_rule": "Prepared before deployment. Observe the deployment job, then stop immediately per memory/operating-protocol.json. No post-deployment tools, tests, browser checks or memory changes. Later device feedback requires a new explicit user request.",
+  "next_action": "Merge the reviewed MR and finish its production pipeline; stop."
+}

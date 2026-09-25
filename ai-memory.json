@@ -703,7 +703,7 @@
     {
       "id": "SAVEPOINT-2026-09-18-xaman-token-specific-xrbc-swap",
       "record": "XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md",
-      "scope": "Correct Step 2 so XRP \u2192 XRBC opens Xaman Swap with the exact XRBC issuer/currency instead of a local liquidity/trade page."
+      "scope": "Correct Step 2 so XRP → XRBC opens Xaman Swap with the exact XRBC issuer/currency instead of a local liquidity/trade page."
     },
     {
       "id": "SAVEPOINT-2026-09-18-header-acquisition-steps",
@@ -906,7 +906,7 @@
       "local_checkpoint_commit": "3c8372cb18158baf742aec27ccf1288b7b414010",
       "page_release": "0.2.1",
       "root_cause": "The original Sologenic OHLC provider's documented issuer coverage did not include the exact XRBC issuer, so the chart could have current validated liquidity but no historical XRBC candles.",
-      "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D \u00b7 MAX is the broadest default history view.",
+      "replacement": "Exact-pair OnTheDEX XRPL OHLC with marker pagination; 1D · MAX is the broadest default history view.",
       "evidence_boundary": "Historical candles are context only. Current live book/AMM remains validated separately and transaction logic does not depend on chart history.",
       "browser_verification_pending": true,
       "local_checkpoint_pipeline_status": "success"
@@ -1457,5 +1457,21 @@
     },
     "rebuild_commit": "d73e71d6d7313bfaceaa2cc22c0f5779d1306477",
     "application_id_commit": "efe729fa5a81f0108932989bf83426377e8b7962"
+  },
+  "current_liquidity_wallet_repair": {
+    "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
+    "record": "memory/liquidity-wallet-startup-2026-09-24.json",
+    "status": "CI-verified-awaiting-production-deployment",
+    "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
+    "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
+  },
+  "latest_prepared_savepoint": {
+    "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
+    "record": "memory/liquidity-wallet-startup-2026-09-24.json",
+    "status": "CI-verified-awaiting-production-deployment",
+    "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
+    "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
   }
 }
