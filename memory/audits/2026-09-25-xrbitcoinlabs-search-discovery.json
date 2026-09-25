@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "id": "AUDIT-2026-09-25-xrbitcoinlabs-search-discovery",
+  "observed": "2026-09-25",
+  "scope": "Evidence log for the domain/search-discovery handoff; no live console actions performed during checkpoint publication.",
+  "source_snapshots": {
+    "frontend": {
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "branch": "master",
+      "commit": "863ad69d31c867b414ace328d8d9a634316c4083"
+    },
+    "backend": {
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "branch": "main",
+      "commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470"
+    }
+  },
+  "observations": [
+    {
+      "topic": "alias",
+      "evidence_level": "user-reported",
+      "detail": "User says https://xrbitcoinlabs.com/ now works; configured forwarding destination is https://xrbitcoincash.com/xrbitcoin-links.html."
+    },
+    {
+      "topic": "bing-single-page-scan",
+      "evidence_level": "screenshot-reported",
+      "detail": "Completed scan showed 1 page, 0 errors, 0 warnings."
+    },
+    {
+      "topic": "bing-sitemap-scan",
+      "evidence_level": "screenshot-reported",
+      "detail": "Sitemap-scope scan for https://xrbitcoincash.com/sitemap.xml with a 100-page cap showed Queued."
+    },
+    {
+      "topic": "bing-recommendations",
+      "evidence_level": "screenshot-reported",
+      "detail": "Older recommendations showed 10 findings over 9 pages, 2 High and 8 Moderate."
+    },
+    {
+      "topic": "sitemap",
+      "evidence_level": "screenshot-reported",
+      "detail": "Sitemap processed successfully; latest screenshot reported 24 discovered URLs."
+    },
+    {
+      "topic": "google-live-test",
+      "evidence_level": "screenshot-reported",
+      "detail": "Google Search Console live test reported page available, crawl allowed, successful fetch, indexing allowed; indexing request shown."
+    },
+    {
+      "topic": "query-baseline",
+      "evidence_level": "user-pasted-report",
+      "detail": "Bing Search Performance figures and leading clean brand-query rows are copied into the machine savepoint."
+    }
+  ],
+  "limitations": [
+    "No DNS/TLS/HTTP probe was performed in this checkpoint.",
+    "No Bing/Google settings changed during the GitHub memory update.",
+    "Search results, favicon display, ranking, or AI citation outcomes are not verified or guaranteed."
+  ]
+}

@@ -121,5 +121,21 @@
   "preserved_queue": "The existing application issue queue remains unchanged: XRB-001/007/008 device retests; XRB-009 is separate history-feed work.",
   "render_beta_note": "User accepts Render cold starts delaying some initial buttons during beta. Keep discoverability work focused; revisit only if the user reports a concrete functional failure. Preserve nonblocking backend warm-up.",
   "evidence_boundary": "This checkpoint records screenshots, prior memory, and user confirmation. No browser checks, scan, source edit, DNS change, or search-engine submission was performed while saving it.",
-  "created_from_user_authorization": true
+  "created_from_user_authorization": true,
+  "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+  "observed_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "observed_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+  "next_issue": "XRB-001",
+  "evidence": "memory/audits/2026-09-25-xrbitcoinlabs-search-discovery.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [],
+  "memory_checkpoint_checks": {
+    "json_parse": "pass",
+    "pointer_consistency": "pass",
+    "graph_routes": "pass",
+    "github_commit_readback": "pass",
+    "repository_validator": "not-run; repository validator requires the full repository working tree"
+  }
 }

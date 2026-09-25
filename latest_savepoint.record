@@ -5,4 +5,4 @@ status=active-observation-and-crawl-pending
 machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json
 human_checkpoint=XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md
 previous_code_checkpoint=SAVEPOINT-2026-09-25-bing-search-metadata
-next_task=Check queued Bing sitemap scan and reconcile stale Recommendations; verify MR !35 and canonical discovery signals
+next_task=Check queued Bing sitemap scan; reconcile Recommendations; preserve next_issue=XRB-001

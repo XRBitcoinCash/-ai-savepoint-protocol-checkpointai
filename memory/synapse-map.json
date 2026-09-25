@@ -1323,14 +1323,12 @@
     "bing_search_performance": [
       "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
       "task:bing-site-scan-and-domain-discovery",
-      "savepoint:bing-search-metadata-2026-09-25",
-      "memory/audits/2026-09-25-bing-search-metadata.json"
+      "savepoint:bing-search-metadata-2026-09-25"
     ],
     "brand_discoverability": [
       "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
       "task:bing-site-scan-and-domain-discovery",
-      "savepoint:bing-search-metadata-2026-09-25",
-      "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md"
+      "savepoint:bing-search-metadata-2026-09-25"
     ]
   },
   "active_savepoint": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25"
