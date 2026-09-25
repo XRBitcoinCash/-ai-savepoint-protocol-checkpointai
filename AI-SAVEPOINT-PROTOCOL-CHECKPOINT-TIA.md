@@ -14,14 +14,11 @@ Prepared Creature NFT signing correction: validate/normalize returned path metad
 
 The earlier active savepoint below remains the historical deployed baseline. The prepared Creature record does not claim a new deployment.
 
-## Current memory checkpoint — 2026-09-23
+## Current memory checkpoint — 2026-09-25
 
-Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, the operating protocol and known errors.
+Active: `SAVEPOINT-2026-09-25-bing-search-metadata`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json`, `BING-SEARCH-METADATA-2026-09-25.md`, the operating protocol and known errors.
 
-MR [!13](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/13) implements public homepage liquidity discovery and exact currency repairs at `16fcf45800ad7bbf53796c2c03318fab363ae6ae`. Production deployment and canonical served-source verification succeeded; rendered browser runtime unverified. 46 CI tests (37 existing plus nine focused) and syntax/diff checks pass; permitted-block preservation confirmed. Chromium was unavailable, so local browser runtime is unverified. Provider/ledger read-only probes are separate evidence. Backend `1c1fa1d41287af846c3be9d7233c319eb2b8a470` was observed but unchanged.
-
-The new standard is `memory/discovery-efficiency-standard.json`. Preserve raw ledger identities, honest coverage and fresh direct-XRP reserve rankings; keep public inspection ungated, explain cautions and failures, and use bounded 50/100 paging and focused verification. Existing XRB-001/007/008 device retests and XRB-009 history issue remain unchanged. Historical checkpoint sections below are superseded only where this record explicitly changes current state.
-
+MR [!35](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35) updates static homepage and liquidity-page metadata for XRBC/Xaman search intent. Its pipeline `2880964318` passed; merge/deployment is pending. No runtime change, production verification, Bing recrawl, ranking or search-result change is asserted. After deployment, refresh the Bing Site Scan to evaluate the older SEO/GEO recommendations. Existing issue queue remains unchanged; `XRB-001` is next.
 ## Current source and deployment map — checked 2026-09-16
 
 Read this map before using older repository descriptions or downloaded filenames. The active website frontend is in GitLab; the similarly named GitHub repositories have different roles. Repository content and the GitLab pipeline were checked; final public HTTP delivery remains a separate verification step.

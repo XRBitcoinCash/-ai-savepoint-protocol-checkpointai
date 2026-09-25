@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-23",
+  "updated": "2026-09-25",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -493,19 +493,18 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
-    "human_record": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
-    "status": "deployed-source-verified-device-retest-pending",
-    "scope": "Repair public homepage token discovery and exact currency identities; add liquidity-first candidates, bounded pagination, descriptive cautions and reason-specific lookup recovery.",
-    "source_frontend_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
+    "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+    "human_record": "BING-SEARCH-METADATA-2026-09-25.md",
+    "status": "prepared-ci-passed-pending-merge",
+    "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
+    "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
     "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
-    "source_pipeline_id": 2875017821,
-    "source_pipeline_status": "success-with-existing-advisory-findings",
+    "source_pipeline_id": 2880964318,
+    "source_pipeline_status": "success",
     "next_issue": "XRB-001",
-    "implementation_commit": "16fcf45800ad7bbf53796c2c03318fab363ae6ae",
-    "merge_commit": "8c13eaf222ea7a70b74837a474a496de3d22a531",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/13",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
     "browser_live_retest_after_final_deploy": false
   },
   "savepoint_format": [
@@ -533,6 +532,11 @@
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+      "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed."
+    },
     {
       "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-events-sidebar",
       "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
@@ -1273,19 +1277,11 @@
     "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
   },
   "current_repair": {
-    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
-    "evidence": "memory/audits/2026-09-23-public-liquidity-discovery.json",
-    "issues": [
-      "LIQ-001"
-    ],
-    "status": "deployed-source-verified-device-retest-pending",
-    "next_issue": "XRB-001",
-    "pagination_follow_up": {
-      "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
-      "section": "pagination_follow_up",
-      "merge_commit": "a8d36ff73961a8eb06915968564770ccffeeb162",
-      "status": "deployed-source-verified-device-retest-pending"
-    }
+    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+    "evidence": "memory/audits/2026-09-25-bing-search-metadata.json",
+    "issues": [],
+    "status": "prepared-ci-passed-pending-merge",
+    "next_issue": "XRB-001"
   },
   "execution_efficiency_preference": {
     "updated": "2026-09-23",
@@ -1467,11 +1463,36 @@
     "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
   },
   "latest_prepared_savepoint": {
-    "id": "SAVEPOINT-2026-09-24-liquidity-wallet-startup",
-    "record": "memory/liquidity-wallet-startup-2026-09-24.json",
-    "status": "CI-verified-awaiting-production-deployment",
-    "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
-    "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
+    "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+    "human_record": "BING-SEARCH-METADATA-2026-09-25.md",
+    "status": "prepared-ci-passed-pending-merge",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed."
+  },
+  "latest_prepared_frontend_change": {
+    "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+    "status": "prepared-ci-passed-pending-merge",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed."
+  },
+  "observed_source_heads": {
+    "frontend": "863ad69d31c867b414ace328d8d9a634316c4083",
+    "frontend_branch": "master",
+    "backend": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+    "observed": "2026-09-25",
+    "refresh_before_write": true
+  },
+  "recent_work_2026_09_25": {
+    "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
+    "status": "prepared-ci-passed-pending-merge",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "pipeline_id": 2880964318,
+    "pipeline_status": "success",
+    "bing_reindex_verified": false
   }
 }

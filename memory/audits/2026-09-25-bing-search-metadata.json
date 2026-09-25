@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "created": "2026-09-25",
+  "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
+  "source_snapshots": {
+    "frontend": {
+      "commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+      "implementation": "304856b949295783a8268da16005d9ac227679c6",
+      "baseline": "863ad69d31c867b414ace328d8d9a634316c4083",
+      "branch": "master",
+      "implementation_branch": "seo/bing-query-metadata-20260925"
+    },
+    "backend": {
+      "commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+      "verification": "Last observed head carried forward; not changed or re-audited for the metadata-only scope."
+    }
+  },
+  "root_causes": [
+    "The homepage title contained double-encoded ampersands in title/social metadata, making the rendered snippet source less clean.",
+    "The liquidity page used a generic title and did not explicitly name Xaman wallet, despite that workflow being relevant to the observed Xaman-wallet search intent."
+  ],
+  "changes": [
+    "Normalize the homepage title entity consistently across title, social metadata and structured metadata; describe Xaman wallet signing explicitly.",
+    "Give the liquidity page a descriptive XRBC/XRP pool title and a concise Xaman-wallet-focused description."
+  ],
+  "verification": {
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "mr_pipeline_id": 2880964318,
+    "mr_pipeline_status": "success",
+    "static_metadata_review": "pass",
+    "inline_script_and_style_preservation": "pass",
+    "runtime_or_transaction_logic_changed": false,
+    "browser_runtime_verified": false,
+    "bing_search_result_change_verified": false
+  },
+  "next_issue": "XRB-001",
+  "limitations": [
+    "No Bing search result or ranking change can be verified before crawl/index processing.",
+    "The Search Performance report query-to-page mapping was not available in this run.",
+    "The old SEO/GEO recommendations need a new scan after deployment."
+  ]
+}

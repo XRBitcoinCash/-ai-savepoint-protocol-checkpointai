@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "registry_id": "xrbc-ecosystem-known-errors",
-  "updated": "2026-09-23",
+  "updated": "2026-09-25",
   "purpose": "Persistent error/regression ledger. Read before edits; update status instead of deleting resolved failures.",
   "status_values": [
     "open",
@@ -13,7 +13,7 @@
   "active_source": {
     "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
     "branch": "master",
-    "observed_head": "8c13eaf222ea7a70b74837a474a496de3d22a531"
+    "observed_head": "863ad69d31c867b414ace328d8d9a634316c4083"
   },
   "highest_priority": {
     "id": "XRB-001",
@@ -175,8 +175,8 @@
       "Separate exchange/workbench family for Trade/Liquidity/Developers.",
       "Developer dedicated exchange sidebar.",
       "Narrow-desktop shell fixes and CTA readability updates.",
-      "Homepage partial 900\u21921180px responsive-header migration repaired via MR !10; source checks pass, device rendering check pending.",
-      "User correction: MR !11 restores the documented <=900px compact breakpoint and shared sidebar widths. It supersedes the MR !10 layout choice at 901\u20131180px."
+      "Homepage partial 900→1180px responsive-header migration repaired via MR !10; source checks pass, device rendering check pending.",
+      "User correction: MR !11 restores the documented <=900px compact breakpoint and shared sidebar widths. It supersedes the MR !10 layout choice at 901–1180px."
     ],
     "wallet_reference": "Use public/index.html deliberate Connect plus success/retrieved/ready session completion as behavioral reference for XRB-001, but do not copy the entire XRBC state machine.",
     "historical_reverify": [
@@ -426,7 +426,7 @@
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/11",
       "repair_evidence": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
       "acceptance_checks": [
-        "At 901\u20131180px Trade and Liquidity both have fixed, scrollable 188px left rails.",
+        "At 901–1180px Trade and Liquidity both have fixed, scrollable 188px left rails.",
         "Above 1180px both use 220px rails; <=900px compact top headers.",
         "Main and footer clear the rail; JavaScript stays unchanged.",
         "User-device visual comparison to the Liquidity screenshot."

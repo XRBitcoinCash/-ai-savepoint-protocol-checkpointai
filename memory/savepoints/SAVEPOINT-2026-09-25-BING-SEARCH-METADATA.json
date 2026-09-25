@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "application-repair",
+  "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+  "human_record": "BING-SEARCH-METADATA-2026-09-25.md",
+  "status": "prepared-ci-passed-pending-merge",
+  "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
+  "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "source_frontend_branch": "master",
+  "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+  "backend_snapshot_note": "Last observed backend head carried forward; this static metadata change does not modify backend code.",
+  "source_pipeline_id": 2880964318,
+  "source_pipeline_status": "success",
+  "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+  "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+  "rollback_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "next_issue": "XRB-001",
+  "browser_live_retest_after_final_deploy": false,
+  "browser_retest_scope": "No browser runtime or search-result appearance is asserted. Bing may need to recrawl before snippets or indexing data change.",
+  "created": "2026-09-25",
+  "memory_parent_commit": "f4218218f04778c8c692f65e63bb37bc037ba1c1",
+  "previous_savepoint": {
+    "id": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+    "human_record": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
+    "status": "deployed-source-verified-device-retest-pending"
+  },
+  "permissions_scope": "User authorized focused Bing search-performance improvements and the repository memory workflow. Static metadata only; no wallet, transaction, or backend changes.",
+  "evidence": "memory/audits/2026-09-25-bing-search-metadata.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [
+    "public/index.html",
+    "public/xrbc-liquidity-pool.html"
+  ],
+  "frontend_support_files_changed": [],
+  "tests": {
+    "focused_metadata_review": "pass",
+    "inline_script_and_style_preservation": "pass",
+    "merge_request_pipeline": 2880964318,
+    "merge_request_pipeline_status": "success",
+    "browser_runtime_verified": false,
+    "bing_search_result_change_verified": false
+  },
+  "deployment": {
+    "status": "pending-merge-and-deployment",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+    "pipeline_id": 2880964318,
+    "pipeline_status": "success",
+    "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+    "browser_runtime_verified": false,
+    "served_source_verified": false,
+    "verification_scope": "Passing MR pipeline only; this checkpoint is saved before merge and makes no production or Bing indexing claim."
+  },
+  "remaining": [
+    "Merge the passing MR; then let Bing recrawl before judging query, snippet, or ranking changes.",
+    "The existing Bing recommendations page reflects a prior crawl; refresh its scan after deployment before treating those findings as cleared.",
+    "Search-result rankings and a click-through improvement are not guaranteed."
+  ]
+}

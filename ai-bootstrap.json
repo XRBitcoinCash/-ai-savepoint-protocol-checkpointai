@@ -77,12 +77,12 @@
     },
     "next_major_pass": "Preserve XRB-001/007/008 device retests and separate XRB-009 history investigation. Public liquidity browser feedback may guide a bounded follow-up.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
-      "human_record": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
-      "status": "deployed-source-verified-device-retest-pending"
+      "id": "SAVEPOINT-2026-09-25-bing-search-metadata",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+      "human_record": "BING-SEARCH-METADATA-2026-09-25.md",
+      "status": "prepared-ci-passed-pending-merge"
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-25-bing-search-metadata",
     "previous_verified_frontend_change": {
       "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
       "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
@@ -363,6 +363,13 @@
       "implementation_commit": "80fe3b40d916ade4c05b66855e1880cc0aef6edf",
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/34",
       "scope": "Repair Connect Xaman startup on public/xrbc-liquidity-pool.html"
+    },
+    "prepared_frontend_change": {
+      "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed.",
+      "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
+      "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35",
+      "pipeline_id": 2880964318,
+      "pipeline_status": "success"
     }
   },
   "safety_invariants": [
@@ -517,6 +524,12 @@
     "tokenization": [
       "memory/tokenization-workspace-2026-09-23.json",
       "TOKENIZATION-WORKSPACE-2026-09-23.md"
+    ],
+    "bing_search_performance": [
+      "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+      "BING-SEARCH-METADATA-2026-09-25.md",
+      "memory/audits/2026-09-25-bing-search-metadata.json",
+      "memory/synapse-map.json"
     ]
   },
   "transition": {

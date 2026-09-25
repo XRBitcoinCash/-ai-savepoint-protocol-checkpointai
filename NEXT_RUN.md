@@ -1,4 +1,7 @@
-# Next run — public liquidity repair and preserved queue
+# Next run — Bing metadata change and preserved queue
+
+Current prepared change: MR !35 updates homepage and XRBC/XRP liquidity-page metadata for clearer brand/Xaman search snippets. Pipeline 2880964318 passed. Checkpoint: `SAVEPOINT-2026-09-25-bing-search-metadata`; read `memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json` and `BING-SEARCH-METADATA-2026-09-25.md`. Merge is the pending action; after deployment, stop immediately. Bing recrawl and ranking impact remain unverified.
+
 
 Prepared tokenization catalog release: MR !25 implements the shared sourced directory and expanded local asset planner; 101 unit tests and MR pipeline 2876917971 pass. Read `TOKENIZATION-CATALOG-IMPLEMENTATION-2026-09-23.md` and `memory/tokenization-catalog-2026-09-23.json`; prior research is `TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md`. This checkpoint precedes merge/deployment. Stop immediately after requested deployment completes.
 
@@ -20,7 +23,7 @@ Latest correction: MR !15 fixed confirmed stablecoin issuer matching/local trust
 
 Latest follow-up: MR !14 fixed 100-row selection and discovery through Next/Previous; merged/deployed `a8d36ff73961a8eb06915968564770ccffeeb162`, pipeline `2875080550`. 13 focused / 50 CI tests pass; served script/build verified; rendered device behavior unverified. Read `pagination_follow_up` in the active machine record or the appended section in `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`. The MR !13 facts below are the earlier baseline.
 
-Active: `SAVEPOINT-2026-09-23-public-liquidity-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json`, `PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md`, `memory/discovery-efficiency-standard.json` and relevant known errors.
+Previous deployed checkpoint: `SAVEPOINT-2026-09-23-public-liquidity-discovery`; its history and follow-up are preserved in the linked savepoint and human record below.
 
 MR !13 implementation `16fcf45800ad7bbf53796c2c03318fab363ae6ae` was prepared from `a46172c91d1f9d0cdcd0f151c83c406090e8a25c`; deployment and canonical served-source verification succeeded; rendered browser runtime unverified. Production pipeline `2875017821` and deploy job `16680915408` succeeded at merge `8c13eaf222ea7a70b74837a474a496de3d22a531`; rendered runtime remains unverified. 46 CI tests (37 existing plus nine focused), syntax/diff and unrelated-block preservation pass. Canonical served source/build match the final merge; rendered browser/device runtime remains unverified; Chromium was unavailable. Endpoint probes are separate evidence. Keep the public index ungated, preserve exact raw currency, and distinguish direct XRP-AMM subset ranking from all-ledger coverage.
 
