@@ -1,5 +1,9 @@
 # Continuity entrypoint
 
+## Known blockers and token conservation — user instruction, 2026-09-26
+
+Check known failure points and the completion path before substantial work. Reuse existing evidence; do not retry quota, permission, runtime or service failures without new evidence that the cause has changed. A repeated prompt or new session is not evidence of recovery. Report blocking dependencies immediately and stop dependent work; prepare a blocked deliverable only if the user explicitly requests preparation despite the blocker. Use only supported, already-authorized alternatives; never bypass CI or access controls or incur costs to force completion. Reuse existing changes and checks, keep output targeted, and avoid repeated discovery, simulations or memory updates. Full rules: `memory/operating-protocol.json` → `known_blocker_efficiency`. This rule overrides older generic retry/checklist guidance. Unforeseen failures remain possible; do not promise failure-free execution.
+
 Prepared Creature NFT signing correction: validate/normalize returned path metadata and shorten new Xaman request IDs to 37 characters. Correct app ID retained; mocked desktop/mobile Buy and liquidity deposit reach the QR/link. Read `CREATURE-XAMAN-HANDOFF-2026-09-23.md`. Earlier quote/UI repair is confirmed committed at `4a2faf38ee8e1b736085a0b935de8692f0eae900`. Saved before the final application commit; deployment and live wallet behavior are not asserted.
 
 This repository is secondary project context, not permission to act or internal model memory.
