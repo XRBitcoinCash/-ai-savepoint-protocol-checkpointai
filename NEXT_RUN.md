@@ -1,3 +1,7 @@
+## Ecosystem page update — 2026-09-26
+
+Read `ECOSYSTEM-CLARITY-2026-09-26.md`. [MR !37](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/37), commit `a3cae82f0ead7c3686b2b3a2d9adaa48e76b497d`, implements requested artwork, token logos, plain-language guides, MAX available XRP/XRBC history and activity download. Focused pre-commit checks passed; original inline transaction scripts unchanged. MR pipeline `2885324036` failed before starting with `ci_quota_exceeded`; GitLab reports `ci_must_pass`. It is not merged or live. After CI quota is restored, rerun this pipeline, review the normal gate, merge and deploy; stop immediately once deployment is confirmed. Do not bypass required CI, change billing or hosting, or repeat broad checks. Four tools still need dedicated artwork, as documented. The following search-discovery handoff and XRB queue remain intact.
+
 # Next run — XRBitcoinLabs search-discovery handoff (2026-09-25)
 
 Active checkpoint: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json` and `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, plus the Bing metadata and brand/favicon checkpoints they reference.
