@@ -1,5 +1,13 @@
 # Continuity entrypoint
 
+## Routine page corrections — user override, 2026-09-26
+
+For requested page corrections, read this checkpoint before acting, reuse completed edits, make only the requested corrections, and deploy through the existing authorized workflow. Do not run optional tests, simulations, audits, screenshots, repeated checks or unrelated research. Older generic testing and repair checklists do not apply automatically to routine presentation/copy changes. Perform only checks required by the existing deployment process or needed to address a specific concrete risk introduced by the change; keep them narrowly scoped. Do not modify or disable CI requirements to avoid them. After deployment, stop immediately under the rule below. Report prepared, committed, merged and deployed as distinct states; never call prepared work deployed.
+
+Known ecosystem handoff: `ECOSYSTEM-CLARITY-2026-09-26.md`, GitLab MR !37. Reuse the prepared implementation and completed checks. Recorded deployment blocker: `ci_quota_exceeded`; resume only with evidence of restored quota or runner capacity. Do not retry merely because the user repeats the deployment request.
+
+This entrypoint override takes precedence over older routine-test instructions in `memory/operating-protocol.json` and historical checkpoints. Repository instructions are external context that must be loaded; they cannot guarantee automatic recall in every future conversation.
+
 ## Known blockers and token conservation — user instruction, 2026-09-26
 
 Check known failure points and the completion path before substantial work. Reuse existing evidence; do not retry quota, permission, runtime or service failures without new evidence that the cause has changed. A repeated prompt or new session is not evidence of recovery. Report blocking dependencies immediately and stop dependent work; prepare a blocked deliverable only if the user explicitly requests preparation despite the blocker. Use only supported, already-authorized alternatives; never bypass CI or access controls or incur costs to force completion. Reuse existing changes and checks, keep output targeted, and avoid repeated discovery, simulations or memory updates. Full rules: `memory/operating-protocol.json` → `known_blocker_efficiency`. This rule overrides older generic retry/checklist guidance. Unforeseen failures remain possible; do not promise failure-free execution.
