@@ -7,7 +7,7 @@
     "supersedes": "All earlier post-deployment verification, audit, read-back and automatic checkpoint requirements."
   },
   "id": "cross-project-evidence-first-v1",
-  "updated": "2026-09-23",
+  "updated": "2026-09-26",
   "human_file": "OPERATING-PROTOCOL.md",
   "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
@@ -120,5 +120,25 @@
     "source": "Explicit user instruction for public XRPL liquidity discovery repair and memory upgrade, 2026-09-23",
     "rule": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
     "implementation_status": "See task-specific checkpoint; this standard alone is not proof of application changes."
+  },
+  "known_blocker_efficiency": {
+    "date": "2026-09-26",
+    "source": "Explicit user correction after a known GitLab CI quota blocker was retried without evidence of recovery.",
+    "rules": [
+      "Before substantial implementation or deployment work, check already-known failure points and the required completion path using existing evidence first. Use only the smallest read-only check needed if the state is genuinely unknown.",
+      "Do not retry a known quota, permission, missing-runtime, or unavailable-service failure without new evidence that its cause has changed. Repeated requests, elapsed time alone, or a new session do not establish recovery.",
+      "When a blocker prevents the requested outcome, tell the user immediately. Stop work that depends on that blocker. Do not spend tokens building a blocked deliverable unless the user explicitly requests preparation despite the blocker.",
+      "Use an already-authorized, supported alternative only when evidence shows it can complete the task. Never bypass CI, access controls or approvals, or incur costs to avoid reporting a blocker.",
+      "Reuse prepared changes, prior focused checks and compact checkpoints. Do not repeat discovery, simulations, tests, broad file reads or unchanged memory updates.",
+      "Keep tool output bounded to decision-relevant fields. Do not dump full registries, repository trees, large files or minified code when a targeted read suffices.",
+      "Unexpected failures cannot be ruled out. Report actual limitations honestly; never promise failure-free execution or claim an attempted action succeeded."
+    ],
+    "known_blocker_example": {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "merge_request": 37,
+      "pipeline": 2885324036,
+      "reason": "ci_quota_exceeded",
+      "resume_condition": "Evidence that GitLab CI quota or runner capacity has been restored; do not blindly retry."
+    }
   }
 }
