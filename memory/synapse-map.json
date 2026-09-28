@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-25",
+  "updated": "2026-09-28",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
@@ -604,6 +604,12 @@
       "implementation_commit": "304856b949295783a8268da16005d9ac227679c6",
       "pipeline_id": 2880964318,
       "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/35"
+    },
+    {
+      "id": "workflow:jcs-verify-manual-delivery-2026-09-28",
+      "type": "workflow",
+      "status": "accepted-manual-delivery",
+      "file": "JCS-VERIFY-WORKFLOW-2026-09-28.md"
     }
   ],
   "edges": [
@@ -1186,6 +1192,11 @@
       "from": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
       "rel": "guides",
       "to": "task:bing-site-scan-and-domain-discovery"
+    },
+    {
+      "from": "workflow:jcs-verify-manual-delivery-2026-09-28",
+      "to": "protocol:evidence-first",
+      "relation": "applies"
     }
   ],
   "query_hints": {
@@ -1329,6 +1340,13 @@
       "savepoint:xrbitcoinlabs-search-discovery-2026-09-25",
       "task:bing-site-scan-and-domain-discovery",
       "savepoint:bing-search-metadata-2026-09-25"
+    ],
+    "manual_page_delivery": [
+      "workflow:jcs-verify-manual-delivery-2026-09-28",
+      "protocol:evidence-first"
+    ],
+    "jcs_prayer_nft": [
+      "workflow:jcs-verify-manual-delivery-2026-09-28"
     ]
   },
   "active_savepoint": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25"

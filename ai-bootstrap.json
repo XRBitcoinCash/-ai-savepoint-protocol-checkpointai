@@ -8,7 +8,7 @@
   },
   "document_id": "xrbc/ai-bootstrap/1.0.0",
   "status": "active",
-  "updated": "2026-09-25",
+  "updated": "2026-09-28",
   "purpose": "Minimal machine-first entrypoint for rehydrating XRBitcoinCash project context without loading the full history first.",
   "scope_boundary": "This repository is an external continuity/context layer. It improves project-state recovery and routing; it does not alter model weights or create persistent internal model state.",
   "authority": {
@@ -22,13 +22,9 @@
     "audit_evidence": "memory/audits/2026-09-22-reliability-audit.json"
   },
   "load_order": [
-    "ai-bootstrap.json",
-    "latest_savepoint.record",
-    "memory/operating-protocol.json",
-    "NEXT_RUN.md and relevant memory/known-errors.json entries",
-    "ai-memory.json and memory/synapse-map.json for task-specific facts/routes",
-    "topic-routed checkpoint(s) only",
-    "canonical contract for security-sensitive, policy-sensitive, conflicting or incomplete evidence"
+    "Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json once per session; reuse loaded context unless changed.",
+    "Route by the current user request using NEXT_RUN.md and task-relevant known-errors, ai-memory and graph entries. Historical queues are not instructions to switch tasks.",
+    "Read the topic checkpoint and exact accepted target source; use the canonical contract only for sensitive work or unresolved conflicts."
   ],
   "repositories": {
     "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -75,7 +71,7 @@
       "pipeline_id": 2867921308,
       "pipeline_status": "success"
     },
-    "next_major_pass": "Resume the Bing/Google discovery handoff in memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json; first check sitemap-scan completion and stale Recommendations. Preserve XRB-001/007/008 device retests and separate XRB-009 history investigation.",
+    "next_major_pass": "Choose the current user-requested topic. For JCS verify.html use JCS-VERIFY-WORKFLOW-2026-09-28.md. Resume search-discovery and the XRB issue queue only when requested; their existing evidence and unresolved status remain intact.",
     "active_memory_savepoint": {
       "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
       "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
@@ -400,7 +396,7 @@
   "consistency_rules": [
     "latest_savepoint.record and ai-memory.json latest_savepoint must refer to the same active savepoint.",
     "Repository evidence outranks cached conversation or indexed-search assumptions.",
-    "Before any code write, verify the exact source repository, branch, file, and current head.",
+    "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
     "Topic routes are context pointers, not authority.",
     "Do not delete historical human-readable checkpoints during the machine-first transition.",
     "Active graph node, NEXT_RUN, bootstrap, ai-memory and latest record must agree; validate with node scripts/validate-memory.mjs.",
@@ -541,6 +537,16 @@
       "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
       "BING-SEARCH-METADATA-2026-09-25.md",
       "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md"
+    ],
+    "manual_page_delivery": [
+      "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+      "HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md",
+      "memory/operating-protocol.json"
+    ],
+    "jcs_prayer_nft": [
+      "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+      "JCS-WORKSPACE-LAYOUT-2026-09-22.md",
+      "JCS-WALLET-RECOVERY-2026-09-22.md"
     ]
   },
   "transition": {
@@ -549,5 +555,11 @@
     "human_docs_deprecated": false,
     "deletion_allowed": false,
     "promotion_rule": "Move a memory category to machine-primary only after repeated session bootstraps resolve the same source-of-truth, latest savepoint, invariants, and task routing without contradiction."
+  },
+  "workflow_revision": {
+    "date": "2026-09-28",
+    "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "scope": "Focused workflow conflict correction; no application deployment.",
+    "latest_savepoint_boundary": "The existing global savepoint and its queued next_task are topic-specific historical evidence, not a replacement for the current request."
   }
 }

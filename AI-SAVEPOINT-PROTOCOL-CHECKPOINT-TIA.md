@@ -2,11 +2,17 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-23
+**Updated:** 2026-09-28
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
+
+## Current workflow clarification — 2026-09-28
+
+Use `memory/operating-protocol.json` and `JCS-VERIFY-WORKFLOW-2026-09-28.md` for the accepted manual preview/code workflow. Patch the latest accepted complete file and preserve its established design and JS. Provide complete HTML and working View code / Copy full HTML / Download HTML controls when requested, even for a small patch. The user commits application files unless asking otherwise. Historical source maps and next tasks below are dated evidence, not current authorization or instructions to switch tasks.
+
+Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.
 
 ## Latest prepared Creature NFT update — 2026-09-23
 
@@ -46,24 +52,25 @@ The secondary GitHub `.well-known/ai.js` index still listed XRBitcoin's old `/XR
 
 Before planning or editing code, an agent should:
 
-1. Read this contract and `ai-memory.json`.
+1. Read the compact bootstrap and operating protocol, then task-relevant ai-memory/graph entries. Read this full contract for sensitive work or unresolved conflicts.
 2. Read the target repository's `README`, `AGENTS.md`, security policy, and relevant page documentation.
 3. Check the latest savepoint or release note for the target feature.
-4. Inspect the exact target file and its current branch/commit.
+4. Inspect the exact accepted target file. For repository edits verify branch/current commit; for manual delivery use the latest accepted complete upload/artifact.
 5. State the target, non-goals, acceptance checks, and rollback point before changing anything.
 
-If a referenced file, branch, endpoint, or requirement cannot be verified, stop and report the missing evidence. Do not fill gaps with invented values.
+If a required dependency cannot be verified, report the precise gap and stop only dependent operations; continue useful independent work already authorized. Do not invent missing values.
 
 ## Precedence and scope
 
 When instructions conflict, use this order:
 
-1. The user's current, explicit request.
-2. Repository-local instructions and security policy.
-3. This contract and its machine-readable twin.
-4. Archived conversation notes and older savepoints.
+1. Applicable platform/system/developer instructions.
+2. The user's current request and established authorization/preferences in the conversation.
+3. Applicable repository-local instructions and security policy.
+4. This contract and its machine-readable twin.
+5. Historical factual notes and older savepoints.
 
-Conversation history is context, not authority. Preserve a prior decision only when it is recorded here or in a current repository document. Do not widen a one-page request into a repository-wide rewrite.
+Current and previously established user instructions in the available conversation remain instructions; failure to copy them into this repository does not cancel them. Repository facts identify observed implementation, while user instructions specify desired behavior and scope. Do not widen a one-page request into a repository-wide rewrite.
 
 Supported project scope:
 
@@ -97,9 +104,9 @@ Use one bounded pass at a time:
 2. **Plan:** write the smallest file list and explicit non-goals.
 3. **Inspect:** search before editing; preserve working code and exact casing.
 4. **Implement:** make the smallest additive or surgical change that satisfies the request.
-5. **Verify:** run syntax, unit, integration, and security checks appropriate to the change.
+5. **Verify:** run only required gates or focused checks for concrete risks introduced by the change; do not automatically run every test category.
 6. **Review:** escalate only the failed assertion or uncertain section, not the entire project.
-7. **Record:** add a short savepoint with facts, impact, checks, and remaining risks.
+7. **Record:** add a short savepoint only when requested, before deployment if applicable; otherwise provide the requested deliverable and concise result.
 
 Historical model-routing suggestions (not verified current product availability or a quality guarantee; the evidence-first protocol applies at every tier):
 
@@ -145,10 +152,10 @@ A change is complete only when:
 
 - the exact requested behavior works;
 - non-goals and existing working features remain unchanged;
-- relevant syntax, unit, integration, accessibility, and security checks pass;
+- required gates and selected focused checks pass, with untested behavior stated honestly;
 - live calls are labeled as live and simulations as simulations;
 - no secret or unrequested network behavior was added;
-- the full commit SHA, changed files, checks, and remaining manual checks are recorded;
+- changed files and actual checks are reported; a commit SHA is reported only if a commit was made, and manual file delivery is a valid completion mode;
 - deployment is not claimed until the target deployment is verified.
 
 ## Savepoint format

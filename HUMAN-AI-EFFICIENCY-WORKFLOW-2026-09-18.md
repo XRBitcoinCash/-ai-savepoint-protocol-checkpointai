@@ -20,6 +20,10 @@ The user is comfortable performing exact manual repository edits when given prec
 
 For large files, especially the XRBitcoinCash homepage, do not make the user visually scan thousands of lines and do not make the model repeatedly reproduce the entire file when a bounded function-level edit will solve the task.
 
+## Accepted full-file workflow — 2026-09-28
+
+When the user requests full HTML with preview/code controls, use `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Patch the accepted file locally and deliver the complete result; do not substitute snippets or a redesigned mockup. This applies even to a small change. The bounded-block workflow below remains available when the user chooses it. Verification is limited to required gates and concrete changed risks; memory updates and post-delivery checks are not automatic.
+
 ## Default workflow for contained code changes
 
 1. **Identify the exact source**
@@ -63,9 +67,9 @@ For files on the order of many thousands of lines, such as `public/index.html`:
 - avoid repeatedly sending unchanged source through model context;
 - use exact function names, stable identifiers, selectors, or unique strings as anchors;
 - verify adjacent code after replacement;
-- escalate to full-file generation only when the change spans many interdependent regions or mechanical automation is clearly safer.
+- deliver the complete patched file whenever the user asks for complete HTML; otherwise use full-file delivery when it makes interdependent edits safer.
 
-A full-file rewrite is appropriate when:
+Full-file delivery does not require a rewrite. Broader implementation changes are appropriate only within the requested scope when:
 - dozens of coordinated edits are required;
 - the change affects broad structure or dependency ordering;
 - a machine transformation can be tested reliably;
@@ -132,12 +136,12 @@ This is the preferred pattern for future bounded edits of the same kind.
 
 For XRBitcoinCash and explicitly related XRPL project work, treat this GitHub memory repository as a secondary continuity layer whenever a new conversation starts.
 
-1. Read `ai-memory.json`, then the canonical contract.
+1. Read the compact `ai-bootstrap.json` and `memory/operating-protocol.json`; load only task-relevant ai-memory/graph entries. Read the canonical contract for sensitivity or unresolved conflicts.
 2. Read the current `latest_savepoint.record`.
-3. Verify the active source-of-truth repository, branch, current commit, and relevant pipeline before editing.
+3. Identify the accepted target file. Verify repository/head for repository edits and CI only when relevant; a complete user-supplied file can be the manual patch baseline.
 4. Compare the user's request with current source first; do not duplicate or overwrite work that has already landed.
 5. Reuse established project facts and decisions instead of making the user repeat known context.
-6. Keep the change bounded, preserve unrelated working behavior, run the relevant checks, and write a concise savepoint.
+6. Keep the change bounded, preserve unrelated working behavior and run only focused necessary checks. Write a concise savepoint only when requested; never add it after a completed deployment.
 
 Project-memory notes may also record working practices that make future model collaboration more reliable: evidence before action, current-source verification, exact file identity, rollback points, concise status reporting, and explicit separation of repository state, CI state, and live deployment state.
 

@@ -2,36 +2,32 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-25",
+  "updated": "2026-09-28",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
     "read_before_edit": true,
     "sequence": [
-      "read memory/operating-protocol.json and current known-errors; honor evidence labels and current authorization",
-      "read ai-bootstrap.json and latest_savepoint.record",
-      "read ai-memory.json, then route by topic through memory/synapse-map.json",
-      "read HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md for large-file work and bounded manual-edit collaboration when relevant",
-      "read the canonical contract and repository-local security/instructions for security-sensitive, policy-sensitive, conflicting, or incomplete-evidence work",
-      "inspect the exact target file, branch, and current commit",
-      "state target, non_goals, acceptance_checks, and rollback point",
-      "make one bounded change",
-      "run relevant checks",
-      "record a concise machine-readable savepoint and synchronize the latest pointers"
+      "Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json once per session; reuse loaded context unless changed.",
+      "Route by the current user request using NEXT_RUN.md and task-relevant known-errors, ai-memory and graph entries. Historical queues are not instructions to switch tasks.",
+      "Read the topic checkpoint and exact accepted target source; use the canonical contract only for sensitive work or unresolved conflicts.",
+      "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
+      "Make the smallest necessary patch and preserve established appearance, assets, identities and working behavior.",
+      "Run only required gates or focused checks for concrete changed risks; distinguish source/simulated evidence from live operation.",
+      "Deliver under the current user-selected workflow. Update memory only when requested; stop at the requested completion boundary."
     ],
-    "missing_evidence": "stop and report; never invent values",
+    "missing_evidence": "Report the specific gap without inventing values; stop only dependent work and continue useful authorized independent work. Missing deployment access does not block an explicitly requested manual HTML handoff.",
     "conversation_bootstrap": {
       "required_for_new_project_conversations": true,
       "purpose": "Use the GitHub continuity repository as a secondary project-memory layer so a new conversation can regain verified XRBitcoinCash state before making edits.",
       "sequence": [
-        "load current cross-project operating protocol and first pending issue",
-        "read ai-bootstrap.json and latest_savepoint.record",
-        "read ai-memory.json and use memory/synapse-map.json to select only task-relevant checkpoints",
-        "check the active source-of-truth repository, branch, current commit and relevant pipeline before editing",
-        "compare the new request with current source so already-applied work is not duplicated or overwritten",
-        "reuse established project facts and decisions instead of asking the user to repeat them",
-        "read the canonical contract when security/policy sensitivity or conflicting evidence requires it",
-        "make the smallest bounded change and record the result as a machine-readable savepoint with synchronized pointers"
+        "Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json once per session; reuse loaded context unless changed.",
+        "Route by the current user request using NEXT_RUN.md and task-relevant known-errors, ai-memory and graph entries. Historical queues are not instructions to switch tasks.",
+        "Read the topic checkpoint and exact accepted target source; use the canonical contract only for sensitive work or unresolved conflicts.",
+        "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
+        "Make the smallest necessary patch and preserve established appearance, assets, identities and working behavior.",
+        "Run only required gates or focused checks for concrete changed risks; distinguish source/simulated evidence from live operation.",
+        "Deliver under the current user-selected workflow. Update memory only when requested; stop at the requested completion boundary."
       ],
       "model_working_notes": [
         "repository evidence outranks stale conversational assumptions",
@@ -43,6 +39,7 @@
     }
   },
   "precedence": [
+    "applicable platform/system/developer instructions",
     "current explicit user request",
     "repository-local instructions and security policy",
     "this contract",
@@ -63,7 +60,7 @@
   },
   "user_preferences": {
     "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for the security notice. The liquidity directory is integrated into the existing public/index.html, not a standalone page.",
-    "deployment_instructions": "Give the exact repository, branch, filename and direct public URL when relevant. For contained homepage/code changes, prefer confirmed Ctrl+F anchors plus complete whole-function or bounded-block replacements followed by AI verification of the edited result. Generate complete HTML/TXT replacement files only when a broad multi-region change makes full-file delivery safer or materially easier. Do not automatically commit unless explicitly requested.",
+    "deployment_instructions": "Honor the current delivery choice. For the accepted preview/code workflow, patch the existing page and supply complete HTML with working View code / Copy full HTML / Download HTML controls even for a small patch. Use bounded Ctrl+F replacements when that format is requested or accepted. Do not automatically commit or deploy application files. Name required companion files and exact destinations.",
     "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
     "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
     "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations.",
@@ -516,15 +513,17 @@
     "created": "2026-09-18",
     "purpose": "Use human repository navigation/manual exact edits and AI inspection/reasoning/verification together to reduce unnecessary context, output, compute, bandwidth, and human search effort without reducing correctness.",
     "default_bounded_edit_pattern": [
-      "inspect exact current repository file and branch",
+      "inspect the exact current accepted source; for repository edits verify branch/head",
       "identify a confirmed Ctrl+F/search anchor and whole-function or bounded-block edit",
-      "provide complete existing and replacement blocks when practical",
+      "provide complete HTML or bounded replacement blocks according to the current user-selected delivery format",
       "user may apply the exact edit manually",
-      "AI re-reads the result, checks for duplicates/remnants, runs syntax/static checks, and assesses unrelated-function impact",
+      "perform only the focused checks needed for the actual change; reuse completed evidence and do not automatically re-read or retest after delivery/deployment",
       "commit only under the user's chosen workflow"
     ],
-    "large_file_rule": "Do not repeatedly reproduce or transfer a many-thousand-line file when a small verified range is sufficient; escalate to full-file generation only when broad interdependent edits make that safer.",
-    "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes."
+    "large_file_rule": "Read/search bounded ranges and patch mechanically to conserve context. When complete HTML is requested, return the complete patched file regardless of patch size; do not reconstruct or redesign it. Avoid dumping unchanged full source into conversation when working copy/download controls and the downloadable file provide it.",
+    "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes.",
+    "updated": "2026-09-28",
+    "manual_page_delivery": "JCS-VERIFY-WORKFLOW-2026-09-28.md"
   },
   "recent_savepoints": [
     {
@@ -1289,9 +1288,9 @@
     "next_issue": "XRB-001"
   },
   "execution_efficiency_preference": {
-    "updated": "2026-09-23",
-    "source": "Explicit user instruction after this deployment",
-    "rule": "Keep work narrowly limited to the requested action and conserve credits. For deployment requests, deploy the requested page, perform only essential checks, make a concise checkpoint update, and stop. Do not add audits, broad research, screenshots, extra test suites, repeated verification, or unrelated repairs unless needed to resolve a concrete blocker or explicitly requested. Reuse existing evidence. Ask before materially expanding scope; do not ask again for an already authorized deployment.",
+    "updated": "2026-09-28",
+    "source": "Explicit user efficiency/stop instructions, reconciled with the accepted manual delivery workflow on 2026-09-28.",
+    "rule": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.",
     "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration.",
     "discovery_extension": "Apply memory/discovery-efficiency-standard.json: broad supported discovery, exact asset identity, honest coverage, plain-language liquidity cautions and bounded focused verification."
   },
@@ -1509,5 +1508,25 @@
     "created": "2026-09-25",
     "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
     "no_site_or_dns_changes": true
+  },
+  "manual_page_delivery": {
+    "updated": "2026-09-28",
+    "source": "User accepted the JCS existing-file preview/code workflow and requested correction of conflicting memory instructions.",
+    "applies_when": "User requests a preview with complete copyable HTML or elects to commit application files manually; currently JCS verify.html.",
+    "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "source_selection": "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
+    "delivery": "Patch the accepted file, then deliver complete HTML with working Preview/View code, Copy full HTML and Download HTML controls. Full-file delivery does not authorize rebuilding or simplifying the existing page.",
+    "source_controls": "View/copy/download must return the exact delivered HTML, including dependencies and embedded data, not an incomplete snippet or serialized runtime containing private prayer or wallet state. Regenerate any embedded source snapshot after edits.",
+    "preservation": "Keep the accepted sidebar/header, religious design, artwork, Scripture/audio, NFT metadata, API/app identity and existing JS. Simplification means clearer interaction, not removing working features. Work on one requested page at a time.",
+    "dependencies": "Name every required companion and its exact publish location. Embedded JSON in HTML does not create an externally fetchable JSON resource. Do not remove metadata readiness validation to hide a 404.",
+    "authority": "User commits application changes unless explicitly asking the assistant to commit/deploy. A separate explicit memory-update request authorizes the bounded continuity-repository update, not application deployment.",
+    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked."
+  },
+  "current_jcs_prayer": {
+    "updated": "2026-09-28",
+    "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "page": "verify.html",
+    "status": "complete-html-delivered-for-user-commit; live-deployment-and-wallet-signature-unverified",
+    "map_scope": "Do not edit the map during this verify-page task."
   }
 }
