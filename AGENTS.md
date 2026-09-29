@@ -1,8 +1,16 @@
 # Continuity entrypoint
 
-## Accepted manual page workflow — 2026-09-28
+## Current checkpoint and owner delivery — 2026-09-29
 
-Current user intent chooses the task and delivery mode. For JCS `verify.html` and other explicitly requested preview/code handoffs, read `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Patch the latest accepted complete file, preserve its established design and working JS, and deliver complete HTML with functional View code / Copy full HTML / Download HTML controls. The user commits application files unless asking us to commit or deploy. A separately requested memory update authorizes this repository only. Full-file delivery is not a redesign. Older block-only or automatic-deployment defaults do not override this workflow.
+Active memory: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. For the JCS Prayer Map, read `JCS-PRAYER-MAP-NEXUS-2026-09-29.md` and `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json`. Preserve the AD 1–2026 sourced chronology, larger zoomable map and persistent evidence-based Nexus. Application files are prepared for user commit; browser rendering and deployment are unverified.
+
+The accepted **separate owner HTML viewer** exposes the entire public page with View full code / Copy full HTML / Download HTML. Keep those controls outside the exported public application; do not make the user use Inspect Element. Regenerate the exact static source snapshot after edits. Displaying code in an HTML viewer is acceptable. For verify/NFT work, retain the separate verify checkpoint and dependencies.
+
+User reasoning preference: Ultra for memory/checkpoint creation; very high or another lower setting for routine page work. This preference does not change model settings or waive evidence requirements. Keep the save compact and reuse completed checks.
+
+## Accepted manual page workflow — 2026-09-28 (clarified above)
+
+Current user intent chooses the task and delivery mode. For JCS `verify.html` and other explicitly requested preview/code handoffs, read `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Patch the latest accepted complete file, preserve its established design and working JS, and deliver complete public HTML plus functional owner View code / Copy full HTML / Download HTML controls in the separate viewer. The user commits application files unless asking us to commit or deploy. A separately requested memory update authorizes this repository only. Full-file delivery is not a redesign. Older block-only or automatic-deployment defaults do not override this workflow.
 
 Load only relevant checkpoint routes. Bing, ecosystem, tokenization and XRB queues below remain pending topic-specific work; they do not select the current task.
 

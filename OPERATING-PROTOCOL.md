@@ -2,6 +2,12 @@
 
 Applies to requested development and research across projects. Use the JSON twin at memory/operating-protocol.json for compact routing. Project facts remain project-specific.
 
+## Owner source viewer and reasoning preference — 2026-09-29
+
+For current JCS map work read `JCS-PRAYER-MAP-NEXUS-2026-09-29.md`. The public page is the complete exported artifact; a separate owner HTML viewer supplies Preview / View full code / Copy full HTML / Download HTML. Regenerate its exact static source snapshot after every edit. Keep owner controls outside the public export. An HTML source display is acceptable and must not require Inspect Element. This clarifies the older delivery language below.
+
+The user prefers Ultra for continuity/checkpoint work and intends to use very high or another lower setting for ordinary page edits. Store this as a workflow preference, not a capability guarantee or an instruction to change an unavailable setting. Use concise readable text/JSON/code and reuse completed evidence.
+
 ## Current delivery and verification rule — 2026-09-28
 
 Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.

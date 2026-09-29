@@ -1,11 +1,12 @@
-SAVEPOINT 2026-09-25
-id=SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery
-title=XRBitcoinLabs domain and search-discovery handoff
-status=active-observation-and-crawl-pending
-machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json
-human_checkpoint=XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md
-previous_code_checkpoint=SAVEPOINT-2026-09-25-bing-search-metadata
-next_task=Check queued Bing sitemap scan; reconcile Recommendations; preserve next_issue=XRB-001
+SAVEPOINT 2026-09-29
+id=SAVEPOINT-2026-09-29-jcs-prayer-map-nexus
+title=JCS Prayer Map chronology, persistent Nexus and owner HTML viewer
+status=complete-html-delivered-for-user-commit; browser-and-deployment-unverified
+machine_savepoint=memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json
+human_checkpoint=JCS-PRAYER-MAP-NEXUS-2026-09-29.md
+previous_memory_checkpoint=SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery
+next_task=Continue the requested page from the latest accepted complete HTML; user commits application files
 next_issue=XRB-001
 observed_frontend_commit=863ad69d31c867b414ace328d8d9a634316c4083
 observed_backend_commit=1c1fa1d41287af846c3be9d7233c319eb2b8a470
+source_commit_scope=Inherited legacy XRBC snapshots; not fresh observations or JCS artifact commits

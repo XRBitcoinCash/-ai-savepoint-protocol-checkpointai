@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
@@ -610,6 +610,13 @@
       "type": "workflow",
       "status": "accepted-manual-delivery",
       "file": "JCS-VERIFY-WORKFLOW-2026-09-28.md"
+    },
+    {
+      "id": "savepoint:jcs-prayer-map-nexus-2026-09-29",
+      "type": "savepoint",
+      "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
+      "file": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+      "human_file": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md"
     }
   ],
   "edges": [
@@ -1197,6 +1204,16 @@
       "from": "workflow:jcs-verify-manual-delivery-2026-09-28",
       "to": "protocol:evidence-first",
       "relation": "applies"
+    },
+    {
+      "from": "savepoint:jcs-prayer-map-nexus-2026-09-29",
+      "rel": "applies",
+      "to": "protocol:evidence-first"
+    },
+    {
+      "from": "savepoint:jcs-prayer-map-nexus-2026-09-29",
+      "rel": "extends-delivery-workflow",
+      "to": "workflow:jcs-verify-manual-delivery-2026-09-28"
     }
   ],
   "query_hints": {
@@ -1342,12 +1359,23 @@
       "savepoint:bing-search-metadata-2026-09-25"
     ],
     "manual_page_delivery": [
+      "savepoint:jcs-prayer-map-nexus-2026-09-29",
       "workflow:jcs-verify-manual-delivery-2026-09-28",
       "protocol:evidence-first"
     ],
     "jcs_prayer_nft": [
       "workflow:jcs-verify-manual-delivery-2026-09-28"
+    ],
+    "jcs_prayer_map": [
+      "savepoint:jcs-prayer-map-nexus-2026-09-29"
+    ],
+    "historical_nexus": [
+      "savepoint:jcs-prayer-map-nexus-2026-09-29"
+    ],
+    "reasoning_workflow": [
+      "protocol:evidence-first",
+      "savepoint:jcs-prayer-map-nexus-2026-09-29"
     ]
   },
-  "active_savepoint": "savepoint:xrbitcoinlabs-search-discovery-2026-09-25"
+  "active_savepoint": "savepoint:jcs-prayer-map-nexus-2026-09-29"
 }

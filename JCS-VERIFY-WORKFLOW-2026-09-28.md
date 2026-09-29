@@ -2,9 +2,13 @@
 
 Updated: 2026-09-28. Source: explicit user acceptance of the existing-file preview/code workflow, followed by a request to correct only illogical, conflicting or outdated memory guidance.
 
+## Later clarification — 2026-09-29
+
+The later explicitly requested Prayer Map work is recorded in `JCS-PRAYER-MAP-NEXUS-2026-09-29.md`; the map exclusion below applied only to the September 28 verify-page task. The accepted delivery now uses a separate owner HTML viewer for Preview / View full code / Copy full HTML / Download HTML, with the exact complete public file exported without owner controls. Displaying source in an HTML page is acceptable; Inspect Element is not required. Apply this delivery clarification on the next requested edit while retaining the verify-page facts and dependencies below. This memory update did not modify or redeploy `verify.html`.
+
 ## How to continue
 
-1. Work on the page the user names. The current JCS scope is `verify.html`; leave the prayer map for a separate request.
+1. Work on the page the user names. The September 28 JCS scope was `verify.html`; the later separate map request has its own checkpoint above.
 2. Start from the latest complete file supplied or accepted by the user. Inspect relevant prior commits when recovering working behavior. Do not replace that accepted file with an older repository version or reconstruct a simpler page from memory.
 3. Make a focused patch. Preserve the established sidebar/header, religious visual design, artwork, Scripture library, audio, local prayers, wallet integration and existing NFT behavior unless the request changes them. A request to simplify interaction does not mean strip the page's appearance or features.
 4. Deliver the complete working HTML and a viewable preview with working **View code**, **Copy full HTML**, and **Download HTML** controls. These controls must expose the complete updated file, not only JavaScript or a snippet. Full-file delivery is compatible with a small patch; it does not mean a redesign.

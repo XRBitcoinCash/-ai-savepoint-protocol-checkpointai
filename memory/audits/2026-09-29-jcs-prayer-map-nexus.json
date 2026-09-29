@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "EVIDENCE-2026-09-29-jcs-prayer-map-nexus",
+  "recorded": "2026-09-29",
+  "scope": "Artifact/workflow evidence; no application repository or live-site action during this memory publication.",
+  "source_snapshots": {
+    "frontend": {
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "branch": "master",
+      "commit": "863ad69d31c867b414ace328d8d9a634316c4083"
+    },
+    "backend": {
+      "repository": "XRBitcoinCash/xrbitcoincash.github.io",
+      "branch": "main",
+      "commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470"
+    }
+  },
+  "source_snapshot_boundary": "Inherited legacy XRBC/frontend and shared-backend snapshots solely for continuity with the repository schema. Not newly observed here, not JCS source commits, and not evidence of deploying these artifacts.",
+  "artifacts": [
+    {
+      "filename": "prayer.map.html",
+      "bytes": 1075271,
+      "sha256": "ea41f874dade31a8c42fc5c6a0926c2f3f8000aea9dfe7843d6344e1a1f70664",
+      "saved_artifact_version": 4,
+      "role": "public page to commit"
+    },
+    {
+      "filename": "prayer-map-editor.html",
+      "bytes": 1439311,
+      "sha256": "a4af7532bef1b071d39e769cb4ee70167306012b12e162ac0b2c6f74339055d2",
+      "saved_artifact_version": 1,
+      "role": "separate owner source viewer; exports prayer.map.html"
+    }
+  ],
+  "completed_page_checks": {
+    "provenance": "Results already completed during the page-edit task; reused here without rerunning application tests.",
+    "inline_javascript": "8 executable blocks parse; embedded JSON parses.",
+    "focused_module_harness": "Passed mocked-DOM checks of onset years, retained node identity, rewind/restore, evidence categories, Nexus selection/source drilldown and history export.",
+    "owner_source_payload": "Decoded embedded public HTML matched the delivered public file byte-for-byte.",
+    "browser_rendering": "not verified; Playwright Chromium executable unavailable and installer failed with invalid/empty archive",
+    "live_wallet_or_xrpl": "not verified",
+    "application_commit_merge_deployment": "not performed in this conversation"
+  },
+  "user_confirmed": "User liked the owner code-viewer workflow and requested persistent Nexus points, then explicitly requested this memory update.",
+  "memory_publication_gate": "node scripts/validate-memory.mjs; run before publication. Commit confirmation is reported by the publishing turn, not guessed inside this pre-commit record."
+}

@@ -1,6 +1,10 @@
-## Choose the requested task — workflow correction, 2026-09-28
+## Choose the requested task — 2026-09-29
 
-Current user instructions select the task; the queues below are topic-specific handoffs. For JCS prayer/NFT work, read `JCS-VERIFY-WORKFLOW-2026-09-28.md`: preserve `verify.html`, patch the accepted file, and deliver the full page with working preview/code controls for the user to commit. The map remains outside the current verify-page scope. No live deployment or wallet signature is established by this handoff.
+Active memory checkpoint: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. For Prayer Map work, load `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json` and `JCS-PRAYER-MAP-NEXUS-2026-09-29.md`. Resume from the latest accepted complete `prayer.map.html` and separate `prayer-map-editor.html`; preserve the AD 1–2026 milestone chronology, zoomable map and accumulating Nexus nodes. Return exact complete public HTML through the owner viewer; the user commits it. Prepared files do not establish deployment or browser visual verification.
+
+For the separate `verify.html` prayer/NFT page, load `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Its old map exclusion applied to that prior task, not later explicit map requests. Ultra is the user's preferred setting for checkpoint work; very high or another lower setting is intended for ordinary pages. No setting is changed by memory.
+
+Use the current user request to choose work. Older search-discovery, ecosystem and XRB queues below remain preserved topic-specific handoffs.
 
 ## Ecosystem page update — 2026-09-26
 
@@ -8,7 +12,7 @@ Read `ECOSYSTEM-CLARITY-2026-09-26.md`. [MR !37](https://gitlab.com/xrbitcoincas
 
 # Next run — XRBitcoinLabs search-discovery handoff (2026-09-25)
 
-Active checkpoint: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json` and `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, plus the Bing metadata and brand/favicon checkpoints they reference.
+Preserved search-discovery checkpoint: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json` and `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, plus the Bing metadata and brand/favicon checkpoints they reference.
 
 When the user resumes search-discovery, the first step is to check whether the sitemap-scope Bing Site Scan completed. The earlier completed scan covered 1 page only; Bing Recommendations still showed 10 findings across 9 pages. Do not treat the Recommendations as cleared until affected URLs are reviewed.
 

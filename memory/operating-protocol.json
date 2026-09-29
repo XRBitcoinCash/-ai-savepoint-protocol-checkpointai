@@ -7,7 +7,7 @@
     "supersedes": "All earlier post-deployment verification, audit, read-back and automatic checkpoint requirements."
   },
   "id": "cross-project-evidence-first-v1",
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "human_file": "OPERATING-PROTOCOL.md",
   "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
@@ -140,16 +140,26 @@
     }
   },
   "manual_page_delivery": {
-    "updated": "2026-09-28",
+    "updated": "2026-09-29",
     "source": "User accepted the JCS existing-file preview/code workflow and requested correction of conflicting memory instructions.",
-    "applies_when": "User requests a preview with complete copyable HTML or elects to commit application files manually; currently JCS verify.html.",
-    "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "applies_when": "User requests complete copyable HTML/manual commit; JCS verify.html and prayer.map.html have separate topic checkpoints.",
+    "record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
     "source_selection": "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
-    "delivery": "Patch the accepted file, then deliver complete HTML with working Preview/View code, Copy full HTML and Download HTML controls. Full-file delivery does not authorize rebuilding or simplifying the existing page.",
-    "source_controls": "View/copy/download must return the exact delivered HTML, including dependencies and embedded data, not an incomplete snippet or serialized runtime containing private prayer or wallet state. Regenerate any embedded source snapshot after edits.",
+    "delivery": "Patch the accepted complete file and deliver an owner HTML viewer with functional Preview/View full code, Copy full HTML and Download HTML controls. Keep owner controls outside the exported public application unless the current user explicitly requests otherwise. Full-file delivery is not a redesign.",
+    "source_controls": "Expose the exact complete static delivered public HTML, not a snippet, the owner wrapper or a serialized visitor runtime. Embed a source snapshot in the separate viewer and regenerate it after edits; preview-only base URLs must not alter exported bytes.",
     "preservation": "Keep the accepted sidebar/header, religious design, artwork, Scripture/audio, NFT metadata, API/app identity and existing JS. Simplification means clearer interaction, not removing working features. Work on one requested page at a time.",
     "dependencies": "Name every required companion and its exact publish location. Embedded JSON in HTML does not create an externally fetchable JSON resource. Do not remove metadata readiness validation to hide a 404.",
     "authority": "User commits application changes unless explicitly asking the assistant to commit/deploy. A separate explicit memory-update request authorizes the bounded continuity-repository update, not application deployment.",
-    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked."
+    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.",
+    "previous_verify_record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "html_source_display": "An HTML page displaying the full code is acceptable; do not require Inspect Element or manual extraction from developer tools."
+  },
+  "reasoning_workflow_preference": {
+    "updated": "2026-09-29",
+    "source": "Explicit user instruction while requesting this GitHub AI checkpoint.",
+    "checkpoint_work": "User prefers Ultra for creating and reconciling memory/checkpoints, even when the task is not technically complex.",
+    "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
+    "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
+    "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
   }
 }

@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -60,7 +60,7 @@
   },
   "user_preferences": {
     "public_page_layout": "Use distinct HTML filenames directly in GitLab public/ where practical. Do not introduce an XRBitcoin/ subfolder for the security notice. The liquidity directory is integrated into the existing public/index.html, not a standalone page.",
-    "deployment_instructions": "Honor the current delivery choice. For the accepted preview/code workflow, patch the existing page and supply complete HTML with working View code / Copy full HTML / Download HTML controls even for a small patch. Use bounded Ctrl+F replacements when that format is requested or accepted. Do not automatically commit or deploy application files. Name required companion files and exact destinations.",
+    "deployment_instructions": "Patch the accepted complete file and deliver an owner HTML viewer with functional Preview/View full code, Copy full HTML and Download HTML controls. Keep owner controls outside the exported public application unless the current user explicitly requests otherwise. Full-file delivery is not a redesign. The user commits application files unless explicitly asking otherwise; name exact destinations and dependencies.",
     "reference_material": "The user treats other project material as reference or old work. Verify actual dependencies before assuming any backend or non-public file is unused.",
     "liquidity_index_work_style": "Approved homepage implementation now exists. Preserve working appearance, Apple/mobile layout, trading functions, public wallet-free browsing and JCS coverage. Use deterministic measurements; heavier history and collector upgrades remain separate work.",
     "launch_communications": "Use one XRBitcoinCash hub. Draft a detailed X announcement first, article later. Emphasize understandable liquidity evidence and existing wallet tools/gates, without unsupported market-wide conclusions or implied affiliations.",
@@ -71,6 +71,14 @@
       "human_file": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
       "rule": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
       "source_date": "2026-09-23"
+    },
+    "reasoning_workflow": {
+      "updated": "2026-09-29",
+      "source": "Explicit user instruction while requesting this GitHub AI checkpoint.",
+      "checkpoint_work": "User prefers Ultra for creating and reconciling memory/checkpoints, even when the task is not technically complex.",
+      "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
+      "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
+      "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
     }
   },
   "project": {
@@ -202,7 +210,15 @@
         "final high-risk audit"
       ]
     },
-    "rule": "Choose from actually available capabilities per session and task risk. No entitlement, Ultra identity or quality guarantee follows from this historical mapping. Apply the same evidence/verification standard at every tier."
+    "rule": "Choose from actually available capabilities per session and task risk. No entitlement, Ultra identity or quality guarantee follows from this historical mapping. Apply the same evidence/verification standard at every tier.",
+    "current_user_workflow_preference": {
+      "updated": "2026-09-29",
+      "source": "Explicit user instruction while requesting this GitHub AI checkpoint.",
+      "checkpoint_work": "User prefers Ultra for creating and reconciling memory/checkpoints, even when the task is not technically complex.",
+      "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
+      "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
+      "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
+    }
   },
   "sandbox": {
     "path": "ai/sandbox/",
@@ -459,19 +475,14 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-22-xrbitcoin-wallet-recovery",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
-    "human_record": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
-    "status": "merged-device-retest-required",
-    "scope": "XRBitcoin wallet controls, cancellation and startup recovery only. User confirmed this page after XRBC/XRB ambiguity was explained.",
-    "source_frontend_commit": "eb437dd40f3a22951cca9709353c5696d5df519f",
-    "source_backend_commit": "48c7ff4dd45b2658ba5ce3f6ddf7d86128fc9563",
-    "source_pipeline_id": 2871255138,
-    "source_pipeline_status": "success-with-advisory-findings",
-    "next_issue": "XRB-001",
-    "implementation_commit": "87b00f81c86e85686b874c93ab65b02630984027",
-    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/9",
-    "browser_live_retest_after_final_deploy": false
+    "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+    "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+    "status": "active-observation-and-crawl-pending",
+    "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
+    "created": "2026-09-25",
+    "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
+    "no_site_or_dns_changes": true
   },
   "previous_research_savepoint": {
     "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
@@ -490,14 +501,13 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
-    "human_record": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
-    "status": "active-observation-and-crawl-pending",
-    "scope": "Continue XRBitcoinCash web discoverability for XRBC/XRBitcoin brand searches and canonical Bing/Google indexing. Record the new Web2 alias and queued sitemap crawl. No website source, DNS, or live search-console settings changed in this checkpoint.",
-    "created": "2026-09-25",
-    "next_task": "Check queued sitemap scan and reconcile Bing Recommendations; then verify canonical, metadata, favicon and AI discovery signals.",
-    "no_site_or_dns_changes": true
+    "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+    "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+    "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
+    "created": "2026-09-29",
+    "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
+    "next_task": "Continue only the user-requested page change from the latest accepted full HTML; preserve the separate owner viewer and persistent historical Nexus."
   },
   "savepoint_format": [
     "context",
@@ -522,10 +532,19 @@
     ],
     "large_file_rule": "Read/search bounded ranges and patch mechanically to conserve context. When complete HTML is requested, return the complete patched file regardless of patch size; do not reconstruct or redesign it. Avoid dumping unchanged full source into conversation when working copy/download controls and the downloadable file provide it.",
     "quality_boundary": "Efficiency never overrides correctness, security checks, explicit authorization, or deeper review for signing, wallet, backend, transaction, asset-identity, or liquidity-math changes.",
-    "updated": "2026-09-28",
-    "manual_page_delivery": "JCS-VERIFY-WORKFLOW-2026-09-28.md"
+    "updated": "2026-09-29",
+    "manual_page_delivery": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md"
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+      "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+      "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+      "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
+      "created": "2026-09-29",
+      "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
+      "next_task": "Continue only the user-requested page change from the latest accepted full HTML; preserve the separate owner viewer and persistent historical Nexus."
+    },
     {
       "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
       "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
@@ -1510,23 +1529,43 @@
     "no_site_or_dns_changes": true
   },
   "manual_page_delivery": {
-    "updated": "2026-09-28",
+    "updated": "2026-09-29",
     "source": "User accepted the JCS existing-file preview/code workflow and requested correction of conflicting memory instructions.",
-    "applies_when": "User requests a preview with complete copyable HTML or elects to commit application files manually; currently JCS verify.html.",
-    "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "applies_when": "User requests complete copyable HTML/manual commit; JCS verify.html and prayer.map.html have separate topic checkpoints.",
+    "record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
     "source_selection": "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
-    "delivery": "Patch the accepted file, then deliver complete HTML with working Preview/View code, Copy full HTML and Download HTML controls. Full-file delivery does not authorize rebuilding or simplifying the existing page.",
-    "source_controls": "View/copy/download must return the exact delivered HTML, including dependencies and embedded data, not an incomplete snippet or serialized runtime containing private prayer or wallet state. Regenerate any embedded source snapshot after edits.",
+    "delivery": "Patch the accepted complete file and deliver an owner HTML viewer with functional Preview/View full code, Copy full HTML and Download HTML controls. Keep owner controls outside the exported public application unless the current user explicitly requests otherwise. Full-file delivery is not a redesign.",
+    "source_controls": "Expose the exact complete static delivered public HTML, not a snippet, the owner wrapper or a serialized visitor runtime. Embed a source snapshot in the separate viewer and regenerate it after edits; preview-only base URLs must not alter exported bytes.",
     "preservation": "Keep the accepted sidebar/header, religious design, artwork, Scripture/audio, NFT metadata, API/app identity and existing JS. Simplification means clearer interaction, not removing working features. Work on one requested page at a time.",
     "dependencies": "Name every required companion and its exact publish location. Embedded JSON in HTML does not create an externally fetchable JSON resource. Do not remove metadata readiness validation to hide a 404.",
     "authority": "User commits application changes unless explicitly asking the assistant to commit/deploy. A separate explicit memory-update request authorizes the bounded continuity-repository update, not application deployment.",
-    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked."
+    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.",
+    "previous_verify_record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "html_source_display": "An HTML page displaying the full code is acceptable; do not require Inspect Element or manual extraction from developer tools."
   },
   "current_jcs_prayer": {
     "updated": "2026-09-28",
     "record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
     "page": "verify.html",
     "status": "complete-html-delivered-for-user-commit; live-deployment-and-wallet-signature-unverified",
-    "map_scope": "Do not edit the map during this verify-page task."
+    "map_scope": "Historical 2026-09-28 verify-page boundary only. The later explicitly requested map work is recorded separately in current_jcs_prayer_map."
+  },
+  "current_jcs_prayer_map": {
+    "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+    "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+    "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
+    "created": "2026-09-29",
+    "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
+    "next_task": "Continue only the user-requested page change from the latest accepted full HTML; preserve the separate owner viewer and persistent historical Nexus.",
+    "page": "prayer.map.html",
+    "owner_viewer": "prayer-map-editor.html",
+    "artifact_hashes": {
+      "prayer.map.html": "ea41f874dade31a8c42fc5c6a0926c2f3f8000aea9dfe7843d6344e1a1f70664",
+      "prayer-map-editor.html": "a4af7532bef1b071d39e769cb4ee70167306012b12e162ac0b2c6f74339055d2"
+    },
+    "application_commit": null,
+    "browser_visual_verified": false,
+    "deployment_verified": false
   }
 }

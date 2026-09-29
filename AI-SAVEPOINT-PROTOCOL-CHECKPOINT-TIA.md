@@ -2,15 +2,21 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-28
+**Updated:** 2026-09-29
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
 
-## Current workflow clarification — 2026-09-28
+## Current memory checkpoint — 2026-09-29
 
-Use `memory/operating-protocol.json` and `JCS-VERIFY-WORKFLOW-2026-09-28.md` for the accepted manual preview/code workflow. Patch the latest accepted complete file and preserve its established design and JS. Provide complete HTML and working View code / Copy full HTML / Download HTML controls when requested, even for a small patch. The user commits application files unless asking otherwise. Historical source maps and next tasks below are dated evidence, not current authorization or instructions to switch tasks.
+Active: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. Read `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json` and `JCS-PRAYER-MAP-NEXUS-2026-09-29.md` for the prepared JCS Prayer Map: AD 1–2026 sourced chronology, larger zoomable map, persistent opposing historical Nexus and a separate owner source viewer. Public code controls stay outside the exported page; the owner viewer exposes the full exact HTML without Inspect Element. Files are delivered for user commit; no application deployment or browser visual verification is established.
+
+The user prefers Ultra for checkpoint creation and very high or another lower setting for ordinary page work. This is a workflow preference, not an automatic model-setting change. The current user request selects the topic; unrelated historical queues remain intact. The inherited XRBC/backend hashes in the checkpoint schema are historical snapshots, not JCS commits or new observations.
+
+## Current workflow clarification — 2026-09-28 (owner controls clarified above)
+
+Use `memory/operating-protocol.json` and `JCS-VERIFY-WORKFLOW-2026-09-28.md` for the accepted manual preview/code workflow. Patch the latest accepted complete file and preserve its established design and JS. Provide complete public HTML and working View code / Copy full HTML / Download HTML controls in the separate owner viewer when requested, even for a small patch. The user commits application files unless asking otherwise. Historical source maps and next tasks below are dated evidence, not current authorization or instructions to switch tasks.
 
 Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.
 
@@ -20,9 +26,9 @@ Prepared Creature NFT signing correction: validate/normalize returned path metad
 
 The earlier active savepoint below remains the historical deployed baseline. The prepared Creature record does not claim a new deployment.
 
-## Current memory checkpoint — 2026-09-25
+## Preserved search-discovery checkpoint — 2026-09-25
 
-Active: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json`, `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, then operating protocol and known errors before resuming.
+Topic checkpoint: `SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery`. Read `NEXT_RUN.md`, `memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json`, `XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md`, then operating protocol and known errors before resuming.
 
 The user reports xrbitcoinlabs.com now works and forwards to https://xrbitcoincash.com/xrbitcoin-links.html. Bing/Google verification and inspection actions are recorded in the handoff; search-result, favicon refresh and broader indexing remain pending. One Bing scan completed for one page with zero errors/warnings; the sitemap scan (100-page limit) was queued, and the older Recommendations report still listed 10 findings across 9 pages. Check current console state before claiming repairs.
 

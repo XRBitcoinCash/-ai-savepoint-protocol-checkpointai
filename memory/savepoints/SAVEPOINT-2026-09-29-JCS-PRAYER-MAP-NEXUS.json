@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "checkpoint_kind": "manual-artifact-and-workflow-handoff",
+  "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+  "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+  "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+  "date": "2026-09-29",
+  "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
+  "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
+  "previous_memory_savepoint": {
+    "id": "SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json"
+  },
+  "target": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "intended_path": "prayer.map.html",
+    "intended_url": "https://jesuschristsavestoken.com/prayer.map.html",
+    "branch_before_future_write": "verify current branch/head when a write is requested",
+    "application_commit": null,
+    "delivery": "User manually commits the complete accepted HTML unless explicitly requesting application commit/deployment."
+  },
+  "accepted_artifacts": [
+    {
+      "filename": "prayer.map.html",
+      "bytes": 1075271,
+      "sha256": "ea41f874dade31a8c42fc5c6a0926c2f3f8000aea9dfe7843d6344e1a1f70664",
+      "saved_artifact_version": 4,
+      "role": "public page to commit"
+    },
+    {
+      "filename": "prayer-map-editor.html",
+      "bytes": 1439311,
+      "sha256": "a4af7532bef1b071d39e769cb4ee70167306012b12e162ac0b2c6f74339055d2",
+      "saved_artifact_version": 1,
+      "role": "separate owner source viewer; exports prayer.map.html"
+    }
+  ],
+  "source_selection": {
+    "base": "Latest accepted prayer.map(4).html, originally saved version 2; corrected public candidate saved as version 4.",
+    "avoid": "Older pasted text lacked the accepted timeline. Do not rebuild from it or substitute an older live/repository version. Retrieve the latest user-accepted file and compare hashes before resuming.",
+    "recover": "Recover saved complete artifacts by filename/date/hash; scratch paths are transient. If a later user version exists, inspect it first and preserve its changes. The embedded source in the owner viewer can recover the public HTML; do not use a runtime DOM serialization."
+  },
+  "public_interface": {
+    "source_controls": "Removed View code / Copy full HTML / Download HTML and their self-source payload from the public application.",
+    "data_tools": "Existing JSON/protocol exports moved to a collapsed Additional data tools footer drawer; handlers and IDs retained.",
+    "map": "Larger responsive viewport; zoom +/−, pan, reset, expand/close, keyboard navigation and touch pinch; wheel zoom after engagement or Ctrl wheel.",
+    "preserve": "Existing topology, annual datasets, UCDP/GDELT, prayer/privacy thresholds, read-only XRPL/NFT layers and established JCS design/identity."
+  },
+  "owner_viewer": {
+    "file": "prayer-map-editor.html",
+    "controls": [
+      "Preview page / View full code",
+      "Copy full HTML",
+      "Download HTML",
+      "Select all code"
+    ],
+    "source": "Self-contained base64 UTF-8 snapshot of the exact complete public file; regenerate after every edit.",
+    "download_filename": "prayer.map.html",
+    "copy_fallback": "Read-only full-source textarea supports manual selection and copying if clipboard access fails.",
+    "preview_only_base": "https://jesuschristsavestoken.com/ is injected into iframe preview only; copied/downloaded bytes remain the original public source.",
+    "boundary": "Owner convenience, not authentication or confidentiality. Controls are outside the exported public page. An HTML page that displays the code is acceptable; no Inspect Element step should be required."
+  },
+  "timeline": {
+    "range_ad": [
+      1,
+      2026
+    ],
+    "historical_milestones": 18,
+    "controls": [
+      "exact-year slider/input",
+      "year ±1",
+      "era jumps",
+      "milestone playback"
+    ],
+    "meaning": "Selected sourced chronology, not a fabricated annual persecution series or an exhaustive history. Preserve dated/approximate/traditional labels and source links; early years without records have no invented scores. Modern geography is orientation only.",
+    "separate_annual_modes": {
+      "annual_pressure": "Open Doors 2020–2026",
+      "violence_and_peace": "UCDP 2019–2025"
+    },
+    "live_layers": "Prayer/live reports and optional recent overlay remain distinct from historical evidence."
+  },
+  "historical_nexus": {
+    "intent": "Opposing suffering and support converge; accumulated Nexus points remain as the map advances.",
+    "visual": "Inward red/green particles, opposing arcs, expanding waves, glow and a gold cross/core.",
+    "reference": "PLAYBACK-BATTLE-NEXUS-2026-09-23.md supplies the prior opposing-stream visual concept; its trading depth, stale-data rules and market interpretation do not transfer to historical Christianity.",
+    "categories": {
+      "red": [
+        "suffering"
+      ],
+      "green": [
+        "community",
+        "freedom"
+      ],
+      "neutral_excluded_from_harm": [
+        "division",
+        "change"
+      ]
+    },
+    "birth_rule": "A region appears only when dated evidence from both red and green categories exists at or before the selected year.",
+    "onsets": [
+      {
+        "region": "Mediterranean",
+        "year_ad": 64,
+        "initial_evidence": "Pentecost 33 and Rome 64"
+      },
+      {
+        "region": "East Asia",
+        "year_ad": 845,
+        "initial_evidence": "China 635 and China 845"
+      },
+      {
+        "region": "East Africa",
+        "year_ad": 1886,
+        "initial_evidence": "Aksum 330 and Uganda 1886"
+      }
+    ],
+    "persistence": "Retain keyed SVG DOM nodes for both historical markers and Nexus regions. Forward progression updates evidence without recreating nodes. Rewind hides future points/evidence; forward restores cached nodes.",
+    "interaction": "Keyboard-accessible selection opens both dated event lists; milestone selection opens source details.",
+    "motion": "Reduced-motion CSS stops animation; animations pause when the document is hidden. No new dedicated animation pause control was added.",
+    "export": "jcs-history-state includes historicalNexus with region IDs, birth/through years, evidence event IDs, positions and method; JSON export retains chronology, original annual data and historical context.",
+    "meaning_boundary": "Symbolic competition/tension between recorded themes. Persistence does not establish ongoing conflict, causation, travel routes or relative strength. No numerical force score is inferred."
+  },
+  "implementation_recovery": {
+    "modules": [
+      "nexus-history.js",
+      "nexus-history.css",
+      "full-chronology.js",
+      "history-data.json",
+      "map-navigation.js",
+      "map-improvements.css"
+    ],
+    "helpers": [
+      "build-correction.py",
+      "create-owner-editor.py",
+      "check-nexus.cjs"
+    ],
+    "availability": "These scratch helpers may expire; their delivered executable/data content is embedded in the complete public HTML. Do not depend on helper paths surviving.",
+    "integration": "Single authoritative existing setViewBox; navigation uses jcs:set-map-viewbox. createHistoricalNexus integrates with chronology rather than rebuilding the map each frame."
+  },
+  "verification": {
+    "provenance": "Results already completed during the page-edit task; reused here without rerunning application tests.",
+    "inline_javascript": "8 executable blocks parse; embedded JSON parses.",
+    "focused_module_harness": "Passed mocked-DOM checks of onset years, retained node identity, rewind/restore, evidence categories, Nexus selection/source drilldown and history export.",
+    "owner_source_payload": "Decoded embedded public HTML matched the delivered public file byte-for-byte.",
+    "browser_rendering": "not verified; Playwright Chromium executable unavailable and installer failed with invalid/empty archive",
+    "live_wallet_or_xrpl": "not verified",
+    "application_commit_merge_deployment": "not performed in this conversation"
+  },
+  "reasoning_preference": {
+    "updated": "2026-09-29",
+    "source": "Explicit user instruction while requesting this GitHub AI checkpoint.",
+    "checkpoint_work": "User prefers Ultra for creating and reconciling memory/checkpoints, even when the task is not technically complex.",
+    "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
+    "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
+    "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
+  },
+  "known_blocker": {
+    "condition": "No usable browser runtime in this page-edit workspace; installer returned invalid/empty archive.",
+    "resume_when": "New evidence of an available working browser/runtime, not merely a repeated prompt or new session.",
+    "independent_work": "Manual HTML handoff and requested memory publication can continue."
+  },
+  "resume": [
+    "Read this compact checkpoint and recover the latest accepted complete artifact.",
+    "Apply only the next requested page change; preserve the owner/public separation, full chronology and persistent evidence-based Nexus.",
+    "Regenerate the owner payload whenever public HTML changes.",
+    "Reuse recorded checks; perform only a required gate or focused check for a concrete new risk.",
+    "Return complete files for user commit; application commit/deployment requires that explicit request."
+  ],
+  "next_issue": "XRB-001",
+  "preserved_queue": "Legacy XRBC/XRB queue and Bing/ecosystem/Creature/tokenization handoffs are unchanged and resume only when their topic is requested.",
+  "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+  "source_commit_scope": "Inherited legacy XRBC/frontend and shared-backend snapshots solely for continuity with the repository schema. Not newly observed here, not JCS source commits, and not evidence of deploying these artifacts.",
+  "evidence": "memory/audits/2026-09-29-jcs-prayer-map-nexus.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [],
+  "created_from_user_authorization": true
+}
