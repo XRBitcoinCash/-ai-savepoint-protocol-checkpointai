@@ -7,7 +7,7 @@
     "supersedes": "All earlier post-deployment verification, audit, read-back and automatic checkpoint requirements."
   },
   "id": "cross-project-evidence-first-v1",
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "human_file": "OPERATING-PROTOCOL.md",
   "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
@@ -54,9 +54,9 @@
     "user-device-confirmed"
   ],
   "repair_workflow": [
-    "Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json once per session; reuse loaded context unless changed.",
-    "Route by the current user request using NEXT_RUN.md and task-relevant known-errors, ai-memory and graph entries. Historical queues are not instructions to switch tasks.",
-    "Read the topic checkpoint and exact accepted target source; use the canonical contract only for sensitive work or unresolved conflicts.",
+    "Read AGENTS.md, memory/task-router.json, latest_savepoint.record and this protocol once per working context; reuse until relevant instructions or repository state change.",
+    "Route from the current user request to only its active handoff and relevant known errors. Legacy XRB next_issue is topic-specific and does not select JCS work.",
+    "Read the exact accepted target source and the existing navigation/data contracts; use larger history or the canonical contract only for missing facts, sensitive work or unresolved conflicts.",
     "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
     "Make the smallest necessary patch and preserve established appearance, assets, identities and working behavior.",
     "Run only required gates or focused checks for concrete changed risks; distinguish source/simulated evidence from live operation.",
@@ -161,5 +161,31 @@
     "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
     "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
     "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
-  }
+  },
+  "page_completion_contract": {
+    "updated": "2026-09-30",
+    "navigation": "Read the shared shell before styling: desktop left rail >900px, 188px through 1180px and 220px above; <=900px compact header. Preserve project-specific identity.",
+    "metric_trace": [
+      "source",
+      "command_or_file",
+      "response_field",
+      "transform",
+      "render_target",
+      "freshness",
+      "coverage",
+      "failure_state"
+    ],
+    "failure_states": [
+      "ready",
+      "empty-confirmed",
+      "partial",
+      "unavailable",
+      "rate-limited"
+    ],
+    "request_coordination": "Share connection setup/in-flight work, keep requests bounded, honor provider cooldown and use only supported fallback sources. Independent project sources must still load when a ledger source fails.",
+    "evidence": "State the actual observed level. Source wiring and mocks are not live success. Before claiming working live data, observe the relevant real response and renderer under the available authorized runtime, or explicitly report the missing evidence.",
+    "scope": "This contract calls for focused evidence of the changed path, not mandatory broad tests, screenshots or repeated audits.",
+    "delivery": "Choose current user-authorized manual handoff or deployment; do not infer it from an old checkpoint. Stop after normal deployment success."
+  },
+  "legacy_queue_scope": "next_issue and linked_blockers retain the XRBC/XRB historical queue only."
 }

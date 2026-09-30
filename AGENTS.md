@@ -1,18 +1,16 @@
 # Continuity entrypoint
 
-## Current checkpoint and owner delivery — 2026-09-29
+## Current checkpoint and task routing — 2026-09-30
 
-Active memory: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. For the JCS Prayer Map, read `JCS-PRAYER-MAP-NEXUS-2026-09-29.md` and `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json`. Preserve the AD 1–2026 sourced chronology, larger zoomable map and persistent evidence-based Nexus. Application files are prepared for user commit; browser rendering and deployment are unverified.
+Active memory: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Read `memory/task-router.json`, then only the matching record. Current JCS state lives in `memory/active/JCS-OBSERVATORY-2026-09-30.json`; the human summary is `JCS-OBSERVATORY-RECOVERY-2026-09-30.md`. The Prayer Map at `deb0769` is deployed and user accepted. The Observatory at `1b43bcf` deployed but failed on the user's device; its mocked checks were not live-feed proof. Corrected source is prepared for a seven-file manual handoff; the user commits it. This checkpoint does not claim that correction is deployed.
 
-The accepted **separate owner HTML viewer** exposes the entire public page with View full code / Copy full HTML / Download HTML. Keep those controls outside the exported public application; do not make the user use Inspect Element. Regenerate the exact static source snapshot after edits. Displaying code in an HTML viewer is acceptable. For verify/NFT work, retain the separate verify checkpoint and dependencies.
+Load this entrypoint and the compact routing/protocol once per working context. Reuse their contents until relevant instructions or repository state change. Do not load the 100KB history, every old queue or every graph route by default. Use full historical files only for a missing fact, conflict or sensitive contract. The current user request chooses the work and delivery mode; the preserved `XRB-001` queue is not the current JCS task.
 
-User reasoning preference: Ultra for memory/checkpoint creation; very high or another lower setting for routine page work. This preference does not change model settings or waive evidence requirements. Keep the save compact and reuse completed checks.
+Before styling a page, read its actual shared navigation contract: fixed scrollable side navigation above 900px, 188px through 1180px and 220px above; compact top navigation only at <=900px. Retain JCS identity and Gothic styling. Before promising a metric, trace source -> request/file -> response field -> transform -> visible result and error state. A CI success or mock fixture is not evidence that a live feed works. Do not render failed requests as zero, empty history or full coverage.
 
-## Accepted manual page workflow — 2026-09-28 (clarified above)
+For manual code delivery, patch the latest accepted complete source and provide the separate full-file owner viewer. For an authorized deployment, use the existing workflow; do not let an older manual handoff override the current explicit request. Memory publication is separate authorization. Prepare and publish requested memory before the website deployment; stop when that deployment succeeds.
 
-Current user intent chooses the task and delivery mode. For JCS `verify.html` and other explicitly requested preview/code handoffs, read `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Patch the latest accepted complete file, preserve its established design and working JS, and deliver complete public HTML plus functional owner View code / Copy full HTML / Download HTML controls in the separate viewer. The user commits application files unless asking us to commit or deploy. A separately requested memory update authorizes this repository only. Full-file delivery is not a redesign. Older block-only or automatic-deployment defaults do not override this workflow.
-
-Load only relevant checkpoint routes. Bing, ecosystem, tokenization and XRB queues below remain pending topic-specific work; they do not select the current task.
+User reasoning preference: Ultra for memory/checkpoint work; lower settings may be used for routine page work according to the current request. This does not change model settings or evidence requirements.
 
 ## Routine page corrections — user override, 2026-09-26
 
@@ -37,11 +35,11 @@ Once the requested fix is deployed, stop immediately. Under no circumstances per
 This instruction supersedes all earlier repository guidance requiring post-deployment checks, read-backs, or checkpoint updates.
 
 Before development or research that uses this checkpoint:
-1. Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json.
-2. Read NEXT_RUN.md and the relevant entries in memory/known-errors.json.
-3. Load only task-relevant ai-memory.json and memory/synapse-map.json entries for project facts and evidence.
-4. For repository edits, verify the exact target repository, branch, current head and applicable instructions; inspect CI only when relevant. For manual file delivery, patch the latest accepted complete upload/artifact and compare repository history only as needed.
-5. Read the canonical contract for security-sensitive work or conflicting evidence.
+1. Reuse loaded instructions; otherwise read `memory/task-router.json`, `latest_savepoint.record` and `memory/operating-protocol.json` once.
+2. Select the requested topic and read only its active handoff and relevant known errors.
+3. Verify the exact target repository, branch, current head and source before writing; preserve concurrent changes.
+4. Load `ai-bootstrap.json`, relevant `ai-memory.json` or graph entries only when the compact route lacks a needed fact.
+5. Read the canonical contract for security-sensitive work or unresolved conflicting evidence.
 
 Existing search-discovery checkpoint (resume only for that topic): SAVEPOINT-2026-09-25-xrbitcoinlabs-search-discovery.
 Read memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json and XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md; resume with Bing sitemap-scan completion and stale Recommendations. User reports xrbitcoinlabs.com works and forwards to xrbitcoincash.com/xrbitcoin-links.html. The one-page scan was not a site-wide pass; indexing, result logo and AI citations remain unverified. Recheck MR !35 status; existing XRB-001/007/008 device retests and separate XRB-009 remain queued.

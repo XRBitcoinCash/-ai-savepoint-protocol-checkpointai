@@ -1,10 +1,10 @@
-## Choose the requested task — 2026-09-29
+## Choose the requested task — 2026-09-30
 
-Active memory checkpoint: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. For Prayer Map work, load `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json` and `JCS-PRAYER-MAP-NEXUS-2026-09-29.md`. Resume from the latest accepted complete `prayer.map.html` and separate `prayer-map-editor.html`; preserve the AD 1–2026 milestone chronology, zoomable map and accumulating Nexus nodes. Return exact complete public HTML through the owner viewer; the user commits it. Prepared files do not establish deployment or browser visual verification.
+Active checkpoint: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Start at `memory/task-router.json`; JCS metrics and Prayer Map state is in `memory/active/JCS-OBSERVATORY-2026-09-30.json`. Read it once and reuse it. The accepted map is deployed at `deb0769`. Observatory `1b43bcf` deployed but the user reports nonworking metrics and an incorrect desktop header; corrected source is prepared for manual handoff, not committed or deployed.
 
-For the separate `verify.html` prayer/NFT page, load `JCS-VERIFY-WORKFLOW-2026-09-28.md`. Its old map exclusion applied to that prior task, not later explicit map requests. Ultra is the user's preferred setting for checkpoint work; very high or another lower setting is intended for ordinary pages. No setting is changed by memory.
+For JCS metrics, fix the actual source/request/render path and the shared side-navigation contract. Distinguish rate-limited/unavailable data from confirmed zero or empty results; load independent project sources even when XRPL is unavailable. Reuse completed evidence and only run focused checks for the changed failure. Confirm current delivery authorization; old manual viewer instructions do not override an authorized deployment. Prepare requested memory first and stop immediately once that deployment succeeds.
 
-Use the current user request to choose work. Older search-discovery, ecosystem and XRB queues below remain preserved topic-specific handoffs.
+The historical `XRB-001` queue and all other topic handoffs below are preserved. They do not choose the current task. For verify/NFT work, use its own route and current complete source.
 
 ## Ecosystem page update — 2026-09-26
 

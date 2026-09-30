@@ -2,17 +2,17 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-29
+**Updated:** 2026-09-30
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
 
-## Current memory checkpoint — 2026-09-29
+## Current memory checkpoint — 2026-09-30
 
-Active: `SAVEPOINT-2026-09-29-jcs-prayer-map-nexus`. Read `memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json` and `JCS-PRAYER-MAP-NEXUS-2026-09-29.md` for the prepared JCS Prayer Map: AD 1–2026 sourced chronology, larger zoomable map, persistent opposing historical Nexus and a separate owner source viewer. Public code controls stay outside the exported page; the owner viewer exposes the full exact HTML without Inspect Element. Files are delivered for user commit; no application deployment or browser visual verification is established.
+Active: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Start with `memory/task-router.json`, then `memory/active/JCS-OBSERVATORY-2026-09-30.json` for JCS work; `JCS-OBSERVATORY-RECOVERY-2026-09-30.md` is the short human explanation. Prayer Map `deb0769` is deployed and user accepted. Observatory `1b43bcf` deployed but failed on the user's device: rate-limited XRPL startup and the wrong desktop header. Its mock checks did not establish functioning live metrics. Corrected source is prepared for a seven-file manual handoff; no application commit or deployment is claimed.
 
-The user prefers Ultra for checkpoint creation and very high or another lower setting for ordinary page work. This is a workflow preference, not an automatic model-setting change. The current user request selects the topic; unrelated historical queues remain intact. The inherited XRBC/backend hashes in the checkpoint schema are historical snapshots, not JCS commits or new observations.
+Read routing and relevant instructions once per working context; reuse loaded evidence. Do not reload all history or treat the old `XRB-001` queue as the current task. Before page styling, inspect the shared sidebar contract. Before adding or claiming a metric, trace its real source, request/field, transformation, renderer and failure state. Current user authorization selects manual delivery or deployment. Prepare requested memory before website deployment and stop immediately at successful deployment.
 
 ## Current workflow clarification — 2026-09-28 (owner controls clarified above)
 

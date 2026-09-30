@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-09-30",
+  "purpose": "Small first read: select the current task and load only its relevant record. Full history stays in the existing archive and graph.",
+  "read_once": [
+    "AGENTS.md",
+    "memory/task-router.json",
+    "latest_savepoint.record",
+    "memory/operating-protocol.json"
+  ],
+  "reload_when": "A relevant repository revision or current instruction changes; compaction alone is not a reason to repeat completed reads.",
+  "active_savepoint": {
+    "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
+    "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+    "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md"
+  },
+  "routes": {
+    "jcs_metrics": {
+      "match": [
+        "metrics.html",
+        "JCS Observatory",
+        "JCS metrics",
+        "ledger metrics"
+      ],
+      "read": [
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json"
+      ],
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "path": "metrics.html",
+      "known_errors": [
+        "JCS-METRICS-001",
+        "JCS-METRICS-002"
+      ]
+    },
+    "jcs_map": {
+      "match": [
+        "prayer.map.html",
+        "Prayer Map",
+        "Nexus",
+        "stars",
+        "timeline"
+      ],
+      "read": [
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json"
+      ],
+      "section": "accepted_prayer_map",
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "path": "prayer.map.html",
+      "dependency": "jcs-historical-atlas-data.js"
+    },
+    "jcs_verify": {
+      "match": [
+        "verify.html",
+        "prayer NFT verification"
+      ],
+      "read": [
+        "JCS-VERIFY-WORKFLOW-2026-09-28.md"
+      ],
+      "rule": "Read latest source before assuming the old artifact is current."
+    },
+    "xrbc_ecosystem": {
+      "match": [
+        "xrbc-ecosystem.html",
+        "MR !37"
+      ],
+      "read": [
+        "ECOSYSTEM-CLARITY-2026-09-26.md"
+      ],
+      "blocker": "GitLab CI quota; require changed evidence before retry."
+    },
+    "other_topic": {
+      "read": [
+        "ai-bootstrap.json"
+      ],
+      "rule": "Select the matching routing entry, not all routes; only load the canonical contract or graph when needed."
+    }
+  },
+  "session_contract": [
+    "Current user request selects topic and output mode. Legacy next_issue is not a global todo.",
+    "Record prepared, committed, deployed and live-observed separately.",
+    "For presentation use the exact shared shell contract; for metrics map source -> request -> field -> transform -> renderer -> state.",
+    "Read back one atomic memory publication before website deployment, if memory was requested. Never add memory work after successful deployment."
+  ]
+}

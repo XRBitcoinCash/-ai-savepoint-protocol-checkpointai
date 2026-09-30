@@ -8,7 +8,7 @@
   },
   "document_id": "xrbc/ai-bootstrap/1.0.0",
   "status": "active",
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "purpose": "Minimal machine-first entrypoint for rehydrating XRBitcoinCash project context without loading the full history first.",
   "scope_boundary": "This repository is an external continuity/context layer. It improves project-state recovery and routing; it does not alter model weights or create persistent internal model state.",
   "authority": {
@@ -19,12 +19,13 @@
     "next_run": "NEXT_RUN.md",
     "operating_protocol": "memory/operating-protocol.json",
     "known_errors": "memory/known-errors.json",
-    "audit_evidence": "memory/audits/2026-09-22-reliability-audit.json"
+    "audit_evidence": "memory/audits/2026-09-22-reliability-audit.json",
+    "task_router": "memory/task-router.json"
   },
   "load_order": [
-    "Read ai-bootstrap.json, latest_savepoint.record and memory/operating-protocol.json once per session; reuse loaded context unless changed.",
-    "Route by the current user request using NEXT_RUN.md and task-relevant known-errors, ai-memory and graph entries. Historical queues are not instructions to switch tasks.",
-    "Read the topic checkpoint and exact accepted target source; use the canonical contract only for sensitive work or unresolved conflicts."
+    "Read AGENTS.md, memory/task-router.json, latest_savepoint.record and the operating protocol once per working context; reuse until relevant state changes.",
+    "Use the router to load only the requested active handoff. This larger bootstrap is fallback history/routing, not a requirement to load every topic.",
+    "Current conversation scope and authorization control delivery; a historical next_issue or manual handoff is not a global instruction."
   ],
   "repositories": {
     "memory": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -71,14 +72,17 @@
       "pipeline_id": 2867921308,
       "pipeline_status": "success"
     },
-    "next_major_pass": "Choose the current user-requested topic. For JCS verify.html use JCS-VERIFY-WORKFLOW-2026-09-28.md. Resume search-discovery and the XRB issue queue only when requested; their existing evidence and unresolved status remain intact.",
+    "next_major_pass": "Deliver prepared complete JCS metrics files through the owner copy viewer; user commits application code. Preserve unrelated queues.",
     "active_memory_savepoint": {
-      "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
-      "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
-      "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified"
+      "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
+      "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
+      "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
+      "created": "2026-09-30",
+      "scope": "JCS accepted map baseline, Observatory failure and recovery, shared navigation and evidence-aware delivery protocol.",
+      "next_task": "Deliver prepared complete JCS metrics files through the owner copy viewer; user commits application code. Preserve unrelated queues."
     },
-    "latest_pointer_expected_id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+    "latest_pointer_expected_id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
     "previous_verified_frontend_change": {
       "scope": "XRBC homepage layout restoration, including user-corrected alignment with Liquidity Pool sidebar above 900px.",
       "implementation_commit": "3701c892041df7a0cd948e3dff6faa6f888fae92",
@@ -134,7 +138,8 @@
       "highest_priority_status": "retest-required",
       "frontend_head_when_recorded": "8c13eaf222ea7a70b74837a474a496de3d22a531",
       "audit_checkpoint": "SAVEPOINT-2026-09-22-reliability-audit-memory-hardening",
-      "repair_checkpoint": "SAVEPOINT-2026-09-23-public-liquidity-discovery"
+      "repair_checkpoint": "SAVEPOINT-2026-09-23-public-liquidity-discovery",
+      "queue_scope": "Legacy XRBC/XRB topics only; current JCS issues live in registry.jcs.observatory."
     },
     "observed_source_heads": {
       "frontend": "8c13eaf222ea7a70b74837a474a496de3d22a531",
@@ -378,22 +383,170 @@
       "no_site_or_dns_changes": true
     },
     "current_jcs_prayer_map": {
-      "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
-      "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
-      "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
-      "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
-      "created": "2026-09-29",
-      "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
-      "next_task": "Continue only the user-requested page change from the latest accepted full HTML; preserve the separate owner viewer and persistent historical Nexus.",
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
       "page": "prayer.map.html",
-      "owner_viewer": "prayer-map-editor.html",
-      "artifact_hashes": {
-        "prayer.map.html": "ea41f874dade31a8c42fc5c6a0926c2f3f8000aea9dfe7843d6344e1a1f70664",
-        "prayer-map-editor.html": "a4af7532bef1b071d39e769cb4ee70167306012b12e162ac0b2c6f74339055d2"
+      "dependency": "jcs-historical-atlas-data.js",
+      "application_commit": "deb0769551fba810c26b9b5e98b1e801aeb1a4c0",
+      "deployment_run": 36764288510,
+      "deployment_status": "success",
+      "status": "deployed; user-accepted-baseline",
+      "user_acceptance": "2026-09-30: user said the result seems accurate and approved it as the baseline.",
+      "evidence": "17 targeted interaction simulations passed; Pages deployment succeeded; user acceptance is separate from a comprehensive live audio/device test.",
+      "preserve": [
+        "One journey controller owns audio/timeline/play/pause/seek/restart.",
+        "Selections and live layer toggles preserve playback intent and timeline position.",
+        "16 layer switches above the stars; five visible rows, scroll for the rest; all on by default.",
+        "Gothic Catholic presentation, enlarged map, defined paint order and shared label collision handling.",
+        "Time-derived falling/landed star state survives seek and reset; 123 assigned motifs of 200, remaining motifs unassigned.",
+        "Scriptural imagery remains distinct from sourced historical evidence; no fabricated per-capita ranking or complete historical geography."
+      ],
+      "prior_record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+      "supersedes": "The old September 29 manual artifact is historical, not the current accepted application source. Its owner viewer has not been regenerated for this deployed revision."
+    },
+    "current_jcs_observatory": {
+      "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "page": "metrics.html",
+      "url": "https://jesuschristsavestoken.com/metrics.html",
+      "observed_implementation_commit": "1b43bcf05fa4980edfd3861bcc5fe4f109a3baaa",
+      "deployment_run": 36773045597,
+      "deployment_status": "success",
+      "status": "deployed-baseline-intermittently-rate-limited; correction-prepared-for-manual-handoff",
+      "failed_claim_boundary": "24 prior mock fixtures and successful deployment did not establish reliable live metrics. The user encountered genuine startup failure; a subsequent live observation showed some working cards and a history-scan quota failure. Do not call everything unwired or claim the correction is live verified.",
+      "user_report": "None of the metrics load; desktop top header violates the established ecosystem side navigation. User accepts the visual theme otherwise.",
+      "observed_error": {
+        "kind": "rate-limit",
+        "message_summary": "10000 request units per 60 seconds; response reported roughly 12333 ms before retry.",
+        "meaning": "A provider budget rejection, not proof of empty ledger data. Honor the returned cooldown; no tight retry loop.",
+        "additional_live_error": {
+          "command": "account_tx",
+          "window": "2000 units per 10 seconds",
+          "reported_retry_ms": 17821,
+          "transactions_read_before_rate_limit": 200
+        }
       },
-      "application_commit": null,
-      "browser_visual_verified": false,
-      "deployment_verified": false
+      "source_confirmed_causes": [
+        "Adapter handshake treats every RPC error as fatal, including temporary provider rate limits.",
+        "A failed core snapshot leaves all dependent ledger panels pending; the independent project manifest already loads successfully.",
+        "Initial automatic account_tx history scanning can consume the provider budget in bursts.",
+        "Page uses a top header instead of the documented desktop side rail."
+      ],
+      "planned_recovery": [
+        "Shared reconnect and structured rate-limit errors; honor returned cooldown and use bounded failover for infrastructure faults.",
+        "Optional ledger subscription cannot block the read-only snapshot.",
+        "Core refresh runs at a 60-second interval.",
+        "Initial account-history and holder scans read one page; deliberate Load older records and Load more balances resume scans.",
+        "Each initial failure panel has an explicit unavailable/rate-limited state and server-directed retry timing.",
+        "Canonical left rail at >900px (188px through 1180px, 220px above); compact header <=900px; retain Gothic theme."
+      ],
+      "corrected_release": {
+        "status": "source-prepared-for-manual-handoff",
+        "commit": null,
+        "deployment_run": null,
+        "delivery": "Seven complete repository-path files in a separate owner copy viewer; user commits application files. No application commit or deployment by assistant in this repair.",
+        "changed_files": [
+          "metrics.html",
+          "css/jcs-metrics-header.css",
+          "css/jcs-metrics.css",
+          "js/jcs-metrics-ledger.js",
+          "js/jcs-metrics.js"
+        ],
+        "unchanged_required_companions": [
+          "js/jcs-metrics-community.js",
+          "data/jcs-metrics-project.json"
+        ],
+        "implemented": [
+          "Shared reconnect and structured rate-limit errors; honor returned cooldown and use bounded failover for infrastructure faults.",
+          "Optional ledger subscription cannot block the read-only snapshot.",
+          "Core refresh runs at a 60-second interval.",
+          "Initial account-history and holder scans read one page; deliberate Load older records and Load more balances resume scans.",
+          "Each initial failure panel has an explicit unavailable/rate-limited state and server-directed retry timing.",
+          "Canonical left rail at >900px (188px through 1180px, 220px above); compact header <=900px; retain Gothic theme."
+        ],
+        "verification": {
+          "adapter_targeted_synthetic_checks": 6,
+          "css": "static contract check only",
+          "ui": {
+            "status": "passed",
+            "scenarios": 4,
+            "scope": "Actual modules with mocked transport and DOM only. Not corrected browser/layout/live verification.",
+            "cases": [
+              "Cold quota clears pending panels and blocks early RPC.",
+              "Startup loads exactly one history page and one balance page and populates fields.",
+              "Load older records sends the saved marker and retains existing data.",
+              "Failed fresh snapshot retains data and pauses automatic refresh."
+            ]
+          },
+          "live_corrected_candidate": "not verified",
+          "overall": "Prepared source identified and targeted synthetic cases pass; real corrected-feed and layout operation are not established."
+        },
+        "live_verification": null,
+        "source_artifacts": [
+          {
+            "path": "metrics.html",
+            "bytes": 28167,
+            "sha256": "ab4fe3a048eaa91d806090533cbfea2396188071e70e6a70b7bb199402a1b934",
+            "changed": true
+          },
+          {
+            "path": "css/jcs-metrics-header.css",
+            "bytes": 26600,
+            "sha256": "5196b4b31c2095aefbcec57f8f46e4097e19116805265d49ca1604791ba1cc21",
+            "changed": true
+          },
+          {
+            "path": "css/jcs-metrics.css",
+            "bytes": 21853,
+            "sha256": "808c33d2ef3ab0614b7b535bdbd7fdba31fb8f8c937a73570701948d4c4d28f3",
+            "changed": true
+          },
+          {
+            "path": "js/jcs-metrics-ledger.js",
+            "bytes": 28985,
+            "sha256": "683f824a1b358de0bc28033fb66bcdeed69b7e67f4c76609104cd2a901850ac0",
+            "changed": true
+          },
+          {
+            "path": "js/jcs-metrics.js",
+            "bytes": 40516,
+            "sha256": "5518788bbc4af720a8f9c7dcd87e33baccac5a6f1fcc3ca08e6214a895f6df22",
+            "changed": true
+          },
+          {
+            "path": "js/jcs-metrics-community.js",
+            "bytes": 27433,
+            "sha256": "f25d456d19c33f55587b7f3a86fe96b60ac7b5cc9ff1bbab7a096ffbcaef2153",
+            "changed": false
+          },
+          {
+            "path": "data/jcs-metrics-project.json",
+            "bytes": 1982,
+            "sha256": "5c893b5f47515e4438d6fd0d19f469028f692f8c58140a4cc791f4693d7c0be9",
+            "changed": false
+          }
+        ],
+        "module_contracts": {
+          "metrics.html": "Repository-path public page; dependent scripts/styles remain external at their listed paths. Owner code controls stay outside this page.",
+          "css/jcs-metrics-header.css": "Shared navigation geometry: 188px rail at 901–1180px, 220px above; compact top navigation at <=900px; content offsets follow shell.",
+          "css/jcs-metrics.css": "Accepted Observatory visual theme and metric presentation.",
+          "js/jcs-metrics-ledger.js": "Single shared connection/reconnect work, structured provider errors, directed cooldown, bounded infrastructure failover; optional subscription does not gate snapshot.",
+          "js/jcs-metrics.js": "UI/data coordination, independent-source rendering, explicit failure states, one-page initial scans, deliberate resumable pagination and 60-second core refresh.",
+          "js/jcs-metrics-community.js": "Unchanged required community-data companion; preserve exactly.",
+          "data/jcs-metrics-project.json": "Unchanged required project-data resource; preserve exact JSON file at this path."
+        }
+      },
+      "subsequent_live_baseline_observation": {
+        "commit": "1b43bcf05fa4980edfd3861bcc5fe4f109a3baaa",
+        "date": "2026-09-30",
+        "validated_ledger": 107344789,
+        "pool_xrp_reserve": 247.927,
+        "registry_records_at_least": 7,
+        "holder_scan": "complete in one page",
+        "history_scan": "200 transactions read, then account_tx rate limit; retry reported 17821 ms",
+        "scope": "Read-only observation of the deployed baseline, not the corrected candidate. Demonstrates intermittent quota/startup failure and over-eager history scanning, not universal absence of wiring."
+      }
     }
   },
   "safety_invariants": [
@@ -567,18 +720,19 @@
       "JCS-WALLET-RECOVERY-2026-09-22.md"
     ],
     "jcs_prayer_map": [
-      "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
-      "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
-      "memory/operating-protocol.json"
+      "memory/active/JCS-OBSERVATORY-2026-09-30.json"
     ],
     "historical_nexus": [
-      "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
-      "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+      "memory/active/JCS-OBSERVATORY-2026-09-30.json",
       "PLAYBACK-BATTLE-NEXUS-2026-09-23.md"
     ],
     "reasoning_workflow": [
       "memory/operating-protocol.json",
       "JCS-PRAYER-MAP-NEXUS-2026-09-29.md"
+    ],
+    "jcs_metrics": [
+      "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "JCS-OBSERVATORY-RECOVERY-2026-09-30.md"
     ]
   },
   "transition": {
@@ -589,9 +743,9 @@
     "promotion_rule": "Move a memory category to machine-primary only after repeated session bootstraps resolve the same source-of-truth, latest savepoint, invariants, and task routing without contradiction."
   },
   "workflow_revision": {
-    "date": "2026-09-29",
-    "record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
-    "scope": "JCS map artifact handoff and owner-viewer/reasoning preferences; memory publication only.",
-    "latest_savepoint_boundary": "Latest memory is the JCS handoff; historical application status and unrelated queues remain topic-specific and do not select the task."
+    "date": "2026-09-30",
+    "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+    "scope": "Compact active routing, accepted JCS map baseline, Observatory failure/recovery and evidence-aware page completion.",
+    "latest_savepoint_boundary": "Current memory is a JCS recovery handoff; legacy source hashes and queues remain historical and do not select the task."
   }
 }

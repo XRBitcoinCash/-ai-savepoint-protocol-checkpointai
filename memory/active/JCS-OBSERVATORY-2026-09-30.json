@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.1.0",
+  "checkpoint_kind": "memory-recovery-handoff",
+  "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
+  "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+  "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
+  "date": "2026-09-30",
+  "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
+  "scope": "JCS accepted map baseline, Observatory failure and recovery, shared navigation and evidence-aware delivery protocol.",
+  "previous_memory_savepoint": {
+    "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
+    "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json"
+  },
+  "current_priority": [
+    "Publish the corrected continuity routing with exact evidence and known failure paths.",
+    "Deliver the seven complete metrics source files through the owner copy viewer; user reviews and commits application code."
+  ],
+  "accepted_prayer_map": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "page": "prayer.map.html",
+    "dependency": "jcs-historical-atlas-data.js",
+    "application_commit": "deb0769551fba810c26b9b5e98b1e801aeb1a4c0",
+    "deployment_run": 36764288510,
+    "deployment_status": "success",
+    "status": "deployed; user-accepted-baseline",
+    "user_acceptance": "2026-09-30: user said the result seems accurate and approved it as the baseline.",
+    "evidence": "17 targeted interaction simulations passed; Pages deployment succeeded; user acceptance is separate from a comprehensive live audio/device test.",
+    "preserve": [
+      "One journey controller owns audio/timeline/play/pause/seek/restart.",
+      "Selections and live layer toggles preserve playback intent and timeline position.",
+      "16 layer switches above the stars; five visible rows, scroll for the rest; all on by default.",
+      "Gothic Catholic presentation, enlarged map, defined paint order and shared label collision handling.",
+      "Time-derived falling/landed star state survives seek and reset; 123 assigned motifs of 200, remaining motifs unassigned.",
+      "Scriptural imagery remains distinct from sourced historical evidence; no fabricated per-capita ranking or complete historical geography."
+    ],
+    "prior_record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+    "supersedes": "The old September 29 manual artifact is historical, not the current accepted application source. Its owner viewer has not been regenerated for this deployed revision."
+  },
+  "metrics": {
+    "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+    "branch": "main",
+    "page": "metrics.html",
+    "url": "https://jesuschristsavestoken.com/metrics.html",
+    "observed_implementation_commit": "1b43bcf05fa4980edfd3861bcc5fe4f109a3baaa",
+    "deployment_run": 36773045597,
+    "deployment_status": "success",
+    "status": "deployed-baseline-intermittently-rate-limited; correction-prepared-for-manual-handoff",
+    "failed_claim_boundary": "24 prior mock fixtures and successful deployment did not establish reliable live metrics. The user encountered genuine startup failure; a subsequent live observation showed some working cards and a history-scan quota failure. Do not call everything unwired or claim the correction is live verified.",
+    "user_report": "None of the metrics load; desktop top header violates the established ecosystem side navigation. User accepts the visual theme otherwise.",
+    "observed_error": {
+      "kind": "rate-limit",
+      "message_summary": "10000 request units per 60 seconds; response reported roughly 12333 ms before retry.",
+      "meaning": "A provider budget rejection, not proof of empty ledger data. Honor the returned cooldown; no tight retry loop.",
+      "additional_live_error": {
+        "command": "account_tx",
+        "window": "2000 units per 10 seconds",
+        "reported_retry_ms": 17821,
+        "transactions_read_before_rate_limit": 200
+      }
+    },
+    "source_confirmed_causes": [
+      "Adapter handshake treats every RPC error as fatal, including temporary provider rate limits.",
+      "A failed core snapshot leaves all dependent ledger panels pending; the independent project manifest already loads successfully.",
+      "Initial automatic account_tx history scanning can consume the provider budget in bursts.",
+      "Page uses a top header instead of the documented desktop side rail."
+    ],
+    "planned_recovery": [
+      "Shared reconnect and structured rate-limit errors; honor returned cooldown and use bounded failover for infrastructure faults.",
+      "Optional ledger subscription cannot block the read-only snapshot.",
+      "Core refresh runs at a 60-second interval.",
+      "Initial account-history and holder scans read one page; deliberate Load older records and Load more balances resume scans.",
+      "Each initial failure panel has an explicit unavailable/rate-limited state and server-directed retry timing.",
+      "Canonical left rail at >900px (188px through 1180px, 220px above); compact header <=900px; retain Gothic theme."
+    ],
+    "corrected_release": {
+      "status": "source-prepared-for-manual-handoff",
+      "commit": null,
+      "deployment_run": null,
+      "delivery": "Seven complete repository-path files in a separate owner copy viewer; user commits application files. No application commit or deployment by assistant in this repair.",
+      "changed_files": [
+        "metrics.html",
+        "css/jcs-metrics-header.css",
+        "css/jcs-metrics.css",
+        "js/jcs-metrics-ledger.js",
+        "js/jcs-metrics.js"
+      ],
+      "unchanged_required_companions": [
+        "js/jcs-metrics-community.js",
+        "data/jcs-metrics-project.json"
+      ],
+      "implemented": [
+        "Shared reconnect and structured rate-limit errors; honor returned cooldown and use bounded failover for infrastructure faults.",
+        "Optional ledger subscription cannot block the read-only snapshot.",
+        "Core refresh runs at a 60-second interval.",
+        "Initial account-history and holder scans read one page; deliberate Load older records and Load more balances resume scans.",
+        "Each initial failure panel has an explicit unavailable/rate-limited state and server-directed retry timing.",
+        "Canonical left rail at >900px (188px through 1180px, 220px above); compact header <=900px; retain Gothic theme."
+      ],
+      "verification": {
+        "adapter_targeted_synthetic_checks": 6,
+        "css": "static contract check only",
+        "ui": {
+          "status": "passed",
+          "scenarios": 4,
+          "scope": "Actual modules with mocked transport and DOM only. Not corrected browser/layout/live verification.",
+          "cases": [
+            "Cold quota clears pending panels and blocks early RPC.",
+            "Startup loads exactly one history page and one balance page and populates fields.",
+            "Load older records sends the saved marker and retains existing data.",
+            "Failed fresh snapshot retains data and pauses automatic refresh."
+          ]
+        },
+        "live_corrected_candidate": "not verified",
+        "overall": "Prepared source identified and targeted synthetic cases pass; real corrected-feed and layout operation are not established."
+      },
+      "live_verification": null,
+      "source_artifacts": [
+        {
+          "path": "metrics.html",
+          "bytes": 28167,
+          "sha256": "ab4fe3a048eaa91d806090533cbfea2396188071e70e6a70b7bb199402a1b934",
+          "changed": true
+        },
+        {
+          "path": "css/jcs-metrics-header.css",
+          "bytes": 26600,
+          "sha256": "5196b4b31c2095aefbcec57f8f46e4097e19116805265d49ca1604791ba1cc21",
+          "changed": true
+        },
+        {
+          "path": "css/jcs-metrics.css",
+          "bytes": 21853,
+          "sha256": "808c33d2ef3ab0614b7b535bdbd7fdba31fb8f8c937a73570701948d4c4d28f3",
+          "changed": true
+        },
+        {
+          "path": "js/jcs-metrics-ledger.js",
+          "bytes": 28985,
+          "sha256": "683f824a1b358de0bc28033fb66bcdeed69b7e67f4c76609104cd2a901850ac0",
+          "changed": true
+        },
+        {
+          "path": "js/jcs-metrics.js",
+          "bytes": 40516,
+          "sha256": "5518788bbc4af720a8f9c7dcd87e33baccac5a6f1fcc3ca08e6214a895f6df22",
+          "changed": true
+        },
+        {
+          "path": "js/jcs-metrics-community.js",
+          "bytes": 27433,
+          "sha256": "f25d456d19c33f55587b7f3a86fe96b60ac7b5cc9ff1bbab7a096ffbcaef2153",
+          "changed": false
+        },
+        {
+          "path": "data/jcs-metrics-project.json",
+          "bytes": 1982,
+          "sha256": "5c893b5f47515e4438d6fd0d19f469028f692f8c58140a4cc791f4693d7c0be9",
+          "changed": false
+        }
+      ],
+      "module_contracts": {
+        "metrics.html": "Repository-path public page; dependent scripts/styles remain external at their listed paths. Owner code controls stay outside this page.",
+        "css/jcs-metrics-header.css": "Shared navigation geometry: 188px rail at 901–1180px, 220px above; compact top navigation at <=900px; content offsets follow shell.",
+        "css/jcs-metrics.css": "Accepted Observatory visual theme and metric presentation.",
+        "js/jcs-metrics-ledger.js": "Single shared connection/reconnect work, structured provider errors, directed cooldown, bounded infrastructure failover; optional subscription does not gate snapshot.",
+        "js/jcs-metrics.js": "UI/data coordination, independent-source rendering, explicit failure states, one-page initial scans, deliberate resumable pagination and 60-second core refresh.",
+        "js/jcs-metrics-community.js": "Unchanged required community-data companion; preserve exactly.",
+        "data/jcs-metrics-project.json": "Unchanged required project-data resource; preserve exact JSON file at this path."
+      }
+    },
+    "subsequent_live_baseline_observation": {
+      "commit": "1b43bcf05fa4980edfd3861bcc5fe4f109a3baaa",
+      "date": "2026-09-30",
+      "validated_ledger": 107344789,
+      "pool_xrp_reserve": 247.927,
+      "registry_records_at_least": 7,
+      "holder_scan": "complete in one page",
+      "history_scan": "200 transactions read, then account_tx rate limit; retry reported 17821 ms",
+      "scope": "Read-only observation of the deployed baseline, not the corrected candidate. Demonstrates intermittent quota/startup failure and over-eager history scanning, not universal absence of wiring."
+    }
+  },
+  "navigation_contract": {
+    "desktop_min_px": 901,
+    "compact_header_max_px": 900,
+    "sidebar_width_px": {
+      "901_to_1180": 188,
+      "above_1180": 220
+    },
+    "behavior": "Fixed full-height scrollable left navigation on desktop; content and footer offset together. Compact top navigation only at <=900px.",
+    "source": "Existing ecosystem Liquidity navigation contract, explicitly requested for JCS metrics on 2026-09-30.",
+    "style": "Retain the accepted JCS Gothic Catholic theme; navigation geometry is a shared contract, not permission to replace application identity."
+  },
+  "inputs_before_edit": [
+    "Exact current repository, branch, path and head; compare with the last accepted commit without overwriting concurrent work.",
+    "Existing shared navigation markup/CSS and breakpoints; do not infer the target layout from a broken page.",
+    "For every displayed metric: named source, exact command/file, response field, transform, DOM target and failure state.",
+    "Known endpoint/runtime/quota blockers and current delivery authorization."
+  ],
+  "bounded_acceptance": [
+    "Every metric maps to a real request/file and renderer. Use actual observed responses for a claim of live operation; a corrected candidate remains unverified until its real response/render path is observed.",
+    "One source failure cannot suppress independent sources. Failed/capped responses are not represented as numeric zero or complete coverage.",
+    "Record actual source/live evidence and its scope before claiming the feed works; mocks prove only their tested behavior.",
+    "Use only focused checks for changed failure paths or required gates; do not add broad suites, audits, screenshots or repeated checks by default.",
+    "After the normal deployment reports success, stop all further work for that task."
+  ],
+  "delivery_decision": {
+    "source": "Current explicit user instruction and already-authorized continuation in the conversation, not a historical default.",
+    "manual": "When asked for copyable code, return the complete source files and separate owner viewer with exact source snapshots; no automatic application commit.",
+    "deployment": "When commit/deployment is authorized, use the existing repository workflow and one bounded release; prepare requested memory before deployment and then stop.",
+    "memory": "A memory update request authorizes the continuity repository update, not an unrelated application or settings change.",
+    "current_task": "Manual complete-file handoff selected for this repair; no application commit or deployment. Memory publication is authorized separately."
+  },
+  "known_blockers": [
+    "GitLab MR !37 remains ci_quota_exceeded until evidence of restored quota/runner capacity; unrelated to successful JCS GitHub Pages.",
+    "A previous local browser installer failed with an empty archive; do not repeat that installation without changed evidence. An available supported cloud browser is a separate capability."
+  ],
+  "next_issue": "XRB-001",
+  "next_issue_scope": "Preserved legacy XRBC/XRB queue only. It does not select or block the current JCS task.",
+  "source_frontend_commit": "863ad69d31c867b414ace328d8d9a634316c4083",
+  "source_backend_commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+  "source_commit_scope": "Inherited legacy XRBC/frontend and shared-backend snapshots required by the existing memory schema. Not current JCS source evidence. JCS commits are named under accepted_prayer_map and metrics.",
+  "evidence": "memory/audits/2026-09-30-jcs-observatory-recovery.json",
+  "operating_protocol": "memory/operating-protocol.json",
+  "registry": "memory/known-errors.json",
+  "application_files_changed": [],
+  "created_from_user_authorization": true,
+  "application_files_prepared": [
+    "metrics.html",
+    "css/jcs-metrics-header.css",
+    "css/jcs-metrics.css",
+    "js/jcs-metrics-ledger.js",
+    "js/jcs-metrics.js"
+  ],
+  "unchanged_application_companions": [
+    "js/jcs-metrics-community.js",
+    "data/jcs-metrics-project.json"
+  ]
+}

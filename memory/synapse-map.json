@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
@@ -617,6 +617,33 @@
       "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
       "file": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
       "human_file": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md"
+    },
+    {
+      "id": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "type": "savepoint",
+      "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
+      "file": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "human_file": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md"
+    },
+    {
+      "id": "route:current-task",
+      "type": "router",
+      "status": "active",
+      "file": "memory/task-router.json"
+    },
+    {
+      "id": "issue:JCS-METRICS-001",
+      "type": "issue",
+      "status": "retest-required",
+      "file": "memory/known-errors.json",
+      "summary": "Ledger provider rate limit and fatal adapter handshake suppress Observatory metrics."
+    },
+    {
+      "id": "issue:JCS-METRICS-002",
+      "type": "issue",
+      "status": "retest-required",
+      "file": "memory/known-errors.json",
+      "summary": "JCS metrics desktop top header violates established side navigation."
     }
   ],
   "edges": [
@@ -1214,6 +1241,31 @@
       "from": "savepoint:jcs-prayer-map-nexus-2026-09-29",
       "rel": "extends-delivery-workflow",
       "to": "workflow:jcs-verify-manual-delivery-2026-09-28"
+    },
+    {
+      "from": "route:current-task",
+      "to": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "relation": "routes-current-jcs-work"
+    },
+    {
+      "from": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "to": "savepoint:jcs-prayer-map-nexus-2026-09-29",
+      "relation": "supersedes-current-map-status-preserves-history"
+    },
+    {
+      "from": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "to": "issue:JCS-METRICS-001",
+      "relation": "tracks"
+    },
+    {
+      "from": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "to": "issue:JCS-METRICS-002",
+      "relation": "tracks"
+    },
+    {
+      "from": "savepoint:jcs-observatory-recovery-2026-09-30",
+      "to": "protocol:evidence-first",
+      "relation": "uses"
     }
   ],
   "query_hints": {
@@ -1367,15 +1419,24 @@
       "workflow:jcs-verify-manual-delivery-2026-09-28"
     ],
     "jcs_prayer_map": [
-      "savepoint:jcs-prayer-map-nexus-2026-09-29"
+      "savepoint:jcs-observatory-recovery-2026-09-30"
     ],
     "historical_nexus": [
-      "savepoint:jcs-prayer-map-nexus-2026-09-29"
+      "savepoint:jcs-observatory-recovery-2026-09-30"
     ],
     "reasoning_workflow": [
       "protocol:evidence-first",
       "savepoint:jcs-prayer-map-nexus-2026-09-29"
+    ],
+    "jcs_metrics": [
+      "savepoint:jcs-observatory-recovery-2026-09-30",
+      "issue:JCS-METRICS-001",
+      "issue:JCS-METRICS-002"
+    ],
+    "current_task": [
+      "route:current-task"
     ]
   },
-  "active_savepoint": "savepoint:jcs-prayer-map-nexus-2026-09-29"
+  "active_savepoint": "savepoint:jcs-observatory-recovery-2026-09-30",
+  "query_hint_scope": "next_implementation is the preserved legacy XRBC/XRB queue; select current work using memory/task-router.json."
 }

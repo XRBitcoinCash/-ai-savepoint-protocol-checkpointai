@@ -64,4 +64,17 @@ if(point.checkpoint_kind==='application-repair'){
 }else{
   assert.equal(point.application_files_changed.length,0,'memory-only checkpoint cannot claim code changes');
 }
+const router=json('memory/task-router.json');
+assert.equal(router.active_savepoint.id,id,'task router savepoint mismatch');
+assert.equal(router.active_savepoint.record,record.machine_savepoint,'task router record mismatch');
+for(const route of Object.values(router.routes))for(const p of route.read)exists(p);
+if(point.checkpoint_kind==='memory-recovery-handoff'){
+  assert.equal(point.metrics.repository,'XRBitcoinCash/JCS-token-on-the-XRPL','JCS repository mismatch');
+  assert.match(point.metrics.observed_implementation_commit,/^[a-f0-9]{40}$/,'metrics baseline SHA');
+  assert.match(point.accepted_prayer_map.application_commit,/^[a-f0-9]{40}$/,'map baseline SHA');
+  assert.equal(memory.current_jcs_observatory.record,record.machine_savepoint,'JCS active record mismatch');
+  const jcsIssues=errors.jcs.observatory.issues;
+  for(const issue of jcsIssues){assert.ok(errors.status_values.includes(issue.status),'JCS issue status');assert.ok(nodes.has('issue:'+issue.id),'missing JCS graph issue');}
+  assert.equal(point.metrics.corrected_release.status,audit.jcs.observatory.corrected_release.status,'corrected release evidence mismatch');
+}
 console.log(JSON.stringify({status:'pass',json_files:jsonCount,active_savepoint:id,graph_nodes:nodes.size,issues:issues.size,next_issue:record.next_issue},null,2));
