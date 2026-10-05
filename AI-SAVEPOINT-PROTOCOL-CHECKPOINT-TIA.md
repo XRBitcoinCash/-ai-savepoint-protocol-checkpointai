@@ -2,13 +2,23 @@
 
 **Document ID:** `xrbc/ai-memory/2.0.0`  
 **Status:** Active  
-**Updated:** 2026-09-30
+**Updated:** 2026-10-05
 **Machine-readable twin:** [`ai-memory.json`](https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/ai-memory.json)  
 **Web entrypoint:** [`xrbitcoincash.github.io/.well-known/ai.js`](https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js)
 
 This is a compact, repo-native continuity layer for AI agents working on XRBitcoinCash and its explicitly requested XRPL applications. It preserves decisions and constraints; it is not a hidden model memory, a transcript dump, a credential store, or a permission to act.
 
-## Current memory checkpoint — 2026-09-30
+## Current checkpoint and task routing — 2026-10-05
+
+Active memory: `SAVEPOINT-2026-10-05-xrbc-home-nexus`. Read `memory/task-router.json`, then `memory/active/XRBC-HOME-NEXUS-2026-10-05.json` for the XRBC homepage, swap, chart and Battle Pulse/Market Nexus. `XRBC-HOME-NEXUS-2026-10-05.md` is its concise human summary. This checkpoint is saved before the homepage deployment; use its exact MR/commit/pipeline evidence to resolve later status only when a new request requires it.
+
+Source of truth is GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`; baseline `c7fb139101bb078caafa3dd40209e97d541d2ec7`. MR !45 combined liquidity and MR !46 XRBC favicon already deployed. Successful pipelines prove the old CI quota block is no longer current. The old GitHub `xrpl-proxy/` backend location is stale; current backend source is unknown. Do not infer wallet success from CI.
+
+Load compact routing/protocol once and reuse it. Trace source -> event/request -> response field -> transform -> renderer -> freshness/coverage/failure. For presentation preserve exact asset identity, working Xaman controls and shared sidebar; keep data-driven motion understandable and accessible. Prepare and publish requested memory before website deployment, then stop all tools when deployment succeeds. This is external continuity context, not internal model weights or guaranteed recall.
+
+JCS state remains in `memory/active/JCS-OBSERVATORY-2026-09-30.json`; the accepted Prayer Map and prepared Observatory recovery are unchanged. Bare “Nexus” must not silently select JCS when the request concerns the XRBC market. The legacy `XRB-001` queue is preserved and does not choose the current task.
+
+## Preserved JCS memory checkpoint — 2026-09-30
 
 Active: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Start with `memory/task-router.json`, then `memory/active/JCS-OBSERVATORY-2026-09-30.json` for JCS work; `JCS-OBSERVATORY-RECOVERY-2026-09-30.md` is the short human explanation. Prayer Map `deb0769` is deployed and user accepted. Observatory `1b43bcf` deployed but failed on the user's device: rate-limited XRPL startup and the wrong desktop header. Its mock checks did not establish functioning live metrics. Corrected source is prepared for a seven-file manual handoff; no application commit or deployment is claimed.
 

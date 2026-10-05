@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "document_id": "xrbc/ai-memory/2.0.0",
   "status": "active",
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "canonical_contract": "https://raw.githubusercontent.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/main/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
   "web_entrypoint": "https://raw.githubusercontent.com/XRBitcoinCash/xrbitcoincash.github.io/main/.well-known/ai.js",
   "agent_entrypoint": {
@@ -54,7 +54,7 @@
     "frontend_gitlab": "xrbitcoincash-group/xrbitcoincash-project"
   },
   "repository_roles": {
-    "site": "Shared Render backend source, AI discovery, and legacy GitHub Pages configuration; not the active GitLab frontend source",
+    "site": "Observed 2026-10-05 as legacy domain redirect (CNAME, README, index). Historical xrpl-proxy backend path is stale; current backend source not verified.",
     "xrbitcoin": "Legacy standalone repository; root index.html is a fixed non-trading redirect to the GitLab security reference",
     "frontend_gitlab": "Active XRBC and XRBitcoin website frontend; default branch master; publish directory public"
   },
@@ -164,8 +164,9 @@
       "repository": "XRBitcoinCash/xrbitcoincash.github.io",
       "directory": "xrpl-proxy/",
       "documented_origin": "https://xrbitcoincash-github-io.onrender.com",
-      "action": "preserve server, dependencies, environment and existing frontend contracts",
-      "private_render_settings_verified_in_this_pass": false
+      "action": "Do not assume this old repository/directory is current. Discover only when backend work is requested.",
+      "private_render_settings_verified_in_this_pass": false,
+      "status": "historical-location-unverified-current-source"
     },
     "secondary_memory_index": {
       "repository": "XRBitcoinCash/xrbitcoincash.github.io",
@@ -475,13 +476,13 @@
     "tag_boundary": "Awareness/feedback only. No endorsement, affiliation or involvement implied. Ripple corporate handles, Xaman, XRPL.to, XPMarket and BIS corroborated on official websites; direct primary Live Coin Watch handle retrieval unsuccessful, as recorded in current savepoint."
   },
   "previous_savepoint": {
-    "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
-    "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
-    "human_record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
-    "status": "complete-html-delivered-for-user-commit; browser-and-deployment-unverified",
-    "created": "2026-09-29",
-    "scope": "Record the prepared JCS prayer-map correction, persistent historical Nexus, separate owner HTML source viewer and explicit reasoning/workflow preferences. This publication changes the continuity repository only.",
-    "next_task": "Continue only the user-requested page change from the latest accepted full HTML; preserve the separate owner viewer and persistent historical Nexus."
+    "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
+    "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+    "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
+    "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
+    "created": "2026-09-30",
+    "scope": "JCS accepted map baseline, Observatory failure and recovery, shared navigation and evidence-aware delivery protocol.",
+    "next_task": "Deliver prepared complete JCS metrics files through the owner copy viewer; user commits application code. Preserve unrelated queues."
   },
   "previous_research_savepoint": {
     "id": "SAVEPOINT-2026-09-16-liquidity-index-research",
@@ -500,13 +501,13 @@
     "status": "Historical; homepage integration and current_record supersede placement and implementation status; live verification/history limitations remain"
   },
   "latest_savepoint": {
-    "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
-    "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
-    "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
-    "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
-    "created": "2026-09-30",
-    "scope": "JCS accepted map baseline, Observatory failure and recovery, shared navigation and evidence-aware delivery protocol.",
-    "next_task": "Deliver prepared complete JCS metrics files through the owner copy viewer; user commits application code. Preserve unrelated queues."
+    "id": "SAVEPOINT-2026-10-05-xrbc-home-nexus",
+    "record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+    "human_record": "XRBC-HOME-NEXUS-2026-10-05.md",
+    "status": "committed-CI-verified-deployment-pending",
+    "created": "2026-10-05",
+    "scope": "Put the swap, original Connect/Disconnect controls and price chart near the top; add understandable Battle Pulse/Nexus motion driven by observed market data; keep detailed pairs/trading below.",
+    "next_task": "Complete the authorized homepage release through the existing GitLab MR/CI/Pages workflow; stop immediately at deployment success. On a later explicit request, read the MR/pipeline once to resolve this pre-deployment checkpoint."
   },
   "savepoint_format": [
     "context",
@@ -535,6 +536,15 @@
     "manual_page_delivery": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md"
   },
   "recent_savepoints": [
+    {
+      "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
+      "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
+      "status": "memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed",
+      "created": "2026-09-30",
+      "scope": "JCS accepted map baseline, Observatory failure and recovery, shared navigation and evidence-aware delivery protocol.",
+      "next_task": "Deliver prepared complete JCS metrics files through the owner copy viewer; user commits application code. Preserve unrelated queues."
+    },
     {
       "id": "SAVEPOINT-2026-09-29-jcs-prayer-map-nexus",
       "record": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
@@ -1299,11 +1309,12 @@
     "backend_api_failure_status": "already corrected; do not duplicate b9ef92b repair"
   },
   "current_repair": {
-    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
-    "evidence": "memory/audits/2026-09-25-bing-search-metadata.json",
+    "checkpoint": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+    "evidence": "memory/audits/2026-10-05-xrbc-home-nexus.json",
     "issues": [],
-    "status": "prepared-ci-passed-pending-merge",
-    "next_issue": "XRB-001"
+    "status": "committed-CI-verified-deployment-pending",
+    "next_issue": "XRB-001",
+    "next_issue_scope": "Preserved legacy queue only."
   },
   "execution_efficiency_preference": {
     "updated": "2026-09-28",
@@ -1502,10 +1513,12 @@
     "scope": "Improve XRBC search snippets for brand and Xaman wallet intent through static homepage and liquidity-page metadata; no runtime or transaction behavior changed."
   },
   "observed_source_heads": {
-    "frontend": "863ad69d31c867b414ace328d8d9a634316c4083",
+    "frontend": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
     "frontend_branch": "master",
-    "backend": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
-    "observed": "2026-09-25",
+    "backend": null,
+    "backend_status": "unknown-current-source",
+    "historical_backend_snapshot": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+    "observed": "2026-10-05",
     "refresh_before_write": true
   },
   "recent_work_2026_09_25": {
@@ -1716,5 +1729,141 @@
     }
   },
   "active_task_router": "memory/task-router.json",
-  "active_loading_rule": "Read compact router plus matching handoff once; this file retains large historical context and should be queried only for needed facts."
+  "active_loading_rule": "Read AGENTS, compact router and only the matching active handoff once. XRBC_HOME_NEXUS uses memory/active/XRBC-HOME-NEXUS-2026-10-05.json; JCS and legacy queues remain topic-specific. This file is fallback history.",
+  "current_xrbc_home_nexus": {
+    "record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "project_id": 75781181,
+    "branch": "master",
+    "page": "public/index.html",
+    "url": "https://xrbitcoincash.com/",
+    "baseline_commit": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
+    "implementation_commit": "71504344e8222b2a034a988892619555abc5dd13",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/47",
+    "source_branch": "feat/home-market-nexus-20261005",
+    "changed_files": [
+      "public/index.html",
+      "public/xrbc-swap-liquidity.js",
+      "public/xrbc-market-display.js",
+      "tests/unit/swap-liquidity.test.mjs",
+      "public/xrbc-market-nexus.js",
+      "public/xrbc-market-nexus.css",
+      "public/xrbc-nexus-layout.js",
+      "public/xrbc-nexus-layout.css",
+      "public/xrbc-swap-nexus.css",
+      "tests/unit/market-nexus.test.mjs"
+    ],
+    "pipeline_id": 2914933341,
+    "pipeline_status": "success",
+    "deployment_status": "pending-at-memory-publication",
+    "scope": "Put the swap, original Connect/Disconnect controls and price chart near the top; add understandable Battle Pulse/Nexus motion driven by observed market data; keep detailed pairs/trading below.",
+    "verification": {
+      "status": "focused-checks-pass; MR-CI-passed",
+      "focused_tests": {
+        "total": 26,
+        "market_nexus": 8,
+        "swap_comparison": 6,
+        "execution_safety": 8,
+        "market_display": 4
+      },
+      "dom_contract": "All preexisting IDs preserved; actual wallet controls inside swap dock; workspace before pair chooser/review; every inline script byte-identical; no review form in top workspace.",
+      "diff_check": "passed",
+      "browser_rendering": "unavailable; no visual QA claimed",
+      "live_wallet_transaction": "not submitted or proven"
+    },
+    "runtime_contracts": {
+      "market_nexus": {
+        "source": "public/xrbc-market-nexus.js; existing xrbc:market-context event and exact window.XRBCChartMarket.read() pair",
+        "fields": [
+          "pair",
+          "fresh",
+          "ledgerIndex",
+          "ledgerHash",
+          "fetchedAt",
+          "closeUnix",
+          "bookState",
+          "poolState",
+          "liquidity.bids",
+          "liquidity.asks",
+          "liquidity.amm",
+          "liquidity.bookLimit"
+        ],
+        "transform": "XRBCCombinedLiquidity.normalizeBook/normalizePool/market/depth([.02]); funded quantities, exact pair identity, marginal-price comparison; radius relative to funded size on each displayed side and position by price in selectable ±2/5/10% range.",
+        "renderers": [
+          "#xrt-market-nexus",
+          "#nexus-bid",
+          "#nexus-ask",
+          "#nexus-pool",
+          "#nexus-spread",
+          "#nexus-scene",
+          "#nexus-trail"
+        ],
+        "freshness": "fresh===true; exact issuer/currency match; positive safe ledger index and 64-hex hash; fetched and close age <=90s, future skew <=15s. One observation per new ledger; same ledger deduped, backward/hash-conflict fails closed.",
+        "coverage": "Up to 12 visual offers per side from at most 100 sampled offers per side. Trail holds at most 60 session observations; source change resets it. Pool-only state is explicit; unavailable book stays unknown even when AMM exists.",
+        "failure_state": "Stale/error/crossed/pair change clear visuals and trail; no fabricated quote nodes.",
+        "motion": "Finite 1.4s pulse only on a new ledger; Pause, reduced-motion, hidden-document and offscreen suppression. Keyboard/click SVG inspection with text equivalents.",
+        "network_and_wallet": "No new RPC, wallet access or signing.",
+        "verification": "8 focused Node tests, including mounted stale/pause/repeat rendering; source/mocked evidence. Browser preview unavailable; no live-layout or wallet claim."
+      },
+      "swap_nexus": {
+        "source": "public/xrbc-swap-liquidity.js; existing xrbc:market-context event.detail and exact selected pair",
+        "fields": [
+          "pair",
+          "fresh",
+          "ledgerHash",
+          "ledgerIndex",
+          "fetchedAt",
+          "closeUnix",
+          "liquidity.asks",
+          "liquidity.bids",
+          "liquidity.amm",
+          "liquidity.bookLimit",
+          "bookState",
+          "poolState"
+        ],
+        "transform": "Existing evaluate() and XRBCCombinedLiquidity normalize/quote/depth logic; own offers excluded. Source SVG width/opacity derives from source.baseAmount / quote.filledBase, representing modeled fill only.",
+        "renderers": [
+          "selected pay/receive",
+          "average price",
+          "price impact",
+          "coverage",
+          "book/AMM flow SVG",
+          "existing combined-* controls/IDs"
+        ],
+        "freshness": "Existing 90-second maximum age and exact hash/index/time/pair validation remain unchanged.",
+        "coverage": "Direct-pair AMM/book model only. Unknown source says Unavailable; one known source can produce an explicitly labeled Pool-only or Book-only model. Alternative directions/bands use the same underlying liquidity.",
+        "failure_state": "Stale/error/zero fill hides flow and pauses motion; unavailable is not zero.",
+        "motion": "Illustrative flow, not executed trades/volume; accessible text; Pause, prefers-reduced-motion, document-hidden and IntersectionObserver offscreen suppression.",
+        "transaction_boundary": "No new network/payload/signing. Deliberate combined-use only stages through existing XRBCSwapTicket.stage; existing review obtains a fresh execution quote.",
+        "verification": "6 focused module tests including pause/unknown-source assertions; no signed wallet or live layout claim."
+      },
+      "homepage_layout": {
+        "source": "public/index.html, public/xrbc-nexus-layout.js and public/xrbc-nexus-layout.css",
+        "transform": "Relocate the existing chart and actual wallet controls into the top swap/market workspace; retain original element identity/listeners and existing review surface below.",
+        "renderers": [
+          "top swap/wallet dock",
+          "top chart/Market Nexus",
+          "lower pair chooser and trade review"
+        ],
+        "verification": "Existing IDs preserved; wallet controls present in dock; workspace precedes pair chooser/review; inline scripts byte-identical; no duplicate review form. DOM/source checks only; browser rendering unavailable."
+      }
+    },
+    "preserve": [
+      "Existing Xaman session, intent, duplicate-request, stale-quote and validated settlement guards.",
+      "Exact token currency/issuer identity, asset artwork and XRBC favicon.",
+      "Existing chart indicators, trading controls, shared responsive left rail and mobile header."
+    ],
+    "motion_contract": [
+      "Use measured changes; never imply a trade occurred merely because decoration animates.",
+      "Explain the visual mapping in nearby text; keep numeric/accessibility equivalents.",
+      "Honor reduced motion, visibility and stale/unavailable data; visual rendering must not create financial payloads or independent market polling."
+    ]
+  },
+  "previous_repair_pointer": {
+    "checkpoint": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+    "evidence": "memory/audits/2026-09-25-bing-search-metadata.json",
+    "issues": [],
+    "status": "prepared-ci-passed-pending-merge",
+    "next_issue": "XRB-001"
+  }
 }

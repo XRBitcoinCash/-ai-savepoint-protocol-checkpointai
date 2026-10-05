@@ -1,22 +1,20 @@
 # Continuity entrypoint
 
-## Current checkpoint and task routing — 2026-09-30
+## Current checkpoint and task routing — 2026-10-05
 
-Active memory: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Read `memory/task-router.json`, then only the matching record. Current JCS state lives in `memory/active/JCS-OBSERVATORY-2026-09-30.json`; the human summary is `JCS-OBSERVATORY-RECOVERY-2026-09-30.md`. The Prayer Map at `deb0769` is deployed and user accepted. The Observatory at `1b43bcf` deployed but failed on the user's device; its mocked checks were not live-feed proof. Corrected source is prepared for a seven-file manual handoff; the user commits it. This checkpoint does not claim that correction is deployed.
+Active memory: `SAVEPOINT-2026-10-05-xrbc-home-nexus`. Read `memory/task-router.json`, then `memory/active/XRBC-HOME-NEXUS-2026-10-05.json` for the XRBC homepage, swap, chart and Battle Pulse/Market Nexus. `XRBC-HOME-NEXUS-2026-10-05.md` is its concise human summary. This checkpoint is saved before the homepage deployment; use its exact MR/commit/pipeline evidence to resolve later status only when a new request requires it.
 
-Load this entrypoint and the compact routing/protocol once per working context. Reuse their contents until relevant instructions or repository state change. Do not load the 100KB history, every old queue or every graph route by default. Use full historical files only for a missing fact, conflict or sensitive contract. The current user request chooses the work and delivery mode; the preserved `XRB-001` queue is not the current JCS task.
+Source of truth is GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`; baseline `c7fb139101bb078caafa3dd40209e97d541d2ec7`. MR !45 combined liquidity and MR !46 XRBC favicon already deployed. Successful pipelines prove the old CI quota block is no longer current. The old GitHub `xrpl-proxy/` backend location is stale; current backend source is unknown. Do not infer wallet success from CI.
 
-Before styling a page, read its actual shared navigation contract: fixed scrollable side navigation above 900px, 188px through 1180px and 220px above; compact top navigation only at <=900px. Retain JCS identity and Gothic styling. Before promising a metric, trace source -> request/file -> response field -> transform -> visible result and error state. A CI success or mock fixture is not evidence that a live feed works. Do not render failed requests as zero, empty history or full coverage.
+Load compact routing/protocol once and reuse it. Trace source -> event/request -> response field -> transform -> renderer -> freshness/coverage/failure. For presentation preserve exact asset identity, working Xaman controls and shared sidebar; keep data-driven motion understandable and accessible. Prepare and publish requested memory before website deployment, then stop all tools when deployment succeeds. This is external continuity context, not internal model weights or guaranteed recall.
 
-For manual code delivery, patch the latest accepted complete source and provide the separate full-file owner viewer. For an authorized deployment, use the existing workflow; do not let an older manual handoff override the current explicit request. Memory publication is separate authorization. Prepare and publish requested memory before the website deployment; stop when that deployment succeeds.
-
-User reasoning preference: Ultra for memory/checkpoint work; lower settings may be used for routine page work according to the current request. This does not change model settings or evidence requirements.
+JCS state remains in `memory/active/JCS-OBSERVATORY-2026-09-30.json`; the accepted Prayer Map and prepared Observatory recovery are unchanged. Bare “Nexus” must not silently select JCS when the request concerns the XRBC market. The legacy `XRB-001` queue is preserved and does not choose the current task.
 
 ## Routine page corrections — user override, 2026-09-26
 
 For requested page corrections, read this checkpoint before acting, reuse completed edits, make only the requested corrections, and deliver through the current user-selected workflow; deploy only when requested. Do not run optional tests, simulations, audits, screenshots, repeated checks or unrelated research. Older generic testing and repair checklists do not apply automatically to routine presentation/copy changes. Perform only checks required by the existing deployment process or needed to address a specific concrete risk introduced by the change; keep them narrowly scoped. Do not modify or disable CI requirements to avoid them. After deployment, stop immediately under the rule below. Report prepared, committed, merged and deployed as distinct states; never call prepared work deployed.
 
-Known ecosystem handoff: `ECOSYSTEM-CLARITY-2026-09-26.md`, GitLab MR !37. Reuse the prepared implementation and completed checks. Recorded deployment blocker: `ci_quota_exceeded`; resume only with evidence of restored quota or runner capacity. Do not retry merely because the user repeats the deployment request.
+Known ecosystem handoff: `ECOSYSTEM-CLARITY-2026-09-26.md`, GitLab MR !37. Reuse the prepared implementation and completed checks. Historical deployment blocker: `ci_quota_exceeded`. Recovery is now evidenced by successful Oct5 pipelines; the old MR status must still be checked if resuming that task.
 
 This entrypoint override takes precedence over older routine-test instructions in `memory/operating-protocol.json` and historical checkpoints. Repository instructions are external context that must be loaded; they cannot guarantee automatic recall in every future conversation.
 

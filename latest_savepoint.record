@@ -1,13 +1,13 @@
-SAVEPOINT 2026-09-30
-id=SAVEPOINT-2026-09-30-jcs-observatory-recovery
-title=JCS accepted map baseline and Observatory recovery
-status=memory-reconciled; corrected-source-prepared-for-manual-handoff; not-committed-or-deployed
-machine_savepoint=memory/active/JCS-OBSERVATORY-2026-09-30.json
-human_checkpoint=JCS-OBSERVATORY-RECOVERY-2026-09-30.md
-previous_memory_checkpoint=SAVEPOINT-2026-09-29-jcs-prayer-map-nexus
-next_task=Deliver seven complete JCS metrics files with owner viewer; user commits
+SAVEPOINT 2026-10-05
+id=SAVEPOINT-2026-10-05-xrbc-home-nexus
+title=XRBC homepage swap and Market Nexus presentation
+status=committed-CI-verified-deployment-pending
+machine_savepoint=memory/active/XRBC-HOME-NEXUS-2026-10-05.json
+human_checkpoint=XRBC-HOME-NEXUS-2026-10-05.md
+previous_memory_checkpoint=SAVEPOINT-2026-09-30-jcs-observatory-recovery
+next_task=Complete the authorized homepage release through the existing GitLab MR/CI/Pages workflow; stop immediately at deployment success. On a later explicit request, read the MR/pipeline once to resolve this pre-deployment checkpoint.
 next_issue=XRB-001
-next_issue_scope=Legacy XRBC/XRB queue, not the current task
-observed_frontend_commit=863ad69d31c867b414ace328d8d9a634316c4083
+next_issue_scope=Preserved legacy XRBC/XRB queue, not the current homepage task
+observed_frontend_commit=c7fb139101bb078caafa3dd40209e97d541d2ec7
 observed_backend_commit=1c1fa1d41287af846c3be9d7233c319eb2b8a470
-source_commit_scope=Inherited legacy XRBC snapshots; JCS commits are in the active record
+source_commit_scope=Current frontend baseline; backend hash is a historical schema snapshot, current backend source unknown

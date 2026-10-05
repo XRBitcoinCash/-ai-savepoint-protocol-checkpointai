@@ -1,4 +1,14 @@
-## Choose the requested task — 2026-09-30
+## Current checkpoint and task routing — 2026-10-05
+
+Active memory: `SAVEPOINT-2026-10-05-xrbc-home-nexus`. Read `memory/task-router.json`, then `memory/active/XRBC-HOME-NEXUS-2026-10-05.json` for the XRBC homepage, swap, chart and Battle Pulse/Market Nexus. `XRBC-HOME-NEXUS-2026-10-05.md` is its concise human summary. This checkpoint is saved before the homepage deployment; use its exact MR/commit/pipeline evidence to resolve later status only when a new request requires it.
+
+Source of truth is GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`; baseline `c7fb139101bb078caafa3dd40209e97d541d2ec7`. MR !45 combined liquidity and MR !46 XRBC favicon already deployed. Successful pipelines prove the old CI quota block is no longer current. The old GitHub `xrpl-proxy/` backend location is stale; current backend source is unknown. Do not infer wallet success from CI.
+
+Load compact routing/protocol once and reuse it. Trace source -> event/request -> response field -> transform -> renderer -> freshness/coverage/failure. For presentation preserve exact asset identity, working Xaman controls and shared sidebar; keep data-driven motion understandable and accessible. Prepare and publish requested memory before website deployment, then stop all tools when deployment succeeds. This is external continuity context, not internal model weights or guaranteed recall.
+
+JCS state remains in `memory/active/JCS-OBSERVATORY-2026-09-30.json`; the accepted Prayer Map and prepared Observatory recovery are unchanged. Bare “Nexus” must not silently select JCS when the request concerns the XRBC market. The legacy `XRB-001` queue is preserved and does not choose the current task.
+
+## Preserved JCS task — 2026-09-30
 
 Active checkpoint: `SAVEPOINT-2026-09-30-jcs-observatory-recovery`. Start at `memory/task-router.json`; JCS metrics and Prayer Map state is in `memory/active/JCS-OBSERVATORY-2026-09-30.json`. Read it once and reuse it. The accepted map is deployed at `deb0769`. Observatory `1b43bcf` deployed but the user reports nonworking metrics and an incorrect desktop header; corrected source is prepared for manual handoff, not committed or deployed.
 

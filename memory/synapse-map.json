@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "document_id": "xrbc/synaptic-memory/1.0.0",
   "status": "active",
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "graph_model": "directed context graph",
   "purpose": "Route an AI session from a compact node to the smallest verified set of repositories, invariants, checkpoints, and pending tasks needed for the current request.",
   "nodes": [
@@ -644,6 +644,13 @@
       "status": "retest-required",
       "file": "memory/known-errors.json",
       "summary": "JCS metrics desktop top header violates established side navigation."
+    },
+    {
+      "id": "savepoint:xrbc-home-nexus-2026-10-05",
+      "type": "savepoint",
+      "status": "committed-CI-verified-deployment-pending",
+      "file": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+      "human_file": "XRBC-HOME-NEXUS-2026-10-05.md"
     }
   ],
   "edges": [
@@ -1266,6 +1273,21 @@
       "from": "savepoint:jcs-observatory-recovery-2026-09-30",
       "to": "protocol:evidence-first",
       "relation": "uses"
+    },
+    {
+      "from": "route:current-task",
+      "to": "savepoint:xrbc-home-nexus-2026-10-05",
+      "relation": "routes-current-xrbc-home-work"
+    },
+    {
+      "from": "savepoint:xrbc-home-nexus-2026-10-05",
+      "to": "repo:frontend",
+      "relation": "records-source"
+    },
+    {
+      "from": "savepoint:xrbc-home-nexus-2026-10-05",
+      "to": "protocol:evidence-first",
+      "relation": "uses"
     }
   ],
   "query_hints": {
@@ -1341,6 +1363,7 @@
       "task:production-browser-tests"
     ],
     "trade_ui": [
+      "savepoint:xrbc-home-nexus-2026-10-05",
       "savepoint:homepage-exchange-shell-migration-2026-09-21",
       "standard:homepage-liquidity-shell-alignment",
       "standard:xaman-popup-trade-review",
@@ -1435,8 +1458,11 @@
     ],
     "current_task": [
       "route:current-task"
+    ],
+    "xrbc_home_nexus": [
+      "savepoint:xrbc-home-nexus-2026-10-05"
     ]
   },
-  "active_savepoint": "savepoint:jcs-observatory-recovery-2026-09-30",
+  "active_savepoint": "savepoint:xrbc-home-nexus-2026-10-05",
   "query_hint_scope": "next_implementation is the preserved legacy XRBC/XRB queue; select current work using memory/task-router.json."
 }

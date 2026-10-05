@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-05",
+  "source_snapshots": {
+    "frontend": {
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "branch": "master",
+      "commit": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
+      "status": "source-confirmed"
+    },
+    "backend": {
+      "commit": "1c1fa1d41287af846c3be9d7233c319eb2b8a470",
+      "status": "historical-unverified",
+      "current_repository": null,
+      "current_commit": null
+    }
+  },
+  "recent_deployments": [
+    {
+      "kind": "combined-liquidity-swap",
+      "merge_request": 45,
+      "merge_commit": "39cb75b824255ca2a0c3b12e19153038b77ab1ca",
+      "implementation_commit": "5be7eddc403204c6412d0b5a228496ac2a9e9c14",
+      "pipeline_id": 2914854164,
+      "pipeline_status": "success",
+      "deployment_status": "success",
+      "scope": "Combined funded order-book/AMM estimates and existing swap-form handoff; no real signed transaction demonstrated."
+    },
+    {
+      "kind": "XRBC-favicon",
+      "merge_request": 46,
+      "merge_commit": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
+      "implementation_commit": "49c23098373aa6f7a7b1bd64309004bc6fe062dd",
+      "pipeline_id": 2914880120,
+      "pipeline_status": "success",
+      "deployment_status": "success",
+      "scope": "XRBitcoinCash homepage favicon identity; search-provider cache/recrawl timing not verified."
+    }
+  ],
+  "current_application": {
+    "repository": "xrbitcoincash-group/xrbitcoincash-project",
+    "project_id": 75781181,
+    "branch": "master",
+    "page": "public/index.html",
+    "url": "https://xrbitcoincash.com/",
+    "baseline_commit": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
+    "implementation_commit": "71504344e8222b2a034a988892619555abc5dd13",
+    "merge_request": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/47",
+    "source_branch": "feat/home-market-nexus-20261005",
+    "changed_files": [
+      "public/index.html",
+      "public/xrbc-swap-liquidity.js",
+      "public/xrbc-market-display.js",
+      "tests/unit/swap-liquidity.test.mjs",
+      "public/xrbc-market-nexus.js",
+      "public/xrbc-market-nexus.css",
+      "public/xrbc-nexus-layout.js",
+      "public/xrbc-nexus-layout.css",
+      "public/xrbc-swap-nexus.css",
+      "tests/unit/market-nexus.test.mjs"
+    ],
+    "pipeline_id": 2914933341,
+    "pipeline_status": "success",
+    "deployment_status": "pending-at-memory-publication",
+    "scope": "Put the swap, original Connect/Disconnect controls and price chart near the top; add understandable Battle Pulse/Nexus motion driven by observed market data; keep detailed pairs/trading below.",
+    "verification": {
+      "status": "focused-checks-pass; MR-CI-passed",
+      "focused_tests": {
+        "total": 26,
+        "market_nexus": 8,
+        "swap_comparison": 6,
+        "execution_safety": 8,
+        "market_display": 4
+      },
+      "dom_contract": "All preexisting IDs preserved; actual wallet controls inside swap dock; workspace before pair chooser/review; every inline script byte-identical; no review form in top workspace.",
+      "diff_check": "passed",
+      "browser_rendering": "unavailable; no visual QA claimed",
+      "live_wallet_transaction": "not submitted or proven"
+    },
+    "runtime_contracts": {
+      "market_nexus": {
+        "source": "public/xrbc-market-nexus.js; existing xrbc:market-context event and exact window.XRBCChartMarket.read() pair",
+        "fields": [
+          "pair",
+          "fresh",
+          "ledgerIndex",
+          "ledgerHash",
+          "fetchedAt",
+          "closeUnix",
+          "bookState",
+          "poolState",
+          "liquidity.bids",
+          "liquidity.asks",
+          "liquidity.amm",
+          "liquidity.bookLimit"
+        ],
+        "transform": "XRBCCombinedLiquidity.normalizeBook/normalizePool/market/depth([.02]); funded quantities, exact pair identity, marginal-price comparison; radius relative to funded size on each displayed side and position by price in selectable ±2/5/10% range.",
+        "renderers": [
+          "#xrt-market-nexus",
+          "#nexus-bid",
+          "#nexus-ask",
+          "#nexus-pool",
+          "#nexus-spread",
+          "#nexus-scene",
+          "#nexus-trail"
+        ],
+        "freshness": "fresh===true; exact issuer/currency match; positive safe ledger index and 64-hex hash; fetched and close age <=90s, future skew <=15s. One observation per new ledger; same ledger deduped, backward/hash-conflict fails closed.",
+        "coverage": "Up to 12 visual offers per side from at most 100 sampled offers per side. Trail holds at most 60 session observations; source change resets it. Pool-only state is explicit; unavailable book stays unknown even when AMM exists.",
+        "failure_state": "Stale/error/crossed/pair change clear visuals and trail; no fabricated quote nodes.",
+        "motion": "Finite 1.4s pulse only on a new ledger; Pause, reduced-motion, hidden-document and offscreen suppression. Keyboard/click SVG inspection with text equivalents.",
+        "network_and_wallet": "No new RPC, wallet access or signing.",
+        "verification": "8 focused Node tests, including mounted stale/pause/repeat rendering; source/mocked evidence. Browser preview unavailable; no live-layout or wallet claim."
+      },
+      "swap_nexus": {
+        "source": "public/xrbc-swap-liquidity.js; existing xrbc:market-context event.detail and exact selected pair",
+        "fields": [
+          "pair",
+          "fresh",
+          "ledgerHash",
+          "ledgerIndex",
+          "fetchedAt",
+          "closeUnix",
+          "liquidity.asks",
+          "liquidity.bids",
+          "liquidity.amm",
+          "liquidity.bookLimit",
+          "bookState",
+          "poolState"
+        ],
+        "transform": "Existing evaluate() and XRBCCombinedLiquidity normalize/quote/depth logic; own offers excluded. Source SVG width/opacity derives from source.baseAmount / quote.filledBase, representing modeled fill only.",
+        "renderers": [
+          "selected pay/receive",
+          "average price",
+          "price impact",
+          "coverage",
+          "book/AMM flow SVG",
+          "existing combined-* controls/IDs"
+        ],
+        "freshness": "Existing 90-second maximum age and exact hash/index/time/pair validation remain unchanged.",
+        "coverage": "Direct-pair AMM/book model only. Unknown source says Unavailable; one known source can produce an explicitly labeled Pool-only or Book-only model. Alternative directions/bands use the same underlying liquidity.",
+        "failure_state": "Stale/error/zero fill hides flow and pauses motion; unavailable is not zero.",
+        "motion": "Illustrative flow, not executed trades/volume; accessible text; Pause, prefers-reduced-motion, document-hidden and IntersectionObserver offscreen suppression.",
+        "transaction_boundary": "No new network/payload/signing. Deliberate combined-use only stages through existing XRBCSwapTicket.stage; existing review obtains a fresh execution quote.",
+        "verification": "6 focused module tests including pause/unknown-source assertions; no signed wallet or live layout claim."
+      },
+      "homepage_layout": {
+        "source": "public/index.html, public/xrbc-nexus-layout.js and public/xrbc-nexus-layout.css",
+        "transform": "Relocate the existing chart and actual wallet controls into the top swap/market workspace; retain original element identity/listeners and existing review surface below.",
+        "renderers": [
+          "top swap/wallet dock",
+          "top chart/Market Nexus",
+          "lower pair chooser and trade review"
+        ],
+        "verification": "Existing IDs preserved; wallet controls present in dock; workspace precedes pair chooser/review; inline scripts byte-identical; no duplicate review form. DOM/source checks only; browser rendering unavailable."
+      }
+    },
+    "preserve": [
+      "Existing Xaman session, intent, duplicate-request, stale-quote and validated settlement guards.",
+      "Exact token currency/issuer identity, asset artwork and XRBC favicon.",
+      "Existing chart indicators, trading controls, shared responsive left rail and mobile header."
+    ],
+    "motion_contract": [
+      "Use measured changes; never imply a trade occurred merely because decoration animates.",
+      "Explain the visual mapping in nearby text; keep numeric/accessibility equivalents.",
+      "Honor reduced motion, visibility and stale/unavailable data; visual rendering must not create financial payloads or independent market polling."
+    ]
+  },
+  "verification_boundary": "Focused source/mock checks, CI and actual financial operation are separate evidence levels. No live wallet transaction claimed."
+}

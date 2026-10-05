@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "purpose": "Small first read: select the current task and load only its relevant record. Full history stays in the existing archive and graph.",
   "read_once": [
     "AGENTS.md",
@@ -10,11 +10,30 @@
   ],
   "reload_when": "A relevant repository revision or current instruction changes; compaction alone is not a reason to repeat completed reads.",
   "active_savepoint": {
-    "id": "SAVEPOINT-2026-09-30-jcs-observatory-recovery",
-    "record": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
-    "human_record": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md"
+    "id": "SAVEPOINT-2026-10-05-xrbc-home-nexus",
+    "record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+    "human_record": "XRBC-HOME-NEXUS-2026-10-05.md"
   },
   "routes": {
+    "xrbc_home_nexus": {
+      "match": [
+        "XRBC homepage",
+        "XRBitcoinCash homepage",
+        "XRBC_HOME_NEXUS",
+        "combined liquidity",
+        "swap feature",
+        "Battle Pulse",
+        "Market Nexus"
+      ],
+      "read": [
+        "memory/active/XRBC-HOME-NEXUS-2026-10-05.json"
+      ],
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "project_id": 75781181,
+      "branch": "master",
+      "path": "public/index.html",
+      "rule": "For homepage swap/chart/wallet presentation read the active source and runtime contracts. JCS Prayer Map Nexus is a separate route."
+    },
     "jcs_metrics": {
       "match": [
         "metrics.html",
@@ -37,9 +56,9 @@
       "match": [
         "prayer.map.html",
         "Prayer Map",
-        "Nexus",
-        "stars",
-        "timeline"
+        "JCS Nexus",
+        "JCS stars",
+        "JCS timeline"
       ],
       "read": [
         "memory/active/JCS-OBSERVATORY-2026-09-30.json"
@@ -68,7 +87,7 @@
       "read": [
         "ECOSYSTEM-CLARITY-2026-09-26.md"
       ],
-      "blocker": "GitLab CI quota; require changed evidence before retry."
+      "blocker": "Sept26 quota failure is historical; Oct5 normal pipelines/deployments succeeded. Check MR !37 itself only if resuming its scope."
     },
     "other_topic": {
       "read": [

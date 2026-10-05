@@ -7,7 +7,7 @@
     "supersedes": "All earlier post-deployment verification, audit, read-back and automatic checkpoint requirements."
   },
   "id": "cross-project-evidence-first-v1",
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "human_file": "OPERATING-PROTOCOL.md",
   "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
   "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
@@ -136,7 +136,8 @@
       "merge_request": 37,
       "pipeline": 2885324036,
       "reason": "ci_quota_exceeded",
-      "resume_condition": "Evidence that GitLab CI quota or runner capacity has been restored; do not blindly retry."
+      "resume_condition": "Evidence that GitLab CI quota or runner capacity has been restored; do not blindly retry.",
+      "current_status": "Historical failure; later normal pipelines 2914854164 and 2914880120 succeeded including deployment, observed 2026-10-05. Target old MR status remains separate."
     }
   },
   "manual_page_delivery": {
@@ -187,5 +188,10 @@
     "scope": "This contract calls for focused evidence of the changed path, not mandatory broad tests, screenshots or repeated audits.",
     "delivery": "Choose current user-authorized manual handoff or deployment; do not infer it from an old checkpoint. Stop after normal deployment success."
   },
-  "legacy_queue_scope": "next_issue and linked_blockers retain the XRBC/XRB historical queue only."
+  "legacy_queue_scope": "next_issue and linked_blockers retain the XRBC/XRB historical queue only.",
+  "compact_task_handoffs": {
+    "updated": "2026-10-05",
+    "rule": "Keep task routes distinct (XRBC market Nexus versus JCS Prayer Map Nexus). Save exact source identity, event/field-to-renderer mapping, freshness/unknown states, bounded verification and next action. Current source outranks snapshots; do not claim external files alter internal weights.",
+    "homepage_record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json"
+  }
 }

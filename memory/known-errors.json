@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "registry_id": "xrbc-ecosystem-known-errors",
-  "updated": "2026-09-30",
+  "updated": "2026-10-05",
   "purpose": "Persistent error/regression ledger. Read before edits; update status instead of deleting resolved failures.",
   "status_values": [
     "open",
@@ -13,7 +13,10 @@
   "active_source": {
     "frontend_repository": "xrbitcoincash-group/xrbitcoincash-project",
     "branch": "master",
-    "observed_head": "863ad69d31c867b414ace328d8d9a634316c4083"
+    "observed_head": "c7fb139101bb078caafa3dd40209e97d541d2ec7",
+    "previous_observed_head": "863ad69d31c867b414ace328d8d9a634316c4083",
+    "observed_at": "2026-10-05",
+    "scope": "Current frontend baseline only; individual issue evidence/source snapshots and legacy repair order remain unchanged."
   },
   "highest_priority": {
     "id": "XRB-001",
