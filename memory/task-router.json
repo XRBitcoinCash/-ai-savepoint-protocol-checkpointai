@@ -43,7 +43,8 @@
       ],
       "read": [
         "memory/active/JCS-OBSERVATORY-2026-09-30.json",
-        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
       ],
       "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
       "branch": "main",
@@ -63,7 +64,8 @@
       ],
       "read": [
         "memory/active/JCS-OBSERVATORY-2026-09-30.json",
-        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
       ],
       "section": "accepted_prayer_map",
       "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
@@ -78,7 +80,8 @@
       ],
       "read": [
         "JCS-VERIFY-WORKFLOW-2026-09-28.md",
-        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
       ],
       "rule": "Read latest source before assuming the old artifact is current."
     },
