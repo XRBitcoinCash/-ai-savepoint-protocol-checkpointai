@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-05",
+  "updated": "2026-10-07",
   "purpose": "Small first read: select the current task and load only its relevant record. Full history stays in the existing archive and graph.",
   "read_once": [
     "AGENTS.md",
@@ -42,7 +42,8 @@
         "ledger metrics"
       ],
       "read": [
-        "memory/active/JCS-OBSERVATORY-2026-09-30.json"
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
       ],
       "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
       "branch": "main",
@@ -61,7 +62,8 @@
         "JCS timeline"
       ],
       "read": [
-        "memory/active/JCS-OBSERVATORY-2026-09-30.json"
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
       ],
       "section": "accepted_prayer_map",
       "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
@@ -75,7 +77,8 @@
         "prayer NFT verification"
       ],
       "read": [
-        "JCS-VERIFY-WORKFLOW-2026-09-28.md"
+        "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md"
       ],
       "rule": "Read latest source before assuming the old artifact is current."
     },
