@@ -23,7 +23,7 @@ Once the requested fix is deployed, stop immediately. No further tools, live che
 
 ## Topic routing and compatibility
 
-For other topics, use `memory/task-router.json` and only the relevant active record; XRBC Market Nexus and JCS Prayer Map are different routes. For the October 7 JCS release, the metrics, map and verify routes include `memory/active/JCS-RELEASE-2026-10-07.md` after the prior live-debug handoff. Combined PR #2 is prepared for one deployment; PR #3 was closed as superseded. Load `memory/operating-protocol.json` for topic-specific delivery, discovery or security work; use larger history only for missing facts or conflicts. Manual-delivery work uses the latest accepted complete source and current delivery authorization.
+For other topics, use `memory/task-router.json` and only the relevant active record; XRBC Market Nexus and JCS Prayer Map are different routes. For the current JCS homepage trade, open-order, liquidity and receipt debug route, read `memory/active/JCS-TRADE-DEBUG-2026-10-08.md` and verify its pending PR/deployment state. The October 7 metrics/map/verify release record remains historical; do not treat its predeployment status as current. Load `memory/operating-protocol.json` for topic-specific delivery, discovery or security work; use larger history only for missing facts or conflicts. Manual-delivery work uses the latest accepted complete source and current delivery authorization.
 
 Layout: Liquidity is the reference. Trade/Liquidity/XRBitcoin preserve a fixed scrollable left rail above 900px: 188px through 1180px, 220px above. Compact top navigation is only for <=900px. Keep identities separate. Trace metrics through source, request, field, transform, renderer, freshness, coverage and failure state.
 

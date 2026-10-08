@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "purpose": "Small first read: select the current task and load only its relevant record. Full history stays in the existing archive and graph.",
   "read_once": [
     "AGENTS.md",
@@ -100,6 +100,25 @@
         "ai-bootstrap.json"
       ],
       "rule": "Select the matching routing entry, not all routes; only load the canonical contract or graph when needed."
+    },
+    "jcs_trade": {
+      "match": [
+        "JCS trade",
+        "JCS homepage",
+        "JCS liquidity",
+        "JCS open orders",
+        "JCS receipt NFT"
+      ],
+      "read": [
+        "memory/active/JCS-TRADE-DEBUG-2026-10-08.md"
+      ],
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "paths": [
+        "index.html",
+        "js/jcs-core.js"
+      ],
+      "rule": "Use the dated live ledger evidence and current source; preserve wallet JSON and require a complete validated account_offers snapshot before offering cancellation."
     }
   },
   "session_contract": [
