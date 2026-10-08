@@ -25,6 +25,16 @@ PR #16 merged as `f36b02999e78e40dac903b4e61556241db528cc9`. GitHub Pages run `3
 
 [PR #17](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/17) head `240e761d20db76cbd2a31f534660777c1483dee4` targets the deployed `main` head `f36b02999e78e40dac903b4e61556241db528cc9`. At this checkpoint it is open; no merge or Pages deployment is asserted. A trustline or balance response started for wallet A could finish after wallet B connects and overwrite B's readiness or displayed balance. PR #17 clears wallet-dependent readiness and balances on identity change, discards late responses for an earlier identity, and stops a balance-percentage choice if the wallet or side changes. It edits only `js/jcs-core.js` and the deployed inline copy; transaction JSON is unchanged. Both copies parsed, and a focused asynchronous wallet A/B response-order check passed. No signature or financial transaction was created.
 
+## PR #17 deployment and read-only quote check
+
+PR #17 merged as `092cb4975d515241c181c296c6f5dbbefe87ec15`; GitHub Pages run `37717770539` succeeded. The served wallet-bound logic was checked in the live page. Connected wallet `rG1JTxB99kTXevRG5nXB5cFs1UNJ34pXN7` showed the trustline and 40.147644 XRP / 4,026,828.452573 JCS. No signing payload was created for that check.
+
+On 2026-10-08 UTC, the same connected page was used for read-only buy/sell quotes. At 10,000 JCS both sides displayed approximately 0.00151 XRP. At 1,000,000 JCS buy showed 0.151 XRP and sell 0.150 XRP; these displayed estimates do not indicate a direct round-trip gain. Signing still recomputes validated liquidity and enforces its signed whole-drop 2% limit. No buy/sell request was opened. A 1 JCS buy correctly disabled Review because it cannot be limited safely in whole drops, but the positive estimate rendered as `0 XRP`, which is misleading.
+
+## Current presentation fix, prepared before deployment
+
+[PR #18](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/18), head `d3641d4c721b2318cd2582d6eb102589db56d3c9`, targets deployed `main` `092cb4975d515241c181c296c6f5dbbefe87ec15`. It shows `<0.000001 XRP` for a positive sub-drop estimate in the trade card and total, in both `js/jcs-core.js` and the deployed inline `index.html` bundle. It changes presentation only; quote, OfferCreate, wallet signing and the whole-drop guard are unchanged. Both scripts parsed, the PR diff was reviewed, and focused formatter checks covered zero, sub-drop, one drop and normal values. At this checkpoint PR #18 is open and mergeable; deployment and served-code verification are not asserted.
+
 ## Next action
 
-Check PR #17's merge state and required gates, merge through the normal workflow, and wait for its Pages result. Under the user's current continuation request, confirm the served code and connected wallet readiness/balances with one read-only page check. Do not repeat the buy, sell, mint, cancellation or AMM transactions to test this race.
+Merge PR #18 through the normal workflow, wait for its required Pages result, then stop under the deployment rule. A future explicit continuation may confirm the served wording with a read-only 1 JCS quote; it must not create a wallet request merely to verify presentation.
