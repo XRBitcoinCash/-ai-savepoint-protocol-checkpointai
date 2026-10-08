@@ -9,7 +9,7 @@ Application: [XRBitcoinCash/JCS-token-on-the-XRPL](https://github.com/XRBitcoinC
 - The My NFTs read-only view loaded 21 wallet NFTs. The JCS receipt (taxon 20260913) is labeled a personal historical record and has no sell action in this interface. The receipt copy says it holds no JCS/XRP and cannot be redeemed. This does not prove behavior of other marketplaces.
 - PR #11 exposed OfferSequence in Xaman review; #12 checked validated cancellation details; #13 extended liquidity review to five minutes while retaining a fresh 1% drift check; #14 cleared stale deposit confirmation; #15 checked validated limit-order fields. PR #15 merged as `adc443c5613de17de895eb0af5e3118ec11f2b4d`; GitHub Pages run `37715750828` succeeded and the served inline code was checked.
 
-## Current narrow fix, prepared before deployment
+## Prior open-order fix, prepared before its deployment
 
 [PR #16](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/16), head `f453fd4e877b3c02f934659fe4e51288d6fcb677`, targets `main` head `adc443c5613de17de895eb0af5e3118ec11f2b4d`. At this checkpoint it is open and mergeable, with no PR-triggered workflow run reported. It edits both `js/jcs-core.js` and the inline bundle in `index.html`, preserving unrelated differences between them.
 
@@ -17,6 +17,14 @@ The prior open-order reader requested a single `account_offers` page with `limit
 
 Both changed JavaScript copies parsed. Focused synthetic checks passed for a two-page snapshot, an unvalidated response, an out-of-order old-wallet response and cancellation bound to the selected wallet. These checks did not submit a transaction and do not establish live deployment. No new signature is needed to inspect the read-only open-order view.
 
+## Subsequent deployment and live observation
+
+PR #16 merged as `f36b02999e78e40dac903b4e61556241db528cc9`. GitHub Pages run `37716828374` completed successfully. The served `index.html` contained the new open-order code, and a read-only refresh for the connected wallet reported zero unfinished JCS orders without an error. Pagination beyond one page and wallet-switch behavior were tested synthetically, not with live multi-wallet signatures.
+
+## Current narrow fix, prepared before deployment
+
+[PR #17](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/17) head `240e761d20db76cbd2a31f534660777c1483dee4` targets the deployed `main` head `f36b02999e78e40dac903b4e61556241db528cc9`. At this checkpoint it is open; no merge or Pages deployment is asserted. A trustline or balance response started for wallet A could finish after wallet B connects and overwrite B's readiness or displayed balance. PR #17 clears wallet-dependent readiness and balances on identity change, discards late responses for an earlier identity, and stops a balance-percentage choice if the wallet or side changes. It edits only `js/jcs-core.js` and the deployed inline copy; transaction JSON is unchanged. Both copies parsed, and a focused asynchronous wallet A/B response-order check passed. No signature or financial transaction was created.
+
 ## Next action
 
-Merge PR #16 through the normal workflow, wait for the Pages deployment result, then verify the served inline code and one read-only open-order refresh for the connected wallet under the user's current continuation request. Record merge/deployment/live observation separately; if a gate fails, report the actual blocker. Do not broaden into another buy, sell, mint or AMM transaction to test this change. Preserve wallet approval and the established transaction JSON validation.
+Check PR #17's merge state and required gates, merge through the normal workflow, and wait for its Pages result. Under the user's current continuation request, confirm the served code and connected wallet readiness/balances with one read-only page check. Do not repeat the buy, sell, mint, cancellation or AMM transactions to test this race.
