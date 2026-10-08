@@ -31,10 +31,16 @@ PR #17 merged as `092cb4975d515241c181c296c6f5dbbefe87ec15`; GitHub Pages run `3
 
 On 2026-10-08 UTC, the same connected page was used for read-only buy/sell quotes. At 10,000 JCS both sides displayed approximately 0.00151 XRP. At 1,000,000 JCS buy showed 0.151 XRP and sell 0.150 XRP; these displayed estimates do not indicate a direct round-trip gain. Signing still recomputes validated liquidity and enforces its signed whole-drop 2% limit. No buy/sell request was opened. A 1 JCS buy correctly disabled Review because it cannot be limited safely in whole drops, but the positive estimate rendered as `0 XRP`, which is misleading.
 
-## Current presentation fix, prepared before deployment
+## PR #18 deployment and served wording
 
-[PR #18](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/18), head `d3641d4c721b2318cd2582d6eb102589db56d3c9`, targets deployed `main` `092cb4975d515241c181c296c6f5dbbefe87ec15`. It shows `<0.000001 XRP` for a positive sub-drop estimate in the trade card and total, in both `js/jcs-core.js` and the deployed inline `index.html` bundle. It changes presentation only; quote, OfferCreate, wallet signing and the whole-drop guard are unchanged. Both scripts parsed, the PR diff was reviewed, and focused formatter checks covered zero, sub-drop, one drop and normal values. At this checkpoint PR #18 is open and mergeable; deployment and served-code verification are not asserted.
+PR #18 merged as `9f5e85bc28fe4f5e341fb8d9d63aea02db2d0ffa`, and GitHub Pages run `37718728956` succeeded. In a subsequent explicit continuation, the live page was reloaded and a read-only 1 JCS buy quote showed `<0.000001 XRP` with Review disabled and the whole-drop safety explanation. A fresh read-only open-order check showed zero unfinished orders, clearing a transient closed-WebSocket error from the old tab. No signing request was created.
+
+## Current sell-balance fix, prepared before deployment
+
+The connected wallet displayed 4,026,828.452573 JCS, but the live form accepted a 5,000,000 JCS sell amount, showed 0.75 XRP estimated proceeds and left Review Sell enabled. This could only fail later in the market path's balance check. The advanced limit-sell path lacked a fresh balance preflight before Xaman.
+
+[PR #19](https://github.com/XRBitcoinCash/JCS-token-on-the-XRPL/pull/19), head `03e1db8ce262e79d2fe01b407c31d596bd16b54e`, targets deployed `main` `9f5e85bc28fe4f5e341fb8d9d63aea02db2d0ffa`. It disables market and limit sell review when the shown JCS balance is lower, hides the impossible XRP proceeds estimate, and shows a clear message. Balance refresh recalculates controls without overwriting the validated limit-order status. Limit sell now refreshes balance and checks wallet/side/amount/price again before calling Xaman. The market transaction path's existing fresh balance check remains. Transaction JSON and quote math are unchanged. Both script copies parsed; focused guard checks covered over-balance, exact-balance, smaller sell, buy, and no-trustline cases. No payload was opened. This checkpoint asserts neither merge nor deployment of PR #19.
 
 ## Next action
 
-Merge PR #18 through the normal workflow, wait for its required Pages result, then stop under the deployment rule. A future explicit continuation may confirm the served wording with a read-only 1 JCS quote; it must not create a wallet request merely to verify presentation.
+Review PR #19's final head and merge gate, then merge through the normal workflow and wait for GitHub Pages success. Stop tools immediately after deployment succeeds. A later explicit continuation can verify the served over-balance form with a read-only quote; do not sign an impossible sell.
