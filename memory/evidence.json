@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-10-09",
+  "records": [
+    {
+      "id": "XRBC-95-focused",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "bb276576988cce00e5330655ba779008fe7b62d1",
+      "recorded_at": "2026-10-09T06:55:20Z",
+      "scope": "3 handoff/failure checks + 12 swap safety checks; no real payload created",
+      "command": "node --test tests/unit/trade-handoff-failure.test.mjs tests/unit/swap-execution-safety.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/95",
+      "limitations": [
+        "Recorded completed check, not rerun during memory maintenance. Input/environment digests were not recorded; review existing evidence before deciding a rerun."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-95-ci",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "bb276576988cce00e5330655ba779008fe7b62d1",
+      "recorded_at": "2026-10-09T06:55:20Z",
+      "scope": "Required merge-request CI",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2929289779",
+      "limitations": [
+        "CI does not establish live wallet behavior."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-95-deploy",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
+      "recorded_at": "2026-10-09T06:55:20Z",
+      "scope": "Production pipeline and deploy-pages succeeded; live new behavior remains unchecked",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2929295277",
+      "limitations": [
+        "Job 17051188030 success at 06:35:25.818Z. Browser not rechecked after deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-94-answer-controls",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "60f3ee35f901075119138e01234b415ce21f7291",
+      "recorded_at": "2026-10-09T06:55:20Z",
+      "scope": "Observed visible choices; user confirmed completion",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-SWAP-HANDOFF-2026-10-09.md",
+      "limitations": [
+        "Later flash remains undiagnosed. This is historical observation, not current browser state."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-buy-sell-acceptance",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "wallet",
+      "status": "pending",
+      "source_revision": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
+      "recorded_at": "2026-10-09T06:55:20Z",
+      "scope": "Bounded user-signed buy and sale of actual received XRBC",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-SWAP-2026-10-09.md",
+      "limitations": [
+        "No validated transaction evidence for this resumed sequence."
+      ],
+      "supersedes": []
+    }
+  ]
+}

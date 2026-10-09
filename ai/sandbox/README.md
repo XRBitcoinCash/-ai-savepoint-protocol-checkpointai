@@ -1,29 +1,9 @@
-# XRBitcoinCash AI sandbox
+# Local experiment sandbox — updated 2026-10-09
 
-This directory is for local, synthetic, reversible experiments only. It is not a production asset directory and must never be included in a deployed page or backend package.
+Use this directory for explicitly selected, local, synthetic and reversible experiments. A folder is not an operating-system security sandbox. Host permissions and restrictions still apply. Do not include it in application deployment packages.
 
-## Allowed
+No secrets, personal records, real signing payloads, wallet authorization, transaction submission, credentials, live backend mutation or paid model service. Do not use another route to bypass a denied operation. A simulation is never proof of live execution.
 
-- Fake XRPL accounts, transaction hashes, NFT IDs, and ledger responses.
-- Deterministic fixtures, parser tests, accessibility checks, and UI previews.
-- Reproduction of a reported failure without wallet secrets or real funds.
+Record a concrete hypothesis, minimal synthetic input, expected result, observed result, relevant fingerprints, check already reused, next changed condition and stopping rule. Use `scripts/check-evidence.mjs` for evidence/unchanged-attempt assessment. Do not invent open-ended self-improvement experiments or background agents.
 
-## Forbidden
-
-- Seeds, private keys, passcodes, API secrets, environment values, personal data, or real signing payloads.
-- Wallet authorization, transaction submission, fund movement, live backend mutation, or production credentials.
-- Treating a simulated result as proof that a live wallet or deployment works.
-
-## Experiment record
-
-```text
-Hypothesis:
-Target file/function:
-Fixture or synthetic input:
-Expected result:
-Observed result:
-Checks run:
-Cleanup or promotion decision:
-```
-
-Promote only the smallest reviewed patch after the relevant repository checks pass. Record the result in the parent savepoint document; do not paste a full conversation.
+Promote only the smallest authorized patch after the changed-risk checks and required gates. Keep its evidence in the selected project brief; do not paste full transcripts. Retain useful failures as short records, remove disposable synthetic output when it is no longer needed, and never run cleanup after a successful website deployment stop.

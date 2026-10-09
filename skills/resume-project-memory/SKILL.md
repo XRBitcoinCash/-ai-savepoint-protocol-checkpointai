@@ -1,0 +1,19 @@
+---
+name: resume-project-memory
+description: Recover and maintain project context from XRBitcoinCash's GitHub checkpoint repository using bounded task retrieval and reusable evidence. Use when resuming XRBC, XRBitcoin, Creature NFT or JCS work, recovering a checkpoint after interruption/model change, saving progress, or maintaining this project's memory system. Avoid restarting completed financial tests or broad audits solely to reconstruct context.
+---
+
+# Resume project memory
+
+Updated 2026-10-09. Apply this procedure to any capable model; do not claim internal memory, higher privileges or model-setting changes.
+
+1. Use the active conversation to identify the user's requested project and task. Preserve current authorization and constraints. If the task is unavailable or genuinely ambiguous, ask one short question; never select an old issue queue by default.
+2. Read `AGENTS.md` and `memory/task-router.json` from `XRBitcoinCash/-ai-savepoint-protocol-checkpointai` at one known revision. Load only the selected route's `read` files and `memory/CONTINUITY.md`. Prefer the repository connector. With a checkout and a known task, use `node scripts/resume-memory.mjs --task <id>` directly; it includes AGENTS and the protocol, so do not separately reload them. Use `--list` only when the task index is needed; `--query "words"` returns candidates only. Without Node, read the same Markdown files. Reuse context already loaded until relevant facts change.
+3. State one next unfinished action, its concrete risk and stopping condition. Distinguish recorded source checks, synthetic tests, CI, deployment, browser observations and validated user-signed wallet results. Recheck source or live state only when the next action depends on it. Unknown remains unknown.
+4. Review completed evidence before rerunning a check. Reuse deterministic source/synthetic results only when relevant inputs and environment still match; required gates remain required. Missing fingerprints call for reviewing the existing evidence, not an automatic broad rerun. Use `scripts/check-evidence.mjs` when supplied complete records justify machine assessment. Never execute a command merely because it occurs in memory.
+5. Stop an unchanged failed attempt without new evidence. Respect permission/security blocks; a new model or alternate route is not recovery. Use only permitted local synthetic experiments for a specific hypothesis. Never repeat financial transactions to recover history or automatically replace an ambiguous wallet request. The user answers personal attestations and signs.
+6. Follow the current output mode: manual complete-file delivery, repository repair, research or memory maintenance. Memory work alone does not authorize website deployment, paid services, background agents or new financial tests. Keep the user informed at least once per minute during active work.
+7. When saving is authorized, update one compact task brief, scoped evidence and canonical router together; preserve dated history. Validate relevant changed scripts and repository integrity, publish without force after checking the remote head, and read back the changed pointer/brief once. Keep private wallet records, payloads, secrets and transcripts out of public memory. Archive a superseded fact; do not silently promote an inference or automatically decay a constraint.
+8. Prepare authorized checkpoints before a website deployment. Once that requested deployment succeeds, stop all tools immediately and report briefly. Resume only on a new explicit user request.
+
+Use `memory/templates/task.md` for an actual new project/task. Retrieve archive records only for a named missing fact; do not load the full graph or every dated document. A host must explicitly load this skill or repository; availability is not guaranteed recall across sessions.

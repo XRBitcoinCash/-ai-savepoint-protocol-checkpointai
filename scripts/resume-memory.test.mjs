@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { test } from 'node:test';
-import { buildResumeContext } from './resume-memory.mjs';
+import { buildResumeContext, buildTaskContext, listTasks, queryTasks, validateRouter } from './resume-memory.mjs';
 
 const repo = fileURLToPath(new URL('..', import.meta.url));
 const script = fileURLToPath(new URL('./resume-memory.mjs', import.meta.url));
@@ -23,6 +23,30 @@ function fixture(t, transform = value => value) {
   fs.writeFileSync(path.join(root, pointer), id);
   fs.writeFileSync(path.join(root, 'memory/CONTINUITY.md'), 'Synthetic protocol. No network or financial operations.');
   return root;
+}
+
+function routedFixture(t) {
+  const root = fixture(t);
+  fs.writeFileSync(path.join(root, 'memory/active/JCS.md'), 'JCS topic only. Historical synthetic evidence.');
+  const router = {
+    schema_version: '2.0.0', updated: '2026-10-09', default_task: 'xrbc_swap',
+    routes: {
+      xrbc_swap: {
+        title: 'XRBC swap and Market Nexus', match: ['XRBC swap', 'Nexus'], read: [pointer],
+        source: { repository: 'xrbitcoincash-group/xrbitcoincash-project', branch: 'master', head,
+          pipeline: /^source_pipeline=(.+)$/m.exec(current)[1] },
+        status: 'recorded', next_action: 'Read the current user request.',
+      },
+      jcs_map: {
+        title: 'JCS Prayer Map Nexus', match: ['Prayer Map', 'Nexus'], read: ['memory/active/JCS.md'],
+        source: { repository: 'XRBitcoinCash/JCS-token-on-the-XRPL', branch: 'main', head: null, pipeline: null },
+        status: 'historical', next_action: 'Read only the relevant source when needed.',
+      },
+    },
+  };
+  const save = () => fs.writeFileSync(path.join(root, 'memory/task-router.json'), JSON.stringify(router));
+  save();
+  return { root, router, save };
 }
 
 test('actual compact bundle loads, stays bounded, and does not claim fresh verification', () => {
@@ -96,4 +120,105 @@ test('CLI exports JSON, reports stale heads and rejects unsupported arguments', 
   assert.equal(stale.status, 2);
   assert.equal(JSON.parse(stale.stdout).sourceCheck, 'differs-from-supplied-head');
   for (const args of [['--source-head'], ['--write'], ['--json', '--json']]) assert.equal(run(args).status, 1);
+});
+
+test('explicit topic bundles isolate projects and preserve unknown source evidence', t => {
+  const { root } = routedFixture(t);
+  const bundle = buildTaskContext({ root, task: 'jcs_map', sourceHead: head });
+  assert.equal(bundle.version, 2);
+  assert.equal(bundle.source.repository, 'XRBitcoinCash/JCS-token-on-the-XRPL');
+  assert.equal(bundle.source.savedHead, null);
+  assert.equal(bundle.source.savedPipelineId, null);
+  assert.equal(bundle.sourceCheck, 'unknown-saved-head');
+  assert.deepEqual(bundle.documents.map(document => document.path), ['AGENTS.md', 'memory/CONTINUITY.md', 'memory/active/JCS.md']);
+  assert.ok(!bundle.documents.some(document => document.path === pointer));
+  const xrbc = buildTaskContext({ root, task: 'xrbc_swap', sourceHead: head });
+  assert.equal(xrbc.sourceCheck, 'matches-supplied-head');
+  assert.equal(buildTaskContext({ root, task: 'xrbc_swap', sourceHead: '0'.repeat(40) }).sourceCheck, 'differs-from-supplied-head');
+  assert.throws(() => buildTaskContext({ root, task: 'missing' }), /Unknown task/);
+  assert.throws(() => buildTaskContext({ root, task: 'jcs_map', sourceHead: 'unknown' }), /Invalid supplied/);
+});
+
+test('index and ambiguous query return candidates without loading or choosing a topic', t => {
+  const { root } = routedFixture(t);
+  fs.unlinkSync(path.join(root, pointer));
+  fs.unlinkSync(path.join(root, 'memory/active/JCS.md'));
+  assert.equal(listTasks({ root }).tasks.length, 2);
+  const ambiguous = queryTasks({ root, query: 'Nexus' });
+  assert.equal(ambiguous.selectedTask, null);
+  assert.deepEqual(ambiguous.candidates.map(candidate => candidate.id).sort(), ['jcs_map', 'xrbc_swap']);
+  assert.equal(queryTasks({ root, query: 'Prayer Map' }).candidates[0].id, 'jcs_map');
+  assert.equal(queryTasks({ root, query: 'xrbc_swap' }).candidates[0].match, 'exact');
+  assert.deepEqual(queryTasks({ root, query: 'unrelated' }).candidates, []);
+  assert.throws(() => queryTasks({ root, query: '' }), /Invalid task query/);
+});
+
+test('CURRENT must agree with a v2 canonical default route', t => {
+  const { root, router, save } = routedFixture(t);
+  assert.equal(buildResumeContext({ root }).version, 1);
+  const route = router.routes.xrbc_swap;
+  for (const field of ['repository', 'branch', 'head', 'pipeline']) {
+    const original = route.source[field];
+    route.source[field] = field === 'head' ? '0'.repeat(40) : field === 'pipeline' ? '1' : `${original}x`;
+    save();
+    assert.throws(() => buildResumeContext({ root }), /CURRENT differs/);
+    route.source[field] = original;
+  }
+  route.read = ['memory/active/JCS.md'];
+  save();
+  assert.throws(() => buildResumeContext({ root }), /CURRENT differs/);
+});
+
+test('corrupt routing and invented source placeholders are rejected', t => {
+  const { root, router, save } = routedFixture(t);
+  for (const field of ['head', 'pipeline']) {
+    router.routes.jcs_map.source[field] = 'unknown';
+    save();
+    assert.throws(() => validateRouter({ root }), /Invalid source/);
+    router.routes.jcs_map.source[field] = null;
+  }
+  router.updated = '2026-02-30';
+  save();
+  assert.throws(() => validateRouter({ root }), /Invalid router review date/);
+  fs.writeFileSync(path.join(root, 'memory/task-router.json'), '{broken');
+  assert.throws(() => listTasks({ root }), /Invalid router JSON/);
+});
+
+test('routed paths cannot escape the checkout and document budgets remain bounded', t => {
+  const { root, router, save } = routedFixture(t);
+  const route = router.routes.jcs_map;
+  for (const target of ['../outside.md', '/outside.md', 'memory/active/../../outside.md', 'https://example.com/context.md']) {
+    route.read = [target];
+    save();
+    assert.throws(() => buildTaskContext({ root, task: 'jcs_map' }), /path/i);
+  }
+  route.read = ['memory/active/JCS.md'];
+  save();
+  fs.unlinkSync(path.join(root, route.read[0]));
+  fs.symlinkSync(path.join(repo, 'AGENTS.md'), path.join(root, route.read[0]));
+  assert.throws(() => buildTaskContext({ root, task: 'jcs_map' }), /escapes root/);
+  fs.unlinkSync(path.join(root, route.read[0]));
+  fs.writeFileSync(path.join(root, route.read[0]), 'x'.repeat(16_385));
+  assert.throws(() => buildTaskContext({ root, task: 'jcs_map' }), /oversized/i);
+  for (const relative of ['AGENTS.md', 'memory/CONTINUITY.md', route.read[0]]) fs.writeFileSync(path.join(root, relative), 'x'.repeat(11_000));
+  assert.throws(() => buildTaskContext({ root, task: 'jcs_map' }), /byte budget/);
+});
+
+test('CLI supports explicit topic/index/query modes and rejects conflicting arguments', t => {
+  const { root } = routedFixture(t);
+  fs.mkdirSync(path.join(root, 'scripts'));
+  const localScript = path.join(root, 'scripts/resume-memory.mjs');
+  fs.copyFileSync(script, localScript);
+  const run = args => spawnSync(process.execPath, [localScript, ...args], { encoding: 'utf8' });
+  const task = run(['--task', 'jcs_map', '--json']);
+  assert.equal(task.status, 0);
+  assert.equal(JSON.parse(task.stdout).sourceCheck, 'unknown-saved-head');
+  assert.equal(JSON.parse(run(['--list', '--json']).stdout).tasks.length, 2);
+  assert.equal(JSON.parse(run(['--query', 'Nexus', '--json']).stdout).candidates.length, 2);
+  assert.equal(run(['--task', 'xrbc_swap', '--source-head', '0'.repeat(40)]).status, 2);
+  for (const args of [
+    ['--task'], ['--query'], ['--task', 'missing'], ['--list', '--list'], ['--list', '--task', 'xrbc_swap'],
+    ['--query', 'Nexus', '--source-head', head], ['--task', 'jcs_map', '--query', 'Nexus'],
+    ['--task', 'jcs_map', '--source-head', head, '--source-head', head],
+  ]) assert.equal(run(args).status, 1, args.join(' '));
 });

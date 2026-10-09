@@ -1,0 +1,1231 @@
+{
+  "schema_version": "1.0.0",
+  "indexed_on": "2026-10-09",
+  "meaning": "Content inventory and integrity snapshot, not renewed verification of historical claims. Original event dates remain intact.",
+  "self": {
+    "path": "memory/catalog.json",
+    "indexed_on": "2026-10-09",
+    "sha256": null,
+    "reason": "Self hash excluded to avoid recursion."
+  },
+  "entries": [
+    {
+      "path": "AGENTS.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3005,
+      "sha256": "14bc029f9863a274c39a636c6d515a23a903b07fe46c35a07b341da572610763",
+      "classification": "current"
+    },
+    {
+      "path": "AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 481,
+      "sha256": "f88a7b58743b0ed599366feda1c83a6de9a4915b326040ad4b71645b902ad401",
+      "classification": "redirect"
+    },
+    {
+      "path": "BING-SEARCH-METADATA-2026-09-25.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1068,
+      "sha256": "d9ff8a7987b57055cb51e25e1ec86f52a7a9ea58d924a474bb4a2620af665bcd",
+      "classification": "historical"
+    },
+    {
+      "path": "CREATURE-MARKET-CORRECTIONS-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3626,
+      "sha256": "75a2f58028381d7ef9e3d87a6f404f41b814625f0ea70bb06712469a3f585e25",
+      "classification": "historical"
+    },
+    {
+      "path": "CREATURE-XAMAN-HANDOFF-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3062,
+      "sha256": "432a04d2a7a341b26e96d58ddb82ff29369ec437469d88c25ea9c3d7b74ee542",
+      "classification": "historical"
+    },
+    {
+      "path": "DEVELOPER-API-WORKBENCH-CHECKPOINT-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3373,
+      "sha256": "0dea29f2ed90e627f6e18fce70e072977395c265c80fba2319c9ff1f05e4943f",
+      "classification": "historical"
+    },
+    {
+      "path": "DEVELOPER-PAGE-EXCHANGE-SIDEBAR-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1619,
+      "sha256": "b6c9c796b07806e8b5163b7b47e356cc852138bc2f0e47505d3d505ee9cae939",
+      "classification": "historical"
+    },
+    {
+      "path": "DISCOVERY-BRAND-FAVICON-SEO-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2440,
+      "sha256": "122840ffd10851d02dce4d17d5ca09530d10df86972854235e7f0999ebc9ef91",
+      "classification": "historical"
+    },
+    {
+      "path": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5803,
+      "sha256": "19a62a1210ec169327b9f43785899d9e0816a39bcf16ff344caef3a7c5cc8edd",
+      "classification": "historical"
+    },
+    {
+      "path": "ECOSYSTEM-CLARITY-2026-09-26.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2651,
+      "sha256": "384bd66d8c2fbed67fd4ddc717374d957b5bfc2a081c2d26f63c5a4cfd39dc10",
+      "classification": "historical"
+    },
+    {
+      "path": "FOOTER-COMPACTION-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3467,
+      "sha256": "7ab6102a4a2e74bff60deaa6e0ab6655967fa7523327c1eaae0ee1fa7b9cf0c3",
+      "classification": "historical"
+    },
+    {
+      "path": "HEADER-ACQUISITION-STEPS-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1874,
+      "sha256": "ad6b2036387ba1e3ab6ffe7215246df1ff8236fbf9b110ec0df892d01d990392",
+      "classification": "historical"
+    },
+    {
+      "path": "HEADER-XAMAN-NAV-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2844,
+      "sha256": "c37879a0a4522370cd68e4f8154bde365e7106899f000c2beefdc56bb02d486f",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-DISPLAY-CLARITY-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2265,
+      "sha256": "4edcb36954b88e9ca34f111cc920ec9bbffe233e3971734d7d493651bfba8116",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-EXCHANGE-SHELL-MIGRATION-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1660,
+      "sha256": "3fa001dac81fe55c2636c92b6a92e818d743d8af9ae8cb8c0f0e54684909cc5f",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-LAYOUT-PREVIEWS-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1226,
+      "sha256": "2db4a44668bfe9ab350c177a6671928fa21da0bd0c351f9c18bd47c157debacb",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-TRADE-TICKET-INLINE-XAMAN-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2233,
+      "sha256": "3d6ad5805728559be3604d334284e70579d89047d59f51f846139f8e4208376a",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2851,
+      "sha256": "a3e574f8ef1792e32ef05a1474ec6d994f289ba01994586ec8f40f4114095f2e",
+      "classification": "historical"
+    },
+    {
+      "path": "HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2285,
+      "sha256": "bd85c759d160f417c9fff5a78702a76ffa9c919a37326b55d34391d61df4b93f",
+      "classification": "historical"
+    },
+    {
+      "path": "HUMAN-AI-EFFICIENCY-WORKFLOW-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 8898,
+      "sha256": "92e92cd16baedcf3247801c0d1afe415f9278b9ba3f20bc96d6424b4e88b86f3",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-OBSERVATORY-RECOVERY-2026-09-30.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5217,
+      "sha256": "6522573c0f8db07ae5d78d4f55eddb96f26e302bcda30ea8046acb57556d562f",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 8371,
+      "sha256": "d2bc1055a704bbd6a089cb36852875abbb72ce873403daa601ea837c7445bf2d",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-RECEIPT-POLICY-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3135,
+      "sha256": "d5922a599dcd078011c75a1f768276704bdb7e7aba4c9be432fac2b2ddbd1483",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 7700,
+      "sha256": "1ac48af74f511293c1021c4e8d96f4b18c943196fde075a4c7121078c6e31835",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-WALLET-RECOVERY-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1731,
+      "sha256": "96cb1a60e751a2fe263efd06f21da388168934ca2c75c82c94a44c3e1cc1677c",
+      "classification": "historical"
+    },
+    {
+      "path": "JCS-WORKSPACE-LAYOUT-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2043,
+      "sha256": "13d8e6c1cefca4744ce375d557c4570f38fbaa8e9207cd7ce713dcd18031cf3f",
+      "classification": "historical"
+    },
+    {
+      "path": "KNOWN-ERRORS-REGRESSION-REGISTER.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 17919,
+      "sha256": "81a83c569a4df8da951d2d7913211e1b2c954e77afbb6e8badf590cb5a17ab4d",
+      "classification": "reference"
+    },
+    {
+      "path": "LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1663,
+      "sha256": "65e87564ec530c78bcdf82397edba420c51deeaf99c371d8c4ef470f12bca617",
+      "classification": "historical"
+    },
+    {
+      "path": "LIQUIDITY-MARKET-HISTORY-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1759,
+      "sha256": "c6c2d1f5dc30a80cec85d852a8b29e7275be613445b59fca361e7b51e4760b02",
+      "classification": "historical"
+    },
+    {
+      "path": "LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1711,
+      "sha256": "9dad39175102f5a09e1f02a74ae371c96cfcd91dd95fb4ef13c8fc48f506fa2d",
+      "classification": "historical"
+    },
+    {
+      "path": "LIQUIDITY-METRICS-EXACT-TRADE-CONSISTENCY-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 7402,
+      "sha256": "0176bff025c177efe64ed2657d381234e8c97bf731dd02b027a6ae56e4f36a65",
+      "classification": "historical"
+    },
+    {
+      "path": "LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1875,
+      "sha256": "c537dc132ed7049a57d31231fe8426f5574f12b3e027189d21891f50535621cb",
+      "classification": "historical"
+    },
+    {
+      "path": "LOCAL-XRP-TOKEN-LOGO-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 757,
+      "sha256": "670daf1faf8cf3fb7ecaab29f3eaba6a5cc3e2949f83cf7fb8a0d297f8df3b8a",
+      "classification": "historical"
+    },
+    {
+      "path": "NEXT_RUN.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 633,
+      "sha256": "5818f1d53dfbbf39662ce5a22b1cffea21f9bb14966faebb125014ac807c3cb8",
+      "classification": "current"
+    },
+    {
+      "path": "OPERATING-PROTOCOL.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 463,
+      "sha256": "15cbc88fffd9b15db0d1e0f100fdf22f48eecd199ca7074a9ddf96f363da8ed2",
+      "classification": "redirect"
+    },
+    {
+      "path": "ORDER-MANAGER-CLEANUP-RESTORE-CHECKPOINT-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5246,
+      "sha256": "c13cfccc184f428049d2d6484f9af644c7b1a8ff70bb0317b4f85080bf023d8a",
+      "classification": "historical"
+    },
+    {
+      "path": "ORDER-MANAGER-XAMAN-BROWSER-REPAIR-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3501,
+      "sha256": "df9070a8e2adff7d512b52fd59cea9b191b626d5517153e3f4d51c7f46ede107",
+      "classification": "historical"
+    },
+    {
+      "path": "PLAYBACK-BATTLE-NEXUS-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1761,
+      "sha256": "a40009c234bd94414edb058705b01576dbdf3d7ae6f1fcba7c119e754ae6d611",
+      "classification": "historical"
+    },
+    {
+      "path": "PROJECT-WIDE-XRBC-SIDEBAR-SHELL-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1671,
+      "sha256": "2cca36874fe9d2ea82a9829a19f3b8f32970391bde50a91014226ce5d656bcad",
+      "classification": "historical"
+    },
+    {
+      "path": "PUBLIC-LIQUIDITY-DISCOVERY-REPAIR-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 6400,
+      "sha256": "d07b7ba092a2ea4c5f2c8703d4032d3df913ede1b7d3461b3390ea1a37662e44",
+      "classification": "historical"
+    },
+    {
+      "path": "README.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1232,
+      "sha256": "c0d6419c5ec74ac4feed40a735f933674de29926671302fb7b8cef5083f53109",
+      "classification": "reference"
+    },
+    {
+      "path": "RELIABILITY-AUDIT-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 9352,
+      "sha256": "0553fe643ffaf97de6c42cbdd7ff4c3eda5034c8b7764b2bd333dcdfd765f1f1",
+      "classification": "historical"
+    },
+    {
+      "path": "SELECTED-MARKET-HEADER-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1319,
+      "sha256": "d706d894e570fe3c76961185f5961fe3117ecf87cdb2abb274161cfb637b4f47",
+      "classification": "historical"
+    },
+    {
+      "path": "SENTINEL-READONLY-PILOT-REMOVAL-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3034,
+      "sha256": "0d1286bdb18566b011b2337898800a67a753d74bbed4c46a599b48febe4c0cba",
+      "classification": "historical"
+    },
+    {
+      "path": "SHARED-EXCHANGE-UI-DESIGN-SYSTEM-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2422,
+      "sha256": "27e4e47233540e835ab992ff9c6b6441b771c98429c3980731e02c0bc277b1dc",
+      "classification": "historical"
+    },
+    {
+      "path": "STABLECOIN-TRUSTLINE-POLICY-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 4075,
+      "sha256": "7b582227c175e5508781fcab9f5f3b89c5d2b2b6423c6f901c9bbe1a0cc41130",
+      "classification": "historical"
+    },
+    {
+      "path": "TOKENIZATION-CATALOG-IMPLEMENTATION-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3330,
+      "sha256": "8c8fa33dd3d432dbe1caf0dbbf084d6b972f18d843f20ab3a90eb2d7a5ab6cc2",
+      "classification": "historical"
+    },
+    {
+      "path": "TOKENIZATION-CATALOG-RESEARCH-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 12365,
+      "sha256": "e6077b9850be39fb9ba5b44fa0553e9020835ba28f8f7e5292737fe57a3d70b2",
+      "classification": "historical"
+    },
+    {
+      "path": "TOKENIZATION-WORKSPACE-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 965,
+      "sha256": "8c5f858ba03ab9e5875e92d875e97da89dd34d64b3a9dc6dbd3dbb7737f336f0",
+      "classification": "historical"
+    },
+    {
+      "path": "TRADE-PAIR-NAVIGATION-2026-09-23.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2084,
+      "sha256": "ab5181c9285054a68516bcd1459fb3ed0f29aeb30072d0f140747b572b426205",
+      "classification": "historical"
+    },
+    {
+      "path": "UI-XAMAN-RECONNECT-COUNTDOWN-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3270,
+      "sha256": "be33bf7a10accea5b61fc8e8bca59f0786a342c0448de63d04842ceaa9c2641f",
+      "classification": "historical"
+    },
+    {
+      "path": "XAMAN-POPUP-LAYOUT-REPAIR-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1213,
+      "sha256": "4211d24dea711bf8adaf83af55d730767b38e4f520b294cfb6a07c2a753c82a1",
+      "classification": "historical"
+    },
+    {
+      "path": "XAMAN-SINGLE-CTA-AND-HOMEPAGE-TOP-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2431,
+      "sha256": "1f50f0f115040d7f3e3b3c0142eaf6ee83a535909e49572c402e1b7ea44e95dc",
+      "classification": "historical"
+    },
+    {
+      "path": "XAMAN-STANDARDIZATION-AUDIT-PAUSE-2026-09-19.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 10505,
+      "sha256": "1f5ac42d5cd8fd54033da349b9adf06b0477ba0c6ac90107d41f71f0ceffb4a6",
+      "classification": "historical"
+    },
+    {
+      "path": "XAMAN-TOKEN-SPECIFIC-SWAP-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2004,
+      "sha256": "7b5c99722066f9cf24f40c2077588ad7271d5a3ae3a4b74bf97ed5a36e1840e5",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBC-ECOSYSTEM-PRODUCTION-SCAFFOLD-2026-09-20.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 9910,
+      "sha256": "7fbdc68abbf31724e8c639f7046182416792fe0769ec7d53d275449c3bcf60e7",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBC-HOME-NEXUS-2026-10-05.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 4482,
+      "sha256": "fff46d313716c567fb0f3f650a23527ab64395ebe6519412401a8286ebaf6072",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBC-HOME-RESPONSIVE-HEADER-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3740,
+      "sha256": "5fb69a583d3d9c4ce6644f511f9cc707f9927ea26e287aaeaeb25f189270a4c9",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBC-HOMEPAGE-TOOL-IMAGES-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5163,
+      "sha256": "4fc02cbce5aa8fc8b674e2c06993e571c21eae93b6fb9e2af21a30163d56013a",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBC-HOMEPAGE-TOOL-PREVIEWS-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5461,
+      "sha256": "372ac87175b908d864c275088e53b57811483cdf2735135381ce2de4c5ae0022",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-SIDEBAR-PROJECT-BOUNDARY-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1632,
+      "sha256": "a32bce772c7ca34155dc07d284c3fe2d08b3a4372470f54885d850a927823619",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-WALLET-EVENTS-SIDEBAR-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2223,
+      "sha256": "8ca344dee2113c3dc82fb161cb4ae1f33c4a2f95ae24103572fe53cfbc188adc",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3981,
+      "sha256": "b787508ee8a49b8786afa1ae7e381027313c6eb7028cef9ee9e72603d663993f",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3321,
+      "sha256": "2204dc9c1c041bf067bf32c26dc31b2ba0585c28fe756a9ef20ac82a22838467",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-WALLET-RECOVERY-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2132,
+      "sha256": "e1f95493fcbae04ac024c15082f181a4fa8865374bf807547ea6733b5f3779d9",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-XAMAN-HELPER-CSP-REPAIR-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2127,
+      "sha256": "7e05691cc6f6d5a715948e60fc6f708dd4793b844f5173d86b2e9613acb3165b",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION-2026-09-22.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5626,
+      "sha256": "f814220b8709b53efab8cc96f8968cfe17a5e62118be14fb01facf0e95237b3e",
+      "classification": "historical"
+    },
+    {
+      "path": "XRBITCOINLABS-SEARCH-DISCOVERY-2026-09-25.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5626,
+      "sha256": "0423105a89f6f18c376c3cb7d52cf97f5c71b729138940da46f7266c19dbd3f6",
+      "classification": "historical"
+    },
+    {
+      "path": "XRP-LOGO-RENDERING-REPAIR-2026-09-21.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1699,
+      "sha256": "5742f329dc1e4be0fdf9688a8c9352a6256e74eb8f0ee34aa3fe839c9438f9b7",
+      "classification": "historical"
+    },
+    {
+      "path": "XRPL-LIQUIDITY-HOMEPAGE-LAUNCH-2026-09-16.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 9651,
+      "sha256": "b06b34c8203ec75612e804b82a47a5d1bd373597fbcbfaaec39904f8a3bb2bab",
+      "classification": "historical"
+    },
+    {
+      "path": "XRPL-LIQUIDITY-INDEX-PLAN-2026-09-16.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 15216,
+      "sha256": "0482245bc19c2843c488fd770d866a31463c33b5626eee8aa877d001775be4c1",
+      "classification": "historical"
+    },
+    {
+      "path": "XRPL-MEDIA-CONNECTION-FIX-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 4661,
+      "sha256": "cb640923eb2161eeca7571f49ad3fba3cc0c52424e0eeaf028020d6aed371988",
+      "classification": "historical"
+    },
+    {
+      "path": "XRPL-MEDIA-FRESHNESS-CHECKPOINT-2026-09-18.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5287,
+      "sha256": "1ade3073328825d01f5e0179ef0ea4a38d838c70e3c6d7d1e747d2341b6be05b",
+      "classification": "historical"
+    },
+    {
+      "path": "ai/sandbox/README.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1229,
+      "sha256": "b29f8123363779c675739dac464203fe5828e3957eabf4a7954683fae1f5349f",
+      "classification": "reference"
+    },
+    {
+      "path": "ai-bootstrap.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 484,
+      "sha256": "fdac6a9a0ed9e01089ada00bb500d0008f5e2dce0defb4fc3e97241231cf4012",
+      "classification": "redirect"
+    },
+    {
+      "path": "ai-memory.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 481,
+      "sha256": "1daf82ab7369076fd32bd3fae41147ef04a774cae9101343fc83102712ba7220",
+      "classification": "redirect"
+    },
+    {
+      "path": "latest_savepoint.record",
+      "indexed_on": "2026-10-09",
+      "bytes": 210,
+      "sha256": "3dfb432b9e59845228547efe59465ba3e684c66c26ddada552c4c9436e6313ae",
+      "classification": "redirect"
+    },
+    {
+      "path": "memory/CONTINUITY.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5410,
+      "sha256": "a383dd7e32de4ba15db2799a69ffa07f5687c18a98c21caf675e6977473d7252",
+      "classification": "current"
+    },
+    {
+      "path": "memory/CURRENT.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 626,
+      "sha256": "4dac9f4cb42cb5c4fa6b768df422857cad336b2df8bee08605ec350eb0607812",
+      "classification": "current"
+    },
+    {
+      "path": "memory/MIGRATION-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 4463,
+      "sha256": "a596e6476aa8aad8b8d44081005468d472ed947e23fe1966426e8ac80771491e",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/active/ECOSYSTEM-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1660,
+      "sha256": "e029d464e06060374b84bee2564754cb0de664aba808909f85120355a689f820",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3487,
+      "sha256": "2258db402b9f2ac14676b81cb33dc82971c0983fce66259f88b88030fcb4ff5b",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 14582,
+      "sha256": "0390875c7c942ed2f49a84ae3a6bbe3182ab8257769257ed9a495448a1119c19",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/JCS-RELEASE-2026-10-07.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2023,
+      "sha256": "f59da0e3db9ff31f340c427b91f87dfb1833e4809520c7d25a48db6a116c7bfe",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/JCS-TRADE-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1812,
+      "sha256": "9444a0cb7c1abdb51b530434ebb0f6e0ccd949324c9e78d3465aa0df16e08ed8",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/JCS-TRADE-DEBUG-2026-10-08.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 8051,
+      "sha256": "d77d7a1029642b0e2bf8889a1d745bbd9a07a1a62a825c0a1ebd84fc6344704d",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/MEMORY-SYSTEM-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 1408,
+      "sha256": "1f175fb9043f1fab8a14a811eb097aefb482e54eae486775bfc479331d0e367d",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/XRBC-DEBUG-2026-10-06.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 7533,
+      "sha256": "878fd636d064287dbba16f6b2463724bcc9c7504ee1874b229dbd6c887550b3d",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 11848,
+      "sha256": "98824870d308461700fe65b4a913edfaffbb1338d756083a9b93a9cb1114ff77",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/XRBC-SWAP-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3718,
+      "sha256": "2967c0849cd914e6992d31f1cfa64427744cba61efa5f0ba934277085ea6921e",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/XRBC-SWAP-HANDOFF-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 7294,
+      "sha256": "2cc867502124054cb8ff8d1c65c710ca68c0930a26513441ebbb67ba5d546ba0",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/XRBC-SWAP-NEXUS-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 7760,
+      "sha256": "5a6e6244a9498167e0e33daef97b51837c2bc730a745bae548f3de296d57c5b0",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/XRBC-SWAP-SAFETY-2026-10-09.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 6348,
+      "sha256": "42c6fb0be8396364110407446baa9ea8340f67e01492f524c7b09299916b67a9",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/2026-09-22-home-before-sidebar-alignment-checkpoint.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4225,
+      "sha256": "76199d439e0271bc8f76517b4cbe573d14e4ab6f93f0fc77e7c0127d8828ae91",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/2026-09-22-home-before-sidebar-alignment-evidence.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 6444,
+      "sha256": "ee9867c6b263e08f39b86385ecb4a010a4f43a6463953e8d86ebbdbfb3f4d51a",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/AGENTS-before-2026-10-06-continuity.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 8429,
+      "sha256": "d96e5c1bf160be11faea5c8fb03bd2aa9475eaaab5a5955591d08ec315e3fac8",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/NEXT_RUN-before-2026-09-22-audit.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 11106,
+      "sha256": "9e6f7ba9a39636a417796d9c1afdacf2af05cb553cd490ea667250434a5e96a4",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/NEXT_RUN-before-2026-10-06-continuity.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 10570,
+      "sha256": "7e0a68f23359fe2f16a3fa60c6dd962808b9ed51e87e241b1794ea591de13595",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/AGENTS.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 5493,
+      "sha256": "2b999af543880840d936d3171c713a56ccb3f386be430c1d2585f6304422e5a1",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/AI-SAVEPOINT-PROTOCOL-CHECKPOINT-TIA.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 61107,
+      "sha256": "b161572238fdea78835bd50097a8de8d0f1c1828b792d473c71445f012106897",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/NEXT_RUN.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2483,
+      "sha256": "d01a3cf19cf7d5f21abe740fadd861929a6552435e12a035fb3b74241e3c1452",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/OPERATING-PROTOCOL.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 9974,
+      "sha256": "4866b1181e435085b1892a5dece0c93d0ea8afa77c1e250da4b86a9df580485f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/ai-bootstrap.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 42629,
+      "sha256": "954de2f46eb8a9a4e2bd59890d422367c17dc806a71427b333d08f08f98b078f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/ai-memory.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 117814,
+      "sha256": "cb93f8ce7bf15afdc017f124a4e1e3bb13f40466ebd10fce8db836a74546fe08",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/latest_savepoint.record",
+      "indexed_on": "2026-10-09",
+      "bytes": 941,
+      "sha256": "589d8f336d998dcfa8c8ab189485d153f627fa9932a29bc5c40bf11ff0e32a33",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/memory/CONTINUITY.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 4904,
+      "sha256": "bb470609385bdf27705c39e1488f390fe521a1174c0ef769eccb64faf04ca5a8",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/memory/operating-protocol.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 16057,
+      "sha256": "6f2524905955caec8ad1f74274a3874838aed2a20d88516d49937583fbbc6ddd",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/memory/task-router.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4389,
+      "sha256": "24810743181ab1f5b82939094e4ac081aeddbede067f5d32e4e3fe0b01f5a4e9",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/before-2026-10-09-v2/scripts/validate-memory.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 6469,
+      "sha256": "1d3edaa41176db1e64985d309b56efcc0a00ba83a3515e835ab73590ce93000f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-22-reliability-audit.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 7672,
+      "sha256": "f968ca015db766edb977b0fa1e8c9aec70552f0ebbf08b69438bca7996758cb2",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-22-xrbc-home-responsive-header.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5245,
+      "sha256": "a256d372b7b8c519c11c6c94fad56d7d383b6c4b5eb56bdb6fd046a9ca5ba85f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-22-xrbitcoin-wallet-events-sidebar.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5131,
+      "sha256": "958f7fb1e63fd6e1eb3702490e8cf851cb41fe1dd6c47185c8e35b4995f60816",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-22-xrbitcoin-wallet-recovery.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 1854,
+      "sha256": "5731869117fba8c60911be6996d6b0db8c20dcf85c89d68f1bf0137c9e792890",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-23-public-liquidity-discovery.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 8048,
+      "sha256": "6563ee19d4b85b69c9789656338c6bc14b78c922756a2caf6841e6fc81004369",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-25-bing-search-metadata.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2189,
+      "sha256": "bc148b0e73fd63d59ba4c32a954266e0503e90569a24a24f9e74612c68b50788",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-25-xrbitcoinlabs-search-discovery.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2358,
+      "sha256": "38ebbd53d776309f39a72dbd2e1ddf06d0addcb785df8dacf22c112a408b3198",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-29-jcs-prayer-map-nexus.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2490,
+      "sha256": "5e08faba5d6673a159a9746f67b5e142b5ed1912fc24c53d3bb69655fbd9c14f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-09-30-jcs-observatory-recovery.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 7369,
+      "sha256": "885da60afec00e9d18b681de916823b304d69309049421c808bc3a398fc28d35",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/audits/2026-10-05-xrbc-home-nexus.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 8748,
+      "sha256": "647e5f88ba65378689b93cce52eab6e796f64941aad149b62262c567e2d92eee",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/contracts/PROJECTS.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 2245,
+      "sha256": "8bc7610d7d8488c4fa7de542d924db0871916bfdd7cabeb13cf7181987723f8a",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/creature-market-corrections-2026-09-23.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 7584,
+      "sha256": "c6d8e665be9fe0358147d7000cd3f685214cc0addf8b7473da5d8c900ff331c3",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/creature-xaman-handoff-2026-09-23.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5292,
+      "sha256": "c4b8c118016adb9b089cde05321e4b7977c2be0260c002d5de719a017f83bc8f",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/diagnostics/wallet-audit.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 2856,
+      "sha256": "7c869ad46bda77696b960af5b13d3fb4ea3e18e382de3baa5ee54299d61c062d",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/discovery-efficiency-standard.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5494,
+      "sha256": "bd3fb8631791c3335bc5b8615b3bcd5be3338e0f8c47f456d42b03a6a10c4f12",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/evidence.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3550,
+      "sha256": "3c4c0f7d0b23b630aa0df87592ae3cd93e6436b60b98c0ad6710ef86090242be",
+      "classification": "current"
+    },
+    {
+      "path": "memory/homepage-display-clarity-2026-09-23.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2948,
+      "sha256": "bc1529d4aab8d529432e43e40129e2c94b536a630a35913d6eb552493c0f07ef",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/known-errors.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 35998,
+      "sha256": "25112a44e4f7b7a2e60af160326a0eff212f26badc3e2f6555caec4e88578fdb",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/liquidity-wallet-startup-2026-09-24.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2543,
+      "sha256": "f62a968f65ae0975b61be58a0244ddfe43aa9b0cce76e05b2b01bd33b1e88cbf",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/operating-protocol.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 497,
+      "sha256": "ce8368079b11e8a7f61b961ed6271b087bfe7e6d34804449ced800b96eff0a49",
+      "classification": "redirect"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-EXCHANGE-SHELL-MIGRATION.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4408,
+      "sha256": "7ebcc3004affc01441f43800c86f21385552326357c6173909e9b0c7688450ea",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-TRADE-TICKET-INLINE-XAMAN.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4090,
+      "sha256": "57285e13cf3dc75e38db615ba3cdc520024507e0e8e8eea6d37a4811496491e9",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-CONNECT-LIFECYCLE-ALIGNMENT.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5481,
+      "sha256": "6c6b3749a71edd2cc456d9c746e1a02d14c7e8467019f0c510a2d3fa99b29515",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-HOMEPAGE-XAMAN-POPUP-RESTORE-XRP-LOGO.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4725,
+      "sha256": "00d1e6f15940c8e2ecbf6ec8fedee5f5a6e21f4b20ef956af1d3f857513dd692",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-COMPACT-CHART-RECEIPT-EMPTY-STATES.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5120,
+      "sha256": "523fc05c6d3e7a8e690c61d51e81eb714f6a4286bc4b1f58d666e83ef3f45e06",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-BACKEND-ROUTE.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4544,
+      "sha256": "354716e4ef2e7acf9551d0d41b5fbeb2d92f7ccbc4dbdd78291641b6ce1ef7c6",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-MARKET-HISTORY-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4829,
+      "sha256": "0e640bfd37363c8cf960a9ed01701dc9f253e731a0e56ecdc66a063326ba4290",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-LIQUIDITY-TOP-WALLET-XAMAN-COUNTDOWN.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3849,
+      "sha256": "3c66b85828c5f0c43942c7382fffd5274d85343fc4bd181a301eabe068141018",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-LOCAL-XRP-TOKEN-LOGO.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2177,
+      "sha256": "b5d9fb20b3f35ec2cd220a108975419fff81c253df5b647a68dae2c7927f2c91",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-MEMORY-SYNAPTIC-LAYER.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2217,
+      "sha256": "9f5191b6e6e16b3cf0a880dc45dff8fc42144c8d6598608fcfc0839f1f16d8b6",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-SHARED-EXCHANGE-UI-DESIGN-SYSTEM.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 6311,
+      "sha256": "e92d0408ddda8ce1125564040f8cd29d2b3b97dae95cf64eb4915728c523e10a",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-XAMAN-POPUP-LAYOUT-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 1949,
+      "sha256": "e4a318f83dacd93ef7f1f6430f636a7897dfee8700cf40191775c6f618ea2865",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-21-XRP-LOGO-RENDERING-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2706,
+      "sha256": "c6bf39f50ef04c0958b1cb87c19441b03bf528364360843c0228fac86c3cea25",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-DEVELOPER-PAGE-EXCHANGE-SIDEBAR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3369,
+      "sha256": "b5de2eaedbb5aedcafc25bfb66c6440e30800993248a2f3723244107ac0e9765",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-GET-XRBC-CTA-READABILITY.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 1738,
+      "sha256": "2e921a458993228a4c0c89147c63e5d011df71394fbe1c584140da14270655cf",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-HOMEPAGE-NARROW-DESKTOP-SHELL-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2809,
+      "sha256": "03e826f9606694f9aa646cf909d1e27bb092d2007efc5f0150c42d7dbf98fed5",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-JCS-RECEIPT-POLICY.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2369,
+      "sha256": "6c1220372f7f4149dabe9c14399026386a76f1a81aa7e257e7dd3de8e617d3cf",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-PROJECT-WIDE-XRBC-SIDEBAR-SHELL.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3953,
+      "sha256": "d0652cb75f0eab75d8efc681fc9f6856b68b64a39bb653ef0f86c37e4c2ddde2",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-RELIABILITY-AUDIT-MEMORY-HARDENING.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2893,
+      "sha256": "9fb9c9be084f3445d51cdef6aec1f4d545a0613222bbbbb68d5467fdb887163d",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBC-HOME-RESPONSIVE-HEADER.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5105,
+      "sha256": "2a77fa404fabfb317f1b507144668fff46cfed09526745056f12eeada962b5ed",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-EVENTS-SIDEBAR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 5642,
+      "sha256": "460ff774666aa1e0c9cecdd381d6b8de83e9b89923da4af5088534043e29ff5b",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-POOL-RUNTIME-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4166,
+      "sha256": "6849c660deaac785023ffb751ac3de4fdd2a42f708ccd0430c25483456b87381",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-PREVIEW-CONTROL-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3836,
+      "sha256": "3a97681412acd382c3f32257e34e7953a43e709881624454793a2ef0d9723782",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-WALLET-RECOVERY.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3357,
+      "sha256": "e6f1f54bfbe9f89faf45b12da33acb9bd565159c3ac038c53538d098599d14c5",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-HELPER-CSP-REPAIR.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 2824,
+      "sha256": "53ca2bb4240c77c58369eefb0fb2d572aa707382f6058dfe723026c4b0c9f619",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-22-XRBITCOIN-XAMAN-SESSION-LIFECYCLE-SIMULATION.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 4656,
+      "sha256": "c980d71183700ae36a15fb3b320563c2e9e609790899c86f6296047d50d79a48",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-23-PUBLIC-LIQUIDITY-DISCOVERY.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 8318,
+      "sha256": "0f8d50ba30efc25897a8c00a10a6036daa4b0fac610e80062d612f15552b9b80",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-25-BING-SEARCH-METADATA.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3430,
+      "sha256": "57c1af7875c76aeaca61b1ae18b5835e18f32451289eaa7c8109cd157a3f3514",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-25-XRBITCOINLABS-SEARCH-DISCOVERY.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 9299,
+      "sha256": "d8057de56f133030359db419b390e0625f643c5d1bb6331aeceb13f9192fea3a",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/savepoints/SAVEPOINT-2026-09-29-JCS-PRAYER-MAP-NEXUS.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 10703,
+      "sha256": "eeff8c4f027b76f963c31a45cfbd98e4d837ecb34bcd9ff43662232ca11297ba",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/synapse-map.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 53794,
+      "sha256": "d56183cb59857c68be9db770287c7c7586af49c1888e98a81cdccdd3e717c1ae",
+      "classification": "reference"
+    },
+    {
+      "path": "memory/task-router.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 6881,
+      "sha256": "5ea267d07f9d22ff9025f0405bff72e3b895b9ade5db122f20c28b6ceabd4a53",
+      "classification": "current"
+    },
+    {
+      "path": "memory/templates/evidence.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 394,
+      "sha256": "99e13e39149b68660ac127e3d65dc0d0ca4a8d15fa2d7db581c6d2a247893c68",
+      "classification": "template"
+    },
+    {
+      "path": "memory/templates/task.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 584,
+      "sha256": "56e0f03df5981993b8c75182809e1f8355010e96700272161d5cb8d8294ba22a",
+      "classification": "template"
+    },
+    {
+      "path": "memory/tokenization-catalog-2026-09-23.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 1341,
+      "sha256": "ddf5392d4d07c63031f8ee887505750b7ba22c007f0501e20ef081e96348f2c7",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/tokenization-workspace-2026-09-23.json",
+      "indexed_on": "2026-10-09",
+      "bytes": 3681,
+      "sha256": "898a501ddbbcb2c563c473faf4c4f0006075b7818e6c428e4d29e4bbf6b8ac2f",
+      "classification": "historical"
+    },
+    {
+      "path": "scripts/catalog-memory.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 3955,
+      "sha256": "d648688fea1d3711099daa5a27c86d257b1d06000a20bb6b0bd6c42a1ac44806",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/catalog-memory.test.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 1948,
+      "sha256": "a50711988fa2b144c2cdcc1a50fd1a97d291fbe470e40562164398ade8b71885",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/check-evidence.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 9882,
+      "sha256": "d521c7d7f6ebe595d13b41e5f6d8f5e29c87f835eaf655723a895b88eb4d1492",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/check-evidence.test.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 8370,
+      "sha256": "8f4736ce59e43b4013add1e36848236113c3335ca068326b6514a544e39478ae",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/resume-memory.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 15765,
+      "sha256": "38d2fef1deb334d957d6f544d44ef928fb4df64cedd7f5f225d940a023ad5a4b",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/resume-memory.test.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 12088,
+      "sha256": "9f888748615469918842ad254b7d4456958a54eefc0846c3be0ae6e870f9fa4a",
+      "classification": "tooling"
+    },
+    {
+      "path": "scripts/validate-memory.mjs",
+      "indexed_on": "2026-10-09",
+      "bytes": 3682,
+      "sha256": "8f10f5403d4111d757bcb18214ab87cb7058b642e22da2efbf953fca8f591684",
+      "classification": "tooling"
+    },
+    {
+      "path": "skills/resume-project-memory/SKILL.md",
+      "indexed_on": "2026-10-09",
+      "bytes": 3830,
+      "sha256": "42ce30c2d8493010a90d5f45603ba87c8cb7f21612c015124de3e4ca7a7b1ea1",
+      "classification": "tooling"
+    },
+    {
+      "path": "skills/resume-project-memory/agents/openai.yaml",
+      "indexed_on": "2026-10-09",
+      "bytes": 256,
+      "sha256": "943439f1e36787fbece2ff5cf14da6a2c0c600651c0a8d4a05bdeaf4710314fe",
+      "classification": "tooling"
+    }
+  ]
+}

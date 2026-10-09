@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-10-08",
+  "purpose": "Small first read: select the current task and load only its relevant record. Full history stays in the existing archive and graph.",
+  "read_once": [
+    "AGENTS.md",
+    "memory/task-router.json",
+    "latest_savepoint.record",
+    "memory/operating-protocol.json"
+  ],
+  "reload_when": "A relevant repository revision or current instruction changes; compaction alone is not a reason to repeat completed reads.",
+  "active_savepoint": {
+    "id": "SAVEPOINT-2026-10-05-xrbc-home-nexus",
+    "record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json",
+    "human_record": "XRBC-HOME-NEXUS-2026-10-05.md"
+  },
+  "routes": {
+    "xrbc_home_nexus": {
+      "match": [
+        "XRBC homepage",
+        "XRBitcoinCash homepage",
+        "XRBC_HOME_NEXUS",
+        "combined liquidity",
+        "swap feature",
+        "Battle Pulse",
+        "Market Nexus"
+      ],
+      "read": [
+        "memory/active/XRBC-HOME-NEXUS-2026-10-05.json"
+      ],
+      "repository": "xrbitcoincash-group/xrbitcoincash-project",
+      "project_id": 75781181,
+      "branch": "master",
+      "path": "public/index.html",
+      "rule": "For homepage swap/chart/wallet presentation read the active source and runtime contracts. JCS Prayer Map Nexus is a separate route."
+    },
+    "jcs_metrics": {
+      "match": [
+        "metrics.html",
+        "JCS Observatory",
+        "JCS metrics",
+        "ledger metrics"
+      ],
+      "read": [
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
+      ],
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "path": "metrics.html",
+      "known_errors": [
+        "JCS-METRICS-001",
+        "JCS-METRICS-002"
+      ]
+    },
+    "jcs_map": {
+      "match": [
+        "prayer.map.html",
+        "Prayer Map",
+        "JCS Nexus",
+        "JCS stars",
+        "JCS timeline"
+      ],
+      "read": [
+        "memory/active/JCS-OBSERVATORY-2026-09-30.json",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
+      ],
+      "section": "accepted_prayer_map",
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "path": "prayer.map.html",
+      "dependency": "jcs-historical-atlas-data.js"
+    },
+    "jcs_verify": {
+      "match": [
+        "verify.html",
+        "prayer NFT verification"
+      ],
+      "read": [
+        "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+        "memory/active/JCS-LIVE-DEBUG-2026-10-07.md",
+        "memory/active/JCS-RELEASE-2026-10-07.md"
+      ],
+      "rule": "Read latest source before assuming the old artifact is current."
+    },
+    "xrbc_ecosystem": {
+      "match": [
+        "xrbc-ecosystem.html",
+        "MR !37"
+      ],
+      "read": [
+        "ECOSYSTEM-CLARITY-2026-09-26.md"
+      ],
+      "blocker": "Sept26 quota failure is historical; Oct5 normal pipelines/deployments succeeded. Check MR !37 itself only if resuming its scope."
+    },
+    "other_topic": {
+      "read": [
+        "ai-bootstrap.json"
+      ],
+      "rule": "Select the matching routing entry, not all routes; only load the canonical contract or graph when needed."
+    },
+    "jcs_trade": {
+      "match": [
+        "JCS trade",
+        "JCS homepage",
+        "JCS liquidity",
+        "JCS open orders",
+        "JCS receipt NFT"
+      ],
+      "read": [
+        "memory/active/JCS-TRADE-DEBUG-2026-10-08.md"
+      ],
+      "repository": "XRBitcoinCash/JCS-token-on-the-XRPL",
+      "branch": "main",
+      "paths": [
+        "index.html",
+        "js/jcs-core.js"
+      ],
+      "rule": "Use the dated live ledger evidence and current source; preserve wallet JSON and require a complete validated account_offers snapshot before offering cancellation."
+    }
+  },
+  "session_contract": [
+    "Current user request selects topic and output mode. Legacy next_issue is not a global todo.",
+    "Record prepared, committed, deployed and live-observed separately.",
+    "For presentation use the exact shared shell contract; for metrics map source -> request -> field -> transform -> renderer -> state.",
+    "Read back one atomic memory publication before website deployment, if memory was requested. Never add memory work after successful deployment."
+  ]
+}

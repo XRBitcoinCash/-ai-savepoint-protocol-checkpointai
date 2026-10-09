@@ -1,0 +1,11 @@
+# Project contracts — reviewed 2026-10-09
+
+These are recorded project constraints, not current liquidity, price or regulatory facts. Verify applicable source and current user changes before editing.
+
+- XRBC frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), master/public. GitHub archive is not the current frontend. Backend repository/head remains unknown.
+- XRBC asset: issuer `rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw`, currency `5852626974636F696E6361736800000000000000`. XRBitcoin is a distinct asset/app: recorded issuer `rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT`, currency `5852626974636F696E0000000000000000000000`. These are public asset identities, not user wallet records. Preserve exact issuer+currency; never match by display symbol alone.
+- Liquidity is the sidebar reference: compact navigation only at <=900px; fixed scrollable left rail 188px from 901–1180px, 220px above 1180px. Trade/Liquidity/XRBitcoin share geometry while retaining identity. Preserve the accepted route animation/layout unless the requested repair requires a specific change.
+- Wallet connection authorizes account discovery; every transaction requires its own reviewed request. Preserve forced network, challenge/intent binding, exact-account comparison, pending locks and validated field/delivery confirmation. Disconnect does not erase an ambiguous transaction.
+- Keep quotes separate from execution, known zero separate from unavailable/partial data, and estimate animation separate from ledger completion. Trace metrics through source, request, field, transform, renderer, freshness/coverage and failure state.
+- Do not change gate thresholds, fees, token identities or compliance scope as a side effect of a visual repair. Current source/user instructions decide the applicable policy. No profitability, arbitrage-immunity or regulatory-approval claim comes from a checkpoint.
+- Manual delivery: use the latest accepted complete source, preserve companion files, and deliver complete requested files. For the accepted JCS owner viewer, Preview/View full code/Copy full HTML/Download HTML must match the public export; owner controls stay outside that export. Read `JCS-VERIFY-WORKFLOW-2026-09-28.md` only if this delivery mode applies.

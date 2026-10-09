@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Project Memory"
+  short_description: "Recover project context without repeated testing"
+  default_prompt: "Use $resume-project-memory to recover the current project checkpoint and select the next evidence-backed action."

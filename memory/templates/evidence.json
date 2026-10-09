@@ -1,0 +1,17 @@
+{
+  "id": "EXAMPLE-only-not-evidence",
+  "project": "example/project",
+  "kind": "synthetic",
+  "status": "pending",
+  "source_revision": null,
+  "recorded_at": null,
+  "scope": "Exact behavior and relevant inputs",
+  "command": null,
+  "input_digest": null,
+  "environment_digest": null,
+  "reference": null,
+  "limitations": [
+    "Template only; no check has run."
+  ],
+  "supersedes": []
+}

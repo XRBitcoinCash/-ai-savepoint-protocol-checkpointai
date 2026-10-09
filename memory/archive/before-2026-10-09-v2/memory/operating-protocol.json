@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "mandatory_stop_after_deployment": {
+    "date": "2026-09-23",
+    "source": "Explicit user instruction",
+    "rule": "Once the requested fix is deployed, stop immediately. Under no circumstances perform further tool/function calls, live checks, browser checks, tests, scans, screenshots, verification, cleanup, research, extra fixes, or memory/checkpoint updates as part of that deployment task. Complete necessary checks and any already-authorized checkpoint preparation before deployment. Do not add post-deployment work under an 'essential check', 'final verification', or 'just saving memory' exception. Give only a brief completion message. Further work requires a new explicit user request.",
+    "supersedes": "All earlier post-deployment verification, audit, read-back and automatic checkpoint requirements."
+  },
+  "id": "cross-project-evidence-first-v1",
+  "updated": "2026-10-05",
+  "human_file": "OPERATING-PROTOCOL.md",
+  "scope": "Reusable development/research process; project facts and credentials do not transfer automatically.",
+  "memory_boundary": "External context/checkpoint layer only. Must be loaded; does not alter weights or guarantee automatic future recall.",
+  "user_preference": "Use available connected GitHub/GitLab/Google and other task-relevant sources; avoid making the user restate already verified project decisions.",
+  "authorization": {
+    "rules": [
+      "Capability availability is not authorization.",
+      "Verify access each session; stop for missing permissions/approval.",
+      "No unrelated accounts, credential extraction, live financial actions or deployment/configuration changes merely to audit.",
+      "Public repository memory must not contain secrets/private personal records."
+    ],
+    "historical_task_snapshot": "User requested public XRPL liquidity discovery repair, clearer caution/retry states and memory standards/update; MR !13 merged and production deployed through the standard workflow.",
+    "current_task_rule": "Take authorization and scope from the current conversation. Historical task/access snapshots are evidence, not standing deployment or signing permission."
+  },
+  "access_snapshot": {
+    "observed_at": "2026-09-23",
+    "github": {
+      "resources": [
+        "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
+        "XRBitcoinCash/xrbitcoincash.github.io"
+      ],
+      "read": "verified",
+      "memory_write": "verify containing commit read-back; authorization granted for this task"
+    },
+    "gitlab": {
+      "resource": "xrbitcoincash-group/xrbitcoincash-project",
+      "read": "verified",
+      "write": "Standard MR !13 merged and production deployment succeeded; no protection bypass."
+    },
+    "google": {
+      "status": "user permits relevant use; not probed"
+    },
+    "other_services": {
+      "status": "discover and verify only as needed"
+    }
+  },
+  "evidence_labels": [
+    "user-reported",
+    "historical-unverified",
+    "source-confirmed",
+    "synthetic-reproduced",
+    "CI-verified",
+    "live-read-only-verified",
+    "user-device-confirmed"
+  ],
+  "repair_workflow": [
+    "Read AGENTS.md, memory/task-router.json, latest_savepoint.record and this protocol once per working context; reuse until relevant instructions or repository state change.",
+    "Route from the current user request to only its active handoff and relevant known errors. Legacy XRB next_issue is topic-specific and does not select JCS work.",
+    "Read the exact accepted target source and the existing navigation/data contracts; use larger history or the canonical contract only for missing facts, sensitive work or unresolved conflicts.",
+    "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
+    "Make the smallest necessary patch and preserve established appearance, assets, identities and working behavior.",
+    "Run only required gates or focused checks for concrete changed risks; distinguish source/simulated evidence from live operation.",
+    "Deliver under the current user-selected workflow. Update memory only when requested; stop at the requested completion boundary."
+  ],
+  "research_workflow": [
+    "define question",
+    "retrieve current authoritative sources when required",
+    "record retrieval/publication dates and provenance",
+    "separate facts from inference",
+    "resolve conflicts explicitly",
+    "record limitations and next verification"
+  ],
+  "required_issue_fields": [
+    "id",
+    "status",
+    "summary",
+    "evidence_level",
+    "source_commit",
+    "acceptance_checks"
+  ],
+  "publication_rules": [
+    "Refresh head; preserve concurrent work.",
+    "Publish related memory pointers atomically when possible.",
+    "Never force-push or bypass protected workflow.",
+    "Validate JSON, pointers, graph references and issue routing.",
+    "Read back committed bytes before claiming completion."
+  ],
+  "model_independence": "Do not infer entitlement/capability or defect authorship from historical model labels. Evidence standards apply at every tier.",
+  "next_issue": "XRB-001",
+  "linked_blockers": [
+    "XRB-007",
+    "XRB-008"
+  ],
+  "responsive_layout_checks": [
+    "Preserve the Liquidity reference fixed left rail above 900px across XRBC Trade, Liquidity and XRBitcoin; keep app/token identities separate.",
+    "Identify exact page from screenshot and source; distinguish XRBC homepage from XRBitcoin.",
+    "Move complete position/inset/height/display/navigation/content-offset resets together when changing a breakpoint.",
+    "Check screenshot width and widths immediately below/above old and new breakpoints.",
+    "Account for selector specificity and refresh CSS cache key.",
+    "Label source cascade, rendered geometry, served build and live wallet checks separately."
+  ],
+  "wallet_event_checks": [
+    "ready does not establish a signed-in account by itself.",
+    "Bridge browser events only during an explicit active attempt using current SDK, version and cancellation state.",
+    "Read the current account getter on each event and verify SDK app/account identity before connected state. Read-only backend readiness starts in parallel and gates only actions that need it; do not delay the initial authorization click or make backend warm-up a universal sign-in prerequisite.",
+    "Distinguish synthetic verification from real-device authorization."
+  ],
+  "execution_efficiency_preference": {
+    "updated": "2026-09-28",
+    "source": "Explicit user efficiency/stop instructions, reconciled with the accepted manual delivery workflow on 2026-09-28.",
+    "rule": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.",
+    "reporting": "Brief outcome and any concrete blocker or unverified behavior; no long activity narration.",
+    "discovery_extension": "Apply memory/discovery-efficiency-standard.json: broad supported discovery, exact asset identity, honest coverage, plain-language liquidity cautions and bounded focused verification."
+  },
+  "discovery_efficiency_standard": {
+    "machine": "memory/discovery-efficiency-standard.json",
+    "human": "DISCOVERY-EFFICIENCY-STANDARD-2026-09-23.md",
+    "source": "Explicit user instruction for public XRPL liquidity discovery repair and memory upgrade, 2026-09-23",
+    "rule": "Maximize useful evidence-supported discovery and understandable results within authorized scope and a bounded resource budget.",
+    "implementation_status": "See task-specific checkpoint; this standard alone is not proof of application changes."
+  },
+  "known_blocker_efficiency": {
+    "date": "2026-09-26",
+    "source": "Explicit user correction after a known GitLab CI quota blocker was retried without evidence of recovery.",
+    "rules": [
+      "Before substantial implementation or deployment work, check already-known failure points and the required completion path using existing evidence first. Use only the smallest read-only check needed if the state is genuinely unknown.",
+      "Do not retry a known quota, permission, missing-runtime, or unavailable-service failure without new evidence that its cause has changed. Repeated requests, elapsed time alone, or a new session do not establish recovery.",
+      "When a blocker prevents a requested outcome, report it promptly and stop only the dependent operation. Continue useful independent work already authorized. Explicit manual HTML delivery remains authorized while CI or deployment is blocked; no repeated permission is needed for that handoff.",
+      "Use an already-authorized, supported alternative only when evidence shows it can complete the task. Never bypass CI, access controls or approvals, or incur costs to avoid reporting a blocker.",
+      "Reuse prepared changes, prior focused checks and compact checkpoints. Do not repeat discovery, simulations, tests, broad file reads or unchanged memory updates.",
+      "Keep tool output bounded to decision-relevant fields. Do not dump full registries, repository trees, large files or minified code when a targeted read suffices.",
+      "Unexpected failures cannot be ruled out. Report actual limitations honestly; never promise failure-free execution or claim an attempted action succeeded."
+    ],
+    "known_blocker_example": {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "merge_request": 37,
+      "pipeline": 2885324036,
+      "reason": "ci_quota_exceeded",
+      "resume_condition": "Evidence that GitLab CI quota or runner capacity has been restored; do not blindly retry.",
+      "current_status": "Historical failure; later normal pipelines 2914854164 and 2914880120 succeeded including deployment, observed 2026-10-05. Target old MR status remains separate."
+    }
+  },
+  "manual_page_delivery": {
+    "updated": "2026-09-29",
+    "source": "User accepted the JCS existing-file preview/code workflow and requested correction of conflicting memory instructions.",
+    "applies_when": "User requests complete copyable HTML/manual commit; JCS verify.html and prayer.map.html have separate topic checkpoints.",
+    "record": "JCS-PRAYER-MAP-NEXUS-2026-09-29.md",
+    "source_selection": "Use the latest user-supplied or user-accepted complete file for the manual patch workflow. Compare relevant repository history when recovering working behavior; do not silently replace an accepted candidate with older repository code. For repository edits, verify repository, branch, path and current head and preserve concurrent changes.",
+    "delivery": "Patch the accepted complete file and deliver an owner HTML viewer with functional Preview/View full code, Copy full HTML and Download HTML controls. Keep owner controls outside the exported public application unless the current user explicitly requests otherwise. Full-file delivery is not a redesign.",
+    "source_controls": "Expose the exact complete static delivered public HTML, not a snippet, the owner wrapper or a serialized visitor runtime. Embed a source snapshot in the separate viewer and regenerate it after edits; preview-only base URLs must not alter exported bytes.",
+    "preservation": "Keep the accepted sidebar/header, religious design, artwork, Scripture/audio, NFT metadata, API/app identity and existing JS. Simplification means clearer interaction, not removing working features. Work on one requested page at a time.",
+    "dependencies": "Name every required companion and its exact publish location. Embedded JSON in HTML does not create an externally fetchable JSON resource. Do not remove metadata readiness validation to hide a 404.",
+    "authority": "User commits application changes unless explicitly asking the assistant to commit/deploy. A separate explicit memory-update request authorizes the bounded continuity-repository update, not application deployment.",
+    "verification": "Keep work limited to the current request. Reuse the accepted source and completed evidence. Run only an existing required gate or a focused check addressing a concrete risk introduced by this change. Do not add optional suites, simulations, screenshots, broad audits, repeated research or automatic checkpoint work. Prepare any separately authorized checkpoint before deployment, then stop immediately when the requested deployment completes. For manual delivery, provide the complete requested files and concise installation instructions; do not commit or deploy application code unless asked.",
+    "previous_verify_record": "JCS-VERIFY-WORKFLOW-2026-09-28.md",
+    "html_source_display": "An HTML page displaying the full code is acceptable; do not require Inspect Element or manual extraction from developer tools."
+  },
+  "reasoning_workflow_preference": {
+    "updated": "2026-09-29",
+    "source": "Explicit user instruction while requesting this GitHub AI checkpoint.",
+    "checkpoint_work": "User prefers Ultra for creating and reconciling memory/checkpoints, even when the task is not technically complex.",
+    "page_work": "User intends to return to very high or another lower reasoning setting for ordinary page work.",
+    "boundary": "User workflow preference, not a capability ranking or automatic model-setting change; use the actual available setting and current instructions.",
+    "format": "Readable text, structured JSON and concise code are acceptable. Prefer precise recoverable state over opaque shorthand or repeated transcripts."
+  },
+  "page_completion_contract": {
+    "updated": "2026-09-30",
+    "navigation": "Read the shared shell before styling: desktop left rail >900px, 188px through 1180px and 220px above; <=900px compact header. Preserve project-specific identity.",
+    "metric_trace": [
+      "source",
+      "command_or_file",
+      "response_field",
+      "transform",
+      "render_target",
+      "freshness",
+      "coverage",
+      "failure_state"
+    ],
+    "failure_states": [
+      "ready",
+      "empty-confirmed",
+      "partial",
+      "unavailable",
+      "rate-limited"
+    ],
+    "request_coordination": "Share connection setup/in-flight work, keep requests bounded, honor provider cooldown and use only supported fallback sources. Independent project sources must still load when a ledger source fails.",
+    "evidence": "State the actual observed level. Source wiring and mocks are not live success. Before claiming working live data, observe the relevant real response and renderer under the available authorized runtime, or explicitly report the missing evidence.",
+    "scope": "This contract calls for focused evidence of the changed path, not mandatory broad tests, screenshots or repeated audits.",
+    "delivery": "Choose current user-authorized manual handoff or deployment; do not infer it from an old checkpoint. Stop after normal deployment success."
+  },
+  "legacy_queue_scope": "next_issue and linked_blockers retain the XRBC/XRB historical queue only.",
+  "compact_task_handoffs": {
+    "updated": "2026-10-05",
+    "rule": "Keep task routes distinct (XRBC market Nexus versus JCS Prayer Map Nexus). Save exact source identity, event/field-to-renderer mapping, freshness/unknown states, bounded verification and next action. Current source outranks snapshots; do not claim external files alter internal weights.",
+    "homepage_record": "memory/active/XRBC-HOME-NEXUS-2026-10-05.json"
+  }
+}

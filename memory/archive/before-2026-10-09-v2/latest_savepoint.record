@@ -1,0 +1,13 @@
+SAVEPOINT 2026-10-05
+id=SAVEPOINT-2026-10-05-xrbc-home-nexus
+title=XRBC homepage swap and Market Nexus presentation
+status=committed-CI-verified-deployment-pending
+machine_savepoint=memory/active/XRBC-HOME-NEXUS-2026-10-05.json
+human_checkpoint=XRBC-HOME-NEXUS-2026-10-05.md
+previous_memory_checkpoint=SAVEPOINT-2026-09-30-jcs-observatory-recovery
+next_task=Complete the authorized homepage release through the existing GitLab MR/CI/Pages workflow; stop immediately at deployment success. On a later explicit request, read the MR/pipeline once to resolve this pre-deployment checkpoint.
+next_issue=XRB-001
+next_issue_scope=Preserved legacy XRBC/XRB queue, not the current homepage task
+observed_frontend_commit=c7fb139101bb078caafa3dd40209e97d541d2ec7
+observed_backend_commit=1c1fa1d41287af846c3be9d7233c319eb2b8a470
+source_commit_scope=Current frontend baseline; backend hash is a historical schema snapshot, current backend source unknown
