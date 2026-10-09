@@ -2,9 +2,9 @@
 
 Read `memory/CURRENT.md`, its selected handoff and `memory/CONTINUITY.md`, or run `node scripts/resume-memory.mjs`.
 
-Current resume ID: `RESUME-2026-10-06-xrbc-debug`. GitLab master `135ac566ecea70ffc8634a3b013d5cf558022729` and successful pipeline `2916332595` were verified October 6.
+Current resume ID: `RESUME-2026-10-09-swap-nexus`. GitLab master `56d028d88462358ffec706c874653e6d3f8b2f12` and successful deployment pipeline `2929063432` (!92) were verified October 9. Draft !93 at `f91d05dab6fcfe686f64a3a11f0a2bdbb040e105` passed CI `2929172925` and is not deployed.
 
-First identify the user's current page and last unfinished symptom. Do not restart the old 1-XRBC sell test. Browser recovery is not yet evidenced. No wallet request, doubtful JSON/JS change or production backend integration follows automatically from loading memory.
+Review !93: a failed AMM read silently replaced the ticket estimate with a materially different order-book price. Browser recovery, Buy/Sell route direction, staging, and SignIn/reset were observed. No swap was submitted. The user authorized a small buy around 1 XRP and sale of the actual received XRBC, with fees counted and a 5% maximum spread/cost objective aiming near 1%; that objective is not yet verified or guaranteed by the current 2% transaction tolerances. The user signs. Obtain deployment authorization if absent, then stop immediately once a requested deployment succeeds. Do not restart the old 1-XRBC sell or infer authority merely from loading memory. Keep progress updates at least once per minute during active work.
 
 The goal is a useful, usable, trustworthy interface and the user's $500/month project-tool funding target. No income, error-free operation, automatic recall or model/hardware upgrade is promised.
 

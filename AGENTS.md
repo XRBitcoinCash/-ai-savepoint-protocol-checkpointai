@@ -2,11 +2,11 @@
 
 ## Current XRBC debugging
 
-Read `memory/CURRENT.md`, then only its selected handoff and `memory/CONTINUITY.md`. Current resume ID: `RESUME-2026-10-06-xrbc-debug`. Optional read-only loader: `node scripts/resume-memory.mjs`. Reuse loaded context until relevant facts or instructions change; do not read the whole archive by default.
+Read `memory/CURRENT.md`, then only its selected handoff and `memory/CONTINUITY.md`. Current resume ID: `RESUME-2026-10-09-swap-nexus`. Optional read-only loader: `node scripts/resume-memory.mjs`. Reuse loaded context until relevant facts or instructions change; do not read the whole archive by default.
 
-Current recorded frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`, head `135ac566ecea70ffc8634a3b013d5cf558022729`, successful pipeline `2916332595`. Current backend source is unknown. A saved head/CI result is not a fresh wallet or runtime test.
+Current recorded frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`, head `56d028d88462358ffec706c874653e6d3f8b2f12`, successful deployment pipeline `2929063432` (!92). Draft repair !93 is committed at `f91d05dab6fcfe686f64a3a11f0a2bdbb040e105`, CI `2929172925` passed, and is not merged or deployed. Current backend source is unknown. Distinguish source, CI, browser observations, and wallet-confirmed results.
 
-First identify the user's current page and unfinished symptom. Do not restart an old 1-XRBC sell from stale memory. The earlier browser usage denial remains blocked until recovery is evidenced; a model change, new session or repeated prompt is not recovery.
+Current symptom: the native swap ticket silently substituted the order-book price when its AMM lookup failed. Review !93 before continuing the small buy/sell acceptance. Browser recovery was directly evidenced October 9 by live UI inspection and Xaman SignIn; no swap was submitted. Do not restart an old 1-XRBC sell from stale memory. Report active blockers promptly and keep the user informed at least once per minute.
 
 ## User goal and safety boundaries
 
