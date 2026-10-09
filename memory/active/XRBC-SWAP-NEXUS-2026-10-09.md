@@ -42,7 +42,7 @@ Evidence: the new failure tests failed against master; all 12 focused swap safet
 
 ## Next action and outstanding acceptance
 
-Review !93 and obtain website deployment authorization if the user has not supplied it. Verify current master before any merge. Prepare any requested savepoint before deployment and stop immediately when deployment succeeds. Resume live checks only upon a new explicit request.
+On October 9 the user approved proceeding toward the buy/sell test in response to the request to deploy !93. Deployment is now authorized; do not ask for the same permission again. The assistant clarified that this repair fixes quote fallback and does not make AMM arbitrage impossible. Immediately before deployment, master was still `56d028d88462358ffec706c874653e6d3f8b2f12`; !93 was conflict-free, zero commits behind, with its exact candidate SHA and successful CI unchanged. This checkpoint is written BEFORE the merge/deployment and therefore does not claim deployment success. Check the resulting master/deployment evidence on resume. Stop all tools immediately when deployment succeeds; resume live checks only upon a new explicit request.
 
 After that, verify a fresh matching route/ticket quote with the intended wallet, then prepare the bounded buy for user review. Establish the actual Xaman fee classification and total debit before signing. Use validated transaction metadata and balance changes to reconcile received XRBC, spend, network fee, and any service charge. Then sell no more than the XRBC actually received and reconcile again. Source/CI, UI estimates, signed requests, and validated transactions are different evidence levels.
 
