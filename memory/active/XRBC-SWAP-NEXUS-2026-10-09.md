@@ -30,6 +30,8 @@ Buy/Sell reversed the route assets and directions correctly. Staging carried 19 
 
 The user said the first selected wallet was a blackholed issuer. The account actually displayed by the site had its master key enabled in a validated account_info response and differed from the configured XRBC issuer. Therefore that attempt does not prove blackholed-account rejection. Do not assume which wallet was selected on the phone; verify the account shown by the site against the user's intended account if needed.
 
+Additional UI observation before stopping: expanding Wallet details showed a stale “Not connected” summary while the main control said “Xaman Connected” and the connected-account attribute held the replacement account. The sidebar also still offered Connect wallet. This label inconsistency is separate from !93, remains unresolved, and should be addressed after the first quote failure repair; do not claim all wallet status labels passed.
+
 ## Concrete failure and prepared repair
 
 After connecting, the ticket displayed **1.610060 XRP to buy 19 XRBC**, while Swap Nexus showed **0.9415286 XRP**. The higher value matches the best order-book ask. Source `getLegacyXrbcXrpMarketPrice` silently caught unsuccessful pool reads and substituted the top order-book price. For Sell, this reference also determines the Payment delivery floor. No wallet test proceeded through this mismatch.
