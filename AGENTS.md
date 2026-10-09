@@ -2,11 +2,11 @@
 
 ## Current XRBC debugging
 
-Read `memory/CURRENT.md`, then only its selected handoff and `memory/CONTINUITY.md`. Current resume ID: `RESUME-2026-10-09-swap-nexus`. Optional read-only loader: `node scripts/resume-memory.mjs`. Reuse loaded context until relevant facts or instructions change; do not read the whole archive by default.
+Read `memory/CURRENT.md`, then only its selected handoff and `memory/CONTINUITY.md`. Current resume ID: `RESUME-2026-10-09-safety-answers`. Optional read-only loader: `node scripts/resume-memory.mjs`. Reuse loaded context until relevant facts or instructions change; do not read the whole archive by default.
 
-Current recorded frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`, head `56d028d88462358ffec706c874653e6d3f8b2f12`, successful deployment pipeline `2929063432` (!92). Draft repair !93 is committed at `f91d05dab6fcfe686f64a3a11f0a2bdbb040e105`, CI `2929172925` passed, and is not merged or deployed. Current backend source is unknown. Distinguish source, CI, browser observations, and wallet-confirmed results.
+Current recorded frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`, `public/`, head `6cb001b84037a362954d12d510a0f4c18b2de7bd`. !93 is merged; deployment job `17050505467` in pipeline `2929189075` succeeded, and the live build matched on the user's next explicit Continue. Repair !94 at `26c2c254f290b3ee576083ca18a23cfe215a4509` passed CI `2929231368` and is awaiting merge/deployment at this checkpoint. Current backend source is unknown. Distinguish source, CI, browser observations and wallet-confirmed results.
 
-Current symptom: the native swap ticket silently substituted the order-book price when its AMM lookup failed. Review !93 before continuing the small buy/sell acceptance. Browser recovery was directly evidenced October 9 by live UI inspection and Xaman SignIn; no swap was submitted. Do not restart an old 1-XRBC sell from stale memory. Report active blockers promptly and keep the user informed at least once per minute.
+Current symptom: the trade safety review's native answer dropdown did not show its choices for the user or in the live browser. !94 replaces it with visible required radio choices while preserving the review gates. The user requested this fix before continuing, which authorizes this focused repair. Prepare memory before deployment and stop immediately once deployment succeeds. No swap was submitted; the small buy/sell acceptance and actual Xaman fee review remain outstanding. Do not restart an old 1-XRBC sell. Report blockers promptly and keep the user informed at least once per minute.
 
 ## User goal and safety boundaries
 
