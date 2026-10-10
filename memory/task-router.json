@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -170,6 +170,34 @@
       },
       "status": "historical-needs-source-check",
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
+    },
+    "xrbc_security_hardening": {
+      "title": "XRBC ecosystem security hardening",
+      "match": [
+        "XRBC security",
+        "security hardening",
+        "mandatory adaptation",
+        "super intelligence checkpoint",
+        "AI checkpoint",
+        "GitHub security",
+        "GitLab security",
+        "Render security",
+        "GoDaddy",
+        "DNS",
+        "white paper security",
+        "Web2 Web3 vulnerabilities"
+      ],
+      "read": [
+        "memory/active/XRBC-SECURITY-HARDENING-2026-10-10.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "master",
+        "head": null,
+        "pipeline": null
+      },
+      "status": "scheduled-for-2026-10-13",
+      "next_action": "On 2026-10-13 or explicit continuation, convert the provider-security timeline into current-state checks before code, documentation, deployment or privileged account changes."
     },
     "liquidity": {
       "title": "XRBC liquidity pool interface",
