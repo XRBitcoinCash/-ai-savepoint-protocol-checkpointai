@@ -243,8 +243,8 @@
     {
       "path": "NEXT_RUN.md",
       "indexed_on": "2026-10-12",
-      "bytes": 633,
-      "sha256": "5818f1d53dfbbf39662ce5a22b1cffea21f9bb14966faebb125014ac807c3cb8",
+      "bytes": 1164,
+      "sha256": "88ec5971d9588df0549abfa6ddec2a398de429a68efb3119025c988d0c21c432",
       "classification": "current"
     },
     {
@@ -292,8 +292,8 @@
     {
       "path": "README.md",
       "indexed_on": "2026-10-12",
-      "bytes": 1721,
-      "sha256": "58fc6da7afd57a5625d4451bcbfe660f4cee61316b1debf87ec743553a78948b",
+      "bytes": 2285,
+      "sha256": "9c1ae793a3f5e202b156de90747f9edebea913e6340ea2e363ed393bf3319391",
       "classification": "reference"
     },
     {
@@ -621,8 +621,8 @@
     {
       "path": "memory/active/MEMORY-SYSTEM-2026-10-12.md",
       "indexed_on": "2026-10-12",
-      "bytes": 4877,
-      "sha256": "d83befd41237b1e52edc9b5eb913db516a99f5e93ba4ffd9d7f9494e5834a9db",
+      "bytes": 5961,
+      "sha256": "b678cd6331bf0f4a61eab3f7c6404fef3b2ffaa7c6bc6d9df50b6078494dacd2",
       "classification": "selected-task-record"
     },
     {
@@ -673,6 +673,13 @@
       "bytes": 6348,
       "sha256": "42c6fb0be8396364110407446baa9ea8340f67e01492f524c7b09299916b67a9",
       "classification": "historical"
+    },
+    {
+      "path": "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
+      "indexed_on": "2026-10-12",
+      "bytes": 11095,
+      "sha256": "bbd233e07cd0674a4a116f4c41978f288bb1b4993e65c8d1acbc25fe7136f7b2",
+      "classification": "selected-task-record"
     },
     {
       "path": "memory/active/XRPL-TO-READONLY-2026-10-12.md",
@@ -866,9 +873,16 @@
     {
       "path": "memory/contracts/PROJECTS.md",
       "indexed_on": "2026-10-12",
-      "bytes": 2245,
-      "sha256": "8bc7610d7d8488c4fa7de542d924db0871916bfdd7cabeb13cf7181987723f8a",
+      "bytes": 2852,
+      "sha256": "8b660ee5697c62b7c499371395736d3255fe6da946169eac7b2acdbe00bcb423",
       "classification": "reference"
+    },
+    {
+      "path": "memory/contracts/XLS-UPGRADE-CONTRACT.md",
+      "indexed_on": "2026-10-12",
+      "bytes": 5121,
+      "sha256": "59f1c9f179aa5082b76287096939c65e258d258a5f418c791ef854e0de158df6",
+      "classification": "selected-task-record"
     },
     {
       "path": "memory/creature-market-corrections-2026-09-23.json",
@@ -901,8 +915,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-12",
-      "bytes": 4617,
-      "sha256": "4293b1d87f181f5d6142b6a60be4a5ed87f3f076762ed908a770834f93ea2570",
+      "bytes": 8091,
+      "sha256": "e51b6a87a950e2086314eacbab9004a5ae90858e45c43cbcb2420075f23ce0b3",
       "classification": "current"
     },
     {
@@ -1153,8 +1167,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-12",
-      "bytes": 8724,
-      "sha256": "e775a5466a361f2cf34338a2266d05e039f41e3be07b995dcd5ca8b3d63faf04",
+      "bytes": 9862,
+      "sha256": "99d30b00586894872c3c462bf5357c2217fa27967386fcff4eced11687d221e1",
       "classification": "current"
     },
     {

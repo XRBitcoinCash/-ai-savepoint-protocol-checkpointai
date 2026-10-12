@@ -34,3 +34,9 @@ Finish checkpoint maintenance with the repository's catalog/integrity validator,
 Acceptance: the shared memory section is present in task bundles, the XRPL.to route retrieves the appropriate brief, existing routes/default compatibility remain intact, the catalog is current, and the published checkpoint is read back. These are memory integrity checks, not live application or financial verification.
 
 History: `memory/active/MEMORY-SYSTEM-2026-10-09.md` remains the original version-2 migration record. This brief supersedes it only as the selected memory-maintenance handoff, not as a revision of its historical observations.
+
+## Later checkpoint update - 2026-10-12, 15:33 America/Chicago
+
+After the earlier portable-memory publication (`f79b046`), the user requested recording the ecosystem XLS upgrade program before beginning it. The adopted order is **XLS-85 escrow first**, then phased MPT/tokenization, mutable NFT lifecycles with immutable fingerprints, credentials/domains, permissioned markets and coordinated Batch handling. This overrides only the earlier assistant's Batch-first recommendation; it does not authorize deployment or financial transactions.
+
+Select `xrbc_xls_upgrade` for that work. Its current roadmap and shared contract are `memory/active/XRBC-XLS-ROADMAP-2026-10-12.md` and `memory/contracts/XLS-UPGRADE-CONTRACT.md`. Start with validated issuer eligibility and support checks. The 2,500 XRBC gate is wallet holdings, not an LP deposit or legal credential. App source/fixtures and protocol documents were reviewed in the intervening research; no new wallet test or deployment occurred. Preserve the earlier section's observations as the history of its original maintenance turn.

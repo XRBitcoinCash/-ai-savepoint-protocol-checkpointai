@@ -3,6 +3,62 @@
   "updated": "2026-10-12",
   "records": [
     {
+      "id": "XRBC-XLS-docs-review-2026-10-12",
+      "project": "XRBC/XLS-roadmap",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-12T20:35:29Z",
+      "scope": "Review of primary XRPL/Xaman documentation for token escrow issuer eligibility, MPT/NFT lifecycle controls, credentials/domains, permissioned DEX limitations, revised Batch signing and inner settlement evidence.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
+      "limitations": [
+        "This records the preceding research, not new application or live wallet testing. Documentation availability is not Mainnet activation or configured backend/wallet compatibility.",
+        "The reported Batch activation is a published primary ledger observation; the accompanying fix's activation is in the official disclosure. No direct fresh Mainnet query was completed here.",
+        "No legal eligibility, asset backing, issuer permission or real-world title is certified. The user adopted escrow-first sequencing after the research."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-batch-preview-source-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
+      "recorded_at": "2026-10-12T20:35:29Z",
+      "scope": "Inspected public/xrbc-batch-preview.js, docs/analytics-upgrade.md and tests/unit/batch-protocol-evidence.test.mjs: unsigned two-party proposal, hard-disabled signing/submission, exact validated inner-delivery verification and existing synthetic fixture coverage.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/blob/52139c4a89c6f7c330b3716b90c77c0d4f33cde0/public/xrbc-batch-preview.js",
+      "limitations": [
+        "Passed means source review, not execution or a new passing test suite. The existing fixtures were read and not rerun.",
+        "No signing compatibility, backend coordinator, public live behavior or financial settlement was validated. Matching complete input/environment fingerprints were not recorded."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-escrow-eligibility-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "pending",
+      "source_revision": null,
+      "recorded_at": "2026-10-12T20:35:29Z",
+      "scope": "First upgrade prerequisite: validated XRBC issuer locking flag, complete signing-authority evidence, amendment state and configured API/Xaman escrow support.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
+      "limitations": [
+        "No fresh issuer flag/authority or amendment ledger read has been performed for this phase; eligibility remains unknown.",
+        "An absent locking flag on a proven irreversibly blackholed issuer blocks native escrow for that issuance. Do not substitute or migrate assets without the user's decision.",
+        "No escrow, mint, liquidity deposit, signing request, new token issuance or deployment is authorized by the memory update."
+      ],
+      "supersedes": []
+    },
+    {
       "id": "XRPLTO-email-visible-2026-10-12",
       "project": "XRBC/XRPL.to-readonly",
       "kind": "source",

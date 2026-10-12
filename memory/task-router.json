@@ -241,6 +241,39 @@
       "status": "historical-needs-source-check",
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
+    "xrbc_xls_upgrade": {
+      "title": "XRBC ecosystem XLS upgrades: token escrow first",
+      "match": [
+        "ecosystem upgrade",
+        "first XLS update",
+        "token escrow",
+        "XLS-85",
+        "XLS 85",
+        "TokenEscrow",
+        "MPT",
+        "XLS-30",
+        "dynamic NFT",
+        "mutable NFT",
+        "credentials",
+        "permissioned domains",
+        "XLS-81",
+        "XLS-56",
+        "BatchV1_1",
+        "upgrade roadmap"
+      ],
+      "read": [
+        "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
+        "memory/contracts/XLS-UPGRADE-CONTRACT.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "master",
+        "head": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
+        "pipeline": null
+      },
+      "status": "planned-escrow-first-eligibility-pending",
+      "next_action": "On explicit upgrade continuation, verify validated XRBC issuer locking permission, signing authority, amendment state and required API/wallet support. Do not create an escrow or deposit liquidity for this read-only eligibility check."
+    },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
       "match": [

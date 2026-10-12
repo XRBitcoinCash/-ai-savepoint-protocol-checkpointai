@@ -1,4 +1,4 @@
-# Project contracts — reviewed 2026-10-09
+# Project contracts — reviewed 2026-10-12
 
 These are recorded project constraints, not current liquidity, price or regulatory facts. Verify applicable source and current user changes before editing.
 
@@ -8,4 +8,6 @@ These are recorded project constraints, not current liquidity, price or regulato
 - Wallet connection authorizes account discovery; every transaction requires its own reviewed request. Preserve forced network, challenge/intent binding, exact-account comparison, pending locks and validated field/delivery confirmation. Disconnect does not erase an ambiguous transaction.
 - Keep quotes separate from execution, known zero separate from unavailable/partial data, and estimate animation separate from ledger completion. Trace metrics through source, request, field, transform, renderer, freshness/coverage and failure state.
 - Do not change gate thresholds, fees, token identities or compliance scope as a side effect of a visual repair. Current source/user instructions decide the applicable policy. No profitability, arbitrage-immunity or regulatory-approval claim comes from a checkpoint.
+- The 2,500 XRBC Advanced Tokenization gate uses XRBC held in the connected wallet, not XRP or liquidity-pool deposits. Credential/domain eligibility is a distinct layer and does not establish legal licensing.
+- For the adopted XLS upgrade program, use `memory/active/XRBC-XLS-ROADMAP-2026-10-12.md` and `memory/contracts/XLS-UPGRADE-CONTRACT.md`. XLS-85 escrow is first; later MPT, mutable NFT, credential/domain and Batch phases share evidence/workflow rules. A token's escrow eligibility must be verified against actual issuer permissions and authority; recorded blackholing is not a fresh ledger check.
 - Manual delivery: use the latest accepted complete source, preserve companion files, and deliver complete requested files. For the accepted JCS owner viewer, Preview/View full code/Copy full HTML/Download HTML must match the public export; owner controls stay outside that export. Read `JCS-VERIFY-WORKFLOW-2026-09-28.md` only if this delivery mode applies.

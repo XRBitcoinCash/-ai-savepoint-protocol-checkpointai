@@ -6,10 +6,13 @@ Start with [AGENTS.md](AGENTS.md) and [task router](memory/task-router.json). Lo
 
 [Portable working memory 6.1](memory/CONTINUITY.md#portable-working-memory-61) is the shared, model-neutral handoff section, included in every task bundle. The version-2 schemas remain unchanged. The [current memory handoff](memory/active/MEMORY-SYSTEM-2026-10-12.md) records this session; the [XRPL.to advisory checkpoint](memory/active/XRPL-TO-READONLY-2026-10-12.md) preserves the read-only permission and explicit no-deployment boundary.
 
+The [ecosystem XLS upgrade roadmap](memory/active/XRBC-XLS-ROADMAP-2026-10-12.md) starts with **XLS-85 token escrow**, followed by MPT/tokenization, mutable NFT lifecycles with immutable evidence, credentials/domains, permissioned markets and coordinated Batch workflows. Its [shared contract](memory/contracts/XLS-UPGRADE-CONTRACT.md) avoids rebuilding evidence/signing infrastructure in each phase. Start with escrow eligibility; the 2,500 XRBC holding gate is not a liquidity deposit or legal credential.
+
 ```sh
 node scripts/resume-memory.mjs --list
 node scripts/resume-memory.mjs --task xrbc_swap
 node scripts/resume-memory.mjs --task xrpl_to
+node scripts/resume-memory.mjs --task xrbc_xls_upgrade
 node scripts/resume-memory.mjs --query "JCS trade"
 node scripts/validate-memory.mjs
 ```
