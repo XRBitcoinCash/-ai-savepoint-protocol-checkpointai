@@ -47,9 +47,9 @@ Keep the homepage compact. Detailed builders, credential checks, document/eviden
 
 | Existing token | Locking flag | Issuer signing state observed | Native escrow decision |
 | --- | --- | --- | --- |
-| XRBC | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
-| XRB / XRBitcoin | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
-| CreatureNFT fungible token | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
+| XRBC | Off | Disabled master, ACCOUNT_ONE regular key, no signer list or delegates | Blocked for this issuance under the current protocol |
+| XRB / XRBitcoin | Off | Disabled master, ACCOUNT_ONE regular key, no signer list or delegates | Blocked for this issuance under the current protocol |
+| CreatureNFT fungible token | Off | Disabled master, ACCOUNT_ONE regular key, no signer list or delegates | Blocked for this issuance under the current protocol |
 | JCS | Off | Master enabled, no regular key or signer list | Not currently eligible; potential first candidate if the user controls the issuer and approves enabling locking |
 
 **Next action:** confirm whether the user controls the JCS issuer, then define a finite community/contributor payment budget, holder source, recipient and release window. Confirm configured API/Xaman support before any implementation or signing request. Enabling `asfAllowTrustLineLocking` (AccountSet SetFlag 17) is irreversible and applies to all trustline tokens issued by that account; it needs a separately reviewed decision. Enabled master signing does not establish user possession of the key. Do not recover context by repeating these completed account reads; obtain fresh signing prerequisites only when an authorized operation needs them.

@@ -677,8 +677,8 @@
     {
       "path": "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
       "indexed_on": "2026-10-12",
-      "bytes": 13922,
-      "sha256": "6eb2e66f33e0dff290a9a9b64b4240c76a9e9d3119a8c900f8bd4c6402f4c02e",
+      "bytes": 13961,
+      "sha256": "1e2b0652fd23453d6e045990f84d678e1b106e7dd434241788dd8c964b6157ef",
       "classification": "selected-task-record"
     },
     {
@@ -915,8 +915,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-12",
-      "bytes": 9819,
-      "sha256": "aa3edb0873a57a40671f975017cebf18b84e0323d7410dd6de1275d60507757e",
+      "bytes": 9824,
+      "sha256": "1113eae31d7a17ec18013341870af7936d379462cf986de27e86d0ebf943d6d1",
       "classification": "current"
     },
     {
@@ -943,8 +943,8 @@
     {
       "path": "memory/observations/XRBC-ESCROW-ELIGIBILITY-2026-10-12.json",
       "indexed_on": "2026-10-12",
-      "bytes": 3799,
-      "sha256": "73bf28c74d6168d4cb946b1b84ca79cb0098490fd8be142f4f9286d02cc545da",
+      "bytes": 4600,
+      "sha256": "184f21e32405da51c31d026a08ce7759493e0067f256f6d1f7648cbd89e7f9c8",
       "classification": "historical"
     },
     {

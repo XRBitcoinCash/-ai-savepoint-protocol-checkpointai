@@ -25,7 +25,14 @@
       "validated": true,
       "ledgerIndex": 107613658,
       "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
-      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key, empty signer list and no delegates match documented blackholed-account criteria.",
+      "delegates": [],
+      "delegateCheck": {
+        "validated": true,
+        "paginationComplete": true,
+        "pages": 3,
+        "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617"
+      }
     },
     {
       "token": "XRB",
@@ -39,7 +46,14 @@
       "validated": true,
       "ledgerIndex": 107613658,
       "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
-      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key, empty signer list and no delegates match documented blackholed-account criteria.",
+      "delegates": [],
+      "delegateCheck": {
+        "validated": true,
+        "paginationComplete": true,
+        "pages": 2,
+        "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617"
+      }
     },
     {
       "token": "CreatureNFT",
@@ -53,7 +67,14 @@
       "validated": true,
       "ledgerIndex": 107613658,
       "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
-      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key, empty signer list and no delegates match documented blackholed-account criteria.",
+      "delegates": [],
+      "delegateCheck": {
+        "validated": true,
+        "paginationComplete": true,
+        "pages": 1,
+        "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617"
+      }
     },
     {
       "token": "JCS",
@@ -70,7 +91,7 @@
       "interpretation": "Permission absent; protocol master signing remains enabled. Issuer control by the user and wallet support have not been verified."
     }
   ],
-  "scope": "Read-only public issuer account_info (signer_lists true), pinned amendment ledger_entry and server_info. No holder balances, private wallet records, secrets or transaction payloads stored.",
+  "scope": "Read-only public issuer account_info (signer_lists true), fully paginated account_objects type delegate for XRBC/XRB/CreatureNFT, pinned amendment ledger_entry and server_info. No holder balances, private wallet records, secrets or transaction payloads stored.",
   "limitations": [
     "Single public RPC provider; validated responses were checked for the requested account and matching ledger hash. This is a dated observation, not a future readiness certificate.",
     "XRBC's account_info read established the anchor; the other issuer and amendment reads used that same ledger hash. Public currency identities were checked against project source; ticker and encoded JCS representations must not be substituted.",

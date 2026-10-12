@@ -9,7 +9,7 @@
       "status": "passed",
       "source_revision": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
       "recorded_at": "2026-10-12T20:49:51.422Z",
-      "scope": "Successful read-only validated account_info checks for XRBC, XRB, CreatureNFT and JCS, with flags, master/regular-key and signer-list state, plus enabled TokenEscrow amendment at the same Mainnet ledger. Passed describes observation, not escrow eligibility or execution.",
+      "scope": "Successful read-only validated account_info checks for all four issuers, fully paginated account_objects delegate checks for XRBC/XRB/CreatureNFT, and enabled TokenEscrow amendment at the same Mainnet ledger. Passed describes observation, not escrow eligibility or execution.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
