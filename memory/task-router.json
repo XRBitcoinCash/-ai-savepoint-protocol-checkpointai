@@ -272,11 +272,11 @@
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
         "branch": "feat/tokenization-xls-lifecycle-20261012",
-        "head": "078f9068e476be9e9b5b7d9ce94dcab3ef62dbb7",
-        "pipeline": "2940180718"
+        "head": "567b992a41053cfb825cf5fa52da83767b0a9099",
+        "pipeline": "2940199284"
       },
-      "status": "draft-mr-96-ci-passed-browser-wallet-review-pending",
-      "next_action": "Review draft !96 and check public/Advanced Tokenization UI in an available browser; verify backend/Xaman support for linked NFT updates before any live request. Batch execution remains disabled. Preserve dated escrow eligibility and completed checks. No merge, deployment or financial execution is authorized."
+      "status": "reviewed-mr-96-ci-passed-merge-deployment-authorized",
+      "next_action": "Complete the user's authorized MR !96 merge/deployment after exact-head checks; resolve the merged master head and Pages pipeline, then stop on successful deployment. Browser/mobile and user-reviewed wallet testing follow on the next user-requested turn. Batch execution remains disabled; reuse candidate checks."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

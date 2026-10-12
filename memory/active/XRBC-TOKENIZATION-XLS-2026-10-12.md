@@ -4,7 +4,7 @@
 
 After the four-token escrow eligibility findings, the user selected the public Tokenization workspace and its Advanced continuation as the useful place to incorporate XLS changes. Build general asset/record workflows, consider the up-to-eight-transaction Batch capability, and preserve the shared evidence architecture. This supersedes the proposed JCS treasury escrow pilot as the current implementation task. The broader ecosystem roadmap remains history/future planning, not blanket implementation authorization.
 
-Authorized result: code changes on an isolated draft branch, checks, draft review and checkpoint publication. No merge/deployment, issuer setting change, token issuance, escrow, liquidity movement or actual Xaman request was performed. User signatures remain explicit. The existing 2,500 XRBC signing gate is unchanged; public local planning remains available without a purchase.
+Initial authorized result: code changes on an isolated draft branch, checks, draft review and checkpoint publication. On 2026-10-12 at 16:27 America/Chicago the user explicitly requested another review, required additions, deployment, then later testing. This now authorizes merging/deploying reviewed MR !96 after its checks. No issuer setting change, token issuance, escrow, liquidity movement or actual Xaman request was performed. User signatures remain explicit. The existing 2,500 XRBC signing gate is unchanged; public local planning remains available without a purchase.
 
 ## Source and saved implementation
 
@@ -36,9 +36,19 @@ An evidence NFT can be self-minted by the connected user wallet. Describing a bl
 - Repository validation job 17123914196 succeeded in **advisory mode**, with site-validator exit 1 and missing-reference findings elsewhere. This is not a clean strict site-validation certificate. No production deployment job ran in the MR pipeline.
 - Visual browser review remains unperformed. Local Chromium was absent and its download returned unusable archives; do not repeat that attempt unchanged. No browser, wallet or live financial execution was validated.
 
+## Predeployment review and release candidate — 2026-10-12
+
+Reviewed source candidate: `567b992a41053cfb825cf5fa52da83767b0a9099`, same branch and MR !96. The target master remained `52139c4a89c6f7c330b3716b90c77c0d4f33cde0` at review start. The review added public PREVIOUS_RECORD_SHA256 memos to NFT updates and predecessor links to validated receipts, plus rejection of changed reviewed fields, extra economic fields, duplicated/missing record memos and altered simulation transaction terms. Both pages accept the predecessor memo through their existing signing safeguards and load refreshed core/ledger cache versions.
+
+All **27 focused local tests passed**. MR pipeline **2940199284** passed for this exact candidate; runtime job **17124051551** passed **391 unit tests, zero failures/skips**, with runtime/gate/sidebar checks. Repository job **17124051552** still reports advisory site validation for missing references elsewhere. No financial execution or browser rendering was tested. The predecessor observation is not a ledger-enforced compare-and-swap: another authorized URI update could occur before settlement.
+
+This checkpoint is deliberately prepared **before** the authorized merge/deployment. It does not assert that deployment has already succeeded or invent a merge SHA. On resume, resolve MR !96's merged head and the master Pages pipeline before testing. Once the deploy-pages job is confirmed successful for that merged head, stop all tools and report. Record the resulting deployment evidence on the next user-requested testing turn, not after the deployment-stop boundary.
+
+Evidence: `XRBC-tokenization-XLS-predeploy-local-2026-10-12`, `XRBC-tokenization-XLS-predeploy-CI-2026-10-12`. Preserve earlier draft records as dated history; they are superseded for candidate-source validation.
+
 ## Next unfinished action and stopping condition
 
-Review draft !96 and perform a browser/mobile check of the public workspace and Advanced continuation in an available environment. Verify configured backend/Xaman support for the new single-action NFT update before any user-reviewed live request. Do not merge/deploy from a bare resume, repeat completed tests without changed inputs, or interpret passing CI as wallet settlement.
+Finish the already-authorized merge/deployment of reviewed candidate !96, using exact-head checks and the successful candidate CI. Stop immediately on successful deployment. The next user-requested testing turn should first resolve the deployed build and inspect public/Advanced workspace behavior, then verify configured backend/Xaman support for a user-reviewed NFT update. Do not repeat completed checks without changed inputs or interpret passing CI as wallet settlement.
 
 Batch execution is separate unfinished implementation: actual fee/reserve and per-action checks, compatible signing, pending/uncertain recovery, independently derived hashes and exact validated inner results with ParentBatchID/same-ledger linkage. Standard simulate does not validate complete Batch transactions. Credentials/domains and actual escrow create/finish/cancel are future scope.
 

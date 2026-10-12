@@ -243,8 +243,8 @@
     {
       "path": "NEXT_RUN.md",
       "indexed_on": "2026-10-12",
-      "bytes": 1433,
-      "sha256": "fa280f786198c995d43ebcf8949455581c46bed9bad32c7dbf8732054bd3566f",
+      "bytes": 1385,
+      "sha256": "19f0cfe60de744c2561213187eae6598af1249c1ac7f178ac0114ee182bbbe29",
       "classification": "current"
     },
     {
@@ -292,8 +292,8 @@
     {
       "path": "README.md",
       "indexed_on": "2026-10-12",
-      "bytes": 2398,
-      "sha256": "c8c44c0d1cfe5a80b8653066a27996ce5cd4f1beefcced6e7188f79c754eec30",
+      "bytes": 2496,
+      "sha256": "5b3a3fc542da7dcb765c37b6d25a01379bd691de8c3e4109355c3429c5a65c7d",
       "classification": "reference"
     },
     {
@@ -677,8 +677,8 @@
     {
       "path": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
       "indexed_on": "2026-10-12",
-      "bytes": 6717,
-      "sha256": "5685923d6192adeb710cc8f901521f01062194ea93360a4c2abd99db862771da",
+      "bytes": 8827,
+      "sha256": "d0b75b086670bc6606396a4b75ad7754b48f640df73412c2bb6c5a1ab0958fce",
       "classification": "selected-task-record"
     },
     {
@@ -922,8 +922,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-12",
-      "bytes": 12799,
-      "sha256": "14911bf879961ed1956c4e5fe409faf2e43454d5ab8b740aad5cc8e05a9b5b42",
+      "bytes": 15876,
+      "sha256": "edeb59910a8f18d620a8a81244e9507c8a466a2ac2eaefb2f4ddfa68c4b3a6e7",
       "classification": "current"
     },
     {
@@ -1181,8 +1181,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-12",
-      "bytes": 10140,
-      "sha256": "87aeee10a011e160134b593fa4f2c4d73db5e3be386dcc44715b911d6f12bea6",
+      "bytes": 10144,
+      "sha256": "c3128acf9ff9d801968ff0947eb226afcd4d96635774e58624aacef66bf02101",
       "classification": "current"
     },
     {

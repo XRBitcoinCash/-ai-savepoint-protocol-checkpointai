@@ -3,6 +3,48 @@
   "updated": "2026-10-12",
   "records": [
     {
+      "id": "XRBC-tokenization-XLS-predeploy-local-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "567b992a41053cfb825cf5fa52da83767b0a9099",
+      "recorded_at": "2026-10-12T21:32:36Z",
+      "scope": "27 focused local checks after requested predeployment review. Added public NFT predecessor link and receipt checks, reviewed-field rejection before RPC, changed simulation terms rejection and signing/security-memo compatibility. Both pages' executable scripts parse; diff check passed.",
+      "command": "node --test tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-catalog.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "434446f4b2fe5d08e336581184dfa348a9c2bd47e09d1c54c5fb19d905d04254",
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Node v24.19.0; full environment fingerprint was not recorded. Input digest covers both Tokenization pages, shared core/ledger/studio/workflow JS, studio CSS and the three focused test files.",
+        "Local checks use synthetic fixtures; no browser rendering, real wallet request or ledger financial operation occurred. The previous Chromium download failure was not retried.",
+        "The user authorized merge/deployment after this review, with later testing. This evidence is not a deployment or settlement certificate."
+      ],
+      "supersedes": [
+        "XRBC-tokenization-XLS-local-2026-10-12"
+      ]
+    },
+    {
+      "id": "XRBC-tokenization-XLS-predeploy-CI-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "567b992a41053cfb825cf5fa52da83767b0a9099",
+      "recorded_at": "2026-10-12T21:32:59Z",
+      "scope": "MR !96 pipeline 2940199284 passed at the reviewed candidate SHA. Runtime job 17124051551 passed runtime/gate/sidebar checks and 391 unit tests, zero failures/skips. Repository job 17124051552 succeeded in advisory mode.",
+      "command": "node scripts/verify-runtime.mjs; node scripts/verify-gates.mjs; node scripts/sync-sidebar.mjs --check; node --test tests/unit/*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2940199284",
+      "limitations": [
+        "Site-validator exit remained 1 in advisory mode, with missing references on other pages. Passing pipeline status is not strict clean-site validation.",
+        "No production deployment job runs in this MR pipeline; merge/deployment is separately authorized and not yet recorded as completed in this predeployment checkpoint.",
+        "No raw CI logs/tokens, wallet payloads or private records are stored. Browser/mobile and actual Xaman operations remain future user-requested testing."
+      ],
+      "supersedes": [
+        "XRBC-tokenization-XLS-CI-2026-10-12"
+      ]
+    },
+    {
       "id": "XRBC-tokenization-XLS-local-2026-10-12",
       "project": "xrbitcoincash-group/xrbitcoincash-project",
       "kind": "synthetic",
