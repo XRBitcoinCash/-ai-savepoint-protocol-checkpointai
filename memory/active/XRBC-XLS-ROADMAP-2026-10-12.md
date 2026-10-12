@@ -4,7 +4,7 @@
 
 On 2026-10-12 the user adopted a systematic ecosystem upgrade program and requested saving it to the GitHub AI Checkpoint before beginning implementation. **XLS-85 TokenEscrow is first.** Plan the other upgrades together so evidence formats, capability checks and transaction handling are not rebuilt independently for every phase or page. The user's escrow-first choice supersedes the earlier assistant recommendation to implement Batch first; it does not invalidate that research or the saved unsigned Batch preview.
 
-Current deliverable: organize, validate and publish the checkpoint. The user intends to begin the first ecosystem upgrade next. This checkpoint is not an authorization to deploy, move/lock funds, mint NFTs, create new issuances, change issuer settings, delegate authority or open a financial service. Start that continuation with read-only escrow eligibility checks. Every later signed action remains explicitly reviewed by the user through Xaman.
+Current deliverable: recommend the four-token escrow rollout and preserve the completed read-only eligibility checks. This checkpoint is not an authorization to deploy, move/lock funds, mint NFTs, create new issuances, change issuer settings, delegate authority or open a financial service. Every later signed action remains explicitly reviewed by the user through Xaman.
 
 The user's aim is stronger legal/policy alignment and expanded tokenization. This is an objective requiring appropriate evidence and review, not a finding of legal status, licensing, backing or regulatory approval. Ledger eligibility, the existing XRBC holding gate, credential eligibility and legal authorization remain separate states.
 
@@ -13,7 +13,7 @@ The user's aim is stronger legal/policy alignment and expanded tokenization. Thi
 - Memory repository: `XRBitcoinCash/-ai-savepoint-protocol-checkpointai`, `main`; starting checkpoint `f79b046decac573cf8e0fb2a1702645e9480a6c4`.
 - Authoritative XRBC frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project` (75781181), `master`; head `52139c4a89c6f7c330b3716b90c77c0d4f33cde0` observed during the 2026-10-12 research. This is not a fresh application deployment certificate. Current backend repository/head and intended escrow UI paths remain null/unverified.
 - Relevant existing files: `public/xrbc-batch-preview.js`, `docs/analytics-upgrade.md`, `tests/unit/batch-protocol-evidence.test.mjs`, `public/whitepaper.html`; tokenization page paths must be confirmed against current source before edits.
-- Evidence IDs: `XRBC-XLS-docs-review-2026-10-12`, `XRBC-batch-preview-source-2026-10-12`, `XRBC-escrow-eligibility-2026-10-12` in `memory/evidence.json`.
+- Evidence IDs: `XRBC-XLS-docs-review-2026-10-12`, `XRBC-batch-preview-source-2026-10-12`, historical `XRBC-escrow-eligibility-2026-10-12` and current `XRBC-escrow-eligibility-validated-2026-10-12` in `memory/evidence.json`.
 - The saved Batch module builds an unsigned two-party token-for-XRP proposal. Signing/submission stay hard-disabled even when amendment, wallet and coordinator inputs say compatible. Its receipt verifier requires exact validated inner deliveries, parent/hash/ledger linkage and reviewed fields. Existing synthetic fixture coverage was inspected, not rerun; no new wallet or ledger transaction was performed.
 - Research identified the documented XLS-85 issuer permission, revised Batch signing (Xaman 5.4+ for multi-party BatchV1_1), Batch settlement evidence requirements and `simulate`'s lack of full-Batch support. A third-party primary ledger observation reports Batch activation on 2026-10-09; the official disclosure confirms fixBatchV1_2 activation that day. No direct fresh Mainnet amendment/account query was completed in that research.
 
@@ -43,9 +43,20 @@ Keep the homepage compact. Detailed builders, credential checks, document/eviden
 
 ## Phase 1: first unfinished action and stopping condition
 
-**Next action:** on explicit continuation of this upgrade, read the validated XRBC issuer `account_info` and amendment ledger evidence, verify the exact issuer/currency and `AllowTrustLineLocking` permission, and establish the issuer's actual signing-authority state. Inspect the current application's escrow/API capabilities only as needed. Do not ask the user to deposit liquidity or send a transaction for this eligibility check.
+**Completed prerequisite, 2026-10-12:** read all four public issuer accounts and TokenEscrow amendment at validated Mainnet ledger **107613658**, hash `91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617`, through `https://xrplcluster.com`. TokenEscrow was enabled. Exact identities and sanitized flags/authority evidence are in `memory/observations/XRBC-ESCROW-ELIGIBILITY-2026-10-12.json`. This dated observation supersedes the earlier unknown-permission state; no holder balances or signed operations were inspected.
 
-Recorded XRBC asset identity: issuer `rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw`, currency `5852626974636F696E6361736800000000000000`. The project's blackholed-issuer description is recorded history; current flags and complete authority evidence still need a validated read. A failed lookup cannot establish blackholing or a missing permission.
+| Existing token | Locking flag | Issuer signing state observed | Native escrow decision |
+| --- | --- | --- | --- |
+| XRBC | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
+| XRB / XRBitcoin | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
+| CreatureNFT fungible token | Off | Disabled master, ACCOUNT_ONE regular key, no signer list | Blocked for this issuance under the current protocol |
+| JCS | Off | Master enabled, no regular key or signer list | Not currently eligible; potential first candidate if the user controls the issuer and approves enabling locking |
+
+**Next action:** confirm whether the user controls the JCS issuer, then define a finite community/contributor payment budget, holder source, recipient and release window. Confirm configured API/Xaman support before any implementation or signing request. Enabling `asfAllowTrustLineLocking` (AccountSet SetFlag 17) is irreversible and applies to all trustline tokens issued by that account; it needs a separately reviewed decision. Enabled master signing does not establish user possession of the key. Do not recover context by repeating these completed account reads; obtain fresh signing prerequisites only when an authorized operation needs them.
+
+**Recommended rollout, not adopted allocation:** first demonstrate create/finish/cancel on a compatible test network. Then, if explicitly authorized, use a small user-selected JCS amount from an existing holder/treasury account for one fixed recipient and date. Issuers cannot fund escrow with their own issued tokens. Native XLS-20 NFTs are separate from the fungible CreatureNFT token and are not XLS-85 assets. Do not lock existing AMM liquidity, routine operating funds or users' 2,500-XRBC access holdings. No percentage or amount is chosen without a budget.
+
+For the initial schedule use FinishAfter plus mandatory token CancelAfter. Finishing requires an explicit EscrowFinish after release eligibility and before expiry; it does not run automatically. After CancelAfter, explicit EscrowCancel returns funds to the source. Neither date nor recipient can be amended after creation, and the sender cannot cancel early. Keep enough fee/reserve headroom and show locked versus spendable holdings. After the bounded pilot, consider separate monthly tranches of an approved finite allocation. Conditions based on completed work or credential checks need a separately designed evidence/release authority; time escrow does not adjudicate milestones. Keep a compact homepage summary and load the detailed escrow tool on demand.
 
 If the flag is absent and irreversible blackholing is established, **native escrow for that issuance is blocked**. Preserve that result and present it to the user. Do not silently substitute a wrapper, replacement token, new issuer or new asset. XRP/another eligible asset may be discussed as an explicit alternative, not assumed.
 
@@ -56,6 +67,9 @@ Phase-1 acceptance starts with a dated **eligible / blocked / unknown** decision
 ## Sources and history
 
 - Token Escrow requirements: https://xrpl.org/docs/concepts/payment-types/escrow
+- Permanent issuer locking permission: https://xrpl.org/docs/references/protocol/transactions/types/accountset
+- Blackholed-account criteria: https://xrpl.org/docs/concepts/accounts/blackholed-accounts
+- Finish/cancel lifecycle: https://xrpl.org/docs/references/protocol/transactions/types/escrowfinish and https://xrpl.org/docs/references/protocol/transactions/types/escrowcancel
 - MPTs: https://xrpl.org/docs/concepts/tokens/fungible-tokens/multi-purpose-tokens
 - Mutable MPTs: https://xrpl.org/docs/concepts/tokens/fungible-tokens/mutable-mpts
 - Dynamic NFT transaction: https://xrpl.org/docs/references/protocol/transactions/types/nftokenmodify

@@ -3,6 +3,28 @@
   "updated": "2026-10-12",
   "records": [
     {
+      "id": "XRBC-escrow-eligibility-validated-2026-10-12",
+      "project": "XRPL/Mainnet-ecosystem-issuers",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+      "recorded_at": "2026-10-12T20:49:51.422Z",
+      "scope": "Successful read-only validated account_info checks for XRBC, XRB, CreatureNFT and JCS, with flags, master/regular-key and signer-list state, plus enabled TokenEscrow amendment at the same Mainnet ledger. Passed describes observation, not escrow eligibility or execution.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/observations/XRBC-ESCROW-ELIGIBILITY-2026-10-12.json",
+      "limitations": [
+        "Single public RPC provider; validated responses were checked for the requested account and matching ledger hash. This is a dated observation, not a future readiness certificate.",
+        "XRBC's account_info read established the anchor; the other issuer and amendment reads used that same ledger hash. Public currency identities were checked against project source; ticker and encoded JCS representations must not be substituted.",
+        "No user possession of issuer keys, escrow wallet support, holder permissions/reserves or signed execution was tested. No AccountSet or escrow request was created.",
+        "All four issuer locking flags were off. Three issuer signing states match documented blackhole criteria. JCS issuer possession and wallet compatibility remain unverified; no settings change or financial execution occurred."
+      ],
+      "supersedes": [
+        "XRBC-escrow-eligibility-2026-10-12"
+      ]
+    },
+    {
       "id": "XRBC-XLS-docs-review-2026-10-12",
       "project": "XRBC/XLS-roadmap",
       "kind": "source",

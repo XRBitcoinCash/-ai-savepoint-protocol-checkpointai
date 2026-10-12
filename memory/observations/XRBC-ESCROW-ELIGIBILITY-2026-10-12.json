@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_at": "2026-10-12T20:49:51.422Z",
+  "observed_at": "2026-10-12T20:47:51.760Z",
+  "network": "XRPL Mainnet",
+  "network_id": 0,
+  "endpoint": "https://xrplcluster.com",
+  "server_build": "3.4.1",
+  "ledger_index": 107613658,
+  "ledger_hash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+  "token_escrow": {
+    "id": "138B968F25822EFBF54C00F97031221C47B1EAB8321D93C7C2AEAF85F04EC5DF",
+    "enabled": true
+  },
+  "issuers": [
+    {
+      "token": "XRBC",
+      "issuer": "rEjwniYhYR5QDZzK1a1x2359j8j8N43Ypw",
+      "currency": "5852626974636F696E6361736800000000000000",
+      "flags": 9961472,
+      "allowTrustLineLocking": false,
+      "disableMasterKey": true,
+      "regularKey": "rrrrrrrrrrrrrrrrrrrrBZbvji",
+      "signerLists": [],
+      "validated": true,
+      "ledgerIndex": 107613658,
+      "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+    },
+    {
+      "token": "XRB",
+      "issuer": "rGQaHbQHCsTLQtboQPwUBasXjLvk8uDbpT",
+      "currency": "5852626974636F696E0000000000000000000000",
+      "flags": 9961472,
+      "allowTrustLineLocking": false,
+      "disableMasterKey": true,
+      "regularKey": "rrrrrrrrrrrrrrrrrrrrBZbvji",
+      "signerLists": [],
+      "validated": true,
+      "ledgerIndex": 107613658,
+      "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+    },
+    {
+      "token": "CreatureNFT",
+      "issuer": "rGWUGk9BUnknFeyPHSxmkv6UPnt4Zs4c92",
+      "currency": "43726561747572654E4654000000000000000000",
+      "flags": 9961472,
+      "allowTrustLineLocking": false,
+      "disableMasterKey": true,
+      "regularKey": "rrrrrrrrrrrrrrrrrrrrBZbvji",
+      "signerLists": [],
+      "validated": true,
+      "ledgerIndex": 107613658,
+      "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+      "interpretation": "Permission absent; disabled master, known ACCOUNT_ONE blackhole regular key and empty signer list match documented blackholed-account criteria."
+    },
+    {
+      "token": "JCS",
+      "issuer": "rPU6sXCNzsjcTUEmgJQ5SxDUzY2y1RyYKd",
+      "currency": "JCS",
+      "flags": 8388608,
+      "allowTrustLineLocking": false,
+      "disableMasterKey": false,
+      "regularKey": null,
+      "signerLists": [],
+      "validated": true,
+      "ledgerIndex": 107613658,
+      "ledgerHash": "91026B35E49CE2B52A7908472748347EFCEC21E9C7213AE01BEBDA124CC53617",
+      "interpretation": "Permission absent; protocol master signing remains enabled. Issuer control by the user and wallet support have not been verified."
+    }
+  ],
+  "scope": "Read-only public issuer account_info (signer_lists true), pinned amendment ledger_entry and server_info. No holder balances, private wallet records, secrets or transaction payloads stored.",
+  "limitations": [
+    "Single public RPC provider; validated responses were checked for the requested account and matching ledger hash. This is a dated observation, not a future readiness certificate.",
+    "XRBC's account_info read established the anchor; the other issuer and amendment reads used that same ledger hash. Public currency identities were checked against project source; ticker and encoded JCS representations must not be substituted.",
+    "No user possession of issuer keys, escrow wallet support, holder permissions/reserves or signed execution was tested. No AccountSet or escrow request was created."
+  ]
+}

@@ -271,8 +271,8 @@
         "head": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
         "pipeline": null
       },
-      "status": "planned-escrow-first-eligibility-pending",
-      "next_action": "On explicit upgrade continuation, verify validated XRBC issuer locking permission, signing authority, amendment state and required API/wallet support. Do not create an escrow or deposit liquidity for this read-only eligibility check."
+      "status": "eligibility-recorded-three-blocked-jcs-permission-pending",
+      "next_action": "Reuse the four-issuer validated observation. Confirm user control of the JCS issuer and define a finite holder-funded pilot and API/wallet support; SetFlag 17 is a permanent permission decision requiring separate review. No issuer setting change, escrow, liquidity deposit or deployment is authorized."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
