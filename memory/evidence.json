@@ -1,7 +1,26 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-09",
+  "updated": "2026-10-12",
   "records": [
+    {
+      "id": "XRPLTO-email-visible-2026-10-12",
+      "project": "XRBC/XRPL.to-readonly",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-12T19:28:19Z",
+      "scope": "Direct reading of the user-supplied email screenshot: described read-only backend/cache/display/WebSocket permission, per-page attribution and offered Partner application terms.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRPL-TO-READONLY-2026-10-12.md",
+      "limitations": [
+        "Passed means the visible text was read, not that sender authenticity, current terms or Partner activation were verified.",
+        "The full original request is collapsed. Private screenshot and raw email are not published; this is a minimal permission summary.",
+        "No backend source, existing tests, API key, application state, deployment or live wallet result was checked. This evidence does not authorize execution."
+      ],
+      "supersedes": []
+    },
     {
       "id": "XRBC-95-focused",
       "project": "xrbitcoincash-group/xrbitcoincash-project",

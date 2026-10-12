@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-10",
+  "updated": "2026-10-12",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -241,6 +241,28 @@
       "status": "historical-needs-source-check",
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
+    "xrpl_to": {
+      "title": "XRPL.to read-only data permission and integration advice",
+      "match": [
+        "XRPL.to",
+        "xrpl to",
+        "Partner API",
+        "read-only data integration",
+        "Data by xrpl.to",
+        "API permission"
+      ],
+      "read": [
+        "memory/active/XRPL-TO-READONLY-2026-10-12.md"
+      ],
+      "source": {
+        "repository": null,
+        "branch": null,
+        "head": null,
+        "pipeline": null
+      },
+      "status": "advisory-only-do-not-deploy",
+      "next_action": "Await explicit continuation; identify the backend source and requested scope before enrollment or implementation. Provider permission is not deployment authorization."
+    },
     "memory_system": {
       "title": "Memory and checkpoint maintenance",
       "match": [
@@ -249,10 +271,15 @@
         "savepoint",
         "resume",
         "skill",
-        "sandbox"
+        "sandbox",
+        "portable working memory",
+        "6.1",
+        "Astra",
+        "Sol",
+        "work environment"
       ],
       "read": [
-        "memory/active/MEMORY-SYSTEM-2026-10-09.md"
+        "memory/active/MEMORY-SYSTEM-2026-10-12.md"
       ],
       "source": {
         "repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -261,7 +288,7 @@
         "pipeline": null
       },
       "status": "repository-maintenance",
-      "next_action": "Use the current user task; validate and publish only requested memory changes."
+      "next_action": "Use portable working memory 6.1 with the current user task; validate and publish only requested memory changes, then await the next request."
     }
   }
 }

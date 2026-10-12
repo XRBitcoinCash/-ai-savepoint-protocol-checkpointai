@@ -1,12 +1,15 @@
 # XRBC project memory
 
-Updated 2026-10-09. Portable checkpoints for XRBC, XRBitcoin, Creature NFT, JCS and future projects.
+Updated 2026-10-12. Portable checkpoints for XRBC, XRBitcoin, Creature NFT, JCS and future projects.
 
 Start with [AGENTS.md](AGENTS.md) and [task router](memory/task-router.json). Load one task, retain its evidence, take its next unfinished step.
+
+[Portable working memory 6.1](memory/CONTINUITY.md#portable-working-memory-61) is the shared, model-neutral handoff section, included in every task bundle. The version-2 schemas remain unchanged. The [current memory handoff](memory/active/MEMORY-SYSTEM-2026-10-12.md) records this session; the [XRPL.to advisory checkpoint](memory/active/XRPL-TO-READONLY-2026-10-12.md) preserves the read-only permission and explicit no-deployment boundary.
 
 ```sh
 node scripts/resume-memory.mjs --list
 node scripts/resume-memory.mjs --task xrbc_swap
+node scripts/resume-memory.mjs --task xrpl_to
 node scripts/resume-memory.mjs --query "JCS trade"
 node scripts/validate-memory.mjs
 ```
