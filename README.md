@@ -6,7 +6,7 @@ Start with [AGENTS.md](AGENTS.md) and [task router](memory/task-router.json). Lo
 
 [Portable working memory 6.1](memory/CONTINUITY.md#portable-working-memory-61) is the shared, model-neutral handoff section, included in every task bundle. The version-2 schemas remain unchanged. The [current memory handoff](memory/active/MEMORY-SYSTEM-2026-10-12.md) records this session; the [XRPL.to advisory checkpoint](memory/active/XRPL-TO-READONLY-2026-10-12.md) preserves the read-only permission and explicit no-deployment boundary.
 
-The [ecosystem XLS upgrade roadmap](memory/active/XRBC-XLS-ROADMAP-2026-10-12.md) starts with **XLS-85 token escrow**, followed by MPT/tokenization, mutable NFT lifecycles with immutable evidence, credentials/domains, permissioned markets and coordinated Batch workflows. Its [shared contract](memory/contracts/XLS-UPGRADE-CONTRACT.md) avoids rebuilding evidence/signing infrastructure in each phase. Start with escrow eligibility; the 2,500 XRBC holding gate is not a liquidity deposit or legal credential.
+The current [Tokenization XLS handoff](memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md) records draft !96: mutable/linked evidence NFTs, new-MPT escrow permission and unsigned Batch workflows. CI passed; browser/wallet review remains pending. The [broader ecosystem roadmap](memory/active/XRBC-XLS-ROADMAP-2026-10-12.md) preserves the earlier escrow-first plan and completed eligibility findings. Its [shared contract](memory/contracts/XLS-UPGRADE-CONTRACT.md) keeps evidence/signing decisions consistent. The 2,500 XRBC holding gate is not a liquidity deposit or legal credential. Nothing is deployed by this handoff.
 
 ```sh
 node scripts/resume-memory.mjs --list

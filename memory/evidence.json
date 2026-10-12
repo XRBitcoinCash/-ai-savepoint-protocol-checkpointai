@@ -3,6 +3,44 @@
   "updated": "2026-10-12",
   "records": [
     {
+      "id": "XRBC-tokenization-XLS-local-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "078f9068e476be9e9b5b7d9ce94dcab3ef62dbb7",
+      "recorded_at": "2026-10-12T21:22:05Z",
+      "scope": "23 local focused checks of tokenization evidence/encryption/catalog and new mutable NFT/update, MPT escrow permission and unsigned Batch boundaries. Executable scripts parse and changed pages have unique markup IDs; diff whitespace check passed.",
+      "command": "node --test tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-catalog.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "4bc06ce9d0f4a37fd588f18696131713eb1ae6d0b42044725c2b99267e89f71b",
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Node v24.19.0; full environment fingerprint was not recorded. Input digest covers both affected HTML pages, four JS modules, studio CSS and the three focused test files in the listed command.",
+        "Synthetic fixtures and source parsing do not prove browser rendering, configured backend/Xaman support, amendment activation at execution time or wallet settlement.",
+        "Local browser review was not performed: Chromium was absent and its archive download failed. No signing request, mint, distribution, escrow or deployment occurred."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-XLS-CI-2026-10-12",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "078f9068e476be9e9b5b7d9ce94dcab3ef62dbb7",
+      "recorded_at": "2026-10-12T21:22:41Z",
+      "scope": "MR !96 pipeline 2940180718 succeeded for the exact draft SHA. Job 17123914195 passed runtime contracts (11 pages), gates (12 tools/7 tiers), sidebar (24 pages) and 387 unit tests with zero failed/skipped. SEO job ran 6 passing checks; site validator remained advisory.",
+      "command": "node scripts/verify-runtime.mjs; node scripts/verify-gates.mjs; node scripts/sync-sidebar.mjs --check; node --test tests/unit/*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2940180718",
+      "limitations": [
+        "Pipeline success is not a strict clean-site certificate: job 17123914196 recorded advisory mode, site-validator exit 1 and missing-reference findings on other pages.",
+        "No deployment job ran for this merge-request pipeline. Browser rendering, real ledger operations and wallet integration remain unverified.",
+        "CI input/environment fingerprints were not recorded. Source SHA and pipeline/job identities are recorded for evidence reuse; raw logs and tokens are not stored."
+      ],
+      "supersedes": []
+    },
+    {
       "id": "XRBC-escrow-eligibility-validated-2026-10-12",
       "project": "XRPL/Mainnet-ecosystem-issuers",
       "kind": "source",

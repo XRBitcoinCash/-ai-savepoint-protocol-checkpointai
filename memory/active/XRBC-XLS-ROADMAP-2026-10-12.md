@@ -1,5 +1,7 @@
 # XRBC ecosystem XLS upgrade roadmap - recorded 2026-10-12
 
+**Current implementation handoff:** `memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md`. After the eligibility findings, the user selected the public/Advanced Tokenization workspace for XLS incorporation. Draft !96 is saved and unmerged; the former JCS treasury pilot proposal is not the active task. Preserve the following roadmap and eligibility as dated history.
+
 ## Objective and current authority
 
 On 2026-10-12 the user adopted a systematic ecosystem upgrade program and requested saving it to the GitHub AI Checkpoint before beginning implementation. **XLS-85 TokenEscrow is first.** Plan the other upgrades together so evidence formats, capability checks and transaction handling are not rebuilt independently for every phase or page. The user's escrow-first choice supersedes the earlier assistant recommendation to implement Batch first; it does not invalidate that research or the saved unsigned Batch preview.

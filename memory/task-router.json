@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC ecosystem XLS upgrades: token escrow first",
+      "title": "XRBC public and Advanced Tokenization XLS lifecycle upgrade",
       "match": [
         "ecosystem upgrade",
         "first XLS update",
@@ -259,20 +259,24 @@
         "XLS-81",
         "XLS-56",
         "BatchV1_1",
-        "upgrade roadmap"
+        "upgrade roadmap",
+        "Advanced Tokenization XLS",
+        "tokenization lifecycle",
+        "tokenization Batch",
+        "linked NFT revision"
       ],
       "read": [
-        "memory/active/XRBC-XLS-ROADMAP-2026-10-12.md",
+        "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
         "memory/contracts/XLS-UPGRADE-CONTRACT.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "52139c4a89c6f7c330b3716b90c77c0d4f33cde0",
-        "pipeline": null
+        "branch": "feat/tokenization-xls-lifecycle-20261012",
+        "head": "078f9068e476be9e9b5b7d9ce94dcab3ef62dbb7",
+        "pipeline": "2940180718"
       },
-      "status": "eligibility-recorded-three-blocked-jcs-permission-pending",
-      "next_action": "Reuse the four-issuer validated observation. Confirm user control of the JCS issuer and define a finite holder-funded pilot and API/wallet support; SetFlag 17 is a permanent permission decision requiring separate review. No issuer setting change, escrow, liquidity deposit or deployment is authorized."
+      "status": "draft-mr-96-ci-passed-browser-wallet-review-pending",
+      "next_action": "Review draft !96 and check public/Advanced Tokenization UI in an available browser; verify backend/Xaman support for linked NFT updates before any live request. Batch execution remains disabled. Preserve dated escrow eligibility and completed checks. No merge, deployment or financial execution is authorized."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
