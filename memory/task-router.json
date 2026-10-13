@@ -268,7 +268,11 @@
         "publication burn",
         "burn XRBC",
         "record catalog",
-        "gate refresh"
+        "gate refresh",
+        "fractional burn",
+        "microburn",
+        "publication funding",
+        "threshold plus burn"
       ],
       "read": [
         "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
@@ -277,11 +281,11 @@
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
         "branch": "feat/nft-record-publication-20261013",
-        "head": "905e4469ece27ef4444195b505f6c41822b77e07",
-        "pipeline": "2941085732"
+        "head": "7afc7e562c1f5ef9e87715551a1b49e354faef44",
+        "pipeline": "2941186769"
       },
-      "status": "draft-mr-97-ci-passed-economic-policy-review-pending",
-      "next_action": "Review the provisional 1 XRBC publication rate and retained 2,500 XRBC gate in MR !97; deploy only on explicit authorization, stopping immediately on success. New browser/mobile and user-signed burn/NFT testing remain pending; Batch stays unsigned."
+      "status": "mr-97-microburn-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge the exact reviewed MR !97 head and wait for Pages deployment; stop all tools immediately after success. On the next explicit testing turn, resolve deployed identity and inspect browser/mobile before user-reviewed burn/NFT testing. Preserve original burns/unknown requests; Batch stays unsigned."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

@@ -317,6 +317,47 @@
         "Wallet and payload identifiers intentionally omitted."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "7afc7e562c1f5ef9e87715551a1b49e354faef44",
+      "recorded_at": "2026-10-13T06:33:21.689Z",
+      "id": "XRBC-record-microburn-local-2026-10-13",
+      "kind": "synthetic",
+      "scope": "41 focused checks; final arbitrary fixture change reran 13 publication checks. Exact fractional issuer return, threshold-plus-burn freshness, intended NFT and both XRP budgets, source/history, fee/recovery guards, catalog and studio integration.",
+      "command": "node --test tests/unit/tokenization-publication.test.mjs tests/unit/tokenization-record-ui.test.mjs tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-catalog.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "f800de3753a5c061de90fe3b797b41ea9819a3866696e371eb33f53dd1b351b4",
+      "environment_digest": "5f504248cf07f41e1d86f2ab4772ac973f9d48da385bdeace3655d3b01a1f27c",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/97",
+      "limitations": [
+        "Synthetic DOM is not browser rendering; no user-signed settlement.",
+        "Unchanged focused checks were reused after the final fixture-only update; CI ran all tests on the final head.",
+        "Separate approvals permit irreversible burn before later publication failure; Batch is unsigned/export-only."
+      ],
+      "supersedes": [
+        "XRBC-record-publication-local-2026-10-13"
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "7afc7e562c1f5ef9e87715551a1b49e354faef44",
+      "recorded_at": "2026-10-13T06:33:21.689Z",
+      "id": "XRBC-record-microburn-CI-2026-10-13",
+      "kind": "ci",
+      "scope": "Final pipeline 2941186769 passed; runtime-contracts job 17130394223 passed 405 tests, zero failures/skips/cancellations.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17130394223",
+      "limitations": [
+        "Repository job 17130394224 is advisory with validator exit 1 for other site findings.",
+        "Merge/deployment pending at this predeployment checkpoint; no new browser/mobile or wallet outcome."
+      ],
+      "supersedes": [
+        "XRBC-record-publication-CI-2026-10-13"
+      ]
     }
   ]
 }
