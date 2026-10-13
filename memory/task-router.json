@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC atomic NFT record publication and Tokenization XLS lifecycle",
+      "title": "XRBC atomic publication, backup validation and Tokenization XLS lifecycle",
       "match": [
         "ecosystem upgrade",
         "first XLS update",
@@ -272,7 +272,10 @@
         "fractional burn",
         "microburn",
         "inner receipt",
-        "threshold plus burn"
+        "threshold plus burn",
+        "backup password",
+        "encrypted backup",
+        "password validation"
       ],
       "read": [
         "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
@@ -280,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "feat/atomic-tokenization-batch-20261013",
-        "head": "26563d7d2966c7ec4c02a379f5b75de7ac78a87d",
-        "pipeline": "2941480410"
+        "branch": "fix/tokenization-backup-password-feedback-20261013",
+        "head": "7c13fb5cb2c081916deba1f33471d555c53bf0ca",
+        "pipeline": "2941733194"
       },
-      "status": "mr-98-atomic-batch-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge exact passing MR !98 candidate and wait for master Pages deployment. Stop all tools immediately on deployment success. Next explicit testing turn: reconcile deployment and test user-reviewed atomic publication; preserve drafts, receipts and uncertain requests."
+      "status": "mr-99-backup-navigation-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge exact passing MR !99 and wait for master security/Pages deployment; stop all tools immediately on success. Next explicit browser turn: preserve/restore the encrypted test record, prepare fresh Batch terms, generate one guarded QR request and let the user sign; verify every inner result afterward."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

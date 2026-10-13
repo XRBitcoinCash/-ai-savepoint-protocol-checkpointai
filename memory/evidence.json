@@ -431,6 +431,76 @@
         "Repository job 17132516181 is advisory, validator exit 1 for other site findings.",
         "Master security and Pages deployment remain pending; no live wallet outcome."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T09:29:24.725Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-atomic-batch-deployed-2026-10-13",
+      "kind": "deployment",
+      "source_revision": "07ba9c84bd18d8ac04fdf45aecca1d805cfcfd81",
+      "scope": "MR !98 merged; master pipeline 2941525932 and its five jobs succeeded, including deploy-pages 17132856747. Agent stopped immediately and resumed only on explicit new testing request.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2941525932",
+      "limitations": [
+        "Deployment is not a wallet/ledger settlement test."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T09:29:24.725Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-atomic-browser-preparation-2026-10-13",
+      "kind": "browser",
+      "source_revision": "07ba9c84bd18d8ac04fdf45aecca1d805cfcfd81",
+      "scope": "Browser gate unlocked automatically, software-release template search worked, eight public supporting documents fingerprinted, malformed source hash rejected, and one NFT prepared as a two-action atomic Batch. A short-password export was visibly rejected; corrected user input successfully downloaded an encrypted backup. No password is recorded.",
+      "reference": "https://xrbitcoincash.com/asset-tokenization-auditor-advanced.html",
+      "limitations": [
+        "Observed prior studio only. No agent-created wallet request or validated wallet result asserted.",
+        "Browser secret values are redacted; infer validity only from real application outcomes."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T09:29:24.725Z",
+      "supersedes": [],
+      "command": "node --test tests/unit/tokenization-record-ui.test.mjs tests/unit/tokenization-studio.test.mjs",
+      "input_digest": "81472d924dec703be8b2bf8f55cba3dce413779cea2da2b089190e031e21c47c",
+      "environment_digest": "b16675e7962d4dd152f3a73dab242511264f4b93368b249ad8d6029eab78aef8",
+      "id": "XRBC-backup-feedback-local-2026-10-13",
+      "kind": "synthetic",
+      "source_revision": "7c13fb5cb2c081916deba1f33471d555c53bf0ca",
+      "scope": "16 focused local checks passed; new actual-studio tests prove short-password navigation/focus after re-enabling, mismatch correction without download, and matching 12-character encrypted export/decryption with preserved fingerprint. Syntax and whitespace passed; all four committed file hashes match.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/99",
+      "limitations": [
+        "Synthetic DOM and Node WebCrypto, no network or wallet. Live rendered focus of this candidate remains pending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T09:29:24.725Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-backup-feedback-CI-2026-10-13",
+      "kind": "ci",
+      "source_revision": "7c13fb5cb2c081916deba1f33471d555c53bf0ca",
+      "scope": "Candidate pipeline 2941733194 passed; runtime job 17134439660 passed all 426 tests with zero failures/skips/cancellations.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17134439660",
+      "limitations": [
+        "Repository job 17134439661 is advisory, validator exit 1.",
+        "New master security/Pages deployment and live wallet results remain pending."
+      ]
     }
   ]
 }
