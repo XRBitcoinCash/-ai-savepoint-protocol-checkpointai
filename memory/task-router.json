@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC public and Advanced Tokenization XLS lifecycle upgrade",
+      "title": "XRBC NFT record publication and Tokenization XLS lifecycle",
       "match": [
         "ecosystem upgrade",
         "first XLS update",
@@ -263,7 +263,12 @@
         "Advanced Tokenization XLS",
         "tokenization lifecycle",
         "tokenization Batch",
-        "linked NFT revision"
+        "linked NFT revision",
+        "NFT record publication",
+        "publication burn",
+        "burn XRBC",
+        "record catalog",
+        "gate refresh"
       ],
       "read": [
         "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
@@ -271,12 +276,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "feat/tokenization-xls-lifecycle-20261012",
-        "head": "567b992a41053cfb825cf5fa52da83767b0a9099",
-        "pipeline": "2940199284"
+        "branch": "feat/nft-record-publication-20261013",
+        "head": "905e4469ece27ef4444195b505f6c41822b77e07",
+        "pipeline": "2941085732"
       },
-      "status": "reviewed-mr-96-ci-passed-merge-deployment-authorized",
-      "next_action": "Complete the user's authorized MR !96 merge/deployment after exact-head checks; resolve the merged master head and Pages pipeline, then stop on successful deployment. Browser/mobile and user-reviewed wallet testing follow on the next user-requested turn. Batch execution remains disabled; reuse candidate checks."
+      "status": "draft-mr-97-ci-passed-economic-policy-review-pending",
+      "next_action": "Review the provisional 1 XRBC publication rate and retained 2,500 XRBC gate in MR !97; deploy only on explicit authorization, stopping immediately on success. New browser/mobile and user-signed burn/NFT testing remain pending; Batch stays unsigned."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

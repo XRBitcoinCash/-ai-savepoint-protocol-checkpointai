@@ -263,6 +263,60 @@
         "No validated transaction evidence for this resumed sequence."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-publication-local-2026-10-13",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "905e4469ece27ef4444195b505f6c41822b77e07",
+      "recorded_at": "2026-10-13T05:56:27.593Z",
+      "scope": "37 focused source/synthetic checks: exact burn policy/balance reduction, sources/history, renewal, Base64 catalog and studio/memo integration",
+      "command": "node --test tests/unit/tokenization-publication.test.mjs tests/unit/tokenization-record-ui.test.mjs tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-catalog.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "87f8a5a91a66ab4dcb776159a7ba6e7193592fb732bb22051784803a0f1460a6",
+      "environment_digest": "8cb677f782e2fc3840b7538e3a1061046b6d05e33c51abf16ec03149bbdd51c5",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/97",
+      "limitations": [
+        "Synthetic DOM is not browser rendering; no wallet execution or deployment.",
+        "Economic defaults require review; Batch signing remains disabled."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-publication-CI-2026-10-13",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "905e4469ece27ef4444195b505f6c41822b77e07",
+      "recorded_at": "2026-10-13T05:56:27.593Z",
+      "scope": "Runtime/gate/sidebar checks and 401 unit tests passed, zero failures or skips",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17129747913",
+      "limitations": [
+        "Repository job 17129747914 is advisory, validator exit 1 for other site findings.",
+        "No production deployment or new browser/wallet result."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-browser-access-2026-10-13",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "b09b9bb0cb70e66cccef756d630815bfc4e711e5",
+      "recorded_at": "2026-10-13T05:56:27.593Z",
+      "scope": "Live SignIn and gate unlock observed; later two-minute relock reproduced; empty-record rejection and NFT/Batch UI boundaries inspected",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Existing deployed build only; no paid burn/mint or mobile rendering tested.",
+        "Wallet and payload identifiers intentionally omitted."
+      ],
+      "supersedes": []
     }
   ]
 }

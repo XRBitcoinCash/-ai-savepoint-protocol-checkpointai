@@ -1,6 +1,30 @@
-# Public and Advanced Tokenization XLS lifecycle — 2026-10-12
+# NFT record publication and Tokenization XLS lifecycle — updated 2026-10-13
+## Current objective, authority and source — 2026-10-13
 
-## Current objective and authority
+The user resumed Advanced Tokenization browser/wallet testing, then requested a broadly useful NFT record publication page, expanded searchable use cases, a small XRBC burn as a spam deterrent, and traceable transaction references. Work was implemented on an isolated review branch. The user did not specify the burn amount or removal of the 2,500 XRBC holding gate. The candidate uses a clearly displayed provisional 1 XRBC burn per NFT mint/revision and retains that gate; review these economic defaults before deployment. No actual burn, mint, escrow, transfer or Batch request was created. No deployment of this candidate has been authorized/performed. A later Ultra analysis is still requested; no model-setting change or completed Ultra audit is claimed.
+
+Current frontend candidate: GitLab project 75781181, branch `feat/nft-record-publication-20261013`, commit `905e4469ece27ef4444195b505f6c41822b77e07`, Draft MR !97: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/97 . CI pipeline `2941085732` passed. Master remained `b09b9bb0cb70e66cccef756d630815bfc4e711e5` before branch publication. Scope is 15 files across both Tokenization pages, core/ledger/studio/style, new access/publication/catalog modules, authored catalog/generator, focused tests and `docs/nft-record-publication.md`.
+
+## Current behavior and evidence
+
+- Previous MR !96 was observed merged to master `b09b9bb0`; pipeline `2940203614`, deploy-pages job `17124086201` succeeded. That deployment predates this testing turn. Live browser loaded the 20261012 module versions.
+- Xaman SignIn visibly completed, the holding gate unlocked, and wallet details remained hidden pending deliberate reveal. Empty record build was rejected; fixed NFT default and explicit mutable opt-in were observed; Batch signing was disabled. No private wallet values, addresses or payload identifiers are published here.
+- A later direct observation reproduced relocking with “Access verification expired. Refresh Gate…” for the already-connected session. Source implemented unconditional two-minute relocking. New candidate coalesces/renews visible gate reads, backs off after unavailable evidence, preserves signing freshness and distinguishes unavailable verification from insufficient holdings. Routine studio-state changes preserve drafts/queues; signer changes invalidate dependent review.
+- 360 authored NFT record templates in 30 domains; Base64 packages JSON without eval, encryption or compression claims. Alias search, domain filter, pagination and custom types extend the catalog. Issued products remain separate references, not asserted XRPL issuances. Tests cover car title, prayer, software release, gold custody and other searches.
+- Explicit burn Payment returns exactly 1 XRBC to the exact issuer and binds the salted record commitment. Verification checks validated success, exact fields, returned hash and signer trustline reduction. NFT review rechecks burn/account/commitment, complete bounded prior-use history, selected sources and existing NFT preflight. Public memos link burn/source hashes; encrypted backup/private file handling remains local. The old wizard directs new publication through the shared workspace.
+- Burn and publication are separate approvals. A validated burn is irreversible if mint is canceled or fails; reuse the existing burn for the same unchanged record rather than automatically charging again. This is an application policy, not a protocol-enforced fee or one-time-use rule across clients. Prior-use checking is preflight, not compare-and-swap. Small cost does not guarantee prevention of spam, fraud or terrorism funding.
+- Source evidence requires validated successful transactions and involvement of the signer. Observed assets and touched AMM objects do not prove a named exchange, complete route or origins of specific fungible units. Records do not establish legal title, identity or external truth; NFT objects can be burned even though historical ledger transactions persist.
+- 37 focused local source/synthetic checks passed, including actual studio mounting/review sequencing and both pages’ settlement memo guards. Page IDs were unique and executable inline scripts parsed. CI runtime job `17129747913` passed runtime/gate/sidebar checks and all 401 unit tests, zero failures/skips, for the exact candidate. Repository job `17129747914` passed in advisory mode with validator exit 1 for other site findings; it is not strict site-wide clearance. Browser/mobile rendering, paid burn and mint settlement on the new candidate are unperformed.
+
+## Next unfinished action and stopping condition
+
+Review MR !97 and confirm the provisional 1 XRBC publication rate/retained holding gate. On explicit deployment authorization, recheck exact source/master heads and candidate CI, prepare the checkpoint before merge/deployment, and stop all tools immediately after successful deployment. New browser/mobile and user-reviewed wallet tests follow on a separate user-requested turn. Do not rerun unchanged completed checks merely after a model switch. Preserve ambiguous requests and existing burns; never create replacement financial requests automatically.
+
+Batch remains unsigned/export-only for 2–8 single-account actions. Actual atomic execution, multiple participant signing, fee/reserve preflight and exact validated inner settlement are separate unfinished implementation. Do not present this release as one-signature atomic burn-plus-mint.
+
+Earlier sections below are dated history and do not select the current action. Evidence: `XRBC-record-publication-local-2026-10-13`, `XRBC-record-publication-CI-2026-10-13`, `XRBC-tokenization-browser-access-2026-10-13`.
+
+## Earlier XLS objective and authority — 2026-10-12
 
 After the four-token escrow eligibility findings, the user selected the public Tokenization workspace and its Advanced continuation as the useful place to incorporate XLS changes. Build general asset/record workflows, consider the up-to-eight-transaction Batch capability, and preserve the shared evidence architecture. This supersedes the proposed JCS treasury escrow pilot as the current implementation task. The broader ecosystem roadmap remains history/future planning, not blanket implementation authorization.
 
@@ -46,7 +70,7 @@ This checkpoint is deliberately prepared **before** the authorized merge/deploym
 
 Evidence: `XRBC-tokenization-XLS-predeploy-local-2026-10-12`, `XRBC-tokenization-XLS-predeploy-CI-2026-10-12`. Preserve earlier draft records as dated history; they are superseded for candidate-source validation.
 
-## Next unfinished action and stopping condition
+## Earlier continuation — superseded by the 2026-10-13 section
 
 Finish the already-authorized merge/deployment of reviewed candidate !96, using exact-head checks and the successful candidate CI. Stop immediately on successful deployment. The next user-requested testing turn should first resolve the deployed build and inspect public/Advanced workspace behavior, then verify configured backend/Xaman support for a user-reviewed NFT update. Do not repeat completed checks without changed inputs or interpret passing CI as wallet settlement.
 
