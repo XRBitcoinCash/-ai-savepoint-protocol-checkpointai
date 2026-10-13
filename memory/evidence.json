@@ -501,6 +501,77 @@
         "Repository job 17134439661 is advisory, validator exit 1.",
         "New master security/Pages deployment and live wallet results remain pending."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T10:17:33.758Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-backup-feedback-deployed-2026-10-13",
+      "kind": "deployment",
+      "source_revision": "4c4664420694698035548b5ae132c09b527feda4",
+      "scope": "MR !99 merged; master pipeline 2941770459 and deploy-pages 17134729170 succeeded in prior authorized turn.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2941770459",
+      "limitations": [
+        "Not a wallet settlement test."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "failed",
+      "recorded_at": "2026-10-13T10:17:33.758Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-backup-restore-observation-2026-10-13",
+      "kind": "browser",
+      "source_revision": "4c4664420694698035548b5ae132c09b527feda4",
+      "scope": "Current studio loaded and preserved encrypted backup selected; restore returned the old generic decryption failure. User reported original password; actual cause unproven. Site restore button enabled; user reported Cloud Browser manual-control difficulty.",
+      "reference": "https://xrbitcoincash.com/asset-tokenization-auditor-advanced.html",
+      "limitations": [
+        "Secret values are redacted; do not infer length/equality or publish private record data.",
+        "No wallet request was created or settled."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T10:17:33.758Z",
+      "supersedes": [],
+      "command": "node --test tests/unit/tokenization-record-ui.test.mjs tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-batch-signing.test.mjs tests/unit/tokenization-publication.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "15473d8f6487ab973001accb8ad55175764cac360bbc31772aa234a8c57d95b4",
+      "environment_digest": "ae88db818ae9dc77cc7cca01968ef479aec9d40c08150e53912797e72bd56904",
+      "id": "XRBC-verified-backup-recovery-local-2026-10-13",
+      "kind": "synthetic",
+      "source_revision": "c74648823db169fa94d1f2c3bed511177417e060",
+      "scope": "69 focused checks passed across scoped runs, including actual studio eight-document export/restore-to-atomic-review, distinct backup failures, failed-export preservation, and confirmation/unknown-request behavior on both pages. All seven committed input hashes match local candidate.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/100",
+      "limitations": [
+        "Synthetic DOM and Node WebCrypto; no live candidate rendering or user wallet outcome.",
+        "Existing HTML whitespace and other advisory site findings were not changed."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-13T10:17:33.758Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-verified-backup-recovery-CI-2026-10-13",
+      "kind": "ci",
+      "source_revision": "c74648823db169fa94d1f2c3bed511177417e060",
+      "scope": "Candidate pipeline 2941928613 passed; runtime job 17135909166 passed 437 tests, zero failures/skips/cancellations.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17135909166",
+      "limitations": [
+        "Repository job 17135909167 succeeded in advisory mode, validator exit 1.",
+        "New master security/Pages deployment pending; no live wallet outcome."
+      ]
     }
   ]
 }

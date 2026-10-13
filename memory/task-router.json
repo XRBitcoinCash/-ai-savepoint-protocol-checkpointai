@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC atomic publication, backup validation and Tokenization XLS lifecycle",
+      "title": "XRBC verified backup recovery and atomic NFT publication",
       "match": [
         "ecosystem upgrade",
         "first XLS update",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "fix/tokenization-backup-password-feedback-20261013",
-        "head": "7c13fb5cb2c081916deba1f33471d555c53bf0ca",
-        "pipeline": "2941733194"
+        "branch": "fix/tokenization-backup-restore-20261013",
+        "head": "c74648823db169fa94d1f2c3bed511177417e060",
+        "pipeline": "2941928613"
       },
-      "status": "mr-99-backup-navigation-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge exact passing MR !99 and wait for master security/Pages deployment; stop all tools immediately on success. Next explicit browser turn: preserve/restore the encrypted test record, prepare fresh Batch terms, generate one guarded QR request and let the user sign; verify every inner result afterward."
+      "status": "mr-100-verified-backup-recovery-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge exact passing MR !100 and wait for master security/Pages deployment; stop all tools immediately on success. Next explicit testing turn: check pending state, restore preserved backup or build a clearly new unsubmitted technical test, use direct atomic review, generate one user-reviewed QR and verify all inner results after user signing. Backup restore is optional."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
