@@ -395,6 +395,42 @@
         "Generic initial previous-burn status is a copy follow-up; no payment exists.",
         "No private wallet details, record identifiers or payloads retained."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "26563d7d2966c7ec4c02a379f5b75de7ac78a87d",
+      "recorded_at": "2026-10-13T08:21:30.717Z",
+      "supersedes": [],
+      "id": "XRBC-atomic-batch-local-2026-10-13",
+      "kind": "synthetic",
+      "scope": "59 focused checks, inline/module parsing, unique markup IDs and whitespace. Atomic publication, exact budget/fee/sequence, encoder vectors, action readiness, aggregate MPT capacity, real adapter methods with mocked SDK, consent UI and complete inner/failure/pending receipts.",
+      "command": "node --test tests/unit/tokenization-batch-signing.test.mjs tests/unit/tokenization-publication.test.mjs tests/unit/tokenization-record-ui.test.mjs tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-catalog.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": "a55bfc0d17009ddf26fdbf1c3e09891de18a5c891b64929d5921481c7ccf1932",
+      "environment_digest": "33c8e192b339797848ce9c3e0f2be1b2af586e396908bdaced7178bcc0de721b",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/98",
+      "limitations": [
+        "Synthetic DOM and mocked signing/RPC are not browser rendering, wallet acceptance or settlement.",
+        "Standard simulate does not validate a complete Batch; participant coordination remains separate."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "26563d7d2966c7ec4c02a379f5b75de7ac78a87d",
+      "recorded_at": "2026-10-13T08:21:30.717Z",
+      "supersedes": [],
+      "id": "XRBC-atomic-batch-CI-2026-10-13",
+      "kind": "ci",
+      "scope": "Exact candidate MR pipeline 2941480410 passed. Runtime-contracts job 17132516180 passed 423 tests, zero failures/skips/cancellations.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17132516180",
+      "limitations": [
+        "Repository job 17132516181 is advisory, validator exit 1 for other site findings.",
+        "Master security and Pages deployment remain pending; no live wallet outcome."
+      ]
     }
   ]
 }
