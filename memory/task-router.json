@@ -280,12 +280,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "feat/nft-record-publication-20261013",
-        "head": "7afc7e562c1f5ef9e87715551a1b49e354faef44",
-        "pipeline": "2941186769"
+        "branch": "master",
+        "head": "3ad9e4f16326b0c873ffbfd77f6a318df4affdaa",
+        "pipeline": "2941198284"
       },
-      "status": "mr-97-microburn-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge the exact reviewed MR !97 head and wait for Pages deployment; stop all tools immediately after success. On the next explicit testing turn, resolve deployed identity and inspect browser/mobile before user-reviewed burn/NFT testing. Preserve original burns/unknown requests; Batch stays unsigned."
+      "status": "deployed-cloud-record-previewed-user-acknowledgments-pending",
+      "next_action": "Preserve the existing cloud draft. User saves encrypted backup and completes authority/public/burn acknowledgments; then run burn preflight/review and stop for wallet signature. No burn or NFT settlement yet; reuse receipts and preserve unknown requests. Batch remains unsigned."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

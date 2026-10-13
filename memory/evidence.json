@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "records": [
     {
       "id": "XRBC-tokenization-XLS-predeploy-local-2026-10-12",
@@ -357,6 +357,43 @@
       ],
       "supersedes": [
         "XRBC-record-publication-CI-2026-10-13"
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "3ad9e4f16326b0c873ffbfd77f6a318df4affdaa",
+      "recorded_at": "2026-10-13T07:23:19.422Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-microburn-deployment-2026-10-13",
+      "kind": "deployment",
+      "scope": "MR !97 merged source 7afc7e562c1f5ef9e87715551a1b49e354faef44 to master 3ad9e4f16326b0c873ffbfd77f6a318df4affdaa. Pages pipeline 2941198284, deploy-pages job 17130472443 and its four other jobs succeeded; reread on the first postdeployment authorized testing turn.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17130472443",
+      "limitations": [
+        "Historical deployment result; repository validation is advisory.",
+        "Deployment alone does not validate browser behavior or user-signed ledger settlement."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "source_revision": "3ad9e4f16326b0c873ffbfd77f6a318df4affdaa",
+      "recorded_at": "2026-10-13T07:23:19.422Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-microburn-browser-2026-10-13",
+      "kind": "browser",
+      "scope": "Cloud desktop: fractional burn policy/catalog visible; software-release alias search matched; gate recovered after one HTTP 502 via Refresh Gate without reload/draft loss. Record built and survived pause. Unsigned fixed NFTokenMint preview matched fingerprint, Flags 0, taxon 0, record memo only; no royalty. Backup controls opened for user.",
+      "reference": "https://xrbitcoincash.com/asset-tokenization-auditor-advanced.html",
+      "limitations": [
+        "Agent did not complete personal attestations. No new Xaman request, burn/NFT settlement, mobile render or Batch execution tested.",
+        "Generic initial previous-burn status is a copy follow-up; no payment exists.",
+        "No private wallet details, record identifiers or payloads retained."
       ]
     }
   ]
