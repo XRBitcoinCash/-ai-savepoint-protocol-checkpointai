@@ -1473,6 +1473,117 @@
         "Stop all tools immediately on successful requested deployment; reconcile only on a later explicit user request."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T10:48:31.289Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-staged-guidance-deployed-reconciled-2026-10-15",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "60fdd38c3796a30ba6d587003ecb1f48c3749b19",
+      "scope": "MR !110 merged and production pipeline 2950293159 succeeded in the preceding authorized turn, including all five required jobs and 610 runtime tests. Reconciles the preceding pre-MR !110 deployment checkpoint.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2950293159",
+      "limitations": [
+        "Production remains staged manual-file handoff UI; the new no-file coordinator is not deployed. Release evidence is not live two-wallet signing/settlement or wallet/indexer image rendering.",
+        "Repository validation retains existing advisory behavior, not strict sitewide clearance. Individual production job IDs were not supplied in this bounded reconciliation."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T10:48:31.289Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-coordinator-render-readiness-2026-10-15",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": null,
+      "scope": "Observed Render configuration identifies actual backend GitHub XRBitcoinCash/xrbitcoincash-source/main, last live bd225b2af35e55e3544fc2a46affce4a0cf72926. Credential names XAMAN_API_KEY/XAMAN_API_SECRET exist; values were not accessed/published. Free service has no configured coordinator database. No resources/configuration were created or changed.",
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-15.md",
+      "limitations": [
+        "Configuration observation is not backend source retrieval, credential usability or live endpoint/persistence verification.",
+        "No database URLs, credential values, service identifiers, private participant IDs or raw screenshots/logs are published. The review archive is not the configured backend source."
+      ]
+    },
+    {
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "recorded_at": "2026-10-15T10:48:31.289Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-coordinator-actual-backend-source-unavailable-2026-10-15",
+      "kind": "source",
+      "status": "failed",
+      "source_revision": "bd225b2af35e55e3544fc2a46affce4a0cf72926",
+      "scope": "GitHub connector retrieval of the actual Render-configured backend repository returned 404. Actual source remains unavailable; another repository archive/snapshot cannot be treated as this source or an integrated backend release.",
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-15.md",
+      "limitations": [
+        "404 does not prove the repository is deleted or identify the permission cause. No alternate unauthorized access or source replacement occurred.",
+        "Recover actual configured source/access before backend integration or dependent frontend deployment."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "e25efc771b0c068c8ce5a800ea316311053da2b4",
+      "recorded_at": "2026-10-15T10:54:33.927Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/111",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-no-file-coordinator-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "Draft MR !111 exact candidate passed 250/250 frontend Tokenization tests and 68/68 backend package tests, zero failures/skips. All 35 remote file hashes/sizes match tested inputs. Sender-account/NFT-only reservations prevent incoming recipients displacing their sender work. VM cross-realm prototype issue fixed by explicit JSON marshaling while retaining strict canonical validation. Core/Batch/publication/ledger/handoff core/ordinary studio hashes remain unchanged.",
+      "limitations": [
+        "Source-set SHA-256 b567d3c6616a15b7c956ce9e972b28f7ad0e223335dc99d22ec14db71973dbe9 identifies the 35 checked files only; complete reusable input/environment fingerprints are not claimed.",
+        "Backend driver/provider fixtures are synthetic. Actual configured-source integration, TLS PostgreSQL restart/concurrency/migration and live OAuth/provider behavior remain untested.",
+        "Draft package is not deployed and must not merge before source/database/auth readiness. No new wallet request/signature/financial transaction or indexer result is established."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "e25efc771b0c068c8ce5a800ea316311053da2b4",
+      "recorded_at": "2026-10-15T10:54:33.927Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/111",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-no-file-coordinator-source-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Frontend client/transport/UI replace invitation/approval files with explicit recipient QR then verified recipient approval and final sender Xaman review. No automatic push from address, second receiver browser or automatic final request/signature. Client uses fixed backend origin/auth header/no redirects; backend package implements pinned RS256 OAuth checks, bounded routes, PostgreSQL CAS and exact stored provider IDs. Status GETs cannot create requests; sender/NFT guards preserve uncertain recovery.",
+      "limitations": [
+        "Review package under GitLab src/backend/handoff-coordinator is not Render actual GitHub source. Missing database/app-audience/source access block integration/deployment.",
+        "No private wallets, signed blobs, payloads, credential values, database URLs or raw logs are included. Existing financial/receipt verification and generic artwork remain separate.",
+        "Source/synthetic checks cannot establish configured backend operation, live wallet acceptance or successful two-wallet settlement."
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-no-file-coordinator-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "e25efc771b0c068c8ce5a800ea316311053da2b4",
+      "recorded_at": "2026-10-15T10:55:24.178Z",
+      "scope": "Draft MR !111 pipeline 2950493054 succeeded at exact e25efc771b0c068c8ce5a800ea316311053da2b4. Runtime job 17198495945 passed 614/614 frontend and 68/68 backend tests, zero failures/skips, plus 11-critical-page runtime verification. Repository job 17198495946 succeeded in existing advisory mode. All 35 remote file SHA-256 hashes/sizes match tested inputs.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2950493054",
+      "limitations": [
+        "Only two MR jobs ran; no SAST, secret-detection or deployment job. Underlying repository validator exit 1 is existing advisory behavior, not strict sitewide clearance.",
+        "Package/fixture CI does not establish actual Render source integration, configured OAuth/provider behavior, real PostgreSQL restart/concurrency/migration, two-wallet signing/settlement or wallet/indexer display.",
+        "Keep Draft MR !111 unmerged/undeployed: actual GitHub backend source unavailable, no coordinator database configured, and app/audience plus real integration remain unverified. No resources or financial requests were created."
+      ],
+      "supersedes": []
     }
   ]
 }
