@@ -1213,6 +1213,81 @@
         "Merge and master security/Pages deployment remain pending; no live approval, signature, transaction or image-indexer result is asserted.",
         "Stop all tools immediately on requested deployment success; resume only on a new explicit user request."
       ]
+    },
+    {
+      "id": "XRBC-record-handoff-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "cdf94d2cc5230af48293476a6636b4fa26078bba",
+      "recorded_at": "2026-10-15T08:15:20.048Z",
+      "scope": "MR !107 merged and production pipeline 2949828769 succeeded in the preceding authorized turn. Jobs: runtime 17193505575 (586 tests), repository validation 17193505576, Semgrep 17193505577, secret detection 17193505578 and deploy-pages 17193505579. Reconciles the f4d29ea predeployment checkpoint.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949828769",
+      "limitations": [
+        "Release evidence reported in the preceding completed turn, not a post-deployment browser check, live two-wallet handoff or wallet/indexer image observation.",
+        "Existing advisory repository validation is not strict sitewide clearance. New UI/colors/card and connected-wallet NFT-selection followup is distinct work; its candidate/test/CI result is not yet recorded."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T08:21:43.001Z",
+      "command": "node --test tests/unit/tokenization-*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "source_revision": "7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/108",
+      "supersedes": [],
+      "id": "XRBC-tokenization-colors-wallet-NFT-selection-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "MR !108 exact candidate passed 231/231 Tokenization tests, zero failures/skips: nine new tests (six UI, three transport) plus expanded existing readiness assertions. Three modified JS modules parse. All 12 modified files match tested SHA-256 hashes and sizes. Bounded NFT inventory, current identity/readiness, explicit selection autofill, backoff/cache and pending guards are covered.",
+      "limitations": [
+        "File-set manifest SHA-256 d932b2c6f982a9075f20f99f99aaf13044411d6d2c98b08ec4b71001fbaa498e is source identity only, not complete test-input/environment fingerprints.",
+        "Source/synthetic checks do not establish browser layout, configured Xaman reads/signing, live two-wallet settlement or wallet/indexer image display. No live financial request or signature was created.",
+        "Source/synthetic checks and passing candidate CI do not establish deployment. Signing/economic/core/schema/vendor/artwork changes are outside this followup."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T08:21:43.001Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "source_revision": "7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/108",
+      "supersedes": [],
+      "id": "XRBC-tokenization-colors-card-wallet-NFT-source-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Ordinary studio markup/color CSS shows its existing generic evidence card from initial display; root visually inspected that PNG as distinct from the unchanged handoff card. Operational studio source is exactly unchanged outside host.innerHTML template. Connected-wallet chooser uses current identity/gate, 10-minute per-wallet cache, 60-second failed-read backoff without timer, max two pages of 400 NFTs, explicit selection and ID/fingerprint/issuer autofill.",
+      "limitations": [
+        "Artifact visual inspection is not a rendered browser/wallet/indexer observation. No new artwork, metadata resource/schema, private document/remote metadata fetch or implicit selection is added.",
+        "Basic HTML is studio cache versions only; Advanced bridge/CSP/cache changes preserve existing signing economics. Cached inventory is read-only convenience and never fresh signing/ownership authority.",
+        "Restore/pending locks apply to role/edit/perform actions; uncertain requests retain their exact recovery lock."
+      ]
+    },
+    {
+      "id": "XRBC-tokenization-colors-wallet-NFT-selection-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879",
+      "recorded_at": "2026-10-15T08:22:27.409Z",
+      "scope": "MR !108 pipeline 2949900704 succeeded at exact candidate 7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879. Runtime job 17194021632 passed 595/595 tests, zero failures/skips. Repository job 17194021633 succeeded in existing advisory mode. All 12 modified candidate files matched tested local SHA-256 hashes and byte sizes.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949900704",
+      "limitations": [
+        "Repository validator underlying exit 1 is existing advisory behavior, not strict sitewide clearance.",
+        "Merge and required master security/Pages deployment remain pending. No live browser wallet inventory observation, two-wallet signing/settlement or Xaman/Bithomp image display is established.",
+        "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user request."
+      ],
+      "supersedes": []
     }
   ]
 }

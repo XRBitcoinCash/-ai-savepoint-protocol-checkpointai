@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC ordinary Tokenization receipt recovery",
+      "title": "XRBC ordinary Tokenization colors and evidence card",
       "match": [
         "NFT evidence card",
         "TxnSignature",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "44fbecf8a7b13f05c937432854c33114e7bb42fd",
-        "pipeline": "2949574930"
+        "branch": "codex/tokenization-colors-wallet-records-20261015",
+        "head": "7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879",
+        "pipeline": "2949900704"
       },
-      "status": "mr-106-deployed-original-Batch-settled-UI-recovery-unobserved",
-      "next_action": "Only on an explicit ordinary-recovery continuation: back up the record before one reload and Check Request Status for the already-settled original Batch. No duplicate burn/mint or automatic QR replacement. The distinct new P2P Record Handoff uses route xrbc_record_handoff."
+      "status": "mr-108-colors-card-wallet-NFT-selection-231-local-595-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish checkpoint, merge only passing MR !108 exact candidate 7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879, then wait for required master security/Pages deployment. Stop all tools immediately on success. No automatic request/signature or repeat settled publication. Browser rendering, first live two-wallet handoff and wallet/indexer image display remain untested; resume only on a new explicit request."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
@@ -340,7 +340,7 @@
       "next_action": "Use portable working memory 6.1 with the current user task; validate and publish only requested memory changes, then await the next request."
     },
     "xrbc_record_handoff": {
-      "title": "XRBC Advanced P2P Record Handoff workspace",
+      "title": "XRBC Advanced P2P wallet NFT selection and handoff",
       "match": [
         "P2P Record Handoff",
         "record handoff",
@@ -358,12 +358,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/tokenization-peer-record-handoff-20261015",
-        "head": "0b40486a5f21ee8a0bf67bb940bc0c173d0da7be",
-        "pipeline": "2949805737"
+        "branch": "codex/tokenization-colors-wallet-records-20261015",
+        "head": "7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879",
+        "pipeline": "2949900704"
       },
-      "status": "mr-107-handoff-222-local-586-CI-passed-deployment-authorized-pending",
-      "next_action": "Merge only passing MR !107 exact SHA 0b40486a5f21ee8a0bf67bb940bc0c173d0da7be and wait for required master security/Pages deployment; stop all tools immediately on success. Browser rendering, first two-wallet handoff and wallet/indexer artwork remain untested. Resume live testing only on a new explicit request with user-reviewed terms/signatures; no automatic request or stale approval reuse."
+      "status": "mr-108-colors-card-wallet-NFT-selection-231-local-595-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish checkpoint, merge only passing MR !108 exact candidate 7b193aa18239d61b0a5d09a0ec9ccdd7b7acc879, then wait for required master security/Pages deployment. Stop all tools immediately on success. No automatic request/signature or repeat settled publication. Browser rendering, first live two-wallet handoff and wallet/indexer image display remain untested; resume only on a new explicit request."
     }
   }
 }
