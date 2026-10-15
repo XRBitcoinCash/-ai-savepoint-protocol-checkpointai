@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "records": [
     {
       "id": "XRBC-tokenization-XLS-predeploy-local-2026-10-12",
@@ -572,6 +572,95 @@
         "Repository job 17135909167 succeeded in advisory mode, validator exit 1.",
         "New master security/Pages deployment pending; no live wallet outcome."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T00:59:44.588Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-verified-backup-recovery-deployed-reconciled-2026-10-15",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "835d609caf60538ed08d1211bd3a681355f560f1",
+      "scope": "MR !100 merged and master pipeline 2941950957 observed successful in the preceding authorized turn. Reconciles only the old brief deployment-pending state; recorded October 15 without inventing an earlier observation timestamp.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2941950957",
+      "limitations": [
+        "Existing deployment observation, not a new deployment operation or live wallet/ledger settlement test."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T00:59:44.588Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-simulation-signature-user-screenshot-2026-10-15",
+      "kind": "browser",
+      "status": "failed",
+      "source_revision": "835d609caf60538ed08d1211bd3a681355f560f1",
+      "scope": "User-supplied local Edge screenshots show the prepared two-action atomic review failing Create Xaman Request with Unexpected TxnSignature outside the reviewed transaction; the page explicitly says no Xaman request was created.",
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Screenshot observation, not direct access to local browser state, console or network. Attachments are transient; no private screenshots or financial identifiers are published.",
+        "Separate cloud Chromium OAuth ERR_BLOCKED_BY_CLIENT remains unresolved. User reports local Edge sign-in succeeded; records/sessions remain independent."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T00:59:44.588Z",
+      "supersedes": [],
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-simulation-empty-signature-source-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "scope": "Official XRPLF Simulate.cpp source confirms unsigned simulation autofills TxnSignature as empty string. Reviewed exact candidate changes normalize only that response field in ledger and publication preflight; nonempty/malformed signatures and Signers remain rejected.",
+      "reference": "https://github.com/XRPLF/rippled/blob/develop/src/xrpld/rpc/handlers/Simulate.cpp",
+      "limitations": [
+        "Upstream develop URL is mutable; exact upstream revision was not recorded. This is a bounded source observation, not a live RPC or wallet acceptance test.",
+        "Strict outbound unsigned transaction and validated receipt checks remain independent."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T00:59:44.588Z",
+      "supersedes": [],
+      "command": "node --test tests/unit/tokenization-batch-signing.test.mjs tests/unit/tokenization-publication.test.mjs tests/unit/tokenization-studio.test.mjs tests/unit/tokenization-xls-lifecycle.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "id": "XRBC-simulation-signature-repair-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "a6798230706dca6a1718b47e75c5750720e3fbdf",
+      "scope": "61 focused checks passed after exact red reproduction, including both actual page adapters reaching mock Xaman transport after full component preflight with response-added empty signatures. Negative cases cover nonempty/malformed signatures, Signers, altered terms and fees. Both changed modules and seven inline page scripts parse; five committed hashes match checked inputs.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/101",
+      "limitations": [
+        "Node v24.19.0 and dependency-free synthetic fixtures with the self-hosted codec; complete reusable input/environment fingerprints are not claimed.",
+        "No live Xaman request, wallet signature or validated Batch settlement occurred. Required master security/Pages deployment remains a release gate."
+      ]
+    },
+    {
+      "id": "XRBC-simulation-signature-repair-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "a6798230706dca6a1718b47e75c5750720e3fbdf",
+      "recorded_at": "2026-10-15T01:00:12.277Z",
+      "scope": "MR !101 pipeline 2948911920 succeeded at the exact candidate. Runtime job 17187362970 passed 440 tests with zero failures/skips/cancellations. Repository job 17187362971 succeeded in advisory mode.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2948911920",
+      "limitations": [
+        "Repository validator exit 1 records 24 existing metadata/missing-reference findings. This is not strict whole-site clearance.",
+        "Master security/Pages deployment remains pending. No live Xaman request or validated wallet settlement is established."
+      ],
+      "supersedes": []
     }
   ]
 }

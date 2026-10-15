@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -242,16 +242,16 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC verified backup recovery and atomic NFT publication",
+      "title": "XRBC atomic publication simulation signature repair",
       "match": [
         "ecosystem upgrade",
-        "first XLS update",
+        "TxnSignature",
         "token escrow",
         "XLS-85",
         "atomic publication",
         "TokenEscrow",
         "MPT",
-        "XLS-30",
+        "Create Xaman Request",
         "dynamic NFT",
         "mutable NFT",
         "credentials",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "fix/tokenization-backup-restore-20261013",
-        "head": "c74648823db169fa94d1f2c3bed511177417e060",
-        "pipeline": "2941928613"
+        "branch": "fix/tokenization-simulate-signature-20261015",
+        "head": "a6798230706dca6a1718b47e75c5750720e3fbdf",
+        "pipeline": "2948911920"
       },
-      "status": "mr-100-verified-backup-recovery-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge exact passing MR !100 and wait for master security/Pages deployment; stop all tools immediately on success. Next explicit testing turn: check pending state, restore preserved backup or build a clearly new unsubmitted technical test, use direct atomic review, generate one user-reviewed QR and verify all inner results after user signing. Backup restore is optional."
+      "status": "mr-101-simulation-signature-repair-ci-passed-deployment-pending",
+      "next_action": "Merge exact passing MR !101 and wait for required master security/Pages deployment; stop all tools immediately on success. Next explicit testing turn: preserve pending state, cancel stale review only when no request exists, export verified encrypted backup before refresh to keep the record, reload/restore with user password and prepare fresh terms; user acknowledges and creates once. No automatic replacement or financial retest to recover history."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
