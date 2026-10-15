@@ -957,6 +957,79 @@
         "Stop all tools immediately when requested deployment succeeds; reconcile only on a later explicit user continuation."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-single-SDK-session-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "bb26cfc0e4538dc85efa6371e71df5247836ef57",
+      "recorded_at": "2026-10-15T05:32:15.135Z",
+      "scope": "MR !104 merged; master pipeline 2949295231 succeeded in the preceding authorized deployment turn. Jobs runtime 17189762538, repository validation 17189762539, Semgrep 17189762540, secret detection 17189762541 and deploy-pages 17189762542 all succeeded. Reconciles the previous pending checkpoint without inventing a prior observation timestamp.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949295231",
+      "limitations": [
+        "Deployment observation only; no live wallet verification, Xaman request acceptance or validated Batch settlement is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T05:38:24.709Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-evidence-card-AI-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "cc01a23e350cc26fa469c109e50bf8e23bc2c872",
+      "scope": "120 scoped checks passed across runs: 116 related checks plus four unchanged catalog tests, including ten new display/AI regressions. An initial local harness failure came from a missing unchanged catalog dependency, resolved by fetching its production-pinned module; no app fix was made for it. Four changed modules and seven inline scripts parse. All seventeen committed hashes match tested inputs; independent bounded review found no blocker.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/105",
+      "limitations": [
+        "Complete reusable input/environment fingerprints and combined test command are not recorded. Check count is across scoped runs, not one execution.",
+        "Source/synthetic tests do not establish live browser/dialog/camera, wallet image rendering, Xaman request acceptance or validated settlement. Master security/Pages deployment remains a separate gate.",
+        "Schema VERSION and signing/economic invariants are unchanged; preserve original encrypted backups."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T05:38:24.709Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-generic-evidence-card-artwork-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "cc01a23e350cc26fa469c109e50bf8e23bc2c872",
+      "scope": "Generic shared public evidence-card PNG viewed locally at full size and a 256-pixel thumbnail. Image is 1024 square, 210995 bytes, SHA-256 89c686bb4a6a7a2a0d8543b4e6fc88f311bab8c324e53bc2aac350b811e34b3d. Static JSON/SVG/PNG and rendering script accompany full-fingerprint metadata URI and RECORD_SHA256 linkage; no per-record/private metadata upload is added.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/105",
+      "limitations": [
+        "Local artwork/source review only, not public deployment, wallet artwork rendering/cache behavior or a copyright/ownership/backing guarantee.",
+        "The image hash identifies one asset, not a complete reusable test-input or environment digest."
+      ]
+    },
+    {
+      "id": "XRBC-tokenization-evidence-card-AI-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "cc01a23e350cc26fa469c109e50bf8e23bc2c872",
+      "recorded_at": "2026-10-15T05:38:54.378Z",
+      "scope": "MR !105 pipeline 2949436869 succeeded at exact candidate cc01a23e350cc26fa469c109e50bf8e23bc2c872. Runtime job 17190710344 trace confirms 484 tests passed with zero failures/skips/cancellations. Repository job 17190710345 succeeded in existing advisory mode. All seventeen committed input hashes match tested local files.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949436869",
+      "limitations": [
+        "Repository validator exit 1 records existing findings; passing CI is not strict whole-site clearance.",
+        "Merge and master security/Pages deployment remain pending. No live UI/dialog, wallet artwork, Xaman request or validated ledger result is established.",
+        "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user continuation."
+      ],
+      "supersedes": []
     }
   ]
 }

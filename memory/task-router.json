@@ -242,9 +242,9 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC Tokenization SDK lifecycle and strict signing identity",
+      "title": "XRBC shared NFT evidence card and guided AI assistance",
       "match": [
-        "ecosystem upgrade",
+        "NFT evidence card",
         "TxnSignature",
         "token escrow",
         "same Xaman account",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "fix/tokenization-wallet-session-20261015",
-        "head": "e10d793a86e94baf5772fc01aa406fdf1d43d12f",
-        "pipeline": "2949291229"
+        "branch": "feat/tokenization-evidence-card-ai-helper-20261015",
+        "head": "cc01a23e350cc26fa469c109e50bf8e23bc2c872",
+        "pipeline": "2949436869"
       },
-      "status": "mr-104-sdk-lifecycle-repair-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge only passing MR !104 exact SHA e10d793a86e94baf5772fc01aa406fdf1d43d12f and wait for required master security/Pages deployment; stop all tools immediately on success. Keep strict current SDK identity and pending guards. No cached identity fallback, new live wallet/proxy test or post-deploy check without explicit continuation."
+      "status": "mr-105-evidence-card-ai-helper-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge only passing MR !105 exact SHA cc01a23e350cc26fa469c109e50bf8e23bc2c872 and wait for required master security/Pages deployment; stop all tools immediately on success. Preserve full-fingerprint allowlisted/legacy URI links, local privacy, strict SDK identity and pending guards. No live signing or post-deploy check without explicit continuation."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
