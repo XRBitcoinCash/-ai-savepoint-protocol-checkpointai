@@ -1381,6 +1381,98 @@
         "Stop all tools immediately on successful requested deployment; reconcile only on a later explicit user request."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "8e6dff0a677fce20d5ac0930ce530300d0f90115",
+      "recorded_at": "2026-10-15T09:52:45.477Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-simple-specialist-files-deployed-reconciled-2026-10-15",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "MR !109 merged and production pipeline 2950160941 succeeded in the preceding authorized turn. Jobs: runtime 17196001361 (606 tests), repository validation 17196001362, Semgrep 17196001363, secret detection 17196001364 and deploy-pages 17196001365. Reconciles checkpoint ce63ab409fd4c45565c6f30a82bb14ac92f54cc4 deployment-pending claim.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2950160941",
+      "limitations": [
+        "Release evidence is not first two-wallet signing/settlement or wallet/indexer image rendering. New screenshot observation is recorded separately.",
+        "Repository validation remains existing advisory behavior, not strict sitewide clearance. Current staged sender/receiver guidance is distinct UI work in progress."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "8e6dff0a677fce20d5ac0930ce530300d0f90115",
+      "recorded_at": "2026-10-15T09:52:45.477Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-prepared-sender-awaiting-approval-UI-2026-10-15",
+      "kind": "browser",
+      "status": "passed",
+      "scope": "User-supplied screenshot shows a prepared sender invitation, checked attestations, no receiver approval file and disabled final submission. Recipient approval is an expected security dependency; unclear progression motivates prominent invitation exchange and staged final-review controls.",
+      "reference": "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
+      "limitations": [
+        "Observed UI state is not proof of new signing, submission or settlement, nor an established signing-function failure. First live two-wallet handoff remains untested.",
+        "No private addresses, identifiers, files, raw screenshot/content or signed blobs are published. The receiver approval is the workspace export after receiver review/Xaman approval, not a document the sender invents."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "c76390a92fc1c2d1816815bb44f7d1064ce01ac7",
+      "recorded_at": "2026-10-15T09:57:59.083Z",
+      "command": "node --test tests/unit/tokenization-*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/110",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-staged-sender-receiver-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "MR !110 exact candidate passed 246/246 Tokenization tests, zero failures/skips; 33 UI tests include four new stage checks. Source syntax and CSS parse pass; independent focused staged-control review found no blockers. All five modified candidate hashes/sizes match tested local readback. Simple stages final sender controls until exact verified approval while retaining retirement warning, plain terms, pending/terminal controls.",
+      "limitations": [
+        "Source-set digest 6346e5c3a1771b7f009acc7e585b7382ba324d02729aad66eba319ea3417828b identifies file set only, not complete reusable input/environment fingerprints.",
+        "No rendered browser, new configured-wallet approval, first live two-wallet handoff/settlement or wallet/indexer image result is established. No new financial request/signature was created.",
+        "Source/synthetic and passing candidate CI do not establish deployment. Ordinary code/core/transport/crypto/economics/artwork/schema remain unchanged; Advanced inline code is unchanged and HTML changes cache refs only."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "c76390a92fc1c2d1816815bb44f7d1064ce01ac7",
+      "recorded_at": "2026-10-15T09:57:59.083Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/110",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-staged-sender-receiver-source-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Prominent Save invitation and receiver-file instructions explain manual exchange. Receiver must use Check request status after Xaman signing before Save approval. Simple hides final sender attestations/sign controls until exact verified approval, keeps complete plain terms/original-NFT retirement warning visible, collapses optional resume recovery, and preserves pending Check/Cancel plus terminal receipts. Mode changes do not mutate state.",
+      "limitations": [
+        "Guidance/file exchange does not deliver automatically and introduces no relay/backend, payload creation, signature, changed validator or economic policy.",
+        "Source/synthetic checks are not rendered mobile/desktop observations or actual configured wallet/indexer acceptance. No private addresses/files/screenshots/raw contents are in public memory."
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-staged-sender-receiver-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "c76390a92fc1c2d1816815bb44f7d1064ce01ac7",
+      "recorded_at": "2026-10-15T09:58:20.406Z",
+      "scope": "MR !110 pipeline 2950283620 succeeded at exact candidate c76390a92fc1c2d1816815bb44f7d1064ce01ac7. Runtime job 17196943516 passed 610/610 tests, zero failures/skips. Repository job 17196943517 succeeded in existing advisory mode. All five modified candidate hashes and sizes match tested local readback.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2950283620",
+      "limitations": [
+        "Underlying repository validator exit 1 is existing advisory behavior, not strict sitewide clearance.",
+        "Merge and required master security/Pages deployment remain pending. No new rendered browser/file exchange, configured wallet signing, live two-wallet settlement or Xaman/Bithomp image result is established.",
+        "Stop all tools immediately on successful requested deployment; reconcile only on a later explicit user request."
+      ],
+      "supersedes": []
     }
   ]
 }

@@ -284,11 +284,11 @@
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
         "branch": "master",
-        "head": "a7a3681e901fefbce8e1253cc8d9a937db801188",
-        "pipeline": "2949915442"
+        "head": "8e6dff0a677fce20d5ac0930ce530300d0f90115",
+        "pipeline": "2950160941"
       },
       "status": "mr-108-colors-card-deployed-original-Batch-settled-UI-recovery-unobserved",
-      "next_action": "Ordinary color/card work is deployed. Active new Simple/Specialist local-file P2P work uses xrbc_record_handoff. Only on explicit ordinary recovery, back up before reload and Check Request Status for the existing settled original request; no duplicate burn/mint or automatic replacement."
+      "next_action": "Ordinary color/card work is deployed; MR !109 handoff UI release preserved ordinary logic. Active staged sender/receiver guidance uses xrbc_record_handoff. Only explicit ordinary recovery may back up/reload/check the existing settled request; no duplicate burn/mint or automatic replacement."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
@@ -364,12 +364,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/tokenization-simple-handoff-files-20261015",
-        "head": "76beadd5c7353a564ad039120eaed5eb416bc94e",
-        "pipeline": "2950151498"
+        "branch": "codex/tokenization-handoff-next-step-20261015",
+        "head": "c76390a92fc1c2d1816815bb44f7d1064ce01ac7",
+        "pipeline": "2950283620"
       },
-      "status": "mr-109-simple-specialist-files-242-local-606-CI-passed-deployment-authorized-pending",
-      "next_action": "Publish checkpoint, merge only passing MR !109 exact candidate 76beadd5c7353a564ad039120eaed5eb416bc94e, then wait for required master security/Pages deployment. Stop all tools immediately on success. No relay, implicit payload/signature or repeat financial transaction. First live two-wallet settlement and wallet/indexer display remain untested; resume only on new explicit request."
+      "status": "mr-110-staged-guidance-246-local-610-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish checkpoint, merge only passing MR !110 exact candidate c76390a92fc1c2d1816815bb44f7d1064ce01ac7, then wait for required master security/Pages deployment. Stop all tools immediately on success. Preserve verified receiver-approval dependency, visible retirement/plain terms and pending/terminal controls; no automatic delivery/payload/signature. First live handoff/indexer display remain untested; resume only on new explicit request."
     }
   }
 }
