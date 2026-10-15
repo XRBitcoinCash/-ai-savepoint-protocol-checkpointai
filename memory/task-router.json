@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC atomic publication simulation signature repair",
+      "title": "XRBC guided Tokenization workspace draft",
       "match": [
         "ecosystem upgrade",
         "TxnSignature",
@@ -256,11 +256,11 @@
         "mutable NFT",
         "credentials",
         "permissioned domains",
-        "XLS-81",
-        "XLS-56",
+        "AI questionnaire",
+        "guided workspace",
         "BatchV1_1",
         "all-or-nothing",
-        "Advanced Tokenization XLS",
+        "Advanced Tokenization",
         "tokenization lifecycle",
         "Batch signing",
         "linked NFT revision",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "fix/tokenization-simulate-signature-20261015",
-        "head": "a6798230706dca6a1718b47e75c5750720e3fbdf",
-        "pipeline": "2948911920"
+        "branch": "draft/tokenization-guided-workspace-20261015",
+        "head": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
+        "pipeline": "2948992693"
       },
-      "status": "mr-101-simulation-signature-repair-ci-passed-deployment-pending",
-      "next_action": "Merge exact passing MR !101 and wait for required master security/Pages deployment; stop all tools immediately on success. Next explicit testing turn: preserve pending state, cancel stale review only when no request exists, export verified encrypted backup before refresh to keep the record, reload/restore with user password and prepare fresh terms; user acknowledges and creates once. No automatic replacement or financial retest to recover history."
+      "status": "draft-mr-102-ci-passed-do-not-merge-or-deploy",
+      "next_action": "Keep exact Draft MR !102 unmerged and undeployed. On the next explicit continuation, review desktop/mobile visuals of the draft; source/synthetic and CI checks already passed. Await a new explicit instruction before merging/deploying or live wallet testing. Preserve record evidence, personal acknowledgments and pending-request safeguards."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

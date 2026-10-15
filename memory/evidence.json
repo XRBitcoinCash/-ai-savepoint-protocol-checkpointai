@@ -661,6 +661,102 @@
         "Master security/Pages deployment remains pending. No live Xaman request or validated wallet settlement is established."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-simulation-signature-repair-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "45a80a00b6386e817f87a840cd0038cc2f106c32",
+      "recorded_at": "2026-10-15T01:36:07.489Z",
+      "scope": "MR !101 merged and master pipeline 2948917927 passed all jobs including deploy-pages 17187403834 in the preceding authorized turn. Reconciles the earlier deployment-pending checkpoint without inventing a prior observation timestamp.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2948917927",
+      "limitations": [
+        "Deployment observation only; no user-signed wallet acceptance or validated Batch settlement is established.",
+        "The new guided-workspace task is draft only and has no merge/deployment authorization."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-guided-workspace-local-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "a630ea9250e2d6b426d246a2eea5d9db123336a1",
+      "recorded_at": "2026-10-15T01:38:56.834Z",
+      "scope": "93 focused local checks passed for the draft guided workspace, strict preview importer, local file helpers and relevant existing record/studio/signing boundaries. Four-step navigation preserves record hash, missing acknowledgments receive focus and restore returns to Step 1. No remote AI/upload calls are added.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/102",
+      "limitations": [
+        "Node v24.19.0; complete reusable input/environment fingerprints and exact combined test command not yet recorded.",
+        "Synthetic fixtures/source inspection do not establish visual browser/device, live camera/file, Xaman or wallet acceptance. Candidate CI and final committed input readback were pending at preparation.",
+        "User hold: draft only, no merge or deployment until a later explicit instruction."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T01:41:41.984Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-guided-workspace-initial-CI-2026-10-15",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "a630ea9250e2d6b426d246a2eea5d9db123336a1",
+      "scope": "Initial MR !102 pipeline 2948987028 succeeded, runtime 17187846727 and advisory repository job 17187846728. All twelve initial committed input hashes matched local checked files.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2948987028",
+      "limitations": [
+        "Historical candidate evidence; final two-file advanced-description helper/test extension requires its own CI.",
+        "Draft only; no merge/deployment, visual browser/device or wallet acceptance is established."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T01:41:41.984Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [
+        "XRBC-guided-workspace-local-2026-10-15"
+      ],
+      "id": "XRBC-guided-workspace-final-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
+      "scope": "Final 94 focused checks passed. All twelve committed input hashes match checked local files, including final advanced-description allowlist/test follow-up readback at the new head. Source checks establish four unique stages, acknowledgments in Step 3, receipt in Step 4 and specialist workflow outside hidden stages. Seven inline page scripts parse; affected modules parse or execute in unit tests.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/102",
+      "limitations": [
+        "Node v24.19.0; complete reusable input/environment fingerprints are not claimed.",
+        "No visual desktop/mobile, live camera/file, Xaman or wallet acceptance is established. Final candidate CI is recorded separately.",
+        "User hold: Draft MR !102 remains unmerged and undeployed."
+      ]
+    },
+    {
+      "id": "XRBC-guided-workspace-final-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
+      "recorded_at": "2026-10-15T01:42:06.515Z",
+      "scope": "Final Draft MR !102 pipeline 2948992693 succeeded at the exact candidate. Runtime job 17187880398 logs show 462 tests, all passed with zero failures/skips/cancellations. Repository job 17187880399 succeeded in advisory mode. Production master remains the observed MR !101 release.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2948992693",
+      "limitations": [
+        "Repository validator exit 1 is advisory, not strict whole-site clearance.",
+        "User hold remains: no merge or deployment. Visual desktop/mobile review and live camera/wallet behavior remain unverified."
+      ],
+      "supersedes": [
+        "XRBC-guided-workspace-initial-CI-2026-10-15"
+      ]
     }
   ]
 }
