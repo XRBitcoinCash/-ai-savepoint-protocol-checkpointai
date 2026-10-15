@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC guided Tokenization workspace release",
+      "title": "XRBC Tokenization QR preflight and RPC recovery",
       "match": [
         "ecosystem upgrade",
         "TxnSignature",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "draft/tokenization-guided-workspace-20261015",
-        "head": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
-        "pipeline": "2948992693"
+        "branch": "fix/tokenization-preflight-recovery-20261015",
+        "head": "d29d48390f184cfbaed4e64f86339e2d79597117",
+        "pipeline": "2949231694"
       },
-      "status": "mr-102-exact-tested-candidate-deployment-authorized-pending",
-      "next_action": "Merge only MR !102 exact passing SHA 4ffddfcec6c0ea5e03be03942b0bf52c011aec4b and wait for required master security/Pages deployment; stop all tools immediately on success. User Deploy instruction supersedes the prior draft hold for this candidate only. No post-deploy visual/camera/wallet check until a new explicit continuation; preserve records/backups and pending requests."
+      "status": "mr-103-preflight-recovery-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge only passing MR !103 exact SHA d29d48390f184cfbaed4e64f86339e2d79597117 and wait for required master security/Pages deployment; stop all tools immediately on success. Keep response normalization scoped, read-only gateway retries bounded and pending guards intact. No Xaman retry/write or post-deploy test without a new explicit continuation."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

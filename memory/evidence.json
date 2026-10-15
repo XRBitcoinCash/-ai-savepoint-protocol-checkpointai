@@ -776,6 +776,98 @@
         "Stop all tools immediately when requested deployment succeeds; reconcile only on a later explicit user continuation."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-guided-workspace-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "1e76fae31c6fad2ca56100bec703a5401a01ca71",
+      "recorded_at": "2026-10-15T03:52:59.138Z",
+      "scope": "MR !102 merged; master pipeline 2949002747 and deploy-pages 17187950122 succeeded in the preceding authorized turn. Reconciles the earlier deployment-pending checkpoint without inventing its prior observation timestamp.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949002747",
+      "limitations": [
+        "Deployment observation only; no visual/mobile/camera, Xaman or validated wallet/Batch acceptance is established."
+      ],
+      "supersedes": [
+        "XRBC-guided-workspace-deployment-authorized-pending-2026-10-15"
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T03:54:55.796Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-user-HTTP502-observation-2026-10-15",
+      "kind": "browser",
+      "status": "failed",
+      "source_revision": "1e76fae31c6fad2ca56100bec703a5401a01ca71",
+      "scope": "User-supplied screenshot reports Xaman request creation failed: XRPL service HTTP 502. No Xaman request was created. This is a pre-request gateway error, distinct from the independently reproduced simulation response hash rejection.",
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Screenshot evidence does not establish the exact upstream cause, service deployment identity or Render concurrency. No private screenshot/account/record identifiers are published."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T03:54:55.796Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-preflight-recovery-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "d29d48390f184cfbaed4e64f86339e2d79597117",
+      "scope": "51 focused checks passed after red reproduction of simulation hash rejection. Valid response-added 64-hex hash is normalized only on a response copy; malformed/extra/changed fields, fees and strict input/receipt boundaries remain covered. Four RPC recovery cases exercise both page adapters, with focus after busy unlock. All six committed hashes match tested local files. Both changed modules and seven inline scripts parse; HTML status-region placement was source-checked.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/103",
+      "limitations": [
+        "Node v24.19.0; complete reusable input/environment fingerprints and exact combined test command are not recorded.",
+        "Synthetic/source checks, not browser rendering, Xaman payload creation or wallet acceptance. Master security/Pages deployment remains a separate gate."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T03:54:55.796Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-configured-proxy-components-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "d29d48390f184cfbaed4e64f86339e2d79597117",
+      "scope": "21 bounded read-only RPC calls through the configured Render proxy using a synthetic technical record and local candidate preflight. Unsigned NFT and XRBC burn simulations returned tesSUCCESS; aggregate component preflight returned component-checks-passed. Simulation response includes a valid 64-hex hash.",
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Read-only component evidence with local candidate code, not a complete Batch simulation, production browser acceptance, Xaman payload or validated ledger transaction.",
+        "No Xaman API call, wallet signature, submission, ledger write, burn or NFT mint occurred. Account/record identifiers, fingerprints and raw logs are excluded.",
+        "The earlier HTTP 502 upstream cause and current backend/archive deployment identity remain unverified; no backend patch was made."
+      ]
+    },
+    {
+      "id": "XRBC-tokenization-preflight-recovery-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "d29d48390f184cfbaed4e64f86339e2d79597117",
+      "recorded_at": "2026-10-15T03:55:21.565Z",
+      "scope": "MR !103 pipeline 2949231694 succeeded at exact candidate d29d48390f184cfbaed4e64f86339e2d79597117. Runtime job 17189398375 logs show 467 tests all passed with zero failures/skips/cancellations. Repository job 17189398376 succeeded in advisory mode.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949231694",
+      "limitations": [
+        "Repository validator exit 1 records existing findings; pipeline success is not strict whole-site clearance.",
+        "Merge and master security/Pages deployment remain pending at this predeployment checkpoint. No production browser/Xaman or validated wallet result is established.",
+        "Stop all tools immediately on requested deployment success; reconcile only on a later explicit continuation."
+      ],
+      "supersedes": []
     }
   ]
 }
