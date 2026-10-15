@@ -242,7 +242,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC guided Tokenization workspace draft",
+      "title": "XRBC guided Tokenization workspace release",
       "match": [
         "ecosystem upgrade",
         "TxnSignature",
@@ -287,8 +287,8 @@
         "head": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
         "pipeline": "2948992693"
       },
-      "status": "draft-mr-102-ci-passed-do-not-merge-or-deploy",
-      "next_action": "Keep exact Draft MR !102 unmerged and undeployed. On the next explicit continuation, review desktop/mobile visuals of the draft; source/synthetic and CI checks already passed. Await a new explicit instruction before merging/deploying or live wallet testing. Preserve record evidence, personal acknowledgments and pending-request safeguards."
+      "status": "mr-102-exact-tested-candidate-deployment-authorized-pending",
+      "next_action": "Merge only MR !102 exact passing SHA 4ffddfcec6c0ea5e03be03942b0bf52c011aec4b and wait for required master security/Pages deployment; stop all tools immediately on success. User Deploy instruction supersedes the prior draft hold for this candidate only. No post-deploy visual/camera/wallet check until a new explicit continuation; preserve records/backups and pending requests."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

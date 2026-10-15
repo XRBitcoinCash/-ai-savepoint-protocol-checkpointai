@@ -757,6 +757,25 @@
       "supersedes": [
         "XRBC-guided-workspace-initial-CI-2026-10-15"
       ]
+    },
+    {
+      "id": "XRBC-guided-workspace-deployment-authorized-pending-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "pending",
+      "source_revision": "4ffddfcec6c0ea5e03be03942b0bf52c011aec4b",
+      "recorded_at": "2026-10-15T01:45:58.867Z",
+      "scope": "User explicitly instructed Deploy. This supersedes the prior draft-only/no-merge/no-deploy hold solely for exact tested MR !102 candidate 4ffddfcec6c0ea5e03be03942b0bf52c011aec4b. Release turn rechecked matching MR head and successful candidate pipeline 2948992693; production master remains 45a80a00b6386e817f87a840cd0038cc2f106c32. Merge and master security/Pages deployment remain pending.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/102",
+      "limitations": [
+        "Authorization and predeployment state only; no successful merge/deployment is claimed for MR !102. Prior scoped 94 local and 462 candidate CI results remain separate evidence.",
+        "No visual desktop/mobile, live camera, Xaman or wallet acceptance is established. The release instruction does not authorize financial retests or unrelated code changes.",
+        "Stop all tools immediately when requested deployment succeeds; reconcile only on a later explicit user continuation."
+      ],
+      "supersedes": []
     }
   ]
 }
