@@ -1,14 +1,14 @@
-# Pending-request recovery, wallet state and detail controls — 2026-10-15
+# Ordinary Tokenization recovery — MR !106 deployed — 2026-10-15
 
 ## Intent and authority
 
-The user requests repair of QR reset/reconnect behavior, mixed wallet/gate state and the detail-level buttons. Current mode is the authorized frontend repair/deployment workflow. Preserve valid signer identity, current record/evidence, personal acknowledgments and all pending/duplicate guards. The user also proposed mint/transfer/burn of an older NFT; that is assessment only here, not an implemented or approved automatic three-NFT lifecycle. User attestations/signatures remain user actions.
+The ordinary QR reset/reconnect, mixed wallet/gate and detail-control repair has been deployed as MR !106. The current new task is a distinct P2P Record Handoff implementation, selected through route `xrbc_record_handoff`; it does not reopen ordinary signing tests or change the ordinary two-action flow. Preserve valid signer identity, current record/evidence, personal acknowledgments and all pending/duplicate guards. The earlier mint/transfer/burn proposal was assessment-only in MR !106. The user has now authorized a separate four-action P2P handoff implementation; that authority applies to its own workspace/route, not automatic transfer or destruction in ordinary Tokenization. User attestations/signatures remain user actions.
 
 ## Source and release reconciliation
 
-Frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project`, project 75781181, default branch `master`. Production master `d264d4cffd364856ce24baa71a3ea753d933d2be` is the observed merged MR !105. Master pipeline 2949440842 succeeded in the preceding authorized deployment turn: runtime 17190738992, repository validation 17190738993, Semgrep 17190738994, secret detection 17190738995 and deploy-pages 17190738996. This reconciles checkpoint `17d37aca8d621e61bf1ce38d067cb89f7af61616`'s MR !105 deployment-pending state. No live wallet acceptance or validated Batch settlement is established by that release.
+Frontend: GitLab `xrbitcoincash-group/xrbitcoincash-project`, project 75781181, default branch `master`. Production master `44fbecf8a7b13f05c937432854c33114e7bb42fd` is the observed merged MR !106. Production pipeline 2949574930 succeeded in the preceding authorized turn, including 509 runtime tests: runtime 17191656483, repository validation 17191656484, Semgrep 17191656485, secret detection 17191656486 and deploy-pages 17191656487. This reconciles checkpoint `c60288001990babefedfda2f4cd6fd9b40f50aad`'s deployment-pending claim. No post-deployment local browser receipt/UI recovery is established by that release observation.
 
-Candidate `5b847eeb452f3ed037ded7b2c12ec71cdca47730`, branch `codex/tokenization-reset-receipt-recovery-20261015`, MR !106: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/106 . All sixteen candidate files were read back at the exact SHA with matching SHA-256 and size against checked local inputs. Candidate pipeline 2949563810 succeeded at the exact SHA. Runtime job 17191580392 passed 509 tests with zero failures; repository job 17191580393 succeeded in existing advisory mode with validator exit 1, not strict whole-site clearance. Master was rechecked unchanged at the MR !105 release; merge and master security/Pages deployment remain pending.
+MR !106's checked candidate was `5b847eeb452f3ed037ded7b2c12ec71cdca47730`, branch `codex/tokenization-reset-receipt-recovery-20261015`: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/106 . Sixteen input hashes/sizes matched; 145 local checks and candidate pipeline 2949563810 passed, including runtime 17191580392 (509 tests) and advisory repository job 17191580393 (validator exit 1, not strict whole-site clearance). These remain dated release evidence.
 
 ## Pending recovery and mixed-state defect
 
@@ -32,7 +32,7 @@ Independent review found that closing/resetting a review during asynchronous uns
 
 ## NFT lifecycle proposal: assessment only
 
-The current two ledger actions are the XRBC publication microburn and NFT mint, not two NFT lifecycle operations. A separate NFT transfer or destruction is not implemented by this repair. A mint → transfer → burn-old design needs explicit recipient acceptance/multisigner coordination, authority to burn the old NFT, immutable mint flags, preserved lineage/evidence and a separately reviewed purpose/failure policy. Do not invent a recipient, burn authority, counterparty signature or automatic old-NFT destruction. Keep the current fixed publication cost and existing assets unless a later design is explicitly approved.
+The ordinary two ledger actions remain the XRBC publication microburn and NFT mint. MR !106 did not add NFT transfer or destruction. The new authorized P2P implementation is separate work at `memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md`: burn cost, mint with restricted offer, recipient acceptance and owner burn of the original, using an explicitly reviewed multi-account Batch. Its design/implementation is not ordinary-flow acceptance or permission to destroy an old NFT automatically. Never invent a recipient, burn authority, counterparty signature or lineage.
 
 ## Accepted display, AI and record recovery
 
@@ -66,12 +66,14 @@ Final local scoped tests passed 145/145 after the review-close race fix. The new
 
 The prior user-signed Batch is newly verified through bounded read-only receipt analysis; no new automated Xaman request, signature, transfer, NFT burn or transaction is created. Private record/body verification and browser receipt recovery remain outstanding. Reuse previous relevant scoped source/synthetic evidence instead of restarting historical financial tests. Keep source checks, synthetic recovery tests, CI, deployment, user-supplied observations, rendered UI and validated user-signed results separate.
 
-## Next action, risk and stop rule
+## Next ordinary action and stop rule
 
-Candidate CI is complete. Merge only the exact checked repair and wait for required master security and Pages deployment. The risk is that a recoverable status/history failure invalidates authentication or falsely frees an existing request, that detail controls mutate reviewed state, or that a closed review creates a payload after asynchronous preflight. Preserve the original request and independently validated identity until terminal evidence justifies cleanup.
+Do not repeat the already-settled publication. On a new explicit ordinary-recovery request, preserve the current record with a verified encrypted backup before one page reload, then Check Request Status for the original request. Recover its receipt/UI state without another burn or mint; that rendered recovery remains unobserved. Preserve the exact lock for ambiguous outcomes. The active new P2P task has its own route and evidence and must not silently inherit a financial-test queue.
 
-Stop all tools immediately when requested deployment succeeds. No post-deployment test, screenshot, cleanup or checkpoint exception is allowed in that turn. On a new explicit continuation, preserve the current record with a verified encrypted backup before one page reload, then use Check Request Status for the original request. The prior Batch already settled: recover its receipt/UI state without another publication burn or mint. Do not regenerate or replace an ambiguous QR. Any separately authorized future transaction retains user signing and validated-inner-result checks; do not add an NFT transfer/burn to test this UI repair.
+Any later requested deployment requires its own exact-candidate checkpoint/gates. Stop all tools immediately on successful requested deployment, with no post-deployment test, screenshot, cleanup or checkpoint exception; resume only on a new explicit user request.
 
 ## Dated history
+
+The superseded pre-MR !106 deployment brief is preserved at `memory/archive/XRBC-TOKENIZATION-XLS-2026-10-15-before-record-handoff.md`, captured from checkpoint `c60288001990babefedfda2f4cd6fd9b40f50aad`.
 
 The previous MR !105 release brief is preserved at `memory/archive/XRBC-TOKENIZATION-XLS-2026-10-15-before-pending-session.md`, captured from checkpoint `17d37aca8d621e61bf1ce38d067cb89f7af61616`. It retains card/AI/source-test limits and earlier history pointers. Shared contract: `memory/contracts/XLS-UPGRADE-CONTRACT.md`; its historical Batch-disabled boundary was superseded only by separately implemented atomic publication work, not blanket authorization for future Batch operations.

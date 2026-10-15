@@ -1140,6 +1140,79 @@
         "Merge and master security/Pages deployment remain pending. Existing user Batch settlement is separately verified read-only; browser receipt/UI recovery is not yet observed.",
         "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user continuation."
       ]
+    },
+    {
+      "id": "XRBC-tokenization-receipt-pending-session-controls-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "44fbecf8a7b13f05c937432854c33114e7bb42fd",
+      "recorded_at": "2026-10-15T07:41:19.714Z",
+      "scope": "MR !106 merged to production master 44fbecf8a7b13f05c937432854c33114e7bb42fd. Production pipeline 2949574930 succeeded in the preceding authorized turn: runtime 17191656483 (509 tests), repository validation 17191656484, Semgrep 17191656485, secret detection 17191656486 and deploy-pages 17191656487. Reconciles the previous checkpoint deployment-pending claim.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949574930",
+      "limitations": [
+        "Release observation, not a post-deployment local browser/receipt recovery or new wallet-signing result. The prior ordinary user Batch was already verified separately.",
+        "New P2P Record Handoff is distinct authorized work in progress, not proven by ordinary publication/deployment evidence."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T08:00:27.801Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "0b40486a5f21ee8a0bf67bb940bc0c173d0da7be",
+      "scope": "222 scoped Tokenization tests passed: 145 existing plus 77 new (handoff 16, crypto 10, transport 32, UI 12, page four, CSP three). All 28 committed files match tested SHA-256 and byte sizes. Ordinary core/Batch/publication/ledger/studio JS remain unchanged from base 44fbecf8; two HTML updates add shared locks/integration and Advanced exact-hash CSP. Native master/regular-key approval, typed unknown locks and four-action boundaries are covered synthetically.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/107",
+      "limitations": [
+        "Source manifest digest 6fa17db63e857c46e7212b2b1c147ecc1e0fed209c0d44e1a484e7c29745de59 identifies the checked published source set, not a Git tree SHA or complete reusable environment/input fingerprint.",
+        "Local Playwright executable is missing: browser rendering unavailable. No live wallet request, two-wallet signing/settlement, indexer artwork display or API secret is established.",
+        "Multisignature recipient approval is not implemented. Exported receiver approval is not revoked by closing the page; hard mint-offer expiry and reviewed app window remain material."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T08:00:27.801Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-generic-artwork-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "0b40486a5f21ee8a0bf67bb940bc0c173d0da7be",
+      "scope": "Generic green-Sender/blue-Receiver handoff image/metadata is a separate public asset family. PNG 1024 square, 230093 bytes, SHA-256 622b2a75e494ccf04b2ac4656bbb7aa01939a87415f8bd9eddb2cc752b6eaeb5. SVG 53492 bytes, SHA-256 e919133e126be797f24bc16585e8ea430926c81501f999c9c54d3648eac9ca5d. Source/crypto licenses and provenance accompany the candidate.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/107",
+      "limitations": [
+        "Asset identity does not establish browser/wallet/indexer display, external ownership/copyright/backing or a live handoff result. No private per-record upload is added."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T08:00:27.801Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-record-handoff-CI-2026-10-15",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "0b40486a5f21ee8a0bf67bb940bc0c173d0da7be",
+      "scope": "MR !107 pipeline 2949805737 passed at exact candidate 0b40486a5f21ee8a0bf67bb940bc0c173d0da7be. Runtime job 17193325076 passed 586 tests with zero failures/skips. Repository job 17193325077 succeeded in existing advisory mode; all 28 committed files matched checked local hashes/sizes.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949805737",
+      "limitations": [
+        "Repository validator exit 1 is existing advisory behavior, not strict sitewide clearance.",
+        "Merge and master security/Pages deployment remain pending; no live approval, signature, transaction or image-indexer result is asserted.",
+        "Stop all tools immediately on requested deployment success; resume only on a new explicit user request."
+      ]
     }
   ]
 }

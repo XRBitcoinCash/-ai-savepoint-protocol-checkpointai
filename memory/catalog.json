@@ -640,6 +640,13 @@
       "classification": "historical"
     },
     {
+      "path": "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
+      "indexed_on": "2026-10-15",
+      "bytes": 10298,
+      "sha256": "6070bd3a6f1c9b0db72772a16efc1bc51d495497401d1694097c056405706fbe",
+      "classification": "selected-task-record"
+    },
+    {
       "path": "memory/active/XRBC-SECURITY-HARDENING-2026-10-10.md",
       "indexed_on": "2026-10-15",
       "bytes": 3456,
@@ -677,8 +684,8 @@
     {
       "path": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
       "indexed_on": "2026-10-15",
-      "bytes": 15375,
-      "sha256": "97fb39601d35807476e51b5ea6556c91a9207a66f1f36c4ab82f682ec951eeae",
+      "bytes": 15240,
+      "sha256": "c444cf4aa02675543eb202911191d900aaf96be3b1d6a65e84e00809a64c3c18",
       "classification": "selected-task-record"
     },
     {
@@ -777,6 +784,13 @@
       "indexed_on": "2026-10-15",
       "bytes": 12848,
       "sha256": "33cdff876b965e789a1134603c1f65302e998292a14391290d5daa4d6c46f0fa",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-TOKENIZATION-XLS-2026-10-15-before-record-handoff.md",
+      "indexed_on": "2026-10-15",
+      "bytes": 15375,
+      "sha256": "97fb39601d35807476e51b5ea6556c91a9207a66f1f36c4ab82f682ec951eeae",
       "classification": "historical"
     },
     {
@@ -992,8 +1006,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-15",
-      "bytes": 70821,
-      "sha256": "0bb04a17d17f3c9df4fa145de69eee63c1e6e48a88301622b83c81dea954063d",
+      "bytes": 76016,
+      "sha256": "0e2c5489fa7171265eb531af1547eec28f9bc98c4a5f478bcf2011cca462a0b7",
       "classification": "current"
     },
     {
@@ -1251,8 +1265,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-15",
-      "bytes": 10609,
-      "sha256": "39f067b1c2f803cc6ae5824ae763907f7a92e6b092e76f679d9ff23b21b549d1",
+      "bytes": 11733,
+      "sha256": "161b1a2154eb132778db92907d3b59f612218407804ddc925263bba8ef52b0dc",
       "classification": "current"
     },
     {
