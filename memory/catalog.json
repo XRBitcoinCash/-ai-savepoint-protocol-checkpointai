@@ -677,8 +677,8 @@
     {
       "path": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
       "indexed_on": "2026-10-15",
-      "bytes": 10965,
-      "sha256": "3812e843de13bcad5533a70ea260a649554fc2c06bfb54786a2c987f085a450c",
+      "bytes": 11234,
+      "sha256": "52478ad022f53bb3c47fbfab7ce7b6b2a01778398b356bf14f1856c6444aa6f1",
       "classification": "selected-task-record"
     },
     {
@@ -770,6 +770,13 @@
       "indexed_on": "2026-10-15",
       "bytes": 11391,
       "sha256": "cb694f52435becea5b871dae00b59d1392383f6c82dd51280b1cbe969043d912",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-TOKENIZATION-XLS-2026-10-15-before-sdk-identity.md",
+      "indexed_on": "2026-10-15",
+      "bytes": 10965,
+      "sha256": "3812e843de13bcad5533a70ea260a649554fc2c06bfb54786a2c987f085a450c",
       "classification": "historical"
     },
     {
@@ -971,8 +978,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-15",
-      "bytes": 52193,
-      "sha256": "3f7d57032dd89a0c4e9e297b22a68e8d4badef3dd7397c021133a0b4464fab93",
+      "bytes": 57995,
+      "sha256": "c66dbfe21489c0b3abbbd361f39212909abe5e7ab519070c252d52c1a19ba4ff",
       "classification": "current"
     },
     {
@@ -1230,8 +1237,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-15",
-      "bytes": 10539,
-      "sha256": "b481b84b83145dd8a34a9f0d40367835183833786562e85278beebc743bc0821",
+      "bytes": 10547,
+      "sha256": "16b9e68413fc7a3055e147db92474f434afded044d662ce3db6bb7a5ab3bf431",
       "classification": "current"
     },
     {

@@ -242,12 +242,12 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC Tokenization QR preflight and RPC recovery",
+      "title": "XRBC Tokenization SDK lifecycle and strict signing identity",
       "match": [
         "ecosystem upgrade",
         "TxnSignature",
         "token escrow",
-        "XLS-85",
+        "same Xaman account",
         "atomic publication",
         "TokenEscrow",
         "MPT",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "fix/tokenization-preflight-recovery-20261015",
-        "head": "d29d48390f184cfbaed4e64f86339e2d79597117",
-        "pipeline": "2949231694"
+        "branch": "fix/tokenization-wallet-session-20261015",
+        "head": "e10d793a86e94baf5772fc01aa406fdf1d43d12f",
+        "pipeline": "2949291229"
       },
-      "status": "mr-103-preflight-recovery-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge only passing MR !103 exact SHA d29d48390f184cfbaed4e64f86339e2d79597117 and wait for required master security/Pages deployment; stop all tools immediately on success. Keep response normalization scoped, read-only gateway retries bounded and pending guards intact. No Xaman retry/write or post-deploy test without a new explicit continuation."
+      "status": "mr-104-sdk-lifecycle-repair-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge only passing MR !104 exact SHA e10d793a86e94baf5772fc01aa406fdf1d43d12f and wait for required master security/Pages deployment; stop all tools immediately on success. Keep strict current SDK identity and pending guards. No cached identity fallback, new live wallet/proxy test or post-deploy check without explicit continuation."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

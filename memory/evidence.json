@@ -868,6 +868,95 @@
         "Stop all tools immediately on requested deployment success; reconcile only on a later explicit continuation."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-preflight-recovery-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "bd0a73acdbcee2e8d8eebc2cff12cd672fa7b18e",
+      "recorded_at": "2026-10-15T04:18:44.611Z",
+      "scope": "MR !103 merged; production pipeline 2949236515 and deploy-pages 17189423026 succeeded with required runtime/security/repository jobs in the preceding authorized turn. Reconciles the prior predeployment checkpoint without inventing an earlier observation timestamp.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949236515",
+      "limitations": [
+        "Deployment observation only; no Xaman request creation, signature or validated wallet/Batch acceptance is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-universal-SDK-lifecycle-source-2026-10-15",
+      "project": "XRPL-Labs/Xumm-Universal-SDK",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "7b599aeca38a92bdd84fb7ad6370280b63216027",
+      "recorded_at": "2026-10-15T04:19:06.799Z",
+      "scope": "Official src/index.ts Git blob 7b599aeca38a92bdd84fb7ad6370280b63216027 inspected for constructor initialization of module-global identity, one-shot UnifiedUserData account promise, reused PKCE provider and user rebuilding on logout. This informs the application single-SDK lifecycle regression model.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRPL-Labs/Xumm-Universal-SDK/blob/main/src/index.ts",
+      "limitations": [
+        "source_revision identifies the observed Git blob, not a repository commit or deployed package version. The CDN package version remains unverified; no dependency pin/package change is made.",
+        "Source inspection and synthetic lifecycle modeling do not establish a live OAuth result, current signing account or wallet acceptance. Official browser lifecycle docs: https://docs.xaman.dev/environments/browser-web3"
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T04:20:07.671Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-same-account-display-observation-2026-10-15",
+      "kind": "browser",
+      "status": "failed",
+      "source_revision": "bd0a73acdbcee2e8d8eebc2cff12cd672fa7b18e",
+      "scope": "User reported Step 3 asking to reconnect the same Xaman account while the displayed gate was connected/unlocked and publisher matched. This is a displayed-state observation and does not establish that current SDK signing identity was available or equal.",
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "No wallet/account address, auth secret or private screenshot is published. Displayed gate/publisher is not a signer authorization fallback."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T04:20:07.671Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-single-SDK-session-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "e10d793a86e94baf5772fc01aa406fdf1d43d12f",
+      "scope": "30 focused checks passed, including seven new wallet-session regressions exercising both pages. Unchanged baseline failed with two SDK constructions instead of one on both pages. Candidate uses one closure-owned SDK, preserves strict current-account identity and guards awaited work. All seven inline scripts parse; three committed file hashes match tested local inputs. Independent bounded diff review reported no issue.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/104",
+      "limitations": [
+        "Node v24.19.0; complete reusable input/environment fingerprints and exact combined command are not recorded.",
+        "Synthetic/source checks only, not live SDK authorization, wallet request/signature, proxy experiment or ledger write. Master security/Pages deployment remains a separate gate."
+      ]
+    },
+    {
+      "id": "XRBC-tokenization-single-SDK-session-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "e10d793a86e94baf5772fc01aa406fdf1d43d12f",
+      "recorded_at": "2026-10-15T04:20:39.549Z",
+      "scope": "MR !104 pipeline 2949291229 succeeded at exact candidate e10d793a86e94baf5772fc01aa406fdf1d43d12f. Runtime job 17189735511 trace confirms 474 tests passed with zero failures/skips/cancellations. Repository job 17189735512 succeeded in advisory mode.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949291229",
+      "limitations": [
+        "Repository validator exit 1 records pre-existing findings, as before; passing CI is not strict whole-site clearance.",
+        "Merge and master security/Pages deployment remain pending. No live OAuth/Xaman request, wallet signature, proxy experiment or validated ledger result is established by this candidate.",
+        "Stop all tools immediately when requested deployment succeeds; reconcile only on a later explicit user continuation."
+      ],
+      "supersedes": []
     }
   ]
 }
