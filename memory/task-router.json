@@ -242,14 +242,14 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "xrbc_xls_upgrade": {
-      "title": "XRBC shared NFT evidence card and guided AI assistance",
+      "title": "XRBC pending recovery, wallet state and detail controls",
       "match": [
         "NFT evidence card",
         "TxnSignature",
         "token escrow",
         "same Xaman account",
         "atomic publication",
-        "TokenEscrow",
+        "pending recovery",
         "MPT",
         "Create Xaman Request",
         "dynamic NFT",
@@ -283,12 +283,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "feat/tokenization-evidence-card-ai-helper-20261015",
-        "head": "cc01a23e350cc26fa469c109e50bf8e23bc2c872",
-        "pipeline": "2949436869"
+        "branch": "codex/tokenization-reset-receipt-recovery-20261015",
+        "head": "5b847eeb452f3ed037ded7b2c12ec71cdca47730",
+        "pipeline": "2949563810"
       },
-      "status": "mr-105-evidence-card-ai-helper-ci-passed-deployment-authorized-pending",
-      "next_action": "Merge only passing MR !105 exact SHA cc01a23e350cc26fa469c109e50bf8e23bc2c872 and wait for required master security/Pages deployment; stop all tools immediately on success. Preserve full-fingerprint allowlisted/legacy URI links, local privacy, strict SDK identity and pending guards. No live signing or post-deploy check without explicit continuation."
+      "status": "mr-106-receipt-pending-session-controls-ci-passed-deployment-authorized-pending",
+      "next_action": "Merge only passing MR !106 exact SHA 5b847eeb452f3ed037ded7b2c12ec71cdca47730 and wait for required master security/Pages deployment; stop all tools immediately on success. On next explicit continuation, back up record before one reload and Check Request Status for the already-settled original Batch. No duplicate burn/mint, automatic QR replacement or NFT transfer/burn."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",

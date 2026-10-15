@@ -1030,6 +1030,116 @@
         "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user continuation."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-evidence-card-AI-deployed-reconciled-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "d264d4cffd364856ce24baa71a3ea753d933d2be",
+      "recorded_at": "2026-10-15T06:16:58.268Z",
+      "scope": "MR !105 merged; master pipeline 2949440842 succeeded in the preceding authorized deployment turn. Jobs runtime 17190738992, repository validation 17190738993, Semgrep 17190738994, secret detection 17190738995 and deploy-pages 17190738996 succeeded. Reconciles the prior pending checkpoint without inventing a prior observation timestamp.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949440842",
+      "limitations": [
+        "Deployment observation only; no live wallet acceptance, artwork display, Xaman request completion or validated Batch settlement is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-tokenization-prior-user-Batch-validated-review-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "wallet",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-15T06:24:35.653Z",
+      "scope": "Seven bounded read-only RPC calls, with final server_info network_id 0, confirm the prior user-signed two-action Batch settled: validated tesSUCCESS outer plus both inner transactions, matching ordered parent/same-ledger linkage. Removing only the equal API-v1 Payment DeliverMax alias on a local response copy let the existing verifier confirm independent inner hashes, exact public reviewed economics, 0.000001 XRBC reduction and minted NFT identity.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "Submitting application revision, private record body and original browser-stored receipt are unavailable. This verifies the supplied public review/ledger result, not private document truth or general wallet compatibility.",
+        "No new payload, signature, financial transaction, transfer or NFT burn was created. The application UI remains pending/unverified until the receipt/recovery repair.",
+        "Direct ledger/transaction lookups had bounded HTTP 502 failures; account history and one API-v1 NFT transaction read succeeded. No unchanged failed request was repeatedly retried.",
+        "Private wallet/transaction/NFT IDs, record fingerprints, ledger indexes and raw history are deliberately excluded from public memory."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T06:35:02.053Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-pending-mixed-state-observation-2026-10-15",
+      "kind": "browser",
+      "status": "failed",
+      "source_revision": "d264d4cffd364856ce24baa71a3ea753d933d2be",
+      "scope": "User-supplied debug data showed an existing legacy-URN two-action Batch, unavailable/cleared gate data and stale session-restored/gate-unlocked status. Receipt/history failure was coupled to valid-auth cleanup by outer restore/connect error handling.",
+      "reference": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
+      "limitations": [
+        "User-supplied UI/debug observation, not direct access to the local signed-in browser. Unavailable gate data is not a verified zero balance or proof of disconnection.",
+        "Private wallet/payload/record identifiers and raw debug text are excluded. Original browser-stored receipt/private record body remain unavailable."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T06:35:02.053Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-receipt-pending-session-controls-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "5b847eeb452f3ed037ded7b2c12ec71cdca47730",
+      "scope": "Final 145 scoped tests passed after independent review found the Close/Reset-during-preflight race. A new test executes both real adapters and actual cancel with synthetic dependencies: closing review prevents intent save/payload creation; removing only the post-preflight action guard from an in-memory copy fails. All sixteen committed candidate files match checked local hashes/sizes.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/106",
+      "limitations": [
+        "Complete reusable input/environment fingerprints and exact combined test command are not recorded. Earlier 144 checks preceded the final race guard.",
+        "Tests use synthetic dependencies; no new live wallet request/signature, transfer or NFT destruction is established. Master security/Pages deployment remains a separate gate."
+      ]
+    },
+    {
+      "recorded_at": "2026-10-15T06:36:41.161Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-Payment-receipt-alias-source-2026-10-15",
+      "project": "XRPLF/rippled",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "f1ce9449f20fa0e51f074e6821efbcfbf96325c1",
+      "scope": "Official rippled API/source and Clio source establish the API-v1 Payment Amount plus equal DeliverMax output alias. Reviewed rippled revision f1ce9449f20fa0e51f074e6821efbcfbf96325c1 and Clio revision 2c0de0af5639dcb9a453758f65ed89858c63f65f support a receipt-only normalized view; malformed, unequal or missing Amount aliases fail.",
+      "reference": "https://github.com/XRPLF/rippled/blob/f1ce9449f20fa0e51f074e6821efbcfbf96325c1/API-VERSION-2.md",
+      "limitations": [
+        "Upstream source identity is not a deployed proxy/backend identity. Equal aliases were independently observed in the bounded prior-Batch history.",
+        "Normalization is receipt-only; unsigned, simulation and wire-term checks remain strict. No ledger transaction or stored browser receipt is rewritten."
+      ]
+    },
+    {
+      "recorded_at": "2026-10-15T06:36:41.161Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-tokenization-receipt-pending-session-controls-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "5b847eeb452f3ed037ded7b2c12ec71cdca47730",
+      "scope": "MR !106 pipeline 2949563810 succeeded at exact candidate 5b847eeb452f3ed037ded7b2c12ec71cdca47730. Runtime job 17191580392 passed 509 tests with zero failures. Repository job 17191580393 succeeded in existing advisory mode. All sixteen candidate file hashes and sizes match tested local inputs.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949563810",
+      "limitations": [
+        "Repository validator exit 1 records existing findings; passing CI is not strict whole-site clearance.",
+        "Merge and master security/Pages deployment remain pending. Existing user Batch settlement is separately verified read-only; browser receipt/UI recovery is not yet observed.",
+        "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user continuation."
+      ]
     }
   ]
 }
