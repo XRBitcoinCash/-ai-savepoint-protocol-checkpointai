@@ -642,8 +642,8 @@
     {
       "path": "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
       "indexed_on": "2026-10-15",
-      "bytes": 13854,
-      "sha256": "7be5bf27d82b538b1f42f5d9fb125b33883f140221694b6904934e89ccfb2afb",
+      "bytes": 12858,
+      "sha256": "40c484642af3dc48b72f9aa5aead83c8f9ba6a372581324b7c2ca455850d1366",
       "classification": "selected-task-record"
     },
     {
@@ -684,8 +684,8 @@
     {
       "path": "memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md",
       "indexed_on": "2026-10-15",
-      "bytes": 11302,
-      "sha256": "9bdb110293cc6809bf40c310c9e563669d97549554c02122667531f7c1996d40",
+      "bytes": 11100,
+      "sha256": "44d2dfad90dd0608341f77166dc05a47f154b97bf6d8cdae4f2da6af81c566d1",
       "classification": "selected-task-record"
     },
     {
@@ -735,6 +735,13 @@
       "indexed_on": "2026-10-15",
       "bytes": 10570,
       "sha256": "7e0a68f23359fe2f16a3fa60c6dd962808b9ed51e87e241b1794ea591de13595",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-RECORD-HANDOFF-2026-10-15-before-simple-specialist.md",
+      "indexed_on": "2026-10-15",
+      "bytes": 13854,
+      "sha256": "7be5bf27d82b538b1f42f5d9fb125b33883f140221694b6904934e89ccfb2afb",
       "classification": "historical"
     },
     {
@@ -1020,8 +1027,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-15",
-      "bytes": 81748,
-      "sha256": "56d69356cf57c94852ce5a9b2627b58f6b31d1584568277104e3a6aca76898f3",
+      "bytes": 88501,
+      "sha256": "d289e367cc42ff88e50d6ab1a39afdbb17cccc476b77b739744201622913da83",
       "classification": "current"
     },
     {
@@ -1279,8 +1286,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-15",
-      "bytes": 11984,
-      "sha256": "eb11e8d4402c867ecf6c32a14aaaab7fbf71da0e3820a774bd1922236cfd7333",
+      "bytes": 11941,
+      "sha256": "21548bd4b2b525dbdd15865a7d9051e88f02a9d77d89200c816c12eebad2f6a9",
       "classification": "current"
     },
     {

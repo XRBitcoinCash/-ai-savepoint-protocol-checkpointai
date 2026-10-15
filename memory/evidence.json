@@ -1288,6 +1288,99 @@
         "Stop all tools immediately on requested deployment success; reconcile only on a later explicit user request."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T09:17:10.992Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "source_revision": "a7a3681e901fefbce8e1253cc8d9a937db801188",
+      "supersedes": [],
+      "id": "XRBC-tokenization-colors-wallet-NFT-selection-deployed-reconciled-2026-10-15",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "MR !108 merged and production pipeline 2949915442 succeeded in the preceding authorized turn. Jobs: runtime 17194127374 (595 tests), repository validation 17194127375, Semgrep 17194127376, secret detection 17194127377 and deploy-pages 17194127378. Reconciles checkpoint 31099713d3e34ed3c656edb985dc729bc72d836d deployment-pending claim.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2949915442",
+      "limitations": [
+        "Release evidence is not a new ordinary receipt/browser recovery, live handoff, configured wallet NFT-read observation or indexer/wallet image result.",
+        "Repository validation remains existing advisory behavior, not strict sitewide clearance. New Simple/Specialist local-file UI is separate work in progress."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-15T09:17:10.992Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "source_revision": "a7a3681e901fefbce8e1253cc8d9a937db801188",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-receiver-JSON-usability-2026-10-15",
+      "kind": "browser",
+      "status": "failed",
+      "scope": "User-supplied receiver-mode screenshot demonstrated confusion about the manual JSON interface; this motivates default Simple local-file exchange with Specialist technical controls.",
+      "reference": "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
+      "limitations": [
+        "Usability observation from user-supplied screenshot, not a new transaction failure or proof of configured wallet/backend behavior. No new signing/settlement is established.",
+        "Private wallet/record identifiers, screenshot and raw content are excluded."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "76beadd5c7353a564ad039120eaed5eb416bc94e",
+      "recorded_at": "2026-10-15T09:23:55.519Z",
+      "command": "node --test tests/unit/tokenization-*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/109",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-simple-specialist-files-local-2026-10-15",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "MR !109 candidate passed 242/242 Tokenization tests, zero failures/skips: prior 231 plus 11 UI checks (29 UI total). Modified JS parses and esbuild CSS parsing has zero warnings. Independent review and bounded synthetic local-file probes passed; stale selected-NFT summary after invitation import/manual edit was fixed. All five modified candidate file SHA-256 hashes and byte sizes match tested local inputs.",
+      "limitations": [
+        "Source-set manifest a60ab43f2cfa1a127996e0560d750d5fea0c255c5fe25c50df09a9cc8676005c is file-set identity, not complete test-input/environment fingerprints.",
+        "No rendered browser, live configured wallet, first two-wallet signing/settlement or indexer image result is established. No new payload/signature/financial transaction was created.",
+        "Source/synthetic checks and passing candidate CI do not establish deployment. Existing core/transport/crypto/ordinary code/economics/artwork remain unchanged."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "76beadd5c7353a564ad039120eaed5eb416bc94e",
+      "recorded_at": "2026-10-15T09:23:55.519Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/109",
+      "supersedes": [],
+      "id": "XRBC-record-handoff-simple-specialist-files-source-2026-10-15",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Default green Simple and red Specialist views keep plain complete terms and destructive acknowledgment visible while placing manual JSON/identifiers in Specialist. Local Open/Save invitation and approval files invoke existing exact validators, with 128 KiB outer file bound and narrower underlying schema limits retained. Mode/file operations create no payload or signature. Five-file scope is Advanced cache versions, handoff UI JS/CSS, UI tests and contract docs only.",
+      "limitations": [
+        "Untrusted file content is data; wrong schemas/AI drafts, oversized/wrong-type/read-failed/stale files must fail without replacing valid state. Existing plan/crypto/current-identity/gate checks and pending locks remain mandatory.",
+        "No backend relay, external upload, remote metadata fetch, private key/document collection, altered schema/economics/artwork or ordinary JavaScript change is introduced.",
+        "Source/synthetic checks do not establish rendered mobile/desktop usability or actual Xaman/Bithomp image display."
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-simple-specialist-files-CI-2026-10-15",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "76beadd5c7353a564ad039120eaed5eb416bc94e",
+      "recorded_at": "2026-10-15T09:24:18.181Z",
+      "scope": "MR !109 pipeline 2950151498 succeeded at exact candidate 76beadd5c7353a564ad039120eaed5eb416bc94e. Runtime job 17195929032 passed 606/606 tests, zero failures/skips. Repository job 17195929033 succeeded in existing advisory mode. All five modified candidate file SHA-256 hashes and sizes match tested inputs.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2950151498",
+      "limitations": [
+        "Repository validator underlying exit 1 is existing advisory behavior, not strict sitewide clearance.",
+        "Merge and required master security/Pages deployment remain pending; no new browser-rendered wallet/file interaction, live two-wallet signing/settlement or Xaman/Bithomp display result is established.",
+        "Stop all tools immediately on successful requested deployment; reconcile only on a later explicit user request."
+      ],
+      "supersedes": []
     }
   ]
 }
