@@ -1,5 +1,5 @@
 version=2
-updated=2026-10-12
+updated=2026-10-19
 status=redirect
 canonical_router=memory/task-router.json
 default_compatibility_pointer=memory/CURRENT.md

@@ -1584,6 +1584,169 @@
         "Keep Draft MR !111 unmerged/undeployed: actual GitHub backend source unavailable, no coordinator database configured, and app/audience plus real integration remain unverified. No resources or financial requests were created."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-private-source-access-restored-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "bd225b2af35e55e3544fc2a46affce4a0cf72926",
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Existing GitHub app repository selection was updated and private actual backend source became accessible. Main remains bd225b2af35e55e3544fc2a46affce4a0cf72926, consistent with October 15 recorded Render source. The checkpoint stayed accessible. No source/main rewrite or public visibility change occurred.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/pull/2",
+      "limitations": [
+        "Supersedes the earlier source-unavailable observation only; restored source retrieval does not establish deployed database, OAuth app/audience/provider or wallet readiness.",
+        "The earlier 404 alone never proved deletion or unauthorized change. No credentials, wallet data, tokens or payloads are published."
+      ],
+      "supersedes": [
+        "XRBC-record-handoff-coordinator-actual-backend-source-unavailable-2026-10-15"
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-XLS56-Xaman-documentation-2026-10-19",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Reviewed official XLS-56 BatchV1_1 and Xaman multiple-inner-signer/checklist/API-polling guidance: four exact ALLORNOTHING actions/fees/codec; Xaman 5.4.0+; outer Account/Sequence fixed before recipient approval; official payload endpoint paths and RS256 issuer/JWKS compatibility. Preserve exact roles/economics/native signatures and independent validated inner receipts.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://xls.xrpl.org/xls/XLS-0056-batch.html",
+      "limitations": [
+        "Primary Xaman URLs are preserved in the selected Oct19 brief. Documentation compatibility is not installed-wallet support, deployed app UUID/audience/provider verification or live settlement.",
+        "Current source documentation is not a guarantee of future behavior; keep fresh runtime compatibility and authorization checks."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-readonly-Mainnet-amendments-2026-10-19",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Read-only s1.ripple.com RPC observed Mainnet network 0, validated ledger 107759798, hash 0E0E4752294165B154AFC89B31D46DB143C0D43E12DAAB289FE1DC428CE720FE. Four required NFT/mint-offer/BatchV1_1/fixBatchV1_2 amendments were enabled at that snapshot. No signing or transaction occurred.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://s1.ripple.com:51234/",
+      "limitations": [
+        "Protocol snapshot only; preserve fresh network/amendment/account/sequence/ownership/fee/reserve preflight before a request.",
+        "No configured service readiness, wallet/provider acceptance or two-wallet settlement is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-security-followup-source-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "b353f224d98899285e313dc4c05095f60bb9234a",
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Seven backend files published to Draft PR #2 match exact tested Git blobs/tree. Security follow-up guards reserved-read CAS races and expired/terminal replay, forces fresh provider state before cancellation/mutation, requires consistent signed/resolved state and rejects disabled payloads. Bounded pending-state cache: 30 seconds, 64 entries, 1 MB; reads coalesce with 429 cooldown. No POST retry or automatic ambiguous-request replacement.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/pull/2",
+      "limitations": [
+        "Source/readback is not deployed provider/database behavior. Draft remains unmerged; baseline main unchanged.",
+        "Exact file identities do not claim complete relevant-input/environment fingerprints for automatic evidence reuse. No secret/configuration/resource or wallet change."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-security-followup-local-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "b353f224d98899285e313dc4c05095f60bb9234a",
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Focused actual-backend local suite passed 153/153 tests after reservation/replay/cancellation and provider-state/polling fixes. Frontend integration mirror backend package passed 89/89 locally; native financial contract and existing page workflow remain intact except one Xaman 5.4.0+ compatibility hint.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/pull/2",
+      "limitations": [
+        "Local PostgreSQL installation was blocked by host setgroups permissions; no local real-PostgreSQL execution claimed. Real PostgreSQL CI is a separate result.",
+        "No complete reusable input/environment fingerprints, deployed database/OAuth/provider behavior, wallet signature or financial settlement is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-security-followup-GitLab-CI-2026-10-19",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "8ca28e61f024956dd30338880c6ac25427e74665",
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "Draft MR !111 pipeline 2962668083 succeeded at exact candidate 8ca28e61f024956dd30338880c6ac25427e74665. Runtime job 17280504880 passed 614 frontend and 89 backend tests, zero failures/skips, plus 11 critical pages and 24 sidebar pages. Five published files match exact local Git blobs, including UI blob 6fa595f7f6909803bd36eb87abf9288d77563347. Repository job 17280504881 succeeded in existing advisory mode.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2962668083",
+      "limitations": [
+        "Existing advisory repository validation is not strict sitewide clearance. No deployment job ran; candidate remains draft/unmerged/undeployed.",
+        "CI/source checks do not establish deployed database/OAuth/provider operation, two-wallet signing/settlement or wallet/indexer image display."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-public-status-read-unavailable-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "unknown",
+      "source_revision": null,
+      "recorded_at": "2026-10-19T10:30:04Z",
+      "scope": "A bounded public Render status read timed out after 20 seconds. No health, deployed configuration, persistence or authentication conclusion was drawn.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-19.md",
+      "limitations": [
+        "Unavailable is unknown, not a proven service failure or valid zero. No repeated unchanged attempt or configuration/resource change was performed."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-security-followup-backend-CI-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "b353f224d98899285e313dc4c05095f60bb9234a",
+      "recorded_at": "2026-10-19T10:30:49Z",
+      "scope": "Draft PR #2 workflow run 39237671853 completed successfully with head_sha b353f224d98899285e313dc4c05095f60bb9234a, pull_request event, base bd225b2af35e55e3544fc2a46affce4a0cf72926. API job 118010600651 passed 153/153 tests, zero failures/skips. Seven published files match exact local Git blobs/tree. Standard synthetic PR merge checkout was used by Actions; candidate identity independently confirmed.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/actions/runs/39237671853",
+      "limitations": [
+        "Automated CI/source checks do not establish deployed storage, actual OAuth app/audience/provider behavior, installed-wallet acceptance or live two-wallet settlement.",
+        "Draft remains unmerged/undeployed and main unchanged. No infrastructure/configuration/secret change, wallet request or financial transaction."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-real-PostgreSQL-CI-2026-10-19",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "b353f224d98899285e313dc4c05095f60bb9234a",
+      "recorded_at": "2026-10-19T10:30:49Z",
+      "scope": "Real PostgreSQL job 118010600302 in successful run 39237671853 exercised official ephemeral PostgreSQL 16.15: schema init/idempotence; independent-process reservation, intent and CAS; actual connection-termination rollback; actual COMMIT with injected lost-ack recovery; initially uncertain COMMIT retry; actual container-restart protected-state survival. All steps succeeded at exact PR #2 candidate b353f224d98899285e313dc4c05095f60bb9234a. No XRPL/Xaman traffic.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/actions/runs/39237671853/job/118010600302",
+      "limitations": [
+        "Satisfies scoped real-database test gate, not proof of Render deployed database configuration, TLS connectivity, migrations against existing production data or provider/OAuth integration.",
+        "No local real-PostgreSQL run is claimed: local installation was blocked by host setgroups permissions. No paid database/resource, account/service configuration or financial action was created."
+      ],
+      "supersedes": []
     }
   ]
 }

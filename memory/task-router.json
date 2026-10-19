@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-15",
+  "updated": "2026-10-19",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -288,7 +288,7 @@
         "pipeline": "2950293159"
       },
       "status": "mr-108-colors-card-deployed-original-Batch-settled-UI-recovery-unobserved",
-      "next_action": "Ordinary work is deployed and unchanged by MR !110. Active no-file coordinator review package uses xrbc_record_handoff and has backend source/database blockers; no dependent frontend deployment. Only explicit ordinary recovery may check the existing settled request without repeat burn/mint."
+      "next_action": "Ordinary work is deployed and unchanged by MR !110. Active no-file coordinator review package uses xrbc_record_handoff and has configured database/OAuth/provider integration gates; no dependent frontend deployment. Only explicit ordinary recovery may check the existing settled request without repeat burn/mint."
     },
     "xrpl_to": {
       "title": "XRPL.to read-only data permission and integration advice",
@@ -340,7 +340,7 @@
       "next_action": "Use portable working memory 6.1 with the current user task; validate and publish only requested memory changes, then await the next request."
     },
     "xrbc_record_handoff": {
-      "title": "XRBC P2P no-file Xaman coordinator readiness",
+      "title": "XRBC P2P no-file Xaman coordinator integration",
       "match": [
         "P2P Record Handoff",
         "record handoff",
@@ -364,18 +364,18 @@
         "coordinator readiness"
       ],
       "read": [
-        "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
+        "memory/active/XRBC-RECORD-HANDOFF-2026-10-19.md",
         "memory/contracts/XLS-UPGRADE-CONTRACT.md",
-        "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-15.md"
+        "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-19.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
         "branch": "codex/xrbc-xaman-handoff-coordinator-20261015",
-        "head": "e25efc771b0c068c8ce5a800ea316311053da2b4",
-        "pipeline": "2950493054"
+        "head": "8ca28e61f024956dd30338880c6ac25427e74665",
+        "pipeline": "2962668083"
       },
-      "status": "draft-mr-111-coordinator-CI-passed-blocked-ready-for-config-not-deployable",
-      "next_action": "Publish exact Draft MR !111 e25efc771b0c068c8ce5a800ea316311053da2b4 checkpoint with passing scoped CI; keep draft/unmerged/undeployed. Recover actual Render GitHub source and configure approved durable PostgreSQL/app OAuth identity, then verify real integration before dependent frontend release. No resources created, automatic request replacement or financial replay."
+      "status": "draft-security-update-frontend-backend-real-PostgreSQL-CI-passed-configured-integration-unverified",
+      "next_action": "Establish approved durable deployed database and actual OAuth app/audience/provider readiness before a dependent release or explicit live two-wallet test. Backend source access is restored; exact frontend/backend candidates and scoped real PostgreSQL CI passed, both remain draft/unmerged/undeployed. Preserve exact pending requests and financial rules; no settled-test replay or resource creation merely to clear a gate."
     }
   }
 }
