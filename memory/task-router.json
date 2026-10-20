@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -364,9 +364,9 @@
         "coordinator readiness"
       ],
       "read": [
-        "memory/active/XRBC-RECORD-HANDOFF-2026-10-19.md",
+        "memory/active/XRBC-RECORD-HANDOFF-2026-10-20.md",
         "memory/contracts/XLS-UPGRADE-CONTRACT.md",
-        "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-19.md"
+        "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
@@ -374,8 +374,8 @@
         "head": "8ca28e61f024956dd30338880c6ac25427e74665",
         "pipeline": "2962668083"
       },
-      "status": "draft-security-update-frontend-backend-real-PostgreSQL-CI-passed-configured-integration-unverified",
-      "next_action": "Establish approved durable deployed database and actual OAuth app/audience/provider readiness before a dependent release or explicit live two-wallet test. Backend source access is restored; exact frontend/backend candidates and scoped real PostgreSQL CI passed, both remain draft/unmerged/undeployed. Preserve exact pending requests and financial rules; no settled-test replay or resource creation merely to clear a gate."
+      "status": "deployment-authorized-release-preflight-complete-awaiting-Render-connection-and-live-config",
+      "next_action": "Connect the suggested Render plugin, then inspect existing service/database configuration and verify actual Xaman app audience/provider readiness before the authorized release and two-wallet test. Repository heads/CI are unchanged and reusable by scope; both candidates remain draft/unmerged/undeployed. Hosting connection, not repository permission or deployment authority, is pending. No costly infrastructure approved; preserve exact pending requests. Stop all tools immediately after successful website deployment."
     }
   }
 }

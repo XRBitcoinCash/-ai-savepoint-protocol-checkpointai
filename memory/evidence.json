@@ -1747,6 +1747,42 @@
         "No local real-PostgreSQL run is claimed: local installation was blocked by host setgroups permissions. No paid database/resource, account/service configuration or financial action was created."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-release-preflight-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "8ca28e61f024956dd30338880c6ac25427e74665",
+      "recorded_at": "2026-10-20T01:26:36Z",
+      "scope": "User explicitly authorizes deploying P2P updates for testing. Read-only preflight confirms frontend MR !111 head 8ca28e61f024956dd30338880c6ac25427e74665/master 60fdd38c3796a30ba6d587003ecb1f48c3749b19 unchanged, draft/no conflicts; pipeline 2962668083 success 614 frontend/89 backend. Backend PR #2 head b353f224d98899285e313dc4c05095f60bb9234a/main bd225b2af35e55e3544fc2a46affce4a0cf72926 unchanged, draft/clean/mergeable; run 39237671853 API 153/153 and real PostgreSQL succeeded. Prior scoped CI reused without rerunning tests.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-RECORD-HANDOFF-2026-10-20.md",
+      "limitations": [
+        "Authorization does not establish deployed configuration or settlement. Frontend master merge automatically publishes production Pages; no existing preview release. No merge, deployment or financial activity occurred.",
+        "Prior code/CI event dates remain Oct19; this Oct20 UTC record is a current read-only release preflight, not a new test execution or automatic machine-reuse fingerprint."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-Render-connection-pending-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "b353f224d98899285e313dc4c05095f60bb9234a",
+      "recorded_at": "2026-10-20T01:26:36Z",
+      "scope": "Plugin Management found Render available and uninstalled; no Render callable tools are exposed. The exact Render connection was suggested and user action is pending. Existing Render database and Xaman runtime configuration cannot yet be inspected. Repository source permissions are resolved; user deployment authority is explicit.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
+      "limitations": [
+        "Successful observation of plugin state is not backend readiness. Actual deployed database, OAuth audience/provider operation and first live two-wallet settlement remain unverified.",
+        "No service, paid resource, credential/configuration change, merge or deployment was performed. Next step is connect Render and inspect existing configuration; no repeat deployment reconfirmation is needed."
+      ],
+      "supersedes": []
     }
   ]
 }
