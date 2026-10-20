@@ -1783,6 +1783,82 @@
         "No service, paid resource, credential/configuration change, merge or deployment was performed. Next step is connect Render and inspect existing configuration; no repeat deployment reconfirmation is needed."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-Render-access-and-source-confirmed-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "bd225b2af35e55e3544fc2a46affce4a0cf72926",
+      "recorded_at": "2026-10-20T01:49:10Z",
+      "scope": "Render REST is connected in the user-confirmed existing workspace. Actual public service xrbitcoincash.github.io at https://xrbitcoincash-github-io.onrender.com uses actual GitHub main source, root xrpl-proxy, Node, free web plan, Oregon, auto-deploy enabled. Current live source bd225b2af35e55e3544fc2a46affce4a0cf72926 finished deployment October7, matching prior checkpoint. Render inventory contains no PostgreSQL instances.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
+      "limitations": [
+        "Supersedes connection-pending state; hosting/repository access and user deployment authority are resolved. Missing durable database/runtime OAuth configuration remain separate blockers.",
+        "No service identifiers, secrets, screenshots or raw logs published. No resource/configuration change, merge, deployment or wallet activity occurred."
+      ],
+      "supersedes": [
+        "XRBC-record-handoff-Render-connection-pending-2026-10-20"
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-Render-key-only-config-inspection-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "bd225b2af35e55e3544fc2a46affce4a0cf72926",
+      "recorded_at": "2026-10-20T01:49:10Z",
+      "scope": "Authenticated Render Dashboard secure key-name-only inspection found existing XAMAN_API_KEY and XAMAN_API_SECRET. HANDOFF_ENABLED, HANDOFF_DATABASE_URL, XAMAN_OAUTH_AUDIENCE and common database variables were absent; no linked environment groups. Combined with no Render PostgreSQL inventory, deployed coordinator storage and handoff/OAuth configuration remain missing.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
+      "limitations": [
+        "No values were read/revealed or changed; names alone do not prove actual app UUID/audience/provider compatibility.",
+        "A database elsewhere is not ruled out globally; no configured durable connection for this coordinator was observed. No resource/service mutation."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-existing-public-status-200-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "bd225b2af35e55e3544fc2a46affce4a0cf72926",
+      "recorded_at": "2026-10-20T01:49:10Z",
+      "scope": "Safe GET existing /api/v1/status initially returned 503 during cold start. One diagnostic warm follow-up returned 200 operational, walletAuthentication configured/verified true, XRPL Mainnet validated ledger107773972 closed2026-10-20T01:45:50Z age7s. No wallet request or ledger transaction was created.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://xrbitcoincash-github-io.onrender.com/api/v1/status",
+      "limitations": [
+        "Scoped current read-only status establishes neither the new OAuth audience/provider path, coordinator/P2P readiness nor financial settlement.",
+        "The initial 503 and earlier timeout remain dated history. Fresh runtime checks remain needed at the relevant release boundary."
+      ],
+      "supersedes": [
+        "XRBC-record-handoff-public-status-read-unavailable-2026-10-19"
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-conditional-database-cost-proposal-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-20T01:49:10Z",
+      "scope": "Authenticated Render new-database form prepared only, not submitted: xrbc-p2p-handoffs, Oregon, PostgreSQL16,0.1CPU/256MB,1GB,storage autoscaling disabled. Actual Dashboard estimate compute$6 plus storage$0.30 totals$6.30/month, correcting prior provisional$6 marketing wording. Explicit new recurring-cost approval is pending. Candidate retains rejectUnauthorized:true; intended full external hostname and restricted IP allowlist avoid weakening TLS for internal self-signed certificates.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
+      "limitations": [
+        "No database exists from this prepared form; no resource, recurring bill or service configuration change was created. Deployment authorization is present but does not approve this new recurring charge.",
+        "Quote and network plan are point-in-time observations; verify selected terms/strict TLS/IP behavior during the approved setup. No connection string, secrets, screenshot or raw log published."
+      ],
+      "supersedes": []
     }
   ]
 }

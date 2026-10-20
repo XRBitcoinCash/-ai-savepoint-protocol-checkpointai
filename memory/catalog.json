@@ -656,8 +656,8 @@
     {
       "path": "memory/active/XRBC-RECORD-HANDOFF-2026-10-20.md",
       "indexed_on": "2026-10-20",
-      "bytes": 11663,
-      "sha256": "93454f131a6bbe646897439bb341b103e7f1cbe1129c19e4d2606bfa69f2b7f6",
+      "bytes": 11642,
+      "sha256": "44c418528f6d0986f2b398b008fc51c1edbb298b374c5a8dd3d8a284e3880088",
       "classification": "selected-task-record"
     },
     {
@@ -738,6 +738,13 @@
       "classification": "historical"
     },
     {
+      "path": "memory/archive/HANDOFF-COORDINATOR-READINESS-2026-10-20-before-Render-inspection.md",
+      "indexed_on": "2026-10-20",
+      "bytes": 3807,
+      "sha256": "a467eeab97d9e0f5765c7d0af7e91514c37b34a502ae457cecda2f90ab1a198b",
+      "classification": "historical"
+    },
+    {
       "path": "memory/archive/NEXT_RUN-before-2026-09-22-audit.md",
       "indexed_on": "2026-10-20",
       "bytes": 11106,
@@ -770,6 +777,13 @@
       "indexed_on": "2026-10-20",
       "bytes": 10298,
       "sha256": "6070bd3a6f1c9b0db72772a16efc1bc51d495497401d1694097c056405706fbe",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-RECORD-HANDOFF-2026-10-20-before-Render-inspection.md",
+      "indexed_on": "2026-10-20",
+      "bytes": 11663,
+      "sha256": "93454f131a6bbe646897439bb341b103e7f1cbe1129c19e4d2606bfa69f2b7f6",
       "classification": "historical"
     },
     {
@@ -1020,8 +1034,8 @@
     {
       "path": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
       "indexed_on": "2026-10-20",
-      "bytes": 3807,
-      "sha256": "a467eeab97d9e0f5765c7d0af7e91514c37b34a502ae457cecda2f90ab1a198b",
+      "bytes": 4048,
+      "sha256": "2dbc6297a044fe9d55648f80845f529dceee1193a555f644f942180329642d7f",
       "classification": "selected-task-record"
     },
     {
@@ -1069,8 +1083,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-20",
-      "bytes": 117189,
-      "sha256": "306667a0f5dfe06fcb7ddeedff552876a0b2e77997568a4b66f712a951ea5d9d",
+      "bytes": 122445,
+      "sha256": "ee6ecf694298aada5b0095e2eb6b81a8e651d11d039ea2a65b7e573bf5000e4a",
       "classification": "current"
     },
     {
@@ -1328,8 +1342,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-20",
-      "bytes": 12320,
-      "sha256": "d6c69f790e17a6222337a77a8af34c91f042b5e7db73af3f7087a93c9f4af529",
+      "bytes": 12352,
+      "sha256": "112af7f83dabd79eef583123922dd248d68bf78b44958c13ede94daf57b2760b",
       "classification": "current"
     },
     {

@@ -374,8 +374,8 @@
         "head": "8ca28e61f024956dd30338880c6ac25427e74665",
         "pipeline": "2962668083"
       },
-      "status": "deployment-authorized-release-preflight-complete-awaiting-Render-connection-and-live-config",
-      "next_action": "Connect the suggested Render plugin, then inspect existing service/database configuration and verify actual Xaman app audience/provider readiness before the authorized release and two-wallet test. Repository heads/CI are unchanged and reusable by scope; both candidates remain draft/unmerged/undeployed. Hosting connection, not repository permission or deployment authority, is pending. No costly infrastructure approved; preserve exact pending requests. Stop all tools immediately after successful website deployment."
+      "status": "deployment-authorized-Render-connected-DB-OAuth-missing-awaiting-6-30-monthly-approval",
+      "next_action": "Obtain explicit $6.30/month approval for the prepared unsubmitted Oregon PostgreSQL16 proposal (0.1CPU/256MB,1GB,no autoscale), then wire strict verified external TLS/restricted IP access, verify actual Xaman audience/provider integration and deploy the already-authorized feature. Render access/source are confirmed; durable database and handoff/OAuth config are missing. Scoped current status is 200 operational, not P2P readiness. No resource/configuration/merge/deployment/wallet change; stop all tools immediately after successful website deployment."
     }
   }
 }
