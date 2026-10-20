@@ -374,8 +374,8 @@
         "head": "8ca28e61f024956dd30338880c6ac25427e74665",
         "pipeline": "2962668083"
       },
-      "status": "deployment-authorized-Render-connected-DB-OAuth-missing-awaiting-6-30-monthly-approval",
-      "next_action": "Obtain explicit $6.30/month approval for the prepared unsubmitted Oregon PostgreSQL16 proposal (0.1CPU/256MB,1GB,no autoscale), then wire strict verified external TLS/restricted IP access, verify actual Xaman audience/provider integration and deploy the already-authorized feature. Render access/source are confirmed; durable database and handoff/OAuth config are missing. Scoped current status is 200 operational, not P2P readiness. No resource/configuration/merge/deployment/wallet change; stop all tools immediately after successful website deployment."
+      "status": "Render-spend-declined-release-held-advisory-local-and-free-shared-storage-options",
+      "next_action": "Explain current off-ledger coordinator state versus completed XRPL assets and help the user choose a zero-cost build/storage approach; await implementation direction. The $6.30/month Render proposal is declined. No Render/browser operations, infrastructure/configuration, merge, deployment or wallet action; no architecture rewrite or Neon/local setup selected. Browser storage is profile-local and cannot replace global CAS/recovery guarantees. Preserve exact uncertain requests and unchanged code/CI evidence."
     }
   }
 }

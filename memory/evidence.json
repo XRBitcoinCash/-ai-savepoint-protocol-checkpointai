@@ -1859,6 +1859,62 @@
         "Quote and network plan are point-in-time observations; verify selected terms/strict TLS/IP behavior during the approved setup. No connection string, secrets, screenshot or raw log published."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-Render-budget-hold-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-20T01:59:39Z",
+      "scope": "Latest user instruction declines the proposed $6.30/month Render database and directs no Render actions until the project is fully live/useful. Current turn requests explanation of storage and computer/phone alternatives; it does not authorize architecture rewriting or a free-service account. Prior pending-cost-approval queue is superseded; no Render/browser, infrastructure/configuration, merge, deployment or wallet action.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-RECORD-HANDOFF-2026-10-20.md",
+      "limitations": [
+        "Direct user constraint, not a new source/test/deployment result. Prior quote/inspection remain historical facts; recurring spend was never approved.",
+        "Existing source candidates/CI/deployment state remain unchanged. Paid approval is declined rather than pending; do not automatically reopen it."
+      ],
+      "supersedes": [
+        "XRBC-record-handoff-conditional-database-cost-proposal-2026-10-20"
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-local-storage-design-review-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-20T01:59:39Z",
+      "scope": "Read-only design review: current database stores off-ledger plans/stages, exact Xaman request/approval/dispatch identities, reservations/CAS and recovery; completed assets/transactions are on XRPL. IndexedDB/Web Locks could retain drafts/pending/receipts and coordinate same-profile/origin tabs, without cross-device global CAS. An isolated local Node+PostgreSQL build requires origins/TLS/app configuration and is not implemented.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/contracts/HANDOFF-COORDINATOR-READINESS-2026-10-20.md",
+      "limitations": [
+        "Exploratory design analysis only; no architecture change, local server, account/service or implemented local-storage substitute.",
+        "Lost/uncertain coordinator state must never automatically create replacement wallet requests or financial retries; existing security/financial constraints persist."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-Neon-free-candidate-pricing-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-20T01:59:39Z",
+      "scope": "Official Neon pricing read-only verification lists Free at $0 with no time limit/no credit card, 1GB per project and 100CU-hours per month per project. This is a potential free shared-PostgreSQL development candidate, not a selected replacement, account creation, approved integration or deployment.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://neon.com/pricing",
+      "limitations": [
+        "Point-in-time pricing/features; usage quotas, actual strict TLS/connectivity, driver/service compatibility and recovery/integration gates remain to be assessed if the user selects it.",
+        "No Neon account, resource, service configuration, architecture rewrite or wallet action occurred. Render hold remains active."
+      ],
+      "supersedes": []
     }
   ]
 }
