@@ -2133,6 +2133,150 @@
         "No deployment result, actual browser/mobile/live-CORS or live-site market observation. Homepage deployment pending; P2P/configuration holds unchanged. Stop all tools immediately when authorized website deployment succeeds."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-v1-deployment-reconciled-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "4a7b400e9b8b66f9fa503c2d5fba1677876afb3b",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "In the preceding authorized turn MR112 candidate8283373e merged to production4a7b400e9b8b66f9fa503c2d5fba1677876afb3b. Production pipeline2967399871/deploy-pages17315098885 succeeded. New-turn source/release evidence reconciles prior checkpoint55fe5d1c deployment-pending fact.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2967399871",
+      "limitations": [
+        "Release evidence is not browser/live-CORS/site-data verification. Only the prior v1 deployment is reconciled; v2 remains pending.",
+        "Pre-release source/local/CI/authority records retain historical scope; no post-deployment tool exception occurred."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-authority-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "User authorizes real major-exchange plus XRPL accuracy and year-over-year evidence before more animation. Scope nativeUSD Coinbase/Kraken measured coverage, separate validated XRP/RLUSD book/AMM and completedUTC daily price/base-volume history. No extra origin/provider/service/backend/signing/storage/bill or new animation; P2P/configuration holds unchanged.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md",
+      "limitations": [
+        "Unknown escrow, unmeasured venues and historical depth stay unavailable. Daily candles are not a depth/price-impact backtest or predictive validation.",
+        "Authority/source work is not a deployment result; exact candidate committed/CI passed, merge/Pages pending."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-source-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "MR113 branchcodex/xrbc-liquidity-evidence-20261020 exactdf8c07f304c88913deca1a977b000fecaa4cd195 parent4a7b400e.15 files preserve14 inline bodies/existing IDs/CSP;152015 total castle asset bytes; scene edits copy/labels only. Actual bidUSD/askUSD with aligned common-band two-venue or explicit partial coverage; separate same-hash funded RLUSD book/AMM; same-venue whole-comparison completedUTC history fallback. Existing Kraken Pulse tracker validates source/pair/taker side,dedupmax3000,always partial,clears90s/hidden/Explore,no extraHTTP/socket.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/113",
+      "limitations": [
+        "ControllerSHA256c48b1836e8da53cceb053646b0a9904719f5b31f88ae9d5a3432366bee27a6d4 remote/local match; specific file identity is not complete reusable input/environment fingerprint.",
+        "No new provider/origin/backend/signing/storage/animation/library. Source cannot establish actual browser UI/CORS or live XRPL same-ledger binding."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-local-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "107 focused tests passed and root rerun passed, included within CI717. Source/model/reader/UI checks cover common-band real-notional/partial coverage, funded same-ledger XRP/RLUSD book/AMM handling, whole-comparison same-venue30-day completedUTC history and bounded partial observed executions.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/113",
+      "limitations": [
+        "Focused107 is a subset, not added to717. Actual browser QA unavailable; no live XRPL DEX/AMM binding success claimed.",
+        "Source/synthetic results do not prove unmeasured venue liquidity, aggregate escrow, historical depth or predictive price behavior."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-Kraken-depth-live-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "Observed Kraken book HTTP200 with CORS response for site Origin at2026-10-20T12:37:40Z. Complete measured \u00b11% snapshot approximatelyUSD5.53049m bids/USD3.60677m asks, actual bid/ask notional ratio1.53336.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://api.kraken.com/0/public/Depth",
+      "limitations": [
+        "One venue/time/band only; no claim of both-venue aggregation, all-market depth, actual browser execution or future price.",
+        "Bounded live public metrics, not private data/raw logs. Market values change; no automatic reuse as current data."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-Kraken-history-live-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "Kraken OHLC HTTP200/site-Origin CORS, approximately35KB actual payload through adapter. Complete30/30 completedUTC windows2026Sep20\u2013Oct19 versus2025Sep20\u2013Oct19; average daily close YoY-47.4103%, traded XRP base-volume+77.5654%. Both years same venue.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://api.kraken.com/0/public/OHLC",
+      "limitations": [
+        "Actual daily price/base-volume evidence, not historical order-book depth, impact backtest or predictive price validation. Coinbase history/live browser behavior not established by this Kraken observation.",
+        "No raw payload/scratch-only artifact required as durable reference. Coverage/dates/units remain explicit; no unseen venue estimates."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-XRPL-live-unverified-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "unknown",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "Existing Render validated ledger-header read was previously HTTP200. A subsequent full XRPL snapshot attempt stopped onHTTP502 before dependent book/AMM reads. No live funded DEX/AMM same-hash binding is established.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md",
+      "limitations": [
+        "Unavailable remains unknown, not valid zero or proof of a bad pool/network. Source/synthetic ledger tests remain distinct from live service verification.",
+        "No new origin, backend/configuration/resource/signing/wallet change; global escrow/full-state crawl remains outside scope."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-CI-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
+      "recorded_at": "2026-10-20T12:51:51Z",
+      "scope": "Pipeline2967532360 succeeded at exactdf8c07f304c88913deca1a977b000fecaa4cd195. Runtime17316084716 passed717/fail0 includingfocused107; contracts11 critical pages,12tools/7tiers,sidebar24pages/5groups/29links. Validation17316084717 succeeded in existing advisory mode,6SEO tests; underlying validator exit1 on same unrelated missingrefs/sitemap asv1,nocastle-file finding.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2967532360",
+      "limitations": [
+        "Advisory validation is not strict sitewide clearance. V2 deployment remains pending; actual browser UI/CORS and live XRPL book/AMM binding unverified.",
+        "No P2P merge/configuration, extra service/provider/backend/signing or new animation. Stop all tools immediately on successful requested website deployment."
+      ],
+      "supersedes": []
     }
   ]
 }

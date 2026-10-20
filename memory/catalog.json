@@ -642,8 +642,8 @@
     {
       "path": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md",
       "indexed_on": "2026-10-20",
-      "bytes": 6651,
-      "sha256": "0786f07bb494d09283ac364ad2ff060d6c86b7a63f30e074c6b8e7483371b9a5",
+      "bytes": 8038,
+      "sha256": "df8d7539e85283b48c95bd07d718e04d4c9ba6e29baf0c1413f46189cfb35f1e",
       "classification": "selected-task-record"
     },
     {
@@ -1090,8 +1090,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-20",
-      "bytes": 141050,
-      "sha256": "32c57c87e127b661036226c7395d3b614ee28776462d25d003df9c488a33c979",
+      "bytes": 150370,
+      "sha256": "47af3b86df6e481e4c1d525edb4a4832d8f8dffb91778368c77af92885197eda",
       "classification": "current"
     },
     {
@@ -1349,8 +1349,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-20",
-      "bytes": 13587,
-      "sha256": "b4996c08f7c48e16245dfec452e456f6e19d436f69e77422b7971a0c2ec1e195",
+      "bytes": 13900,
+      "sha256": "9fa1c1959030e07ff0ea67a359a64eee4b87f8ff770b9319910953e097dfe862",
       "classification": "current"
     },
     {
