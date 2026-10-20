@@ -2043,6 +2043,96 @@
         "Source published to existing draft only, unmerged/undeployed. Hosting configuration and deployment remain held; no Render/browser/resource/wallet action."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-authority-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "8283373ef9d621c314ab1d068a1d770283303ab4",
+      "recorded_at": "2026-10-20T12:13:36Z",
+      "scope": "User authorizes isolated homepage Live Metrics animated XRP liquidity castle and publication. This separate task does not resume P2P MR111/backend PR2 or their configuration/release holds. No new provider/service/resource/account/bill; preserve existing signing JavaScript and CSP endpoint policy.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md",
+      "limitations": [
+        "Authority is not a deployment result. Candidate is committed with scoped checks passed; merge/production Pages deployment remains pending.",
+        "Actual browser/live-CORS QA unavailable; no post-deployment tool exception. Stop all tools immediately on successful requested website deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-source-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "8283373ef9d621c314ab1d068a1d770283303ab4",
+      "recorded_at": "2026-10-20T12:13:36Z",
+      "scope": "MR112 branchcodex/xrbc-liquidity-castle-20261020 candidate8283373ef9d621c314ab1d068a1d770283303ab4 isolates10 files from master60fdd38c3796a30ba6d587003ecb1f48c3749b19. Preserves14 original inline bodies,413 old IDs,CSP; metrics ID relocation/two existing anchor-line changes plus isolated markup/imports. New assets~71KB uncompressed, no animation library/new service. Separate Coinbase/Kraken bands,60srefresh/90sexpiry/429backoff/abort/motion/Explore guards; fixed ledger totalDrops BigInt context; unknown aggregate escrow.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/112",
+      "limitations": [
+        "ControllerSHA25647274028f34c2bdb15f189039bf929c3cfc6bf3e61f8ca30b1fd5f2b894c358f and UItestSHA2561a3d28adc5b9a200a0382b7774206b6b57c2733b0c6d7c8c88334f638c2be63c match local; specific file identities are not complete automatic-reuse fingerprints.",
+        "Source checks do not establish actual browser/mobile/live-CORS behavior or deployed values. No signing/CSP endpoint/P2P draft change; no wallet/provider account or infrastructure action."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-local-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "8283373ef9d621c314ab1d068a1d770283303ab4",
+      "recorded_at": "2026-10-20T12:13:36Z",
+      "scope": "41 focused model/reader/UI tests passed and root rerun passed, including active-Live-click cooldown fix. Test scope covers independent venue books,bands,freshness/90s expiry during pending fetch,read backoff/abort,truthful Explore/unknown data and source integration contracts. These41 are included in CI651, not additional totals.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/112",
+      "limitations": [
+        "Synthetic/source tests are not actual browser/full-page/mobile/reduced-motion/live-CORS verification. No new live feed success claim.",
+        "Relevant input/environment fingerprints are not claimed complete. No financial action, P2P merge or deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-static-artwork-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "8283373ef9d621c314ab1d068a1d770283303ab4",
+      "recorded_at": "2026-10-20T12:13:36Z",
+      "scope": "Standalone artwork PNG rendered through Inkscape and inspected with view_image; geometry and contrast accepted for translucent castle/towers/wall/gate/drawbridge/moat and colored market flows.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/112",
+      "limitations": [
+        "Static asset rendering only, not actual browser engine/full-page/mobile/CSS runtime or live-CORS QA. These were unavailable/unobserved.",
+        "No private screenshots/raw logs or wallet data published. Visual inspection cannot establish market data correctness or deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-castle-CI-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "8283373ef9d621c314ab1d068a1d770283303ab4",
+      "recorded_at": "2026-10-20T12:13:36Z",
+      "scope": "Pipeline2967382587 succeeded at exact8283373ef9d621c314ab1d068a1d770283303ab4. Runtime job17314971217 passed651 tests,fail0; verified11 critical pages,12 tools/7 tiers,24 sidebar pages/5 groups/29 links. Repository job17314971218 succeeded in existing advisory mode:6 SEO tests passed; underlying site validator exit1 on unrelated unchanged missing refs/sitemap, no new castle-file finding.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2967382587",
+      "limitations": [
+        "Advisory job success is not strict sitewide clearance. Existing missing refs include markets/,llms.txt,privacy,ecosystem guide/readiness data.",
+        "No deployment result, actual browser/mobile/live-CORS or live-site market observation. Homepage deployment pending; P2P/configuration holds unchanged. Stop all tools immediately when authorized website deployment succeeds."
+      ],
+      "supersedes": []
     }
   ]
 }

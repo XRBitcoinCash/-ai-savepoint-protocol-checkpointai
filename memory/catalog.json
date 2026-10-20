@@ -640,6 +640,13 @@
       "classification": "historical"
     },
     {
+      "path": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md",
+      "indexed_on": "2026-10-20",
+      "bytes": 6651,
+      "sha256": "0786f07bb494d09283ac364ad2ff060d6c86b7a63f30e074c6b8e7483371b9a5",
+      "classification": "selected-task-record"
+    },
+    {
       "path": "memory/active/XRBC-RECORD-HANDOFF-2026-10-15.md",
       "indexed_on": "2026-10-20",
       "bytes": 11817,
@@ -1083,8 +1090,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-20",
-      "bytes": 134845,
-      "sha256": "8cd03cfd8bfee5d2565fdfff862e6baa9adcf945ab2fc261286a1111946b41b7",
+      "bytes": 141050,
+      "sha256": "32c57c87e127b661036226c7395d3b614ee28776462d25d003df9c488a33c979",
       "classification": "current"
     },
     {
@@ -1342,8 +1349,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-20",
-      "bytes": 12361,
-      "sha256": "ebda5404170c7e77e1c5760b52665f3eb36a71b90207330d5a929edac41dc7dc",
+      "bytes": 13587,
+      "sha256": "b4996c08f7c48e16245dfec452e456f6e19d436f69e77422b7971a0c2ec1e195",
       "classification": "current"
     },
     {

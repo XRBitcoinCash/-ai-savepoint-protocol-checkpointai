@@ -376,6 +376,30 @@
       },
       "status": "device-journal-stateless-bridge-draft-CI-passed-runtime-testing-and-release-held",
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
+    },
+    "xrbc_liquidity_castle": {
+      "title": "XRBC homepage Live Metrics liquidity castle",
+      "match": [
+        "liquidity castle",
+        "XRP castle",
+        "Live Metrics castle",
+        "escrow wall",
+        "drawbridge",
+        "bid offered supply",
+        "liquidity pressure",
+        "homepage metrics animation"
+      ],
+      "read": [
+        "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "codex/xrbc-liquidity-castle-20261020",
+        "head": "8283373ef9d621c314ab1d068a1d770283303ab4",
+        "pipeline": "2967382587"
+      },
+      "status": "isolated-MR112-source-local-static-QA-CI-passed-homepage-deployment-pending",
+      "next_action": "After validated checkpoint publication/readback, merge authorized MR112 at exact8283373ef9d621c314ab1d068a1d770283303ab4 and poll production Pages. Candidate41 focused/651 CI tests passed; static artwork accepted, actual browser/live-CORS QA unavailable. Keep venues/demo/unknown escrow truthful, old signing/CSP and P2P holds unchanged. Stop all tools immediately once website deployment succeeds; no post-deploy QA/checkpoint."
     }
   }
 }
