@@ -1915,6 +1915,134 @@
         "No Neon account, resource, service configuration, architecture rewrite or wallet action occurred. Render hold remains active."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-device-redesign-authority-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "User explicitly selects each initiating browser/device as local journal/coordinator. Existing Render only stateless Xaman credential bridge, no database. Any new service/cost and owner tower serving other users are rejected. Initiator stays on existing Advanced Tokenization page; recipient only scans Xaman QR/deep link, no second browser/proof link/invitation or approval files. Repository redesign authorized; deployment/configuration/infrastructure held.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-RECORD-HANDOFF-2026-10-20.md",
+      "limitations": [
+        "Supersedes advisory-only/unselected local-storage design status; prior no-spend/Render release hold remains applicable. No account/service/resource/configuration/merge/deploy/wallet action.",
+        "No claim of global cross-device browser CAS. Completed assets/transactions remain on XRPL; local journal stores workflow/recovery state."
+      ],
+      "supersedes": [
+        "XRBC-record-handoff-local-storage-design-review-2026-10-20"
+      ]
+    },
+    {
+      "id": "XRBC-record-handoff-device-frontend-source-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "0551e8a450089563b802a406d86c808821e9ed2b",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "Draft MR !111 publishes18 exact tested remote blobs. Initiator IndexedDB journal/local coordinator/client and stateless bridge flow replace database coordination; same-origin CAS/Web Locks only. Frozen native Account/Sequence/plan and original NFT burn constrain valid settlement. Gap-free complete_ledgers history coverage protects absence recovery. Known no-dispatch rollback needs exact code/status503/dispatched=false/own successful CAS release; final restores approved and senderRequest=null, ambiguities stay locked. Fresh review preserves form.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/111",
+      "limitations": [
+        "Module Git blob identities: store b909ae5ff7524441490ea4a7cd1e4ddae016838b; core55e58acac7456c200fb8437e7daa1fca4fdf3dbf; clientd2a06d9e1b97356a88bc8dfc6a85e865500b3a90. These do not claim complete relevant-input/environment fingerprints.",
+        "Source/synthetic checks do not establish actual Edge storage persistence, installed-wallet/provider/OAuth audience or two-wallet settlement. No global reservation service or automatic final signing."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-device-frontend-local-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "0551e8a450089563b802a406d86c808821e9ed2b",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "Focused frontend local suite passed140/140. Core18, IndexedDB14 fixture and client18 checks are included subsets, not additional totals. Covers local journal/CAS/uncertain recovery and reviewed provider pre-dispatch behavior; includes final rollback stale-test adaptation and preserved form.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/111",
+      "limitations": [
+        "Synthetic IndexedDB fixtures; no actual browser engine or real-profile persistence/reload, live provider, deployed OAuth audience, wallet/indexer or settlement observation.",
+        "No complete automatic-reuse input/environment fingerprints claimed; exact18 source readbacks were separately matched."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-device-frontend-CI-2026-10-20",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "0551e8a450089563b802a406d86c808821e9ed2b",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "MR !111 pipeline2965782825 succeeded at exact head0551e8a450089563b802a406d86c808821e9ed2b, parent8ca28e61. Runtime job17303421541 passed659 frontend and113 reference-backend tests, zero failures/skips,11 critical pages,12 tools/7 tiers,24 sidebar pages. Repository job17303421542 succeeded in existing advisory mode. All18 remote changed blobs match tested local. Title/body updated, draft/open/unmerged.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2965782825",
+      "limitations": [
+        "Advisory repository validation is not strict sitewide clearance. Source is published, not deployed; no merge/deployment job result established.",
+        "Fixture/source CI does not verify actual browser persistence/reload, existing OAuth audience/provider, installed wallet/indexer or live settlement."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-stateless-backend-source-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "45645b496c35c07ed90a5e765059cd977b4d7bd2",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "Existing Draft PR #2 updated to45645b496c35c07ed90a5e765059cd977b4d7bd2, parentb353f224, tree591e89c3f7d77edb1371d2ca2e996a556bef3b98. All12 changed blobs exactly match tested inputs. New runtime routes are a stateless authenticated Xaman credential bridge without coordinator PostgreSQL; initiator journal owns workflow state.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/pull/2",
+      "limitations": [
+        "Review remains draft/unmerged/undeployed, recorded main/livebd225b2 unchanged. Source/readback is not actual existing app/audience/provider compatibility.",
+        "No new service/resource/cost/configuration, Render/browser operation or wallet request occurred during redesign."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-stateless-backend-local-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "45645b496c35c07ed90a5e765059cd977b4d7bd2",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "Full backend local suite passed179/179 after stateless bridge integration. Exact12 published file blobs/tree match tested source.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/pull/2",
+      "limitations": [
+        "Source/synthetic tests only; no real deployed provider/OAuth audience or wallet check. Prior PostgreSQL fixtures are not evidence for actual browser-local durability.",
+        "No complete relevant-input/environment fingerprints claimed; publication is separate from merge/deployment/live settlement."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-record-handoff-stateless-backend-CI-2026-10-20",
+      "project": "XRBitcoinCash/xrbitcoincash-source",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "45645b496c35c07ed90a5e765059cd977b4d7bd2",
+      "recorded_at": "2026-10-20T02:30:19Z",
+      "scope": "GitHub API run39358811935/job118419856218 succeeded at Draft PR #2 head45645b496c35c07ed90a5e765059cd977b4d7bd2,179/179 tests, zero failures/skips. Exact12 changed blobs read back against tested local source; tree591e89c3f7d77edb1371d2ca2e996a556bef3b98.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/actions/runs/39358811935",
+      "limitations": [
+        "CI is not actual Edge persistence/reload, live provider/OAuth audience, wallet/indexer acceptance or two-wallet settlement. No new infrastructure is needed by this design.",
+        "Source published to existing draft only, unmerged/undeployed. Hosting configuration and deployment remain held; no Render/browser/resource/wallet action."
+      ],
+      "supersedes": []
     }
   ]
 }

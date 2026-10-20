@@ -340,7 +340,7 @@
       "next_action": "Use portable working memory 6.1 with the current user task; validate and publish only requested memory changes, then await the next request."
     },
     "xrbc_record_handoff": {
-      "title": "XRBC P2P no-file Xaman coordinator integration",
+      "title": "XRBC P2P initiator-device journal and stateless Xaman bridge",
       "match": [
         "P2P Record Handoff",
         "record handoff",
@@ -371,11 +371,11 @@
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
         "branch": "codex/xrbc-xaman-handoff-coordinator-20261015",
-        "head": "8ca28e61f024956dd30338880c6ac25427e74665",
-        "pipeline": "2962668083"
+        "head": "0551e8a450089563b802a406d86c808821e9ed2b",
+        "pipeline": "2965782825"
       },
-      "status": "Render-spend-declined-release-held-advisory-local-and-free-shared-storage-options",
-      "next_action": "Explain current off-ledger coordinator state versus completed XRPL assets and help the user choose a zero-cost build/storage approach; await implementation direction. The $6.30/month Render proposal is declined. No Render/browser operations, infrastructure/configuration, merge, deployment or wallet action; no architecture rewrite or Neon/local setup selected. Browser storage is profile-local and cannot replace global CAS/recovery guarantees. Preserve exact uncertain requests and unchanged code/CI evidence."
+      "status": "device-journal-stateless-bridge-draft-CI-passed-runtime-testing-and-release-held",
+      "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     }
   }
 }
