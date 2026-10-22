@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-15",
+  "updated": "2026-10-22",
   "records": [
     {
       "id": "XRBC-tokenization-XLS-predeploy-local-2026-10-12",
@@ -2455,6 +2455,112 @@
       "limitations": [
         "Advisory success is not strict sitewide clearance, and snapshot-job success is not an actual new browser-layout/runtime test.",
         "Final source committed/local/CI passed; merge/deployment pending. Keep P2P/configuration holds intact and stop all tools immediately after successful requested website deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-deployed-reconciled-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "ff6d8a518edce8f7cfcf6294d6c8bdfde2efbacc",
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "Prior MR116 release reconciled on a new explicit user turn: merge ff6d8a518edce8f7cfcf6294d6c8bdfde2efbacc from candidate1559bc40; production2974495489 deploy-pages17367911291 succeeded. Runtime17367911286,validate17367911287,snapshot17367911288,semgrep17367911289,secret_detection17367911290 succeeded. Fresh master read confirmedff6d8a51.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974495489",
+      "limitations": [
+        "Observed release status does not establish current quotes, full live behavior or new MR117 deployment. Prior pending record retained as predeployment history."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-source-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "f58aff4d148c4a0538e3b6ef1ec6388be9609e52",
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "MR117 at exactf58aff4d148c4a0538e3b6ef1ec6388be9609e52, baselineff6d8a51, nine paths. Adds fixed-origin scoped reader, five-minute channel, immutable24h observations, amounts/links and Nexus with separate bridges. Index/controller/reader remote-local SHA256 match;14inline bodies, existing indexIDs and CSP unchanged. Independent review resolved CSS collision and history-node binding gap; no remaining material source finding.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/117",
+      "limitations": [
+        "Two attributed Evernorth wallets are not company-confirmed/complete;20 published Ripple escrow accounts are not all-XRPL/company-complete. No backend/signing/P2P/service/storage/configuration change.",
+        "Source review and static SVG inspection do not certify new browser/full-page/mobile layout, live CORS or predictive validity."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-local-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "f58aff4d148c4a0538e3b6ef1ec6388be9609e52",
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "166/166 focused castle/saved-display tests pass,0fail/cancel/skip; included within CI786. Reader31/UI27 cover exact drops, bounded pagination/resources, APIv2 aliases, unbound zero gate, partial positive retention, five-minute polling, visibility, deadlines and24h expiry. Syntax passes. Later CSS-only fix passed independent scoped-selector/brace review.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/117",
+      "limitations": [
+        "Synthetic tests are not a live company inventory, zero-history proof or browser rendering. No financial transaction. Full environment/relevant-input fingerprint was not recorded."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-CI-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "f58aff4d148c4a0538e3b6ef1ec6388be9609e52",
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "Exact candidate pipeline2974581160 succeeded. Runtime17368475733:786tests/786pass/0fail/cancel/skip, observed from bounded log tail. Validate17368475734 and homepage-snapshot17368475735 succeeded.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974581160",
+      "limitations": [
+        "Validation is existing advisory mode, not strict sitewide clearance. Prior unrelated metadata/sitemap/reference findings not claimed fixed. Snapshot success is not new full browser/mobile proof.",
+        "Candidate committed/local/CI passed; merge and deployment pending this checkpoint. Stop all tools immediately on deployment success."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-live-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "Bounded pre-final-reader HTTP smoke at validated ledger107817910/hashE1EF2C5227AACD9C9BE1C160ED63C050AC2735474027C1B5A6910D2869CB08C5 closed2026-10-22T02:21:21Z;47requests/66033responsebytes. Two attributed wallet balances45920883000423drops;20published-owner escrow31400000000000000drops. Two observed outgoing events41963819000000+5000000drops within24h.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
+      "limitations": [
+        "Historical public-wallet observation, not company-complete ownership, current quote, proof of purchase/sale or browser/CORS result. Smoke preceded final DeliverMax alias and node-binding guards, so it is not exact-final-reader live certification.",
+        "The smoke Ripple complete-zero flag was explicitly rejected after upstream routing review. Final reader cannot bind server_info coverage to account_tx source: no positive event means unknown/null; positive events remain partial. No new scan repeated solely to reconfirm unchanged amounts."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-research-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T02:35:31Z",
+      "scope": "Official Ripple TOML HTTP200 published20addresses, matching reader. Primary XRPL account_objects/account_tx/server_info documentation reviewed. Independent XRPInsights hourly dataset reviewed for public attribution only;2labelled+11inferred wallets, latterexcluded. No official company-complete real-time Evernorth feed verified. Existing backend routing forwards generic RPC to a public s1.ripple.com hostname without serving-node binding.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/blob/f58aff4d148c4a0538e3b6ef1ec6388be9609e52/docs/liquidity-castle.md",
+      "limitations": [
+        "Independent publisher attribution is not company ownership confirmation; cumulative outflow/signed-only history is not24h gross coverage. No runtime independent feed or extra CSP origin.",
+        "XRPSCAN account pages/fact endpoint returned403; no unchanged retries, invented response schema/cadence or global escrow total. Escrow object count is not amount. Official treasury and escrow disclosures retain different reported dates."
       ],
       "supersedes": []
     }

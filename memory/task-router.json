@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC liquidity castle Nexus loading and reported context",
+      "title": "XRBC monitored XRP vault balances and rolling drawbridge activity",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -396,19 +396,22 @@
         "castle loading",
         "Nexus timer",
         "Evernorth castle",
-        "Ripple escrow context"
+        "Ripple escrow context",
+        "Evernorth live balance",
+        "24 hour escrow activity",
+        "Nexus vault amounts"
       ],
       "read": [
         "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/xrbc-loading-treasury-20261022",
-        "head": "1559bc40f2c05e1908ee382bbdb757b543597eb0",
-        "pipeline": "2974487116"
+        "branch": "codex/xrbc-vault-bridges-20261022",
+        "head": "f58aff4d148c4a0538e3b6ef1ec6388be9609e52",
+        "pipeline": "2974581160"
       },
-      "status": "v2-deployed-reconciled-Oct22-Nexus-timer-motion-context-source-CI-passed-deployment-pending",
-      "next_action": "After validated checkpoint publication/readback, merge MR116 exact 1559bc40f2c05e1908ee382bbdb757b543597eb0 and follow production Pages. Local 129 included in CI 749; static artwork accepted, no new candidate browser proof. Preserve saved elapsed work, finite read/status handling, illustrative red retail/purple institutions and dated Ripple escrow/Evernorth treasury context. No P2P/backend/library/service changes. Stop all tools immediately after successful website deployment."
+      "status": "MR116-deployed-reconciled-MR117-scoped-vaults-24h-bridges-source-CI-passed-deployment-pending",
+      "next_action": "After validated checkpoint publication/readback, merge MR117 exact f58aff4d148c4a0538e3b6ef1ec6388be9609e52 and follow production Pages. Local166 included in CI786. Five-minute scoped balances; verified24h positive events retained; unbound history never proves zero. Two attributed Evernorth wallets are not company-complete;20 Ripple escrow owners are not all-XRPL inventory. Preserve all other routes/P2P/backend holds. Stop all tools immediately after successful website deployment."
     }
   }
 }
