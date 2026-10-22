@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus recovery, 17 exchange cohorts and Render-first loading",
+      "title": "XRBC Liquidity Nexus catapults, smaller armies and cross-venue depth repair",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -406,19 +406,23 @@
         "Binance",
         "Bitrue",
         "tank battlefield",
-        "Render-first metrics"
+        "Render-first metrics",
+        "catapult battlefield",
+        "smaller soldiers",
+        "Nexus Depth unavailable",
+        "crossed composite book"
       ],
       "read": [
         "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/xrbc-nexus-recovery-20261022",
-        "head": "98e2fab62fb11537f90ce893d2a003903995aad5",
-        "pipeline": "2974813378"
+        "branch": "codex/xrbc-nexus-catapults-20261022",
+        "head": "dc9b87830609a576d0674143a6d5e16da9b1319a",
+        "pipeline": "2974916075"
       },
-      "status": "MR118-deployed-reconciled-MR119-17-source-vault-motion-local-CI-passed-deployment-pending",
-      "next_action": "After validated checkpoint publication/readback, merge MR119 exact98e2fab62fb11537f90ce893d2a003903995aad5 and follow production Pages. Read Render-first rule/contract before changes. Local234 included in CI854; actual native Canvas12s desktop/mobile recordings inspected with decoded atlas.17 configured sources are not17 connected feeds: Bitrue and4others returned unusable HTML,2validsources lacked CORS headers. No proxy/bypass/newservice/backend/wallet/P2P. Browser local preview denied by security, not bypassed. Immediately stop ALL tools on requested deployment success; reconcile/test user browser only on new explicit turn."
+      "status": "MR119-deployed-reconciled-MR120-catapults-depth-source-local-QA-CI-passed-deployment-pending",
+      "next_action": "Publish validated checkpoint and read back selected route/brief, then merge reviewed MR120 exactdc9b87830609a576d0674143a6d5e16da9b1319a and follow production Pages. Pipeline2974916075 success with860tests/pass; local240 included. Native Canvas desktop/mobile/wide-state smaller-army/catapult QA passed, not browser CSS/CSP or liveavailability proof. Non-executable cross-venue depth preserves native quotes/five-second alignment and strict executable walker. Preserve Render-first limits, provider failures, held P2P/backend and browser-preview block. Immediately stop all tools at requested deployment success."
     }
   }
 }

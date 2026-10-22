@@ -2814,6 +2814,97 @@
         "This is a localpreviewpolicyblock, not evidenceofcandidatefailure or productionserviceoutage. NativeCanvas recordings/sourceCSScontrastreview are independent scopes, notbrowser/CSP/fullpagereplacement.",
         "No newbrowserinstallation repeated; historicaltruncatedChromiumdownload notcircumvented."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "eff4921ebe37cb28ea0627005793557b0f59895a",
+      "recorded_at": "2026-10-22T04:59:49Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-deployed-2026-10-22",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "Reconciled on the next explicit user turn: MR119 merged as eff4921ebe37cb28ea0627005793557b0f59895a. Production pipeline2974823596 and all six jobs, including deploy-pages17369951304, succeeded. All tools stopped immediately at deployment success; user subsequently requests catapult and smaller-army refinement.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974823596",
+      "limitations": [
+        "Deployment success is separate from visual acceptance or complete source availability. No post-deployment browser test occurred until a new explicit user request.",
+        "MR119 pending-release instruction is historical and completed; do not execute it again."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "eff4921ebe37cb28ea0627005793557b0f59895a",
+      "recorded_at": "2026-10-22T04:59:49Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-nexus-cross-venue-depth-browser-diagnosis-2026-10-22",
+      "kind": "browser",
+      "status": "passed",
+      "scope": "Authorized live page read and public evidence export generated2026-10-22T04:45:58.050Z: Coinbase/Kraken/Bitstamp USD books individually usable and received within261ms. Deployed controller/model replay rejects combined reading as crossed-composite-book because Bitstamp bid1.34454 exceeds Kraken ask1.34446; selected display retains Kraken1.493436849x while terrain says Depth unavailable. Eight complete books across separate quotes,2 partial,7 unreadable in that browser.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/eff4921ebe37cb28ea0627005793557b0f59895a",
+      "limitations": [
+        "Dated captured book observation, not a present quote, order count, completed trade, arbitrage instruction or global coverage. Replayed exported data; no second17-source or47-call probe.",
+        "Unreadable providers reported network-or-CORS; exact cause unproven. Render ledger read failed, but current account/service cause was not established.",
+        "User screenshot establishes oversized soldiers/tanks and contradictory saved/unavailable labels; refinement authorization does not imply final visual acceptance."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "dc9b87830609a576d0674143a6d5e16da9b1319a",
+      "recorded_at": "2026-10-22T05:09:31Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/120",
+      "supersedes": [],
+      "id": "XRBC-nexus-catapults-source-local-2026-10-22",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "2394e0a2472ccf3e2c9191ed8c8fcb118b8495d1cd93d853fa128cf808905cfb",
+      "scope": "Final12-file MR120 candidate: all remote changed blob hashes match local; local240/240 focused tests pass, included in CI860 rather than additional. Original14inline scripts/index IDs/CSP unchanged; four asset version references updated. Captured live three-USD-book replay yields bid11169451.168460164/ask7586138.937474675=1.4723499346003708x in a per-venue-band non-executable summary; strict walker rejects non-executable-depth-summary. Exact model arithmetic, native quotes, alignment/partial/stale checks and precise display states remain guarded.",
+      "limitations": [
+        "Local tests are not live availability or browser CSS/CSP proof. Full environment fingerprint not complete; no automatic cross-environment reuse certificate.",
+        "Manifest digest is SHA256 of the release manifest file. No service, backend, provider-origin, request-budget, storage, wallet or held-P2P change. Merge/deployment pending at predeployment save."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "dc9b87830609a576d0674143a6d5e16da9b1319a",
+      "recorded_at": "2026-10-22T05:09:31Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/120",
+      "supersedes": [],
+      "id": "XRBC-nexus-catapults-motion-2026-10-22",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "2999ce13c3d8a24013ad48a37a3301eb4b6a8e6eb5bf2cc6df12c094c03511fe",
+      "scope": "Root and independent QA inspected final actual Canvas2D renderer with decoded unchanged atlas:12s/24fps/288frames at1000x560 and390x570 plus1600x620 measured/saved/pending/unreadable states. Much smaller infantry spans terrain; wooden opposing catapults, source price/target labels, front dust and observed-execution effects reviewed. Counts reverse101/67to42/126 desktop and50/34to21/63 mobile. Pause/reduced raw pixels identical; paused events rejected. CSS8bb032cb1a9a364b58b1bc803de7ca99f2308499b3ff3d61a8c9e4a7fa3a375d.",
+      "limitations": [
+        "Synthetic watermarked observations/fixed geometry, not live trades, browser full-page CSS/CSP, device performance or user visual acceptance. Original atlas is painted frames, not rigged3D.",
+        "Targets are opposing observed order levels, not price forecasts or actual matched counterparties. Ambient dust/marching distinct from launches requiring accepted executions. Prior browser-preview block was not retried or bypassed."
+      ]
+    },
+    {
+      "id": "XRBC-nexus-catapults-CI-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "dc9b87830609a576d0674143a6d5e16da9b1319a",
+      "recorded_at": "2026-10-22T05:10:03Z",
+      "scope": "MR120 exactdc9b87830609a576d0674143a6d5e16da9b1319a pipeline2974916075 succeeds; runtime-contracts17370498761 bounded trace860tests/pass,0fail/cancel/skip. Local240 tests are included. validate-repository17370498762 andhomepage-snapshot17370498763 succeed; exact candidate mergeable.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974916075",
+      "limitations": [
+        "Existing advisory validator and snapshot job do not establish strict sitewide clearance, live feed availability, browser CSS/CSP/full-page/mobile behavior or user visual acceptance.",
+        "Merge and deployment remain pending at this predeployment checkpoint. All-tools stop on requested website deployment success; reconcile only after a new explicit user request."
+      ],
+      "supersedes": []
     }
   ]
 }
