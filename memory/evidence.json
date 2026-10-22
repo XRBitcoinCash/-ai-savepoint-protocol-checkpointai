@@ -2277,6 +2277,186 @@
         "No P2P merge/configuration, extra service/provider/backend/signing or new animation. Stop all tools immediately on successful requested website deployment."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-accuracy-v2-deployment-reconciled-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "57b6b17a00df0cbcb6a4c85aea11c530a1acc8b2",
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "New authorized turn reconciles prior MR !113 release: production merge 57b6b17a00df0cbcb6a4c85aea11c530a1acc8b2, pipeline 2967573807 and deploy-pages job 17316407586 succeeded. Canonical checkpoint 6ca82d181612ca75a55a6bc263ae209824f95a71 had still recorded deployment pending.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2967573807",
+      "limitations": [
+        "Release evidence does not establish a later source revision deployment, new UI behavior or live DEX/AMM binding. Fresh source master 4595c11a is a distinct observation.",
+        "This reconciliation occurs in a new user-authorized turn, not after the prior mandatory deployment stop."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Nexus-Oct22-authority-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "User now authorizes timer/loading/movement repairs and refined Evernorth/Ripple/retail/institutional castle Nexus. Further animation is authorized within this isolated feature, superseding the earlier accuracy-first animation hold only here. Preserve shared saved elapsed changes on source master 4595c11a48ab28b2b68cc3e02aef963afce3b267. No library/new service/backend/signing/storage/P2P/configuration work.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
+      "limitations": [
+        "Candidate source/tests/CI and new browser behavior are not established by authority. P2P MR !111/backend PR #2 holds remain unchanged.",
+        "Reported company holdings/escrow are dated context; public order-party identities remain unknown and colored retail/institutional figures symbolic."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-combined-browser-stuck-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "browser",
+      "status": "failed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "Actual browser on the existing public page showed both Coinbase and Kraken books fresh but incoherent combined selection at \u00b11% remained at Loading/Gathering. This is the observed loading-state defect motivating bounded deadlines and explicit terminal partial/unavailable reasons.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://xrbitcoincash.com/",
+      "limitations": [
+        "Observation concerns the prior deployed page; exact served-commit binding was not observed. No claim that the new timer/scene candidate has been browser tested.",
+        "Only extension console errors were observed, not established new application errors or complete error freedom. Fresh source master is not inferred to be deployed from this observation."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Kraken-only-browser-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "Explicit Kraken-only browser selection at \u00b11% worked at 2026-10-22T01:25:22Z, displaying approximately $4.83M bids / $4.10M asks and ratio 1.18x. This is a real browser-selected venue snapshot.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://xrbitcoincash.com/",
+      "limitations": [
+        "Single venue/time/band; served-commit binding not observed. Not proof of coherent combined books, all-market depth, new UI or live XRPL DEX/AMM.",
+        "Snapshot values are historical, not a current quote or automatic reusable browser/live-data certificate."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Ripple-reported-escrow-context-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "Primary Ripple XRP page reports 32.6 billion XRP in escrow as of June 30, 2026. Root opened the primary page and verified the dated figure.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://ripple.com/xrp/",
+      "limitations": [
+        "Ripple-reported/as-of context, not independently refreshed validated total of all XRPL escrow, freely tradable depth or a current release/sale indication.",
+        "No full-state crawl or invented global escrow aggregate. Keep report date/source visible and distinguish observed market data from reported holdings."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Evernorth-reported-treasury-context-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "Primary Evernorth release dated October 14, 2026 reports 473 million XRP in treasury holdings.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://www.evernorth.xyz/press-release-10-14-2026",
+      "limitations": [
+        "Treasury is not escrow. A dated company report does not prove current tradable liquidity, selling intention or identity of observed exchange orders/trades.",
+        "Retail red/institutional purple figures are symbolic; Evernorth pieces are gold; institutional participants have separate purple banners. Do not attribute real orders to Evernorth/Ripple or imply endorsement/partnership."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Nexus-static-artwork-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-22T01:33:05Z",
+      "scope": "Root inspected a rendered static SVG artwork proof: Evernorth left / Ripple right without overlap, banners clear; R/E pieces stationary within holdings areas with no invented release/sale flow. Final institutional participants are purple; Evernorth pieces gold; institutional banners purple.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
+      "limitations": [
+        "Static artwork inspection only, not an actual new browser/full-page/mobile/timer/live-data test.",
+        "No screenshot/raw log/private wallet data is published or used as a durable public memory pointer."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Nexus-source-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "1559bc40f2c05e1908ee382bbdb757b543597eb0",
+      "recorded_at": "2026-10-22T01:40:21Z",
+      "scope": "MR !116 branch codex/xrbc-loading-treasury-20261022 final tip 1559bc40f2c05e1908ee382bbdb757b543597eb0, parent 7c892e7450dc7789639877ccc5bbbb2f40daf502, baseline 4595c11a48ab28b2b68cc3e02aef963afce3b267. Eleven-path source scope preserves saved elapsed work, 14 inline bodies, existing IDs and CSP; index changes six asset versions only. Finite read deadlines/terminal states, actual elapsed timer, bounded ambient motion, saved observation display-only copy between requests and dated context refine the existing visual.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/116",
+      "limitations": [
+        "Final controller remote/local SHA256 c5489773e3b29e4d9e7ea9a1299e32417f498a341ed1448fba8592867d213f05 matches; specific file identity is not a full relevant-input/environment fingerprint.",
+        "No new browser proof, service/library/origin/backend/signing/storage/P2P/configuration change. Reported treasury/escrow and symbolic identity remain separate from measured order books."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Nexus-local-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "1559bc40f2c05e1908ee382bbdb757b543597eb0",
+      "recorded_at": "2026-10-22T01:40:21Z",
+      "scope": "All 129 focused tests passed and root rerun passed again at the final tip, including saved display behavior, bounded reader deadlines and source/UI contracts. The 129 are included within CI 749, not additional tests.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/116",
+      "limitations": [
+        "Source/synthetic results are not actual new browser/full-page/mobile/timer/live-CORS or live XRPL DEX/AMM verification.",
+        "Static artwork inspection and prior-page browser snapshots have their own limited evidence; no predictive price or company order-attribution claim."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-liquidity-Nexus-CI-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "1559bc40f2c05e1908ee382bbdb757b543597eb0",
+      "recorded_at": "2026-10-22T01:40:21Z",
+      "scope": "Final-tip pipeline 2974487116 succeeded at exact 1559bc40f2c05e1908ee382bbdb757b543597eb0. Runtime 17367854814 verified 749 tests / 749 pass / 0 fail or cancel, contracts 11 pages, gates 12 tools / 7 tiers, sidebar 24 pages / 5 groups / 29 links. Validation 17367854815 succeeded in existing advisory mode, six SEO tests; underlying validator exit 1 on unrelated universal-AI/TOML-license metadata, sitemap/markets and missing refs outside the 11 changed paths, no castle findings. Homepage-snapshot 17367854816 succeeded.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974487116",
+      "limitations": [
+        "Advisory success is not strict sitewide clearance, and snapshot-job success is not an actual new browser-layout/runtime test.",
+        "Final source committed/local/CI passed; merge/deployment pending. Keep P2P/configuration holds intact and stop all tools immediately after successful requested website deployment."
+      ],
+      "supersedes": []
     }
   ]
 }

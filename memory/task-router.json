@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-20",
+  "updated": "2026-10-22",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Live Metrics liquidity accuracy and YoY evidence",
+      "title": "XRBC liquidity castle Nexus loading and reported context",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -392,19 +392,23 @@
         "major exchange metrics",
         "XRP RLUSD metrics",
         "year over year liquidity",
-        "YoY price volume"
+        "YoY price volume",
+        "castle loading",
+        "Nexus timer",
+        "Evernorth castle",
+        "Ripple escrow context"
       ],
       "read": [
-        "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-20.md"
+        "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/xrbc-liquidity-evidence-20261020",
-        "head": "df8c07f304c88913deca1a977b000fecaa4cd195",
-        "pipeline": "2967532360"
+        "branch": "codex/xrbc-loading-treasury-20261022",
+        "head": "1559bc40f2c05e1908ee382bbdb757b543597eb0",
+        "pipeline": "2974487116"
       },
-      "status": "v1-deployed-reconciled-v2-accuracy-source-local-live-Kraken-CI-passed-deployment-pending",
-      "next_action": "After validated checkpoint publication/readback, merge authorized MR113 exactdf8c07f304c88913deca1a977b000fecaa4cd195 and follow production Pages. Local107 included in717 CI; live Kraken depth/history observations bounded, browser and live XRPL DEX/AMM binding unverified. Preserve actual nativeUSD notional/common coverage, separate RLUSD ledger units, completedUTC YoY evidence (not depth backtest), unknown escrow/venue estimates. No further animation/new origins/backend/signing/P2P changes. Stop all tools immediately after successful website deployment."
+      "status": "v2-deployed-reconciled-Oct22-Nexus-timer-motion-context-source-CI-passed-deployment-pending",
+      "next_action": "After validated checkpoint publication/readback, merge MR116 exact 1559bc40f2c05e1908ee382bbdb757b543597eb0 and follow production Pages. Local 129 included in CI 749; static artwork accepted, no new candidate browser proof. Preserve saved elapsed work, finite read/status handling, illustrative red retail/purple institutions and dated Ripple escrow/Evernorth treasury context. No P2P/backend/library/service changes. Stop all tools immediately after successful website deployment."
     }
   }
 }
