@@ -2563,6 +2563,129 @@
         "XRPSCAN account pages/fact endpoint returned403; no unchanged retries, invented response schema/cadence or global escrow total. Escrow object count is not amount. Official treasury and escrow disclosures retain different reported dates."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-vault-deployed-reconciled-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "bc2e926e6999552c6d428a90234b7dbf57391258",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "MR117 candidatef58aff4d merged as bc2e926e6999552c6d428a90234b7dbf57391258. Production2974592537 /deploy-pages17368552609 success; runtime17368552604,validate17368552605,snapshot17368552606,semgrep17368552607,secret_detection17368552608 success. Reconciled on this new explicit userturn; freshmasterconfirmedbc2e926.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974592537",
+      "limitations": [
+        "Prior checkpoint a3a1296 was predeployment and necessarily pending. Release observation is not current quote, all-feature live proof or new MR118 deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-source-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "MR118 finaldf961c10b7bfcfb2553385b88dfbdcfdc81a975d (parent executablee748feb8; baselinebc2e926),16paths. First-main metricssection, Base64 art, pinned PixiCSP/Canvasfallback, validated neutralone-ledger reader, separateCEXexecutionvolleys. Remote/localindex,renderer,art,readerhashesmatch. All14inlinebodies,CSP,existingIDmultiset unchanged; terminal/walletmarkup preserved. Independent review clear.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/118",
+      "limitations": [
+        "No new service/subscription/storage/origin/backend/signing/P2P change. Generatedarchitecture/units illustrative; no predictivepricegain/globalmarket/companytradeidentity claim.",
+        "Source checks cannot certify GPU/browser/mobile behavior. Dependency notices and pinned integrities preserved."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-local-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "196/196 focused castle/cinema/saved-display tests pass,0fail/cancel/skip. Included in CI816, not additional. Reader19/renderer8/UI30 cover bounds, exactdrops/ledgeridentity, gates, retainedIDdedup, lifecycle, savedloadingdates, source-specificneutralactivity and unchangedheadlinearithmetic. Syntax passes. VMvendorload with Function construction blocked succeeds.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/118",
+      "limitations": [
+        "VMblockedFunction test is not a browser/WebGL/CSP execution proof. NativeCanvas/static art checks have separate narrow scope. Full environment/relevant-input fingerprint not recorded."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-CI-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "Exactdf961c10 pipeline2974661998 success. Runtime17368983261 boundedlogtail:816tests/816pass/0fail/cancel/skip. Validate17368983262 andhomepage-snapshot17368983263 success.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974661998",
+      "limitations": [
+        "Existing advisory validator success is not strict sitewide clearance; unrelated metadata/sitemap/missing-reference findings not claimed fixed. Snapshot job is not full new browser/mobile proof.",
+        "Source/local/CI passed; merge/deployment pending. Mandatory all-tools stop on requested website deployment success."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-static-art-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "Root inspected generated2:1Roman/Persianart and desktop1000x500/mobile360x440 static frames using actual Canvasfallback code with fakeDOM/preinstallednativeCanvas and one synthetic accepted Krakenbuy at+900ms. Actualsoldiers/shields/projectiles visible. Artmodule391101B; decodedWebP292538B/1774x887/SHA256c2aa99b83bcde0a493b423d2e179d952d50621419d2583ad15f67c1b37b1be7e.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/118",
+      "limitations": [
+        "Not actual browser HTML/card/CSS layout, mobile geometry, Pixi/WebGL, CSP or live trading proof. Generatedartcontains no financialdata/people/text and represents no realcompanybuilding.",
+        "Exact prompt/provenance lives in application docs; rawimages/screenshots/temporarypaths not published to memory."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-ledger-live-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "Finalreader2efde69f... bounded2-request HTTPsmoke succeeded: validatedledger107818489/hashF7F8648B01C7C2C0834B36254F4EDFE919FD9FB6FC27CF32A1275804EAD9F3BF closed2026-10-22T02:59:10Z. DirectXRP/RLUSDbook1487598drops=1.487598XRP /2RLUSD. Finalremote readerhash matches testedmodule.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/118",
+      "limitations": [
+        "ONE sampledledger/directbook, not continuous/interval/allXRPLvolume, AMMvolume, individualtradecount/aggressordirection/companytrade or currentquote. No financialtransaction or browser/CORS proof.",
+        "ExistingallowlistedRenderendpoint only. Adapter rejects malformed/stale/mismatched data; neutralpulse never enters restingUSDdepthmath."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-cinematic-browser-unavailable-2026-10-22",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "browser",
+      "status": "unknown",
+      "source_revision": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
+      "recorded_at": "2026-10-22T03:15:34Z",
+      "scope": "Fullbrowserrendering was not performed. One bounded official Playwright Chromiuminstaller invocation failed on truncated/zero-length archives; no second invocation/alternate route. Renderer/source/static/CI checks continued independently.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/118",
+      "limitations": [
+        "Browser/GPU/CSP/full-page/mobilegeometry remains unknown, not failedapplicationbehavior. NativeCanvas fakeDOM frames cannot substitute for it. No secret/session/wallet used."
+      ],
+      "supersedes": []
     }
   ]
 }
