@@ -16,6 +16,7 @@ Bare `continue` follows the active conversation. If its task is unavailable or m
 - Keep the user informed at least once per minute during active work; report concrete blockers promptly. Stop only the dependent work.
 - User reviews and signs wallet transactions. Preserve fresh quotes, identities, fees, limits, pending/duplicate guards, cancellation/expiry recovery and validated ledger checks. Do not automatically replace ambiguous wallet requests.
 - Preserve working code, accepted layouts and concurrent work. Ask about genuinely uncertain changes, not already-authorized routine steps. Current user intent selects manual delivery versus repository changes/deployment.
+- Before building or changing XRBC features, read the selected checkpoint and account for the existing Render service: request/method limits, cold starts, timeouts, retries, ephemeral storage and frontend/backend boundaries. Preserve bounded load; do not assume a live plan or invent new infrastructure. User rule recorded 2026-10-22.
 - After a requested website deployment succeeds, stop **all tools immediately**. Prepare authorized memory beforehand. No post-deployment test, screenshot, cleanup or checkpoint exception. A new explicit request is required to resume.
 - Keep private financial records, payloads, credentials and personal transcripts out of public memory. Keep failed/partial/unknown states distinct from valid zero or success.
 

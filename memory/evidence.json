@@ -2686,6 +2686,43 @@
         "Browser/GPU/CSP/full-page/mobilegeometry remains unknown, not failedapplicationbehavior. NativeCanvas fakeDOM frames cannot substitute for it. No secret/session/wallet used."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "3a8c37994fb0623ee78e2485b9706d76b7514163",
+      "recorded_at": "2026-10-22T03:43:33Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-cinematic-deployed-user-rejected-2026-10-22",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "Reconciled on new explicit user turn: MR118 merged as3a8c3799; production2974670823 deploy-pages17369044152 and runtime/security/validation/snapshot jobs succeeded. User subsequently rejects visual result as sparse/static and missing context; screenshot shows E/R unavailable. Recovery authorized, not yet released.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974670823",
+      "limitations": [
+        "Deployment success is not visual acceptance. Prior static/CI results did not establish cinematic quality. User rejection requires recovery preserving all requested contexts.",
+        "No exact browser-specific reason for unavailable vault balances established."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "3a8c37994fb0623ee78e2485b9706d76b7514163",
+      "recorded_at": "2026-10-22T03:43:33Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-vault-existing-Render-observation-2026-10-22",
+      "kind": "source",
+      "status": "passed",
+      "scope": "One bounded47-request/54870byte/10.485s existing Render scan at ledger107818956/hashAB86576CD7A1653EE3A12CF79A118B55907A822FF2E1710EE4F75695588E01D6, closed2026-10-22T03:29:21Z: E two-wallet45920883000423drops; R20 escrow31400000000000000drops. Actual tracker accepts balances despite account_tx502 failures. Current backend mainbd225b2a unchanged; local server blob29ffd8ac matches remote. Current Render docs read; no selected MCP workspace, no live account state inspected.",
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
+      "limitations": [
+        "Dated scoped observation only, not current/full corporate/global escrow. History incomplete; do not infer zero flow or sale.",
+        "Confirmed source delay: balances withheld until history completes; not proof of exact screenshot cause. Preserve100request/85s/3concurrency budgets, 429 backoff and finite deadlines.",
+        "Historical free-plan observation is not current account verification. No service/configuration change or financial transaction."
+      ]
     }
   ]
 }

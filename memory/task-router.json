@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC cinematic Liquidity Nexus homepage centerpiece",
+      "title": "XRBC Liquidity Nexus recovery and major exchange coverage",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -402,19 +402,23 @@
         "Nexus vault amounts",
         "Roman battlefield",
         "Base64 cinematic Nexus",
-        "Persian Evernorth cathedral"
+        "Persian Evernorth cathedral",
+        "Binance",
+        "Bitrue",
+        "tank battlefield",
+        "Render-first metrics"
       ],
       "read": [
         "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/xrbc-cinematic-nexus-20261022",
-        "head": "df961c10b7bfcfb2553385b88dfbdcfdc81a975d",
-        "pipeline": "2974661998"
+        "branch": "master",
+        "head": "3a8c37994fb0623ee78e2485b9706d76b7514163",
+        "pipeline": "2974670823"
       },
-      "status": "MR117-deployed-reconciled-MR118-Base64-cinematic-top-hero-source-CI-passed-deployment-pending",
-      "next_action": "After validated checkpoint publication/readback, merge MR118 exact df961c10b7bfcfb2553385b88dfbdcfdc81a975d and follow production Pages. Local196 included in CI816; nativeCanvas static frames inspected, browser/GPU/mobile unverified after truncated Chromium download. Base64 art and pinned self-hosted Pixi CSP support; no new origin/service/backend/wallet/P2P. Separate measured depth, labelled Kraken executions, neutral one-ledger XRPL volume and scoped vault transfers. Stop all tools immediately after deployment success."
+      "status": "MR118-deployed-user-rejected-recovery-in-progress-Render-first-rule-saved",
+      "next_action": "Read selected checkpoint and account for existing Render before implementation. Finish broader major-XRP exchange cohorts incl Binance/Bitrue, staged scoped vault data and substantial moving central battlefield preserving all contexts. Review actual motion and source contracts, exact candidate CI, then checkpoint before deployment. No backend/P2P release or new service; stop all tools on deployment success."
     }
   }
 }
