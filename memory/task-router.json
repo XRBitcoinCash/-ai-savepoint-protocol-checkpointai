@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus recovery and major exchange coverage",
+      "title": "XRBC Liquidity Nexus recovery, 17 exchange cohorts and Render-first loading",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -413,12 +413,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "3a8c37994fb0623ee78e2485b9706d76b7514163",
-        "pipeline": "2974670823"
+        "branch": "codex/xrbc-nexus-recovery-20261022",
+        "head": "98e2fab62fb11537f90ce893d2a003903995aad5",
+        "pipeline": "2974813378"
       },
-      "status": "MR118-deployed-user-rejected-recovery-in-progress-Render-first-rule-saved",
-      "next_action": "Read selected checkpoint and account for existing Render before implementation. Finish broader major-XRP exchange cohorts incl Binance/Bitrue, staged scoped vault data and substantial moving central battlefield preserving all contexts. Review actual motion and source contracts, exact candidate CI, then checkpoint before deployment. No backend/P2P release or new service; stop all tools on deployment success."
+      "status": "MR118-deployed-reconciled-MR119-17-source-vault-motion-local-CI-passed-deployment-pending",
+      "next_action": "After validated checkpoint publication/readback, merge MR119 exact98e2fab62fb11537f90ce893d2a003903995aad5 and follow production Pages. Read Render-first rule/contract before changes. Local234 included in CI854; actual native Canvas12s desktop/mobile recordings inspected with decoded atlas.17 configured sources are not17 connected feeds: Bitrue and4others returned unusable HTML,2validsources lacked CORS headers. No proxy/bypass/newservice/backend/wallet/P2P. Browser local preview denied by security, not bypassed. Immediately stop ALL tools on requested deployment success; reconcile/test user browser only on new explicit turn."
     }
   }
 }

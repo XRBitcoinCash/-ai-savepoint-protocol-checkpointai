@@ -2723,6 +2723,97 @@
         "Confirmed source delay: balances withheld until history completes; not proof of exact screenshot cause. Preserve100request/85s/3concurrency budgets, 429 backoff and finite deadlines.",
         "Historical free-plan observation is not current account verification. No service/configuration change or financial transaction."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "98e2fab62fb11537f90ce893d2a003903995aad5",
+      "recorded_at": "2026-10-22T04:24:17Z",
+      "command": null,
+      "input_digest": "687825a1214bd3bb11a67fed43b87c1c29ee43819fdd429e57598cb423de544d",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/119",
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-source-local-2026-10-22",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "234 focused local tests pass at final20-file candidate, included in CI854. All20remote blobs match localhashes;14originalinlinebodies/indexIDs unchanged; syntax/scope/contrast/Renderbudget review clear. Realengine+controller17pairintegration, exactquote/cohort/partialcoverage, progressiveimmutablecallbacks, deadlines/cancelresume, requestcount-awareRenderretry, seededdatedscope, cachedcalculation+savedcombinedcoverage andeventgates checked.",
+      "limitations": [
+        "Synthetic fixtures are not live feeds, financial predictive validation or browser/CSP/mobile-layout proof. Environment fingerprint not complete; no automatic cross-environment reuse certificate.",
+        "ExplicitpublicCEXoriginsadded; no backend/configuration/newproxy/storage/wallet/P2P change. Source/local/CI pass, merge/deployment pending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "98e2fab62fb11537f90ce893d2a003903995aad5",
+      "recorded_at": "2026-10-22T04:24:17Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974813378",
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-CI-2026-10-22",
+      "kind": "ci",
+      "status": "passed",
+      "scope": "Exact98e2fab6 MR119 pipeline2974813378 success; runtime17369886696 boundedlogtail854tests/pass,0fail/cancel/skip; validate17369886697 andhomepage-snapshot17369886698success.",
+      "limitations": [
+        "Advisoryvalidator/snapshotjob do not establish strictsitewidecleanliness or new fullbrowser/mobile/CSP validation.",
+        "Not a deployment or liveavailability certificate. Checkpoint prepared before requested release; alltoolsstop on deployment success."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "98e2fab62fb11537f90ce893d2a003903995aad5",
+      "recorded_at": "2026-10-22T04:24:17Z",
+      "command": null,
+      "input_digest": "6be69a14db85bae88dfd25e7940c360c7552862ef17d5ce1226946dc3083b097",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/119",
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-motion-2026-10-22",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "ActualproductionCanvas2D renderer6be69a14... with decoded originalunitatlasb35a0b11... recorded12.000s/24fps/288frames at1000x560 and390x570. Root+independentQA inspected finalframes/contacts andwalk/strike detail, depthreversal/front/units, sourceqtypriceeffects, dome/castlelabels andforegroundprices. unitAtlastrue; paused/reduced rawpixelsidentical and pausedinputsrejected. Sourcehashesunchangedduringrecording.",
+      "limitations": [
+        "Syntheticwatermarked observations and fixedstageclock using preinstallednativeCanvas/ffmpeg, not realtrades, browserDOM/CSS/CSP, deviceperformance or claimedgame-trailerproductionquality.",
+        "16generatedposes are painted frames withcustomcrops/anchors, notrigged3D/motioncapture. Base64WebP277654B,module372101B, noexternalruntimeservice. Rawlocalvideos/screenshots are not publicmemory inputs."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "98e2fab62fb11537f90ce893d2a003903995aad5",
+      "recorded_at": "2026-10-22T04:24:17Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/119",
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-17-provider-HTTP-2026-10-22",
+      "kind": "source",
+      "status": "passed",
+      "scope": "One17GET/13.378s publicHTTP+Originheader check:10completebooks(8permittingACAO; Gemini/Bitfinexwithout),2partialGate/Crypto.comwithpermittingACAO,5HTTP200HTML/noACAO Bitrue/Bybit/KuCoin/MEXC/Bithumb rejectedasinvalidJSON. Earlierengine1e3d49914c111cf2c745950789f9e5eb2cf9e6d1583624af470b85ea8cb51d4a, model3cc88d84d05ebdac3a7391edf0f075d83b6d06b624ff1c5afcbfa2e717eb2130. No credentials/cookies/retries/alternatehost/proxy/Rendercalls.",
+      "limitations": [
+        "Not actualbrowserCORS success or17connectedfeeds; HTMLcauseunproven becausebodies/titlesnotretained. Incomplete/failedsources stayvisible, excludedfromcompleteheadline.",
+        "Finalenginead6b03ba19f8de5489c67edde8bf3b6c384b38d69e323db249d58e2d5cc96892 tightensmissingstreamguard and8workerpreferredcohortscheduling; deterministictests only, no secondlivecycle. Earlier4workerordercaused>5scohortskew.",
+        "Seventeen namedspotvenues in3nativequotes, notgloballiquidity/share. USD/USDT/KRW parity andCrypto.comUSD/USDCbasket neverassumed."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "98e2fab62fb11537f90ce893d2a003903995aad5",
+      "recorded_at": "2026-10-22T04:24:17Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/119",
+      "supersedes": [],
+      "id": "XRBC-nexus-recovery-browser-preview-denied-2026-10-22",
+      "kind": "browser",
+      "status": "unknown",
+      "scope": "LocalfileURL preview navigation explicitly rejectedbybrowsersecuritypolicy: onlyHTTP/HTTPSallowed. Browserfixturework stopped; norehosting, injection, alternatesurface or workaround. Existingbrowserdidinspectoldlivebuild andconfirmedunavailablevaults/darkcardtext. FinalcandidatebrowserUIunobserved.",
+      "limitations": [
+        "This is a localpreviewpolicyblock, not evidenceofcandidatefailure or productionserviceoutage. NativeCanvas recordings/sourceCSScontrastreview are independent scopes, notbrowser/CSP/fullpagereplacement.",
+        "No newbrowserinstallation repeated; historicaltruncatedChromiumdownload notcircumvented."
+      ]
     }
   ]
 }
