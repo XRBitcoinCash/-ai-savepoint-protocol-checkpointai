@@ -3068,6 +3068,96 @@
         "Merge/production deployment pending at this predeployment save. Publish/readback validated checkpoint before merge, then immediately stop all tools on requested deployment success; reconcile actual merge/production pipeline/deploy IDs only on a new explicit user turn."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b2132479d16170b2fd14b5232ae8b4dd9237cd25",
+      "recorded_at": "2026-10-23T06:00:44Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-livebattle-MR121-deployment-reconciled-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979659449",
+      "scope": "On the next explicit user turn root checked masterb2132479d16170b2fd14b5232ae8b4dd9237cd25 and production pipeline2979659449. All6jobs succeeded:deploy-pages17405294464,secret_detection17405294463,semgrep-sast17405294462,homepage-snapshot17405294461,validate-repository17405294460,runtime-contracts17405294459. Root reports all tools stopped on prior requested deployment success; old MR121 pending merge/deploy instructions are completed.",
+      "limitations": [
+        "Reconciles prior deployment only. No post-deployment browser inspection, all-provider availability, complete vault history or scanner-report triage is claimed.",
+        "Successful security jobs do not establish clean-security certification; prior untriaged findings remain historical evidence."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b2132479d16170b2fd14b5232ae8b4dd9237cd25",
+      "recorded_at": "2026-10-23T06:00:44Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-mounted-trade-addon-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/b2132479d16170b2fd14b5232ae8b4dd9237cd25",
+      "scope": "Current user asks small renderer add-on: accepted large trades arrive as sword/shield horseback riders toward Nexus, with attached following exchange/BUY-SELL/XRP quantity/price/native-quote nameplates. Existing100000XRP display threshold and prior catapults/towers/banners remain. Root checked selected checkpoint/Render contract and base renderer/index identities; no feed/backend/Render/storage/wallet change or new network probe planned.",
+      "limitations": [
+        "Implementation, exact-source native QA, candidate and CI pending. This is current intent and source preflight, not completion, live network proof or deployment.",
+        "Preserve strict event binding/source/quote/replay and visibility/pause/Explore limits. Parent publishes validated checkpoint before release and stops ALL tools on deployment success."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "85985ab6b16a26c909c554b14850fd4ab5affe6d",
+      "recorded_at": "2026-10-23T06:05:46Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-mounted-rider-source-local-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "0510726c51118b677a459e336ac9f00fdad2d1af17a6fffc05d6c65f3c77fb74",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/122",
+      "scope": "Root reports exact candidate85985ab6 on MR122 with all4remotechangedhashes matching manifest. Renderercc74890a1c192f7c7c8d415203fed2553c4585aded619d509abc2ead2490b8b8,21renderer tests(5new)+51UI integration=72passed. >=100000XRP accepted events carry immutable exchange/side/quantity/price/nativequote plates on sword/shield horse riders; event-captured4500ms approach/6500ms expiry,2mobile/3desktop. Existing14inline bodies/indexIDs/CSP unchanged; feeds/controller/CSS/backend unchanged.",
+      "limitations": [
+        "Required CI2979752731 running and release pending at this observation; no live feed, browser Origin/CSP or financial proof.",
+        "No new network probe, service/storage/backend/Render load or wallet/P2P release. Legacy absent price is explicit, not invented."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "85985ab6b16a26c909c554b14850fd4ab5affe6d",
+      "recorded_at": "2026-10-23T06:05:46Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-mounted-rider-native-QA-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "cc74890a1c192f7c7c8d415203fed2553c4585aded619d509abc2ead2490b8b8",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/blob/85985ab6b16a26c909c554b14850fd4ab5affe6d/docs/liquidity-mounted-trades.md",
+      "scope": "Exact-renderer native synthetic Canvas proof:desktop1000x620/mobile390x760 each10seconds/240frames. Verified source/side/quantity/price/nativequote labels stay attached, captured routes reach Nexus, movement phase and screen positions change,100000XRP threshold and3/2caps,expiry/hidden/inactive cleanup, belowthreshold/neutral/wrongquote/replay/Explore rejection,bookchanges cannot become trades,pause/reducedpixelsidentical. Root visually approved desktop048/mobile096. VerifiedsummarySHA25621d3a7139f7c75a635fd64957078ef2025482ae142a8e092fdb4473f086c7d3b.",
+      "limitations": [
+        "Synthetic actual-renderer native Canvas only, not browser CSS/CSP/Origin or live exchange availability.",
+        "No runtime performance/real-device frame-rate measurement, wallet operation, network probe or preview-security bypass."
+      ]
+    },
+    {
+      "id": "XRBC-mounted-rider-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "85985ab6b16a26c909c554b14850fd4ab5affe6d",
+      "recorded_at": "2026-10-23T06:06:21Z",
+      "scope": "Root checked exact MR122 candidate85985ab6b16a26c909c554b14850fd4ab5affe6d pipeline2979752731 successful/mergeable. homepage-snapshot17405952652,validate-repository17405952651,runtime-contracts17405952650 succeeded. Bounded runtime trace936tests/pass,0fail/cancel/skip(925top-level plus nested);local72included. All4remotechangedfileSHA256values match reviewed mounted release manifest.",
+      "command": null,
+      "input_digest": "0510726c51118b677a459e336ac9f00fdad2d1af17a6fffc05d6c65f3c77fb74",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979752731",
+      "limitations": [
+        "Merge/production deployment pending at this predeployment checkpoint. Publish/read back first, then merge exact reviewed candidate and immediately stop ALL tools at requested deployment success. Record actual new merge/production IDs only on a later explicit user turn.",
+        "CI/advisory repository/snapshot jobs are not strict sitewide/security clearance, browser CSS/CSP/Origin, live-provider availability, complete corporate history or real-device frame-rate proof. No new live probe or financial test."
+      ],
+      "supersedes": []
     }
   ]
 }

@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus live battle, fixed exchange catapults and vault coverage",
+      "title": "XRBC Liquidity Nexus mounted large-trade riders and fixed exchange battle",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -410,19 +410,20 @@
         "fixed exchange catapults",
         "horseback retail",
         "green red dust",
-        "Ripple Evernorth activity"
+        "Ripple Evernorth activity",
+        "mounted trade riders"
       ],
       "read": [
         "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/active-nexus-battle-20261023",
-        "head": "51c407c6e6fdf14d472d94a6a557a42e4ead34e9",
-        "pipeline": "2979639759"
+        "branch": "xrbc/mounted-large-trades-20261023",
+        "head": "85985ab6b16a26c909c554b14850fd4ab5affe6d",
+        "pipeline": "2979752731"
       },
-      "status": "MR120-deployed-reconciled-MR121-livebattle-source-local-native-QA-CI-passed-deployment-pending",
-      "next_action": "Publish validated predeployment checkpoint/read back selected brief+route, then merge only MR121 exact51c407c6e6fdf14d472d94a6a557a42e4ead34e9 and follow production Pages. CI2979639759 succeeds with931tests/pass; local311 included. Native36s procedural-battle QA passes, not browser CSS/CSP/all17providers proof. Two stream probes recorded Coinbase working/Kraken capacity failures; final depth100 is deterministic-tested but NOT live-probed. No more stream network probes in this refinement. Preserve Render-first budgets, incomplete vault history, held P2P/backend and browser-preview block. Stop ALL tools immediately on deployment success; reconcile actual merge/production IDs only on next explicit user turn."
+      "status": "MR121-deployed-reconciled-MR122-mounted-rider-source-native-QA-CI-passed-deployment-pending",
+      "next_action": "Publish/read back validated predeployment checkpoint, then merge only MR122 exact85985ab6b16a26c909c554b14850fd4ab5affe6d and follow production Pages. CI2979752731 succeeded936tests/pass(local72included); exactrenderer10s/240frame desktop/mobile nativeQA passed. Stop ALL tools immediately at requested deployment success; reconcile new actual merge/production IDs only on a later explicit user turn. Preserve Render/feed/vault/P2P boundaries, incomplete history, unverified Kraken live depth100 and preview-security block. No new network probes."
     }
   }
 }
