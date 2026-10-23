@@ -3266,6 +3266,225 @@
         "CI/advisory repository/snapshot checks are not strict sitewide/security clearance, browser CSS/CSP, actual audit, all-provider reachability, complete vault history or real-device frame-rate proof. No new live network probe or financial test."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-23T06:47:43Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-MR123-deployment-reconciled-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "7a75a8b43cbf2757fc0682c34ceb32859f09df18",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979834407",
+      "scope": "On the next explicit user turn root checked currentmaster/merge7a75a8b43cbf2757fc0682c34ceb32859f09df18 for MR123 candidateea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d and productionpipeline2979834407. All6 jobs succeeded:deploy-pages17406479875,secret_detection17406479874,semgrep-sast17406479873,homepage-snapshot17406479872,validate-repository17406479871,runtime-contracts17406479870. Prior pending-merge instructions are completed; root stopped all tools on requested deployment success and resumed only on the new explicit request.",
+      "limitations": [
+        "Deployment/job status is separate from a post-deployment browser inspection, current scanner-report triage, real-provider access, complete vault history or real-device performance. Successful scan jobs are not security-clean certification.",
+        "Prior MR123 predeployment narrative preserved verbatim in memory/archive/XRBC-LIQUIDITY-SENTINEL-MR123-2026-10-23.md; no old continuation queue is current authorization."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "recorded_at": "2026-10-23T06:47:43Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-roaming-Sentinel-beams-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "source_revision": "7a75a8b43cbf2757fc0682c34ceb32859f09df18",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/7a75a8b43cbf2757fc0682c34ceb32859f09df18",
+      "scope": "Current user asks wider Sentinel movement, multiple eye beams connected to trades before ground and base64. Root scopes a visibly broad front/back/flank route within the existing battlefield, not an overlay over wallet controls; one shared geometry for accepted observed airborne exchange projectiles and beam endpoints, planned cap4desktop/3mobile during200\u20131700ms flight only, no post-impact queue. Original embedded36134byte XRBC PNG retained unchanged. Existing1Hz glow and all source/quote/time/replay/lifecycle guards remain; no new feed/controller/backend/Render/storage/wallet/dependency or source probe.",
+      "limitations": [
+        "Intent/in-progress source preparation, not final source, synthetic QA, CI, merge or deployment evidence. Wait root final evidence before final catalog/validation/publication.",
+        "Visual anticipation follows already observed accepted executions; it is not a market prediction, actual security audit, transaction approval or complete transaction coverage. Base64 embeds the unchanged brand asset, not computed predictive capability."
+      ]
+    },
+    {
+      "id": "XRBC-roaming-Sentinel-beams-provisional-mechanical-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T06:58:11Z",
+      "scope": "Root reports provisional uncommitted code prefix3f415\u2026 with28renderer tests passing (3new; prior narrow-route assertion superseded). Proposed24s route covers72%width,foot292\u2013499desktop/312\u2013612mobile; shared projectile/drawn-eye geometry;200<=age<1700ms beams,4desktop/3mobile targets with two eye lines each. Mechanical guards pass both sizes for impact cutoff, resize/depth changes, rejected events and lifecycle. Source cards fully hid the actor at flanks, a concrete visual blocker; root authorized a single-actor body/beam layer above small source cards while retaining all values and main DOM/canvas Nexus, role labels, rider plates and large banners above.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/7a75a8b43cbf2757fc0682c34ceb32859f09df18",
+      "limitations": [
+        "Hash prefix is not a complete input fingerprint; source revision is null and reference names the deployed base, not provisional source. Final layer correction/hash/native recording, candidate and CI pending. Do not promote provisional mechanical checks to final visual acceptance.",
+        "Visual beams follow already accepted observed executions, not future trades or transaction-security verdicts. No live provider/browser/performance/financial operation or new network probe is established."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-roaming-Sentinel-beams-final-local-source-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T07:05:44Z",
+      "scope": "Root reports final uncommitted renderer aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d(101849B), test4dc6d8083a36d11f23d169c1241561ef233e0fb254ce5f637e8e75468599bc8e. Syntax and29renderer+51controller tests pass=80focused;19ledger tests also pass=99local total.24s route covers72%width and foot292\u2013499desktop/312\u2013612mobile. Shared projectile and exact drawn-eye geometry,200<=age<1700ms beam window,4desktop/3mobile targets,twoeye lines each; impact/resize/depth/reject/lifecycle guards pass. Earlier card occlusion is resolved by one Sentinel body/beams above small source cards, retaining source values and main Nexus/role/rider/large-banner foreground priority. Root audits14inline bodies/IDs/CSP unchanged,index cache version only,fourpaths; authentic36134byte PNG unchanged at078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094.",
+      "command": null,
+      "input_digest": "aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/7a75a8b43cbf2757fc0682c34ceb32859f09df18",
+      "limitations": [
+        "Source revision is null because source is uncommitted; reference identifies deployed base, not this final local renderer. Exact-source26s native recordings are underway; candidate and CI are not yet created.",
+        "Local source/synthetic tests are not browser CSS/CSP/Origin, live-provider/performance, financial validation, prediction or a security audit. No live probe or new infrastructure."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b613271e97f97b5a2d259f51fa1be9702e21630f",
+      "recorded_at": "2026-10-23T07:09:59Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-roaming-Sentinel-beams-committed-source-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "scope": "Root created MR124 exactb613271e97f97b5a2d259f51fa1be9702e21630f from deployed7a75a8b4 and read back all4changed remote hashes matching reviewed manifest: index208ae461ecd7a945e037121ad5659c557291d9d97ba5b439172d74800acc71c5, renderer aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d(101849B), tests4dc6d8083a36d11f23d169c1241561ef233e0fb254ce5f637e8e75468599bc8e, doc4731c9128b036b4fb70a820543e379fd9919e95a7e5d496d41d71648ede465d5. Syntax29renderer+51controller=80focused and19ledger=99local tests pass; inline14/IDs/CSP/logo unchanged; no feed/controller/CSS/backend change.",
+      "limitations": [
+        "CI2979926529 running; merge/production deployment pending at this observation. Branch/doc-path and full manifest identity are awaiting root final metadata.",
+        "Source/local synthetic results are not browser/provider/performance/security clearance or financial validation. No new live probe or infrastructure."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b613271e97f97b5a2d259f51fa1be9702e21630f",
+      "recorded_at": "2026-10-23T07:09:59Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-roaming-Sentinel-beams-native-QA-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "scope": "Final exact-source native Canvas QA26s/624frames/24fps each at1000x620desktop and390x760mobile passed full24s72%width route.672desktop+522mobile=1194 target-attachment checks;4/3caps,200/1700ms boundary, staggered1699/750ms effects, resize/depth,100accepted-event burst oneglow, reject/lifecycle guards and retained17engines/mounted rider pass. Root viewed desktopcontact and4nativeframes with no blocker. SummarySHA25668f61adb05f3ca5f314a0d1aaad02f89646433707d543f6492df373117ba0ea9; proofSHA256e23a8ae69189d8282a95117544c39d380c03ef20bb7e2f15970c54429a3edd7b.",
+      "limitations": [
+        "Actual-renderer synthetic native Canvas only, not full browser CSS/CSP/Origin, live-provider access or real-device frame rate. Source-card priority exception retains all values and main labels above the single actor/beams.",
+        "Visual tracking follows already observed accepted executions and stops before impact; not a forecast, actual audit, security approval or financial operation. No new network probe or browser-preview bypass."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b613271e97f97b5a2d259f51fa1be9702e21630f",
+      "recorded_at": "2026-10-23T07:12:11Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-roaming-Sentinel-beams-baseline-CI-2026-10-23",
+      "kind": "ci",
+      "status": "passed",
+      "input_digest": "5f3a7d1c46629474291fe4dd2442e260c676305d0429833c693310aff2968ada",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979926529",
+      "scope": "Root checked MR124 exactb613271e97f97b5a2d259f51fa1be9702e21630f pipeline2979926529 successful:runtime-contracts17407106644 reports944tests/pass,0fail (933top-level plus nested),validate-repository17407106645 andhomepage-snapshot17407106646 successful. Branchxrbc/sentinel-airborne-beams-20261023, existingdocupdateddocs/liquidity-sentinel.md; raw manifest5f3a7d1c46629474291fe4dd2442e260c676305d0429833c693310aff2968ada. Local80focused plus19ledger results are included in944, not additional.",
+      "limitations": [
+        "This is an unmerged beam baseline. Before merge the user added archers/sized weapons, so root holds checkpoint publication/deployment and extends the same MR124. New combined source/nativeQA/CI evidence is required before final validation/payload/release.",
+        "Required/advisory CI does not establish browser CSS/CSP, provider access, performance, financial validation, prediction or an actual audit. No new live probe."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "b613271e97f97b5a2d259f51fa1be9702e21630f",
+      "recorded_at": "2026-10-23T07:12:11Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-archer-sized-weapon-extension-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "input_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "scope": "Before merge root relayed the latest user instruction for archers and weapons sized to trade activity, holding final checkpoint publication/deployment and extending the same unmerged MR124. Root proposes display tiers<1000XRP archers;1000\u20134999.999catapult;5000\u201399999.999mounted courier;>=100000flaming catapult, potentially with5k+mounted courier also. Renderer work is ongoing; overlap must be finalized without double-counting one accepted observed event. Prior b613271e native/944CI pass remains a historical baseline, not final combined proof.",
+      "limitations": [
+        "Tiers and carrier overlap are proposed, not final behavior or deployed source. Wait final combined source/nativeQA/CI before catalog/validation/payload/publication.",
+        "Artistic weapon sizing is not a trader classification, forecast, security verdict or additional execution. Existing feeds/backend/Render/storage/wallet and no-probe boundaries remain."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-beams-weapons-combined-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T07:21:05Z",
+      "scope": "Root reports combined uncommitted renderer8b6f2df3ee7ef35347d3cdf1fa9c737fd77e82c78d92a451880ed0a607aaac87(108254B),tests236c60045b675bf15a93fb001c91a341ce8e8c4c27d25e263dbf9fd6ebfb14fe(38390B). Syntax and82focused tests pass=31renderer+51controller; prior19ledger checks have unchanged inputs and are retained, not an additional new run. Independent read-only threshold/provenance/no-doublecount review passes. Five existing paths only;14inline bodies/IDs/CSPexact,indexcacheonly,original36134byte PNG hash078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094 exact.",
+      "command": null,
+      "input_digest": "8b6f2df3ee7ef35347d3cdf1fa9c737fd77e82c78d92a451880ed0a607aaac87",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "limitations": [
+        "Source revision null: tier changes are uncommitted and MR124 still points to earlier b613271e beam baseline. Final tier-native QA underway; final commit/manifest/CI and publication remain on hold.",
+        "Local tests/review are not final native visual acceptance, browser/provider/performance/security clearance or financial validation. No new source probe or infrastructure."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-weapons-final-source-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "04224aabeb44eff1aae812ba593884c81fa67b71",
+      "recorded_at": "2026-10-23T07:37:27Z",
+      "scope": "MR124 final04224aabeb44eff1aae812ba593884c81fa67b71 extendsb613271e from7a75a8b4. Renderer e4b4599d6fca77f66503d0aa075b3b35b953399edd62051fb070c453420ab740 (108358B); tests cf5fb81031e08d00584badd21ce83af5fcb57b071633be08f61856b6d36e04c4 (38558B). Syntax82focused pass; independent review no blocker. Five remote hashes match manifest: index60ff4821fc43b7752bba94e25e0afcf2fee8578eab9f1bfd0ac97fb65ace498e, renderer/tests above, Sentinel doc55dd2d1318fc0cc3a475bdd77f32162fd8f9e918adcd0ee00a8989424331949a, mounted doc842ae9c7b4a0584be2b07dd148113895fd7f4c343bec2542f6f77fe30ea8e1a9. Tiers<1000arrow;1000\u2013<5000stone;5000\u2013<100000stone+mounted courier;>=100000firestone+courier+existing tower. One pulse/projectile/id, no extra executions/volume. Canvas UTC restored below tier; DOMUTC always retained. Original PNG36134B/hash078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094,14inline/IDs/CSP intact; indexcacheonly.",
+      "command": null,
+      "input_digest": "b6df4db6cf27320d3f61973002be8f0244623e02ebd9ebb4b175ed3c58970246",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "limitations": [
+        "Merge/production deployment pending at predeployment save; publish/read back first, then merge exact reviewed source and stop ALL tools immediately on requested deploy-pages success.",
+        "Synthetic/source/CI evidence does not establish browser CSS/CSP/Origin, live-provider coverage, real-device performance, future-trade prediction, financial validation or security/audit certification. No new live probes or infrastructure."
+      ],
+      "supersedes": [
+        "XRBC-archer-sized-weapon-extension-intent-2026-10-23",
+        "XRBC-Sentinel-beams-weapons-combined-local-2026-10-23"
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-weapons-final-native-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "04224aabeb44eff1aae812ba593884c81fa67b71",
+      "recorded_at": "2026-10-23T07:37:27Z",
+      "scope": "Final-source native desktop1000x620/mobile390x760 each12s/288frames/24fps; all6boundary sizes, actual bow/scoop200ms launch, both rotated arrow directions, stone/fire centers,540target attachments (288D/252M),5kplate drawn/retained6000ms,fire>=100k only,17archers/engines,max20events,3D/2M couriers,4D/3M beams,6lifecycle modes/noqueue and visibleUTC pass. Root viewed final desktop036/mobile180. Summary7b7c98455e358d685e207158e2c7739ba2e84302d53090afc0e1bb27a30d6b8d; proof2e51f0d34a7fb29351995253a7db9c2a13c2c3811637a12c5ed2e6f7fbdf7b64; rawf17d40e15c8b4290abc65917bbcbcb8ba1a4aaa758d17b841d53c5f80ff02572. Earlier26s full24sroute/1194checks reused only for byte-identical patrol/glow/lifecycle/event-validation/dedup; final12s evidence remains separate. Native transformed-point tolerance0.0001px, shared beam/projectile1e-8.",
+      "command": null,
+      "input_digest": "e4b4599d6fca77f66503d0aa075b3b35b953399edd62051fb070c453420ab740",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
+      "limitations": [
+        "Merge/production deployment pending at predeployment save; publish/read back first, then merge exact reviewed source and stop ALL tools immediately on requested deploy-pages success.",
+        "Synthetic/source/CI evidence does not establish browser CSS/CSP/Origin, live-provider coverage, real-device performance, future-trade prediction, financial validation or security/audit certification. No new live probes or infrastructure."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-weapons-final-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "04224aabeb44eff1aae812ba593884c81fa67b71",
+      "recorded_at": "2026-10-23T07:37:27Z",
+      "scope": "Required combined pipeline2980000232 at exact04224aabeb44eff1aae812ba593884c81fa67b71 passes all3jobs:runtime-contracts17407628738 #tests946/#pass946/#fail0/cancel0/skip0; repository17407628739 andhomepage17407628740 success. Includes82focused=31renderer+51controller, counts not additive. MR title/description rewritten around final combined behavior and actualCI. Existing advisory validator and untriaged scanner limitations retained.",
+      "command": null,
+      "input_digest": "b6df4db6cf27320d3f61973002be8f0244623e02ebd9ebb4b175ed3c58970246",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980000232",
+      "limitations": [
+        "Merge/production deployment pending at predeployment save; publish/read back first, then merge exact reviewed source and stop ALL tools immediately on requested deploy-pages success.",
+        "Synthetic/source/CI evidence does not establish browser CSS/CSP/Origin, live-provider coverage, real-device performance, future-trade prediction, financial validation or security/audit certification. No new live probes or infrastructure."
+      ],
+      "supersedes": []
     }
   ]
 }

@@ -649,8 +649,8 @@
     {
       "path": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
       "indexed_on": "2026-10-23",
-      "bytes": 13276,
-      "sha256": "e598814513e83c5e9d667bb7f6ef726e212ac2c68166bf3a18c6da02f059d787",
+      "bytes": 14317,
+      "sha256": "789c1d439954c4a14e408f070f779a2d4bac66f93970071f5d78329de485cfd1",
       "classification": "selected-task-record"
     },
     {
@@ -805,6 +805,13 @@
       "indexed_on": "2026-10-23",
       "bytes": 11465,
       "sha256": "3b3d841bb612fd411e8646e6cd185d635b8b48110a95834e7e4b9a9fd8adc8da",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-LIQUIDITY-SENTINEL-MR123-2026-10-23.md",
+      "indexed_on": "2026-10-23",
+      "bytes": 14148,
+      "sha256": "dcc4061646813d941f567aa9780992ae77a1ba0c5791439229e576931662ba7d",
       "classification": "historical"
     },
     {
@@ -1132,8 +1139,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-23",
-      "bytes": 221716,
-      "sha256": "3a68d75f298bba17582e80dfcd41d5b1dd58b121981bfeaef96358b30f4871f0",
+      "bytes": 241939,
+      "sha256": "6b2ff2d3ecc22eb3aa0c1c9c32f46cdc5fbd0df46de46e319869559d0e016dcc",
       "classification": "current"
     },
     {
@@ -1391,8 +1398,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-23",
-      "bytes": 14503,
-      "sha256": "617dddd4b74deb999ebc32a88611f61284777360a492cdf6b119b2a8b87f6f87",
+      "bytes": 14521,
+      "sha256": "764f3a7d66d24e39fb027d221d5177c5ee9a07c5c4cb4e3ce2687772f03f8c3c",
       "classification": "current"
     },
     {
