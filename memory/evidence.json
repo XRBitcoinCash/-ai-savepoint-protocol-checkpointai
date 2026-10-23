@@ -3158,6 +3158,114 @@
         "CI/advisory repository/snapshot jobs are not strict sitewide/security clearance, browser CSS/CSP/Origin, live-provider availability, complete corporate history or real-device frame-rate proof. No new live probe or financial test."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "9c190674a1b3a4a172b0dc3ef9612280be78c6ee",
+      "recorded_at": "2026-10-23T06:18:48Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-mounted-MR122-deployment-reconciled-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979768744",
+      "scope": "On the new explicit user turn root checked deployed master9c190674a1b3a4a172b0dc3ef9612280be78c6ee and production pipeline2979768744. All six jobs succeeded: deploy-pages17406042241, secret_detection17406042240, semgrep-sast17406042239, homepage-snapshot17406042238, validate-repository17406042237, runtime-contracts17406042236. Prior MR122 pending merge/deploy instructions are completed; root stopped all tools at requested deployment success.",
+      "limitations": [
+        "Reconciles prior deployment only; no new post-deployment browser/provider inspection or current scanner-report triage is claimed.",
+        "Successful scanner jobs are not security-clean certification."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "9c190674a1b3a4a172b0dc3ef9612280be78c6ee",
+      "recorded_at": "2026-10-23T06:18:48Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-walking-Sentinel-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/9c190674a1b3a4a172b0dc3ef9612280be78c6ee",
+      "scope": "Current user replaced spaceship with one walking armored Sentinel behind battlefield, carrying actual XRBitcoinCash-logo shield and XRBC Auditing Sentinel nameplate. Retain smooth capped/coalesced accepted-public-activity glow, not every global transaction or a security verdict. Root read selected checkpoint/Render contract before build, reopened official Render docs and retrieved/viewed original128px PNG SHA256078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094 for unchanged embedding. No feed/backend/Render/storage/wallet change or live probe planned.",
+      "limitations": [
+        "Implementation, native QA, final source identity, candidate and CI are pending; intent/preflight is not completion or release.",
+        "Current Render plan/health not inspected. Preserve prior browser-preview security block, all data/lifecycle guards and stop-all-tools-on-deploy rule."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-provisional-source-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T06:27:00Z",
+      "scope": "Root reports provisional uncommitted cinema renderer3f42175a28648eaf108ddb87e4df72075056e3d3da6b85e3c20dd3793f47cb0c(98485B),test228a7f0e60afb8dd0e15be38aa6a318125533579b49de292c2c3d80c9f2a77ea.76focused tests pass:25renderer(4new)+51UI. Original embedded36134byte PNG verified to078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094. Four changed files;14inline bodies/indexIDs/CSP unchanged; controller/feed/CSS/backend untouched. One16s walking Sentinel,1Hz minimum glow-start interval,720ms smooth glow/no queue, accepted source/quote/time/identity activity boundary; no security verdict. Native guards pass both sizes while18s recordings continue.",
+      "command": null,
+      "input_digest": "3f42175a28648eaf108ddb87e4df72075056e3d3da6b85e3c20dd3793f47cb0c",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/9c190674a1b3a4a172b0dc3ef9612280be78c6ee",
+      "limitations": [
+        "Source revision is null because this is uncommitted provisional renderer evidence, not the deployed base content at the reference. Final native visual review, committed candidate and CI remain pending.",
+        "Synthetic/local evidence does not establish browser CSS/CSP, provider access, real-device frame rate, financial validation or an actual audit. No new source probe or infrastructure change."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d",
+      "recorded_at": "2026-10-23T06:31:50Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-source-local-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "a68fa9b96b321594304013788de7729915468561342bfcb680530655b70bfd65",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/123",
+      "scope": "Root reports exact MR123ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d, all4remotechangedhashes match reviewed manifest. Renderer3f42175a28648eaf108ddb87e4df72075056e3d3da6b85e3c20dd3793f47cb0c/test228a7f0e60afb8dd0e15be38aa6a318125533579b49de292c2c3d80c9f2a77ea.76focused tests pass:25renderer(4new)+51UI. One16s patrol behind formations, original embedded36134byteXRBC logo verified,1Hz minimum glow-start interval/720ms smooth glow/no queue at existing accepted event boundary. Four changed files,14inline bodies/indexIDs/CSP unchanged, no controller/feed/CSS/backend changes.",
+      "limitations": [
+        "Required CI2979821853 running and merge/deployment pending at this observation. This is committed source/local synthetic evidence, not provider/browser/performance proof.",
+        "Auditing is the visual character name, not an actual transaction audit or approval. No new network probe, Render load, service/storage/backend or financial operation."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d",
+      "recorded_at": "2026-10-23T06:31:50Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-native-QA-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "3f42175a28648eaf108ddb87e4df72075056e3d3da6b85e3c20dd3793f47cb0c",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/blob/ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d/docs/liquidity-sentinel.md",
+      "scope": "Final exact-source native synthetic Canvas QA18s/432frames each at1000x620desktop/390x760mobile: full16s patrol/direction/leg motion, actual original PNG shield, readable title, accepted100-event burst\u2192one glow start, bounded/noqueue glow and rejection/lifecycle guards, pause/reduced pixels unchanged. Root approved quiet and foreground-trade-overlap frames both sizes with no blocker. SummarySHA256006af3d2eb75c5e967c05a7d263190864f2119f7d075dbb998080cc6b7d8434b.",
+      "limitations": [
+        "Synthetic actual-renderer native Canvas only, not full browser CSS/CSP/Origin, live-source availability or real-device frame rate.",
+        "No financial operation, actual security audit, network probe, install or preview-security bypass."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d",
+      "recorded_at": "2026-10-23T06:32:43Z",
+      "scope": "Root checked exact MR123ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d pipeline2979821853 successful/mergeable. homepage-snapshot17406398025,validate-repository17406398024,runtime-contracts17406398023 all succeeded. Bounded runtime trace940tests/pass,0fail/cancel/skip (929top-level plus nested); local76included. All4remotechangedfile hashes match reviewed Sentinel release manifest.",
+      "command": null,
+      "input_digest": "a68fa9b96b321594304013788de7729915468561342bfcb680530655b70bfd65",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979821853",
+      "limitations": [
+        "Merge/production deployment pending at this predeployment checkpoint. Publish/read back first, merge exact reviewed candidate, follow Pages and stop ALL tools immediately on success; reconcile actual new merge/production/deploy IDs only on next explicit user turn.",
+        "CI/advisory repository/snapshot checks are not strict sitewide/security clearance, browser CSS/CSP, actual audit, all-provider reachability, complete vault history or real-device frame-rate proof. No new live network probe or financial test."
+      ],
+      "supersedes": []
     }
   ]
 }
