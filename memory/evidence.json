@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "records": [
     {
       "id": "XRBC-tokenization-XLS-predeploy-local-2026-10-12",
@@ -2903,6 +2903,169 @@
       "limitations": [
         "Existing advisory validator and snapshot job do not establish strict sitewide clearance, live feed availability, browser CSS/CSP/full-page/mobile behavior or user visual acceptance.",
         "Merge and deployment remain pending at this predeployment checkpoint. All-tools stop on requested website deployment success; reconcile only after a new explicit user request."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "4a8d01a51eff196be0600f88bbe80c51cec3e334",
+      "recorded_at": "2026-10-23T04:47:00Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-nexus-catapults-deployed-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2974922662",
+      "scope": "Reconciled on new explicit user turn: MR120 merged as master4a8d01a51eff196be0600f88bbe80c51cec3e334. Production2974922662 deploy-pages17370541015 and all six jobs succeeded: secret17370541014, semgrep17370541013, snapshot17370541012, validator17370541011, runtime17370541010. Prior candidateCI860 included local240. Root stopped all tools at deployment success.",
+      "limitations": [
+        "Deployment success does not establish current full-page browser layout, all feed availability, complete vault history or user visual acceptance. Prior pending merge/deploy continuation is completed.",
+        "Production scanner completed with findings and analysis limitations recorded separately; not a security-clean guarantee."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "4a8d01a51eff196be0600f88bbe80c51cec3e334",
+      "recorded_at": "2026-10-23T04:47:00Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-nexus-catapults-scan-limitations-2026-10-23",
+      "kind": "ci",
+      "status": "unknown",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17370541013",
+      "scope": "Production Semgrep17370541013 succeeded but reported58 findings, a parser warning at cinema compact valid decimal ternary mobile?.58, and an unrelated regex_dos rule timeout in tokenization studio. This is preserved scanner evidence, not triage or a clean security determination.",
+      "limitations": [
+        "Findings not reviewed or classified in this checkpoint task. No claim all findings are introduced, exploitable or harmless.",
+        "Successful scanner and advisory repository jobs do not establish complete scan coverage or strict sitewide clearance."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "4a8d01a51eff196be0600f88bbe80c51cec3e334",
+      "recorded_at": "2026-10-23T04:47:00Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-nexus-livebattle-user-review-2026-10-23",
+      "kind": "browser",
+      "status": "unknown",
+      "reference": "https://xrbitcoincash.com/#metrics",
+      "scope": "User-provided screenshot and explicit refinement request: full Ripple/Evernorth names, real vault-history diagnosis, continuous illustrated gate-to-front runners/archers/cavalry, retail horsemen, pressure-linked slopes and red/green dust, fixed catapult identity per configured exchange, readable observed-attack banners and a defined large-trade siege-tower convention; avoid recurrent refresh/reset presentation. Screenshot is feedback on current layout, not a reproduced complete browser/API verification.",
+      "limitations": [
+        "Do not infer a company sale, source of exchange trades, actual trader identity, all-wallet ownership or zero activity from scene geometry or missing history.",
+        "New realtime transports/procedural motion are work in progress and not yet validated, committed or deployed; no new feed availability is claimed."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T05:10:37Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-vault-targeted-history-read-2026-10-23",
+      "kind": "source",
+      "status": "passed",
+      "reference": "https://xrbitcoincash-github-io.onrender.com",
+      "scope": "Two existing-Render read-only diagnostics observed2026-10-23T04:46:02.672Z, no retry/alternate host/scan: validated ledger107842120 hash1F64B93389290C0C720C108266FCCD9366190E65A934A6A3D8312B9135F76D40 HTTP200/3846ms/934bytes, and one already published Ripple owner account_tx HTTP200/97ms/355bytes with limit1, matching account/validated status and searched range107802120\u2013107842120, zero transactions/no marker. Prior47-request inventory not repeated.",
+      "limitations": [
+        "Point-in-time transport/schema observation for one account, not complete24h coverage, all monitored accounts, corporate ownership or cause of prior502 responses.",
+        "History serving-node identity remains unbound; no movements plus incomplete coverage cannot prove zero flow or a closed drawbridge. Reader source/candidate identity still pending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T05:10:37Z",
+      "command": null,
+      "input_digest": "e98947a30004a531750f3e4a1fec7d60b3e094feaab044b9a897dca514bb8707",
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-livebattle-native-motion-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "reference": "https://xrbitcoincash.com/#metrics",
+      "scope": "Root-reported final actual-renderer native Canvas review:1000x620 and390x760,36seconds/24fps/864frames each;17 fixed source engines, articulated running/clash/cavalry/slopes, source banners and disclosed100000XRP siege-tower threshold. Formations reverse120/80to50/150 desktop and54/36to23/67 mobile; pause/reduced-motion checks pass. Named glass shields, coloured dust and source-specific effects reviewed.",
+      "limitations": [
+        "Synthetic fixed observations/geometry, not browser full-page CSS/CSP or real-device frame rate, live feed availability or user visual acceptance.",
+        "Final application candidate/manifest/CI pending. Retail/institution identities, castle-to-front runners and combat are illustrative, not attribution of actual company selling or trader identities."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T05:10:37Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-livebattle-initial-two-stream-smoke-2026-10-23",
+      "kind": "source",
+      "status": "unknown",
+      "reference": "https://docs.kraken.com/exchange/api-reference/spot-websocket-v2/book",
+      "scope": "Root-reported single bounded12-second two-socket smoke,518336bytes: Coinbase accepted1 trade and8 complete books; Kraken verified2 CRC books then stopped at message-capacity. Synchronous native-text burst queue repair and deterministic regression pending at this checkpoint preparation stage.",
+      "limitations": [
+        "This is an initial mixed result, not a fully passing realtime observation or browser Origin/CSP proof. No claim all17providers are reachable or complete.",
+        "Initial source fingerprint and exact recorded probe time not supplied here; final changed-code result requires separate evidence. Do not retry unchanged or bypass provider restrictions."
+      ]
+    },
+    {
+      "id": "XRBC-livebattle-second-two-stream-smoke-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "unknown",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T05:11:30Z",
+      "scope": "Root-reported second and final changed-source12-second two-socket diagnostic,514204bytes: Coinbase9 accepted trades and8 complete books/live. Kraken349frames with301inside one UTC second reached the300-message budget, capacityLimit message-rate, after1CRC-verified book and became unavailable. The initial attempt did not separate queue from rate failure. Deterministic34/128-message burst regressions passed after native-text queue correction, but this actual failure remained. Official Kraken depth100/matching truncation is being configured with unchanged complete-band validation and REST fallback.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://docs.kraken.com/exchange/api-reference/spot-websocket-v2/book",
+      "limitations": [
+        "Mixed server-side result, not full browser Origin/CSP proof, all17venue availability or a fully passing Kraken stream. Source fingerprint/probe timestamp not supplied here.",
+        "No more stream network probes in this refinement. Final shallower depth100 configuration must remain explicitly unverified live; pending deterministic tests/candidate/CI cannot be promoted to live success."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-livebattle-source-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "51c407c6e6fdf14d472d94a6a557a42e4ead34e9",
+      "recorded_at": "2026-10-23T05:15:36Z",
+      "scope": "MR121 branchxrbc/active-nexus-battle-20261023 exact51c407c6e6fdf14d472d94a6a557a42e4ead34e9. All18 remote changed file hashes match final release manifest. Final focused311 tests pass:205core+51UI+43adapter+12helper, including depth100/matching100truncation/CRC and partial-fallback regression. Stream77f3de22da802a2e9e213822ad04ddf2ceabd7281186504873ce657c3ceef034; renderer remains e98947a30004a531750f3e4a1fec7d60b3e094feaab044b9a897dca514bb8707. Syntax passes;14inline bodies/index IDs unchanged, previousCSP preserved with16exact documented exchange origins added, no CDN and two local stream/helper modules.",
+      "command": null,
+      "input_digest": "31d5ae507126eceaef4be957868f6fca3251bce01ca449b2fec84f59a54a19d7",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/121",
+      "limitations": [
+        "Final depth100 configuration is not live-probed. Earlier diagnostics separately record Kraken capacity failures; no more stream network probes in this refinement. Tests do not establish browser Origin/CSP or all17provider reachability.",
+        "Extracted tree advisory whitespace comparison found one harmless added blank-spaces line; no git diff--check success claimed. At the source check CI pipeline2979639759 was running; later CI evidence records its success. Merge/deployment remain pending at this save.",
+        "No new Render requests/backend route/service/storage/wallet/P2P release. Current scoped vault history remains incomplete/unbound where indicated."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-livebattle-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "51c407c6e6fdf14d472d94a6a557a42e4ead34e9",
+      "recorded_at": "2026-10-23T05:16:24Z",
+      "scope": "MR121 exact51c407c6e6fdf14d472d94a6a557a42e4ead34e9 head pipeline2979639759 succeeds. runtime-contracts17405183647 bounded trace931tests/pass,0fail/cancel/skip;920 top-level plus nested tests. Local311 are included, not additional. homepage-snapshot17405183650 and validate-repository17405183649 succeed; candidate mergeable. All18remotechangedhashes match final release manifest.",
+      "command": null,
+      "input_digest": "31d5ae507126eceaef4be957868f6fca3251bce01ca449b2fec84f59a54a19d7",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2979639759",
+      "limitations": [
+        "CI/advisory repository/snapshot jobs do not prove strict sitewide or security clearance, all provider reachability, full-page browser CSS/CSP, live depth100 configuration, complete vault history or user visual acceptance.",
+        "Merge/production deployment pending at this predeployment save. Publish/readback validated checkpoint before merge, then immediately stop all tools on requested deployment success; reconcile actual merge/production pipeline/deploy IDs only on a new explicit user turn."
       ],
       "supersedes": []
     }

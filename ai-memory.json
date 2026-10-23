@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "status": "redirect",
   "canonical_router": "memory/task-router.json",
   "protocol": "memory/CONTINUITY.md",

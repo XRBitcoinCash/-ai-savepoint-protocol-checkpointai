@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -378,51 +378,51 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus catapults, smaller armies and cross-venue depth repair",
+      "title": "XRBC Liquidity Nexus live battle, fixed exchange catapults and vault coverage",
       "match": [
         "liquidity castle",
         "XRP castle",
         "Live Metrics castle",
         "escrow wall",
         "drawbridge",
-        "bid offered supply",
         "liquidity pressure",
-        "homepage metrics animation",
         "liquidity accuracy",
         "major exchange metrics",
         "XRP RLUSD metrics",
         "year over year liquidity",
-        "YoY price volume",
         "castle loading",
-        "Nexus timer",
         "Evernorth castle",
         "Ripple escrow context",
         "Evernorth live balance",
         "24 hour escrow activity",
         "Nexus vault amounts",
         "Roman battlefield",
-        "Base64 cinematic Nexus",
         "Persian Evernorth cathedral",
         "Binance",
         "Bitrue",
-        "tank battlefield",
         "Render-first metrics",
         "catapult battlefield",
         "smaller soldiers",
         "Nexus Depth unavailable",
-        "crossed composite book"
+        "crossed composite book",
+        "live battle",
+        "realtime catapult trades",
+        "fixed exchange catapults",
+        "horseback retail",
+        "green red dust",
+        "Ripple Evernorth activity"
       ],
       "read": [
         "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "codex/xrbc-nexus-catapults-20261022",
-        "head": "dc9b87830609a576d0674143a6d5e16da9b1319a",
-        "pipeline": "2974916075"
+        "branch": "xrbc/active-nexus-battle-20261023",
+        "head": "51c407c6e6fdf14d472d94a6a557a42e4ead34e9",
+        "pipeline": "2979639759"
       },
-      "status": "MR119-deployed-reconciled-MR120-catapults-depth-source-local-QA-CI-passed-deployment-pending",
-      "next_action": "Publish validated checkpoint and read back selected route/brief, then merge reviewed MR120 exactdc9b87830609a576d0674143a6d5e16da9b1319a and follow production Pages. Pipeline2974916075 success with860tests/pass; local240 included. Native Canvas desktop/mobile/wide-state smaller-army/catapult QA passed, not browser CSS/CSP or liveavailability proof. Non-executable cross-venue depth preserves native quotes/five-second alignment and strict executable walker. Preserve Render-first limits, provider failures, held P2P/backend and browser-preview block. Immediately stop all tools at requested deployment success."
+      "status": "MR120-deployed-reconciled-MR121-livebattle-source-local-native-QA-CI-passed-deployment-pending",
+      "next_action": "Publish validated predeployment checkpoint/read back selected brief+route, then merge only MR121 exact51c407c6e6fdf14d472d94a6a557a42e4ead34e9 and follow production Pages. CI2979639759 succeeds with931tests/pass; local311 included. Native36s procedural-battle QA passes, not browser CSS/CSP/all17providers proof. Two stream probes recorded Coinbase working/Kraken capacity failures; final depth100 is deterministic-tested but NOT live-probed. No more stream network probes in this refinement. Preserve Render-first budgets, incomplete vault history, held P2P/backend and browser-preview block. Stop ALL tools immediately on deployment success; reconcile actual merge/production IDs only on next explicit user turn."
     }
   }
 }
