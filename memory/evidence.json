@@ -3485,6 +3485,151 @@
         "Synthetic/source/CI evidence does not establish browser CSS/CSP/Origin, live-provider coverage, real-device performance, future-trade prediction, financial validation or security/audit certification. No new live probes or infrastructure."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-weapons-MR124-deployed-reconciled-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "recorded_at": "2026-10-23T08:05:00Z",
+      "scope": "Root reports MR124 deployed at masterc07c1b3e6071efa214ed14619ca1ca0cd89d9f8d, production2980022008. All6jobs successful:Pages17407789913,secret17407789912,Semgrep17407789911,homepage17407789910,repository17407789909,runtime17407789908. Root stopped ALL tools on successful requested deployment and resumed only on explicit new user instruction. Prior pending MR124 release instructions completed.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980022008",
+      "limitations": [
+        "Reconciled release evidence is not post-deployment browser/live-provider observation, current market values, scanner triage or security-clean certification.",
+        "Source/local/native/CI evidence for the new imagery/audit stage remains pending."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-imagery-NFT-intent-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "pending",
+      "source_revision": "c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "recorded_at": "2026-10-23T08:05:00Z",
+      "scope": "User authorizes prior Sentinel auditing ideas, staged imagery first then practical-value-ranked page connections. Desired eye-to-subject-return-eye-shield projection into above-field cards with passed/incomplete/stale/mismatch; distant gold NFT/tokenized treasure and short identity explanation. Root implements first pure public-observation audit foundation plus renderer/controller bindings fromc07c1b3e; no extra RPC/service/storage/gate/wallet work and no connected live asset observations. Explore-only synthetic rehearsal must remain labelled and isolated.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "limitations": [
+        "Source reference identifies deployed base, not an uncommitted final new implementation. Candidate, exact-source native QA and CI remain pending.",
+        "Gold identifies category, not financial value/backing/ownership/security. Caller-asserted verification is not proof. Later gated-page adapters and live NFT/tokenized observations remain unimplemented."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-core-controller-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T08:21:19Z",
+      "scope": "Root reports frozen core1a1d1a59671d29cf77bc14114b14e1b762e906f14803554ef9bca748a0e02433 (17675B), testsd9e2f30bed528a27b915d6a2903b21f5efa70b693c5239b1c338c0a34429de7b (11349B),14pass. Controller0f2ac1d681789af27f10d00d3447a07adfd1faa98c73669cf7d3d8c1cb88af4d, UItests6f8c14ab794036e1181128d975cdafd7df79289f10778ec942b3374bb4da9bc5,57pass (six new). Independent security review found no further core/controller blocker. Public export schema2.4 has optional SHA256 sorted JSON,2MiB hash/8MiB capture-download/1500ms explicit-export deadline; no extra polling. Root index source audit14inline bodies/IDs/CSPexact;one deferred local module andthreecacheversionsonly. Expected ten changed paths; visual source, QA andcombinedCIpending.",
+      "command": null,
+      "input_digest": "1a1d1a59671d29cf77bc14114b14e1b762e906f14803554ef9bca748a0e02433",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "limitations": [
+        "Source revision null because these new local modules are not yet committed; reference identifies deployed base, not their final candidate. Final visual/native/integration/candidate/CI evidence remains pending.",
+        "Core checks captured arithmetic/metadata consistency, not independent vault recount, local consensus, asset backing, ownership or safety. Security review is not a certification; no new browser/provider/financial test or infrastructure."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-combined-local-freeze-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T08:26:19Z",
+      "scope": "Root reports combined109focusedpass (14core+57controller+38renderer) andall3JSsyntax. Visualfreeze97630d03f9bf166d728468471f83b3756ec6816a808e557606602eccb2cea72e; CSS8050fd96294fba98ab35de24a71ca46e4cf83757fb722a0b0c6e5000891849f7; renderertests9166326dc116f31242fb52e4eb6f470c3ab60079b9a3881c35cb48c1a57d7377. Root confirms ten changed paths,14inline bodies/IDs/CSP exact, one self-origin deferred module+threecacheversions only, correctindexscriptorder,original36134byte logo078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094.",
+      "command": null,
+      "input_digest": "97630d03f9bf166d728468471f83b3756ec6816a808e557606602eccb2cea72e",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "limitations": [
+        "Uncommitted local freeze only; source revision null and reference names deployed base. Native16s and independent final review pending; candidate andcombinedCI not yet created.",
+        "CSS parsers unavailable; no parser/install claim. CSS source-level review and synthetic Canvas do not establish actual DOM/CSS, browser CSP/Origin, live provider availability, deviceFPS or financial/security certification."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-controller-core-cinema-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T08:31:30Z",
+      "scope": "Root prepared ten-path release action payload1883749ASCIIbytes/SHA25608874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f. Actual controller\u2192core\u2192cinema synthetic binding passed:2evaluations/16updates,8findings (4market passed,4vault incomplete), no extra read on pause/audit. Root fullindex hash7f9638c274997b3742db9e28aea82f6530e64fc0770c0225252daa031f076e1e; newauditdoc2269267d6c387a0f5ae08ecc7500796921ff84567d028081787620428295e811; existingSentineldoc6476a43472ec5143eb1fd6d979f7fdf1c38bd0299bf74a743ccf1a1aa3438461. No remote source commit yet.",
+      "command": null,
+      "input_digest": "08874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/c07c1b3e6071efa214ed14619ca1ca0cd89d9f8d",
+      "limitations": [
+        "Local source/integration only; source revision null and reference is deployed base. Native final proof, committed candidate andrequiredCI remain pending.",
+        "Synthetic binding is not browser DOM/CSS/CSP/Origin, live provider availability, complete vault history, NFT identity/ownership/backing or a financial/security certification."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-MR125-committed-source-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "5833ee8a2f2d26ed440ad6cf710f0ae48d79c570",
+      "recorded_at": "2026-10-23T08:33:01Z",
+      "scope": "Root committed reviewed branchxrbc/sentinel-audit-imagery-20261023 candidate5833ee8a2f2d26ed440ad6cf710f0ae48d79c570 parentc07c1b3e6071efa214ed14619ca1ca0cd89d9f8d. MR125 created; pipeline2980198024 running. All ten remote content_sha256 readbacks match reviewed manifest/actionpayloadSHA08874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f. New doc isdocs/liquidity-sentinel-audit.md. Local109focused/3syntax already pass; bounded native status/cardidentity/queue/orphan-visual-deposit/lifecycle/controller checks passed while final desktop/mobile16s recordings remain running.",
+      "command": null,
+      "input_digest": "08874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/125",
+      "limitations": [
+        "Committed source/readback and scoped local checks only; final native recordings and required CI remain pending. No merge/deployment yet.",
+        "Gold deposition is visual classification, not asset transfer, ownership/backing/safety or an NFT mint. Later gated-page adapters and live asset observations remain unconnected."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-MR125-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "5833ee8a2f2d26ed440ad6cf710f0ae48d79c570",
+      "recorded_at": "2026-10-23T08:33:38Z",
+      "scope": "Root checked MR125 exactcandidate5833ee8a2f2d26ed440ad6cf710f0ae48d79c570, requiredpipeline2980198024 all3success:runtime-contracts17409109284 actual973tests/973pass/0fail;validate-repository17409109285 andhomepage-snapshot17409109286 success. All ten candidatefileSHAreadbacks match. Release manifestSHAced5d808ab8120202a3a6af10aa0c93e6a3385a0a62d7c990aaec16f387ed233; distinct actionspayloadSHA08874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f. The973include109focused(14core+57controller+38renderer), not additive.",
+      "command": null,
+      "input_digest": "ced5d808ab8120202a3a6af10aa0c93e6a3385a0a62d7c990aaec16f387ed233",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980198024",
+      "limitations": [
+        "Final native completion still pending at this observation. Merge/production deployment pending; final checkpoint must be prepared/read back before release, then stopALLtools immediately at deploy-pages success.",
+        "Passing required/advisory jobs are not strict sitewide security clearance, browser/live-provider/performance proof, complete vault history or asset ownership/backing. Existing untriaged scanner/advisory limitations remain."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-MR125-final-native-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "5833ee8a2f2d26ed440ad6cf710f0ae48d79c570",
+      "recorded_at": "2026-10-23T08:34:54Z",
+      "scope": "Root reports final nativeQA passed with no source changes at frozen cinema97630d03f9bf166d728468471f83b3756ec6816a808e557606602eccb2cea72e. Desktop1000x620/mobile390x760 each16.000s/384frames/24fps.40statusphase+20NFT/MPTidentity snapshots pass, matching card/ref/projection, queue3/record12, orphan visualdeposit prevention,6lifecycleclear/no-replay. Deposits only8s/12.208s retainedhold in synthetic sequence. Root viewed both finalcontact sheets. Native proofqa-motion/audit-proof.json SHA256fca6b12f5ce978e43a123b56817a30353575584fc6d9e53723da602d9c9498cb; desktopvideo c14107698eac7263f0b74d8dcf3db7414c56d735acc6a39f6988c035bee42510; mobilevideo da853a7d34155d0359637f732fca5b6c54f6538ffc62d06cb5703f633cf2e208. Actualcontrollerproof f32dffff6c2b14a0666bb886dde03ecfac665d4056c97c308a1265f49fc44757. Independent finalsource review found no remaining concrete blocker; candidate source/local/native/requiredCI passed.",
+      "command": null,
+      "input_digest": "97630d03f9bf166d728468471f83b3756ec6816a808e557606602eccb2cea72e",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/125",
+      "limitations": [
+        "Native synthetic160px deck geometry, no HTML/SVG raster. CSS source-only review; no parser installed or parser/install success claim. Not actual browser DOM/CSS/CSP/Origin, live provider access or deviceFPS proof.",
+        "Classification/visual deposits do not prove NFT ownership, financial value, backing, safety or an actual asset transfer; live assets andlater gated-page adapters remain unconnected.",
+        "Merge/production deployment pending at predeployment save. Publish/read back checkpoint first, merge exactreviewed candidate, then stop ALL tools immediately on requested deploy-pages success. New explicit turn required for release reconciliation andnext stage."
+      ],
+      "supersedes": []
     }
   ]
 }

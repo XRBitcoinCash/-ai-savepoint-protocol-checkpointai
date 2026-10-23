@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus roaming Sentinel and trade-size weapons",
+      "title": "XRBC Liquidity Nexus Sentinel audit imagery and evidence",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -418,12 +418,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/sentinel-airborne-beams-20261023",
-        "head": "04224aabeb44eff1aae812ba593884c81fa67b71",
-        "pipeline": "2980000232"
+        "branch": "xrbc/sentinel-audit-imagery-20261023",
+        "head": "5833ee8a2f2d26ed440ad6cf710f0ae48d79c570",
+        "pipeline": "2980198024"
       },
-      "status": "MR123-deployed-reconciled-MR124-combined-source-native-CI-passed-deployment-pending",
-      "next_action": "Publish/read back the validated checkpoint; verify deployed master7a75a8b4 and MR124 exact04224aabeb44eff1aae812ba593884c81fa67b71 with pipeline2980000232 passed; merge reviewed candidate and follow production Pages. Stop ALL tools immediately at requested deploy-pages success and reconcile actual new merge/production IDs only after a later explicit user turn. Preserve shared airborne geometry, explicit visual XRP tiers, original base64 logo, accepted-event/quote/lifecycle limits, Render/feed/vault/P2P boundaries and denied-preview block. No new live probes, future-trade prediction or audit claim."
+      "status": "MR124-deployed-reconciled-MR125-source-native-CI-passed-deployment-pending",
+      "next_action": "Publish/read back the validated checkpoint; verify masterc07c1b3e6071efa214ed14619ca1ca0cd89d9f8d and MR125 exact5833ee8a2f2d26ed440ad6cf710f0ae48d79c570 with CI2980198024 passed; merge reviewed candidate and follow production Pages. Stop ALL tools immediately on requested deploy-pages success; only a new explicit user turn may use one bounded MR125/master-production observation to reconcile actual merge/deploy IDs before staged page connections; do not repeat this release queue. First imagery/public Nexus audit passes source/native/CI; actual NFT/gated-page adapters remain unconnected and gold classification never proves ownership/value/backing. Preserve Render/feed/vault/gates/privacy/P2P/lifecycle limits and denied-preview block."
     }
   }
 }
