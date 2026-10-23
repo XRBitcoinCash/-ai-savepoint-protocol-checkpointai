@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus panorama, interactive NFT courtyard and native DEX camps",
+      "title": "XRBC Liquidity Nexus continuous sky, ridge camps and accepted trade readouts",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -418,12 +418,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/sentinel-panorama-dex-20261023",
-        "head": "2c40679e4020ce43b9fa70ab25f95d5e18495879",
-        "pipeline": "2980653616"
+        "branch": "xrbc/sentinel-ridge-sky-20261023",
+        "head": "652c0516aeb75b740ca274f6bc3325d3d5632055",
+        "pipeline": "2980956986"
       },
-      "status": "MR127-source-native-required-CI-passed-pending-merge-production",
-      "next_action": "Publish/read back validated checkpoint, then merge only MR127 candidate2c40679e4020ce43b9fa70ab25f95d5e18495879 with green pipeline2980653616/1060tests and observe authorized production/Pages. Preserve full panorama/interactive courtyard/fullhash/shieldSVG, rich gateways,17CEX/shared nativeDEX rear line, proven execution sides and24h history bridge. Existingledger-only4s/15rollingstarts/one-inflight observer, fair NFT/vault/DEX bounds/64history and actual shared429 floor remain. Merge/production pending; stop ALL tools on deploy success. Next explicitturn one boundedMR127/master-production reconcile; no financialtests or preview bypass."
+      "status": "MR128-final-source-native-CI-QA-accepted-pending-merge-production",
+      "next_action": "Publish/readback validatedcheckpoint, then merge only MR128 candidate652c0516aeb75b740ca274f6bc3325d3d5632055 with greenpipeline2980956986/1099tests and observeauthorized production/Pages. Finalsource/layout/QAacceptance pass; preserve2ffsame-clock/4fafkeyframes/792577reuse/eedmotion exactscopes andtruthfulfallbackbudget. Merge/production pending. STOPALLTOOLS immediatelyondeploy-pagesSUCCESS; nextexplicitturn oneboundedMR128/master-productionreconcile. Userboundedruntime/scope unchanged; no broaderfeatures/financialtests/previewbypass."
     }
   }
 }

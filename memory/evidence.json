@@ -3924,6 +3924,356 @@
       "supersedes": [
         "XRBC-Sentinel-panorama-precommit-native-failures-2026-10-23"
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "92fb982f845a726c851a0af5c31b6a5c6486894f",
+      "recorded_at": "2026-10-23T11:08:16Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-panorama-MR127-deployed-reconciled-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "Newexplicituserturn rootboundedreconciledMR127 deployedmaster92fb982f845a726c851a0af5c31b6a5c6486894f fromcandidate2c40679e4020ce43b9fa70ab25f95d5e18495879, production2980684974 ALL6success runtime17412712120/repository17412712121/homepage17412712122/Semgrep17412712123/secret17412712124/Pages17412712125. RootstoppedALLtools on deploysuccess and resumed onlynewexplicitturn. Priorreleasequeuecomplete;16137bytebrief archivedverbatim withdatedreconciliation.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980684974",
+      "limitations": [
+        "Release is not actualbrowser/liveprovideracceptance/securitycertification. Historical1060tests/native results remain scoped, not proof of newridge-sky build.",
+        "Newuser supersedes detachedcourtyard withcontinuouscastlesky; currentnewsource/native/CI pending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "92fb982f845a726c851a0af5c31b6a5c6486894f",
+      "recorded_at": "2026-10-23T11:08:16Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-vault-unbound-source-diagnosis-2026-10-23",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Root+independentreadonlyreviewconfirmed Ripple24hcoverageunverified is intentionalhistorySourceBound=false withunchangedvaultreader753c253b…; notestablishednewreaderregression. Presentationwillclarifychecked20accountprogress/date/ledger/requestedrange without looseningcomplete-sourcebindingpolicy, provingzero fromemptyunboundEvernorthhistory or erasingverifiedinventory. Noactualprobe.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/92fb982f845a726c851a0af5c31b6a5c6486894f",
+      "limitations": [
+        "Fullreaderhash not supplied here; input/environmentdigestnull, no machine-reusecertificate or newtests claimed. This is readonlysource diagnosis, not live24hcoverage.",
+        "Wordingrevision stillpending; checkedaccounts and balances are distinct from provedmovement/historytotals."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "92fb982f845a726c851a0af5c31b6a5c6486894f",
+      "recorded_at": "2026-10-23T11:08:16Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-bounded-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "scope": "Usernewexplicitrevision/enoughfornow: actualroughcoloredsmallridgecamps/fires Sologenic/XPMarket/FirstLedger/Magnetic plusXAMAN assharednativeinterfaces;Bitstamp remainsoneexisting17CEX ifmovedridgewithclearrole. CompactlowerLEFT/RIGHTnormalflowreadoutblendedSAMEpanorama usesrealacceptedCEX/originalbrandedXRPL exactasset/issuer/nativequoteamount/knownprice/times/hash,64/10min,noextrafetch/noUIattribution/noNexusmix. Crucialusersupersedes separatecourtyard: SAMEcontinuouscastleskybehindgoldcloud/glints,softfadeinspectablemetrics,click/keyboardselectedqualifiedNFTfullIDs; no detachedportico/sidecarve. Sharedglobalbackgroundmap; portalE215/1774,333/887 R1578/1774,373/887; localorganicjaggedterrainpreservesmeasuredslopes/axes/nativequotes/tiers/logo/validation. Runtime4s15rollingstarts/fairquotas/deadlines/source/backend/budgetsUNCHANGED, nofeatureexpansion/service/storage/gates/wallet/P2P. RootwebopenedofficialXaman2026Swaparticle confirmingnativeinterface, notstandaloneliquidity.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/92fb982f845a726c851a0af5c31b6a5c6486894f",
+      "limitations": [
+        "Newcodeunderwayfromdeployedbase; no newMR/candidate/testcount/hash/nativeproof/CI. Fullcurrentboundedscopemustremain, usersaysenoughfornow.",
+        "IndependentnativeQA may useactualrenderer/DOM-SVGmockgeometry, neverbrowserCSS/CSP/Origin/liveproviderproof. Previewdenialremains; publishcheckpointBEFOREmerge/deploy andSTOPALLTOOLSondeploysuccess."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T11:27:26Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-precommit-hidden-labels-2026-10-23",
+      "kind": "synthetic",
+      "status": "failed",
+      "input_digest": null,
+      "scope": "Precommit nativevisualreview found FirstLedger/Xaman names hidden. Renderer corrected readability before frozenMR128candidate; currentfunctional4tiers/bothsizes/tape/cloud/crop/portalwaveY checks reportedpassed, while finalmovies/patrolstillpending.",
+      "limitations": [
+        "Exactfailedrendererhash not supplied; source_revisionnull and ref identifies latercandidate, not failedinput. Readabilityfinding is preserved separately from tests/sourcepass.",
+        "No actualbrowserCSS/liveprovider/performance result or final16smovie/24spatrolpass atthisobservation."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "fc6fee6bca82ae313cb55c441543f2e2785c86ec",
+      "recorded_at": "2026-10-23T11:27:26Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-MR128-committed-source-local-2026-10-23",
+      "kind": "source",
+      "status": "passed",
+      "input_digest": "877d0ae4d12b783afc72c9696c9788962174eb337d338b88e95908a1fa6737cd",
+      "scope": "RootcreatedMR128 candidatefc6fee6bca82ae313cb55c441543f2e2785c86ec parent92fb982f845a726c851a0af5c31b6a5c6486894f branchxrbc/sentinel-ridge-sky-20261023. All15remotecontentSHA256readbacks match manifest877d0ae4d12b783afc72c9696c9788962174eb337d338b88e95908a1fa6737cd (5new/10updates). Rootfocused170/170pass(controller76+renderer53+DEX15+tape19+terrain7),5syntaxmodules andindependentfinalsecuritysource-signoff. BoundaryproofSHA0bec3f24d868e1b4176d7b72a7e04650a4135c932d33b3f070476dfca9f244e1 confirms unchangedobserver/audit/gateway/live/exchanges/vaultreader, originalPNG078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094, dependency-onlyindex14inline/IDs. Fullunchangedvaultreader753c253b8439c79f88939bc31b481108d10ab8117176c48faa4a23daef297320. Finalnativefunctional4tiers/bothsizes/tape/cloud/crop/portalwaveY passed;16smovies+24spatrol pending.  Fullfile fingerprints retained in bounded identity-detail limitations.",
+      "limitations": [
+        "MRpipeline2980856283 running; actualCIcount notyetverified. Finalnativeartifactproof andmerge/productionpending.",
+        "Source/local/synthetic review is not strictsitewide securityclearance, realbrowserCSS/CSP/Origin, liveprovideravailability, deviceFPS or completeledger/vault24hproof. Earlierhiddenlabel finding remainsseparate; currentscopedvaultunknownpolicy unchanged.",
+        "Reviewed input identities, not a safety certificate: public/index.html=675ee8f53494d7e13a912c3b018ad56390f097b022d7977ef5dd422511f8ac16; public/xrbc-liquidity-castle.js=1cfe719d3e7b26009e2cb0a5f2fe8693608a2c8327c651811b547db76608caca; public/xrbc-liquidity-cinema.css=d0fe3578776b3e56c43da760c6d9dc96d83ab36959e6ab54a975c4900cea5f9a; public/xrbc-liquidity-cinema.js=eed71200a377248c0d264e9df4cf84a2403ca9e6e04d7e8d2f1b566b5f614066; public/xrbc-liquidity-terrain.js=92e2949450eb2877803fb823979963d35fa64c4aad3d825d840cbfaaf80d03ff; public/xrbc-liquidity-trade-tape.js=175bfcadc227e050b309b30bf967f44f8136631b63f443f2c5b7f610c4c7c437; public/xrbc-sentinel-dex.js=bb5039da203abf974220f3644638998801df94850ab70fa453d277143f3a4cfc; tests/unit/liquidity-castle-ui.test.mjs=1626f904356b5d0e1dd299151eb433f0f87fbde3f053d621227121740639b923; tests/unit/liquidity-cinema.test.mjs=4cfacb3b276df67a94808471979c966cd2feb9a203a602760e44ff0b349071a6; tests/unit/liquidity-terrain.test.mjs=10524fd1ffb5a1d1a28bc81815547d24f0fe167b59a4f810f411829be844c09a; tests/unit/liquidity-trade-tape.test.mjs=eebb6dd436d312bdae2dade7358f4dea3a102941fb99dcbbbe2e4af6967e04cd; tests/unit/sentinel-dex.test.mjs=dc1cf79ddf07dec6d739957680c162bba97b7042fe67f31393bb041c03847106; docs/liquidity-sentinel-panorama.md=f15fa7a22abecccc18c799629ce0a9b7c94fd18d9176ab5fc4d6c647b1917e45; docs/liquidity-sentinel-ridge-sky.md=36be1983674f9a04700643ac0e2ad466886bfe7aa4a98a64902254bc3119aae8; docs/metrics-render-contract.md=2d5c44c1001e23c1ad09bfef4f5fad69e9ebe3bd9f7aced9a2d90ebbedc3cc00"
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "fc6fee6bca82ae313cb55c441543f2e2785c86ec",
+      "recorded_at": "2026-10-23T11:30:27Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-MR128-CI-2026-10-23",
+      "kind": "ci",
+      "status": "passed",
+      "scope": "Root verified exactcandidatefc6fee6bca82ae313cb55c441543f2e2785c86ec MR128 requiredpipeline2980856283 ALL3success runtime-contracts17413889597/validate-repository17413889598/homepage-snapshot17413889599. BoundedruntimeTRACEoffset450000,length34937 endsJobsucceeded, actual1096tests/pass1096/fail0/skipped0/cancelled0,duration37560.959794ms. The170focused are included, notadditive. Desktopnativecontactviewed whilemobile/patrolwerependingatCIobservation.",
+      "input_digest": "877d0ae4d12b783afc72c9696c9788962174eb337d338b88e95908a1fa6737cd",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980856283",
+      "limitations": [
+        "RequiredCI passes are not liveprovider/browserCSS/deviceFPS, strictsitewide securityclearance or completeledger/vaultcoverage.",
+        "Finalnative/rootacceptance andmerge/production notestablished byCI. Publishcheckpoint before release andSTOPALLTOOLSondeploysuccess; nextexplicitturn onlyboundedreconcile."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "fc6fee6bca82ae313cb55c441543f2e2785c86ec",
+      "recorded_at": "2026-10-23T11:30:27Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-MR128-QA-native-root-question-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "QA finalnativePASSED at frozen eed71200a377248c0d264e9df4cf84a2403ca9e6e04d7e8d2f1b566b5f614066: both16s/384frame movies,577timestamps complete24spatrol persize, functional4tiers/cloud/tape/crop/portalguards. ProofSHAee1d1819790fab71dc9a9957a65d2c2de9875ee5bfefbc9acc597c1d7da4d105. Root viewed desktopcontact+144frame/mobilecontact+144frame andaccepted newfivecamps/castles/cloud/readouts, thenaskedoneboundedQAquestion aboutmobile6sSentinelnamecrossingGeminiplaque beforefinalacceptance.",
+      "input_digest": "ee1d1819790fab71dc9a9957a65d2c2de9875ee5bfefbc9acc597c1d7da4d105",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "QA nativechecks passed; rootfinalacceptance unresolved pending boundedmobile6slabelanswer. No finalcatalog/publicationpayload until explicitrootgo. No sourcechange reported.",
+        "Native actualrenderer/DOM-SVGsyntheticgeometry is not browserCSS/CSP/Origin, liveprovideravailability, actualdeviceperformance or fullledger/vaultproof. Merge/productionpending."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-mobile6s-title-Gemini-blocker-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "failed",
+      "source_revision": "fc6fee6bca82ae313cb55c441543f2e2785c86ec",
+      "recorded_at": "2026-10-23T11:31:00Z",
+      "scope": "BoundedQAfollow-up confirmed actualsource mobile6s Sentineltitle crossesGeminiCEXplaque54px at renderer eed71200a377248c0d264e9df4cf84a2403ca9e6e04d7e8d2f1b566b5f614066. Rootdeclared narrowlayoutblocker; ownerfixingcurrenttitle reservation plus6stest, nootherfeatures/newdatawork. Existingcandidate1096CI remainscorrectforitsinput butmustbesuperseded afterfix. FindingseparatefromearlierhiddenFirstLedger/Xaman names andpriorQAnativepass.",
+      "command": null,
+      "input_digest": "eed71200a377248c0d264e9df4cf84a2403ca9e6e04d7e8d2f1b566b5f614066",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "Native actualsource finding withsyntheticgeometry, not browserCSS/liveprovider/deviceFPS proof. Narrowfix/finalsourcehash/follow-upcandidate/newrequiredCI pending.",
+        "No publishing/finalcatalog/payload yet; rootacceptance remainsblocked until boundedregression/proof completed."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-followup-source-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "b112befaa5b140b926478fd8cf7b4636519b6e8a",
+      "recorded_at": "2026-10-23T11:34:18Z",
+      "scope": "Rootcommitted MR128followupb112befaa5b140b926478fd8cf7b4636519b6e8a parentfc6fee6bca82ae313cb55c441543f2e2785c86ec;3file7add/2delete(renderer/test/doc). Finalall15remoteSHA256readbacks matchupdatedmanifest6915ebe24c314b1a49465fe520d8acee132fce273113a91e37f37cbf728f3e8c. Narrow currentSentineltitle reservation/6sregression only. Renderer c16852e02fad114a6479ae87cbea1c3ba03e2f287bb737ed3b183b4a960a8f4b, renderer54/54+syntaxfreshrootpass; CSSunchanged. Independentsourcereviewpinnedc16852. Effectivecomponenttotal171=unchanged76controller+15DEX+19tape+7terrain plus54renderer, notnewcombinedrerunclaim. MRpipeline2980882618running. QA bounded6s+577timestamps24sbothsizeSentinelvsall17CEX underway; oldmoviesnotrelabeled.  Fullfile fingerprints retained in bounded identity-detail limitations.",
+      "command": null,
+      "input_digest": "6915ebe24c314b1a49465fe520d8acee132fce273113a91e37f37cbf728f3e8c",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "NewrequiredCIactualcount/finalboundednativeproof pending. Priorfc6fee6candidate1096CI/eed71200movies remain scopedhistory; no silenttransfer tofollowup.",
+        "Source/localpass is not browserCSS/CSP/Origin, liveprovider/realdeviceperformance/securitycertification. Merge/production pending; finalcheckpoint before release;STOPALLTOOLSondeploysuccess.",
+        "Reviewed input identities, not a safety certificate: public/index.html=675ee8f53494d7e13a912c3b018ad56390f097b022d7977ef5dd422511f8ac16; public/xrbc-liquidity-castle.js=1cfe719d3e7b26009e2cb0a5f2fe8693608a2c8327c651811b547db76608caca; public/xrbc-liquidity-cinema.css=d0fe3578776b3e56c43da760c6d9dc96d83ab36959e6ab54a975c4900cea5f9a; public/xrbc-liquidity-cinema.js=c16852e02fad114a6479ae87cbea1c3ba03e2f287bb737ed3b183b4a960a8f4b; public/xrbc-liquidity-terrain.js=92e2949450eb2877803fb823979963d35fa64c4aad3d825d840cbfaaf80d03ff; public/xrbc-liquidity-trade-tape.js=175bfcadc227e050b309b30bf967f44f8136631b63f443f2c5b7f610c4c7c437; public/xrbc-sentinel-dex.js=bb5039da203abf974220f3644638998801df94850ab70fa453d277143f3a4cfc; tests/unit/liquidity-castle-ui.test.mjs=1626f904356b5d0e1dd299151eb433f0f87fbde3f053d621227121740639b923; tests/unit/liquidity-cinema.test.mjs=fe020c7ad8fa3c164a113af59b8751a3882ce9e7c88e8fca09c39f5615439a05; tests/unit/liquidity-terrain.test.mjs=10524fd1ffb5a1d1a28bc81815547d24f0fe167b59a4f810f411829be844c09a; tests/unit/liquidity-trade-tape.test.mjs=eebb6dd436d312bdae2dade7358f4dea3a102941fb99dcbbbe2e4af6967e04cd; tests/unit/sentinel-dex.test.mjs=dc1cf79ddf07dec6d739957680c162bba97b7042fe67f31393bb041c03847106; docs/liquidity-sentinel-panorama.md=f15fa7a22abecccc18c799629ce0a9b7c94fd18d9176ab5fc4d6c647b1917e45; docs/liquidity-sentinel-ridge-sky.md=fbe23a7a3a6a5f12df1806d3650412572af3a5b25b40379de32e156f4adb067a; docs/metrics-render-contract.md=2d5c44c1001e23c1ad09bfef4f5fad69e9ebe3bd9f7aced9a2d90ebbedc3cc00"
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-followup-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "b112befaa5b140b926478fd8cf7b4636519b6e8a",
+      "recorded_at": "2026-10-23T11:34:45Z",
+      "scope": "Rootverifiedexactfollowupcandidateb112befaa5b140b926478fd8cf7b4636519b6e8a requiredpipeline2980882618 ALL3success runtime-contracts17414079776/validate-repository17414079777/homepage-snapshot17414079778. Boundedtraceoffset450000,length35365 endsJobsucceeded actual1097tests/pass1097/fail0/cancelled0/skipped0,duration35362.554782ms. Productfrozen. Finalnativec168replay+577patrol stillpendingatCIobservation; old1096testresult remains separateoriginalcandidatehistory.",
+      "command": null,
+      "input_digest": "6915ebe24c314b1a49465fe520d8acee132fce273113a91e37f37cbf728f3e8c",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980882618",
+      "limitations": [
+        "RequiredCI does not establish actualbrowserCSS/CSP/Origin/liveprovider/realdeviceperformance, completeledger/vaultcoverage or strictsitewide securityclearance.",
+        "Finalnative/rootacceptance andmerge/productionpending. Publish/readbackvalidatedcheckpoint beforeauthorizedrelease; STOPALLTOOLSondeploysuccess, next explicitturn oneboundedreconcile."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-mobile20s-Bitget-Coinbase-blocker-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "failed",
+      "source_revision": "b112befaa5b140b926478fd8cf7b4636519b6e8a",
+      "recorded_at": "2026-10-23T11:37:59Z",
+      "scope": "Newboundednativecase at renderer c16852e02fad114a6479ae87cbea1c3ba03e2f287bb737ed3b183b4a960a8f4b mobile20.000s/frame480 duringsecondpatrolfire/courier: Bitgetbounds[4,541,86,569] crossCoinbase[4,539.23,86,567.23]. Desktop577timestampspassed; mobile480passeduntil20s and6sSentineltitlefix itselfpassed. Rootblockscheckpointpublication; ownerworkingcompactone-lineunselectednativequotecohorts(all17names/quotesretained)+boundedglobalrepack, no newdatasource/parser/budget/features. MR128b1121097CI remains scopedhistorical, notfinal. Separatefromearlier6sSentinel/Gemini andFirstLedger/Xamanfindings.",
+      "command": null,
+      "input_digest": "c16852e02fad114a6479ae87cbea1c3ba03e2f287bb737ed3b183b4a960a8f4b",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "Nativeactualrenderer/syntheticgeometry finding, not browserCSS/liveprovider/deviceFPS. Partialpassedpatrol doesnotestablishwhole24smobilepass.",
+        "Nextvisualsource/followupcandidate/newrequiredCI/finalnativepending. Stopbeforecheckpointpublication; preserveallpublished215evidenceprefix andearlierfailurehistory."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-normal-repack-native-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T11:45:25Z",
+      "scope": "Root reports normalrepack branch79225553 nativeproof095859666305da79f10a843101ac94d5d013b68485dc79f9bda442d33f796f6f PASSEDdesktop/mobile577/577 complete24s: all17pair/title/rider/attack/footprint checks, no budgettrigger. Max17steps/desktop32962/mobile39168checks. Per size12288exactcomparisons of32nonCEXfields matchprioreedmovies; no newencodes/newmoviesclaim. Root viewed/acceptedactualmobile20scomposition. Finalfallback-onlysourcepending namedmin320USDT/.6budgetrefinement; primarynormalpathunchanged, finalnativekeyframeswillpinlatestsource. Finalcandidate/CI afterfreeze; b1121097CI remainsoriginalinputhistory.",
+      "command": null,
+      "input_digest": "095859666305da79f10a843101ac94d5d013b68485dc79f9bda442d33f796f6f",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "Passed normalbranchscope only; source_revisionnull because fullfrozen sourcehash/finalcandidate notyetprovided.79225553 is reportedbranchprefix, not fabricatedfullGitidentity.",
+        "Prior eedmovies keeporiginalsourceidentity;32fieldcomparisons do not establishfullpixel/browserCSS/CSP/Origin/liveprovider/deviceFPS equivalence. No newencodes.",
+        "Finalfallbacksource/keyframes/finalcandidate/newCI andmerge/production pending. Stopbeforecheckpointpublication until finalgates/rootgo."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-final-candidate-local-keyframes-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "7ab59deabb50520e093bcd97496d265b82a79b4a",
+      "recorded_at": "2026-10-23T11:50:58Z",
+      "scope": "RootcommittedfinalMR128candidate7ab59deabb50520e093bcd97496d265b82a79b4a parentb112befaa5b140b926478fd8cf7b4636519b6e8a (3files41add6delete);all15remoteSHA256readbacks matchfinalmanifest4839ee758db21454b858e4376df1534cbf7421fc5201f58419af11ccd71a2773. Renderer4faf8f24cc3dc82b5fe9a40d6c560d42c71a80544dd4c6afd5c88e2bfd28a36b freshly55/55+syntax; test6e79e3a951e3ec9d221eb298001ee20da5cd6701e083b77113e5dc884d2be4a0,CSSunchanged. Effectivecomponent172=76+55+15+19+7, notnewcombinedrerunclaim. Finalsourcekeyproof1e3928be5b1b47932632dbf75d889c7dfb47e15ffc2350d2c95275fabb683240 passesdesktop/390px6s20s plus320px20s;rootviewed390+32020sandaccepts.320fallbackprimary150kcap thencomplete secondary17steps3388checks,total905steps153388/nooverlaps/unplaced;aggregatebudgetflagtruthfulprimaryexhaustion. CI2980941390running;QAfinalmanifest+layoutreviewpending.  Fullfile fingerprints retained in bounded identity-detail limitations.",
+      "command": null,
+      "input_digest": "4839ee758db21454b858e4376df1534cbf7421fc5201f58419af11ccd71a2773",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "ActualnewCIcount and finalnormalbranch/manifest/layout review notyetprovided. Normal792577proof keepsnormalscope; originaleedmovies notrelabeled, no newencodes/finalfullmovieorpatrolclaim.",
+        "Latestkeyframes narrow synthetic/nativeproof, not actualbrowserCSS/CSP/Origin/liveprovider/realdeviceFPS/securitycertification. Merge/deploymentpending; nofinalvalidation/payloaduntilallgates.",
+        "Reviewed input identities, not a safety certificate: public/index.html=675ee8f53494d7e13a912c3b018ad56390f097b022d7977ef5dd422511f8ac16; public/xrbc-liquidity-castle.js=1cfe719d3e7b26009e2cb0a5f2fe8693608a2c8327c651811b547db76608caca; public/xrbc-liquidity-cinema.css=d0fe3578776b3e56c43da760c6d9dc96d83ab36959e6ab54a975c4900cea5f9a; public/xrbc-liquidity-cinema.js=4faf8f24cc3dc82b5fe9a40d6c560d42c71a80544dd4c6afd5c88e2bfd28a36b; public/xrbc-liquidity-terrain.js=92e2949450eb2877803fb823979963d35fa64c4aad3d825d840cbfaaf80d03ff; public/xrbc-liquidity-trade-tape.js=175bfcadc227e050b309b30bf967f44f8136631b63f443f2c5b7f610c4c7c437; public/xrbc-sentinel-dex.js=bb5039da203abf974220f3644638998801df94850ab70fa453d277143f3a4cfc; tests/unit/liquidity-castle-ui.test.mjs=1626f904356b5d0e1dd299151eb433f0f87fbde3f053d621227121740639b923; tests/unit/liquidity-cinema.test.mjs=6e79e3a951e3ec9d221eb298001ee20da5cd6701e083b77113e5dc884d2be4a0; tests/unit/liquidity-terrain.test.mjs=10524fd1ffb5a1d1a28bc81815547d24f0fe167b59a4f810f411829be844c09a; tests/unit/liquidity-trade-tape.test.mjs=eebb6dd436d312bdae2dade7358f4dea3a102941fb99dcbbbe2e4af6967e04cd; tests/unit/sentinel-dex.test.mjs=dc1cf79ddf07dec6d739957680c162bba97b7042fe67f31393bb041c03847106; docs/liquidity-sentinel-panorama.md=f15fa7a22abecccc18c799629ce0a9b7c94fd18d9176ab5fc4d6c647b1917e45; docs/liquidity-sentinel-ridge-sky.md=48e0eee8b90bc14e4f2590a5a040b61b60bfe76c308079ffdff56e506ae976d2; docs/metrics-render-contract.md=2d5c44c1001e23c1ad09bfef4f5fad69e9ebe3bd9f7aced9a2d90ebbedc3cc00"
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-final-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "7ab59deabb50520e093bcd97496d265b82a79b4a",
+      "recorded_at": "2026-10-23T11:51:29Z",
+      "scope": "RootverifiedFINALexactcandidate7ab59deabb50520e093bcd97496d265b82a79b4a requiredpipeline2980941390 ALL3success runtime-contracts17414501217/validate-repository17414501218/homepage-snapshot17414501219. Boundedtraceoffset450000,length35831 endsJobsucceeded actual1098tests/pass1098/fail0/cancelled0/skipped0,duration40106.246381ms. Final1098CI replacesoriginal1096andfollowup1097 asfinalcandidate gate, retainingbothashistory. Root55freshrendererownerpass plus4unchangedcomponents effective172checks and5syntax; notadditional1098tests. FinalQAmanifest/layout/normalreuse reviewpendingonly.",
+      "command": null,
+      "input_digest": "4839ee758db21454b858e4376df1534cbf7421fc5201f58419af11ccd71a2773",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980941390",
+      "limitations": [
+        "RequiredCI not browserCSS/CSP/Origin/liveprovider/deviceFPS/completeledgercoverage orstrictsitewide securityclearance. Finalnative review/rootreleasegate stillpending.",
+        "Merge/productionpending. Prepare/publish/readbackcheckpoint before exactcandidate release;STOPALLTOOLSondeploysuccess, nextexplicitturn oneboundedMR128/masterproductionreconcile."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-source-fallback-cache-DEX-key-finding-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "failed",
+      "source_revision": "7ab59deabb50520e093bcd97496d265b82a79b4a",
+      "recorded_at": "2026-10-23T11:52:27Z",
+      "scope": "Independentlayoutreview confirms4fafprimarygeometry=792 belowobservedcaps and577reusevalid. Reviewfound SOURCE-ONLYnarrowfallbackcacheedge: exactDEXbannerpresence/bounds infallbackObstacles missingcacheKey, so sameelapsednewDEXpulse couldreusestaleplacements. Notanobservednativecollisionfailure. Owneradding KEYONLYdependency+same-clock320DEXarrivalregression, no geometry/repack/art/data changes. Neednewcandidate/newCI beforefinalpayload; no full577/moviesagain. FinalQAmanifestafterkeytransitioncase.",
+      "command": null,
+      "input_digest": "4faf8f24cc3dc82b5fe9a40d6c560d42c71a80544dd4c6afd5c88e2bfd28a36b",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "Sourcefinding is not newobservednative/browser/providerfailure. Conditionalstalecache risk awaits narrow regression/fix; current7ab1098CI validforitsinput butnotfinalcandidate gate.",
+        "Normalbranch577reuseaccepted onlywithinreviewedgeometry/belowobservedcaps; no newmovie/fullpatrol identityclaim. Finalfollowupsource/candidate/CI/QAmanifestpending."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-last-cache-candidate-source-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "652c0516aeb75b740ca274f6bc3325d3d5632055",
+      "recorded_at": "2026-10-23T11:55:05Z",
+      "scope": "RootcommittedLASTcache-onlyMR128candidate652c0516aeb75b740ca274f6bc3325d3d5632055 parent7ab59deabb50520e093bcd97496d265b82a79b4a,3file7add2delete. All15remoteSHA256fingerprints matchfinalmanifest331f4cb25f36cf7ec85922e37152351fd250deaed1916a78be2eaa8188f6c49d. FinalJS2ffb22587b820c485a01c42c6cc065d9d2a61fd62f93a121fa5b801a02734a12,CSSd0fe3578776b3e56c43da760c6d9dc96d83ab36959e6ab54a975c4900cea5f9a unchanged,tests943caecb5964bf50d390616df85e086d7d6be7672af6af145bcc911214f3859b; fullrenderer56/56+syntaxfreshpassed,effective173components=76+56+15+19+7 notnewcombinedrerunclaim. Independentlayoutreviewfinalsignoff confirms activeDEXarrival/expirycachekey andnormal792577equivalence/boundedfallback. CI2980956986running, finalQAonesame-clock320case+manifestpending.  Fullfile fingerprints retained in bounded identity-detail limitations.",
+      "command": null,
+      "input_digest": "331f4cb25f36cf7ec85922e37152351fd250deaed1916a78be2eaa8188f6c49d",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "ActualfinalCIcount/finalsame-clock320QAcasemanifest notyetprovided; merge/productionpending. Prior1096/1097/1098CI remainoriginalcandidatehistory.",
+        "Cache-only no geometry/art/repack/data changes; acceptednormal792577reuse scopedbelowobservedcaps. Oldeedmovies notrelabeled/no newencodes/fullfinal2ffmovieorpatrolclaim. Native/source not browserCSS/liveprovider/deviceFPS/securitycertification.",
+        "Reviewed input identities, not a safety certificate: public/index.html=675ee8f53494d7e13a912c3b018ad56390f097b022d7977ef5dd422511f8ac16; public/xrbc-liquidity-castle.js=1cfe719d3e7b26009e2cb0a5f2fe8693608a2c8327c651811b547db76608caca; public/xrbc-liquidity-cinema.css=d0fe3578776b3e56c43da760c6d9dc96d83ab36959e6ab54a975c4900cea5f9a; public/xrbc-liquidity-cinema.js=2ffb22587b820c485a01c42c6cc065d9d2a61fd62f93a121fa5b801a02734a12; public/xrbc-liquidity-terrain.js=92e2949450eb2877803fb823979963d35fa64c4aad3d825d840cbfaaf80d03ff; public/xrbc-liquidity-trade-tape.js=175bfcadc227e050b309b30bf967f44f8136631b63f443f2c5b7f610c4c7c437; public/xrbc-sentinel-dex.js=bb5039da203abf974220f3644638998801df94850ab70fa453d277143f3a4cfc; tests/unit/liquidity-castle-ui.test.mjs=1626f904356b5d0e1dd299151eb433f0f87fbde3f053d621227121740639b923; tests/unit/liquidity-cinema.test.mjs=943caecb5964bf50d390616df85e086d7d6be7672af6af145bcc911214f3859b; tests/unit/liquidity-terrain.test.mjs=10524fd1ffb5a1d1a28bc81815547d24f0fe167b59a4f810f411829be844c09a; tests/unit/liquidity-trade-tape.test.mjs=eebb6dd436d312bdae2dade7358f4dea3a102941fb99dcbbbe2e4af6967e04cd; tests/unit/sentinel-dex.test.mjs=dc1cf79ddf07dec6d739957680c162bba97b7042fe67f31393bb041c03847106; docs/liquidity-sentinel-panorama.md=f15fa7a22abecccc18c799629ce0a9b7c94fd18d9176ab5fc4d6c647b1917e45; docs/liquidity-sentinel-ridge-sky.md=f82b2656ebca1c8e32a41156c805ac1d7a9e89630b8e908d2bfe2c084dd653d7; docs/metrics-render-contract.md=2d5c44c1001e23c1ad09bfef4f5fad69e9ebe3bd9f7aced9a2d90ebbedc3cc00"
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "652c0516aeb75b740ca274f6bc3325d3d5632055",
+      "recorded_at": "2026-10-23T11:56:05Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-MR128-last-cache-CI-2026-10-23",
+      "kind": "ci",
+      "status": "passed",
+      "scope": "RootverifiedLASTexactcandidate652c0516aeb75b740ca274f6bc3325d3d5632055 requiredpipeline2980956986 ALL3success runtime-contracts17414622941/validate-repository17414622942/homepage-snapshot17414622943. Boundedtraceoffset450000,length36262 endsJobsucceeded1099tests/pass1099/fail0/cancelled0/skipped0,duration34885.891217ms. Effective173componentchecks included, notadditive. Prior1096/1097/1098CI retainedoriginalcandidatehistory. Allfinalsource/layout/QApass; finalQAartifactmanifestfinishing.",
+      "input_digest": "331f4cb25f36cf7ec85922e37152351fd250deaed1916a78be2eaa8188f6c49d",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980956986",
+      "limitations": [
+        "CI not actualbrowserCSS/CSP/Origin/liveprovider/realdeviceFPS/completeledgercoverage or strictsitewide securityclearance.",
+        "FinalQAartifactmanifestreceipt andpredeploymemoryvalidation/publication pending; merge/productionpending. STOPALLTOOLSondeploysuccess, next explicitturn boundedMR128/masterproductionreconcile."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "652c0516aeb75b740ca274f6bc3325d3d5632055",
+      "recorded_at": "2026-10-23T11:56:05Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-ridge-sky-MR128-final-cache-native-arrival-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "Final2ffb22587b820c485a01c42c6cc065d9d2a61fd62f93a121fa5b801a02734a12 native320same-clock originalDEXarrivalevent PASSED all17CEX+fiveactualinterface text labels/nointersections/replay/clones. Proofc6382063a150aa39404bdf1a1ca4143dc8cbcad89f9507391af461d545a69d96; afterPNG3a66b420ced3931e6c7ee09fd1f752b20398f4dc16cf46a77806900b5d66695c. Root viewedafterPNG/acceptsfinalcomposition. Independentlayoutreview signoffconfirms activeDEXarrival/expirykey andnormal792577equivalence/boundedfallback. Prior4fafkeyframes/792577/eedmotion keep explicitoriginalsourceprovenance; no newencodes/fullfinalmovies/patrol. QAfinishingfinalartifactmanifest.",
+      "input_digest": "c6382063a150aa39404bdf1a1ca4143dc8cbcad89f9507391af461d545a69d96",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "This finalsame-clock320case is narrow source-bound native/synthetic proof, not regeneratedfinal2ff16smovies/full577patrol or actualbrowserCSS/CSP/Origin/liveprovider/realdeviceperformance proof.",
+        "Acceptednormalreuse applies reviewedprimarygeometry/belowobservedcaps;320fallbackbudgetflag truthfullyretainsprimaryexhaustion. No completeledger/vault24h/ownership/backing/safety claim.",
+        "QAmanifestreceipt andcheckpointfinalization/publication pending; merge/productionpending, stopALLTOOLSondeploysuccess."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-ridge-sky-MR128-final-QA-acceptance-manifest-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "652c0516aeb75b740ca274f6bc3325d3d5632055",
+      "recorded_at": "2026-10-23T11:57:57Z",
+      "scope": "Finalqa-motion/newridge-acceptance.json SHAab5d5ed61155e7932f05a2290bf787e0dd225447e56e822fd0d5ae0dfc4a517a,49117bytes,acceptedtrue/noremainingcheckedblocker,parentconfirmed652c0516aeb75b740ca274f6bc3325d3d5632055. Fourexplicitrenderer scopes: final2ffb22587b820c485a01c42c6cc065d9d2a61fd62f93a121fa5b801a02734a12 exactsame-clock320originalbrandedDEXarrival proofc6382063a150aa39404bdf1a1ca4143dc8cbcad89f9507391af461d545a69d96+rootacceptedPNG3a66b420ced3931e6c7ee09fd1f752b20398f4dc16cf46a77806900b5d66695c; fallback4faf8f24cc3dc82b5fe9a40d6c560d42c71a80544dd4c6afd5c88e2bfd28a36b exactD/3906s20s/32020s keyproof1e3928be5b1b47932632dbf75d889c7dfb47e15ffc2350d2c95275fabb683240; normal7922555320294501f8e0098ad2560acaa0ad792b7d0116e86626c74513b67184 577timestamps/bothsizes proof095859666305da79f10a843101ac94d5d013b68485dc79f9bda442d33f796f6f; originaleed71200a377248c0d264e9df4cf84a2403ca9e6e04d7e8d2f1b566b5f614066 16s/384frame/24fps motionproofee1d1819790fab71dc9a9957a65d2c2de9875ee5bfefbc9acc597c1d7da4d105. OriginalDmovieSHA3bcffb339dbbf825f0ed5c55742483e6d35e7c85ebe9aab88fe08d11ca3a77f1/MmovieSHA7080bb4065b2f7b8beae639e30549856ee7c22c7bbda81364e78e0ec62a7a530 unchanged. Functional792nativeproof417cba2d20b104c2d69b71d17012cb793d32b448e793813d98b69828512090b6 covers fullfields/soleBitstampCEX/fiveinterfacecamps/authenticlogo/fourtiers/parserbrand/goldcloud/fullIDs/keyboard/DEXseparation/24hhistoryvsfreshvault. Existingboundedhistory/lifecycle/tape/backdrop cases retainoriginalsourceprovenance. Rootacceptedcomposition; finalsource/readbacks/1099CI/independentlayout/QApassed.",
+      "command": null,
+      "input_digest": "ab5d5ed61155e7932f05a2290bf787e0dd225447e56e822fd0d5ae0dfc4a517a",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/128",
+      "limitations": [
+        "ExplicitmockDOMgeometry/text; no actualbrowserCSS/CSP/Origin/liveprovider/wallet/realdeviceperformance or strictsitewidesecuritycertification. Fourrendererscopes are notrelabelledasfinal2ffmovies/fullpatrol.",
+        "Normal792577 replay uses realnativeCanvas state/paths/measureText withrasterdisabled exceptselectedstills/nativecalls; source-reviewreusebasedonearlier792read+current4faf/2ff, no stored792snapshot/byte-diffartifact. Newcaps exceedobservednormalwork; fallbackonlyafterprimaryfailure.",
+        "4fafkeyframes use timedeventadmissions+onetargetrenderAt, notoldfullRAF/bridgeeasingreplay. Final2ffcachecaseoriginalbrand/copyduplicate rejection/currentclock/elapsed proof; no geometry/stylechange.32nonCEXfieldcomparisonsof384framesdonotclaimpixel/browserCSS equivalence.",
+        "Merge/productionpending atpredeploysave. Publish/readbackvalidatedcheckpoint first; stopALLTOOLS immediatelyondeploy-pagesSUCCESS. Onlynextexplicitturn permits oneboundedMR128/masterproduction reconciliation."
+      ],
+      "supersedes": []
     }
   ]
 }
