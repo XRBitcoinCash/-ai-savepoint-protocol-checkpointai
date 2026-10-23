@@ -3795,6 +3795,135 @@
         "RequiredCI passes do not establish live provider/browser performance, completeledger/treasury coverage, asset ownership/backing or strictsitewide security clearance. Historical HTX synchronization failure is retained separately.",
         "Merge/production pending at predeployment save. Publish/read back memory before release; stop ALL tools immediately on requested deploy-pages success. Only a new explicit userturn permits one bounded MR126/master-production observation to reconcile and continue."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "c499ff7d9ab0e68bbe93a0ae5df5be29c9230884",
+      "recorded_at": "2026-10-23T10:09:52Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-camps-MR126-deployed-reconciled-2026-10-23",
+      "kind": "deployment",
+      "status": "passed",
+      "scope": "On the new explicit user turn root reconciled MR126 deployed master/merge c499ff7d9ab0e68bbe93a0ae5df5be29c9230884 from f695a048384028e83751d04887b79f69d6b3f0fa. Production2980453595 all6success:runtime17411014812/repository17411014813/homepage17411014814/Semgrep17411014815/secret17411014816/Pages17411014817. Root stopped ALL tools at deployment and resumed only with new explicit user authority. Prior release queue complete; old16301-byte brief archived verbatim with dated reconciliation.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980453595",
+      "limitations": [
+        "Release status is not current browser/live-provider acceptance or strictsitewide security clearance. The user rejected the sidecourtyard/narrowfield/overlaps/gateway/NFT interaction after release.",
+        "Historical1020-test/source/native evidence stays scoped and unchanged; it does not certify the new panorama implementation."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "c499ff7d9ab0e68bbe93a0ae5df5be29c9230884",
+      "recorded_at": "2026-10-23T10:09:52Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-panorama-full-scope-NFT-DEX-intent-2026-10-23",
+      "kind": "source",
+      "status": "pending",
+      "scope": "New explicit fullscope repair/deploy authority: transparent normal-flow independent courtyard ABOVE fullwidthfield; persistent interactiveNFT cards/fullhash inspector/shieldgoldSVGbeam; richRipple/Evernorth gateways;17CEX adjacentlabels/tiers unchanged; roughbarbarian rear-width nativeDEX line from proven execution side. Sologenic/XPMarket/FirstLedger/Magnetic are sharedXRPLinterface banners, not separateflows. Sameexpandedvalidatedledger parser and existingRenderPOST/ledger only, minimum4s/15rollingstarts per60s/oneinflight/15s/1.5MiB. FairNFT2048/vault2048/DEX4096metadata overall8192,512headers,events32/8/32<=72; recent64entries10min. Independentadmission replaces60s/allchannelsidle; actualshared429RetryAfter floor. Gaps/omissions/dates/partial explicit, never zero/global; noextraRPC/source/service/storage/origin/backend/gate/wallet. Current implementation ongoing; finalsource/native/candidate/CI notsupplied. Preserve24h drawbridge: COMPLETE verified24hin/out summary can open it labeledhistorynotfresh; unknown/incomplete/balance-only cannot prove movement. Freshfireworks/waves only newly accepted original branded source-boundvaultEvent; do not narrowbridge to5sburst.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/c499ff7d9ab0e68bbe93a0ae5df5be29c9230884",
+      "limitations": [
+        "Reference names deployed base, not uncommitted repair. Full scope must remain intact; no current finaltestcount/hash/CI claim. Later gatedpage adapters remain future, heldP2P untouched.",
+        "Native actualrenderer and DOM/SVG syntheticgeometry do not establish browserCSS/CSP/Origin, liveprovideraccess, globalmonitoring or assetownership/backing/value/safety. Prior browserpreview denial persists; no broadfinancialtestreruns."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "2c40679e4020ce43b9fa70ab25f95d5e18495879",
+      "recorded_at": "2026-10-23T10:34:22Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/127",
+      "supersedes": [],
+      "id": "XRBC-Sentinel-panorama-data-source-local-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "input_digest": "7739bb0cb2f0a9fe6c63e9698945503b12ada131994828e92a1f1273e86352b3",
+      "scope": "Root combined fourdata/gateway suites120tests/120pass/0fail/0skip:26observer+15DEX+71controller+8gateway. Report qa-motion/panorama-data-tests.tap contains NodeUnicode summary, notTAPformat. Frozen observer7739bb0cb2f0a9fe6c63e9698945503b12ada131994828e92a1f1273e86352b3; DEXc48e5c9c36776f7814c792fc9e07c63231bc1cab27265fcbfa03251f46a5797b; controller7daa3ffa110652e4bab30fd6b8d89e4842e1dea8c813a02860f52c68451a178e; gatewaye1e5226bd726b05ae6872acb5e01377a02589979da7048dc5a63346356429042. Independent security/source review closedallfour plus Evernorth issuedSendMax routingcase; noindependenttestrun/probe. Later exactcandidate manifest binds unchanged data hashes.",
+      "limitations": [
+        "Scoped local/source review only;120data included in final168focused, notadditive. Not liveprovider/browserCSS/deviceFPS/completeledger proof or securitycertification.",
+        "Finalnative and requiredCI remainpending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T10:34:22Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/127",
+      "supersedes": [],
+      "id": "XRBC-Sentinel-panorama-precommit-native-failures-2026-10-23",
+      "kind": "synthetic",
+      "status": "failed",
+      "input_digest": null,
+      "scope": "Root/native images caught blanktreasure caused by same-sizeCanvas reset duringhistorysync and3of4DEXflags occludedbylaterlayers. Root requiredcamp-label collision protection for gate/name/DEXbanners. Third fullcomponentdesktop/mobile/root review accepted all4flags/treasure/ridge/gatewayplaques, then a full24spatrol caughtlate20.6sdesktopgoldtagocclusion. Finalrenderer cachesNexusbounds for dense-tagsuppression plus48thregression; goldline/orb/readablecardunchanged and mobiletagomitusesuserdenseexception. Failures preserved before finalproof.",
+      "limitations": [
+        "Exact failed-input hashes unavailable; source_revisionnull and reference identifies latercandidate, not failedsource. These are native/synthetic findings, not browser/liveprovider results.",
+        "Final source tests pass but finalnative timestamp/size/movie proof remainspending; no fabricated finalnativepass."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "2c40679e4020ce43b9fa70ab25f95d5e18495879",
+      "recorded_at": "2026-10-23T10:34:22Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/127",
+      "supersedes": [],
+      "id": "XRBC-Sentinel-panorama-MR127-committed-source-local-2026-10-23",
+      "kind": "source",
+      "status": "passed",
+      "input_digest": "b81dd9dd20f8b40b6a343e815a9249a581ef2be71d5f00f712cfab98aa5a577b",
+      "scope": "Root committed branchxrbc/sentinel-panorama-dex-20261023 candidate2c40679e4020ce43b9fa70ab25f95d5e18495879 parentc499ff7d9ab0e68bbe93a0ae5df5be29c9230884/MR127. All15remote contentSHA256readbacks match manifestb81dd9dd20f8b40b6a343e815a9249a581ef2be71d5f00f712cfab98aa5a577b; actionspayload2045524bytes/SHA58862635a623a6b59acfeeed554c81d33b0c23a5902ee0adbd73c12f0001ea42 distinct. Root168focusedpasses(120data+48visual),5syntaxmodules; indexdependency-only proofqa-motion/panorama-index-proof.json14inline/IDs/CSP/logo unchanged. Full15fileSHA256 identities: public/index.html=31ddd4a5543258299eb7886a4b17203ccf912f793f8e231050c9faeaa34bde08; public/xrbc-liquidity-castle.js=7daa3ffa110652e4bab30fd6b8d89e4842e1dea8c813a02860f52c68451a178e; public/xrbc-liquidity-cinema.css=e0198035e1008b28181c7af3ed31e2b847e897093537d827e7f235290c979215; public/xrbc-liquidity-cinema.js=27c8232c3de16353301d40273de5d4dbc0ef4fb276647a92da4150f62a7d5aa7; public/xrbc-liquidity-gateways.js=e1e5226bd726b05ae6872acb5e01377a02589979da7048dc5a63346356429042; public/xrbc-sentinel-dex.js=c48e5c9c36776f7814c792fc9e07c63231bc1cab27265fcbfa03251f46a5797b; public/xrbc-sentinel-events.js=7739bb0cb2f0a9fe6c63e9698945503b12ada131994828e92a1f1273e86352b3; tests/unit/liquidity-castle-ui.test.mjs=bb69bee184f146e47f4a431206f69b12ac54107110c1fda2633522ce2ae7aedb; tests/unit/liquidity-cinema.test.mjs=9fb609d60e42d74076721b4e023df31c49275035694523de5a57758bbb01983d; tests/unit/liquidity-gateways.test.mjs=f2820b50baf34646314ab90756de3aff278d1410139496d7f7f7ea5c55677574; tests/unit/sentinel-dex.test.mjs=ea14769ff12da1287ce9aae04f25cd4b0e62bb645d10e05d634a47c93b3a38c2; tests/unit/sentinel-events.test.mjs=0e414ef2275866a6e38d77581265c4feea2de4cee5707e2fdbb3857cbbc937e0; docs/liquidity-sentinel-camps.md=714b20068c4ebeaa8ffbc0a7502679875ebfba71fcfab3110240c28fc58e2248; docs/liquidity-sentinel-panorama.md=df8179811cd824e92fe1e633268d89395d5f38f60b23e33db0923b332b0d5b2b; docs/metrics-render-contract.md=d0265ff042e69f0b9852afe51742620e056713cf208c00d5554e8e3e02c01b1e",
+      "limitations": [
+        "Finalnative577timestamp/size/movie proof and requiredCI pending at this observation; merge/deploypending. Candidate identity is not deploy proof.",
+        "Source/localtests and data review are not browserCSS/CSP/Origin, live-provideravailability, securityclearance or assetownership/backing/value. Original precommit nativefailures remain recorded separately."
+      ]
+    },
+    {
+      "id": "XRBC-Sentinel-panorama-MR127-CI-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "2c40679e4020ce43b9fa70ab25f95d5e18495879",
+      "recorded_at": "2026-10-23T10:36:56Z",
+      "scope": "Root verified exactcandidate2c40679e4020ce43b9fa70ab25f95d5e18495879 MR127 requiredpipeline2980653616 ALL3success:runtime-contracts17412474926/validate-repository17412474927/homepage-snapshot17412474928. ActualruntimeTRACEoffset465000 confirms1060tests/1060pass/0fail/0cancel/0skip,duration28031.87699ms;168focused are included, notadditive. GitHubcheckpointhead rechecked bc499abb0766210b12de81100df0d1357555be0e unchanged. Finalnativefunctionalchecks passed currentrenderer; rootvieweddesktop16scontact/mobilefull-IDtypeinspector, while24spatrol577timestamps/size/both16smovieproof remaininprogress. No codechanges aftercandidate.",
+      "command": null,
+      "input_digest": "b81dd9dd20f8b40b6a343e815a9249a581ef2be71d5f00f712cfab98aa5a577b",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980653616",
+      "limitations": [
+        "Finalnativefullpatrol/artifactproof notcompleteatthisobservation; merge/productionpending. RequiredCI is not browser/liveprovideraccess, completeledgercoverage, realdeviceFPS or strictsitewide securityclearance.",
+        "Publish/readback validatedcheckpoint before authorized exactcandidate release. Stop ALL tools immediately on requested deploysuccess; only newexplicitturn permits oneboundedMR127/master-productionreconciliation."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-panorama-MR127-final-native-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "2c40679e4020ce43b9fa70ab25f95d5e18495879",
+      "recorded_at": "2026-10-23T10:39:19Z",
+      "scope": "Root accepted FINALnativegate at finalrenderer27c8232c3de16353301d40273de5d4dbc0ef4fb276647a92da4150f62a7d5aa7 with exactpre/postsourcehashes. qa-motion/newpanorama-proof.json SHA2b6205f4000443f95cf83bd39ee1563d659d74e48112989cc4a284d5040ab2cc. Both16s384frames24fpsactualrenderer+SVGattribute+explicitlyMOCKDOMgeometry/text movies: desktop1000x896 contains1000x620field+200x170court; mobile390x1036 contains390x760field+125x170court. Full24spatrol577timestampspersize verifiesall4DEXflags disjointSentineltitle/currentriderlabels from actualnativecallbounds; goldSVGline/orbexact; mobile/crowdeddesktop tagsomitted whiletype/IDcardreadable. All4CEXtiers/eyes/colors,brandedDEXbidask/noNexuscontamination,complete24hbridgevsfreshfireworks,historyclick/Enter/Space/fullIDs,6lifecycle/no-replaymodes,12burst64history8DEXcaps+10minexpiry passed. RootviewedDcontact+MfullIDinspector/acceptedTHIRDstills;QAviewedbothfinalcontacts/inspectors. QA-only22fpsmobileadapter fixedbycomparinglastPAINTEDframe, noappcodechange. DmovieSHA92d6ada1219dcaf0a547b838ac2e94a07574cf41e550e1c73a3d7160f4a3cbe8; MmovieSHAed30c942ad0bae5406b405dac48c83eda38fff4b7fa10c5506a2c99ccf3a71bf; DcontactSHA54a34b00136a6b4f18f3320a58c703fd428efd8124f8948fdfe9380bf60b327e; McontactSHAf3d87ac9da947b986da6070a33c37e96b92fdd419845a041a3064cccbfeddf59. No sourcechanges aftercandidate; exactrequiredCI1060/1060/all3green already recorded.",
+      "command": null,
+      "input_digest": "2b6205f4000443f95cf83bd39ee1563d659d74e48112989cc4a284d5040ab2cc",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/127",
+      "limitations": [
+        "Movies use actualrenderer and SVGattribute reading with explicitlyMOCK DOMgeometry/text, not browserCSS/DOM layout/CSP/Origin/liveprovideraccess/realdeviceperformance proof. Composite courtroom dimensions are synthetic geometry, not measuredbrowserCSS.",
+        "Prior nativefailures remain preserved; sourcechanged/fixed before exactcandidate. QA-onlylastpaintedframe adapter fix didnot changeappsource or manufacture liveFPS.",
+        "No completeledger/ownership/backing/value/safety/globalmonitor claim. Merge/production pending; publish/readbackcheckpoint before release and stop ALL tools immediately on deploysuccess. Next explicitturn only oneboundedMR127/master-productionreconcile."
+      ],
+      "supersedes": [
+        "XRBC-Sentinel-panorama-precommit-native-failures-2026-10-23"
+      ]
     }
   ]
 }
