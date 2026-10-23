@@ -2213,7 +2213,7 @@
       "status": "passed",
       "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
       "recorded_at": "2026-10-20T12:51:51Z",
-      "scope": "Observed Kraken book HTTP200 with CORS response for site Origin at2026-10-20T12:37:40Z. Complete measured \u00b11% snapshot approximatelyUSD5.53049m bids/USD3.60677m asks, actual bid/ask notional ratio1.53336.",
+      "scope": "Observed Kraken book HTTP200 with CORS response for site Origin at2026-10-20T12:37:40Z. Complete measured ±1% snapshot approximatelyUSD5.53049m bids/USD3.60677m asks, actual bid/ask notional ratio1.53336.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
@@ -2231,7 +2231,7 @@
       "status": "passed",
       "source_revision": "df8c07f304c88913deca1a977b000fecaa4cd195",
       "recorded_at": "2026-10-20T12:51:51Z",
-      "scope": "Kraken OHLC HTTP200/site-Origin CORS, approximately35KB actual payload through adapter. Complete30/30 completedUTC windows2026Sep20\u2013Oct19 versus2025Sep20\u2013Oct19; average daily close YoY-47.4103%, traded XRP base-volume+77.5654%. Both years same venue.",
+      "scope": "Kraken OHLC HTTP200/site-Origin CORS, approximately35KB actual payload through adapter. Complete30/30 completedUTC windows2026Sep20–Oct19 versus2025Sep20–Oct19; average daily close YoY-47.4103%, traded XRP base-volume+77.5654%. Both years same venue.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
@@ -2321,7 +2321,7 @@
       "status": "failed",
       "source_revision": null,
       "recorded_at": "2026-10-22T01:33:05Z",
-      "scope": "Actual browser on the existing public page showed both Coinbase and Kraken books fresh but incoherent combined selection at \u00b11% remained at Loading/Gathering. This is the observed loading-state defect motivating bounded deadlines and explicit terminal partial/unavailable reasons.",
+      "scope": "Actual browser on the existing public page showed both Coinbase and Kraken books fresh but incoherent combined selection at ±1% remained at Loading/Gathering. This is the observed loading-state defect motivating bounded deadlines and explicit terminal partial/unavailable reasons.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
@@ -2339,7 +2339,7 @@
       "status": "passed",
       "source_revision": null,
       "recorded_at": "2026-10-22T01:33:05Z",
-      "scope": "Explicit Kraken-only browser selection at \u00b11% worked at 2026-10-22T01:25:22Z, displaying approximately $4.83M bids / $4.10M asks and ratio 1.18x. This is a real browser-selected venue snapshot.",
+      "scope": "Explicit Kraken-only browser selection at ±1% worked at 2026-10-22T01:25:22Z, displaying approximately $4.83M bids / $4.10M asks and ratio 1.18x. This is a real browser-selected venue snapshot.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
@@ -2972,7 +2972,7 @@
       "kind": "source",
       "status": "passed",
       "reference": "https://xrbitcoincash-github-io.onrender.com",
-      "scope": "Two existing-Render read-only diagnostics observed2026-10-23T04:46:02.672Z, no retry/alternate host/scan: validated ledger107842120 hash1F64B93389290C0C720C108266FCCD9366190E65A934A6A3D8312B9135F76D40 HTTP200/3846ms/934bytes, and one already published Ripple owner account_tx HTTP200/97ms/355bytes with limit1, matching account/validated status and searched range107802120\u2013107842120, zero transactions/no marker. Prior47-request inventory not repeated.",
+      "scope": "Two existing-Render read-only diagnostics observed2026-10-23T04:46:02.672Z, no retry/alternate host/scan: validated ledger107842120 hash1F64B93389290C0C720C108266FCCD9366190E65A934A6A3D8312B9135F76D40 HTTP200/3846ms/934bytes, and one already published Ripple owner account_tx HTTP200/97ms/355bytes with limit1, matching account/validated status and searched range107802120–107842120, zero transactions/no marker. Prior47-request inventory not repeated.",
       "limitations": [
         "Point-in-time transport/schema observation for one account, not complete24h coverage, all monitored accounts, corporate ownership or cause of prior502 responses.",
         "History serving-node identity remains unbound; no movements plus incomplete coverage cannot prove zero flow or a closed drawbridge. Reader source/candidate identity still pending."
@@ -3243,7 +3243,7 @@
       "status": "passed",
       "input_digest": "3f42175a28648eaf108ddb87e4df72075056e3d3da6b85e3c20dd3793f47cb0c",
       "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/blob/ea85b9dd336b7d3d8b233d36d2bbf2cd9ad4e68d/docs/liquidity-sentinel.md",
-      "scope": "Final exact-source native synthetic Canvas QA18s/432frames each at1000x620desktop/390x760mobile: full16s patrol/direction/leg motion, actual original PNG shield, readable title, accepted100-event burst\u2192one glow start, bounded/noqueue glow and rejection/lifecycle guards, pause/reduced pixels unchanged. Root approved quiet and foreground-trade-overlap frames both sizes with no blocker. SummarySHA256006af3d2eb75c5e967c05a7d263190864f2119f7d075dbb998080cc6b7d8434b.",
+      "scope": "Final exact-source native synthetic Canvas QA18s/432frames each at1000x620desktop/390x760mobile: full16s patrol/direction/leg motion, actual original PNG shield, readable title, accepted100-event burst→one glow start, bounded/noqueue glow and rejection/lifecycle guards, pause/reduced pixels unchanged. Root approved quiet and foreground-trade-overlap frames both sizes with no blocker. SummarySHA256006af3d2eb75c5e967c05a7d263190864f2119f7d075dbb998080cc6b7d8434b.",
       "limitations": [
         "Synthetic actual-renderer native Canvas only, not full browser CSS/CSP/Origin, live-source availability or real-device frame rate.",
         "No financial operation, actual security audit, network probe, install or preview-security bypass."
@@ -3297,7 +3297,7 @@
       "status": "pending",
       "source_revision": "7a75a8b43cbf2757fc0682c34ceb32859f09df18",
       "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/7a75a8b43cbf2757fc0682c34ceb32859f09df18",
-      "scope": "Current user asks wider Sentinel movement, multiple eye beams connected to trades before ground and base64. Root scopes a visibly broad front/back/flank route within the existing battlefield, not an overlay over wallet controls; one shared geometry for accepted observed airborne exchange projectiles and beam endpoints, planned cap4desktop/3mobile during200\u20131700ms flight only, no post-impact queue. Original embedded36134byte XRBC PNG retained unchanged. Existing1Hz glow and all source/quote/time/replay/lifecycle guards remain; no new feed/controller/backend/Render/storage/wallet/dependency or source probe.",
+      "scope": "Current user asks wider Sentinel movement, multiple eye beams connected to trades before ground and base64. Root scopes a visibly broad front/back/flank route within the existing battlefield, not an overlay over wallet controls; one shared geometry for accepted observed airborne exchange projectiles and beam endpoints, planned cap4desktop/3mobile during200–1700ms flight only, no post-impact queue. Original embedded36134byte XRBC PNG retained unchanged. Existing1Hz glow and all source/quote/time/replay/lifecycle guards remain; no new feed/controller/backend/Render/storage/wallet/dependency or source probe.",
       "limitations": [
         "Intent/in-progress source preparation, not final source, synthetic QA, CI, merge or deployment evidence. Wait root final evidence before final catalog/validation/publication.",
         "Visual anticipation follows already observed accepted executions; it is not a market prediction, actual security audit, transaction approval or complete transaction coverage. Base64 embeds the unchanged brand asset, not computed predictive capability."
@@ -3310,7 +3310,7 @@
       "status": "passed",
       "source_revision": null,
       "recorded_at": "2026-10-23T06:58:11Z",
-      "scope": "Root reports provisional uncommitted code prefix3f415\u2026 with28renderer tests passing (3new; prior narrow-route assertion superseded). Proposed24s route covers72%width,foot292\u2013499desktop/312\u2013612mobile; shared projectile/drawn-eye geometry;200<=age<1700ms beams,4desktop/3mobile targets with two eye lines each. Mechanical guards pass both sizes for impact cutoff, resize/depth changes, rejected events and lifecycle. Source cards fully hid the actor at flanks, a concrete visual blocker; root authorized a single-actor body/beam layer above small source cards while retaining all values and main DOM/canvas Nexus, role labels, rider plates and large banners above.",
+      "scope": "Root reports provisional uncommitted code prefix3f415… with28renderer tests passing (3new; prior narrow-route assertion superseded). Proposed24s route covers72%width,foot292–499desktop/312–612mobile; shared projectile/drawn-eye geometry;200<=age<1700ms beams,4desktop/3mobile targets with two eye lines each. Mechanical guards pass both sizes for impact cutoff, resize/depth changes, rejected events and lifecycle. Source cards fully hid the actor at flanks, a concrete visual blocker; root authorized a single-actor body/beam layer above small source cards while retaining all values and main DOM/canvas Nexus, role labels, rider plates and large banners above.",
       "command": null,
       "input_digest": null,
       "environment_digest": null,
@@ -3328,7 +3328,7 @@
       "status": "passed",
       "source_revision": null,
       "recorded_at": "2026-10-23T07:05:44Z",
-      "scope": "Root reports final uncommitted renderer aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d(101849B), test4dc6d8083a36d11f23d169c1241561ef233e0fb254ce5f637e8e75468599bc8e. Syntax and29renderer+51controller tests pass=80focused;19ledger tests also pass=99local total.24s route covers72%width and foot292\u2013499desktop/312\u2013612mobile. Shared projectile and exact drawn-eye geometry,200<=age<1700ms beam window,4desktop/3mobile targets,twoeye lines each; impact/resize/depth/reject/lifecycle guards pass. Earlier card occlusion is resolved by one Sentinel body/beams above small source cards, retaining source values and main Nexus/role/rider/large-banner foreground priority. Root audits14inline bodies/IDs/CSP unchanged,index cache version only,fourpaths; authentic36134byte PNG unchanged at078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094.",
+      "scope": "Root reports final uncommitted renderer aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d(101849B), test4dc6d8083a36d11f23d169c1241561ef233e0fb254ce5f637e8e75468599bc8e. Syntax and29renderer+51controller tests pass=80focused;19ledger tests also pass=99local total.24s route covers72%width and foot292–499desktop/312–612mobile. Shared projectile and exact drawn-eye geometry,200<=age<1700ms beam window,4desktop/3mobile targets,twoeye lines each; impact/resize/depth/reject/lifecycle guards pass. Earlier card occlusion is resolved by one Sentinel body/beams above small source cards, retaining source values and main Nexus/role/rider/large-banner foreground priority. Root audits14inline bodies/IDs/CSP unchanged,index cache version only,fourpaths; authentic36134byte PNG unchanged at078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094.",
       "command": null,
       "input_digest": "aab7c89c2a5a7aafd777f471237c6b24746ef621259fb9de5242f0b5ae98d67d",
       "environment_digest": null,
@@ -3405,7 +3405,7 @@
       "status": "pending",
       "input_digest": null,
       "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/124",
-      "scope": "Before merge root relayed the latest user instruction for archers and weapons sized to trade activity, holding final checkpoint publication/deployment and extending the same unmerged MR124. Root proposes display tiers<1000XRP archers;1000\u20134999.999catapult;5000\u201399999.999mounted courier;>=100000flaming catapult, potentially with5k+mounted courier also. Renderer work is ongoing; overlap must be finalized without double-counting one accepted observed event. Prior b613271e native/944CI pass remains a historical baseline, not final combined proof.",
+      "scope": "Before merge root relayed the latest user instruction for archers and weapons sized to trade activity, holding final checkpoint publication/deployment and extending the same unmerged MR124. Root proposes display tiers<1000XRP archers;1000–4999.999catapult;5000–99999.999mounted courier;>=100000flaming catapult, potentially with5k+mounted courier also. Renderer work is ongoing; overlap must be finalized without double-counting one accepted observed event. Prior b613271e native/944CI pass remains a historical baseline, not final combined proof.",
       "limitations": [
         "Tiers and carrier overlap are proposed, not final behavior or deployed source. Wait final combined source/nativeQA/CI before catalog/validation/payload/publication.",
         "Artistic weapon sizing is not a trader classification, forecast, security verdict or additional execution. Existing feeds/backend/Render/storage/wallet and no-probe boundaries remain."
@@ -3436,7 +3436,7 @@
       "status": "passed",
       "source_revision": "04224aabeb44eff1aae812ba593884c81fa67b71",
       "recorded_at": "2026-10-23T07:37:27Z",
-      "scope": "MR124 final04224aabeb44eff1aae812ba593884c81fa67b71 extendsb613271e from7a75a8b4. Renderer e4b4599d6fca77f66503d0aa075b3b35b953399edd62051fb070c453420ab740 (108358B); tests cf5fb81031e08d00584badd21ce83af5fcb57b071633be08f61856b6d36e04c4 (38558B). Syntax82focused pass; independent review no blocker. Five remote hashes match manifest: index60ff4821fc43b7752bba94e25e0afcf2fee8578eab9f1bfd0ac97fb65ace498e, renderer/tests above, Sentinel doc55dd2d1318fc0cc3a475bdd77f32162fd8f9e918adcd0ee00a8989424331949a, mounted doc842ae9c7b4a0584be2b07dd148113895fd7f4c343bec2542f6f77fe30ea8e1a9. Tiers<1000arrow;1000\u2013<5000stone;5000\u2013<100000stone+mounted courier;>=100000firestone+courier+existing tower. One pulse/projectile/id, no extra executions/volume. Canvas UTC restored below tier; DOMUTC always retained. Original PNG36134B/hash078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094,14inline/IDs/CSP intact; indexcacheonly.",
+      "scope": "MR124 final04224aabeb44eff1aae812ba593884c81fa67b71 extendsb613271e from7a75a8b4. Renderer e4b4599d6fca77f66503d0aa075b3b35b953399edd62051fb070c453420ab740 (108358B); tests cf5fb81031e08d00584badd21ce83af5fcb57b071633be08f61856b6d36e04c4 (38558B). Syntax82focused pass; independent review no blocker. Five remote hashes match manifest: index60ff4821fc43b7752bba94e25e0afcf2fee8578eab9f1bfd0ac97fb65ace498e, renderer/tests above, Sentinel doc55dd2d1318fc0cc3a475bdd77f32162fd8f9e918adcd0ee00a8989424331949a, mounted doc842ae9c7b4a0584be2b07dd148113895fd7f4c343bec2542f6f77fe30ea8e1a9. Tiers<1000arrow;1000–<5000stone;5000–<100000stone+mounted courier;>=100000firestone+courier+existing tower. One pulse/projectile/id, no extra executions/volume. Canvas UTC restored below tier; DOMUTC always retained. Original PNG36134B/hash078ca86b6d5ddc85adb9bfb7c2ef54ff08ef264a1b4374d7efac94c490f12094,14inline/IDs/CSP intact; indexcacheonly.",
       "command": null,
       "input_digest": "b6df4db6cf27320d3f61973002be8f0244623e02ebd9ebb4b175ed3c58970246",
       "environment_digest": null,
@@ -3565,7 +3565,7 @@
       "status": "passed",
       "source_revision": null,
       "recorded_at": "2026-10-23T08:31:30Z",
-      "scope": "Root prepared ten-path release action payload1883749ASCIIbytes/SHA25608874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f. Actual controller\u2192core\u2192cinema synthetic binding passed:2evaluations/16updates,8findings (4market passed,4vault incomplete), no extra read on pause/audit. Root fullindex hash7f9638c274997b3742db9e28aea82f6530e64fc0770c0225252daa031f076e1e; newauditdoc2269267d6c387a0f5ae08ecc7500796921ff84567d028081787620428295e811; existingSentineldoc6476a43472ec5143eb1fd6d979f7fdf1c38bd0299bf74a743ccf1a1aa3438461. No remote source commit yet.",
+      "scope": "Root prepared ten-path release action payload1883749ASCIIbytes/SHA25608874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f. Actual controller→core→cinema synthetic binding passed:2evaluations/16updates,8findings (4market passed,4vault incomplete), no extra read on pause/audit. Root fullindex hash7f9638c274997b3742db9e28aea82f6530e64fc0770c0225252daa031f076e1e; newauditdoc2269267d6c387a0f5ae08ecc7500796921ff84567d028081787620428295e811; existingSentineldoc6476a43472ec5143eb1fd6d979f7fdf1c38bd0299bf74a743ccf1a1aa3438461. No remote source commit yet.",
       "command": null,
       "input_digest": "08874c6eb86b42a7e969361fd71864ab41655bf94cf906a0f4429fad41a1fe0f",
       "environment_digest": null,
@@ -3630,6 +3630,171 @@
         "Merge/production deployment pending at predeployment save. Publish/read back checkpoint first, merge exactreviewed candidate, then stop ALL tools immediately on requested deploy-pages success. New explicit turn required for release reconciliation andnext stage."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-audit-MR125-deployed-reconciled-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "recorded_at": "2026-10-23T09:18:50Z",
+      "scope": "Root rechecked MR125 master/mergebe9415103f12d6ba0dc5fc8abbd482634195fe59 after candidate5833ee8a2f2d26ed440ad6cf710f0ae48d79c570. Production2980222839 all6success:Pages17409292786,secret17409292785,Semgrep17409292784,homepage17409292783,repository17409292782,runtime17409292781. Root stopped ALL tools at deployment success and resumed only on new explicit screenshot-diagnosis/correction instructions. Prior pending release queue completed.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980222839",
+      "limitations": [
+        "Historical973-test/source/native passes did not catch the real-feed2k checker-capacity mismatch; preserve as scoped historical evidence, not global truth.",
+        "No new browser/live-provider/security-clean certification. New correction source/native/candidate/CI remain pending."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-camps-full-book-NFT-correction-intent-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "pending",
+      "source_revision": "be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "recorded_at": "2026-10-23T09:18:50Z",
+      "scope": "Root relays new explicit repair/deploy authority: wholecaptured-book bounded independent checks; knownsafecompleteWSdepth fallbackBitfinex/Gemini;17colored fixed exchange camps with only accepted executiontroops; quietholdingsfortresses except freshvalidatedEscrowFinish/scopedattributedwalletoutflow; directshieldgold to reservedoutsidecourtyard forNFTmint/paidNFTtrade withshorttag, no upwardbeams/cards andno genericfungible/MPTgold. New sampled validatedledger observer uses existingRenderledger,>=60s/15s/1.5MiB/512TX/4096nodes/8192items/32events, serialized againstallotherpanelreads bothdirections, no catchup/retryburst. No new endpoint/backend/service/storage/gates/wallet; browserdenial/heldP2P unchanged.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "limitations": [
+        "Reference identifies deployed base, not uncommitted new correction. Final combined source/native/candidate/CI pending.",
+        "Runtime observer coverage is sampled boundedprefix/gaps, never a complete monitor or proof ofzeroactivity. Observed wallet movement is not corporate ownership/sale or asset value/backing/safety."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-camps-core-events-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T09:18:50Z",
+      "scope": "Root reports corefreezef9f857b82d5f409952a4831b639a3abaa48668cfb480c4ec0116bfdbf9fd08e7/20testspass;40krowfixture157slices105.56mssummedCPU,max5.1ms,slice256rows/6ms,20kperside200ktotal, independentchecksalltimes. Eventparserfreeze96d3e6bb2dfa4aecd8c174751883c0e5b97bd625bd087bfb5c99179b5eab4438/18testspass; source review clearedboth. Root rereadRendercontract andbackendmainbd225b2af35e55e3544fc2a46affce4a0cf72926 policy:expandedledgerparametersallowed,no backendchange.",
+      "command": null,
+      "input_digest": "f9f857b82d5f409952a4831b639a3abaa48668cfb480c4ec0116bfdbf9fd08e7",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "limitations": [
+        "Source revisionnull:localmodules only, deployed-base reference. Other owners/finalsource/native/combinedCI/candidate pending.",
+        "Synthetic performance fixture is not real-deviceFPS/browserlayout or live provider/completeledger coverage. No currentliveprobe/newfinancialtest."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-camps-feed-fallback-local-2026-10-23",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T09:21:02Z",
+      "scope": "Root reports feedfreezes:liveec8ab4e4c307d617659b286fbfd9f2a5f579618aba2d8c1334368131e68bd89e, exchangesd558f3bf98a5068e76b3d38d8452eaa3f88c34fedc17d967b7da8571b578a9e3.50live+18exchange=68tests pass (8new),2syntax and source review cleared. RESTURLs correct/unchanged. Added existing-socket BitfinexP0len250/CRCtop25 plusGemini1000 ordered known shrinking pricebounds; discardedtails cannot falsecomplete. Root index audit6cachequeries+eventsmodulescript;14inline/IDs/CSPexact,indexSHA8254eeec3ce39e3b24cff89ad6e8488cf42fa366343a2ad3dbdb5a4c6245c66b. MR125 oldgenericMPTgold wasExplore-onlyformatclassification, with no liveassetreader; current strictgoldNFTmint/paidNFTokenAcceptOffer doesnotinfer tokenizedphysicalassetbacking.",
+      "command": null,
+      "input_digest": "ec8ab4e4c307d617659b286fbfd9f2a5f579618aba2d8c1334368131e68bd89e",
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "limitations": [
+        "Uncommitted local source/test review only; source revisionnull and referenceisdeployedbase. Controller timers/provenance and finalvisual/native/candidate/CI stillpending.",
+        "Two boundedpublicRESTdiagnostics viaweb were inaccessible, no retry/bypass, and no browserCORS/WebSocket availability or providerHTTP-cause claim. No new financialtest or backend endpoint."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T09:34:42Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "id": "XRBC-Sentinel-camps-HTX-test-turn-race-2026-10-23",
+      "kind": "synthetic",
+      "status": "failed",
+      "scope": "Root reports one combined test run failed the HTX test under its old100eventloopturn wait. This is a test synchronization race rather than an established productionfeedfailure; originalfailure is preserved.",
+      "input_digest": null,
+      "limitations": [
+        "Old failed-test input hash is not supplied; reference identifies deployed base only, not the uncommitted failed test source.",
+        "No live HTX/provider/browser availability or productiondeadline result is established by the test failure."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T09:34:42Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "id": "XRBC-Sentinel-camps-final-local-source-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "Root final sixfocused suites216tests/216pass/0fail, sixJSsyntax, independent source review no remaining concrete blocker. Coref9f857b82d5f409952a4831b639a3abaa48668cfb480c4ec0116bfdbf9fd08e7/20tests; observerf6ef330b92ad44438048280e393794204fc0d97605a22f3e2c1eb0bb1d959687/19tests; controller66423f1de7d26d568ed78ce1ddfcadd2257901e2491b3d2075a829e2d4ba30b8; cinemae0411e01fb5313915f969e7ac3d5d5b33ae7abdc5aa664c6ed453c1a5681c1cf; CSS6ff0be4a0b0b7b541bbc37f1862fb59ceb8b22e27c54d6900383161fd364320c; liveec8ab4e4c307d617659b286fbfd9f2a5f579618aba2d8c1334368131e68bd89e; exchangesd558f3bf98a5068e76b3d38d8452eaa3f88c34fedc17d967b7da8571b578a9e3. HTXtestonly synchronization hash5f47761dfeaad9c9e6fe226f9f9c955d61b9ee848a9b037768d23a8b68b9cec0 nowwaitsactualpublication/failure withinunchanged3s; productionlive unchanged. Observerprefilter skipsirrelevantmetadata within512headerprefix anddisclosesignored/candidatecounts. Manifest17pathsSHA009f19622aec5200816fa99ca823b7fff9fa5f08760f437de31716165d23ca30; actionspayload2105259ASCIIbytes/SHA d41c6df7daeac4843831be321f9dd6fbc35e5ebffa02eff4d0cda18b0faae471; newcampsdoc6549B/SHA2d1d479143fa2a020971e4eeb60cf92366e562b1669a96f89602eca284f74779.",
+      "input_digest": "009f19622aec5200816fa99ca823b7fff9fa5f08760f437de31716165d23ca30",
+      "limitations": [
+        "Uncommitted reviewed source/local tests only; source_revision null and reference is deployedbase. Candidate/MR/requiredCI not yet supplied; merge/deployment pending.",
+        "Focused tests/source review are not provideravailability, completeledgercoverage, realbrowser/CSS/deviceFPS or financial/security certification. No new CSPorigin, imageasset, install, service or wallet operation."
+      ],
+      "supersedes": [
+        "XRBC-Sentinel-camps-HTX-test-turn-race-2026-10-23"
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": null,
+      "recorded_at": "2026-10-23T09:34:42Z",
+      "command": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/be9415103f12d6ba0dc5fc8abbd482634195fe59",
+      "id": "XRBC-Sentinel-camps-final-native-provenance-2026-10-23",
+      "kind": "synthetic",
+      "status": "passed",
+      "scope": "Root final nativeproof604cf0c7ed4a546c6d266735bbd71b085377505a9e50085bec8a85d4a139b1ae; desktopvideo75f3e83b80b4c3f60181ab3af6deb12dae7bb0eee035b79a2919f94105adce06, mobilevideoc1fb3f00fd9f87e37b592b67617d1b5c0b238a0ae86d1a751f436073910cc27d, each16s/384frames/24fps. Root viewed corrected1600ms stills andbothcontacts. Alltiers/17campcolors/directoutsidegold/freshbrandedvaultbursts/lifecycle/coalescing/sample checks passed. Moviesoriginal9004551f renderer/96d3 parser provenancepreserved; finalf6efparser31exactevent/rendererobservationreplaysidentical, withnewcounters/notesexplicit. Final e041rendereronly DOMwordingdiff:exactoldSHAreconstruct+10RGBAframesidentical. NewDOMheader/eligiblemetadata/outside-scope/omitted/failedretained/captured-not-currentcrossselection checks pass. Precommit mobilegoldtag overlapwasfixed;abovefielddeckSVGremoved, findings/lastsamplecoverage/completedoldercapturedchecksdatedbelow.",
+      "input_digest": "604cf0c7ed4a546c6d266735bbd71b085377505a9e50085bec8a85d4a139b1ae",
+      "limitations": [
+        "Original movies are not full16s raster recordings of final DOMwording or finalf6efparser counters; reuse is supported only by exactsource reconstruction,31event replays and10RGBA-identical frames.",
+        "Native/synthetic DOM source fixtures do not prove browser HTML/SVG/CSS/CSP/Origin, liveprovideravailability, real-deviceFPS, complete monitoring, ownership/backing or security certification.",
+        "Candidate/MR/requiredCI andmerge/deploy stillpending at this observation."
+      ],
+      "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "f695a048384028e83751d04887b79f69d6b3f0fa",
+      "recorded_at": "2026-10-23T09:38:04Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-camps-MR126-committed-source-2026-10-23",
+      "kind": "source",
+      "status": "passed",
+      "scope": "Root committed reviewed branch xrbc/sentinel-camps-bounded-events-20261023 candidate f695a048384028e83751d04887b79f69d6b3f0fa parent be9415103f12d6ba0dc5fc8abbd482634195fe59, MR126. All17remote content_sha256 readbacks match reviewed manifest009f19622aec5200816fa99ca823b7fff9fa5f08760f437de31716165d23ca30:3newfiles/14updates. Distinct actions payload2105259ASCIIbytes/SHA d41c6df7daeac4843831be321f9dd6fbc35e5ebffa02eff4d0cda18b0faae471. Final216focusedtests/sixsyntax/independent source review passed. Native provenance retained: original900renderer/96d3parser movies, finalf6efparser31identical event/renderer observation replays with explicitcounter/note deltas, finale041renderer DOMwording-only delta validated by exactoldSHA reconstruction and10RGBA-identical frames. No source changes after candidate.",
+      "input_digest": "009f19622aec5200816fa99ca823b7fff9fa5f08760f437de31716165d23ca30",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/126",
+      "limitations": [
+        "Committed source/readback and scoped local/native evidence only; actual browser HTML/SVG/CSS/CSP/Origin, live-provider access and deviceFPS remain unproved. Final full16s movies were not regenerated with finalparser/DOM wording.",
+        "Observed NFT mint/paid-trade and attributed-wallet events are bounded samples, not complete monitoring, ownership/backing/value/safety certification. Later gated-page adapters and heldP2P unchanged. Merge/production pending."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "source_revision": "f695a048384028e83751d04887b79f69d6b3f0fa",
+      "recorded_at": "2026-10-23T09:38:04Z",
+      "command": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-Sentinel-camps-MR126-CI-2026-10-23",
+      "kind": "ci",
+      "status": "passed",
+      "scope": "Root verified exact MR126 candidate f695a048384028e83751d04887b79f69d6b3f0fa required pipeline2980424352 all3success:runtime-contracts17410799356 actual1020tests/1020pass/0fail/0skipped, validate-repository17410799357 success and homepage-snapshot17410799358 success. Runtime trace counts checked;216focusedtests are included, not additive. GitHub checkpointmain d6b88cac435d4050727a4c3148f037c5dc9736bd unchanged before finalsave.",
+      "input_digest": "009f19622aec5200816fa99ca823b7fff9fa5f08760f437de31716165d23ca30",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980424352",
+      "limitations": [
+        "RequiredCI passes do not establish live provider/browser performance, completeledger/treasury coverage, asset ownership/backing or strictsitewide security clearance. Historical HTX synchronization failure is retained separately.",
+        "Merge/production pending at predeployment save. Publish/read back memory before release; stop ALL tools immediately on requested deploy-pages success. Only a new explicit userturn permits one bounded MR126/master-production observation to reconcile and continue."
+      ]
     }
   ]
 }
