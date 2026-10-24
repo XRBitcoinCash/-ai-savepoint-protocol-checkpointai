@@ -4274,6 +4274,170 @@
         "Merge/productionpending atpredeploysave. Publish/readbackvalidatedcheckpoint first; stopALLTOOLS immediatelyondeploy-pagesSUCCESS. Onlynextexplicitturn permits oneboundedMR128/masterproduction reconciliation."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-Sentinel-MR128-deployment-reconciled-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "05c26af6433c84a81a541eb543bace3541e16d6c",
+      "recorded_at": "2026-10-24T21:46:39Z",
+      "scope": "On the new authorized full Astra turn, root verified MR !128 is deployed at production master 05c26af6433c84a81a541eb543bace3541e16d6c and production pipeline 2980985386 succeeded. The old MR128 merge/production queue is complete; its 16,027-byte active brief is archived verbatim at memory/archive/XRBC-LIQUIDITY-SENTINEL-MR128-2026-10-24.md.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2980985386",
+      "limitations": [
+        "Prior MR128 source/local/native/CI acceptance remains scoped history, not proof of the new Astra candidate or current user acceptance.",
+        "Reconciliation occurs in a new explicit user turn. No claim of new live-provider/browser/CSP/security/financial validation; no new deployment occurred in this memory preparation."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-full-Astra-user-scope-initial-findings-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "pending",
+      "source_revision": null,
+      "recorded_at": "2026-10-24T21:50:31Z",
+      "scope": "Current user explicitly authorizes all seven Astra requirements: correct checkpoint/Render baseline; real public NFT artwork synchronized to complete accepted-event evidence; Sentinel profiling/smoothing; convincing cinematic infantry/horses/artillery and verified actions; complete camp/evidence layout; supportable scoped metrics; bounded media/security/runtime/tests/QA and authorized release. User reports empty media, gathering choppiness and overlap/readability concerns. Root is still pursuing realistic artwork; candidate source/tests/native QA/CI are not final.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-LIQUIDITY-CASTLE-2026-10-22.md",
+      "limitations": [
+        "Initial scope/reported findings only; no new pass, final cause, live-provider/browser/CSP, device-FPS, security or visual-acceptance claim. Older narrow queue is superseded but safety/runtime/data boundaries remain.",
+        "Existing Creature IPFS/Arweave gateways may be narrowly added to homepage connect-src with strict selected-media bounds; no new service, arbitrary proxy, private asset-vault read, backend/P2P/signing/gate change or financial rerun."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-final-source-boundaries-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "MR129 candidate825d63edb99bbab68cfc17390b4ccb70b31997da, parent deployed05c26af6433c84a81a541eb543bace3541e16d6c, branchxrbc/nexus-astra-20261024. All21remoteSHA256 readbacks match release manifest5ad22b096bbafc2e4231fbd0614ba0b760447995871fff53900af3c8f6a298ed; code payload3944800bytes SHAdecafbd3e44df97855b62e5da442ca49a0ce204a707a795cb895e4d0a920b12e. Root boundary proofbda5987ce87f941ba213e013db0e88ef02ef130d5fec4124f3210ccd682b15b3 preserves14inline bodies/IDs and ten protected exchange transport/live, audit, DEX, gateway, vault, ledger, flow, history and existing castle-art modules; onlyCSP additions are fixed existingCreature ipfs.io/arweave.net connect-src origins.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "Source/manifest digests identify artifacts, not complete automatic-reuse input/environment fingerprints or global security proof.",
+        "No new provider/service/backend/signing/gate/P2P configuration or financial test. Candidate committed/validated, unmerged/undeployed."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-security-media-review-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Independent scoped review is clear for current media/events/renderer/art/CSS. Selected original accepted NFT event binds inspector/media; known provider lookup requires exactID. Untrusted descriptions remain metadataVerified:false. Selected media bounds: one operation, two GETs,8s total,12starts/min,64KiBJSON/2MiBraster,2048side/4194304pixels, PNG/JPEG/WebP only, no animatedWebP/SVG/HTML/redirect/credential code path, bounded streamed bodies/decode/cache/cancellation. Private asset vault excluded.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "Scoped source/tests, not browser CSP/CORS, live gateway/provider availability, asset backing/legal rights or a global security certificate.",
+        "Only two fixed established Creature gateways are narrowly added to homepage connect-src; no wildcard/arbitrary proxy/new service. Ignored cancellation holds operation guard; loader does not self-retry/resume; renderer may explicitly reload the still-selected original once after an actual resume transition, without stacking work."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-focused-local-scopes-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Scoped checks retained exact inputs: independent controller82,media/events46,art9; renderer62 before final geometry, later owner64 plus one fresh narrow case. Normal-flow Market reading preserves native quote/scope, selected-book coverage, retained64-row/10min execution window, partial lifetime counters and schema2.5 derived export. Root final source/security/native acceptance is bounded to these tests and final manifest.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "Do not add subset/old-input counts into the actual CI1142 total. Mocked DOM/controller are not browserCSS or device performance.",
+        "No live provider/broker/global-volume/price-multiplier/treasury-ownership claim; existing Render, native identity, observer/vault budgets and wallet/P2P boundaries retained."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-native-performance-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Native Canvas shared-host p95 update+RAF desktop66.84→24.92ms and mobile-sized66.16→16.69ms. Same battlefield dimensions/cadence/data, art decoded beforewarmup; candidate normal-flow Nexus headline changes mocked sky offsets280/330→456/682. Measured renderer046cf22703536fb9a636f8a9cec7c9836c38dfc4b9caaa138097059960c1da81 versus finalcd034efee761dbb5c66e97bc845fb341ccf2639bbe7eb07f023bfcc91cff4ace: exact independently reconstructed >=300 paths; finalchange only physicalCEX inset<300, fresh280case passes.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "CPU is not browser/deviceFPS, LongTaskAPI, battery or live-network evidence. Geometry offsets differ; startup/download excluded.",
+        "QAmanifest19fc32567ccd65d99adfe879f1330b000a67bd6ea3dd5b25bf8ac03813c93a3c preserves input/artifact hashes and limitations. Native schedules/encoded30fps are not measured runtimeFPS."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-native-visual-media-layout-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Root accepted final desktop/mobile contacts within native scope. Original32-pose atlas+ground selfhostedWebP total1323482bytes; each1774x887/6294152decodedRGBAbytes with masked frame caches. Seven widths280/320/390/540/600/844/1000,17CEX/5interfaces/soleBitstamp, computed physical/label/announcement/paintorder checks. Three-second movies90desktop/64mobileactualpaints, tiers500/2500/7000/150000,no computed collisionframes. Actual accepted parser→mock-approved metadata→realbitmap/fullID/hash-synchronized inspector tested.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "Native/mock and fixture-provider evidence only; movies omit ordinary-flow DOM cards. No actual browserCSS/CSP/CORS/live provider/deviceFPS/private tokenized backing result.",
+        "Larger-width measured046cf evidence reused only with proven finalcd034 >=300 equivalence; final280 was fresh. Root visual acceptance does not claim live user/browser acceptance or deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-final-required-CI-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Required pipeline2985277536 finishedSUCCESS2026-10-24T22:04:07.879Z at exact825d63edb99bbab68cfc17390b4ccb70b31997da. Runtime17442092987,repository17442092988,homepage17442092989 allSUCCESS. Bounded runtime trace offset450000/limit100000 returned55219characters endingJobSucceeded:1142tests/1142pass/0fail,cancelled,skipped,todo;duration28901.713824ms. 1131top-level plus nested gives1142 actualtests. Root rechecked21localinputs against remote manifest after CI.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2985277536",
+      "limitations": [
+        "Three green required jobs are scoped CI, not strict sitewide/browser/provider/security/device clearance. Do not use1131 top-level as the full actual test total.",
+        "Merge/production pending, MR129 mergeable. Memory must be published/read back before authorized release; stop ALL tools immediately on requested deploy-pages SUCCESS."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-Nexus-Astra-MR129-final-declared-QA-acceptance-2026-10-24",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "825d63edb99bbab68cfc17390b4ccb70b31997da",
+      "recorded_at": "2026-10-24T22:09:31Z",
+      "scope": "Root accepts all seven requirements within final source/native/mock scope and inspected final280/desktop/mobile contacts. QAmanifest17339bytes SHA19fc32567ccd65d99adfe879f1330b000a67bd6ea3dd5b25bf8ac03813c93a3c has acceptedWithinDeclaredScope:true and38artifacthashes/limitations. Current final renderer cd034 and measured046cf source reconciliation explicit. Full seven-task implementation/source/focusedQA/1142CI complete; exact MR129 release remains pending.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/129",
+      "limitations": [
+        "Supersedes initial unfinished user-findings/preparation state only; original234evidence records and their event dates remain exact history.",
+        "Actual browser/provider/CSP/Origin/device performance, full global activity, asset backing, private evidence or live financial results remain unknown/unclaimed."
+      ],
+      "supersedes": [
+        "XRBC-Nexus-full-Astra-user-scope-initial-findings-2026-10-24"
+      ]
     }
   ]
 }
