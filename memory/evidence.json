@@ -4438,6 +4438,99 @@
       "supersedes": [
         "XRBC-Nexus-full-Astra-user-scope-initial-findings-2026-10-24"
       ]
+    },
+    {
+      "id": "XRBC-Nexus-MR129-deployment-reconciled-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "deployment",
+      "status": "passed",
+      "source_revision": "68f36ae82c49c07492bf9e29d5990c423586f32b",
+      "recorded_at": "2026-10-25T01:04:12Z",
+      "scope": "On a new explicit user turn root confirmed deployed master68f36ae82c49c07492bf9e29d5990c423586f32b (MR129 candidate825d63edb99bbab68cfc17390b4ccb70b31997da). Production2985295914 all6SUCCESS: runtime17442187265,repository17442187266,homepage17442187267,Semgrep17442187268,secret17442187269,deploy-pages17442187270. Previous MR129 release queue complete; pending wording in the archived predeployment brief is historical.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2985295914",
+      "limitations": [
+        "Connector deployment evidence, not a postdeployment live browser/provider/device observation. The prior turn stopped all tools immediately on deploy-pages success.",
+        "Previous source/tests/QA preserve exact input scopes; no automatic financial, inventory, browser-denied or broad audit rerun."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-NFT-cloud-fallback-MR130-required-CI-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "0ecee9155f9892ab4114af3034065ff52d332550",
+      "recorded_at": "2026-10-25T00:56:46Z",
+      "scope": "Required headpipeline2985512105 SUCCESS at exact MR130 candidate0ecee9155f9892ab4114af3034065ff52d332550: runtime17443331423,validate-repository17443331424,homepage17443331425 allSUCCESS. Bounded runtime trace offset450000/request100000 returned60666characters ending JobSucceeded:1154tests/1154pass/0fail,cancelled,skipped,todo,duration31716.023539ms. Top-level1143 excludes nested tests;1154 actualtotal. Root receiptqa-motion/nft-fallback-ci-result.json includes10 exactremoteSHA/bytereadbacks.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2985512105",
+      "limitations": [
+        "Required CI and focused source/native tests do not establish actual browser CSS/CSP/CORS, live provider availability, phone performance, asset backing or global security.",
+        "MR130 merge/production remain pending. Publish/read back checkpoint before authorized release, then stop ALL tools immediately on deploy-pages SUCCESS.",
+        "The user added in-picture English inscriptions before deployment. This1154-test result applies only to earlier0ecee915, not revisedbc8f5c03ba8e0a6ffae713cba6cad2efeed14993; current requiredCI2985519645 is separate."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-NFT-cloud-fallback-MR130-English-inscriptions-source-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "bc8f5c03ba8e0a6ffae713cba6cad2efeed14993",
+      "recorded_at": "2026-10-25T01:03:25Z",
+      "scope": "MR130 revisedbc8f5c03ba8e0a6ffae713cba6cad2efeed14993 parent0ecee915; all10final remoteSHA/bytes matchmanifest2063bytes SHAf2b6633962099039e92eb9237b2ae4b0a37141aa0083c978f77b0e699077609e. Four-file followuppayload293742ASCIIbytes SHAc7c178bab4a666c9bb6ac9e2875ef8c1c5312ec75721de1f7bf99eb5c849e4b9. Original six-cell atlas remains394222bytes/6291456RGBA/SHAcebf44d36260de4a442df746997cb38c275f533b149218b984b9af9544b3ad25. Bounded title plus at most2descriptionlines painted inside clip in local golditalicGeorgia/Times overcontrastgradient. No newfont/provider/API/Renderwork. Fixedexplicitmetadata categories and actualNFTartpriority preserved; fallback clearlyXRBCillustration/notNFTart. Protected77baseline boundary proof reused for unchanged inputs; inscription touchesonlyrenderer/CSS/tests/artdoc.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/130",
+      "limitations": [
+        "Source/art provenance review, not browser/provider/device or security certification.",
+        "Captions are literal plain text; categories remain issuer/provider claims, not backing/ownership/redemption verification. Atlas and runtime budgets unchanged.",
+        "New requiredCI is separate from earlier0ecee915 1154-test result."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-NFT-cloud-fallback-MR130-English-inscriptions-native-QA-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "bc8f5c03ba8e0a6ffae713cba6cad2efeed14993",
+      "recorded_at": "2026-10-25T01:03:25Z",
+      "scope": "Currentrenderer72/72pass; media24/24 reusedunchanged. FinalnativeQAproof141146bytes SHA9fa6cc70f532dd0208902b233a49642519480a297ae04ddfcf5445eb3b3d7551; contact1035503bytes SHAf36192f9933829e6b9060c6060728d814d895eb3acc6956dac36fd6e18b14985 rootviewedaccepted. All6categories1000/390/280,actualartpriority,longliteralmarkuptitles,captionpaintbounds/italic/min12px/cachedlayout. Thin2048x64 preservesaspect/omitsunreadableinsidecaption/retainsaccessibleequivalentandinspector. Paused/background/selection/races/failure retain originalevidence. Finalrenderer7f23f0dac4bf005ba5be5a4b19f282aeef2fc8fcd1096e1bd15fb8a4d3eae1b2, CSS980602021b405c701e274f3874d2fa0a168edc315851edc979f76deb696e162d.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/130",
+      "limitations": [
+        "Actual local raster/Canvas, mocked DOM geometry and synthetic accepted-event/provider fixtures. No provider/ledger/wallet network requests.",
+        "No actual browser CSS/CSP/CORS, live media or device/network performance claim. Existing browser denial respected; no bypass.",
+        "Old pre-inscription proof/contact retain earlier hashes; do not relabel them as final or sum focused checks into the eventual CI total."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-NFT-cloud-fallback-MR130-English-inscriptions-required-CI-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "bc8f5c03ba8e0a6ffae713cba6cad2efeed14993",
+      "recorded_at": "2026-10-25T01:04:12Z",
+      "scope": "Required headpipeline2985519645 SUCCESS at exact MR130bc8f5c03ba8e0a6ffae713cba6cad2efeed14993: runtime17443367562,repository17443367563,homepage17443367564 allSUCCESS. Bounded runtime trace offset450000/request100000 returned62144characters ending JobSucceeded:1157tests/1157pass/0fail,cancelled,skipped,todo,duration30115.764425ms. Top-level1146 excludesnestedtests. Currentreceiptqa-motion/nft-fallback-inscription-ci-result.json; oldnft-fallback-ci-result.json remains earlier0ecee915/1154. Root final10sourceinputs+QAhashesstable; checkpointagent independently rehashed current10localmanifestinputs and checked receipt.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2985519645",
+      "limitations": [
+        "Required CI and scoped native/source checks do not establish actual browser CSS/CSP/CORS, live media availability, phone performance, asset backing or sitewide security.",
+        "Earlier0ecee915/1154CI is preserved history only. Merge exactbc8f5c03 after checkpoint publication/readback; merge/production remain pending. Stop ALL tools immediately on deploy-pages SUCCESS."
+      ],
+      "supersedes": []
     }
   ]
 }

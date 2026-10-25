@@ -378,7 +378,7 @@
       "next_action": "On explicit release/testing resumption only, verify actual Edge local-journal persistence/reload and existing Xaman app/audience/provider compatibility at the exact published frontend/backend candidates. CI passed659+113 and179; no actual browser/provider/wallet/indexer checks. Initiator stays on-page, recipient only scans Xaman QR. No database/new service/cost/owner-tower hosting, proof-link/file flow, configuration or deployment now. Preserve same-origin CAS limits, frozen native approval, exact uncertain IDs and gap-free complete_ledgers recovery."
     },
     "xrbc_liquidity_castle": {
-      "title": "XRBC Liquidity Nexus full Astra NFT media, cinematic market reading and scoped QA",
+      "title": "XRBC Liquidity Nexus NFT category fallback artwork and evidence",
       "match": [
         "liquidity castle",
         "XRP castle",
@@ -418,12 +418,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/nexus-astra-20261024",
-        "head": "825d63edb99bbab68cfc17390b4ccb70b31997da",
-        "pipeline": "2985277536"
+        "branch": "xrbc/nft-cloud-fallback-20261024",
+        "head": "bc8f5c03ba8e0a6ffae713cba6cad2efeed14993",
+        "pipeline": "2985519645"
       },
-      "status": "MR129-all-seven-source-scoped-native-QA-1142-CI-validated-ready-merge-production-pending",
-      "next_action": "Publish/read back validated five-entry checkpoint, then merge only MR129 exact825d63edb99bbab68cfc17390b4ccb70b31997da with green2985277536 and follow authorized production/Pages. All seven requirements accepted within declared source/mock/native scope;1142 actual CI tests pass. Preserve21-source manifest, finalcd034 versus measured046cf >=300 equivalence and fresh280 QA; actual browser/provider/CSP/device unknown. Narrow existing Creature gateway connect-src exception only, no backend/P2P/financial reruns. STOP ALL TOOLS immediately on requested deploy-pages SUCCESS."
+      "status": "MR130-NFT-fallback-English-inscriptions-source-native-1157-CI-validated-ready-merge-production-pending",
+      "next_action": "Publish/read back this validated five-entry checkpoint, then merge only MR130 exactbc8f5c03ba8e0a6ffae713cba6cad2efeed14993 with required pipeline2985519645 green and follow authorized production/Pages. Ten final files, scoped caption/native checks and actual1157 CI tests are accepted within their declared scope. Preserve approved atlas, bounded English in-picture captions, real-art priority, metadata uncertainty and all runtime/security boundaries. Stop ALL tools immediately on requested deploy-pages SUCCESS."
     }
   }
 }
