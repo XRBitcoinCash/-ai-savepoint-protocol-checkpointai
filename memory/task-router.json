@@ -448,8 +448,8 @@
         "head": "f7f9a6b9d09ad87cfebd1737db937d7a9282c65d",
         "pipeline": "2987364153"
       },
-      "status": "draft-MR131-first-pass-not-deployed",
-      "next_action": "Review responsive CI findings/screenshots and fix measured defects; continue scoped visual/content polish without repeating accepted financial tests."
+      "status": "MR131-deployment-authorized-exact-head-CI-passed-production-pending",
+      "next_action": "Merge exact f7f9a6b9d09ad87cfebd1737db937d7a9282c65d with green required CI, follow master Pages deployment, stop ALL tools immediately on deploy-pages success. Wallet/trading safeguards have priority; later visual/content work remains."
     }
   }
 }
