@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-23",
+  "updated": "2026-10-25",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -424,6 +424,32 @@
       },
       "status": "MR130-NFT-fallback-English-inscriptions-source-native-1157-CI-validated-ready-merge-production-pending",
       "next_action": "Publish/read back this validated five-entry checkpoint, then merge only MR130 exactbc8f5c03ba8e0a6ffae713cba6cad2efeed14993 with required pipeline2985519645 green and follow authorized production/Pages. Ten final files, scoped caption/native checks and actual1157 CI tests are accepted within their declared scope. Preserve approved atlas, bounded English in-picture captions, real-art priority, metadata uncertainty and all runtime/security boundaries. Stop ALL tools immediately on requested deploy-pages SUCCESS."
+    },
+    "xrbc_ecosystem_polish": {
+      "title": "XRBC full ecosystem responsive, navigation, XLS and discovery polish",
+      "match": [
+        "ecosystem polish",
+        "every page",
+        "mobile desktop",
+        "base24",
+        "whitepaper updates",
+        "AI provenance",
+        "XLS updates",
+        "MR131"
+      ],
+      "read": [
+        "memory/active/XRBC-ECOSYSTEM-POLISH-2026-10-25.md",
+        "memory/contracts/PROJECTS.md",
+        "memory/contracts/XLS-UPGRADE-CONTRACT.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "xrbc/ecosystem-polish-20261025",
+        "head": "f7f9a6b9d09ad87cfebd1737db937d7a9282c65d",
+        "pipeline": "2987364153"
+      },
+      "status": "draft-MR131-first-pass-not-deployed",
+      "next_action": "Review responsive CI findings/screenshots and fix measured defects; continue scoped visual/content polish without repeating accepted financial tests."
     }
   }
 }
