@@ -536,8 +536,8 @@
         "head": "11c93763a220a2f1466671419936552d25b42957",
         "pipeline": "2987654946"
       },
-      "status": "MR135-reviewed-CI-passed-not-deployed",
-      "next_action": "MR135 is reviewed with passing exact-head CI. Obtain device/browser/error details for focused incident diagnosis, or deploy only when explicitly authorized. Root cause on reported device remains unconfirmed."
+      "status": "MR135-reviewed-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish validated release checkpoint, mark MR135 ready and merge only reviewed11c93763a220a2f1466671419936552d25b42957 with required CI green. Follow master deploy-pages; stop all tools immediately on success and notify user to test actual older Android. Device root cause remains unconfirmed."
     }
   }
 }

@@ -628,8 +628,8 @@
     {
       "path": "memory/active/XRBC-ANDROID-COMPAT-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 3783,
-      "sha256": "827f4970cbc4db5d17f22a27cfe880c3cc0c87f7b5ad83b8eef6acc2e233e9ed",
+      "bytes": 4744,
+      "sha256": "7c3fc2ca41fac404d2dd1c7f5bef5f55a16084db67241e5e5756aa9b55a3b7ec",
       "classification": "selected-task-record"
     },
     {
@@ -1475,8 +1475,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-25",
-      "bytes": 18590,
-      "sha256": "6729b16b7d31e87f9bf9d11e1dfb29e3bf72b65a0adc2ec1fa221a22c4e65f73",
+      "bytes": 18693,
+      "sha256": "a5fc501dee02cd1ca2a87e82629db98f7da243c1d856cf4a7be364ffd7275190",
       "classification": "current"
     },
     {

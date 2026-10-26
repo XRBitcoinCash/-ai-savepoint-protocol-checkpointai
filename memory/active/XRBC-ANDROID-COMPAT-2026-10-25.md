@@ -13,3 +13,9 @@ Boundaries: wallet signing, identity checks, quotes, slippage, pending/duplicate
 Continuation: MR135 exact-head CI passed; reuse that result. Obtain the reported device/browser and visible error details when available, then select one focused reproduction. MR135 remains a draft and is not merged or deployed. A new deployment requires explicit user authorization; prepare its checkpoint first and STOP ALL TOOLS immediately after a requested deployment succeeds. Do not promote simulated browser checks to a user-device success claim.
 
 Environment: existing GitLab repository/CI tools and local triage-source preparation are available. Render backend and production endpoint configuration are unchanged. Canonical route: xrbc_android_compat. Related completed route: xrbc_battlefield_nav.
+
+## Authorized release continuation — October 25, 2026 America/Chicago
+
+The user requested deployment and notification when ready to test. MR135 remains at reviewed head 11c93763a220a2f1466671419936552d25b42957; master remains 7af5d0be9f46ecb06132a12d3bc9c79e47368be3. Fresh GitLab reads confirmed no conflicts and all four required jobs in exact-head pipeline 2987654946 successful. Reuse the recorded scoped source and capability checks; no additional financial test is warranted.
+
+Release is authorized and pending, not yet completed in this checkpoint. Mark MR135 ready, merge only the reviewed SHA, and follow the resulting master pipeline through deploy-pages. Preserve all gates and stop all tools immediately on successful deployment. Report readiness for the user's physical Android test; do not claim the reported device is repaired before that test. On a later explicit continuation, reconcile the actual merge/pipeline result before further work.
