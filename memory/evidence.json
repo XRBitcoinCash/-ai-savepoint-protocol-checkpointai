@@ -4713,6 +4713,58 @@
         "Non-local network blocked; synthetic unconnected states and discrete animation frames, not live financial tests, real wrapping feed, full motion-quality certification or exhaustive visual review.",
         "Harbor ships and anonymous inactive-token graveyard are explicitly illustrative. Homepage swaps have no NFT receipt mint flow; existing LP/XRB liquidity handoff only; Creature receipts disabled."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T02:23:37.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-MR134-deployment-2026-10-25",
+      "kind": "deployment",
+      "source_revision": "7af5d0be9f46ecb06132a12d3bc9c79e47368be3",
+      "scope": "User explicitly authorized Deploy for MR134. Reviewed717a00ec and targetde54c5d4 reconfirmed, checkpoint published first, MR134 merged. Pipeline2987549325 passed runtime, repository, homepage, SAST and secret checks and deploy-pages17454367467 succeeded. All tools stopped immediately on deployment success.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2987549325",
+      "limitations": [
+        "Provider deployment evidence only; no postdeployment browser, financial test or checkpoint action occurred in that deployment turn. This record reconciles success on a later explicit investigation request."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T02:23:37.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-older-browser-CI-2026-10-25",
+      "kind": "ci",
+      "source_revision": "11c93763a220a2f1466671419936552d25b42957",
+      "scope": "MR135 pipeline2987654946 passed all four required jobs. Runtime17455067840 passed1210tests,0failed/skipped; responsive17455067839, repository17455067841 and homepage17455067842 succeeded. All inline scripts in24changed HTML pages match deployed7af5d0be. Scoped source reviews found no blocker.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2987654946",
+      "limitations": [
+        "Prepared draft, not merged/deployed. Whole system safety and the reported device failure are not established. No manual broad financial rerun or signed transaction."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T02:23:37.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-older-browser-capabilities-2026-10-25",
+      "kind": "browser",
+      "source_revision": "11c93763a220a2f1466671419936552d25b42957",
+      "scope": "Offline current Chromium passed54initial mobile/desktop cases and named compatibility scenarios: menu/light palette after :has rules discarded; scene rendering with roundRect and Array.at removed; readable fallback when getContext throws; static main content visible while snapshot script request held.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17455067839",
+      "limitations": [
+        "Capability-loss simulations are not full older Android emulation. Device/model/Android/browser/version/exact URL/error text remain unknown. User incident root cause remains unconfirmed.",
+        "No wallet connection/signing, live ledger operation, network/TLS diagnosis or physical-phone reproduction. Homepage resource weight and very old JavaScript parsing remain separate potential limitations."
+      ]
     }
   ]
 }

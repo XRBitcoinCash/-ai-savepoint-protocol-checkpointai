@@ -510,12 +510,34 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/battlefield-navigation-20261025",
-        "head": "717a00ec30af16502016d7d5981e53d32bf76d20",
-        "pipeline": "2987531577"
+        "branch": "master",
+        "head": "7af5d0be9f46ecb06132a12d3bc9c79e47368be3",
+        "pipeline": "2987549325"
       },
-      "status": "MR134-authorized-deployment-pending",
-      "next_action": "User authorized Deploy for MR134. Reconfirm source 717a00ec30af16502016d7d5981e53d32bf76d20 and master de54c5d45f5fa08a5f8733bf3972c94a933ccbfb; publish checkpoint before merging reviewed source. Reuse passing pipeline 2987531577, observe master deployment, then STOP ALL TOOLS immediately on success. Deployment PENDING at checkpoint."
+      "status": "MR134-deployed",
+      "next_action": "MR134 deployment complete; reuse accepted evidence. New older-Android opening investigation follows xrbc_android_compat. No automatic financial rerun or redeployment."
+    },
+    "xrbc_android_compat": {
+      "title": "Older Android opening investigation and presentation compatibility",
+      "match": [
+        "older Android",
+        "Android compatibility",
+        "line at top",
+        "page will not open",
+        "legacy browser",
+        "MR135"
+      ],
+      "read": [
+        "memory/active/XRBC-ANDROID-COMPAT-2026-10-25.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "xrbc/legacy-browser-opening-20261025",
+        "head": "11c93763a220a2f1466671419936552d25b42957",
+        "pipeline": "2987654946"
+      },
+      "status": "MR135-reviewed-CI-passed-not-deployed",
+      "next_action": "MR135 is reviewed with passing exact-head CI. Obtain device/browser/error details for focused incident diagnosis, or deploy only when explicitly authorized. Root cause on reported device remains unconfirmed."
     }
   }
 }
