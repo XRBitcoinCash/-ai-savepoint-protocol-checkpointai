@@ -19,3 +19,7 @@ Environment: existing GitLab repository/CI tools and local triage-source prepara
 The user requested deployment and notification when ready to test. MR135 remains at reviewed head 11c93763a220a2f1466671419936552d25b42957; master remains 7af5d0be9f46ecb06132a12d3bc9c79e47368be3. Fresh GitLab reads confirmed no conflicts and all four required jobs in exact-head pipeline 2987654946 successful. Reuse the recorded scoped source and capability checks; no additional financial test is warranted.
 
 Release is authorized and pending, not yet completed in this checkpoint. Mark MR135 ready, merge only the reviewed SHA, and follow the resulting master pipeline through deploy-pages. Preserve all gates and stop all tools immediately on successful deployment. Report readiness for the user's physical Android test; do not claim the reported device is repaired before that test. On a later explicit continuation, reconcile the actual merge/pipeline result before further work.
+
+## Deployment reconciliation — October 25, 2026 America/Chicago
+
+MR135 merged as 95ce9315b3cc2e5f84a8242257849ac17246458a. Production pipeline 2987807631 passed all six jobs, including deploy-pages 17455952024. This was observed in the preceding authorized release turn, and tools stopped immediately. The user was notified to test the actual older Android; no user-device result has been received. This explicit new optimization request permits reconciliation. No further Android test or deployment was performed to reconstruct history.

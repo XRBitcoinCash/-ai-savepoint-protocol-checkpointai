@@ -628,8 +628,8 @@
     {
       "path": "memory/active/XRBC-ANDROID-COMPAT-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 4744,
-      "sha256": "7c3fc2ca41fac404d2dd1c7f5bef5f55a16084db67241e5e5756aa9b55a3b7ec",
+      "bytes": 5285,
+      "sha256": "a21ce0ad45b6b567fcbff5a3d9b2cf367d285df35ab51b96dd9b26dbfaba2551",
       "classification": "selected-task-record"
     },
     {
@@ -649,8 +649,8 @@
     {
       "path": "memory/active/XRBC-ECOSYSTEM-POLISH-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 8841,
-      "sha256": "cff0458d85fabaf17ce3f45bbd02d7961dd71fb588e4a063e657535dddee1cb9",
+      "bytes": 12402,
+      "sha256": "b2a2ef1731b802c338fd5f8c405f1dcd6f0a81991d5fa8764977f7bb3077504b",
       "classification": "selected-task-record"
     },
     {
@@ -1216,8 +1216,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-25",
-      "bytes": 358559,
-      "sha256": "3076ceedef36665372fc9695abba906b361c06f9b6c7183f25e963deb5fc8272",
+      "bytes": 362104,
+      "sha256": "c96ddf721650dc32a71db058c9dfd8c6e12ee15ec2c7032d48d2859b008bb774",
       "classification": "current"
     },
     {
@@ -1475,8 +1475,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-25",
-      "bytes": 18693,
-      "sha256": "a5fc501dee02cd1ca2a87e82629db98f7da243c1d856cf4a7be364ffd7275190",
+      "bytes": 18741,
+      "sha256": "98f6bfb5641af597b34b2e97ca171b5402d3bd0e835fad17398b22ce43decd73",
       "classification": "current"
     },
     {

@@ -444,12 +444,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "5b773f5029340cbbb1e5d688a6316b4a1580a1ce",
-        "pipeline": "2987376590"
+        "branch": "xrbc/tool-page-startup-20261025",
+        "head": "ac3419ed58c61da23490dcc892dd97058f15f492",
+        "pipeline": "2987945712"
       },
-      "status": "MR131-deployed-first-polish-pass",
-      "next_action": "MR131deployed. User-selected SAST continuation uses xrbc_sast_triage/MR132. Broader visual/content polish remains unfinished; do not repeat financial tests to reconstruct context."
+      "status": "MR136-startup-and-theme-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish/read back this checkpoint, mark MR136 ready and merge only ac3419ed58c61da23490dcc892dd97058f15f492 with green CI. Follow master deploy-pages; stop all tools immediately on success. Subsequent continuation prioritizes remaining startup/controls, expanded mobile navigation, then media/content/cosmetics; no wallet rerun or withheld P2P release."
     },
     "xrbc_sast_triage": {
       "title": "XRBC 73 SAST findings triage and build-tool hardening",
@@ -532,12 +532,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/legacy-browser-opening-20261025",
-        "head": "11c93763a220a2f1466671419936552d25b42957",
-        "pipeline": "2987654946"
+        "branch": "master",
+        "head": "95ce9315b3cc2e5f84a8242257849ac17246458a",
+        "pipeline": "2987807631"
       },
-      "status": "MR135-reviewed-CI-passed-deployment-authorized-pending",
-      "next_action": "Publish validated release checkpoint, mark MR135 ready and merge only reviewed11c93763a220a2f1466671419936552d25b42957 with required CI green. Follow master deploy-pages; stop all tools immediately on success and notify user to test actual older Android. Device root cause remains unconfirmed."
+      "status": "MR135-deployed-awaiting-actual-device-feedback",
+      "next_action": "Await actual older Android test feedback. Device-specific root cause remains unconfirmed; do not rerun financial tests or redeploy merely for context."
     }
   }
 }
