@@ -4660,6 +4660,59 @@
         "No live connected-wallet or financial transaction, no complete visual/media/JCS coverage; ordinary public-AMM arbitrage cannot be eliminated by frontend review."
       ],
       "supersedes": []
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T01:10:18.570Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-MR133-deployment-2026-10-25",
+      "kind": "deployment",
+      "source_revision": "de54c5d45f5fa08a5f8733bf3972c94a933ccbfb",
+      "scope": "User-authorized MR133 merged and deployed. Pipeline2987489450 and deploy-pages17454012143 succeeded; runtime, repository, homepage, SAST and secret jobs also succeeded. Explicit user sequence then authorized continuing into battlefield/nav work.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2987489450",
+      "limitations": [
+        "Deployment success is provider evidence, not a live wallet/financial result. No new battlefield feature is deployed by this record."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T01:10:18.570Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-battlefield-nav-CI-2026-10-25",
+      "kind": "ci",
+      "source_revision": "717a00ec30af16502016d7d5981e53d32bf76d20",
+      "scope": "MR134 pipeline2987531577 passed all four required jobs: runtime17454255772 (1,201 tests passed, zero failed/skipped, runtime/gate/sidebar checks); responsive17454255771; repository17454255773; homepage17454255774. Earlier CI caught stale CSP hashes and missing whale-plaque observation timestamp; both corrected before this result.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2987531577",
+      "limitations": [
+        "MR134 remains unmerged/undeployed; production staysde54c5d4. No manual broad financial suite was repeated. Required CI repeats followed relevant corrections.",
+        "MR validation does not constitute complete SAST coverage, all page/media/connected-wallet states, live bridge evidence or elimination of ordinary public-AMM arbitrage."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-26T01:10:18.570Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-battlefield-nav-browser-2026-10-25",
+      "kind": "browser",
+      "source_revision": "717a00ec30af16502016d7d5981e53d32bf76d20",
+      "scope": "Offline Playwright390/1440 initial layout passed54cases for27pages, plus Trade/Wallet focus. Production tape renderer with24synthetic events kept document/dock heights fixed; whale phases cleared and restored drawn personnel. Final mobile breach and desktop splash rendered previews inspected; unchanged dock/harbor/graveyard appearance reviewed at parent49738298.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17454255771",
+      "limitations": [
+        "Non-local network blocked; synthetic unconnected states and discrete animation frames, not live financial tests, real wrapping feed, full motion-quality certification or exhaustive visual review.",
+        "Harbor ships and anonymous inactive-token graveyard are explicitly illustrative. Homepage swaps have no NFT receipt mint flow; existing LP/XRB liquidity handoff only; Creature receipts disabled."
+      ]
     }
   ]
 }

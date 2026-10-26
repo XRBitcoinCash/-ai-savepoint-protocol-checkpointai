@@ -22,3 +22,6 @@ Next action: review prepared MR133 and exact-head CI; deploy only when requested
 
 
 Subsequent authorization: user explicitly said "Deploy what you have already created and then work on this next". MR133 exact56a9e7ef and passing CI reconfirmed, target master64c9b068 unchanged. Merge/deployment PENDING at this checkpoint. User also explicitly directs continuing after this deployment into battlefield/navigation/receipt work; that current instruction overrides the older stop-after-deploy preference for this specific sequence. No fresh wallet signing authorized.
+
+
+Deployment reconciliation — October25 America/Chicago (October26 UTC): explicit user sequence completed. MR133 merged as de54c5d45f5fa08a5f8733bf3972c94a933ccbfb. Production pipeline2987489450 and deploy-pages17454012143 succeeded. Runtime17454012138, validator17454012139, homepage17454012140, SAST17454012141 and secret17454012142 also succeeded. No production wallet/financial transaction was performed. The user explicitly requested continuing into battlefield/navigation work after this deployment; see xrbc_battlefield_nav / MR134. This supersedes the deployment-pending statements above, while retaining the dated review history.

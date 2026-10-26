@@ -628,8 +628,8 @@
     {
       "path": "memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 2119,
-      "sha256": "8293fc38ee8d2d98dd03d694cdb94485aaae12623d6ecbddbe5e6072e3444edb",
+      "bytes": 5438,
+      "sha256": "26ea33047e243a5934e4a96207c4cbf795eb61d0549f5967eab90dcf60d94515",
       "classification": "selected-task-record"
     },
     {
@@ -691,8 +691,8 @@
     {
       "path": "memory/active/XRBC-RELEASE-REVIEW-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 5481,
-      "sha256": "f4e5d465e7e6a132690030aee3627348db8306c6830d44814cd3de39f62f1a7e",
+      "bytes": 6122,
+      "sha256": "dd2e1ada300166a6eca244abb6464dd65af716cf683864de218df28cfda0f483",
       "classification": "selected-task-record"
     },
     {
@@ -1209,8 +1209,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-25",
-      "bytes": 351666,
-      "sha256": "b1789ffc065fbae680c9bfbda3d2b380ad151bc5ff77bcf78f34aecb07812e28",
+      "bytes": 355181,
+      "sha256": "056f45e5494d993de7f2961fa7104ed968e5aaf9be3c8f1b656d1211d6be41a1",
       "classification": "current"
     },
     {
@@ -1468,8 +1468,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-25",
-      "bytes": 17742,
-      "sha256": "57e08a2dfa046d728ec83ae2e4071f4f4ff5108115034dcb65370a59b3c2274f",
+      "bytes": 17724,
+      "sha256": "aea781fb056603ac1bd334bd65dfb3ef4ccd97e2aee18e30534933b32566e469",
       "classification": "current"
     },
     {

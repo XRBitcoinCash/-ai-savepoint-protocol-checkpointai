@@ -487,12 +487,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/release-review-20261025",
-        "head": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
-        "pipeline": "2987475440"
+        "branch": "master",
+        "head": "de54c5d45f5fa08a5f8733bf3972c94a933ccbfb",
+        "pipeline": "2987489450"
       },
-      "status": "MR133-deployment-authorized-pending",
-      "next_action": "Deploy verified MR133, then follow explicit user instruction to continue xrbc_battlefield_nav."
+      "status": "MR133-deployed",
+      "next_action": "MR133 deployed; explicit continuation is xrbc_battlefield_nav / MR134."
     },
     "xrbc_battlefield_nav": {
       "title": "Battlefield layout, whale/harbor/graveyard and exact navigation",
@@ -510,12 +510,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/release-review-20261025",
-        "head": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
-        "pipeline": "2987475440"
+        "branch": "xrbc/battlefield-navigation-20261025",
+        "head": "717a00ec30af16502016d7d5981e53d32bf76d20",
+        "pipeline": "2987531577"
       },
-      "status": "authorized-after-MR133-deployment",
-      "next_action": "Deploy MR133 then implement reviewed battlefield and navigation changes; no wallet transaction, no new feature deployment yet."
+      "status": "MR134-reviewed-CI-passed-not-deployed",
+      "next_action": "MR134 is prepared/reviewed at717a00ec with passing CI; await explicit deployment request, reconfirm heads/gates and save before deployment. MR133 remains deployed."
     }
   }
 }
