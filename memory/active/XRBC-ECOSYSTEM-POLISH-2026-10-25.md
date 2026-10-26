@@ -5,10 +5,10 @@ User requested a prioritized, token-efficient review and improvement of all ecos
 
 ## Source and delivery state
 Authoritative frontend: GitLab project 75781181, xrbitcoincash-group/xrbitcoincash-project, public/. Baseline master observed 2026-10-25: 63af82eb93b53aaa47dd06996661e2eb8a908836 (MR130 merged). No backend source edits/new infrastructure.
-Draft MR !131: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/131
+Merged MR !131: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/131
 Branch: xrbc/ecosystem-polish-20261025. Head f7f9a6b9d09ad87cfebd1737db937d7a9282c65d; initial implementation ad12670fc0b42eef52cb0de6bb6143d3d06707f5. 46 initial changed files, then test-harness correction only.
 Pipeline 2987364153: https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2987364153
-Deployment authorized; release checkpoint prepared before merge/deployment, both still pending when recorded. This is the first prioritized implementation pass, not completion of every requested ecosystem improvement.
+Prior predeployment checkpoint recorded pending state. Reconciled on the next explicit user turn: MR131merged as5b773f5029340cbbb1e5d688a6316b4a1580a1ce; pipeline2987376590deploy-pages job17453333769succeeded. Tools stopped immediately; no post-deploy browser/financial test claimed. This is the first prioritized implementation pass, not completion of every requested ecosystem improvement.
 
 ## Implemented
 - Synchronized 24 XRBC sidebars: Trade to /#xrt-order-ticket; one Wallet · connect entry to each page's real connect control. Presentation-only fragment handler opens ancestor disclosures, focuses destinations and preserves legacy Trade/Wallet fragments without invoking a wallet action.
@@ -30,7 +30,7 @@ Direct production desktop observations at1363px covered home, Audit, Forensics, 
 Local Chromium absent; one official browser download attempt failed with malformed/empty archive. Do not repeat unchanged. Cloud browser cannot reach local preview. CI uses the pinned official Playwright1.64.0 image/package, blocks external requests, and saves screenshots/metrics; no live RPC, signing or gated-wallet browser state is covered. Existing repository validator is advisory; job success is not strict clean-site proof.
 
 ## Remaining work and next action
-One next action: remove draft status and merge only reviewed MR131 SHA f7f9a6b9d09ad87cfebd1737db937d7a9282c65d with its green pipeline2987364153, then follow required master CI/Pages deployment. Stop ALL tools immediately on deploy-pages success. Further page-specific visual/content polish requires the next user turn. Do not restart the completed 1160-test financial suite just to recover context; required CI gates may rerun it automatically.
+One next action: current user requested SAST triage; use xrbc_sast_triage and MR132. MR131is already deployed. Further page-specific visual/content polish remains for a later explicit continuation. Do not restart the completed 1160-test financial suite just to recover context; required CI gates may rerun it automatically.
 Full start-to-finish screenshot review, expanded/gated/connected layouts, deeper analyzer-specific enhancements, remaining redundant prose/media, and separately hosted JCS pages are not complete. Preserve sibling XRBitcoin/Creature identities. Do not silently expand into P2P handoff release, which remains on its separate withheld branch. Clarify “base24” before a larger animation conversion.
 Acceptance: scoped changes, exact source identity, accurate evidence, verified mobile/desktop navigation and no introduced overflow, with unfinished scope explicit. Prepare/read back checkpoint before any authorized production deployment. After requested deployment succeeds, stop ALL tools immediately; no post-deploy tests or memory exception.
 

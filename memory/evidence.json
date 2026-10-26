@@ -4604,6 +4604,25 @@
         "User explicitly authorized deployment with wallet/trading safeguards highest priority. Merge/deployment pending at checkpoint; stop all tools immediately when requested deploy-pages succeeds."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-SAST-triage-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "5b773f5029340cbbb1e5d688a6316b4a1580a1ce",
+      "recorded_at": "2026-10-26T00:08:17Z",
+      "scope": "73 reproduced production-scope scanner occurrences assessed against source: 69 contextual false positives, 4 P3 build-tool hardening items prepared in MR132. 38 files match deployed Git blobs; 65 matched snippets unchanged from baseline, 8 in new offline CI harness. 12 focused Python tests and SEO consistency passed. Native MR pipeline 2987422693 passed all three required jobs at fb468dece849cdf5329a62c93a4a11fe1b753a3f.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-SAST-TRIAGE-2026-10-25.md",
+      "limitations": [
+        "Original artifact unavailable; reproduced with exact deployed source and pinned scanner, excluding 115 extra test-only matches. 73 occurrences include duplicate scanner IDs; original per-finding IDs could not be compared directly.",
+        "No whole-site security or wallet execution guarantee. Scan coverage gaps remain; native vulnerability dashboard not mutated.",
+        "No runtime JS or transaction changes; draft MR132 not merged/deployed. Detailed security report stays private in GitLab."
+      ],
+      "supersedes": []
     }
   ]
 }

@@ -444,12 +444,34 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/ecosystem-polish-20261025",
-        "head": "f7f9a6b9d09ad87cfebd1737db937d7a9282c65d",
-        "pipeline": "2987364153"
+        "branch": "master",
+        "head": "5b773f5029340cbbb1e5d688a6316b4a1580a1ce",
+        "pipeline": "2987376590"
       },
-      "status": "MR131-deployment-authorized-exact-head-CI-passed-production-pending",
-      "next_action": "Merge exact f7f9a6b9d09ad87cfebd1737db937d7a9282c65d with green required CI, follow master Pages deployment, stop ALL tools immediately on deploy-pages success. Wallet/trading safeguards have priority; later visual/content work remains."
+      "status": "MR131-deployed-first-polish-pass",
+      "next_action": "MR131deployed. User-selected SAST continuation uses xrbc_sast_triage/MR132. Broader visual/content polish remains unfinished; do not repeat financial tests to reconstruct context."
+    },
+    "xrbc_sast_triage": {
+      "title": "XRBC73SAST findings triage and build-tool hardening",
+      "match": [
+        "73 findings",
+        "SAST",
+        "security findings",
+        "triage",
+        "Semgrep",
+        "MR132"
+      ],
+      "read": [
+        "memory/active/XRBC-SAST-TRIAGE-2026-10-25.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "xrbc/sast-triage-hardening-20261025",
+        "head": "fb468dece849cdf5329a62c93a4a11fe1b753a3f",
+        "pipeline": "2987422693"
+      },
+      "status": "MR132-triaged-build-hardening-draft-not-deployed",
+      "next_action": "Review MR132CI and prepared tooling-only changes; native vulnerability statuses and scan coverage gaps remain separate. Never merge diagnostic report-reproduction branch."
     }
   }
 }
