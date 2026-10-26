@@ -514,8 +514,8 @@
         "head": "717a00ec30af16502016d7d5981e53d32bf76d20",
         "pipeline": "2987531577"
       },
-      "status": "MR134-reviewed-CI-passed-not-deployed",
-      "next_action": "MR134 is prepared/reviewed at717a00ec with passing CI; await explicit deployment request, reconfirm heads/gates and save before deployment. MR133 remains deployed."
+      "status": "MR134-authorized-deployment-pending",
+      "next_action": "User authorized Deploy for MR134. Reconfirm source 717a00ec30af16502016d7d5981e53d32bf76d20 and master de54c5d45f5fa08a5f8733bf3972c94a933ccbfb; publish checkpoint before merging reviewed source. Reuse passing pipeline 2987531577, observe master deployment, then STOP ALL TOOLS immediately on success. Deployment PENDING at checkpoint."
     }
   }
 }
