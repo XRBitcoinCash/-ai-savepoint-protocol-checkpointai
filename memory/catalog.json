@@ -684,8 +684,8 @@
     {
       "path": "memory/active/XRBC-SAST-TRIAGE-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 4653,
-      "sha256": "ceab125b93c832bcb1f71ce186b6cad30d27b3e2705a296923dc56438f836c06",
+      "bytes": 5399,
+      "sha256": "597d633097b0518e9f381df4fd64afe4ad9762b4eb028c65f3ac0f78935d9e1a",
       "classification": "selected-task-record"
     },
     {
@@ -1195,8 +1195,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-25",
-      "bytes": 349292,
-      "sha256": "32aa6f5c314d3a252ef116c0da0471020b03fe00bb4ac9bde4da2955486d1f49",
+      "bytes": 350281,
+      "sha256": "28092011f1565f5afba6542e321098860184be35411e6fb80c29e42bb9129bab",
       "classification": "current"
     },
     {
@@ -1454,8 +1454,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-25",
-      "bytes": 16271,
-      "sha256": "9406ca8a0bd6d63f8f6aed82a8c2c677daccb0f788eb14eaa8cdb276f4465ba8",
+      "bytes": 16326,
+      "sha256": "282c2ad2c0fc0093dfbd6f4ee7ca97eca2eeb893c295c24d3de33c4d6da9a933",
       "classification": "current"
     },
     {

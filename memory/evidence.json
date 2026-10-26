@@ -4623,6 +4623,24 @@
         "No runtime JS or transaction changes; draft MR132 not merged/deployed. Detailed security report stays private in GitLab."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-MR132-deploy-preflight-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "fb468dece849cdf5329a62c93a4a11fe1b753a3f",
+      "recorded_at": "2026-10-26T00:26:05Z",
+      "scope": "Deployment preflight: MR132 source unchanged, pipeline 2987422693 success, no conflicts, target master 5b773f5029340cbbb1e5d688a6316b4a1580a1ce. Nine files restricted to triage documentation, offline tooling and tests. User explicitly authorized deployment.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-SAST-TRIAGE-2026-10-25.md",
+      "limitations": [
+        "Pre-deployment checkpoint only. Merge and production deployment pending at time of recording.",
+        "No new financial transaction or runtime/browser testing; wallet and trading JavaScript unchanged."
+      ],
+      "supersedes": []
     }
   ]
 }

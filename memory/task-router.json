@@ -452,7 +452,7 @@
       "next_action": "MR131deployed. User-selected SAST continuation uses xrbc_sast_triage/MR132. Broader visual/content polish remains unfinished; do not repeat financial tests to reconstruct context."
     },
     "xrbc_sast_triage": {
-      "title": "XRBC73SAST findings triage and build-tool hardening",
+      "title": "XRBC 73 SAST findings triage and build-tool hardening",
       "match": [
         "73 findings",
         "SAST",
@@ -470,8 +470,8 @@
         "head": "fb468dece849cdf5329a62c93a4a11fe1b753a3f",
         "pipeline": "2987422693"
       },
-      "status": "MR132-triaged-build-hardening-draft-not-deployed",
-      "next_action": "Review MR132CI and prepared tooling-only changes; native vulnerability statuses and scan coverage gaps remain separate. Never merge diagnostic report-reproduction branch."
+      "status": "MR132-deployment-authorized-pending",
+      "next_action": "User authorized Deploy MR132. Merge verified fb468dece849cdf5329a62c93a4a11fe1b753a3f and observe master deployment; stop all tools on success. Never merge diagnostic report branch. Reconcile deployment only on a later explicit request."
     }
   }
 }
