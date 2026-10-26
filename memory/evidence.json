@@ -4641,6 +4641,25 @@
         "No new financial transaction or runtime/browser testing; wallet and trading JavaScript unchanged."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-release-review-2026-10-25",
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
+      "recorded_at": "2026-10-26T00:39:31Z",
+      "scope": "Independent MR131/MR132 review; MR132 public build confirmed; live desktop Trade/Wallet destinations and one public protocol read verified without wallet connection. MR133 whitepaper consistency plus18 formatting-only ternaries prepared. AST/token equality, novel XML/catalog boundary checks and SEO passed. MR pipeline2987475440 all4jobs passed. Targeted Semgrep1.181.0 parser job17453947171/pipeline2987478518 parsed all3exact files with zero errors.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "memory/active/XRBC-RELEASE-REVIEW-2026-10-25.md",
+      "limitations": [
+        "MR133 remains draft, not merged/deployed; production remains64c9b068.",
+        "Targeted scanner check validates parsing, not complete security rules. Current70finding artifact not fully retriaged; timeout/large-file exclusions remain.",
+        "No live connected-wallet or financial transaction, no complete visual/media/JCS coverage; ordinary public-AMM arbitrage cannot be eliminated by frontend review."
+      ],
+      "supersedes": []
     }
   ]
 }

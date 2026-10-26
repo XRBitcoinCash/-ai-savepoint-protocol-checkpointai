@@ -35,3 +35,6 @@ Full start-to-finish screenshot review, expanded/gated/connected layouts, deeper
 Acceptance: scoped changes, exact source identity, accurate evidence, verified mobile/desktop navigation and no introduced overflow, with unfinished scope explicit. Prepare/read back checkpoint before any authorized production deployment. After requested deployment succeeds, stop ALL tools immediately; no post-deploy tests or memory exception.
 
 Relevant contracts: memory/CONTINUITY.md; memory/contracts/PROJECTS.md; memory/contracts/XLS-UPGRADE-CONTRACT.md. Existing Render bounds and no new services/costs remain. History: memory/active/ECOSYSTEM-2026-10-09.md; memory/active/XRBC-TOKENIZATION-XLS-2026-10-12.md. This route supersedes no historical financial evidence.
+
+
+October25 continuation: independent MR131/MR132 review completed; MR132 public release confirmed. Whitepaper metadata/navigation corrections and formatting-only scanner work prepared in MR133. Current continuation: xrbc_release_review / memory/active/XRBC-RELEASE-REVIEW-2026-10-25.md. Original full visual/connected/JCS/media scope remains incomplete.

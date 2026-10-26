@@ -635,8 +635,8 @@
     {
       "path": "memory/active/XRBC-ECOSYSTEM-POLISH-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 8486,
-      "sha256": "12b22dae273ea73b0bb64304e1beeba8a26f172fbbede12d2b0b43c3254b062e",
+      "bytes": 8841,
+      "sha256": "cff0458d85fabaf17ce3f45bbd02d7961dd71fb588e4a063e657535dddee1cb9",
       "classification": "selected-task-record"
     },
     {
@@ -682,10 +682,17 @@
       "classification": "selected-task-record"
     },
     {
+      "path": "memory/active/XRBC-RELEASE-REVIEW-2026-10-25.md",
+      "indexed_on": "2026-10-25",
+      "bytes": 4997,
+      "sha256": "1667c0445075c0a466660b31f1052ce420bc2afc3ce866d1fca6b499c7041c6b",
+      "classification": "selected-task-record"
+    },
+    {
       "path": "memory/active/XRBC-SAST-TRIAGE-2026-10-25.md",
       "indexed_on": "2026-10-25",
-      "bytes": 5399,
-      "sha256": "597d633097b0518e9f381df4fd64afe4ad9762b4eb028c65f3ac0f78935d9e1a",
+      "bytes": 5841,
+      "sha256": "3fc1c73173ba3c4f6ebf0f633ca8d3aa46af47857b20839c929a6f90c91113a9",
       "classification": "selected-task-record"
     },
     {
@@ -1195,8 +1202,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-25",
-      "bytes": 350281,
-      "sha256": "28092011f1565f5afba6542e321098860184be35411e6fb80c29e42bb9129bab",
+      "bytes": 351666,
+      "sha256": "b1789ffc065fbae680c9bfbda3d2b380ad151bc5ff77bcf78f34aecb07812e28",
       "classification": "current"
     },
     {
@@ -1454,8 +1461,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-25",
-      "bytes": 16326,
-      "sha256": "282c2ad2c0fc0093dfbd6f4ee7ca97eca2eeb893c295c24d3de33c4d6da9a933",
+      "bytes": 16966,
+      "sha256": "953103b70ee1fd1b6716b8fee70bad1396df5507507d9d08c9cd550f5526e2dc",
       "classification": "current"
     },
     {

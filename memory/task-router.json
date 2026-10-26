@@ -466,12 +466,33 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/sast-triage-hardening-20261025",
-        "head": "fb468dece849cdf5329a62c93a4a11fe1b753a3f",
-        "pipeline": "2987422693"
+        "branch": "master",
+        "head": "64c9b06800a71a19b0c6044db2a012c5c124b898",
+        "pipeline": "2987460637"
       },
-      "status": "MR132-deployment-authorized-pending",
-      "next_action": "User authorized Deploy MR132. Merge verified fb468dece849cdf5329a62c93a4a11fe1b753a3f and observe master deployment; stop all tools on success. Never merge diagnostic report branch. Reconcile deployment only on a later explicit request."
+      "status": "MR132-deployed-public-build-confirmed",
+      "next_action": "MR132 deployed as64c9b068; continued correctness review and MR133 corrections are recorded in xrbc_release_review."
+    },
+    "xrbc_release_review": {
+      "title": "MR131/MR132 correctness review and MR133 corrections",
+      "match": [
+        "review everything",
+        "Ultra review",
+        "MR133",
+        "release review",
+        "correctness review"
+      ],
+      "read": [
+        "memory/active/XRBC-RELEASE-REVIEW-2026-10-25.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "xrbc/release-review-20261025",
+        "head": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
+        "pipeline": "2987475440"
+      },
+      "status": "review-complete-MR133-corrections-prepared",
+      "next_action": "Review MR133 exact-head checks; no fresh deployment requested. Preserve financial behavior; never merge diagnostic CI branch."
     }
   }
 }
