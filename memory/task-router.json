@@ -491,8 +491,31 @@
         "head": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
         "pipeline": "2987475440"
       },
-      "status": "review-complete-MR133-corrections-prepared",
-      "next_action": "Review MR133 exact-head checks; no fresh deployment requested. Preserve financial behavior; never merge diagnostic CI branch."
+      "status": "MR133-deployment-authorized-pending",
+      "next_action": "Deploy verified MR133, then follow explicit user instruction to continue xrbc_battlefield_nav."
+    },
+    "xrbc_battlefield_nav": {
+      "title": "Battlefield layout, whale/harbor/graveyard and exact navigation",
+      "match": [
+        "battlefield",
+        "whale",
+        "graveyard",
+        "port",
+        "ships",
+        "multiplier",
+        "receipt navigation"
+      ],
+      "read": [
+        "memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md"
+      ],
+      "source": {
+        "repository": "xrbitcoincash-group/xrbitcoincash-project",
+        "branch": "xrbc/release-review-20261025",
+        "head": "56a9e7ef576d947a2ca449a1a320d7b636964feb",
+        "pipeline": "2987475440"
+      },
+      "status": "authorized-after-MR133-deployment",
+      "next_action": "Deploy MR133 then implement reviewed battlefield and navigation changes; no wallet transaction, no new feature deployment yet."
     }
   }
 }
