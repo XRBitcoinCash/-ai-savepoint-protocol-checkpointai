@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -221,25 +221,30 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "discovery": {
-      "title": "Search metadata and public discovery",
+      "title": "XRBC public access, loading performance and canonical discovery",
       "match": [
         "Bing",
         "Google",
         "SEO",
         "favicon",
-        "search metadata"
+        "search metadata",
+        "crawlable",
+        "Search Console",
+        "canonical URLs",
+        "public access",
+        "offscreen animation"
       ],
       "read": [
-        "memory/active/ECOSYSTEM-2026-10-09.md"
+        "memory/active/XRBC-SEO-ACCESS-2026-10-26.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": null,
-        "pipeline": null
+        "branch": "xrbc/public-access-discovery-20261026",
+        "head": "2d7749da92b85122682346ef799f91fa0b7d7bd1",
+        "pipeline": "2988753780"
       },
-      "status": "historical-needs-source-check",
-      "next_action": "Confirm the requested page and current source, then load only the applicable history."
+      "status": "MR137-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish/read back this checkpoint, mark MR137 ready and merge only 2d7749da92b85122682346ef799f91fa0b7d7bd1 with pipeline 2988753780 green. Follow production deploy-pages; stop all tools immediately on success. Search Console, actual older Android and indexing outcomes remain unverified."
     },
     "xrbc_xls_upgrade": {
       "title": "XRBC ordinary Tokenization colors and evidence card",
