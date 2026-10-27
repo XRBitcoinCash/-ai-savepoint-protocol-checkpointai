@@ -4903,6 +4903,108 @@
         "Not physical older-Android testing, historical-browser certification, field Core Web Vitals, complete accessibility audit or authenticated Search Console validation.",
         "All external browser requests and WebSockets were blocked; no wallet connection, financial action or live-service success claimed."
       ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-27T03:33:03.336Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-MR137-deployment-reconciled-2026-10-26",
+      "kind": "deployment",
+      "source_revision": "e353880db9fb7a7aed9ffb383d0f87cce6ab56a3",
+      "scope": "Prior authorized turn observed all six production jobs succeed in pipeline 2988776405, including deploy-pages 17462226740, then stopped all tools. Reconciled on explicit four-point discovery continuation.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2988776405",
+      "limitations": [
+        "Not a claim of Google indexing success or physical older-phone testing."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-27T03:33:03.336Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-MR138-live-discovery-2026-10-26",
+      "kind": "browser",
+      "source_revision": "e353880db9fb7a7aed9ffb383d0f87cce6ab56a3",
+      "scope": "Bounded live HTTP reads of Cash/Labs homepages, both robots files, both sitemaps and Cash XRB alias returned200. Robots/sitemaps exactly match source. Labs and Cash XRB alias bodies identical with Labs canonical; no X-Robots-Tag block. Registry/sitemaps contain25Cash+1Labs and exclude2intentional noindex workflows.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/138",
+      "limitations": [
+        "HTTP/source evidence, not an authenticated Google report or rendered/physical browser observation. Google-selected canonical and sitemap processing are not established."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-27T03:33:03.336Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "id": "XRBC-MR138-public-guides-source-2026-10-26",
+      "kind": "source",
+      "source_revision": "2d68ede2fcb3980c5468fc82621974145ad69592",
+      "scope": "Labs static exact identity and newcomer guide, Risk Lens hypothetical65%coverage example, bounded browser coverage and operator workflow. All31script elements and both complete heads are unchanged; exact XRB identity matches configuration.23existingPythonSEO/buildtests and metadata/projectlink checks pass. Independent prose review corrected coverage example and quote-identity explanation.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/138",
+      "limitations": [
+        "Final CI and deployment pending at initial recording. No query-driven title changes can be justified without actual query data. No new tracking/backend or wallet actions."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-27T03:36:55.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "source_revision": "2d68ede2fcb3980c5468fc82621974145ad69592",
+      "id": "XRBC-MR138-guides-CI-2026-10-26",
+      "kind": "ci",
+      "scope": "Exact-head pipeline2992603188 passed all four required jobs: runtime17490637113 (1247tests,0failed/skipped), repository17490637114, snapshot17490637115, responsive17490637112. No financial executable script changes; source metadata/projectlinks and23PythonSEO/buildchecks pass.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2992603188",
+      "limitations": [
+        "Merge and production deployment pending at checkpoint. Repository validator remains advisory for historical findings. No financial transactions."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "passed",
+      "recorded_at": "2026-10-27T03:36:55.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "source_revision": "2d68ede2fcb3980c5468fc82621974145ad69592",
+      "id": "XRBC-MR138-guides-browser-2026-10-26",
+      "kind": "browser",
+      "scope": "Offline actual Pages artifact:54initial viewport cases and existing held/expanded controls checks plus49public-access cases passed. Includes6Labs native help/static-identity cases with JS disabled at390/1440 in Chromium/Firefox/WebKit. Both guide screenshots reviewed; mobile tall-element capture has sticky overlays but source keeps the entire guide scrollable without clipping.",
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/jobs/17490637112",
+      "limitations": [
+        "Current-engine/offline evidence, not physical old-phone or live financial/provider tests. No authenticated Google report or indexing outcome established."
+      ]
+    },
+    {
+      "project": "xrbitcoincash-group/xrbitcoincash-project",
+      "status": "pending",
+      "recorded_at": "2026-10-27T03:36:55.201Z",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "supersedes": [],
+      "source_revision": "2d68ede2fcb3980c5468fc82621974145ad69592",
+      "id": "XRBC-SearchConsole-auth-incomplete-2026-10-26",
+      "kind": "browser",
+      "scope": "Cloud browser reached Google Search Console sign-in identifier page. One secure browserAuth request ended aborted after approximately645seconds. No credential selection/submission or authenticated report access confirmed. No canonical inspection, sitemap processing review, indexing request or sitemap submission completed. No retry/manual handoff pending.",
+      "reference": "https://search.google.com/search-console",
+      "limitations": [
+        "Requires later user-completed sign-in. The screenshot first-impressions notice and public HTTP checks cannot supply private query metrics or Google-selected canonicals."
+      ]
     }
   ]
 }

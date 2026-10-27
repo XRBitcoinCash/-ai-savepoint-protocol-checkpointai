@@ -235,16 +235,16 @@
         "offscreen animation"
       ],
       "read": [
-        "memory/active/XRBC-SEO-ACCESS-2026-10-26.md"
+        "memory/active/XRBC-DISCOVERY-FOLLOWTHROUGH-2026-10-26.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/public-access-discovery-20261026",
-        "head": "2d7749da92b85122682346ef799f91fa0b7d7bd1",
-        "pipeline": "2988753780"
+        "branch": "xrbc/search-discovery-followthrough-20261026",
+        "head": "2d68ede2fcb3980c5468fc82621974145ad69592",
+        "pipeline": "2992603188"
       },
-      "status": "MR137-CI-passed-deployment-authorized-pending",
-      "next_action": "Publish/read back this checkpoint, mark MR137 ready and merge only 2d7749da92b85122682346ef799f91fa0b7d7bd1 with pipeline 2988753780 green. Follow production deploy-pages; stop all tools immediately on success. Search Console, actual older Android and indexing outcomes remain unverified."
+      "status": "MR138-CI-passed-deployment-authorized-pending-Console-signin-incomplete",
+      "next_action": "Publish/read back checkpoint, mark MR138 ready and merge only 2d68ede2fcb3980c5468fc82621974145ad69592 with pipeline 2992603188 green. Follow production and stop all tools immediately on deploy-pages success. Google reports/submissions require later user-completed sign-in; no retry pending."
     },
     "xrbc_xls_upgrade": {
       "title": "XRBC ordinary Tokenization colors and evidence card",
