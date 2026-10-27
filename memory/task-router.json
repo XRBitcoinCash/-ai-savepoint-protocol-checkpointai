@@ -221,7 +221,7 @@
       "next_action": "Confirm the requested page and current source, then load only the applicable history."
     },
     "discovery": {
-      "title": "XRBC public access, loading performance and canonical discovery",
+      "title": "XRBC public discovery, crawlability and authentic share previews",
       "match": [
         "Bing",
         "Google",
@@ -232,19 +232,24 @@
         "Search Console",
         "canonical URLs",
         "public access",
-        "offscreen animation"
+        "offscreen animation",
+        "share previews",
+        "social previews",
+        "battle metrics preview",
+        "Google images",
+        "video preview"
       ],
       "read": [
         "memory/active/XRBC-DISCOVERY-FOLLOWTHROUGH-2026-10-26.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/search-discovery-followthrough-20261026",
-        "head": "2d68ede2fcb3980c5468fc82621974145ad69592",
-        "pipeline": "2992603188"
+        "branch": "master",
+        "head": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+        "pipeline": "2993216993"
       },
-      "status": "MR138-CI-passed-deployment-authorized-pending-Console-signin-incomplete",
-      "next_action": "Publish/read back checkpoint, mark MR138 ready and merge only 2d68ede2fcb3980c5468fc82621974145ad69592 with pipeline 2992603188 green. Follow production and stop all tools immediately on deploy-pages success. Google reports/submissions require later user-completed sign-in; no retry pending."
+      "status": "owner-console-checks-and-two-indexing-requests-complete-preview-preparation-next-deployment-paused",
+      "next_action": "Prepare an authentic static homepage battlefield/metrics share image, preserving logo/favicon and existing preview metadata; optionally prepare a real recorded demo with poster/watch page. No assets, code or deployment yet; release remains quota-paused. Additional Labs/Bing checks remain pending. Reuse current source/CI evidence and do not repeat accepted Risk Lens/ecosystem indexing requests. Search image/video selection or motion is not guaranteed."
     },
     "xrbc_xls_upgrade": {
       "title": "XRBC ordinary Tokenization colors and evidence card",

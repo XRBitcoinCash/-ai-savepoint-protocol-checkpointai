@@ -5393,6 +5393,83 @@
         "No credentials, private auth records or screenshots stored in public checkpoint."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-GOOGLE-DISCOVERY-CONSOLE-2026-10-27",
+      "project": "xrbc",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+      "recorded_at": "2026-10-27T09:23:29.459Z",
+      "scope": "Root observed successful Google sign-in, Cash Pages report dated October22 (9 indexed;20 not indexed:2 canonical alternatives,15 discovered,3 crawled), canonical sitemap Success25URLs lastreadOctober23, homepage indexed with matching canonical and October24 smartphone crawl. Oldwww sitemap two historical URL-not-allowed errors were not changed.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://search.google.com/search-console",
+      "limitations": [
+        "Dated provider reports are not a current exhaustive crawl or ranking result.",
+        "No personal account details, private query/click analytics, credentials or screenshots included.",
+        "Prepared from root-supplied observations; no independent console revisit by the checkpoint preparer."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-GOOGLE-SCOPED-RECRAWL-REQUESTS-2026-10-27",
+      "project": "xrbc",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+      "recorded_at": "2026-10-27T09:23:29.459Z",
+      "scope": "Root requested indexing exactly once for risk-lens.html and xrbc-ecosystem.html; both accepted to priority crawl queue. Risk Lens was discovered/not crawled; ecosystem last smartphone crawl August26 succeeded, crawl/index allowed, Google canonical matched inspected URL.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://search.google.com/search-console",
+      "limitations": [
+        "Acceptance is not evidence of later crawl, indexing or ranking.",
+        "Do not repeat submissions merely to recover history.",
+        "No live financial tests or website deployment."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-BING-DISCOVERY-CONSOLE-2026-10-27",
+      "project": "xrbc",
+      "kind": "browser",
+      "status": "passed",
+      "source_revision": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+      "recorded_at": "2026-10-27T09:23:29.459Z",
+      "scope": "Root signed into Bing via Google; canonical Cash sitemap Success25URLs lastcrawlOctober24,zeroerrors; Risk Lens indexed/noSEOissues. Four missing-title alerts cover security.txt,http/https xrp-ledger.toml,universal-ai.json. IndexNow displayed only historical2025Wix submissions and zero in displayed last9h.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://www.bing.com/webmasters",
+      "limitations": [
+        "Machine-readable resources were not modified to add HTML titles.",
+        "No new IndexNow submission/integration or post-request indexing claim.",
+        "Additional Labs/Bing property/canonical/indexing observations remain pending; this does not establish complete discovery coverage."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-DISCOVERY-SOURCE-REUSE-2026-10-27",
+      "project": "xrbc",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+      "recorded_at": "2026-10-27T09:23:29.459Z",
+      "scope": "Root reviewed existing discovery source at observed masterbf84b00c: wildcard and named Google/Bing/Apple/OAI/Claude/Perplexity allowance,llms.txt,26indexablecanonicalentries(25Cash+1Labs),JS-free public intros,native mobile links,previewmetadata. MR138 merge reconciled as76e793ba; deployedMR139 baseline recorded separately. Existing homepage preview metadata declares a1774x887PNG andsummary_large_image; no new preview asset or metadata change was made.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/commit/bf84b00cd2bbc72c834811bb11084cb2871249e7",
+      "limitations": [
+        "Current master includes paused MR140 and is not asserted fully deployed.",
+        "No runtime/code/CI/security/deployment changes or application test reruns.",
+        "Existing crawler declarations do not prove actual engine indexing or visibility.",
+        "Static battlefield screenshot and optional video/poster/watch-page are next-task proposals, not implemented or engine-selected assets."
+      ],
+      "supersedes": []
     }
   ]
 }
