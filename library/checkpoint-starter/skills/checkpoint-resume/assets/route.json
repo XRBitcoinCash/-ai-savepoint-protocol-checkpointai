@@ -1,0 +1,10 @@
+{
+  "title": "Replace with your actual task",
+  "read": ["checkpoint/tasks/your-task.md"],
+  "source": {
+    "repository": null,
+    "branch": null,
+    "revision": null
+  },
+  "evidence": null
+}

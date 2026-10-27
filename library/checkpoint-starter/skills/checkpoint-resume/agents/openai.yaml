@@ -1,0 +1,4 @@
+interface:
+  display_name: "Checkpoint Resume"
+  short_description: "Save project context and resume one task safely"
+  default_prompt: "Use $checkpoint-resume to load the checkpoint for my requested task and identify its next unfinished action."
