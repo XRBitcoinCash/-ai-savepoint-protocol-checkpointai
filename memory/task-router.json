@@ -500,7 +500,7 @@
       "next_action": "MR133 deployed; explicit continuation is xrbc_battlefield_nav / MR134."
     },
     "xrbc_battlefield_nav": {
-      "title": "Battlefield NFT visibility, in-field multiplier and sampled ledger activity",
+      "title": "Battlefield ship-linked sampled Payment cards, cannons and harbor visuals",
       "match": [
         "battlefield",
         "whale",
@@ -521,12 +521,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/nft-ledger-harbor-20261027",
-        "head": "0c12eb056a4a5ec88a939b283696ea7cdfed6ef1",
-        "pipeline": "2993005989"
+        "branch": "xrbc/ship-linked-payment-metrics-20261027",
+        "head": "7353c9b21dddad45eb452ad37f3a776443c2a6a2",
+        "pipeline": "2993199455"
       },
-      "status": "MR139-reviewed-CI-passed-deployment-authorized-pending",
-      "next_action": "Publish/read back this checkpoint, merge only MR139 head0c12eb056a4a5ec88a939b283696ea7cdfed6ef1 with green CI, then follow master deploy-pages. Stop all tools immediately on success. No post-deploy tests or financial reruns."
+      "status": "MR140-exact-head-source-CI-browser-passed-deployment-authorized-pending",
+      "next_action": "Publish/read back finalized checkpoint, then merge only authorized MR140 exact head7353c9b21dddad45eb452ad37f3a776443c2a6a2 with required pipeline2993199455 green. Follow master deploy-pages and STOP ALL TOOLS immediately on success. Source13blob hashes and final offline browser/1322CI passes are accepted within scope; merge/production remain pending, with no post-deploy test or checkpoint exception."
     },
     "xrbc_android_compat": {
       "title": "Older Android opening investigation and presentation compatibility",
