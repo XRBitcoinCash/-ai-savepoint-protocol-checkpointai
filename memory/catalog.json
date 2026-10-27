@@ -292,8 +292,8 @@
     {
       "path": "README.md",
       "indexed_on": "2026-10-27",
-      "bytes": 2971,
-      "sha256": "f19a3ea59eb391a443129647258b9c32bed2151ad5c91cd4ef35457983f79631",
+      "bytes": 3226,
+      "sha256": "b78a6c7d94c52247b7997e5ab3e7643667398bc6d704e15458a57c7cb35e6757",
       "classification": "reference"
     },
     {
@@ -551,15 +551,22 @@
     {
       "path": "library/README.md",
       "indexed_on": "2026-10-27",
-      "bytes": 1734,
-      "sha256": "86e2e07fe1c76894a5f912796ed8af60ff6befdbc1001792d19da8a39b5d0ad6",
+      "bytes": 2288,
+      "sha256": "2db35fb0e8866f590094ea0958de12a22548770b10270e0b5e74ec4d50778f52",
+      "classification": "reference"
+    },
+    {
+      "path": "library/checkpoint-starter/LICENSE",
+      "indexed_on": "2026-10-27",
+      "bytes": 1070,
+      "sha256": "cb2d9baad3ca9f953c183550cb7e9d447ea3735b5fdbeb235a2020b80eb525c3",
       "classification": "reference"
     },
     {
       "path": "library/checkpoint-starter/README.md",
       "indexed_on": "2026-10-27",
-      "bytes": 5706,
-      "sha256": "d9236e7ea0cc9c2df48fd8cf5035cba6651c5ada488d2085eda7141d1c217cc9",
+      "bytes": 6336,
+      "sha256": "709874b1f4cbf2a32aa4878d179cec4f55726fe3a7382171e06a70ba42f2206d",
       "classification": "reference"
     },
     {
@@ -567,6 +574,13 @@
       "indexed_on": "2026-10-27",
       "bytes": 6,
       "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+      "classification": "reference"
+    },
+    {
+      "path": "library/checkpoint-starter/skills/checkpoint-resume/LICENSE",
+      "indexed_on": "2026-10-27",
+      "bytes": 1070,
+      "sha256": "cb2d9baad3ca9f953c183550cb7e9d447ea3735b5fdbeb235a2020b80eb525c3",
       "classification": "reference"
     },
     {
@@ -693,6 +707,13 @@
       "indexed_on": "2026-10-27",
       "bytes": 3540,
       "sha256": "2df935d4049da8f4a0ba8f1a6c02a8deed24438d3fe51d3659eaacf97da93273",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/active/SKILL-LIBRARY-LICENSE-2026-10-27.md",
+      "indexed_on": "2026-10-27",
+      "bytes": 3079,
+      "sha256": "9bd00a0b2b059fd9a5d3117d3ae46f3e83911ecc204cfd973ba1b39b02d36364",
       "classification": "selected-task-record"
     },
     {
@@ -1300,8 +1321,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-27",
-      "bytes": 375157,
-      "sha256": "fc457ee3001aaa1d1283eb06c2d6bba4ec9d2619cebeea1a758dae0a1e34ecce",
+      "bytes": 376286,
+      "sha256": "a1f8e5124f48c967bb70b60059b80433dd6ac836a3c1d6afc3a78416cd3058f9",
       "classification": "current"
     },
     {
@@ -1559,8 +1580,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-27",
-      "bytes": 20108,
-      "sha256": "fc6d83ea25b96b07b1570fb7c8abd31f519e2c45303015711d9d73ca62357be3",
+      "bytes": 20112,
+      "sha256": "52b67e6ac9201cba5d9bc7937083c632ea3d273b15c6590dece34d727fcd290e",
       "classification": "current"
     },
     {

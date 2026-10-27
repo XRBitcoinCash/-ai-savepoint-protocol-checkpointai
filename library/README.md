@@ -18,4 +18,10 @@ Start with **Checkpoint Resume** for a new project. Copy only `library/checkpoin
 
 To propose another entry, add a self-contained package with a clear purpose, dependencies, permission boundaries, meaningful validation and explicit licensing terms, then add its link here. Do not include live project records in a reusable package.
 
-This first version is a catalog and reusable starter. Sales, ratings, customer accounts and automated marketplace search are outside its scope. Repository licensing is unchanged. The owner can use this starter now; third-party reuse and redistribution terms remain to be chosen. No open-source license is implied.
+This first version is a catalog and reusable starter. Sales, ratings, customer accounts and automated marketplace search are outside its scope.
+
+## Licensing
+
+The files under `library/checkpoint-starter/` are licensed under the [MIT License](checkpoint-starter/LICENSE), copyright 2026 XRBitcoinCash. MIT permits use, modification and distribution, including commercial use and resale, provided the required copyright and license notices are retained. The software is provided without warranty under the license terms.
+
+This license covers only the reusable starter directory, including its code, skill, templates, tests and documentation. It does not relicense this catalog, the existing project-memory skill, checkpoint history or other repository files. Copy the starter's `LICENSE` with the package; a matching copy is included inside the standalone skill folder.

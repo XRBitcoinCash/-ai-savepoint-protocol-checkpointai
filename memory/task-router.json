@@ -555,7 +555,7 @@
         "GitHub marketplace"
       ],
       "read": [
-        "memory/active/SKILL-LIBRARY-2026-10-27.md"
+        "memory/active/SKILL-LIBRARY-LICENSE-2026-10-27.md"
       ],
       "source": {
         "repository": "XRBitcoinCash/-ai-savepoint-protocol-checkpointai",
@@ -563,8 +563,8 @@
         "head": null,
         "pipeline": null
       },
-      "status": "starter-v1-local-validation-publication-recorded-by-containing-commit",
-      "next_action": "Read the skill-library brief for this topic. Complete publication/readback for this checkpoint if still pending; otherwise await the next user request before licensing, distribution or catalog expansion."
+      "status": "starter-v1-MIT-scoped-publication-recorded-by-containing-commit",
+      "next_action": "Read the licensed-starter brief for this topic. If this licensing commit is already published and read back, await the next user request; do not enroll in a marketplace or expand the product automatically."
     }
   }
 }

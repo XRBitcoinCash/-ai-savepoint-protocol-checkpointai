@@ -5043,6 +5043,25 @@
         "No host installation, marketplace operation, website deployment or live financial behavior verified."
       ],
       "supersedes": []
+    },
+    {
+      "id": "SKILL-LIBRARY-2026-10-27-MIT",
+      "project": "checkpoint-skill-library",
+      "kind": "source",
+      "status": "passed",
+      "source_revision": null,
+      "recorded_at": "2026-10-27T05:16:17.975Z",
+      "scope": "Both scoped LICENSE files match standard SPDX MIT text with copyright 2026 XRBitcoinCash and are identical. Seventeen local README links resolve. No root LICENSE was added. Existing runtime, tests and SKILL.md are byte-for-byte unchanged from a543b6542ba09fdf5a2406ff50c60fafde20090c.",
+      "command": "Focused canonical-text, notice-copy, scope/link and unchanged-source assertions",
+      "input_digest": "06c167879c99f947521181d20634223ffd6ce8a11afaf0f0d5fe41a6fd75f1cf",
+      "environment_digest": null,
+      "reference": "memory/active/SKILL-LIBRARY-LICENSE-2026-10-27.md",
+      "limitations": [
+        "Licensing/documentation checks only; not a legal opinion or registration.",
+        "The license covers only library/checkpoint-starter/, not other repository material.",
+        "Publication is established by the containing commit."
+      ],
+      "supersedes": []
     }
   ]
 }

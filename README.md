@@ -4,6 +4,8 @@ Save useful project context in GitHub, then resume one task with its source, evi
 
 **New here? Start with the [skill library](library/README.md) and [portable checkpoint starter](library/checkpoint-starter/README.md).** The starter is separate from the project-specific records below and can be copied into another project. It needs no marketplace account, payment service or hosted backend.
 
+The files under `library/checkpoint-starter/` are licensed under the [MIT License](library/checkpoint-starter/LICENSE), copyright 2026 XRBitcoinCash. This license applies to that starter directory only; it does not relicense the rest of this repository.
+
 ## Existing project memory
 
 Updated 2026-10-12. Portable checkpoints for XRBC, XRBitcoin, Creature NFT, JCS and future projects.

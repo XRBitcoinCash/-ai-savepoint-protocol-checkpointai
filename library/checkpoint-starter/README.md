@@ -83,4 +83,12 @@ From this starter directory, run:
 node --test tests/checkpoint.test.mjs
 ```
 
-Keep actual task records in the receiving project's `checkpoint/` directory. Any distribution package should contain only this starter's generic files, never a working project's checkpoints, secrets, raw correspondence or transcripts. The repository owner can use the starter now; third-party reuse and redistribution terms remain to be chosen. This addition does not assign an open-source license.
+Keep actual task records in the receiving project's `checkpoint/` directory. Any distribution package should contain only this starter's generic files, never a working project's checkpoints, secrets, raw correspondence or transcripts.
+
+## License
+
+The generic files in this directory are licensed under the [MIT License](LICENSE), copyright 2026 XRBitcoinCash. You may use, modify, share and sell copies, including as part of a commercial product, provided the required copyright and license notices remain included. The software is provided without warranty under the license terms.
+
+Keep `LICENSE` when copying or distributing the starter. The standalone `skills/checkpoint-resume/` folder includes an identical license so its notice travels with the skill when copied separately.
+
+This license applies to this starter's code, skill, templates, tests and documentation. It does not change licensing for other parts of the parent repository or grant rights to separately supplied user data in a receiving project's checkpoints.
