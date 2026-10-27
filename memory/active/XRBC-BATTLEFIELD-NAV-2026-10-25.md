@@ -1,20 +1,29 @@
-# Battlefield ship-linked sampled Payments and harbor visuals — recorded October 27, 2026
+# Battlefield / main-page Metrics release paused for compute quota — recorded October 27, 2026
 
 ## Current intent and authority
 
-Current request: ship-linked sampled Payment cards/cannons, more realistic illustrative ships and impacts, exact delivered-XRP size/color bands, unknown delivery gray without a sized blast, six-second hold and 1,800 ms effect, compact upper cards and raised banner. Scope: `xrbc_battlefield_nav`. MR140 is committed; this delegated checkpoint task prepares files locally only. Current exact-head source review, required CI and browser acceptance are complete. GitHub checkpoint publication, merge and deployment remain pending. Publish/read back the completed checkpoint before any authorized merge.
+The user explicitly tabled this project until GitLab compute minutes reset, expected November 1, 2026. Preserve the completed code for the elements in the main page Metrics section and resume from the existing release state; do not restart the earlier work or rerun completed tests merely to reconstruct context. The proposed GitHub/GitLab dual-host arrangement was tabled: no hosting migration, mirrors, DNS changes, new runner/service, spending or extra infrastructure is authorized by this pause.
 
-Preserve wallet/signing, gate thresholds, identities, quote/slippage/fee limits, pending/duplicate protections and the held P2P frontend/backend release. Payment size is neutral local evidence, never a scam verdict, identity claim, endorsement or numeric trust score. No wallet action or live financial test is part of this work.
+Save state only now. No code, CI configuration, runner settings, job retry/cancellation, wallet action or deployment was performed in this recovery turn. Existing provider jobs were left intact. A one-time November 1 morning (America/Chicago) automation, “Resume XRBC Metrics release”, will make a bounded read-only status check and remind the user; it must not trigger jobs, spend money or redeploy automatically. Resume mutations only on the user's continuation instruction.
 
-## Source and release state
+Preserve wallet/signing, gate thresholds, identities, quote/slippage/fee limits, pending/duplicate protections and the held P2P release. Payment size is neutral evidence, never an identity claim, endorsement, scam verdict or trust score.
 
-Authoritative frontend: GitLab project 75781181, `xrbitcoincash-group/xrbitcoincash-project`. Current [MR140](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/140) branch `xrbc/ship-linked-payment-metrics-20261027`, exact candidate `7353c9b21dddad45eb452ad37f3a776443c2a6a2`. Final exact-head pipeline `2993199455` passed all four required jobs. Root verified all 13 uploaded Git blob hashes against this exact remote candidate and visually reviewed both final impact JPEGs. Merge revision and production deployment remain pending. Candidate identities and results here are supplied by the root from current-session work; this delegated checkpoint task has not independently inspected GitLab source or rerun application tests.
+## Source, completed evidence and actual release state
 
-Previous MR140 candidate `fbc0a72988220d7e118d9b96128a9ee7000016be` passed all four jobs in pipeline `2993175689`; those results apply to that revision. Final candidate changes only ship/impact geometry, explicit inspector scrolling and corresponding stronger tests, as detailed below. Its own final passing gate is recorded separately from the earlier pass.
+Authoritative frontend: GitLab project 75781181, `xrbitcoincash-group/xrbitcoincash-project`. [MR140](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/140) was already merged at `2026-10-27T07:59:29.727Z` as master commit `bf84b00cd2bbc72c834811bb11084cb2871249e7`. Reviewed source is `7353c9b21dddad45eb452ad37f3a776443c2a6a2`; exact-head pipeline `2993199455` succeeded. Reuse the recorded source review, all 13 matching Git blobs, 1,322 passing tests with zero failed/skipped, 54 responsive page/viewport cases, 49 public-access checks, and accepted offline 390/1440 harbor visuals within their stated scopes. None was rerun in this turn.
 
-Last deployed baseline: MR139 master `0943d7d23d6b882d09744577737a11f54415fc42`, production pipeline `2993018006`, deploy-pages `17493328570` succeeded in the preceding authorized turn, then tools stopped. This prior-session result is reconciled on the new request; no fresh provider/live inspection is claimed. MR139 reviewed source was `0c12eb056a4a5ec88a939b283696ea7cdfed6ef1`, MR pipeline `2993005989`; source, CI/browser and deployment facts are distinct.
+Production [pipeline 2993216993](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/2993216993) targets merged commit `bf84b00cd2bbc72c834811bb11084cb2871249e7`. Current observed states:
 
-Checkpoint restored from `XRBitcoinCash/-ai-savepoint-protocol-checkpointai` main `c399dce7f384121aa323ffa7b762503d80c0f9ca`; the five latest task files were restored before this draft. No new checkpoint publication is claimed. Local `harbor-work` and `harbor-base` are temporary preparation, not cross-host sources. Durable continuation uses repository/provider URLs and committed source.
+- `runtime-contracts` 17494866520, `validate-repository` 17494866521 and `homepage-snapshot` 17494866522 succeeded automatically in that production pipeline.
+- `semgrep-sast` 17494866523 and `secret_detection` 17494866524 were pending, never started, with no runner assigned.
+- `deploy-pages` 17494866525 remained `created`; this MR140 deployment is not confirmed complete.
+- Signed-in GitLab job/usage UI explicitly reported exhausted shared-runner compute quota for `xrbitcoincash-group`: **401 / 400 compute minutes**, usage since October 1, 2026. This is the demonstrated blocker, not missing runner installation or a scanner/application failure. Shared/group runners were enabled. Previous MR139 production scans ran successfully on the same instance runner 54907241 with the same empty tag lists; current validation jobs also used that runner.
+
+Quota evidence: [group usage](https://gitlab.com/groups/xrbitcoincash-group/-/usage_quotas#pipelines-quota-tab). The user chose to wait, not purchase minutes. The exact reset hour and automatic restart behavior were not established; inspect existing job state after reset before any targeted action. No sign-in credentials or private authentication records are saved here.
+
+Last confirmed deployed baseline remains MR139 master `0943d7d23d6b882d09744577737a11f54415fc42`, production pipeline `2993018006`, deploy-pages `17493328570` succeeded. Current recovery checked release/provider state, not live website behavior.
+
+The complete predeployment checkpoint is preserved in `memory/archive/XRBC-BATTLEFIELD-MR140-PREDEPLOY-2026-10-27.md` and pinned GitHub commit `df64b9098cf93f22b6d969ac97bffedbdff0710e`. Any “merge/deployment pending” statements in earlier dated evidence describe that earlier observation; the merge is now confirmed, deployment remains blocked. All accepted implementation and runtime boundaries below remain unchanged.
 
 ## MR140 prepared behavior and boundaries
 
@@ -56,6 +65,6 @@ Previous MR138 baseline `76e793ba56f4750e34cc3d784b45b76cacc14500`, pipeline `29
 
 ## One next action and stop rule
 
-Publish/read back this validated checkpoint, then perform the authorized MR140 merge only at exact reviewed head `7353c9b21dddad45eb452ad37f3a776443c2a6a2` with required pipeline `2993199455` green. Source/MR/pipeline and final outcomes agree; route `source.pipeline` is the string `2993199455`. Risk: passing source/CI/browser checks do not establish a production deployment. This delegated preparation performs no GitHub writes; publication is the root's next release step.
+After the compute-minute reset, the read-only reminder checks the existing production pipeline/jobs once and reports readiness. On the user's later continuation, first inspect the saved source/release identity and existing job states. Preserve completed validation results and reviewed source. If jobs timed out or failed while waiting, identify the actual current state before a narrowly scoped authorized retry; never restart the whole code project or duplicate a deployment just for context.
 
-After the authorized merge, follow master deploy-pages and **STOP ALL TOOLS immediately on requested deploy-pages success**. No post-deploy screenshot, test, cleanup or checkpoint exception; reconcile deployment only on a subsequent explicit user request. Merge revision, production pipeline/job and deployment outcome remain pending in this predeployment checkpoint.
+Acceptance: required remaining release work succeeds for the intended reviewed/merged code and `deploy-pages` confirms success. Risk: quota reset does not prove jobs resumed, and passed source/CI/browser checks do not prove deployment. Prepare any authorized checkpoint updates before resuming deployment, then **STOP ALL TOOLS immediately on requested deploy-pages success**. No post-deployment test, screenshot, cleanup or checkpoint exception. Do not reopen tabled hosting ideas, unrelated queues or financial tests.

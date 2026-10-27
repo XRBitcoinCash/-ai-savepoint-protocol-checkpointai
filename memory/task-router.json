@@ -521,12 +521,12 @@
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "xrbc/ship-linked-payment-metrics-20261027",
-        "head": "7353c9b21dddad45eb452ad37f3a776443c2a6a2",
-        "pipeline": "2993199455"
+        "branch": "master",
+        "head": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
+        "pipeline": "2993216993"
       },
-      "status": "MR140-exact-head-source-CI-browser-passed-deployment-authorized-pending",
-      "next_action": "Publish/read back finalized checkpoint, then merge only authorized MR140 exact head7353c9b21dddad45eb452ad37f3a776443c2a6a2 with required pipeline2993199455 green. Follow master deploy-pages and STOP ALL TOOLS immediately on success. Source13blob hashes and final offline browser/1322CI passes are accepted within scope; merge/production remain pending, with no post-deploy test or checkpoint exception."
+      "status": "MR140-merged-deployment-quota-blocked-user-paused-until-November-reset",
+      "next_action": "Paused by user: preserve completed Metrics/battlefield code and accepted 1322-test/source/browser evidence. November 1 read-only reminder checks existing production2993216993/security jobs17494866523+17494866524/deploy17494866525; quota was401/400. No automatic retries, purchases, hosting changes or rebuilds. Resume release only on later user continuation, and stop all tools immediately on deploy-pages success."
     },
     "xrbc_android_compat": {
       "title": "Older Android opening investigation and presentation compatibility",
