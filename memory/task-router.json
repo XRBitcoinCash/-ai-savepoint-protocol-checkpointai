@@ -500,7 +500,7 @@
       "next_action": "MR133 deployed; explicit continuation is xrbc_battlefield_nav / MR134."
     },
     "xrbc_battlefield_nav": {
-      "title": "Battlefield layout, whale/harbor/graveyard and exact navigation",
+      "title": "Battlefield NFT visibility, in-field multiplier and sampled ledger activity",
       "match": [
         "battlefield",
         "whale",
@@ -508,19 +508,25 @@
         "port",
         "ships",
         "multiplier",
-        "receipt navigation"
+        "receipt navigation",
+        "NFT cloud visibility",
+        "sender receiver wallets",
+        "Trust cues",
+        "tiny payments",
+        "ledger activity",
+        "harbor cannons"
       ],
       "read": [
         "memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "7af5d0be9f46ecb06132a12d3bc9c79e47368be3",
-        "pipeline": "2987549325"
+        "branch": "xrbc/nft-ledger-harbor-20261027",
+        "head": "0c12eb056a4a5ec88a939b283696ea7cdfed6ef1",
+        "pipeline": "2993005989"
       },
-      "status": "MR134-deployed",
-      "next_action": "MR134 deployment complete; reuse accepted evidence. New older-Android opening investigation follows xrbc_android_compat. No automatic financial rerun or redeployment."
+      "status": "MR139-reviewed-CI-passed-deployment-authorized-pending",
+      "next_action": "Publish/read back this checkpoint, merge only MR139 head0c12eb056a4a5ec88a939b283696ea7cdfed6ef1 with green CI, then follow master deploy-pages. Stop all tools immediately on success. No post-deploy tests or financial reruns."
     },
     "xrbc_android_compat": {
       "title": "Older Android opening investigation and presentation compatibility",

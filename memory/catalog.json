@@ -726,8 +726,8 @@
     {
       "path": "memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md",
       "indexed_on": "2026-10-27",
-      "bytes": 6109,
-      "sha256": "f9edfb2eadbbdcb8349bd8c3764ec74aa0fb4eb683d5b40f16ff7e12d5c76f9a",
+      "bytes": 10512,
+      "sha256": "e83fd85245d27db3f2281b849d37c915adf2e5482ff14d4195523ed856eee36e",
       "classification": "selected-task-record"
     },
     {
@@ -910,6 +910,13 @@
       "indexed_on": "2026-10-27",
       "bytes": 10570,
       "sha256": "7e0a68f23359fe2f16a3fa60c6dd962808b9ed51e87e241b1794ea591de13595",
+      "classification": "historical"
+    },
+    {
+      "path": "memory/archive/XRBC-BATTLEFIELD-MR134-2026-10-25.md",
+      "indexed_on": "2026-10-27",
+      "bytes": 6109,
+      "sha256": "f9edfb2eadbbdcb8349bd8c3764ec74aa0fb4eb683d5b40f16ff7e12d5c76f9a",
       "classification": "historical"
     },
     {
@@ -1321,8 +1328,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-10-27",
-      "bytes": 376286,
-      "sha256": "a1f8e5124f48c967bb70b60059b80433dd6ac836a3c1d6afc3a78416cd3058f9",
+      "bytes": 382747,
+      "sha256": "a332f830b98d075cbdb76a7608278e6b88d259de63c69a9311d078d62924e501",
       "classification": "current"
     },
     {
@@ -1580,8 +1587,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-10-27",
-      "bytes": 20112,
-      "sha256": "52b67e6ac9201cba5d9bc7937083c632ea3d273b15c6590dece34d727fcd290e",
+      "bytes": 20415,
+      "sha256": "934e64dd9ed220922e8d6031eb47b388652f416c67dcf4be33742e169cde9970",
       "classification": "current"
     },
     {
