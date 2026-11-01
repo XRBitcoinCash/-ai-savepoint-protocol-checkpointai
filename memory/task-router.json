@@ -505,7 +505,7 @@
       "next_action": "MR133 deployed; explicit continuation is xrbc_battlefield_nav / MR134."
     },
     "xrbc_battlefield_nav": {
-      "title": "Battlefield ship-linked sampled Payment cards, cannons and harbor visuals",
+      "title": "Regional exchange cavalry and sampled trade harbor",
       "match": [
         "battlefield",
         "whale",
@@ -519,19 +519,25 @@
         "Trust cues",
         "tiny payments",
         "ledger activity",
-        "harbor cannons"
+        "harbor cannons",
+        "exchange cavalry",
+        "regional camps",
+        "trade harbor",
+        "trade cannon",
+        "incident severity",
+        "MR141"
       ],
       "read": [
-        "memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md"
+        "memory/active/XRBC-BATTLEFIELD-CAVALRY-HARBOR-2026-11-01.md"
       ],
       "source": {
         "repository": "xrbitcoincash-group/xrbitcoincash-project",
-        "branch": "master",
-        "head": "bf84b00cd2bbc72c834811bb11084cb2871249e7",
-        "pipeline": "2993216993"
+        "branch": "xrbc/exchange-cavalry-camps-20261031",
+        "head": "f7499225cf2c9327ef9224ffb400b87bef02fa62",
+        "pipeline": "3013643161"
       },
-      "status": "MR140-merged-deployment-quota-blocked-user-paused-until-November-reset",
-      "next_action": "Paused by user: preserve completed Metrics/battlefield code and accepted 1322-test/source/browser evidence. November 1 read-only reminder checks existing production2993216993/security jobs17494866523+17494866524/deploy17494866525; quota was401/400. No automatic retries, purchases, hosting changes or rebuilds. Resume release only on later user continuation, and stop all tools immediately on deploy-pages success."
+      "status": "MR141-review-pipeline-passed-release-authorized-merge-and-pages-pending",
+      "next_action": "After checkpoint publication/readback, merge only f7499225cf2c9327ef9224ffb400b87bef02fa62 with required checks green, follow the resulting master pipeline, and stop all tools immediately upon deploy-pages success. Inspect any changed head or failed required job before proceeding."
     },
     "xrbc_android_compat": {
       "title": "Older Android opening investigation and presentation compatibility",

@@ -1,0 +1,19 @@
+# Exchange cavalry camps and sampled trade harbor — 2026-11-01 UTC
+
+The user authorized the release of [GitLab MR 141](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/merge_requests/141). At checkpoint time the MR was open, with source branch `xrbc/exchange-cavalry-camps-20261031` and candidate `f7499225cf2c9327ef9224ffb400b87bef02fa62`. Target: protected `master` in GitLab project 75781181. Merge and production Pages deployment are pending.
+
+## Accepted behavior
+
+- Coinbase, Binance and Kraken occupy distinct regional camps between Evernorth and Ripple. Accepted directional trades dispatch mounted riders; the other fourteen exchange camps keep their artillery. Camp architecture references exchange history. The guide cites the evidence behind the dated severity grade and operating notice separately. S1 marks a confirmed disruption, S2 an unauthorized data disclosure or movement of funds, and S3 unauthorized funds movement with an incident-related exchange-wide withdrawal pause. A stale feed cannot establish closure or attack. Binance’s dated recovery notice expires; its dated S3 incident remains historical evidence.
+- Three harbor ships rotate among samples from the same accepted execution tape. A single randomly selected execution per nonempty two-second window drives a bounded splash and green BUY or red SELL evidence card. Pausing, hiding, leaving the mode, clearing or replacing the stream cannot replay shots. Reduced motion preserves static trade cards. A card click or keyboard activation brings its original record into view and preserves the selected evidence as later rows rotate.
+- CEX sources keep their original native quote and venue trade ID. Native DEX/AMM sources preserve validated ledger identity, original amounts, counterasset and issuer. Ordinary Payments stay in the separate activity panel. The harbor sample is partial; it does not measure world market volume or prove ship ownership. Preserve the existing wallet and signing boundaries.
+
+## Evidence and release gate
+
+Exact candidate [MR pipeline 3013643161](https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/3013643161) passed: runtime-contracts 17639912616, responsive-layout 17639912615, validate-repository 17639912617 and homepage-snapshot 17639912618. See evidence records `XRBC-BATTLEFIELD-MR141-CI-2026-11-01` and `XRBC-BATTLEFIELD-MR141-BROWSER-2026-11-01`. CI passed 1,335 unit tests with zero skips, 54 responsive cases with zero structural failures, and 49 public-access checks in three browser engines. The 390/1440 harbor checks used synthetic observations. The existing advisory sitemap finding for `/markets/` is outside this change.
+
+Next: after checkpoint publication and readback, ensure the MR still points to the approved SHA and required checks remain green. Merge that candidate and monitor the resulting master pipeline, including security gates and deploy-pages. Stop all tools immediately when the requested deploy-pages job succeeds and report briefly. If the head changes or a required job fails, inspect that specific change or failure before proceeding. Historical savepoints cannot grant future release authority.
+
+## Prior release
+
+[Prior MR 140 checkpoint at its immutable GitHub revision](https://github.com/XRBitcoinCash/-ai-savepoint-protocol-checkpointai/blob/b944ca06bc5f03565d5c9fcf1882aad07c557f8e/memory/active/XRBC-BATTLEFIELD-NAV-2026-10-25.md). Its Payment-driven harbor is superseded by the trade sampler in this candidate. MR 140 master pipeline 2993216993 subsequently reported ci_quota_exceeded for semgrep-sast, secret_detection and deploy-pages. The successful MR 141 review pipeline does not establish a master deployment. The October 31 [exchange-incident footnote](../footnotes/2026-10-31-sentinel-binance-incident.md) retains the original design discussion.
