@@ -531,14 +531,14 @@
       "path": "ai-bootstrap.json",
       "indexed_on": "2026-11-01",
       "bytes": 484,
-      "sha256": "e56ae4e60e2c91a8d3009e2ff1861b30a7a0e4a7000231f39f294a3eeb735a16",
+      "sha256": "1ba623e662aec9e53d4d35b264481cfa16c7a3b3218b5b97982e0f9a3745eee9",
       "classification": "redirect"
     },
     {
       "path": "ai-memory.json",
       "indexed_on": "2026-11-01",
       "bytes": 481,
-      "sha256": "13ae3879a00f9d95409c5027af40110e72288b92eab696b11b64e37089878447",
+      "sha256": "2bb77ed6bb15e7e6942b9d2d58f42ca8f53033835f9d66b6ac79284435977fa0",
       "classification": "redirect"
     },
     {
@@ -861,6 +861,13 @@
       "indexed_on": "2026-11-01",
       "bytes": 11274,
       "sha256": "e0ee3a1fc5925d4ea34610f5456bf22d580996a114d982c10592fc07cfbf6637",
+      "classification": "selected-task-record"
+    },
+    {
+      "path": "memory/active/XRBC-XAMAN-SWAP-GUARD-2026-11-01.md",
+      "indexed_on": "2026-11-01",
+      "bytes": 3362,
+      "sha256": "03e1b329e3f5c9e85dcc59822959d61fa46c7364a789fceab744422e2bb3c467",
       "classification": "selected-task-record"
     },
     {
@@ -1349,8 +1356,8 @@
     {
       "path": "memory/evidence.json",
       "indexed_on": "2026-11-01",
-      "bytes": 404398,
-      "sha256": "46b289f5e79a965d27c458b33ea990ae3de788671e0fe98014b629ec70b8e21f",
+      "bytes": 406990,
+      "sha256": "77bc0caf979d29408f8df8a520e0b87f238a12dea6667cfa6d3d754105f0c63b",
       "classification": "current"
     },
     {
@@ -1392,7 +1399,7 @@
       "path": "memory/operating-protocol.json",
       "indexed_on": "2026-11-01",
       "bytes": 497,
-      "sha256": "ae51b9f1c08d56b3fd18d9da2116242364f6621fe89c6533feb3255244e9ab81",
+      "sha256": "6fc06045a6d68bd34ef9429d4afe6e377a2e0040522e0c81392ecb28ff8a7e54",
       "classification": "redirect"
     },
     {
@@ -1615,8 +1622,8 @@
     {
       "path": "memory/task-router.json",
       "indexed_on": "2026-11-01",
-      "bytes": 20917,
-      "sha256": "60216a523afdf3a2da54f90838f73c81b7ba70e23b195d0646ed5add0cd2994b",
+      "bytes": 21819,
+      "sha256": "f19134b3ac55b0872892b7023c79c420caf96bffb3879fb7f675632e72585910",
       "classification": "current"
     },
     {

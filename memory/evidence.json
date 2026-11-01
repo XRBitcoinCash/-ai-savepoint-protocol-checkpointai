@@ -5504,6 +5504,57 @@
         "CI and browser evidence applies to the recorded merge-request SHA and synthetic fixtures. The master Pages deployment and production behavior were unverified when recorded."
       ],
       "supersedes": []
+    },
+    {
+      "id": "XRBC-SWAP-GUARD-SIM-2026-11-01",
+      "project": "xrbc",
+      "kind": "synthetic",
+      "status": "passed",
+      "source_revision": "2d52d4257dddf8b4c9a124ddc3ad5e2a88c0c962",
+      "recorded_at": "2026-11-01T07:24:21Z",
+      "scope": "22 offline integration cases passed at the paired portal commit 0cca50f0e3d382a30b52218b27c8dd0fea11ae0d and baseline a3bd92a790b778fd75231928df9fc79412eedbeb. All four swap directions, recipient substitution, provider readback, replay, response loss and changes to the spend terms were exercised.",
+      "command": "XRBC_PORTAL_ROOT=/path/to/candidate XRBC_PORTAL_BASE_ROOT=/path/to/baseline node --test tests/integration/*.test.mjs",
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/blob/2d52d4257dddf8b4c9a124ddc3ad5e2a88c0c962/docs/xaman-swap-guard.md",
+      "limitations": [
+        "Used mock Xaman and ledger I/O. No live signature, deployment or settlement. A coherent change to all trade terms remains possible for a hijacked page."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-SWAP-GUARD-BACKEND-CI-2026-11-01",
+      "project": "xrbc",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "2d52d4257dddf8b4c9a124ddc3ad5e2a88c0c962",
+      "recorded_at": "2026-11-01T07:24:21Z",
+      "scope": "XRBC API Tests and Well-Known & AI Manifests validation succeeded for the backend draft. The separate local backend test suite passed 70/70.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://github.com/XRBitcoinCash/xrbitcoincash-source/actions/runs/41280441078",
+      "limitations": [
+        "Applies to this draft revision. Provider configuration and persistent storage still need checking before activation."
+      ],
+      "supersedes": []
+    },
+    {
+      "id": "XRBC-SWAP-GUARD-PORTAL-CI-2026-11-01",
+      "project": "xrbc",
+      "kind": "ci",
+      "status": "passed",
+      "source_revision": "0cca50f0e3d382a30b52218b27c8dd0fea11ae0d",
+      "recorded_at": "2026-11-01T07:24:21Z",
+      "scope": "All four GitLab pipeline jobs succeeded. The separate local portal test suite passed 1,342/1,342.",
+      "command": null,
+      "input_digest": null,
+      "environment_digest": null,
+      "reference": "https://gitlab.com/xrbitcoincash-group/xrbitcoincash-project/-/pipelines/3013794461",
+      "limitations": [
+        "The draft did not release the guard to the production portal."
+      ],
+      "supersedes": []
     }
   ]
 }

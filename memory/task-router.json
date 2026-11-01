@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "updated": "2026-10-27",
+  "updated": "2026-11-01",
   "default_task": "xrbc_swap",
   "routes": {
     "xrbc_swap": {
@@ -582,6 +582,28 @@
       },
       "status": "starter-v1-MIT-scoped-publication-recorded-by-containing-commit",
       "next_action": "Read the licensed-starter brief for this topic. If this licensing commit is already published and read back, await the next user request; do not enroll in a marketplace or expand the product automatically."
+    },
+    "xrbc_xaman_swap_guard": {
+      "title": "XRBC Xaman Swap Guard standby backup",
+      "match": [
+        "XRBC Swap Guard",
+        "Xaman swap guard",
+        "protected stablecoin swaps",
+        "backup swap security",
+        "independent Xaman requests",
+        "Xaman recipient substitution"
+      ],
+      "read": [
+        "memory/active/XRBC-XAMAN-SWAP-GUARD-2026-11-01.md"
+      ],
+      "source": {
+        "repository": "XRBitcoinCash/xrbitcoincash-source",
+        "branch": "xrbc/xaman-swap-guard-20261101",
+        "head": "2d52d4257dddf8b4c9a124ddc3ad5e2a88c0c962",
+        "pipeline": "41280441078"
+      },
+      "status": "standby-tested-unmerged-undeployed",
+      "next_action": "Hold for an explicit user request. If reopened, compare both pinned commits with the current code and verify storage durability and protected Xaman identity before proposing activation."
     }
   }
 }
